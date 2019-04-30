@@ -1,0 +1,164 @@
+/*
+* import stylesheets
+*/
+
+/*去掉input type=number的默认状态*/
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button,input{
+  -webkit-appearance: none;
+  margin: 0;
+  border:none;
+  outline:none;
+}
+body{
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #444;
+  background-color: #fff;
+  padding-bottom:0 !important;
+  margin: 0;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-weight: 400;
+  margin:0;
+  padding: 0;
+  color: inherit;
+}
+ul,li,ol{padding: 0;margin: 0;list-style: none;}
+img{vertical-align: middle;border: none;}
+*{
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-size:14px;
+  color:#444;
+  text-decoration: none;
+  a{
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+
+/*初始化select样式*/
+select{
+  border: 1px solid #ccc;
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background-color: #fff !important;
+  outline: none;
+  border-radius:0;
+}
+
+select:focus,select:active,select:hover{
+  outline:none;
+}
+
+/* 浮动 */
+.left{
+  float:left;
+}
+.right{
+  float:right;
+}
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after{
+  content: " ";
+  display: table;
+}
+.clearfix:after{
+  clear: both;
+}
+
+/* 单行文字  适用于标题*/
+.one-line{
+  overflow: hidden;                   //  设置多余的隐藏，如果没有设置，会导致下面的代码不实现效果
+  text-overflow: ellipsis;            //   设置多余的用...表示。
+  white-space: nowrap;                //   以上两个条件满足后，为了文字更好的实现溢出用...表示。就的先把默认的换行阻止。
+}
+
+/* 两行文字 适用于商品列表*/
+.tow-line{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;                 //设置行数。如果设置3行，那么第三行都不会出现，第三行后面会用...表示
+  /* autoprefixer: off */
+  webkit-box-orient: vertical;
+  /* autoprefixer: no */
+}
+
+/* 网站内容区域宽度 */
+.container{
+  margin:auto;
+  padding:0 10px;
+  max-width:1300px;
+  min-width:767px;
+}
+
+.container1330{
+  margin:auto;
+  padding:0 10px;
+  max-width:1330px;
+  min-width:767px;
+}
+
+// 自定义滚动条样式
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+} /* 这是针对缺省样式 (必须的) */
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
+} /* 滚动条的滑轨背景颜色 */
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+} /* 滑块颜色 */
+
+::-webkit-scrollbar-button {
+  background-color: #7c2929;
+  height: 0;
+  width: 0px;
+} /* 滑轨两头的监听按钮颜色 */
+
+::-webkit-scrollbar-corner {
+  background-color: black;
+} /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+.mouse-cover-canvas{
+  z-index: 9!important;
+}
+
+
+.pc-max-width{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 10px;
+}
