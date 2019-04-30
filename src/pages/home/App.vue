@@ -1,16 +1,19 @@
 <template>
     <Layout>  
-        网站首页
+        <!-- banner -->
+		<Banner />
     </Layout>
 </template>
 
 <script>
 import Layout from '../../components/layout.vue'
+import Banner from './component/banner.vue'
 
 export default {
     name: 'app',
     components: {
-        Layout
+        Layout,
+        Banner
     }
 }
 </script>
