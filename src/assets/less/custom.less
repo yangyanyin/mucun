@@ -1,6 +1,17 @@
 /*
 * import stylesheets
 */
+body{
+  min-width: 992px;
+}
+@media(max-width: 767px) {
+  body{
+    min-width: 100%;
+    padding-top: 60px;
+  }
+}
+
+
 
 /*去掉input type=number的默认状态*/
 *{
@@ -27,7 +38,7 @@ button,input{
 body{
   font-size: 14px;
   line-height: 1.42857143;
-  color: #444;
+  color: #111;
   background-color: #fff;
   padding-bottom:0 !important;
   margin: 0;
@@ -51,7 +62,6 @@ img{vertical-align: middle;border: none;}
   margin: 0;
   font-style: normal;
   font-size:14px;
-  color:#444;
   text-decoration: none;
   a{
     &:focus{
@@ -161,4 +171,46 @@ select:focus,select:active,select:hover{
   max-width: 1300px;
   margin: auto;
   padding: 0 10px;
+}
+
+
+.web-img{
+  display: block;
+}
+.wap-img{
+  display: none; 
+}
+@media(max-width: 767px){
+  .web-img{
+    display: none;
+  }
+  .wap-img{
+    display: block; 
+  }
+}
+
+
+.public-title{
+  text-align: center;
+  h3{
+    position: relative;
+    font-size: 36px;
+    color: #bd8c67;
+    padding-bottom: 28px;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      width: 90px;
+      height: 4px;
+      background: #bd8c67;
+      margin-left: -45px;
+    }
+  }
+  p{
+    color: #bd8c67;
+    font-size: 18px;
+    text-transform: Uppercase;
+  }
 }
