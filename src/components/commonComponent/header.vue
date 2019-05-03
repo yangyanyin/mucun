@@ -5,7 +5,7 @@
 			<div class="navs right">
 				<a href="/">首页</a>
 			    <a href="/passport">护照项目</a>
-			    <a href="/move-project">移居狮城 </a>
+			    <a href="/move-city">移居狮城 </a>
 			    <a href="/bank">银行开户</a>
 			    <a href="/asset-allocation">资产配置</a>    
 			    <a href="/about">关于我们</a>
@@ -19,7 +19,7 @@
 		<div class="wap-nav-list" :class="{on: showWapNav}">
 			<a href="/">首页</a>
 		    <a href="/passport">护照项目</a>
-		    <a href="/move-project">移居狮城 </a>
+		    <a href="/move-city">移居狮城 </a>
 		    <a href="/bank">银行开户</a>
 		    <a href="/asset-allocation">资产配置</a>    
 		    <a href="/about">关于我们</a>
@@ -102,7 +102,7 @@ export default {
 	position: fixed;
 	top: 60px;
 	right: -101%;
-	z-index: 99;
+	z-index: 999;
 	width: 100%;
 	height: 100%;
 	background: rgba(0,0,0,0.9);
