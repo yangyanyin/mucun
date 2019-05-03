@@ -163,7 +163,7 @@ export default {
 		border: 1px solid #bd8c67;
 		padding: 6px;
 		bottom: 100px;
-		border-radius: 10px;
+		border-radius: 5px;
 		cursor:pointer;
 		background: #bd8c67;
 		opacity: 0.8;
