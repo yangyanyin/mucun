@@ -82,9 +82,8 @@ export default {
 	}
 	.about-main{
 		margin-top: 90px;
-		
 		.about-img{
-			margin-top: 80px;
+			margin: 80px 0;
 		}
 		img{
 			// display: block;

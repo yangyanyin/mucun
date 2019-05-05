@@ -68,7 +68,6 @@ export default {
 </script>
 <style lang="less" scoped>
 	.footer{
-		margin-top: 90px;
 		.nav-country{
 			background: #f8f8f8;
 			text-align: center;

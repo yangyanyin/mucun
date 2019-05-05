@@ -220,7 +220,7 @@ export default {
 	}
 	.structure{
 		width: 750px;
-		margin: auto;
+		margin: 0 auto 80px;
 		text-align: center;
 		strong.title{
 			display: block;

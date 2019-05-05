@@ -505,6 +505,9 @@ export default {
 			&.immigration{
 				.list{
 					width: 50%;
+					.info{
+						height: 300px;
+					}
 				}
 			}
 		}
