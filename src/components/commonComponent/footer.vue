@@ -126,7 +126,6 @@ export default {
 			font-size: 16px;
 		}
 		@media(max-width: 767px) {
-			margin-top: 20px;
 			.nav-country{
 				padding: 20px 0;
 				.contact{
