@@ -2,95 +2,97 @@
     <Layout>  
         <div class="passport">
         	<div class="pc-max-width">
-        		<ul class="passport-list clearfix">
-	        		<li>
-	        			<strong class="name">多米尼克</strong>
-	        			<img src="../../assets/images/passport/passport1.png" />
-	        			<div class="clearfix info">
-	        				<div class="left">
-	        					<strong>123</strong>
-	        					<i>免签国家</i>
-	        				</div>
-	        				<div class="right">
-	        					<strong>31</strong>
-	        					<i>全球排名</i>
-	        				</div>
-	        			</div>
-	        		</li>
-	        		<li>
-	        			<strong class="name">格林纳达</strong>
-	        			<img src="../../assets/images/passport/passport2.png" />
-	        			<div class="clearfix info">
-	        				<div class="left">
-	        					<strong>128</strong>
-	        					<i>免签国家</i>
-	        				</div>
-	        				<div class="right">
-	        					<strong>27</strong>
-	        					<i>全球排名</i>
-	        				</div>
-	        			</div>
-	        		</li>
-	        		<li>
-	        			<strong class="name">圣卢西亚</strong>
-	        			<img src="../../assets/images/passport/passport3.png" />
-	        			<div class="clearfix info">
-	        				<div class="left">
-	        					<strong>129</strong>
-	        					<i>免签国家</i>
-	        				</div>
-	        				<div class="right">
-	        					<strong>26</strong>
-	        					<i>全球排名</i>
-	        				</div>
-	        			</div>
-	        		</li>
-	        		<li>
-	        			<strong class="name">塞浦路斯</strong>
-	        			<img src="../../assets/images/passport/passport4.png" />
-	        			<div class="clearfix info">
-	        				<div class="left">
-	        					<strong>156</strong>
-	        					<i>免签国家</i>
-	        				</div>
-	        				<div class="right">
-	        					<strong>10</strong>
-	        					<i>全球排名</i>
-	        				</div>
-	        			</div>
-	        		</li>
-	        		<li>
-	        			<strong class="name">圣基茨和尼维斯</strong>
-	        			<img src="../../assets/images/passport/passport5.png" />
-	        			<div class="clearfix info">
-	        				<div class="left">
-	        					<strong>134</strong>
-	        					<i>免签国家</i>
-	        				</div>
-	        				<div class="right">
-	        					<strong>21</strong>
-	        					<i>全球排名</i>
-	        				</div>
-	        			</div>
-	        		</li>
-	        		<li>
-	        			<strong class="name">瓦努阿图</strong>
-	        			<img src="../../assets/images/passport/passport6.png" />
-	        			<div class="clearfix info">
-	        				<div class="left">
-	        					<strong>128</strong>
-	        					<i>免签国家</i>
-	        				</div>
-	        				<div class="right">
-	        					<strong>30</strong>
-	        					<i>全球排名</i>
-	        				</div>
-	        			</div>
-	        		</li>
-        		</ul>
+        		<div class="passport-list">
+	        		<ul class="clearfix">
+		        		<li>
+		        			<strong class="name">多米尼克</strong>
+		        			<img src="../../assets/images/passport/passport1.png" />
+		        			<div class="clearfix info">
+		        				<div class="left">
+		        					<strong>123</strong>
+		        					<i>免签国家</i>
+		        				</div>
+		        				<div class="right">
+		        					<strong>31</strong>
+		        					<i>全球排名</i>
+		        				</div>
+		        			</div>
+		        		</li>
+		        		<li>
+		        			<strong class="name">格林纳达</strong>
+		        			<img src="../../assets/images/passport/passport2.png" />
+		        			<div class="clearfix info">
+		        				<div class="left">
+		        					<strong>128</strong>
+		        					<i>免签国家</i>
+		        				</div>
+		        				<div class="right">
+		        					<strong>27</strong>
+		        					<i>全球排名</i>
+		        				</div>
+		        			</div>
+		        		</li>
+		        		<li>
+		        			<strong class="name">圣卢西亚</strong>
+		        			<img src="../../assets/images/passport/passport3.png" />
+		        			<div class="clearfix info">
+		        				<div class="left">
+		        					<strong>129</strong>
+		        					<i>免签国家</i>
+		        				</div>
+		        				<div class="right">
+		        					<strong>26</strong>
+		        					<i>全球排名</i>
+		        				</div>
+		        			</div>
+		        		</li>
+		        		<li>
+		        			<strong class="name">塞浦路斯</strong>
+		        			<img src="../../assets/images/passport/passport4.png" />
+		        			<div class="clearfix info">
+		        				<div class="left">
+		        					<strong>156</strong>
+		        					<i>免签国家</i>
+		        				</div>
+		        				<div class="right">
+		        					<strong>10</strong>
+		        					<i>全球排名</i>
+		        				</div>
+		        			</div>
+		        		</li>
+		        		<li>
+		        			<strong class="name">圣基茨和尼维斯</strong>
+		        			<img src="../../assets/images/passport/passport5.png" />
+		        			<div class="clearfix info">
+		        				<div class="left">
+		        					<strong>134</strong>
+		        					<i>免签国家</i>
+		        				</div>
+		        				<div class="right">
+		        					<strong>21</strong>
+		        					<i>全球排名</i>
+		        				</div>
+		        			</div>
+		        		</li>
+		        		<li>
+		        			<strong class="name">瓦努阿图</strong>
+		        			<img src="../../assets/images/passport/passport6.png" />
+		        			<div class="clearfix info">
+		        				<div class="left">
+		        					<strong>128</strong>
+		        					<i>免签国家</i>
+		        				</div>
+		        				<div class="right">
+		        					<strong>30</strong>
+		        					<i>全球排名</i>
+		        				</div>
+		        			</div>
+		        		</li>
+	        		</ul>
+        		</div>
         		<div class="country">
         			<div class="list clearfix">
-        				<div class="left name-img">
+        				<div class="left name-img clearfix">
         					<strong class="name">多米尼克</strong>
 		        			<img src="../../assets/images/passport/passport1.png" />
 		        			<div class="clearfix info">
@@ -178,6 +180,9 @@ export default {
 	.passport{
 		background: #131313;
 		padding: 100px 0;
+		@media(max-width: 767px) {
+			padding: 50px 0;
+		}
 	}
 	.passport-list{
 		li{
@@ -208,6 +213,24 @@ export default {
 						margin-top: 5px;
 						color: #828282;
 
+					}
+				}
+			}
+		}
+		@media(max-width: 767px){
+			white-space:nowrap;
+			ul{
+				overflow: auto;
+				-webkit-overflow-scrolling: touch;
+				-moz-overflow-scrolling: touch;
+				overflow-scrolling: touch;
+				li{
+					float: none;
+					display: inline-block;
+					width: 140px;
+					padding: 0 7px;
+					.info{
+						padding: 15px 0 0;
 					}
 				}
 			}
@@ -302,7 +325,6 @@ export default {
 						width: 40%;
 						color: #fff;
 						border: 1px solid #352b24;
-						border-radius: none;
 						padding-left: 30px;
 					}
 					li:nth-child(2){
@@ -310,6 +332,57 @@ export default {
 						text-align: center;
 					}
 
+				}
+			}
+		}
+		@media(max-width: 767px){
+			margin-top: 20px;
+			.list{
+				border-top: 1px solid #bd8c67;
+				width: auto;
+				padding: 0;
+				.name-img{
+					position: relative;
+					left: auto;
+					top: auto;
+					width: 100%;
+					height: 242px;
+					margin-top: 15px;
+					padding: 20px 0 20px 160px;
+					.info{
+						width: 100%;
+					}
+					strong.name{
+						font-size: 18px;
+					}
+					strong{
+						padding: 0;
+					}
+					img{
+						position: absolute;
+						left: 20px;
+						top: 20px;
+						margin: 0;
+						width: 140px;
+					}
+				}
+				.exemption{
+					margin-top: 10px;
+					.title{
+						height: 80px;
+						line-height: 80px;
+						font-size: 20px;
+						strong{
+							font-size: 20px;
+							padding: 0 0 0 20px;
+						}
+						i{
+							top: -2px;
+						}
+					}
+					li{
+						width: 50% !important;
+					}
 				}
 			}
 		}

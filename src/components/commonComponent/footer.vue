@@ -169,5 +169,9 @@ export default {
 			display: block;
 			width: 100%;
 		}
+		@media(max-width: 767px) {
+			right: 10px;
+			bottom: 80px;
+		}
 	}
 </style>

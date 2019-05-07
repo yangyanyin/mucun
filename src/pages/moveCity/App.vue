@@ -55,13 +55,14 @@
             				<li>不打算自己在新加坡经营公司</li>
             				<li>投资500万人民币入股新公司</li>
             			</ul>
-            			<ul class="right" v-if="showTabBtn===2">
+            			<ul class="right company" v-if="showTabBtn===2">
             				<li class="title">对创办公司的要求</li>
-            				<li>申请人年满21岁</li>
-            				<li>拥有一定的商业运营经验</li>
-            				<li>想轻松获取新加坡绿卡身份</li>
-            				<li>不打算自己在新加坡经营公司</li>
+            				<li>公司不属于以下行业：咖啡店，美食中心，食阁巴刹，酒吧，夜总会，卡拉OK，酒廊，足部按摩，按摩院中国传统医学，针灸，中药配药，职业介绍机构，风水师</li>
+            				<li>公司必须满足以下至少一个创新条件：
+            					<br />a.获得新加坡政府认可的风险投资或天使投资注资
+            					<br />b.持有国家级知识产权机构批准的专利/知识产权c.与新加坡科技研究局认可的科研机构或新加坡高校有研发合作d.是获新加坡标新局、新加坡国家研发基金会等机构支持的科技创新型企业</li>
             				<li>投资500万人民币入股新公司</li>
+            				<li>公司需要满足以下雇佣人数和商业开支要求，预估115万新币以上</li>
             			</ul>
             		</div>
             	</div>
@@ -373,10 +374,34 @@ export default {
 						height: 220px;
 						background: #5a5052;
 					}
+					&.company{
+					    padding: 40px 30px 0 100px;
+					    .title{
+					    	margin-bottom: 20px;
+					    }
+					    &:after{
+					    	left: 50px;
+					    	top: 50px;
+					    }
+						li{
+							font-size: 14px;
+							line-height: 30px;
+							&:after{
+								width: 8px;
+								height: 8px;
+								top: 11px;
+							}
+						}
+					}
 					@media(max-width: 1100px) {
 						padding: 130px 0 0 180px;
 						&:after{
 							left: 100px;
+						}
+						&.company{
+							li{
+								line-height: 26px;
+							}
 						}
 					}
 				}
@@ -409,8 +434,16 @@ export default {
 								font-size: 20px;
 							}
 						}
+						&.company{
+							padding: 28px 20px 30px 60px;
+							&:after{
+								top: 35px;
+    							left: 30px;
+							}
+						}
 					}
 				}
+
 			}
 		}
 	}
