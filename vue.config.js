@@ -13,8 +13,6 @@ glob.sync('./src/pages/**/main.js').forEach(path => {
       chunks: ['chunk-vendors', 'chunk-common', chunk]
     }
 })
-console.log(pages)
-
 module.exports = {
 	publicPath: '/',
 	pages,

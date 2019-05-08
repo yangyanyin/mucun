@@ -1,36 +1,34 @@
 <template>
 	<div class="banner">
 		<swiper :options="swiperOption">
-	   		<!-- slides -->
-		    <swiper-slide>
-		    	<img src="../../../assets/images/index/banner1.png" />
-		    	<p class="t1">十年深耕新加坡，客户满意度100%</p>
+		    <swiper-slide v-for="(banners, index) in bannerImgList" :key="index">
+		    	<img :src="banners.img" />
+		    	<p class="t1" v-if="banners.title">{{banners.title}}</p>
+		    	<p class="t2" v-if="banners.description">{{banners.description}}</p>
 		    </swiper-slide>
-		    <swiper-slide><img src="../../../assets/images/index/5cc188e52282d.jpg" /></swiper-slide>
-
-		    <!-- Optional controls -->
-		    <!-- <div class="swiper-pagination"  slot="pagination"></div> -->
-		    <!-- <div class="swiper-button-prev" slot="button-prev"></div> -->
-		    <!-- <div class="swiper-button-next" slot="button-next"></div> -->
-		    <!-- <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
+			<div class="swiper-pagination" slot="pagination"></div>
+<!-- 	        <div class="swiper-button-prev" slot="button-prev"></div>
+	        <div class="swiper-button-next" slot="button-next"></div> -->
 		</swiper>
+		
+		   
 	</div>
 </template>
 <script>
 import 'swiper/dist/css/swiper.min.css'
 export default {
+	props:['bannerImgList'],
 	data () {
 		return {
 			swiperOption: {
-				autoplay: true,
-				loop: true,
-				navigation: {
-			    	nextEl: '.swiper-button-next',
-			    	prevEl: '.swiper-button-prev'
-		  		}
-			}
+		        autoplay: 3000,
+		        loop: true,
+		        pagination: '.swiper-pagination'
+	        }
 		}
-	}
+	},
+	mounted () {
+    }
 }
 </script>
 <style lang="less" scoped>
@@ -41,11 +39,20 @@ export default {
 	.t1{
 		position: absolute;
 		left: 0;
-		bottom: 30%;
+		bottom: 55%;
 		width: 100%;
 		text-align: center;
 		color: #fff;
-		font-size: 50px;
+		font-size: 60px;
+	}
+	.t2{
+		position: absolute;
+		left: 0;
+		bottom: 40%;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		font-size: 44px;
 	}
 }
 </style>
