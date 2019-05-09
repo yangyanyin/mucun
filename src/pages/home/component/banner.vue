@@ -1,6 +1,6 @@
 <template>
 	<div class="banner">
-		<swiper :options="swiperOption">
+		<swiper :options="swiperOption" v-if="false">
 		    <swiper-slide v-for="(banners, index) in bannerImgList" :key="index">
 		    	<img :src="banners.img" />
 		    	<p class="t1" v-if="banners.title">{{banners.title}}</p>
@@ -10,7 +10,7 @@
 <!-- 	        <div class="swiper-button-prev" slot="button-prev"></div>
 	        <div class="swiper-button-next" slot="button-next"></div> -->
 		</swiper>
-		
+		<video width="100%" src="../../../assets/images/video.mp4" autoplay="autoplay" loop="loop" muted="muted">your browser does not support the video tag</video>
 		   
 	</div>
 </template>
@@ -32,6 +32,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+
 .banner{
 	img{
 		width: 100%;

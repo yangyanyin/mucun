@@ -201,6 +201,10 @@ export default {
 			img{
 				width: 100%;
 				max-width: 179px;
+				transition: 0.2s;
+				&:hover{
+					transform: scale(1.1);
+				}
 
 			}
 

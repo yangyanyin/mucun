@@ -12,7 +12,7 @@
 	        		</div>
 	        	</div>
 	        	<div class="country-list">
-	        		<div class="content clearfix">
+	        		<div class="content clearfix brick-item">
 		        		<div class="left img">
 		        			<img src="../../assets/images/country/country-icon1.png" />
 		        		</div>
@@ -48,7 +48,7 @@
 		        			<a href="#">查看详情</a>
 		        		</div>
 	        		</div>
-	        		<div class="content clearfix">
+	        		<div class="content clearfix brick-item">
 		        		<div class="left img">
 		        			<img src="../../assets/images/country/country-icon2.png" />
 		        		</div>
@@ -146,6 +146,10 @@ export default {
 			color: #828282;
 			cursor:pointer;
 			justify-content: center;
+			transition: 0.2s;
+			&:hover{
+				color: #bd8c67;
+			}
 			&.on{
 				position: relative;
 				color: #bd8c67;
@@ -256,7 +260,6 @@ export default {
 				    }
 				}
 				a{
-
 					position: absolute;
 					bottom: 0;
 					right: 0;
@@ -267,6 +270,11 @@ export default {
 					color: #bd8c67;
 					font-size: 18px;
 					border: 1px solid #bd8c67;
+					transition: 0.4s;
+					&:hover{
+						background: #bd8c67;
+						color: #fff;
+					}
 				}
 				@media(max-width: 1200px) {
 					display: block;

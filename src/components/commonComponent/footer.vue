@@ -13,13 +13,13 @@
 				<a href="#">关于我们</a>
 			</div>
 			<ul class="country">
-				<li><img src="../../assets/images/footer-country1.png"></li>
-				<li><img src="../../assets/images/footer-country2.png"></li>
-				<li><img src="../../assets/images/footer-country3.png"></li>
-				<li><img src="../../assets/images/footer-country4.png"></li>
-				<li><img src="../../assets/images/footer-country5.png"></li>
-				<li><img src="../../assets/images/footer-country6.png"></li>
-				<li><img src="../../assets/images/footer-country7.png"></li>
+				<li class="brick-item"><img src="../../assets/images/footer-country1.png"></li>
+				<li class="brick-item"><img src="../../assets/images/footer-country2.png"></li>
+				<li class="brick-item"><img src="../../assets/images/footer-country3.png"></li>
+				<li class="brick-item"><img src="../../assets/images/footer-country4.png"></li>
+				<li class="brick-item"><img src="../../assets/images/footer-country5.png"></li>
+				<li class="brick-item"><img src="../../assets/images/footer-country6.png"></li>
+				<li class="brick-item"><img src="../../assets/images/footer-country7.png"></li>
 			</ul>
 		</div>	
 		<p class="copyright">©️ 2019 AIC Assets Management Pte Ltd. All Rights Reserved.</p>
@@ -80,6 +80,7 @@ export default {
 					color: #bd8c67;
 					font-size: 28px;
 					&:first-child{
+						font-weight: bold;
 						margin-right: 50px;
 						padding-left: 60px;
 						background: url('../../assets/images/footer-tel.png') no-repeat left center;
@@ -104,12 +105,15 @@ export default {
 					color: #bd8c67;
 					margin: 0 25px;
 					font-size: 18px;
+					&:hover{
+						font-weight: bold;
+					}
 				}
 			}
 			.country{
 				li{
 					display: inline-block;
-					width: 62px;
+					width: 55px;
 					margin: 0 15px;
 					img{
 						display: block;

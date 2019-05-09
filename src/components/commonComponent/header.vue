@@ -3,12 +3,10 @@
 		<div class="pc-max-width clearfix">
 			<div class="logo left"><a href="/"><img src="../../assets/images/logo.png"></a></div>
 			<div class="navs right">
-				<a href="/">首页</a>
-			    <a href="/passport">护照项目</a>
-			    <a href="/move-city">移居狮城 </a>
-			    <a href="/bank">银行开户</a>
-			    <a href="/asset-allocation">资产配置</a>    
-			    <a href="/about">关于我们</a>
+				<a v-for="(navs, index) in navList" :class="{on:currentUrl === navs.url}" :href="navs.url">
+					{{navs.name}}
+					<i></i>
+				</a>
 			</div>
 		</div>
 		<button class="wap-nav-botton" @click="showNav">
@@ -17,12 +15,9 @@
 			<span class="icon-bar"></span>
 		</button>
 		<div class="wap-nav-list" :class="{on: showWapNav}">
-			<a href="/">首页</a>
-		    <a href="/passport">护照项目</a>
-		    <a href="/move-city">移居狮城 </a>
-		    <a href="/bank">银行开户</a>
-		    <a href="/asset-allocation">资产配置</a>    
-		    <a href="/about">关于我们</a>
+			<a v-for="(navs, index) in navList" :href="navs.url">
+				{{navs.name}}
+			</a>
 		</div>
 	</div>
 </template>
@@ -30,7 +25,37 @@
 export default {
 	data () {
 		return {
-			showWapNav: false
+			showWapNav: false,
+			navList:[{
+					name: '首 页',
+					url: '/'
+				},
+				{
+					name: '护照精选',
+					url: '/passport'
+				},
+				{
+					name: '护照项目',
+					url: '/move-project'
+				},
+				{
+					name: '移居狮城',
+					url: '/move-city'
+				},
+				{
+					name: '银行开户',
+					url: '/bank'
+				},
+				{
+					name: '资产配置',
+					url: '/asset-allocation'
+				},
+				{
+					name: '关于我们',
+					url: '/about'
+				}
+			],
+			currentUrl: window.location.pathname
 		}
 	},
 	methods: {
@@ -39,14 +64,19 @@ export default {
 		}
 	},
 	mounted () {
+		console.log(window.location.pathname)
 	}
 }
 </script>
 <style lang="less" scoped>
 .header{
-	position: relative;
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	left: 0;
+	top: 0;
 	height: 90px;
-	background: #060a11;
+	background: rgba(0,0,0,0.9);
 }
 .logo{
 	display: block;
@@ -63,15 +93,44 @@ export default {
 		position: relative;
 		font-size: 16px;
 		color: #ffffff;
+		text-align: center;
 		margin: 0 20px;
+		transition: 0.3s;
 		@media(max-width: 1000px) {
 			margin: 0 10px;
+		}
+		i{
+			position: absolute;
+		    width: 0;
+		    bottom: -15px;
+		    left: 50%;
+		    background: #bd8c67;
+		    height: 2px;
+		    display: block;
+		    transition: .25s;
+		    -webkit-transition: .25s;
 		}
 		&:last-child{
 			margin-right: 0;
 		}
 		&:first-child{
 			margin-left: 0;
+		}
+		&:hover{
+			color: #bd8c67;
+			font-weight: bold;
+			i{
+				width: 100%;
+				left: 0;
+			}
+		}
+		&.on{
+			color: #bd8c67;
+			font-weight: bold;
+			i{
+				width: 100%;
+				left: 0;
+			}
 		}
 	}
 }

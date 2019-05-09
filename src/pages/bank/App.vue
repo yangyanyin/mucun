@@ -5,39 +5,47 @@
         	<img class="wap-img" src="../../assets/images/bank/bank-banner-wap.png" />
         </div>
         <div class="pc-max-width margin-t-80">
-        	<div class="public-title">
+        	<div class="public-title animation-show">
         		<h3>什么人适合办新加坡银行个人开户</h3>
         		<p>Who is suitable for opening an account in Bank Of Singapore</p>
         	</div>
         	<div class="bank-account clearfix">
-        		<div class="list left">
-        			<img src="../../assets/images/bank/bank-account1.png" />
-        			<div class="name">
-	        			<strong>海外资产配置</strong>
-						<p>需要做海外资产配置，开设新加坡银行账号，金融中心资金出入自由，方便快捷，便于后期海外置业，移民，保险，教育等用途。</p>
+        		<div class="list left animation-show1">
+        			<div class="brick-item">	
+	        			<img src="../../assets/images/bank/bank-account1.png" />
+	        			<div class="name">
+		        			<strong>海外资产配置</strong>
+							<p>需要做海外资产配置，开设新加坡银行账号，金融中心资金出入自由，方便快捷，便于后期海外置业，移民，保险，教育等用途。</p>
+	        			</div>
         			</div>
         		</div>
-        		<div class="list left">
-        			<img src="../../assets/images/bank/bank-account2.png" />
-        			<div class="name">
-        				<strong>需要境外银行做资金中转</strong>
-						<p>新加坡个人银行账号可以在全球范围内，任何角落即可方便网银操作，作为亚洲金融中心，方便接	受不来自世界各地的资金。</p>
+        		<div class="list left animation-show2">
+        			<div class="brick-item">	
+	        			<img src="../../assets/images/bank/bank-account2.png" />
+	        			<div class="name">
+	        				<strong>需要境外银行做资金中转</strong>
+							<p>新加坡个人银行账号可以在全球范围内，任何角落即可方便网银操作，作为亚洲金融中心，方便接	受不来自世界各地的资金。</p>
+	        			</div>
         			</div>
         		</div>
-        		<div class="list left">
-        			<img src="../../assets/images/bank/bank-account3.png" />
-        			<div class="name">
-	        			<strong>无法解释资金来源</strong>
-						<p>商业银行都会对客户资金来源都会有要求，而大部分客户无法具体解释清楚资金来源，儒商资管团队经验丰富，能协助客户妥善处理好开户前和开户后资金入账问题。</p>
+        		<div class="list left animation-show3">
+        			<div class="brick-item">	
+	        			<img src="../../assets/images/bank/bank-account3.png" />
+	        			<div class="name">
+		        			<strong>无法解释资金来源</strong>
+							<p>商业银行都会对客户资金来源都会有要求，而大部分客户无法具体解释清楚资金来源，儒商资管团队经验丰富，能协助客户妥善处理好开户前和开户后资金入账问题。</p>
+		        		</div>
 	        		</div>
 	        	</div>
         	</div>
         </div>
         <div class="condition margin-t-80">
-    		<div class="content">
-    			<h3>新加坡银行个人开户申请条件</h3>
-				<p>需要申请人提供相应的开户文件，包括个人身份文件及相关地址文件，同时完成填写银行要求的KYC文件和最低存款资金要求，以华侨银行开户为例，需要提供文件如下：</p>
-				<ul class="clearfix">
+    		<div class="content ">
+    			<div class="animation-show">
+	    			<h3>新加坡银行个人开户申请条件</h3>
+					<p>需要申请人提供相应的开户文件，包括个人身份文件及相关地址文件，同时完成填写银行要求的KYC文件和最低存款资金要求，以华侨银行开户为例，需要提供文件如下：</p>
+				</div>
+				<ul class="clearfix animation-show">
 					<li>
 						<i>01</i>
 						申请人提供开立账户的护照，金融事务身份及地址证明
@@ -54,40 +62,54 @@
     		</div>
     	</div>
     	<div class="bank-process margin-t-80">
-    		<div class="public-title">
+    		<div class="public-title animation-show">
         		<h3>银行个人开户申请流程</h3>
         		<p>Application process</p>
         	</div>
-        	<div class="structure">
+        	<div class="structure animation-show">
         		<strong class="title">申请步骤共7步，周期为3-4周</strong>
         		<div class="tree">
-        			<div class="step1">
-        				<h3>1、签约</h3>
-        				<p>客户签订好新加坡个人银行开户合同。</p>
+        			<div class="step1 step">
+        				<div class="animation-show">
+	        				<h3>1、签约</h3>
+	        				<p>客户签订好新加坡个人银行开户合同。</p>
+        				</div>
         			</div>
-        			<div class="step2">
-        				<h3>2、采集资料</h3>
-        				<p>我们的专业人士通过与客户高效沟通，了解客户的需求后，为客户私人定制开户规划。</p>
+        			<div class="step2 step animation-show">
+        				<div class="animation-show">
+	        				<h3>2、采集资料</h3>
+	        				<p>我们的专业人士通过与客户高效沟通，了解客户的需求后，为客户私人定制开户规划。</p>
+	        			</div>
         			</div>
-        			<div class="step3">
-        				<h3>3、材料递交银行</h3>
-        				<p>将整理好的客户文件我司文案人员具体检查再次确认无误后，递交至新加坡银行受理开户申请。</p>
+        			<div class="step3 step animation-show">
+        				<div class="animation-show">
+	        				<h3>3、材料递交银行</h3>
+	        				<p>将整理好的客户文件我司文案人员具体检查再次确认无误后，递交至新加坡银行受理开户申请。</p>
+	        			</div>
         			</div>
-        			<div class="step4">
-        				<h3>4、银行身份确认</h3>
-        				<p>银行和客户进行电话沟通进行身份确认，我司提前与客户做好电话时间预约，指导客户顺利与银行做身份确认。</p>
+        			<div class="step4 step animation-show">
+        				<div class="animation-show">
+	        				<h3>4、银行身份确认</h3>
+	        				<p>银行和客户进行电话沟通进行身份确认，我司提前与客户做好电话时间预约，指导客户顺利与银行做身份确认。</p>
+	        			</div>
         			</div>
-        			<div class="step5">
-        				<h3>5、银行开户</h3>
-        				<p>银行账号开好后，银行会以电子邮件形式通知到客户邮箱，确认银行账号设立。</p>
+        			<div class="step5 step animation-show">
+        				<div class="animation-show">
+	        				<h3>5、银行开户</h3>
+	        				<p>银行账号开好后，银行会以电子邮件形式通知到客户邮箱，确认银行账号设立。</p>
+	        			</div>
         			</div>
-        			<div class="step6">
-        				<h3>6、激活账号</h3>
-        				<p>账号开好后，银行会将银行卡以及网银密码电邮至客户提供的通讯地址，我们全程指导激活银行账号和网银使用。</p>
+        			<div class="step6 step animation-show">
+        				<div class="animation-show">
+	        				<h3>6、激活账号</h3>
+	        				<p>账号开好后，银行会将银行卡以及网银密码电邮至客户提供的通讯地址，我们全程指导激活银行账号和网银使用。</p>
+	        			</div>
         			</div>
-        			<div class="step7">
-        				<h3>7、后续服务</h3>
-        				<p>我们提供客户一年的免费后期指导和资金出入账的注意事项问题。</p>
+        			<div class="step7 step animation-show">
+        				<div class="animation-show">
+	        				<h3>7、后续服务</h3>
+	        				<p>我们提供客户一年的免费后期指导和资金出入账的注意事项问题。</p>
+	        			</div>
         			</div>
         		</div>
         	</div>
@@ -97,11 +119,17 @@
 
 <script>
 import Layout from '../../components/layout.vue'
+import { animation, windowScroll } from '../../assets/js/config.js'
 
 export default {
     name: 'app',
     components: {
         Layout
+    },
+    mounted () {
+        let scroll = document.documentElement.scrollTop || document.body.scrollTop
+    	animation(scroll)
+        windowScroll()
     }
 }
 </script>
@@ -238,7 +266,7 @@ export default {
 			height: 677px;
 			background: url('../../assets/images/bank/tree-bg.png') no-repeat top center;
 			background-size: 477px;
-			div{
+			.step{
 				position: absolute;
 				h3{
 					font-size: 22px;

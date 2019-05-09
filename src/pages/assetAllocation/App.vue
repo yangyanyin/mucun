@@ -5,7 +5,7 @@
         	<img class="wap-img" src="../../assets/images/asset-allocation/asset-banner-wap.png" />
         </div>
         <div class="pc-max-width asset-allocation">
-        	<div class="content clearfix  margin-t-80">
+        	<div class="content clearfix margin-t-80 animation-show">
         		<div class="list left img">
 	        		<img src="../../assets/images/asset-allocation/asset-img1.png" alt="">
 	        	</div>
@@ -17,7 +17,7 @@
 	        	</div>
         	</div>
 
-        	<div class="content clearfix  margin-t-80">
+        	<div class="content clearfix  margin-t-80 animation-show">
         		<div class="list img right">
 	        		<img src="../../assets/images/asset-allocation/asset-img2.png" alt="">
 	        	</div>
@@ -30,7 +30,7 @@
 	        	
         	</div>
 
-        	<div class="content clearfix  margin-t-80">
+        	<div class="content clearfix  margin-t-80 animation-show">
         		<div class="list left img">
 	        		<img src="../../assets/images/asset-allocation/asset-img3.png" alt="">
 	        	</div>
@@ -42,7 +42,7 @@
 	        	</div>
         	</div>
 
-        	<div class="content clearfix  margin-t-80">
+        	<div class="content clearfix  margin-t-80 animation-show">
         		<div class="list img right">
 	        		<img src="../../assets/images/asset-allocation/asset-img4.png" alt="">
 	        	</div>
@@ -66,7 +66,7 @@
 	        	
         	</div>
 
-        	<div class="content clearfix  margin-t-80">
+        	<div class="content clearfix  margin-t-80 animation-show">
         		<div class="list left img">
 	        		<img src="../../assets/images/asset-allocation/asset-img5.png" alt="">
 	        	</div>
@@ -78,7 +78,7 @@
 	        	</div>
         	</div>
 
-        	<div class="content clearfix margin-t-80">
+        	<div class="content clearfix margin-t-80 animation-show">
         		<div class="list img right">
 	        		<img src="../../assets/images/asset-allocation/asset-img6.png" alt="">
 	        	</div>
@@ -98,11 +98,16 @@
 
 <script>
 import Layout from '../../components/layout.vue'
-
+import { animation, windowScroll } from '../../assets/js/config.js'
 export default {
     name: 'app',
     components: {
         Layout
+    },
+    mounted () {
+        let scroll = document.documentElement.scrollTop || document.body.scrollTop
+    	animation(scroll)
+        windowScroll()
     }
 }
 </script>

@@ -59,31 +59,39 @@
                     </div>
                     <div class="content clearfix">
                         <div class="left list animation-show">
-                            <a href="#"><img src="../../assets/images/index/passport1.png" /></a>
-                            <div class="name">
-                                <strong>瓦努阿图</strong>
-                                <p>快至28天，申请材料简单背调宽松<br />国家捐赠</p>
+                            <div class="brick-item">
+                                <a href="#"><img src="../../assets/images/index/passport1.png" /></a>
+                                <div class="name">
+                                    <strong>瓦努阿图</strong>
+                                    <p>快至28天，申请材料简单背调宽松<br />国家捐赠</p>
+                                </div>
                             </div>
                         </div>
                          <div class="left list animation-show">
-                            <a href="#"><img src="../../assets/images/index/passport2.png" /></a>
-                            <div class="name">
-                                <strong>圣基茨和尼维斯</strong>
-                                <p>最早的护照项目，名人案例丰富<br />投资房产/国家捐赠</p>
+                            <div class="brick-item">
+                                <a href="#"><img src="../../assets/images/index/passport2.png" /></a>
+                                <div class="name">
+                                    <strong>圣基茨和尼维斯</strong>
+                                    <p>最早的护照项目，名人案例丰富<br />投资房产/国家捐赠</p>
+                                </div>
                             </div>
                         </div>
                         <div class="left list animation-show">
-                            <a href="#"><img src="../../assets/images/index/passport1.png" /></a>
-                            <div class="name">
-                                <strong>瓦努阿图</strong>
-                                <p>快至28天，申请材料简单背调宽松<br />国家捐赠</p>
+                            <div class="brick-item">
+                                <a href="#"><img src="../../assets/images/index/passport1.png" /></a>
+                                <div class="name">
+                                    <strong>瓦努阿图</strong>
+                                    <p>快至28天，申请材料简单背调宽松<br />国家捐赠</p>
+                                </div>
                             </div>
                         </div>
                          <div class="left list animation-show">
-                            <a href="#"><img src="../../assets/images/index/passport2.png" /></a>
-                            <div class="name">
-                                <strong>圣基茨和尼维斯</strong>
-                                <p>最早的护照项目，名人案例丰富<br />投资房产/国家捐赠</p>
+                            <div class="brick-item">
+                                <a href="#"><img src="../../assets/images/index/passport2.png" /></a>
+                                <div class="name">
+                                    <strong>圣基茨和尼维斯</strong>
+                                    <p>最早的护照项目，名人案例丰富<br />投资房产/国家捐赠</p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -207,11 +207,12 @@ select:focus,select:active,select:hover{
       content: '';
       position: absolute;
       bottom: 14px;
-      left: 50%;
       width: 90px;
+      margin-left: -45px;
+      left: 50%;
       height: 4px;
       background: #bd8c67;
-      margin-left: -45px;
+      transition: 2s;
     }
   }
   p{
@@ -225,8 +226,9 @@ select:focus,select:active,select:hover{
       padding-bottom: 24px;
       &:after{
         bottom: 12px;
-        width: 60px;
+        width: 0;
         height: 3px;
+       width: 60px;
         margin-left: -30px;
       }
     }
@@ -242,7 +244,20 @@ select:focus,select:active,select:hover{
   transform: translateY(50px);
   opacity: 0;
   &.show{
-    animation: boxTops 0.5s forwards;
+    animation: boxTops 1s forwards;
+    // &.public-title{
+    //   h3{
+    //     &:after{
+    //       width: 90px;
+    //       margin-left: -45px;
+    //       left: 50%;
+    //       @media(max-width: 767px) {
+    //         width: 60px;
+    //         margin-left: -30px;
+    //       }
+    //     }
+    //   }
+    // } 
   }
 }
 
@@ -250,5 +265,14 @@ select:focus,select:active,select:hover{
   100%{
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+.brick-item{
+  transition: 0.4s;
+  &:hover{
+    box-shadow: 0 15px 18px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
   }
 }

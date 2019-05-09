@@ -4,18 +4,18 @@
         	<img class="web-img" src="../../assets/images/city/city-banner.png" />
         	<img class="wap-img" src="../../assets/images/city/city-banner-wap.png" />
         </div>
-        <div class="investment margin-t-80 pc-max-width">
+        <div class="investment margin-t-80 pc-max-width animation-show">
         	<strong>创业投资移民</strong>
 			<p>创业投资资移民是儒商资管为客户量身定制的专属投资移民方案，是目前新加坡移民法律下最佳的移民方式选择。申请人通过投资创办新加坡公司，获取新加坡政府颁发的创业准证(Entrepass)，当公司运营至满足新加坡政府的指定要求后，便可向新加坡移民局（ICA）申请绿卡，从而移民新加坡，之后可申请全家入籍新加坡，免签超过全球170个国家，为地表名副其实的最强护照。</p>
 			<p>该方案以成功率高、专业性强、安全稳定等特点备受客户青睐和好评，迄今已帮助近百位客户顺利移居新加坡。客户无需在新加坡自主运作公司，无需承担公司运营的亏损风险。保和移民为客户提供包括评估咨询、专业文案、政府沟通、公司监管等专属服务，使申请人的公司满足创业准证申请要求、公司运营情况满足创业准证续签要求，确保移民成功率。</p>
 			<span>全球精英最可靠移民方案</span>
         </div>
         <div class="margin-t-80 crowd">
-        	<div class="public-title">
+        	<div class="public-title animation-show">
                 <h3>适用人群</h3>
                 <p>Suitable crowd</p>
             </div>
-            <div class="content pc-max-width clearfix">
+            <div class="content pc-max-width clearfix animation-show">
             	<div class="list left">
             		<img src="../../assets/images/city/crowd-icon1.png" />
             		<strong>有一流的商业背景或<br />高管经验</strong>
@@ -35,16 +35,16 @@
             </div>
         </div>
         <div class="condition margin-t-80 pc-max-width">
-        	<div class="public-title">
+        	<div class="public-title animation-show">
                 <h3>申请条件</h3>
                 <p>Application Requirement</p>
             </div>
             <div class="content">
-            	<div　class="tab-btn clearfix">
+            	<div　class="tab-btn clearfix animation-show">
             		<a :class="{on:showTabBtn===1}" @click="switchTab(1)">对申请人的要求</a>
             		<a :class="{on:showTabBtn===2}" @click="switchTab(2)">对创办公司的要求</a>
             	</div>
-            	<div class="tab-box" >
+            	<div class="tab-box animation-show">
             		<div class="tab-centenr clearfix">
             			<img class="left" src="../../assets/images/city/condition-bg1.png" />
             			<ul class="right" v-if="showTabBtn===1">
@@ -69,41 +69,41 @@
             </div>
         </div>
         <div class="advantage margin-t-80">
-        	<div class="public-title">
+        	<div class="public-title animation-show">
                 <h3>方案优势</h3>
                 <p>五大优势 快速移民新加坡</p>
             </div>
-            <div class="content pc-max-width clearfix">
+            <div class="content pc-max-width clearfix animation-show">
             	<div class="list left">
-            		<div class="info">
+            		<div class="info brick-item">
 	            		<img class="img1" src="../../assets/images/city/advantage-icon1.png" />
 	            		<strong>门槛底</strong>
 	            		<p>条件宽松，无语言要求，精英首选方案。</p>
             		</div>
             	</div>
             	<div class="list left">
-            		<div class="info">
+            		<div class="info brick-item">
             			<img class="img2" src="../../assets/images/city/advantage-icon2.png" />
             			<strong>零风险</strong>
             			<p>投资款有固定资产担保，客户不承担公司盈亏风险。</p>
             		</div>
             	</div>
             	<div class="list left">
-            		<div class="info">
+            		<div class="info brick-item">
             			<img class="img3" src="../../assets/images/city/advantage-icon3.png" />
             			<strong>好福利</strong>
             			<p>地表最强护照，全球畅通无阻，保障子女教育，全球最低税率。</p>
             		</div>
             	</div>
             	<div class="list left">
-            		<div class="info">
+            		<div class="info brick-item">
             			<img class="img4" src="../../assets/images/city/advantage-icon4.png" />
             			<strong>批复率高</strong>
             			<p>儒商资管聘前移民官预评申请人情况，不浪费时间，批准率高。</p>
             		</div>
             	</div>
             	<div class="list left">
-            		<div class="info">
+            		<div class="info brick-item">
             			<img class="img5" src="../../assets/images/city/advantage-icon5.png" />
             			<strong>快速登录新加坡</strong>
             			<p>获签块，最快申请人可以3个月内登录新加坡。</p>
@@ -112,11 +112,11 @@
             </div>
         </div>
         <div class="process margin-t-80 pc-max-width">
-        	<div class="public-title">
+        	<div class="public-title animation-show">
                 <h3>服务流程</h3>
                 <p>Service Process</p>
             </div>
-            <ul>
+            <ul class="animation-show">
             	<li>
             		<i>01</i>
             		<p>采集申请人基本信息，<br />评估申请人综合情况。</p>
@@ -140,48 +140,48 @@
             </ul>
         </div>
         <div class="immigration advantage margin-t-80">
-        	<div class="public-title">
+        	<div class="public-title animation-show">
                 <h3>新加坡移民优势</h3>
                 <p>移民新加坡 尽享六大福利</p>
             </div>
             <div class="content pc-max-width clearfix">
-            	<div class="list left">
-            		<div class="info">
+            	<div class="list left animation-show">
+            		<div class="info brick-item">
 	            		<img class="img1" src="../../assets/images/city/advantage-icon6.png" />
 	            		<strong>精英教育</strong>
 	            		<p>全球知名高校、教育中西兼容并蓄，双语教育发达，剑桥体系的教育系统，成绩受世界认可</p>
             		</div>
         		</div>
-        		<div class="list left">
-            		<div class="info">
+        		<div class="list left animation-show">
+            		<div class="info brick-item">
 	            		<img class="img1" src="../../assets/images/city/advantage-icon7.png" />
 	            		<strong>金融中心</strong>
 	            		<p>全球第四大外汇交易中心，在国际金融、贸易融资、海事金融、保险、财务运作、资产及财富管理方面拥有领先地位</p>
             		</div>
         		</div>
-        		<div class="list left">
-            		<div class="info">
+        		<div class="list left animation-show">
+            		<div class="info brick-item">
 	            		<img class="img1" src="../../assets/images/city/advantage-icon8.png" />
 	            		<strong>税务天堂</strong>
 	            		<p>新加坡税收体系简单低廉，无资本税，区域征税，资金可在主要金融中心自由流动</p>
             		</div>
         		</div>
-        		<div class="list left">
-            		<div class="info">
+        		<div class="list left animation-show">
+            		<div class="info brick-item">
 	            		<img class="img1" src="../../assets/images/city/advantage-icon9.png" />
 	            		<strong>全球通行</strong>
 	            		<p>护照免签170多个国家，包括美国、日本、中国和欧洲大部分国家，相当于 “国际通行证”</p>
             		</div>
         		</div>
-        		<div class="list left">
-            		<div class="info">
+        		<div class="list left animation-show">
+            		<div class="info brick-item">
 	            		<img class="img1" src="../../assets/images/city/advantage-icon10.png" />
 	            		<strong>医疗福利</strong>
 	            		<p>新加坡拥有发达的医疗设施和极高的医疗水平，可以让全家人高枕无忧</p>
             		</div>
         		</div>
-        		<div class="list left">
-            		<div class="info">
+        		<div class="list left animation-show">
+            		<div class="info brick-item">
 	            		<img class="img1" src="../../assets/images/city/advantage-icon11.png" />
 	            		<strong>花园城市</strong>
 	            		<p>全球知名“花园城市”，街道干净整洁，空气清新，气候宜人，极其适合居住与生活</p>
@@ -194,7 +194,7 @@
 
 <script>
 import Layout from '../../components/layout.vue'
-
+import { animation, windowScroll } from '../../assets/js/config.js'
 export default {
     name: 'app',
     components: {
@@ -209,6 +209,11 @@ export default {
     	switchTab (i) {
     		this.showTabBtn = i
     	}
+    },
+    mounted () {
+        let scroll = document.documentElement.scrollTop || document.body.scrollTop
+    	animation(scroll)
+        windowScroll()
     }
 }
 </script>
@@ -547,6 +552,7 @@ export default {
 	}
 	.process{
 		width: 750px;
+		padding-top: 80px;
 		margin: auto;
 		ul{
 			position: relative;

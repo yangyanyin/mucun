@@ -8,13 +8,13 @@
 	        <div class="details">
 	        	<img class="web-img" src="../../assets/images/about/about-img1.png" />
 	        	<img class="wap-img" src="../../assets/images/about/about-img1-wap.png" />
-	        	<div>
+	        	<div class="animation-show">
 		        	<h3>关于我们</h3>
 					<p>儒商资管作为儒商文化的忠实信仰者，十年深耕新加坡，我们专注于为亚洲区域范围内的成功企业家提供第二居住和公民身份的服务，使个人或家庭成为全球公民。这是我们团队通过专业的一对一定制服务体验实现的，客户通过我们简化了成为全球公民的复杂性，并通过和相关机构保持长期稳定关系，可满足亚洲区域企业家对全球公民的需求。</p>
 					<p>儒商资管立足狮城，放眼亚洲，专业服务亚洲企业成功精英。</p>
 				</div>
 	        </div>
-	        <div class="about-img">
+	        <div class="about-img animation-show">
 	        	<img class="web-img"src="../../assets/images/about/about-img2.png" />
 	        	<img class="wap-img" src="../../assets/images/about/about-img2-wap.png" />
 	        </div>
@@ -25,10 +25,16 @@
 <script>
 import Layout from '../../components/layout.vue'
 import '../../assets/less/custom.less'
+import { animation, windowScroll } from '../../assets/js/config.js'
 export default {
     name: 'app',
     components: {
         Layout
+    },
+    mounted () {
+        let scroll = document.documentElement.scrollTop || document.body.scrollTop
+    	animation(scroll)
+        windowScroll()
     }
 }
 </script>
