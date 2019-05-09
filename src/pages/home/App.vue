@@ -53,33 +53,33 @@
             <!-- 全球护照精选 -->
             <div class="passport margin-t-80">
                 <div class="pc-max-width">
-                    <div class="public-title">
+                    <div class="public-title animation-show">
                         <h3>全球护照精选</h3>
                         <p>global passport selection</p>
                     </div>
                     <div class="content clearfix">
-                        <div class="left list">
+                        <div class="left list animation-show">
                             <a href="#"><img src="../../assets/images/index/passport1.png" /></a>
                             <div class="name">
                                 <strong>瓦努阿图</strong>
                                 <p>快至28天，申请材料简单背调宽松<br />国家捐赠</p>
                             </div>
                         </div>
-                         <div class="left list">
+                         <div class="left list animation-show">
                             <a href="#"><img src="../../assets/images/index/passport2.png" /></a>
                             <div class="name">
                                 <strong>圣基茨和尼维斯</strong>
                                 <p>最早的护照项目，名人案例丰富<br />投资房产/国家捐赠</p>
                             </div>
                         </div>
-                        <div class="left list">
+                        <div class="left list animation-show">
                             <a href="#"><img src="../../assets/images/index/passport1.png" /></a>
                             <div class="name">
                                 <strong>瓦努阿图</strong>
                                 <p>快至28天，申请材料简单背调宽松<br />国家捐赠</p>
                             </div>
                         </div>
-                         <div class="left list">
+                         <div class="left list animation-show">
                             <a href="#"><img src="../../assets/images/index/passport2.png" /></a>
                             <div class="name">
                                 <strong>圣基茨和尼维斯</strong>
@@ -92,11 +92,11 @@
 
             <!-- 为什么需要一本小国护照 -->
             <div class="country-passport pc-max-width margin-t-80">
-                <div class="public-title">
+                <div class="public-title animation-show">
                     <h3>为什么需要一本小国护照？</h3>
                     <p>why do you need a small country passport</p>
                 </div>
-                <div class="content clearfix">
+                <div class="content clearfix animation-show">
                     <div class="list left">
                         <span><img src="../../assets/images/index/passport-icon1.png"></span>
                         <h3>非全球征税</h3>
@@ -128,11 +128,11 @@
             <!-- 移居狮城 -->
             <div class="migration margin-t-80">
                 <div class="pc-max-width">
-                    <div class="public-title">
+                    <div class="public-title animation-show">
                         <h3>移居狮城</h3>
                         <p>migation project</p>
                     </div>
-                    <div class="content">
+                    <div class="content animation-show">
                         <h3>儒商移民为您全程提供</h3>
                         <p>一站式新加坡公司注册、税务身份、资产安全、银行开户、精英教育、海外资产配置、家族办公室服务。</p>
                         <a href="/">了解更多></a>
@@ -142,11 +142,11 @@
 
             <!-- 关于我们 -->
             <div class="index-about pc-max-width margin-t-80">
-                <div class="public-title">
+                <div class="public-title animation-show">
                     <h3>关于我们</h3>
                     <p>about us</p>
                 </div>
-                <div class="content">
+                <div class="content animation-show">
                     <div class="img">
                         <img src="../../assets/images/index/about-bg.png" />
                     </div>
@@ -162,11 +162,11 @@
 
             <!-- 联系我们 -->
             <div class="index-contact pc-max-width margin-t-80">
-                <div class="public-title">
+                <div class="public-title animation-show">
                     <h3>联系我们</h3>
                     <p>contact us</p>
                 </div>
-                <div class="content">
+                <div class="content animation-show">
                     <div class="advisory">
                         <img class="web-img" src="../../assets/images/index/contact-bg.png" />
                         <img class="wap-img" src="../../assets/images/index/contact-bg-wap.png" />
@@ -228,7 +228,7 @@ export default {
                 this.isLoadingsTatus = true
                 setTimeout(function (){
                     animation(scroll)
-                }, 5)
+                }, 10)
             }
         })
         windowScroll()

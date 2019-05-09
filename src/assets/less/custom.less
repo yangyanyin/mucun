@@ -236,3 +236,19 @@ select:focus,select:active,select:hover{
     }
   }
 }
+
+
+.animation-show{
+  transform: translateY(50px);
+  opacity: 0;
+  &.show{
+    animation: boxTops 0.5s forwards;
+  }
+}
+
+@keyframes boxTops {
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

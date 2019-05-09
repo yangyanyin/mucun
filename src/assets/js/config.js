@@ -12,8 +12,7 @@ export const device = () => {
 export const animation = (scrollTop) => {
 	let boxTions = document.getElementsByClassName('animation-show')
 	for (let i = 0; i < boxTions.length; i++) {
-		if (scrollTop + window.innerHeight >= boxTions[i].offsetTop) {
-			console.log(boxTions[i].classList.add)
+		if (scrollTop + window.innerHeight >= boxTions[i].offsetTop + 170) {
 			boxTions[i].classList.add('show')
 		} else {
 			boxTions[i].classList.remove('show')
