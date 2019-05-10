@@ -270,8 +270,8 @@
 		    display: flex;
 		    -webkit-box-pack: justify;
 		    -ms-flex-pack: justify;
-		    justify-content: space-between;
-		    -webkit-justify-content: space-between;
+		    justify-content: center;
+		    -webkit-justify-content: center;
 		    -webkit-box-orient: horizontal;
 		    -webkit-box-direction: normal;
 		    -ms-flex-flow: row wrap;
@@ -294,6 +294,12 @@
 					font-size: 15px;
 					height: 112px;
 					line-height: 28px;
+				}
+				&:nth-child(2){
+					margin: 50px 11% 0;
+				}
+				&:nth-child(5){
+					margin: 50px 11% 0;
 				}
 			}
 		}
