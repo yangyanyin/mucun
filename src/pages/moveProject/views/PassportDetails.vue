@@ -12,76 +12,34 @@
 					<a>申请条件</a>
 				</div>
 				<div class="content-know">
-					<h3 class="country-title">移民瓦国，这些好处，你都知道吗？</h3>
-					<p>瓦努阿图，位于太平洋西南部，属英联邦成员国，毗邻澳大利亚、新西兰、斐济等国，是澳、新的后花园，被评为“全球幸福指数最高的国度”，持有瓦国公民可免签120多个国家，申请澳、新签证和移居更容易。2016年12月19日，瓦努阿图正式立法通过《2016年第220号国籍条例（捐献计划）法令》,制定了捐献计划的细则：通过捐献计划筹集资金并吸纳高素质的新移民，推动瓦国经济发展。</p>
+					<h3 class="country-title">移民{{countryName}}，这些好处，你都知道吗？</h3>
+					<p>{{description}}</p>
 					<strong>(+65) 8866 5586</strong>
 				</div>
 				<div class="content-block">
-					<h3 class="country-title">移民瓦国，这些好处，你都知道吗？</h3>
+					<h3 class="country-title">为什么{{countryName}}护照项目这么好？</h3>
 					<ul class="clearfix">
-						<li>
+						<li v-for="(advantages, index) in advantagesList" :key="index">
 							<div class="brick-item">
-								<span><img src="../../../assets/images/country/details/details-img1.png" /></span>
-								<strong>避税天堂</strong>
-								<p>入籍后可注册离岸公司，海外资产配置，财富管理</p>
-							</div>
-						</li>
-						<li>
-							<div class="brick-item">
-								<span><img src="../../../assets/images/country/details/details-img1.png" /></span>
-								<strong>避税天堂</strong>
-								<p>入籍后可注册离岸公司，海外资产配置，财富管理</p>
-							</div>
-						</li>
-						<li>
-							<div class="brick-item">
-								<span><img src="../../../assets/images/country/details/details-img1.png" /></span>
-								<strong>避税天堂</strong>
-								<p>入籍后可注册离岸公司，海外资产配置，财富管理</p>
-							</div>
-						</li>
-						<li>
-							<div class="brick-item">
-								<span><img src="../../../assets/images/country/details/details-img1.png" /></span>
-								<strong>避税天堂</strong>
-								<p>入籍后可注册离岸公司，海外资产配置，财富管理</p>
+								<span><img :src="advantages.img"></span>
+								<strong>{{advantages.title}}</strong>
+								<p>{{advantages.description}}</p>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="for-people">
-				<h3 class="country-title">瓦国护照适用人群</h3>
+				<h3 class="country-title">{{countryName}}护照适用人群</h3>
 				<ul class="pc-max-width clearfix">
-					<li>
-						<h3><strong>01</strong>税务规划者</h3>
-						<p>事业家，企业家，高净值人士等需要配置海外资产，开设海外账户，合理规划财税，规避CRSVAEO/FATCA等全球征税群体</p>
+					<li v-for="(user, index) in userTypes" :key="index">
+						<h3><strong>0{{index+1}}</strong>{{user.title}}</h3>
+						<p>{{user.description}}</p>
 					</li>
-					<li>
-						<h3><strong>02</strong>旅游出行</h3>
-						<p>商务出差频繁、旅游爱好者等长期往返于世界各地，又疲于一次次签证的奔波与困扰的群体。</p>
-					</li>
-					<li>
-						<h3><strong>03</strong>子女教育</h3>
-						<p>希望给孩子创造良好的教育环境，让孩子就读国际学校、接受国际化教育亦或方便孩子未来出国留学的人群。</p>
-					</li>
-					<li>
-						<h3><strong>01</strong>税务规划者</h3>
-						<p>事业家，企业家，高净值人士等需要配置海外资产，开设海外账户，合理规划财税，规避CRSVAEO/FATCA等全球征税群体</p>
-					</li>
-					<li>
-						<h3><strong>02</strong>旅游出行</h3>
-						<p>商务出差频繁、旅游爱好者等长期往返于世界各地，又疲于一次次签证的奔波与困扰的群体。</p>
-					</li>
-					<li>
-						<h3><strong>03</strong>子女教育</h3>
-						<p>希望给孩子创造良好的教育环境，让孩子就读国际学校、接受国际化教育亦或方便孩子未来出国留学的人群。</p>
-					</li>
-
 				</ul>
 			</div>
 			<div class="pc-max-width compared">
-				<h3 class="country-title">瓦国护照比大国绿卡好在哪里？</h3>
+				<h3 class="country-title">{{countryName}}护照比大国绿卡好在哪里？</h3>
 				<div class="clearfix">
 					<ul class="left">
 						<li class="t">瓦努阿图护照</li>
@@ -94,33 +52,25 @@
 				</div>	
 			</div>
 			<div class="pc-max-width obtain">
-				<h3 class="country-title">如何获得瓦努阿图护照？</h3>
+				<h3 class="country-title">如何获得{{countryName}}护照？</h3>
 				<ul>
-					<li>
-						<h3>01</h3>
-						<span class="icon"></span>
-						<p>18周岁以上</p>
-					</li>
-					<li>
-						<h3>01</h3>
-						<span class="icon"></span>
-						<p>18周岁以上</p>
-					</li>
-					<li>
-						<h3>01</h3>
-						<span class="icon"></span>
-						<p>18周岁以上</p>
-					</li>
-					<li>
-						<h3>01</h3>
-						<span class="icon"></span>
-						<p>18周岁以上</p>
+					<li v-for="(conditions, index) in applyConditions" class="brick-item">
+						<h3>0{{index+1}}</h3>
+						<img class="icon" :src="conditions.icon" />
+						<p>{{conditions.condition}}</p>
 					</li>
 				</ul>
 			</div>
-			<div class="process pc-max-width">
-				<h3 class="country-title">瓦努阿图公民身份申请流程</h3>
+			<div class="process pc-max-width margin-t-80">
+				<h3 class="country-title">{{countryName}}公民身份申请流程</h3>
+				<ul>
+					<li v-for="(processs, index) in processList">
+						<span>0{{index+1}}</span>
+						<p>{{processs}}</p>
+					</li>
+				</ul>
 			</div>
+			<div style="padding-top: 80px;"></div>
 		</div>
 	</Layout>
 </template>
@@ -133,8 +83,29 @@
 		},
 		data () {
 			return {
-				
+				description: '',
+				countryName: '',
+				advantagesList: '',
+				userTypes: '',
+    			applyConditions: '',
+    			processList: ''
 			}
+		},
+		mounted () {
+			let countryId = this.$route.params.id
+			this.$http({
+	            method: 'get',
+	            url: process.env.VUE_APP_API+'/v1/country/'+countryId
+	        }).then(res => {
+	            if (res.data.code === 200) {
+	            	this.description = res.data.data.description
+	            	this.countryName = res.data.data.name
+	            	this.advantagesList = res.data.data.advantages
+	            	this.userTypes = res.data.data.user_types
+	            	this.applyConditions = res.data.data.apply_conditions
+	            	this.processList = res.data.data.process
+	            }
+	        })
 		}
 	}
 </script>
@@ -228,6 +199,7 @@
 				width: 25%;
 				float: left;
 				padding: 0 10px;
+				margin-bottom: 20px;
 				text-align: center;
 				div{
 					background: #fff;
@@ -245,6 +217,7 @@
 					padding: 0 20px 30px;
 					line-height: 28px;
 					font-size: 16px;
+					height: 86px;
 				}
 			}
 		}
@@ -300,6 +273,106 @@
 				}
 				&:nth-child(5){
 					margin: 50px 11% 0;
+				}
+			}
+		}
+	}
+	.obtain{
+		margin-top: 60px;
+		ul{
+			display: flex;
+			justify-content: space-between;
+			text-align: center;
+			margin-top: 40px;
+			li{
+				display: block;
+				background: #fff;
+				width: 22%;
+				border-radius: 10px;
+				padding-bottom: 30px;
+				h3{
+					display: block;
+					width: 70px;
+					height: 70px;
+					background: url('../../../assets/images/country/details/polygon-icon.png') no-repeat 100%;
+					margin: auto;
+					color: #fff;
+					line-height: 62px;
+					font-size: 24px;
+				}
+				img{
+					display: block;
+					margin: 45px auto 40px;
+					width: auto;
+					height: 100px;
+				}
+				p{
+					color: #bd8c67;
+					font-size: 18px;
+					height: 50px;
+					padding: 0 40px;
+				}
+			}
+		}
+	}
+	.process{
+		background: #fff;
+		padding: 40px 100px 100px;
+		.country-title{
+			color: #41a046;
+			&:after{
+				background: #c5e2c6;
+			}
+			&:before{
+				background: #c5e2c6;
+			}
+		}
+		ul{
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			margin-top: 80px;
+			position: relative;
+			
+			&:after{
+				content: '';
+				position: absolute;
+				top: 19px;
+				left: 10%;
+				width: 80%;
+				height: 2px;
+				background: #41a046;
+			}
+			li{
+				width: 100px;
+				margin: 0 40px;
+				position: relative;
+				z-index: 99;
+				&:after{
+					position: absolute;
+					top: 0;
+					left: 10px;
+					content: '';
+					width: 80px;
+					height: 40px;
+					background: #fff;
+				}
+				span{
+					position: relative;
+					z-index: 9;
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					color: #fff;
+					line-height: 32px;
+					background: #41a046;
+					border-radius: 100%;
+					border: 5px solid #c3e9c5;
+					overflow: hidden;
+				}
+				p{
+					height: 40px;
+					color: #41a046;
 				}
 			}
 		}

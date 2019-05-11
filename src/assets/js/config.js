@@ -10,7 +10,6 @@ export const device = () => {
 
 // 添加动画往上显示
 export const animation = (scrollTop) => {
-	console.log(scrollTop)
 	let boxTions = document.getElementsByClassName('animation-show')
 	for (let i = 0; i < boxTions.length; i++) {
 		if (scrollTop + window.innerHeight >= boxTions[i].offsetTop + 150) {

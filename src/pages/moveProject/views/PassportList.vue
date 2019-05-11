@@ -12,32 +12,32 @@
 	        		</div>
 	        	</div>
 	        	<div class="country-list">
-	        		<div class="content clearfix brick-item animation-show">
-		        		<div class="left img">
-		        			<img src="../../../assets/images/country/country-icon1.png" />
+	        		<div class="content clearfix brick-item animation-show" v-for="(countrs, index) in countryList" :key="index">
+	        			<div class="left img">
+		        			<img :src="countrs.img" />
 		        		</div>
 		        		<div class="right info">
-		        			<h3 class="name">瓦努阿图护照</h3>
+		        			<h3 class="name">{{countrs.name}}护照</h3>
 		        			<ul class="clearfix">
 		        				<li>
 		        					<img src="../../../assets/images/country/country-list-icon1.png" />
 		        					<span>居中要求</span>
-		        					<h3>低</h3>
+		        					<h3>{{countrs.require}}</h3>
 		        				</li>
 		        				<li>
 		        					<img src="../../../assets/images/country/country-list-icon2.png" />
 		        					<span>免签国家</span>
-		        					<h3>133</h3>
+		        					<h3>{{countrs.visa_free_number}}</h3>
 		        				</li>
 		        				<li>
 		        					<img src="../../../assets/images/country/country-list-icon3.png" />
 		        					<span>移民周期</span>
-		        					<h3>20天</h3>
+		        					<h3>{{countrs.migrate_cycle}}</h3>
 		        				</li>
 		        				<li>
 		        					<img src="../../../assets/images/country/country-list-icon4.png" />
 		        					<span>证件类型</span>
-		        					<h3>护照</h3>
+		        					<h3>{{countrs.ID_type}}</h3>
 		        				</li>
 		        			</ul>
 		        			<ol>
@@ -45,43 +45,7 @@
 		        				<li>不用背词</li>
 		        				<li>税务天堂</li>
 		        			</ol>
-		        			<a href="/move-project/details">查看详情</a>
-		        		</div>
-	        		</div>
-	        		<div class="content clearfix brick-item animation-show">
-		        		<div class="left img">
-		        			<img src="../../../assets/images/country/country-icon2.png" />
-		        		</div>
-		        		<div class="right info">
-		        			<h3 class="name">圣基茨护照</h3>
-		        			<ul class="clearfix">
-		        				<li>
-		        					<img src="../../../assets/images/country/country-list-icon1.png" />
-		        					<span>居中要求</span>
-		        					<h3>无</h3>
-		        				</li>
-		        				<li>
-		        					<img src="../../../assets/images/country/country-list-icon2.png" />
-		        					<span>免签国家</span>
-		        					<h3>154</h3>
-		        				</li>
-		        				<li>
-		        					<img src="../../../assets/images/country/country-list-icon3.png" />
-		        					<span>移民周期</span>
-		        					<h3>5个月</h3>
-		        				</li>
-		        				<li>
-		        					<img src="../../../assets/images/country/country-list-icon4.png" />
-		        					<span>证件类型</span>
-		        					<h3>护照</h3>
-		        				</li>
-		        			</ul>
-		        			<ol>
-		        				<li>最后护照</li>
-		        				<li>不用背词</li>
-		        				<li>税务天堂</li>
-		        			</ol>
-		        			<a href="/move-project./details">查看详情</a>
+		        			<a :href="'/move-project/details/'+ countrs.country_id">查看详情</a>
 		        		</div>
 	        		</div>
 	        	</div>
@@ -100,9 +64,9 @@ export default {
     },
     data () {
     	return {
-    		navs: ['瓦努阿图', '圣基茨护照', '塞浦路斯', '多米尼克', '格林纳达', '圣卢西亚移民'],
-    		defaultNav: 0
-    	}
+    		navs: [],
+    		defaultNav: 0,
+    		countryList: ''    	}
     },
    	methods: {
    		tabClick (index) {
@@ -110,9 +74,21 @@ export default {
    		}
    	},
    	mounted () {
+        this.$http({
+            method: 'get',
+            url: process.env.VUE_APP_API+'/v1/countries ',
+        }).then(res => {
+            if (res.data.code === 200) {
+                this.countryList = res.data.data
+                for (let i = 0; i < this.countryList.length; i++) {
+                	this.navs.push(this.countryList[i].name)
+                }
+            }
+        })
         let scroll = document.documentElement.scrollTop || document.body.scrollTop
     	animation(scroll)
         windowScroll()
+
     }
 }
 </script>

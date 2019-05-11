@@ -11,7 +11,7 @@ export default new VueRouter({
 			component: List,
 		},
 		{
-			path: '/move-project/details',
+			path: '/move-project/details/:id',
 			component: Details
 		}
 	]
