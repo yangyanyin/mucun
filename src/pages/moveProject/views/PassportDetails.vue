@@ -1,88 +1,95 @@
 <template>
 	<Layout>
-		<div class="banner">
-			<img class="web-img" src="../../../assets/images/country/details/details-banner.png">
-			<img class="wap-img" src="../../../assets/images/country/details/details-banner-wap.png">
-		</div>
-		<div class="country-details">
-			<div class="pc-max-width">
-				<div class="details-nav">
-					<a class="on">移民国家</a>
-					<a>项目优势</a>
-					<a>申请条件</a>
+		<loadingPage v-if="!loadingSuccess" />
+		<template v-else>
+			<div class="banner">
+				<img class="web-img" src="../../../assets/images/country/details/details-banner.png">
+				<img class="wap-img" src="../../../assets/images/country/details/details-banner-wap.png">
+			</div>
+
+			<div class="country-details">
+				<div class="pc-max-width">
+					<div class="details-nav">
+						<a class="on">移民国家</a>
+						<a>项目优势</a>
+						<a>申请条件</a>
+					</div>
+					<div class="content-know animation-show">
+						<h3 class="country-title">移民{{countryName}}，这些好处，你都知道吗？</h3>
+						<p>{{description}}</p>
+						<strong>(+65) 8866 5586</strong>
+					</div>
+					<div class="content-block">
+						<h3 class="country-title  animation-show">为什么{{countryName}}护照项目这么好？</h3>
+						<ul class="clearfix">
+							<li v-for="(advantages, index) in advantagesList" :key="index" class=" animation-show">
+								<div class="brick-item">
+									<span><img :src="advantages.img"></span>
+									<strong>{{advantages.title}}</strong>
+									<p>{{advantages.description}}</p>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="content-know">
-					<h3 class="country-title">移民{{countryName}}，这些好处，你都知道吗？</h3>
-					<p>{{description}}</p>
-					<strong>(+65) 8866 5586</strong>
-				</div>
-				<div class="content-block">
-					<h3 class="country-title">为什么{{countryName}}护照项目这么好？</h3>
-					<ul class="clearfix">
-						<li v-for="(advantages, index) in advantagesList" :key="index">
-							<div class="brick-item">
-								<span><img :src="advantages.img"></span>
-								<strong>{{advantages.title}}</strong>
-								<p>{{advantages.description}}</p>
-							</div>
+				<div class="for-people">
+					<h3 class="country-title  animation-show">{{countryName}}护照适用人群</h3>
+					<ul class="pc-max-width clearfix">
+						<li v-for="(user, index) in userTypes" :key="index" class="animation-show">
+							<h3><strong>0{{index+1}}</strong>{{user.title}}</h3>
+							<p>{{user.description}}</p>
 						</li>
 					</ul>
 				</div>
-			</div>
-			<div class="for-people">
-				<h3 class="country-title">{{countryName}}护照适用人群</h3>
-				<ul class="pc-max-width clearfix">
-					<li v-for="(user, index) in userTypes" :key="index">
-						<h3><strong>0{{index+1}}</strong>{{user.title}}</h3>
-						<p>{{user.description}}</p>
-					</li>
-				</ul>
-			</div>
-			<div class="pc-max-width compared">
-				<h3 class="country-title">{{countryName}}护照比大国绿卡好在哪里？</h3>
-				<div class="clearfix">
-					<ul class="left">
-						<li class="t">瓦努阿图护照</li>
-						<li>申请简单，仅需8份文件</li>
+				<div class="pc-max-width compared">
+					<h3 class="country-title">{{countryName}}护照比大国绿卡好在哪里？</h3>
+					<div class="clearfix">
+						<ul class="left">
+							<li class="t">瓦努阿图护照</li>
+							<li>申请简单，仅需8份文件</li>
+						</ul>
+						<ul class="right">
+							<li class="t">大国绿卡</li>
+							<li>资金高，风险高</li>
+						</ul>
+					</div>	
+				</div>
+				<div class="pc-max-width obtain">
+					<h3 class="country-title animation-show">如何获得{{countryName}}护照？</h3>
+					<ul>
+						<li v-for="(conditions, index) in applyConditions" class="brick-item animation-show">
+							<h3>0{{index+1}}</h3>
+							<img class="icon" :src="conditions.icon" />
+							<p>{{conditions.condition}}</p>
+						</li>
 					</ul>
-					<ul class="right">
-						<li class="t">大国绿卡</li>
-						<li>资金高，风险高</li>
+				</div>
+				<div class="process pc-max-width margin-t-80" v-if="processList.length > 0">
+					<h3 class="country-title animation-show">{{countryName}}公民身份申请流程</h3>
+					<ul class="animation-show">
+						<li v-for="(processs, index) in processList">
+							<span>0{{index+1}}</span>
+							<p>{{processs}}</p>
+						</li>
 					</ul>
-				</div>	
+				</div>
+				<div style="padding-top: 80px;"></div>
 			</div>
-			<div class="pc-max-width obtain">
-				<h3 class="country-title">如何获得{{countryName}}护照？</h3>
-				<ul>
-					<li v-for="(conditions, index) in applyConditions" class="brick-item">
-						<h3>0{{index+1}}</h3>
-						<img class="icon" :src="conditions.icon" />
-						<p>{{conditions.condition}}</p>
-					</li>
-				</ul>
-			</div>
-			<div class="process pc-max-width margin-t-80">
-				<h3 class="country-title">{{countryName}}公民身份申请流程</h3>
-				<ul>
-					<li v-for="(processs, index) in processList">
-						<span>0{{index+1}}</span>
-						<p>{{processs}}</p>
-					</li>
-				</ul>
-			</div>
-			<div style="padding-top: 80px;"></div>
-		</div>
+		</template>
 	</Layout>
 </template>
 <script>
 	import Layout from '../../../components/layout.vue'
 	import { animation, windowScroll } from '../../../assets/js/config.js'
+	import loadingPage from '../../../components/commonComponent/loadingPage.vue'
 	export default {
 		components: {
-			Layout
+			Layout,
+			loadingPage
 		},
 		data () {
 			return {
+				loadingSuccess: false,
 				description: '',
 				countryName: '',
 				advantagesList: '',
@@ -98,6 +105,7 @@
 	            url: process.env.VUE_APP_API+'/v1/country/'+countryId
 	        }).then(res => {
 	            if (res.data.code === 200) {
+	            	this.loadingSuccess = true
 	            	this.description = res.data.data.description
 	            	this.countryName = res.data.data.name
 	            	this.advantagesList = res.data.data.advantages
@@ -106,6 +114,9 @@
 	            	this.processList = res.data.data.process
 	            }
 	        })
+	        let scroll = document.documentElement.scrollTop || document.body.scrollTop
+	    	animation(scroll)
+	        windowScroll()
 		}
 	}
 </script>
@@ -149,6 +160,7 @@
 	.details-nav{
 		position: relative;
 		height: 120px;
+		top: -65px;
 		background: #fff;
 		text-align: center;
 		line-height: 110px;
@@ -174,7 +186,6 @@
 	}
 	.content-know{
 		background: #fff;
-		margin-top: 40px;
 		text-align: center;
 		padding: 40px 100px 60px;
 		p{
