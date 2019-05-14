@@ -1,8 +1,6 @@
 <template>
     <Layout>  
-        <div class="loading" v-if="!isLoadingsTatus">
-            
-        </div>
+        <loadingPage v-if="!isLoadingsTatus" />
         <template v-else>
             <!-- banner -->
             <Banner :bannerImgList="bannerImg" />
@@ -60,9 +58,9 @@
                     <div class="content clearfix">
                         <div class="left list animation-show" v-for="(countrys, index) in countryPassport" :key="index">
                             <div class="brick-item">
-                                <a href="#"><img :src="countrys.img" /></a>
+                                <a :href="'/move-project/details/'+countrys.country_id"><img :src="countrys.img" /></a>
                                 <div class="name">
-                                    <strong>{{countrys.name}}</strong>
+                                    <a :href="'/move-project/details/'+countrys.country_id"><strong>{{countrys.name}}</strong></a>
                                     <p>{{countrys.introduction}}</p>
                                 </div>
                             </div>
@@ -154,11 +152,20 @@
                         <div class="input-box">
                             <h3>免费咨询服务</h3>
                             <ul class="clearfix">
-                                <li><input class="name" type="text" placeholder="称号" /></li>
-                                <li><input class="tel" type="tel" placeholder="电话" /></li>
-                                <li><input class="email" type="email" placeholder="电邮" /></li>
+                                <li>
+                                    <input class="name" type="text" placeholder="称呼" v-model="userName" />
+                                    <p v-if="nameError">请输入称呼！</p>
+                                </li>
+                                <li>
+                                    <input class="tel" type="tel" placeholder="电话" v-model="userTel" />
+                                    <p v-if="telError">请输入电话！</p>
+                                </li>
+                                <li>
+                                    <input class="email" type="email" placeholder="电邮" v-model="userEmail" />
+                                    <p v-if="emailErroe">请输入正确的邮箱！</p>
+                                </li>
                             </ul>
-                            <a>立即咨询</a>
+                            <a class="submit" @click="submitUserInfo">立即咨询</a>
                         </div>
                     </div>
                     <div class="wx-tel clearfix">
@@ -184,21 +191,73 @@ import Layout from '../../components/layout.vue'
 import Banner from './component/banner.vue'
 import './index.less'
 import { animation, windowScroll, device } from '../../assets/js/config.js'
+import loadingPage from '../../components/commonComponent/loadingPage.vue'
+
 
 export default {
     name: 'app',
     components: {
         Layout,
-        Banner
+        Banner,
+        loadingPage
     },
     data () {
         return {
             isLoadingsTatus: false,
             bannerImg: '',
-            countryPassport: ''
+            countryPassport: '',
+            userName: '',
+            userTel: '',
+            userEmail: '',
+            nameError: false,
+            telError: false,
+            emailErroe: false
         }
     },
     methods: {
+        submitUserInfo () {
+            let _this = this
+            setTimeout( function () {
+                _this.nameError = false
+                _this.telError = false
+                _this.emailErroe = false
+            }, 2000)
+            if (this.userName === '') {
+                this.nameError = true
+                return false
+            } else if (this.userTel === '' ) {
+                this.telError = true
+                return false
+            } else if (this.userEmail === '' ) {
+                this.emailErroe = true
+                return false
+            } else if (!this.isEmail(this.userEmail)) {
+                this.emailErroe = true
+                return false
+            }
+            let params = {
+                name: this.userName,
+                phone: this.userTel,
+                email: this.userEmail
+            }
+            this.$http({
+                method: 'post',
+                url: process.env.VUE_APP_API+'/v1/contact',
+                params
+            }).then(res => {
+                if (res.data.code === 200) {
+                   this.userName = ''
+                   this.userTel = ''
+                   this.userEmail = ''
+                }
+            })
+
+        },
+        isEmail (email) {
+            console.log()
+            let regex = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+            return regex.test(email)
+        }
     },
     mounted () {
         this.$http({
@@ -207,7 +266,7 @@ export default {
         }).then(res => {
             if (res.data.code === 200) {
                 this.bannerImg = res.data.data.banners[device()]
-                this.isLoadingsTatus = true
+                // this.isLoadingsTatus = true
                 setTimeout(function (){
                     animation(scroll)
                 }, 10)
@@ -219,6 +278,7 @@ export default {
             url: process.env.VUE_APP_API+'/v1/countries ',
         }).then(res => {
             if (res.data.code === 200) {
+                this.isLoadingsTatus = true
                 this.countryPassport = res.data.data
             }
         })

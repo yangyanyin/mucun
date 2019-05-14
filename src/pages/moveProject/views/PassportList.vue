@@ -1,75 +1,86 @@
 <template>
-    <Layout>  
-    	<div class="banner">
-    		<img class="web-img" src="../../../assets/images/country/country-banner.png" />
-    		<img class="wap-img" src="../../../assets/images/country/country-banner-wap.png" />
-    	</div>
-    	<div class="country-main">
-	        <div class="pc-max-width">
-	        	<div class="country-nav">
-	        		<div class="list">
-	        			<a v-for="(navs, index) in navs" :key="index" :class="{on: index === defaultNav}" @click="tabClick(index)">{{navs}}</a>
-	        		</div>
-	        	</div>
-	        	<div class="country-list">
-	        		<div class="content clearfix brick-item animation-show" v-for="(countrs, index) in countryList" :key="index">
-	        			<div class="left img">
-		        			<img :src="countrs.img" />
+    <Layout>
+    	<loadingPage v-if="!loadingSuccess" />
+    	<template v-else>
+    		<div class="banner">
+	    		<img class="web-img" src="../../../assets/images/country/country-banner.png" />
+	    		<img class="wap-img" src="../../../assets/images/country/country-banner-wap.png" />
+	    	</div>
+	    	<div class="country-main">
+		        <div class="pc-max-width">
+		        	<div class="country-nav">
+		        		<div class="list">
+		        			<a v-for="(navs, index) in navs" :key="index" :class="{on: index === defaultNav}" @click="tabClick(index)">{{navs}}</a>
 		        		</div>
-		        		<div class="right info">
-		        			<h3 class="name">{{countrs.name}}护照</h3>
-		        			<ul class="clearfix">
-		        				<li>
-		        					<img src="../../../assets/images/country/country-list-icon1.png" />
-		        					<span>居中要求</span>
-		        					<h3>{{countrs.require}}</h3>
-		        				</li>
-		        				<li>
-		        					<img src="../../../assets/images/country/country-list-icon2.png" />
-		        					<span>免签国家</span>
-		        					<h3>{{countrs.visa_free_number}}</h3>
-		        				</li>
-		        				<li>
-		        					<img src="../../../assets/images/country/country-list-icon3.png" />
-		        					<span>移民周期</span>
-		        					<h3>{{countrs.migrate_cycle}}</h3>
-		        				</li>
-		        				<li>
-		        					<img src="../../../assets/images/country/country-list-icon4.png" />
-		        					<span>证件类型</span>
-		        					<h3>{{countrs.ID_type}}</h3>
-		        				</li>
-		        			</ul>
-		        			<ol>
-		        				<li>最后护照</li>
-		        				<li>不用背词</li>
-		        				<li>税务天堂</li>
-		        			</ol>
-		        			<a :href="'/move-project/details/'+ countrs.country_id">查看详情</a>
+		        	</div>
+		        	<div class="country-list">
+		        		<div class="content clearfix brick-item animation-show" v-for="(countrs, index) in countryList" :key="index">
+		        			<div class="left img">
+			        			<img :src="countrs.img" />
+			        		</div>
+			        		<div class="right info">
+			        			<h3 class="name">{{countrs.name}}护照</h3>
+			        			<ul class="clearfix">
+			        				<li>
+			        					<img src="../../../assets/images/country/country-list-icon1.png" />
+			        					<span>居中要求</span>
+			        					<h3>{{countrs.require}}</h3>
+			        				</li>
+			        				<li>
+			        					<img src="../../../assets/images/country/country-list-icon2.png" />
+			        					<span>免签国家</span>
+			        					<h3>{{countrs.visa_free_number}}</h3>
+			        				</li>
+			        				<li>
+			        					<img src="../../../assets/images/country/country-list-icon3.png" />
+			        					<span>移民周期</span>
+			        					<h3>{{countrs.migrate_cycle}}</h3>
+			        				</li>
+			        				<li>
+			        					<img src="../../../assets/images/country/country-list-icon4.png" />
+			        					<span>证件类型</span>
+			        					<h3>{{countrs.ID_type}}</h3>
+			        				</li>
+			        			</ul>
+			        			<ol>
+			        				<li>最后护照</li>
+			        				<li>不用背词</li>
+			        				<li>税务天堂</li>
+			        			</ol>
+			        			<a :href="'/move-project/details/'+ countrs.country_id">查看详情</a>
+			        		</div>
 		        		</div>
-	        		</div>
-	        	</div>
+		        	</div>
+		        </div>
 	        </div>
-        </div>
+    	</template>
     </Layout>
 </template>
 
 <script>
 import Layout from '../../../components/layout.vue'
 import { animation, windowScroll } from '../../../assets/js/config.js'
+import loadingPage from '../../../components/commonComponent/loadingPage.vue'
 export default {
     name: 'app',
     components: {
-        Layout
+        Layout,
+        loadingPage
     },
     data () {
     	return {
     		navs: [],
     		defaultNav: 0,
-    		countryList: ''    	}
+    		countryList: '',
+    		loadingSuccess: false
+    	}
     },
    	methods: {
    		tabClick (index) {
+   			let countryList = document.getElementsByClassName('content')
+   			let divBox = countryList[index].offsetTop - 100
+   			document.body.scrollTop = divBox
+			document.documentElement.scrollTop = divBox
    			this.defaultNav = index
    		}
    	},
@@ -83,12 +94,14 @@ export default {
                 for (let i = 0; i < this.countryList.length; i++) {
                 	this.navs.push(this.countryList[i].name)
                 }
+                this.loadingSuccess = true
+                setTimeout(function (){
+                	let scroll = document.documentElement.scrollTop || document.body.scrollTop
+			    	animation(scroll)
+			        windowScroll()
+			    }, 10)
             }
         })
-        let scroll = document.documentElement.scrollTop || document.body.scrollTop
-    	animation(scroll)
-        windowScroll()
-
     }
 }
 </script>

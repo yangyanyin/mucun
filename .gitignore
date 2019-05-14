@@ -3,6 +3,8 @@ node_modules
 国旗
 视觉设计
 /dist
+mucun-build
+/mucun-build-y
 
 # local env files
 .env.local

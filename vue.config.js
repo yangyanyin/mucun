@@ -14,8 +14,9 @@ glob.sync('./src/pages/**/main.js').forEach(path => {
     }
 })
 module.exports = {
-	publicPath: '/',
+	publicPath: process.env.NODE_ENV === 'production' ? '../' : '/',
 	pages,
+	outputDir: 'mucun-build-y',
 	devServer: {
 		historyApiFallback: {
 			rewrites: [

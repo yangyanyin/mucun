@@ -1,15 +1,16 @@
 <template>
     <Layout>  
-        <div class="passport">
+    	<loadingPage v-if="!loadingSuccess" />
+        <div v-else class="passport">
         	<div class="pc-max-width">
         		<div class="passport-list">
 	        		<ul class="clearfix">
-		        		<li>
-		        			<strong class="name">多米尼克</strong>
-		        			<img src="../../assets/images/passport/passport1.png" />
-		        			<div class="clearfix info">
+	        			<li v-for="(lists, index) in passportList" :key="index" @click="tabClick(index)">
+	        				<strong class="name">{{lists.name}}</strong>
+	        				<img :src="lists.passport_img" />
+	        				<div class="clearfix info">
 		        				<div class="left">
-		        					<strong>123</strong>
+		        					<strong>{{lists.visa_free_number}}</strong>
 		        					<i>免签国家</i>
 		        				</div>
 		        				<div class="right">
@@ -17,87 +18,17 @@
 		        					<i>全球排名</i>
 		        				</div>
 		        			</div>
-		        		</li>
-		        		<li>
-		        			<strong class="name">格林纳达</strong>
-		        			<img src="../../assets/images/passport/passport2.png" />
-		        			<div class="clearfix info">
-		        				<div class="left">
-		        					<strong>128</strong>
-		        					<i>免签国家</i>
-		        				</div>
-		        				<div class="right">
-		        					<strong>27</strong>
-		        					<i>全球排名</i>
-		        				</div>
-		        			</div>
-		        		</li>
-		        		<li>
-		        			<strong class="name">圣卢西亚</strong>
-		        			<img src="../../assets/images/passport/passport3.png" />
-		        			<div class="clearfix info">
-		        				<div class="left">
-		        					<strong>129</strong>
-		        					<i>免签国家</i>
-		        				</div>
-		        				<div class="right">
-		        					<strong>26</strong>
-		        					<i>全球排名</i>
-		        				</div>
-		        			</div>
-		        		</li>
-		        		<li>
-		        			<strong class="name">塞浦路斯</strong>
-		        			<img src="../../assets/images/passport/passport4.png" />
-		        			<div class="clearfix info">
-		        				<div class="left">
-		        					<strong>156</strong>
-		        					<i>免签国家</i>
-		        				</div>
-		        				<div class="right">
-		        					<strong>10</strong>
-		        					<i>全球排名</i>
-		        				</div>
-		        			</div>
-		        		</li>
-		        		<li>
-		        			<strong class="name">圣基茨和尼维斯</strong>
-		        			<img src="../../assets/images/passport/passport5.png" />
-		        			<div class="clearfix info">
-		        				<div class="left">
-		        					<strong>134</strong>
-		        					<i>免签国家</i>
-		        				</div>
-		        				<div class="right">
-		        					<strong>21</strong>
-		        					<i>全球排名</i>
-		        				</div>
-		        			</div>
-		        		</li>
-		        		<li>
-		        			<strong class="name">瓦努阿图</strong>
-		        			<img src="../../assets/images/passport/passport6.png" />
-		        			<div class="clearfix info">
-		        				<div class="left">
-		        					<strong>128</strong>
-		        					<i>免签国家</i>
-		        				</div>
-		        				<div class="right">
-		        					<strong>30</strong>
-		        					<i>全球排名</i>
-		        				</div>
-		        			</div>
-		        		</li>
+	        			</li>
 	        		</ul>
         		</div>
         		<div class="country">
-        			<div class="list clearfix">
+        			<div class="list clearfix animation-show" v-for="(lists, index) in passportList" :key="index">
         				<div class="left name-img clearfix">
-        					<strong class="name">多米尼克</strong>
-		        			<img src="../../assets/images/passport/passport1.png" />
+        					<strong class="name">{{lists.name}}</strong>
+        					<img :src="lists.passport_img" />
 		        			<div class="clearfix info">
 		        				<div class="left">
-		        					<strong>123</strong>
+		        					<strong>{{lists.visa_free_number}}</strong>
 		        					<i>免签国家</i>
 		        				</div>
 		        				<div class="right">
@@ -107,56 +38,14 @@
 		        			</div>
         				</div>
         				<div class="right exemption">
-        					<div class="title">免签国家<strong>124</strong><i>(个)</i></div>
+        					<div class="title">免签国家<strong>{{lists.visa_free_number}}</strong><i>(个)</i></div>
         					<div>
-	        					<ul class="clearfix">
-	        						<li>不丹</li>
-	        						<li class="type1">签证入境</li>
-	        					</ul>
-	        					<ul class="clearfix">
-	        						<li>东帝汶</li>
-	        						<li class="type2">落地签入境</li>
-	        					</ul>
-	        					<ul class="clearfix">
-	        						<li>丹麦</li>
-	        						<li class="type3">免签目的国</li>
-	        					</ul>
-	        					<ul class="clearfix">
-	        						<li>乌兹别克斯坦</li>
-	        						<li class="type4">eVisa</li>
-	        					</ul>
-	        								<ul class="clearfix">
-	        						<li>不丹</li>
-	        						<li class="type1">签证入境</li>
-	        					</ul>
-	        					<ul class="clearfix">
-	        						<li>东帝汶</li>
-	        						<li class="type2">落地签入境</li>
-	        					</ul>
-	        					<ul class="clearfix">
-	        						<li>丹麦</li>
-	        						<li class="type3">免签目的国</li>
-	        					</ul>
-	        					<ul class="clearfix">
-	        						<li>乌兹别克斯坦</li>
-	        						<li class="type4">eVisa</li>
-	        					</ul>
-	        								<ul class="clearfix">
-	        						<li>不丹</li>
-	        						<li class="type1">签证入境</li>
-	        					</ul>
-	        					<ul class="clearfix">
-	        						<li>东帝汶</li>
-	        						<li class="type2">落地签入境</li>
-	        					</ul>
-	        					<ul class="clearfix">
-	        						<li>丹麦</li>
-	        						<li class="type3">免签目的国</li>
-	        					</ul>
-	        					<ul class="clearfix">
-	        						<li>乌兹别克斯坦</li>
-	        						<li class="type4">eVisa</li>
-	        					</ul>
+        						<ul class="clearfix" v-for="(country, index) in lists.visa_countries" :key="index">
+        							<li><img :src="country.flag" />{{country.name}}</li>
+        							<li 
+        							:class="{type1:country.type === '签证入境', type2:country.type==='落地签入境', type3:country.type==='免签目的国', type4:country.type==='eVisa'}"
+        							>{{country.type}}</li>
+        						</ul>
         					</div>
         				</div>
         			</div>
@@ -168,11 +57,45 @@
 
 <script>
 import Layout from '../../components/layout.vue'
+import { animation, windowScroll } from '../../assets/js/config.js'
+import loadingPage from '../../components/commonComponent/loadingPage.vue'
 
 export default {
     name: 'app',
     components: {
-        Layout
+        Layout,
+        loadingPage
+    },
+    data () {
+    	return {
+    		passportList: '',
+    		countryList: '',
+    		loadingSuccess: false
+    	}
+    },
+    methods: {
+   		tabClick (index) {
+   			let countryList = document.getElementsByClassName('list')
+   			let divBox = countryList[index].offsetTop - 100
+   			document.body.scrollTop = divBox
+			document.documentElement.scrollTop = divBox
+   		}
+   	},
+    mounted () {
+    	this.$http({
+            method: 'get',
+            url: process.env.VUE_APP_API+'/v1/passportsInfo',
+        }).then(res => {
+        	if (res.data.code === 200) {
+        		this.passportList = res.data.data
+        		this.loadingSuccess = true
+        		setTimeout(function (){
+	        		let scroll = document.documentElement.scrollTop || document.body.scrollTop
+			    	animation(scroll)
+			        windowScroll()
+        		}, 10)
+        	}
+        })
     }
 }
 </script>
@@ -191,6 +114,7 @@ export default {
 			text-align: center;
 			color: #fff;
 			padding: 0 12px;
+			cursor: pointer;
 			strong{
 				display: block;
 				&.name{
@@ -209,7 +133,7 @@ export default {
 			}
 
 			.info{
-				padding: 22px;
+				padding: 10px;
 				div{
 					width: 50%;
 					i{
@@ -241,6 +165,7 @@ export default {
 		}
 	}
 	.country{
+		padding-top: 40px;
 		.list{
 			position: relative;
 			padding: 50px 0 0 520px;
@@ -312,6 +237,13 @@ export default {
 						height: 46px;
 						line-height: 46px;
 						font-size: 18px;
+						position: relative;
+						img{
+							position: absolute;
+							left: 30px;
+							top: 14px;
+							width: 28px;
+						}
 						&.type1{
 							background: #a91c1c;
 						}
@@ -329,7 +261,8 @@ export default {
 						width: 40%;
 						color: #fff;
 						border: 1px solid #352b24;
-						padding-left: 30px;
+						padding-left: 70px;
+						font-size: 16px;
 					}
 					li:nth-child(2){
 						width: 60%;

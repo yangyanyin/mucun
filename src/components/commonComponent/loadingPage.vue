@@ -7,6 +7,13 @@
   .loading{
     display: block;
     padding:340px 0 250px;
+    @media(max-width: 767px) {
+    	padding: 240px 0 150px;
+    	img{
+    		width: 32px;
+    		height: 32px;
+    	}
+    }
   }
   img{
     display: block;

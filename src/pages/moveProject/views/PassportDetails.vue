@@ -10,9 +10,7 @@
 			<div class="country-details">
 				<div class="pc-max-width">
 					<div class="details-nav">
-						<a class="on">移民国家</a>
-						<a>项目优势</a>
-						<a>申请条件</a>
+						<a v-for="(navs, index) in contentNav" :key="index" :class="{on: index === defaultNav}" @click="tabClick(index)">{{navs}}</a>
 					</div>
 					<div class="content-know animation-show">
 						<h3 class="country-title">移民{{countryName}}，这些好处，你都知道吗？</h3>
@@ -41,7 +39,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="pc-max-width compared">
+				<div class="pc-max-width compared animation-show">
 					<h3 class="country-title">{{countryName}}护照比大国绿卡好在哪里？</h3>
 					<div class="clearfix">
 						<ul class="left">
@@ -56,7 +54,7 @@
 				</div>
 				<div class="pc-max-width obtain">
 					<h3 class="country-title animation-show">如何获得{{countryName}}护照？</h3>
-					<ul>
+					<ul class="clearfix">
 						<li v-for="(conditions, index) in applyConditions" class="brick-item animation-show">
 							<h3>0{{index+1}}</h3>
 							<img class="icon" :src="conditions.icon" />
@@ -67,13 +65,13 @@
 				<div class="process pc-max-width margin-t-80" v-if="processList.length > 0">
 					<h3 class="country-title animation-show">{{countryName}}公民身份申请流程</h3>
 					<ul class="animation-show">
-						<li v-for="(processs, index) in processList">
+						<li v-for="(processs, index) in processList" :key="index">
 							<span>0{{index+1}}</span>
 							<p>{{processs}}</p>
 						</li>
 					</ul>
 				</div>
-				<div style="padding-top: 80px;"></div>
+				<div class="padding-top-80"></div>
 			</div>
 		</template>
 	</Layout>
@@ -95,9 +93,27 @@
 				advantagesList: '',
 				userTypes: '',
     			applyConditions: '',
-    			processList: ''
+    			processList: '',
+    			defaultNav: 0,
+    			contentNav: ['移民国家', '项目优势', '申请条件']
 			}
 		},
+		methods: {
+	   		tabClick (index) {
+	   			let Advantage
+	   			if (index === 0) {
+	   				Advantage = document.getElementsByClassName('content-know')[0].offsetTop - 100
+	   			} else if (index === 1) {
+	   				Advantage = document.getElementsByClassName('for-people')[0].offsetTop - 100
+	   			} else if (index === 2) {
+	   				Advantage = document.getElementsByClassName('obtain')[0].offsetTop - 170
+	   			}
+
+	   			document.body.scrollTop = Advantage
+				document.documentElement.scrollTop = Advantage
+	   			this.defaultNav = index
+	   		}
+	   	},
 		mounted () {
 			let countryId = this.$route.params.id
 			this.$http({
@@ -112,11 +128,14 @@
 	            	this.userTypes = res.data.data.user_types
 	            	this.applyConditions = res.data.data.apply_conditions
 	            	this.processList = res.data.data.process
+	            	setTimeout(function () {
+						let scroll = document.documentElement.scrollTop || document.body.scrollTop
+				    	animation(scroll)
+				        windowScroll()
+	            	}, 10)
+	            	
 	            }
 	        })
-	        let scroll = document.documentElement.scrollTop || document.body.scrollTop
-	    	animation(scroll)
-	        windowScroll()
 		}
 	}
 </script>
@@ -147,6 +166,9 @@
 			margin-left: -40px;
 			background: #ebdcd1;
 		}
+		@media(max-width: 767px) {
+			font-size: 20px;
+		}
 
 	}
 	.banner{
@@ -170,6 +192,7 @@
 			height: 38px;
 			margin: 0 50px;
 			color: #828282;
+			cursor: pointer;
 			&.on{
 				color: #bd8c67;
 				&:after{
@@ -183,6 +206,16 @@
 				}
 			}
 		}
+		@media(max-width: 767px) {
+			top: 0;
+			height: 60px;
+			line-height: 60px;
+			margin: 0 -10px;
+			a{
+				font-size:18px;
+				margin: 0 20px;
+			}
+		}
 	}
 	.content-know{
 		background: #fff;
@@ -194,11 +227,27 @@
 			line-height: 36px;
 		}
 		strong{
-			display: block;
+			display: inline-block;
 			color: #bd8c67;
 			font-weight: normal;
+			padding-left: 55px;
 			margin-top: 20px;
 			font-size: 30px;
+			background: url('../../../assets/images/footer-tel.png') no-repeat left center;
+			background-size: 36px;
+		}
+		@media(max-width: 767px){
+			margin-top: 20px;
+			padding: 20px;
+			p{
+				font-size: 16px;
+			}
+			strong{
+				font-size: 22px;
+				padding-left: 40px;
+				margin-bottom: 20px;
+				background-size: 30px;
+			}
 		}
 	}
 	.content-block{
@@ -229,6 +278,22 @@
 					line-height: 28px;
 					font-size: 16px;
 					height: 86px;
+				}
+			}
+		}
+		@media(max-width: 767px) {
+			margin-top: 40px;
+			ul{
+				li{
+					width: 50%;
+					padding: 0 7px;
+					strong{
+						font-size: 16px;
+					}
+					p{
+						font-size: 14px;
+						line-height: 22px;
+					}
 				}
 			}
 		}
@@ -287,14 +352,86 @@
 				}
 			}
 		}
+		@media(max-width: 767px) {
+			margin-top: 30px;
+			padding: 30px 15px;
+			background: #141414;
+			ul {
+				li{
+					width: 100%;
+					margin-top: 30px;
+					&:nth-child(2){
+						margin: 30px auto 0;
+					}
+					&:nth-child(5){
+						margin: 30px auto 0;
+					}
+					h3{
+						font-size: 20px;
+						padding-bottom: 10px;
+						strong{
+							font-size: 24px;
+						}
+					}
+					p{
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+	.compared{
+		background: #fff;
+		margin: 55px auto;
+		padding: 30px 60px;
+		.country-title{
+			margin-bottom: 50px;
+		}
+		ul.right {
+			text-align: right;
+			li{
+				padding-right: 45px;
+				background: url('../../../assets/images/country/details/compared-bad-icon.png') no-repeat right center;
+				&.t{
+					background: url('../../../assets/images/country/details/compared-bad-title-icon.png') no-repeat right center;
+
+				}
+			}
+		}
+		ul.left{
+			li{
+				padding-left: 45px;
+				background: url('../../../assets/images/country/details/compared-icon.png') no-repeat left center;
+				&.t{
+					background: url('../../../assets/images/country/details/compared-title-icon.png') no-repeat left center;
+
+				}
+			}
+
+		}
+		li{
+			// height: 28px;
+			font-size: 20px;
+			line-height: 28px;
+			padding: 16px 0;
+			&.t{
+				font-weight: bold;
+			}
+		}
+		@media(max-width: 767px) {
+			display: none;
+		}
 	}
 	.obtain{
 		margin-top: 60px;
 		ul{
-			display: flex;
-			justify-content: space-between;
+			
 			text-align: center;
 			margin-top: 40px;
+			@media(min-width: 767px){
+				display: flex;
+				justify-content: space-between;
+			}
 			li{
 				display: block;
 				background: #fff;
@@ -325,6 +462,33 @@
 				}
 			}
 		}
+		@media(max-width: 767px) {
+			margin-top: 40px;
+			ul{
+				li{
+					float: left;
+					width: 46%;
+					margin: 0 2% 15px;
+					p{
+						font-size: 16px;
+						padding: 0 10px;
+						line-height: 26px;
+					}
+					h3{
+						width: 50px;
+						height: 50px;
+						line-height: 42px;
+						font-size: 20px;
+						background-size: 50px;
+					}
+					img{
+						height: 80px;
+						margin: 20px auto 20px;
+					}
+
+				}
+			}
+		}
 	}
 	.process{
 		background: #fff;
@@ -340,33 +504,38 @@
 		}
 		ul{
 			text-align: center;
-			display: flex;
-			justify-content: center;
+			
 			margin-top: 80px;
 			position: relative;
-			
-			&:after{
-				content: '';
-				position: absolute;
-				top: 19px;
-				left: 10%;
-				width: 80%;
-				height: 2px;
-				background: #41a046;
+			@media(min-width: 767px) {
+				display: flex;
+				justify-content: center;
+				&:after{
+					content: '';
+					position: absolute;
+					top: 19px;
+					left: 10%;
+					width: 80%;
+					height: 2px;
+					background: #41a046;
+				}
 			}
+			
 			li{
 				width: 100px;
 				margin: 0 40px;
 				position: relative;
 				z-index: 99;
-				&:after{
-					position: absolute;
-					top: 0;
-					left: 10px;
-					content: '';
-					width: 80px;
-					height: 40px;
-					background: #fff;
+				@media(min-width: 767px) {
+					&:after{
+						position: absolute;
+						top: 0;
+						left: 10px;
+						content: '';
+						width: 80px;
+						height: 40px;
+						background: #fff;
+					}
 				}
 				span{
 					position: relative;
@@ -386,6 +555,47 @@
 					color: #41a046;
 				}
 			}
+		}
+		@media(max-width: 767px) {
+			padding: 20px 15px;
+			ul{
+				margin-top: 40px;
+				li{
+					width: auto;
+					margin: 0 20px 30px;
+					text-align: left;
+					span{
+						float: left;
+						text-align: center;
+					}
+					p{
+						line-height: 40px;
+						display: inline-block;
+						font-size: 16px;
+						padding-left: 15px;
+					}
+					&:before{
+						content: '';
+						position: absolute;
+						left: 20px;
+						bottom: -25px;
+						width: 2px;
+						height: 20px;
+						background: #41a046;
+					}
+					&:last-child{
+						&:before{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	.padding-top-80{
+		padding: 40px;
+		@media(max-width: 767px) {
+			padding: 20px;
 		}
 	}
 </style>

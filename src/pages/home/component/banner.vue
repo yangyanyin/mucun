@@ -10,7 +10,7 @@
 <!-- 	        <div class="swiper-button-prev" slot="button-prev"></div>
 	        <div class="swiper-button-next" slot="button-next"></div> -->
 		</swiper>
-		<video width="100%" src="../../../assets/images/video.mp4" autoplay="autoplay" loop="loop" muted="muted">your browser does not support the video tag</video>
+		<video class="video"  src="../../../assets/images/video.mp4" autoplay="autoplay" loop="loop" muted="muted">your browser does not support the video tag</video>
 		   
 	</div>
 </template>
@@ -56,4 +56,20 @@ export default {
 		font-size: 44px;
 	}
 }
+.video{
+	width: 100%;
+}
+@media(max-width: 767px) {
+	.banner{
+		position: relative;
+		height: 233px;	
+	}
+	.video{
+		position: absolute;
+		width: 600px;
+		top: 0;
+		left: -100px;
+	}
+}
+
 </style>
