@@ -16,7 +16,9 @@
 		        	<div class="country-list">
 		        		<div class="content clearfix brick-item animation-show" v-for="(countrs, index) in countryList" :key="index">
 		        			<div class="left img">
-			        			<img :src="countrs.img" />
+		        				<a :href="'/move-project/details/'+ countrs.country_id">
+			        				<img :src="countrs.img" />
+		        				</a>
 			        		</div>
 			        		<div class="right info">
 			        			<h3 class="name">{{countrs.name}}护照</h3>
@@ -194,6 +196,12 @@ export default {
 				img{
 					display: block;
 					width: 100%;
+					transition: 0.5s;
+				}
+				a:hover{
+					img{
+						transform: scale(1.1);
+					}
 				}
 			}
 			.info{

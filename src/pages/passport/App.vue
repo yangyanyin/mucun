@@ -171,6 +171,7 @@ export default {
 			padding: 50px 0 0 520px;
 			border-top: 2px solid #bd8c67;
 			min-height: 700px;
+			margin-top: 80px;
 			.name-img{
 				position: absolute;
 				left: 0;

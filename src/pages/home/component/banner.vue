@@ -62,13 +62,14 @@ export default {
 @media(max-width: 767px) {
 	.banner{
 		position: relative;
-		height: 233px;	
+		height: 272px;	
 	}
 	.video{
 		position: absolute;
-		width: 600px;
+		width: 700px;
 		top: 0;
-		left: -100px;
+		left: 50%;
+		margin-left: -350px;
 	}
 }
 

@@ -131,8 +131,15 @@
         text-align: center;
         a{
             display: block;
+            overflow: hidden;
             img{
+                transition: 0.5s;
                 width: 100%;
+            }
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
             }
         }
         .name{

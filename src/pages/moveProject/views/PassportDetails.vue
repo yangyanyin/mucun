@@ -387,6 +387,10 @@
 		.country-title{
 			margin-bottom: 50px;
 		}
+		.clearfix{
+			background: url('../../../assets/images/country/details/compared-PK.png') no-repeat center center;
+			background-size: 113px;
+		}
 		ul.right {
 			text-align: right;
 			li{
