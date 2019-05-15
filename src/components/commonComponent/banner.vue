@@ -1,16 +1,15 @@
 <template>
 	<div class="banner">
-		<swiper :options="swiperOption" v-if="false">
+		<swiper :options="swiperOption">
 		    <swiper-slide v-for="(banners, index) in bannerImgList" :key="index">
 		    	<img :src="banners.img" />
-		    	<p class="t1" v-if="banners.title">{{banners.title}}</p>
-		    	<p class="t2" v-if="banners.description">{{banners.description}}</p>
+		    	<p class="t1">{{banners.name}}</p>
+		    	<p class="t2">投资置业    定居生活   全面规划</p>
 		    </swiper-slide>
 			<div class="swiper-pagination" slot="pagination"></div>
 <!-- 	        <div class="swiper-button-prev" slot="button-prev"></div>
 	        <div class="swiper-button-next" slot="button-next"></div> -->
 		</swiper>
-		<video class="video"  src="../../../assets/images/video.mp4" autoplay="autoplay" loop="loop" muted="muted">your browser does not support the video tag</video>
 		   
 	</div>
 </template>
@@ -28,6 +27,7 @@ export default {
 		}
 	},
 	mounted () {
+		console.log(this.bannerImgList)
     }
 }
 </script>

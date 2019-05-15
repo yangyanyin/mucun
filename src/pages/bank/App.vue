@@ -1,8 +1,8 @@
 <template>
     <Layout>  
         <div class="bank-banner">
-        	<img class="web-img" src="../../assets/images/bank/bank-banner.png" />
-        	<img class="wap-img" src="../../assets/images/bank/bank-banner-wap.png" />
+        	<img class="web-img" src="../../assets/images/bank/bank-banner.jpg" />
+        	<img class="wap-img" src="../../assets/images/bank/bank-banner-wap.jpg" />
         </div>
         <div class="pc-max-width margin-t-80">
         	<div class="public-title animation-show">

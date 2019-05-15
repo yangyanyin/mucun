@@ -6,11 +6,12 @@
 				<span>微信</span>
 			</div>
 			<div class="nav">
-				<a href="#">护照项目</a>
-				<a href="#">移居狮城</a>
-				<a href="#">银行开户</a>
-				<a href="#">资产配置</a>
-				<a href="#">关于我们</a>
+				<a href="/passport">护照精选</a>
+				<a href="/project">护照项目</a>
+				<a href="/city">移居狮城</a>
+				<a href="/bank">银行开户</a>
+				<a href="/asset">资产配置</a>
+				<a href="/about">关于我们</a>
 			</div>
 			<ul class="country">
 				<li class="brick-item"><img src="../../assets/images/footer-country1.png"></li>

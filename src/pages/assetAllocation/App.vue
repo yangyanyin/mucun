@@ -1,13 +1,13 @@
 <template>
     <Layout>  
         <div class="banner">
-        	<img class="web-img" src="../../assets/images/asset-allocation/asset-banner.png" />
-        	<img class="wap-img" src="../../assets/images/asset-allocation/asset-banner-wap.png" />
+        	<img class="web-img" src="../../assets/images/asset-allocation/asset-banner.jpg" />
+        	<img class="wap-img" src="../../assets/images/asset-allocation/asset-banner-wap.jpg" />
         </div>
         <div class="pc-max-width asset-allocation">
         	<div class="content clearfix margin-t-80 animation-show">
         		<div class="list left img">
-	        		<img src="../../assets/images/asset-allocation/asset-img1.png" alt="">
+	        		<img src="../../assets/images/asset-allocation/asset-img1.png" alt="" />
 	        	</div>
 	        	<div class="list text right">
 	        		<div class="t">

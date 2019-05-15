@@ -4,7 +4,7 @@ node_modules
 视觉设计
 /dist
 mucun-build
-/mucun-build-y
+yang-build
 
 # local env files
 .env.local

@@ -16,16 +16,16 @@ glob.sync('./src/pages/**/main.js').forEach(path => {
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production' ? '../' : '/',
 	pages,
-	outputDir: 'mucun-build',
+	outputDir: 'mucun-build/build/',
 	devServer: {
 		historyApiFallback: {
 			rewrites: [
-				{ from: /asset-allocation/, to: '/assetAllocation/index.html' },
+				{ from: /asset/, to: '/assetAllocation/index.html' },
 				{ from: /bank/, to: '/bank/index.html' },
-				{ from: /move-city/, to: '/moveCity/index.html' },
-				{ from: /move-project/, to: '/moveProject/index.html' },
+				{ from: /city/, to: '/moveCity/index.html' },
 				{ from: /passport/, to: '/passport/index.html' },
 				{ from: /about/, to: '/about/index.html' },
+				{ from: /project/, to: '/moveProject/index.html' },
 		        { from: /^\/[\s\S]*/, to: '/home/index.html' }
 			]
 		}

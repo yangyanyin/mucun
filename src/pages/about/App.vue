@@ -1,8 +1,8 @@
 <template>
     <Layout>  
     	<div class="about-bg">
-    		<img class="web-img" src="../../assets/images/about/about-banner-web.png" />
-    		<img class="wap-img" src="../../assets/images/about/about-banner-wap.png" />
+    		<img class="web-img" src="../../assets/images/about/about-banner-web.jpg" />
+    		<img class="wap-img" src="../../assets/images/about/about-banner-wap.jpg" />
     	</div>
     	<div class="about-main pc-max-width">
 	        <div class="details">

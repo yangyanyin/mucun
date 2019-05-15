@@ -1,8 +1,8 @@
 <template>
     <Layout>  
         <div class="banner">
-        	<img class="web-img" src="../../assets/images/city/city-banner.png" />
-        	<img class="wap-img" src="../../assets/images/city/city-banner-wap.png" />
+        	<img class="web-img" src="../../assets/images/city/city-banner.jpg" />
+        	<img class="wap-img" src="../../assets/images/city/city-banner-wap.jpg" />
         </div>
         <div class="investment margin-t-80 pc-max-width animation-show">
         	<strong>创业投资移民</strong>

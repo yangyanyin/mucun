@@ -7,11 +7,11 @@ export default new VueRouter({
 	mode: 'history',
 	routes: [
 		{
-			path: '/move-project',
+			path: '/project',
 			component: List,
 		},
 		{
-			path: '/move-project/details/:id',
+			path: '/project/details/:id',
 			component: Details
 		}
 	]

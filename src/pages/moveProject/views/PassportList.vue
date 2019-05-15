@@ -2,10 +2,11 @@
     <Layout>
     	<loadingPage v-if="!loadingSuccess" />
     	<template v-else>
-    		<div class="banner">
+    		<Banner :bannerImgList="bannerData" />
+    	<!-- 	<div class="banner">
 	    		<img class="web-img" src="../../../assets/images/country/country-banner.png" />
 	    		<img class="wap-img" src="../../../assets/images/country/country-banner-wap.png" />
-	    	</div>
+	    	</div> -->
 	    	<div class="country-main">
 		        <div class="pc-max-width">
 		        	<div class="country-nav">
@@ -18,6 +19,11 @@
 		        			<div class="left img">
 		        				<a :href="'/move-project/details/'+ countrs.country_id">
 			        				<img :src="countrs.img" />
+			        				<div class="more">
+                                        <span>{{countrs.en_name}}</span>
+                                        <i>{{countrs.visa_free_number}}</i>
+                                        <p>visa-free sccre</p>
+                                    </div>
 		        				</a>
 			        		</div>
 			        		<div class="right info">
@@ -63,18 +69,29 @@
 import Layout from '../../../components/layout.vue'
 import { animation, windowScroll } from '../../../assets/js/config.js'
 import loadingPage from '../../../components/commonComponent/loadingPage.vue'
+import Banner from '../../../components/commonComponent/banner.vue'
 export default {
     name: 'app',
     components: {
         Layout,
-        loadingPage
+        loadingPage,
+        Banner
     },
     data () {
     	return {
     		navs: [],
     		defaultNav: 0,
     		countryList: '',
-    		loadingSuccess: false
+    		loadingSuccess: false,
+    		bannerImg: [
+    			require('../../../assets/images/country/list-banner1.jpg'),
+    			require('../../../assets/images/country/list-banner2.jpg'),
+    			require('../../../assets/images/country/list-banner3.jpg'),
+    			require('../../../assets/images/country/list-banner4.jpg'),
+    			require('../../../assets/images/country/list-banner5.jpg'),
+    			require('../../../assets/images/country/list-banner6.jpg')
+    		],
+    		bannerData: []
     	}
     },
    	methods: {
@@ -95,6 +112,9 @@ export default {
                 this.countryList = res.data.data
                 for (let i = 0; i < this.countryList.length; i++) {
                 	this.navs.push(this.countryList[i].name)
+                	this.bannerData[i] = {}
+                	this.bannerData[i].name = this.countryList[i].name
+                	this.bannerData[i].img = this.bannerImg[i]
                 }
                 this.loadingSuccess = true
                 setTimeout(function (){
@@ -123,6 +143,7 @@ export default {
 	.country-nav{
 		position: relative;
 		top: -66px;
+	    z-index: 99;
 		width: 100%;
 		height: 120px;
 		background: #fff;
@@ -198,9 +219,60 @@ export default {
 					width: 100%;
 					transition: 0.5s;
 				}
-				a:hover{
-					img{
-						transform: scale(1.1);
+				a{
+					display: block;
+					position: relative;
+					 .more{
+		                position: absolute;
+		                z-index: 9;
+		                top: 50%;
+		                left: 50%;
+		                width: 110px;
+		                text-align: center;
+		                color: #fff;
+		                margin-left: -70px;
+		                border: 1px solid #fff;
+		                border-top-right-radius: 10px;
+		                border-bottom-right-radius: 10px;
+		                text-transform:uppercase;
+		                padding: 10px 0;
+		                opacity: 0;
+		                transition: 0.5s;
+		                transform: scale(0.7) translateY(-50%);
+		                span{
+		                    font-size: 14px;
+		                }
+		                i{
+		                    position: relative;
+		                    display: block;
+		                    margin: 22px auto;
+		                    width: 36px;
+		                    height: 36px;
+		                    line-height: 34px;
+		                    font-size: 16px;
+		                    &:after{
+		                        content: '';
+		                        position: absolute;
+		                        left: 0;
+		                        top: 0;
+		                        width: 36px;
+		                        height: 36px;
+		                        border: 1px solid #fff;
+		                        transform: rotate(45deg);
+		                    }
+		                }
+		                p{
+		                    font-size: 12px;
+		                }
+		            }
+					&:hover{
+						img{
+							transform: scale(1.1);
+						}
+						.more{
+		                    opacity: 1;
+	                     	transform: scale(1) translateY(-50%);
+                		}
 					}
 				}
 			}

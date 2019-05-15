@@ -36,11 +36,11 @@ export default {
 				},
 				{
 					name: '护照项目',
-					url: '/move-project'
+					url: '/project'
 				},
 				{
 					name: '移居狮城',
-					url: '/move-city'
+					url: '/city'
 				},
 				{
 					name: '银行开户',
@@ -48,7 +48,7 @@ export default {
 				},
 				{
 					name: '资产配置',
-					url: '/asset-allocation'
+					url: '/asset'
 				},
 				{
 					name: '关于我们',

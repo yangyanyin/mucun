@@ -58,7 +58,14 @@
                     <div class="content clearfix">
                         <div class="left list animation-show" v-for="(countrys, index) in countryPassport" :key="index">
                             <div class="brick-item">
-                                <a :href="'/move-project/details/'+countrys.country_id"><img :src="countrys.img" /></a>
+                                <a :href="'/move-project/details/'+countrys.country_id">
+                                    <img :src="countrys.img" />
+                                    <div class="more">
+                                        <span>{{countrys.en_name}}</span>
+                                        <i>{{countrys.visa_free_number}}</i>
+                                        <p>visa-free sccre</p>
+                                    </div>
+                                </a>
                                 <div class="name">
                                     <a :href="'/move-project/details/'+countrys.country_id"><strong>{{countrys.name}}</strong></a>
                                     <p>{{countrys.introduction}}</p>
