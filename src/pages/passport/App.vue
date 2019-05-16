@@ -239,11 +239,17 @@ export default {
 						line-height: 46px;
 						font-size: 18px;
 						position: relative;
+						overflow: hidden;                  //  设置多余的隐藏，如果没有设置，会导致下面的代码不实现效果
+					    text-overflow: ellipsis;          //   设置多余的用...表示。
+					    white-space: nowrap;           //   以上两个条件满足后，为了文字更好的实现溢出用...表示。就的先把默认的换行阻止。
 						img{
 							position: absolute;
 							left: 30px;
 							top: 14px;
 							width: 28px;
+							@media(max-width: 767px) {
+								left: 10px;
+							}
 						}
 						&.type1{
 							background: #a91c1c;
@@ -264,10 +270,17 @@ export default {
 						border: 1px solid #352b24;
 						padding-left: 70px;
 						font-size: 16px;
+						@media(max-width: 767px) {
+							font-size: 14px;
+							padding-left: 50px;
+						}
 					}
 					li:nth-child(2){
 						width: 60%;
 						text-align: center;
+						@media(max-width: 767px) {
+							font-size: 16px;
+						}
 					}
 
 				}
@@ -275,9 +288,11 @@ export default {
 		}
 		@media(max-width: 767px){
 			margin-top: 20px;
+			padding: 0;
 			.list{
 				border-top: 1px solid #bd8c67;
 				width: auto;
+				margin: 0 0 20px 0;
 				padding: 0;
 				.name-img{
 					position: relative;
