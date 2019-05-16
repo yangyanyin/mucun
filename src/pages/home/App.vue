@@ -58,8 +58,8 @@
                     <div class="content clearfix">
                         <div class="left list animation-show" v-for="(countrys, index) in countryPassport" :key="index">
                             <div class="brick-item">
-                                <a :href="'/move-project/details/'+countrys.country_id">
-                                    <img :src="countrys.img" />
+                                <a :href="'/project/details/'+countrys.country_id">
+                                    <img v-lazy="{src: countrys.img, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
                                     <div class="more">
                                         <span>{{countrys.en_name}}</span>
                                         <i>{{countrys.visa_free_number}}</i>
@@ -67,8 +67,8 @@
                                     </div>
                                 </a>
                                 <div class="name">
-                                    <a :href="'/move-project/details/'+countrys.country_id"><strong>{{countrys.name}}</strong></a>
-                                    <p>{{countrys.introduction}}</p>
+                                    <a :href="'/project/details/'+countrys.country_id"><strong>{{countrys.name}}</strong></a>
+                                    <p v-html="countrys.introduction"></p>
                                 </div>
                             </div>
                         </div>
@@ -286,7 +286,11 @@ export default {
         }).then(res => {
             if (res.data.code === 200) {
                 this.isLoadingsTatus = true
-                this.countryPassport = res.data.data
+                let countrys = res.data.data
+                for (let i = 0; i < countrys.length; i++) {
+                     countrys[i].introduction = countrys[i].introduction.replace(/[ ]/g, '<br />')
+                }
+                this.countryPassport = countrys
             }
         })
         windowScroll()

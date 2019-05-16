@@ -42,14 +42,16 @@
 				<div class="pc-max-width compared animation-show">
 					<h3 class="country-title">{{countryName}}护照比大国绿卡好在哪里？</h3>
 					<div class="clearfix">
-						<ul class="left">
-							<li class="t">瓦努阿图护照</li>
-							<li>申请简单，仅需8份文件</li>
-						</ul>
-						<ul class="right">
-							<li class="t">大国绿卡</li>
-							<li>资金高，风险高</li>
-						</ul>
+						<div>
+							<ul class="left">
+								<li class="t">{{benefitPK.advantage.title}}</li>
+								<li v-for="(list, index) in benefitPK.advantage.content">{{list}}</li>
+							</ul>
+							<ul class="right">
+								<li class="t">{{benefitPK.disadvantage.title}}</li>
+								<li v-for="(list, index) in benefitPK.disadvantage.content">{{list}}</li>
+							</ul>
+						</div>
 					</div>	
 				</div>
 				<div class="pc-max-width obtain">
@@ -94,6 +96,7 @@
 				userTypes: '',
     			applyConditions: '',
     			processList: '',
+    			benefitPK: '',
     			defaultNav: 0,
     			contentNav: ['移民国家', '项目优势', '申请条件']
 			}
@@ -128,6 +131,7 @@
 	            	this.userTypes = res.data.data.user_types
 	            	this.applyConditions = res.data.data.apply_conditions
 	            	this.processList = res.data.data.process
+	            	this.benefitPK= res.data.data.different
 	            	setTimeout(function () {
 						let scroll = document.documentElement.scrollTop || document.body.scrollTop
 				    	animation(scroll)
@@ -423,7 +427,37 @@
 			}
 		}
 		@media(max-width: 767px) {
-			display: none;
+			padding: 30px 20px;
+			ul.right {
+				padding-left: 70px;
+			}
+			ul.left{
+				padding-right: 70px;
+				position: relative;
+				&:after{
+					position: absolute;
+					content: '';
+					top: 50%;
+					right: -30px;
+					width: 60px;
+					height: 60px;
+					margin-top: -30px;
+					background: url('../../../assets/images/country/details/compared-PK.png') no-repeat center center;
+					background-size: 60px;
+				}
+			}
+			li{
+				font-size: 16px;
+				padding: 8px 0;
+				background-size: 24px !important;
+			}
+			.clearfix{
+				background: none;
+				overflow-x: auto;
+				div{
+			    	width: max-content;
+				}
+			}
 		}
 	}
 	.obtain{

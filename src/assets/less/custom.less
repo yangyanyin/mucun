@@ -268,11 +268,13 @@ select:focus,select:active,select:hover{
   }
 }
 
-.brick-item{
-  transition: 0.4s;
-  &:hover{
-    box-shadow: 0 15px 18px rgba(0, 0, 0, 0.2);
-    -webkit-transform: translate3d(0, -2px, 0);
-    transform: translate3d(0, -2px, 0);
+@media(min-width: 767px) {
+  .brick-item{
+    transition: 0.4s;
+    &:hover{
+      box-shadow: 0 15px 18px rgba(0, 0, 0, 0.2);
+      -webkit-transform: translate3d(0, -2px, 0);
+      transform: translate3d(0, -2px, 0);
+    }
   }
 }

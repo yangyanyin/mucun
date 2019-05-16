@@ -139,15 +139,15 @@ export default {
 				.nav{
 					padding: 10px 0;
 					a{
-						font-size: 14px;
-						margin: 0 8px;
+						font-size: 12px;
+						margin: 0 5px;
 					}
 				}
 				.country{
 					margin-top: 20px;
 					li{
-						width: 40px;
-						margin: 0 15px 10px;
+						width: 35px;
+						margin: 0 7px 10px;
 					}
 				}
 			}

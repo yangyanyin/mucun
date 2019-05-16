@@ -58,6 +58,8 @@ export default {
 }
 .video{
 	width: 100%;
+	background: url('../../../assets/images/index/video-img.jpg') no-repeat top center;
+	background-size: 100%;
 }
 @media(max-width: 767px) {
 	.banner{
@@ -70,6 +72,7 @@ export default {
 		width: 700px;
 		top: 0;
 		left: 50%;
+		background-size: 700px;
 		margin-left: -350px;
 	}
 }

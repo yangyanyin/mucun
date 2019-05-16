@@ -17,8 +17,8 @@
 		        	<div class="country-list">
 		        		<div class="content clearfix brick-item animation-show" v-for="(countrs, index) in countryList" :key="index">
 		        			<div class="left img">
-		        				<a :href="'/move-project/details/'+ countrs.country_id">
-			        				<img :src="countrs.img" />
+		        				<a :href="'/project/details/'+ countrs.country_id">
+			        				<img v-lazy="{src: countrs.img, loading: require('../../../assets/images/country-loading.png'), error: require('../../../assets/images/country-loading.png')}" />
 			        				<div class="more">
                                         <span>{{countrs.en_name}}</span>
                                         <i>{{countrs.visa_free_number}}</i>
@@ -31,7 +31,7 @@
 			        			<ul class="clearfix">
 			        				<li>
 			        					<img src="../../../assets/images/country/country-list-icon1.png" />
-			        					<span>居中要求</span>
+			        					<span>居住要求</span>
 			        					<h3>{{countrs.require}}</h3>
 			        				</li>
 			        				<li>
@@ -50,12 +50,10 @@
 			        					<h3>{{countrs.ID_type}}</h3>
 			        				</li>
 			        			</ul>
-			        			<ol>
-			        				<li>最后护照</li>
-			        				<li>不用背词</li>
-			        				<li>税务天堂</li>
+			        			<ol v-if="countrs.tags.length > 0">
+			        				<li v-for="(tags, index) in countrs.tags">{{tags}}</li>
 			        			</ol>
-			        			<a :href="'/move-project/details/'+ countrs.country_id">查看详情</a>
+			        			<a :href="'/project/details/'+ countrs.country_id">查看详情</a>
 			        		</div>
 		        		</div>
 		        	</div>
