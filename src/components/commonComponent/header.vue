@@ -56,7 +56,7 @@ export default {
 				}
 			],
 			currentUrl: window.location.pathname,
-			detailsUrl: this.$route ? this.$route.path.substring(0, 13) : ''
+			detailsUrl: this.$route ? this.$route.path.substring(0, 8) : ''
 		}
 	},
 	methods: {
