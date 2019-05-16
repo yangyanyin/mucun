@@ -325,7 +325,7 @@ export default {
 			.tree{
 				height: 490px;
 				background-size: 300px;
-				div{
+				.step{
 					h3{
 						font-size: 16px;
 						padding-bottom: 5px;

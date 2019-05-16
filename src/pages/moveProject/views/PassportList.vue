@@ -356,7 +356,7 @@ export default {
 						height: 58px;
 					}
 					ul{
-						padding-top: 15px;
+						padding: 15px 0 20px 0;
 						li{
 							span{
 								padding: 8px;
@@ -367,9 +367,10 @@ export default {
 						}
 					}
 					ol{
-						padding: 20px 0;
+						padding: 0;
 					}
 					a{
+						margin-top: 20px;
 						height: 40px;
 						line-height: 40px;
 						font-size: 16px;

@@ -1,16 +1,17 @@
 <template>
 	<div class="banner">
-		<swiper :options="swiperOption">
-		    <swiper-slide v-for="(banners, index) in bannerImgList" :key="index">
-		    	<img :src="banners.img" />
-		    	<p class="t1">{{banners.name}}</p>
-		    	<p class="t2">投资置业    定居生活   全面规划</p>
-		    </swiper-slide>
-			<div class="swiper-pagination" slot="pagination"></div>
-<!-- 	        <div class="swiper-button-prev" slot="button-prev"></div>
-	        <div class="swiper-button-next" slot="button-next"></div> -->
-		</swiper>
-		   
+		<div class="width">
+			<swiper :options="swiperOption">
+			    <swiper-slide v-for="(banners, index) in bannerImgList" :key="index">
+			    	<img :src="banners.img" />
+			    	<p class="t1">{{banners.name}}</p>
+			    	<p class="t2">投资置业    定居生活   全面规划</p>
+			    </swiper-slide>
+				<div class="swiper-pagination" slot="pagination"></div>
+	<!-- 	        <div class="swiper-button-prev" slot="button-prev"></div>
+		        <div class="swiper-button-next" slot="button-next"></div> -->
+			</swiper>
+	   </div>
 	</div>
 </template>
 <script>
@@ -56,21 +57,32 @@ export default {
 		font-size: 44px;
 	}
 }
-.video{
-	width: 100%;
-}
 @media(max-width: 767px) {
 	.banner{
 		position: relative;
 		height: 272px;
 		overflow: hidden;
-	}
-	.video{
-		position: absolute;
-		width: 700px;
-		top: 0;
-		left: 50%;
-		margin-left: -350px;
+		.width{
+			position: absolute;
+			width: 670px;
+			height: 272px;
+			top: 0;
+			left: 50%;
+			margin-left: -335px;
+		}
+		.t1{
+			bottom: 55%;
+			font-size: 30px;
+		}
+		.t2{
+			bottom: 40%;
+			font-size: 24px;
+		}
+		img{
+			display: block;
+			width: auto;
+			height: 272px;
+		}
 	}
 }
 
