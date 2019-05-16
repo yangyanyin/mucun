@@ -190,6 +190,19 @@
             </div>
         </template>
 
+        <!--咨询完成弹窗 -->
+        <div class="message-success" v-if="messageSuccess">
+            <div class="content">
+                <span class="close"><img src="../../assets/images/close.png" @click="closeMessage" /></span>
+                <img src="../../assets/images/index/message-img.jpg" />
+                <p class="p1">感谢您使用我们的免费咨询服务</p>
+                <p class="p1">我们稍后会联系您</p>
+                <p class="p1">您也可以拨打</p>
+                <p class="tel">(+65) 8866 5586</p>
+                <p class="p2">进行直接咨询</p>
+                <a href="/passport">了解更多</a>
+            </div>
+        </div>
     </Layout>
 </template>
 
@@ -218,7 +231,8 @@ export default {
             userEmail: '',
             nameError: false,
             telError: false,
-            emailErroe: false
+            emailErroe: false,
+            messageSuccess: false
         }
     },
     methods: {
@@ -256,9 +270,12 @@ export default {
                    this.userName = ''
                    this.userTel = ''
                    this.userEmail = ''
+                   this.messageSuccess = true
                 }
             })
-
+        },
+        closeMessage () {
+            this.messageSuccess = false
         },
         isEmail (email) {
             console.log()

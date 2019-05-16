@@ -3,7 +3,10 @@
 		<div class="nav-country">
 			<div class="contact">
 				<span>(+65) 8866 5586</span>
-				<span>微信</span>
+				<span>
+					微信
+					<img src="../../assets/images/index/WeChat.png" />
+				</span>
 			</div>
 			<div class="nav">
 				<a href="/passport">护照精选</a>
@@ -91,6 +94,20 @@ export default {
 						padding-left: 45px;
 						background: url('../../assets/images/footer-wx.png') no-repeat left center;
 						background-size: 28px;
+						position: relative;
+						img{
+							position: absolute;
+							width: 156px;
+							height: 0;
+							left: 0;
+							top: 40px;
+							transition: 0.2s;
+						}
+						&:hover{
+							img{
+								height: 156px;
+							}
+						}
 					}
 				}
 			}

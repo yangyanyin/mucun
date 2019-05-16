@@ -7,7 +7,7 @@
 			    	<p class="t1">{{banners.name}}</p>
 			    	<p class="t2">投资置业    定居生活   全面规划</p>
 			    </swiper-slide>
-				<div class="swiper-pagination" slot="pagination"></div>
+				<!-- <div class="swiper-pagination" slot="pagination"></div> -->
 	<!-- 	        <div class="swiper-button-prev" slot="button-prev"></div>
 		        <div class="swiper-button-next" slot="button-next"></div> -->
 			</swiper>
@@ -23,7 +23,7 @@ export default {
 			swiperOption: {
 		        autoplay: 3000,
 		        loop: true,
-		        pagination: '.swiper-pagination'
+		        // pagination: '.swiper-pagination'
 	        }
 		}
 	},

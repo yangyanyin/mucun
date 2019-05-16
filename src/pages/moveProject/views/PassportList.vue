@@ -182,12 +182,15 @@ export default {
 		}
 		@media(max-width: 767px){
 			width: auto;
-			height: 80px;
+			height: 70px;
 			overflow: auto;
 			line-height: 60px;
 			margin: 0 -10px;
 			padding: 0;
 			top: 0;
+			-webkit-overflow-scrolling: touch;
+			-moz-overflow-scrolling: touch;
+			overflow-scrolling: touch;
 			.list{
 				white-space: nowrap;
 				a{
