@@ -32,27 +32,27 @@ export default {
 				},
 				{
 					name: '护照精选',
-					url: '/passport'
+					url: '/passport/'
 				},
 				{
 					name: '护照项目',
-					url: '/project'
+					url: '/project/'
 				},
 				{
 					name: '移居狮城',
-					url: '/city'
+					url: '/city/'
 				},
 				{
 					name: '银行开户',
-					url: '/bank'
+					url: '/bank/'
 				},
 				{
 					name: '资产配置',
-					url: '/asset'
+					url: '/asset/'
 				},
 				{
 					name: '关于我们',
-					url: '/about'
+					url: '/about/'
 				}
 			],
 			currentUrl: window.location.pathname,
@@ -120,7 +120,7 @@ export default {
 			color: #bd8c67;
 			font-weight: bold;
 			i{
-				width: 100%;
+				width: 95%;
 				left: 0;
 			}
 		}
@@ -128,7 +128,7 @@ export default {
 			color: #bd8c67;
 			font-weight: bold;
 			i{
-				width: 100%;
+				width: 95%;
 				left: 0;
 			}
 		}

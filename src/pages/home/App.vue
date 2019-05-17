@@ -121,7 +121,7 @@
                     <div class="content animation-show">
                         <h3>儒商移民为您全程提供</h3>
                         <p>一站式新加坡公司注册、税务身份、资产安全、银行开户、精英教育、海外资产配置、家族办公室服务。</p>
-                        <a href="/">了解更多></a>
+                        <a href="/city">了解更多></a>
                     </div>
                 </div>
             </div>
@@ -172,7 +172,13 @@
                                     <p v-if="emailErroe">请输入正确的邮箱！</p>
                                 </li>
                             </ul>
-                            <a class="submit" @click="submitUserInfo">立即咨询</a>
+                            <a class="submit" @click="submitUserInfo">
+                                <template v-if="!messageLoading">
+                                    立即咨询
+                                </template>
+                                <img v-else src="../../assets/images/message-loading.png" />
+                                
+                            </a>
                         </div>
                     </div>
                     <div class="wx-tel clearfix">
@@ -191,7 +197,7 @@
         </template>
 
         <!--咨询完成弹窗 -->
-        <div class="message-success" v-if="messageSuccess">
+        <div class="message-success" :class="{on:messageSuccess}" v-if="messageSuccess">
             <div class="content">
                 <span class="close"><img src="../../assets/images/close.png" @click="closeMessage" /></span>
                 <img src="../../assets/images/index/message-img.jpg" />
@@ -232,7 +238,8 @@ export default {
             nameError: false,
             telError: false,
             emailErroe: false,
-            messageSuccess: false
+            messageSuccess: false,
+            messageLoading: false
         }
     },
     methods: {
@@ -261,18 +268,23 @@ export default {
                 phone: this.userTel,
                 email: this.userEmail
             }
-            this.$http({
-                method: 'post',
-                url: process.env.VUE_APP_API+'/v1/contact',
-                params
-            }).then(res => {
-                if (res.data.code === 200) {
-                   this.userName = ''
-                   this.userTel = ''
-                   this.userEmail = ''
-                   this.messageSuccess = true
-                }
-            })
+            _this.messageLoading = true
+            setTimeout (function () {
+                _this.$http({
+                    method: 'post',
+                    url: process.env.VUE_APP_API+'/v1/contact',
+                    params
+                }).then(res => {
+                    if (res.data.code === 200) {
+                       _this.userName = ''
+                       _this.userTel = ''
+                       _this.userEmail = ''
+                       _this.messageSuccess = true
+                       _this.messageLoading = false
+                    }
+                })
+            }, 2000)
+            
         },
         closeMessage () {
             this.messageSuccess = false

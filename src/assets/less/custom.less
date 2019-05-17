@@ -7,7 +7,6 @@ body{
 @media(max-width: 767px) {
   body{
     min-width: 100%;
-    padding-top: 60px;
   }
 }
 
@@ -276,5 +275,19 @@ select:focus,select:active,select:hover{
       -webkit-transform: translate3d(0, -2px, 0);
       transform: translate3d(0, -2px, 0);
     }
+  }
+}
+
+
+@keyframes proRotate{
+  100%{
+    transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+  }
+}
+@-webkit-keyframes proRotate{
+  100%{
+    transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
   }
 }

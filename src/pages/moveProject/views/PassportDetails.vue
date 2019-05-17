@@ -209,11 +209,12 @@
 		}
 		@media(max-width: 767px) {
 			.t{
-				top: 20%;
-				font-size: 30px;
+				top: 45%;
+				font-size: 26px;
 			}
 			.d{
-				font-size: 24px;
+				top: 65%;
+				font-size: 18px;
 			}
 		}
 	}

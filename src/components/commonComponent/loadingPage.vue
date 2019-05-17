@@ -23,16 +23,4 @@
     animation: proRotate .8s infinite both;
     -webkit-animation: proRotate .8s infinite both;
   }
-  @keyframes proRotate{
-    100%{
-      transform:rotate(360deg);
-      -webkit-transform:rotate(360deg);
-    }
-  }
-  @-webkit-keyframes proRotate{
-    100%{
-      transform:rotate(360deg);
-      -webkit-transform:rotate(360deg);
-    }
-  }
 </style>

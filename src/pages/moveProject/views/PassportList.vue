@@ -237,9 +237,7 @@ export default {
 		                border-bottom-right-radius: 10px;
 		                text-transform:uppercase;
 		                padding: 10px 0;
-		                opacity: 0;
-		                transition: 0.5s;
-		                transform: scale(0.7) translateY(-50%);
+		                transform: translateY(-50%);
 		                span{
 		                    font-size: 14px;
 		                }
@@ -265,15 +263,14 @@ export default {
 		                p{
 		                    font-size: 12px;
 		                }
+		                @media(max-width: 767px) {
+		                	display: none;
+		                }
 		            }
 					&:hover{
 						img{
 							transform: scale(1.1);
 						}
-						.more{
-		                    opacity: 1;
-	                     	transform: scale(1) translateY(-50%);
-                		}
 					}
 				}
 			}
@@ -363,7 +360,13 @@ export default {
 				@media(max-width: 1200px) {
 					display: block;
 					h3.name{
+						font-size: 20px;
 						height: 58px;
+						img{
+							width: 28px;
+							top: -2px;
+							margin-right: 10px;
+						}
 					}
 					ul{
 						padding: 15px 0 20px 0;

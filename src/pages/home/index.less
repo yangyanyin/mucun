@@ -305,14 +305,19 @@
         a{
             display: block;
             margin: 50px auto 0;
-            width: 150px;
-            height: 60px;
-            line-height: 60px;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
             text-align: center;
             color: #ffffff;
-            font-size: 24px;
-            text-decoration: underline;
+            font-size: 18px;
             border: 1px solid #fff;
+            transition: 0.3s;
+            &:hover{
+                background: #bd8c67;
+                color: #fff;
+                border: 1px solid #bd8c67;
+            }
         }
         @media(max-width: 767px) {
             padding-top: 40px;
@@ -553,7 +558,7 @@
                     font-size: 14px;
                 }
             }
-            a{
+            .submit{
                 float: right;
                 width: 200px;
                 height: 60px;
@@ -565,6 +570,12 @@
                 background: #bd8c67;
                 color: #fff;
                 cursor: pointer;
+                img{
+                    display: block;
+                    width: 30px;
+                    margin: 15px auto;
+                    animation: proRotate .8s infinite both;
+                }
             }
         }
         @media(max-width: 1280px){
@@ -635,6 +646,8 @@
         border-radius: 10px;
         overflow: hidden;
         text-align: center;
+        opacity: 0;
+        transform: translateY(200px);
         .close{
             position: absolute;
             top: 10px;
@@ -676,6 +689,12 @@
             font-size: 18px;
         }
     }
+    &.on{
+        .content{
+            animation: showMessageSuccess .8s;
+            animation-fill-mode: forwards;
+        }
+    }
      @media(max-width: 767px){
         padding: 0 10px;
         .content{
@@ -701,5 +720,12 @@
                 font-size: 16px;
             }
         }
+    }
+}
+
+@keyframes showMessageSuccess{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }

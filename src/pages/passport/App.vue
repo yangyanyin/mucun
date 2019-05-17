@@ -69,7 +69,7 @@ export default {
     data () {
     	return {
     		passportList: '',
-    		countryList: '',
+    		// countryList: '',
     		loadingSuccess: false
     	}
     },
@@ -96,15 +96,28 @@ export default {
         		}, 10)
         	}
         })
+  //       let countryList = document.getElementsByClassName('list')
+  //       window.addEventListener('scroll', function () {
+		// 	let scroll = document.documentElement.scrollTop || document.body.scrollTop
+		// 	for (let i = 0; i < countryList.length; i++) {
+		// 		if (scroll > countryList[i].offsetTop) {
+		// 			if (scroll < countryList[i].offsetHeight) {
+		// 				countryList[i].firstChild.style.position = fixed
+		// 			}
+		// 		} else {
+		// 			countryList[i].firstChild.style.marginTop = 0
+		// 		}
+		// 	}
+		// })
     }
 }
 </script>
 <style lang="less" scoped>
 	.passport{
 		background: #131313;
-		padding: 100px 0;
+		padding: 150px 0;
 		@media(max-width: 767px) {
-			padding: 50px 0;
+			padding: 90px 0;
 		}
 	}
 	.passport-list{
@@ -165,7 +178,6 @@ export default {
 		}
 	}
 	.country{
-		padding-top: 40px;
 		.list{
 			position: relative;
 			padding: 50px 0 0 520px;
@@ -231,7 +243,12 @@ export default {
 					}
 				}
 				ul{
-					border-top: 1px solid #131313;
+				    border: 1px solid #352b24;
+				    margin-top: 1px;
+				    transition: 0.4s;
+				    &:hover{
+				    	border-color: #fff;
+				    }
 					li{
 						float: left;
 						color: #fff;
@@ -267,7 +284,7 @@ export default {
 					li:nth-child(1){
 						width: 40%;
 						color: #fff;
-						border: 1px solid #352b24;
+						border-right: 1px solid #352b24;
 						padding-left: 70px;
 						font-size: 16px;
 						@media(max-width: 767px) {
