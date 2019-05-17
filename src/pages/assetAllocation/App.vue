@@ -197,7 +197,7 @@ export default {
 					}
 					&.article1{
 						span{
-							width: 100%;
+							width: 60%;
 							background: #50bc53;
 						}
 					}

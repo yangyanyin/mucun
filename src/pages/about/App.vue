@@ -99,7 +99,7 @@ export default {
 			padding: 0 15px;
 			margin-top: 30px;
 			.about-img{
-				margin: 0px;
+				margin: 0 0 10px 0;
 			}
 		}
 	}

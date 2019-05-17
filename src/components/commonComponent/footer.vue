@@ -1,5 +1,15 @@
 <template>
 	<div class="footer">
+          <div class="wx-tel clearfix">
+            <div class="tel">
+                <img class="tel-img" src="../../assets/images/index/contact-tel.png" />
+                <p class="tel-number">(+65) 8866 5586</p>
+            </div>
+            <div class="wx">
+                <img class="wx-img" src="../../assets/images/index/WeChat.png" />
+                <p class="wx-text">扫一扫添加微信</p>
+            </div>
+        </div>
 		<div class="nav-country">
 			<div class="contact">
 				<span>(+65) 8866 5586</span>
@@ -196,4 +206,67 @@ export default {
 			bottom: 80px;
 		}
 	}
+    .wx-tel{
+    	display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        text-align: center;
+        background: #1b2a44;
+        color: #b28565;
+        .tel-img{
+            display: inline-block;
+            width: 65px;
+            margin-top: 45px;
+        }
+        .tel-number{
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        .wx-img{
+            display: block;
+            margin: 60px auto 0;
+            width: 155px;
+        }
+        .wx-text{
+            display: inline-block;
+            margin-top: 20px;
+            padding-left: 35px;
+            background: url('../../assets/images/index/contact-wx.png') no-repeat left center;
+            background-size: 25px;
+        }
+        @media(max-width: 767px) {
+        	display: block;
+            position: static;
+            background: none;
+            width: 100%;
+            padding: 30px 0;
+            .tel{
+                float: left;
+                width: 50%;
+            }
+            .wx{
+                width: 50%;
+                float: right;
+            }
+            .tel-img{
+                width: 40px;
+                // margin-top: 45px;
+            }
+            .tel-number{
+                font-size: 20px;
+                margin-top: 15px;
+            }
+            .wx-img{
+                display: block;
+                margin: 0 auto;
+                width: 140px;
+            }
+            .wx-text{
+                margin-top: 15px;
+            }
+        }
+    }
 </style>

@@ -50,7 +50,7 @@ export default {
 	.t2{
 		position: absolute;
 		left: 0;
-		bottom: 40%;
+		bottom: 42%;
 		width: 100%;
 		text-align: center;
 		color: #fff;
