@@ -27,7 +27,7 @@
 		        				</a>
 			        		</div>
 			        		<div class="right info">
-			        			<h3 class="name">{{countrs.name}}护照</h3>
+			        			<h3 class="name"><img :src="countrs.flag" />{{countrs.name}}护照</h3>
 			        			<ul class="clearfix">
 			        				<li>
 			        					<img src="../../../assets/images/country/country-list-icon1.png" />
@@ -291,6 +291,13 @@ export default {
 					font-size: 24px;
 					border-bottom: 1px solid #bd8c67;
 					text-align: center;
+					img{
+						display: inline-block;
+						position: relative;
+						top: -1px;
+						width: 38px;
+						margin-right: 20px;
+					}
 				}
 				ul{
 				    display:flex;

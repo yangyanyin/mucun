@@ -3,8 +3,9 @@
 		<loadingPage v-if="!loadingSuccess" />
 		<template v-else>
 			<div class="banner">
-				<img class="web-img" src="../../../assets/images/country/details/details-banner.png">
-				<img class="wap-img" src="../../../assets/images/country/details/details-banner-wap.png">
+				<img v-lazy="{src: bannerImgUrl, loading: require('../../../assets/images/country-loading.png'), error: require('../../../assets/images/country-loading.png')}" />
+				<strong class="t">{{bannerData.title}}</strong>
+				<p class="d">{{bannerData.description}}</p>
 			</div>
 
 			<div class="country-details">
@@ -80,7 +81,7 @@
 </template>
 <script>
 	import Layout from '../../../components/layout.vue'
-	import { animation, windowScroll } from '../../../assets/js/config.js'
+	import { animation, windowScroll, device } from '../../../assets/js/config.js'
 	import loadingPage from '../../../components/commonComponent/loadingPage.vue'
 	export default {
 		components: {
@@ -98,6 +99,8 @@
     			processList: '',
     			benefitPK: '',
     			defaultNav: 0,
+    			bannerData: '',
+    			bannerImgUrl: '',
     			contentNav: ['移民国家', '项目优势', '申请条件']
 			}
 		},
@@ -132,6 +135,12 @@
 	            	this.applyConditions = res.data.data.apply_conditions
 	            	this.processList = res.data.data.process
 	            	this.benefitPK= res.data.data.different
+	            	this.bannerData = res.data.data.banner
+	            	if (device() === 'web') {
+	            		this.bannerImgUrl = res.data.data.banner.img.pc
+	            	} else {
+	            		this.bannerImgUrl = res.data.data.banner.img.h5
+	            	}
 	            	setTimeout(function () {
 						let scroll = document.documentElement.scrollTop || document.body.scrollTop
 				    	animation(scroll)
@@ -176,8 +185,36 @@
 
 	}
 	.banner{
+		position: relative;
+		text-align: center;
 		img{
 			width: 100%;
+		}
+		.t{
+			position: absolute;
+			top: 30%;
+			left: 0;
+			font-weight: normal;
+			width: 100%;
+			color: #fff;
+			font-size: 60px;
+		}
+		.d{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			color: #fff;
+			font-size: 44px;
+		}
+		@media(max-width: 767px) {
+			.t{
+				top: 20%;
+				font-size: 30px;
+			}
+			.d{
+				font-size: 24px;
+			}
 		}
 	}
 	.country-details{
