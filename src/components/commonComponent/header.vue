@@ -71,7 +71,7 @@ export default {
 <style lang="less" scoped>
 .header{
 	position: fixed;
-	z-index: 99;
+	z-index: 9999;
 	width: 100%;
 	left: 0;
 	top: 0;

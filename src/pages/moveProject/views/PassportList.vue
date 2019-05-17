@@ -231,7 +231,7 @@ export default {
 		                width: 110px;
 		                text-align: center;
 		                color: #fff;
-		                margin-left: -70px;
+		                margin-left: -55px;
 		                border: 1px solid #fff;
 		                border-top-right-radius: 10px;
 		                border-bottom-right-radius: 10px;
