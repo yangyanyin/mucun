@@ -209,11 +209,11 @@
 		}
 		@media(max-width: 767px) {
 			.t{
-				top: 45%;
+				top: 48%;
 				font-size: 26px;
 			}
 			.d{
-				top: 65%;
+				top: 68%;
 				font-size: 18px;
 			}
 		}
@@ -316,10 +316,10 @@
 					padding: 20px 0 10px 0;
 				}
 				p{
-					padding: 0 20px 30px;
-					line-height: 28px;
+					padding: 0 20px 20px;
+					line-height: 26px;
 					font-size: 16px;
-					height: 86px;
+					height: 110px;
 				}
 			}
 		}

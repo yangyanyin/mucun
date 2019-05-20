@@ -71,12 +71,12 @@ export default {
 			margin-left: -335px;
 		}
 		.t1{
-			bottom: 55%;
-			font-size: 30px;
+			bottom: 40%;
+			font-size: 28px;
 		}
 		.t2{
-			bottom: 40%;
-			font-size: 24px;
+			bottom: 25%;
+			font-size: 22px;
 		}
 		img{
 			display: block;
