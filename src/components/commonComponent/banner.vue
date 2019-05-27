@@ -23,6 +23,7 @@ export default {
 			swiperOption: {
 		        autoplay: 3000,
 		        loop: true,
+		        effect : 'fade'
 		        // pagination: '.swiper-pagination'
 	        }
 		}
