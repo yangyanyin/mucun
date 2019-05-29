@@ -14,7 +14,7 @@ glob.sync('./src/pages/**/main.js').forEach(path => {
     }
 })
 module.exports = {
-	publicPath: process.env.NODE_ENV === 'production' ? 'http://47.112.220.54:81/' : '/',
+	publicPath: process.env.NODE_ENV === 'production' ? '//aicrszg.com/' : '/',
 	pages,
 	outputDir: 'mucun-build/build/',
 	devServer: {

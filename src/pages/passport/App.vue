@@ -42,9 +42,8 @@
         					<div>
         						<ul class="clearfix" v-for="(country, index) in lists.visa_countries" :key="index">
         							<li><img :src="country.flag" />{{country.name}}</li>
-        							<li 
-        							:class="{type1:country.type === '签证入境', type2:country.type==='落地签入境', type3:country.type==='免签目的国', type4:country.type==='eVisa'}"
-        							>{{country.type}}</li>
+        							<!-- <li :class="{type1:country.type === '签证入境', type2:country.type==='落地签入境', type3:country.type==='免签目的国', type4:country.type==='eVisa'}">{{country.type}}</li> -->
+        							<li :class="countryClass(country.type)">{{country.type}}</li>
         						</ul>
         					</div>
         				</div>
@@ -79,7 +78,23 @@ export default {
    			let divBox = countryList[index].offsetTop - 100
    			document.body.scrollTop = divBox
 			document.documentElement.scrollTop = divBox
-   		}
+   		},
+   		countryClass (e) {
+   			let className;
+   			if (e) {
+	   			if (e.indexOf('签证入境') >= 0) {
+	   				className = 'type1'
+	   			} else if (e.indexOf('落地签入境') >= 0) {
+	   				className = 'type2'
+	   			} else if (e.indexOf('免签目的国') >= 0) {
+	   				className = 'type3'
+	   			} else if (e.indexOf('eVisa') >= 0 || e.indexOf('电子旅行证') >= 0 || e.indexOf('enrolment') >= 0 || e.indexOf('tourist') >= 0) {
+	   				className = 'type4'
+	   			}
+    		}
+    		return className
+
+    	}
    	},
     mounted () {
     	this.$http({
