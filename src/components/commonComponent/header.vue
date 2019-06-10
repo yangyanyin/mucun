@@ -1,7 +1,7 @@
 <template>
 	<div class="header">
 		<div class="pc-max-width clearfix">
-			<div class="logo left"><a href="/"><img src="../../assets/images/logo.png"></a></div>
+			<!-- <div class="logo left"><a href="/"><img src="../../assets/images/logo.png"></a></div> -->
 			<div class="navs right">
 				<a v-for="(navs, index) in navList" :class="{on:currentUrl === navs.url || detailsUrl === navs.url}" :href="navs.url">
 					{{navs.name}}
@@ -30,30 +30,30 @@ export default {
 					name: '首 页',
 					url: '/'
 				},
-				{
-					name: '护照精选',
-					url: '/passport/'
-				},
-				{
-					name: '护照项目',
-					url: '/project/'
-				},
-				{
-					name: '移居狮城',
-					url: '/city/'
-				},
-				{
-					name: '银行开户',
-					url: '/bank/'
-				},
-				{
-					name: '资产配置',
-					url: '/asset/'
-				},
-				{
-					name: '关于我们',
-					url: '/about/'
-				}
+				// {
+				// 	name: '护照精选',
+				// 	url: '/passport/'
+				// },
+				// {
+				// 	name: '护照项目',
+				// 	url: '/project/'
+				// },
+				// {
+				// 	name: '移居狮城',
+				// 	url: '/city/'
+				// },
+				// {
+				// 	name: '银行开户',
+				// 	url: '/bank/'
+				// },
+				// {
+				// 	name: '资产配置',
+				// 	url: '/asset/'
+				// },
+				// {
+				// 	name: '关于我们',
+				// 	url: '/about/'
+				// }
 			],
 			currentUrl: window.location.pathname,
 			detailsUrl: this.$route ? this.$route.path.substring(0, 9) : ''

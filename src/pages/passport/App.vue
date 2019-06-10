@@ -84,11 +84,11 @@ export default {
    			if (e) {
 	   			if (e.indexOf('签证入境') >= 0) {
 	   				className = 'type1'
-	   			} else if (e.indexOf('落地签入境') >= 0) {
+	   			} else if (e.indexOf('落地签入境') >= 0 || e.indexOf('电子签证') >= 0) {
 	   				className = 'type2'
 	   			} else if (e.indexOf('免签目的国') >= 0) {
 	   				className = 'type3'
-	   			} else if (e.indexOf('eVisa') >= 0 || e.indexOf('电子旅行证') >= 0 || e.indexOf('enrolment') >= 0 || e.indexOf('tourist') >= 0) {
+	   			} else if (e.indexOf('eVisa') >= 0 || e.indexOf('旅行') >= 0 || e.indexOf('enrolment') >= 0 || e.indexOf('tourist') >= 0 || e.indexOf('预注册') >= 0) {
 	   				className = 'type4'
 	   			}
     		}
