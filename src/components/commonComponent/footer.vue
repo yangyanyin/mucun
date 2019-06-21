@@ -36,7 +36,7 @@
 				<li class="brick-item"><img src="../../assets/images/footer-country7.png"></li>
 			</ul>
 		</div>	
-		<p class="copyright">©️ 2019 AIC Assets Management Pte Ltd. All Rights Reserved.</p>
+		<p class="copyright">2019 AIC Assets Management Pte Ltd. All Rights Reserved.</p>
 
 		<!-- return top -->
 		<div class="return-top" v-if="showReturnTop" @click="returnTop">
