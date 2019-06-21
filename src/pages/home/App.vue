@@ -3,10 +3,10 @@
         <loadingPage v-if="!isLoadingsTatus" />
         <template v-else>
             <!-- banner -->
-            <!-- <Banner :bannerImgList="bannerImg" /> -->
+            <Banner :bannerImgList="bannerImg" />
 
             <!-- 为什么选择我们 -->
-            <div class="choose-us pc-max-width margin-t-80" style="display: none;">
+            <div class="choose-us pc-max-width margin-t-80">
                 <div class="public-title animation-show">
                     <h3>为什么选择我们？</h3>
                     <p>why did you choose us</p>
@@ -49,7 +49,7 @@
             </div>
 
             <!-- 全球护照精选 -->
-            <div class="passport margin-t-80" style="display:none">
+            <div class="passport margin-t-80">
                 <div class="pc-max-width">
                     <div class="public-title animation-show">
                         <h3>全球护照精选</h3>
@@ -77,7 +77,7 @@
             </div>
 
             <!-- 为什么需要一本小国护照 -->
-            <div class="country-passport pc-max-width margin-t-80" style="display:none">
+            <div class="country-passport pc-max-width margin-t-80" >
                 <div class="public-title animation-show">
                     <h3>为什么需要一本小国护照？</h3>
                     <p>why do you need a small country passport</p>
@@ -112,7 +112,7 @@
             </div>
 
             <!-- 移居狮城 -->
-            <div class="migration margin-t-80" style="display:none">
+            <div class="migration margin-t-80">
                 <div class="pc-max-width">
                     <div class="public-title animation-show">
                         <h3>移居狮城</h3>
@@ -127,7 +127,7 @@
             </div>
 
             <!-- 关于我们 -->
-            <div class="index-about pc-max-width margin-t-80" style="display:none">
+            <div class="index-about pc-max-width margin-t-80">
                 <div class="public-title animation-show">
                     <h3>关于我们</h3>
                     <p>about us</p>
