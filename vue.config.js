@@ -16,7 +16,7 @@ glob.sync('./src/pages/**/main.js').forEach(path => {
     }
 })
 module.exports = {
-	publicPath: process.env.NODE_ENV === 'production' ? '//aicrszg.com/' : '/',
+	publicPath: process.env.NODE_ENV === 'production' ? '//aicassets.com/' : '/',
 	pages,
 	outputDir: 'mucun-build/build/',
 	// configureWebpack: {
