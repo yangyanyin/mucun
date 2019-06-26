@@ -5,6 +5,7 @@ node_modules
 /dist
 /report
 mucun-build
+mucun-build-node
 yang-build
 
 # local env files
