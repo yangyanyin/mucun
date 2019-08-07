@@ -181,7 +181,7 @@ export default {
 		}
 	}
 	.condition{
-		background: url('../../assets/images/bank/bank-account-bg.png') no-repeat;
+		background: url('../../assets/images/bank/bank-account-bg.png') no-repeat top center;
 		background-size: 1920px;
 		height: 560px;
 		color: #fff;

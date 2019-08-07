@@ -1,9 +1,11 @@
 'use strict'
 const path = require('path')
 const glob = require('glob')
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const now = Date.now()
 const buildType = `build-${now}`
+
 // 多页配置
 const pages = {}
 glob.sync('./src/pages/**/main.js').forEach(path => {
@@ -12,7 +14,8 @@ glob.sync('./src/pages/**/main.js').forEach(path => {
       entry: path,
       template: './src/pages/' + chunk+'/index.html',
       filename: chunk+'/index.html',
-      chunks: ['chunk-vendors', 'chunk-common', chunk]
+      chunks: ['chunk-vendors', 'chunk-common', chunk],
+      // serverData: '<script type="text/javascript" src="https://gytk5.kuaishang.cn/bs/ks.j?cI=665519&fI=108593" charset="utf-8"></script>'
     }
 })
 module.exports = {
@@ -27,6 +30,14 @@ module.exports = {
 	// 		})
 	// 	]
  //  	},
+ 	// configureWebpack: {
+ 	// 	plugins : [
+	 // 		new HtmlWebpackPlugin({
+	 // 			name: 'yangyanyin'
+	 // 		})
+	 // 	]
+	 // },
+ 	
 	devServer: {
 		historyApiFallback: {
 			rewrites: [
