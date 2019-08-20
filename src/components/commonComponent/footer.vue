@@ -4,6 +4,8 @@
             <div class="tel">
                 <img class="tel-img" src="../../assets/images/index/contact-tel.png" />
                 <p class="tel-number">(+65) 8866 5586</p>
+                <img class="whats-app-img" src="../../assets/images/whats-app.png" />
+                <p class="tel-number">(+65) 8866 5586</p>
             </div>
             <div class="wx">
                 <img class="wx-img" src="../../assets/images/index/WeChat.png" />
@@ -16,6 +18,10 @@
 				<span>
 					微信
 					<img src="../../assets/images/index/WeChat.png" />
+				</span>
+				<span>
+					<img src="../../assets/images/whats-app.png" />
+					<p>(+65) 8866 5586</p>
 				</span>
 			</div>
 			<div class="nav">
@@ -93,18 +99,19 @@ export default {
 					line-height: 40px;
 					color: #bd8c67;
 					font-size: 28px;
+					padding-left: 60px;
+					position: relative;
+					margin-right: 50px;
 					&:first-child{
 						font-weight: bold;
-						margin-right: 50px;
-						padding-left: 60px;
 						background: url('../../assets/images/footer-tel.png') no-repeat left center;
 						background-size: 40px;
 					}
-					&:last-child{
+					&:nth-child(2){
 						padding-left: 45px;
 						background: url('../../assets/images/footer-wx.png') no-repeat left center;
 						background-size: 28px;
-						position: relative;
+						
 						img{
 							position: absolute;
 							width: 156px;
@@ -116,6 +123,37 @@ export default {
 						&:hover{
 							img{
 								height: 156px;
+							}
+						}
+					}
+					&:nth-child(3){
+						margin: 0;
+						padding: 0;
+						p {
+							position: absolute;
+							left: 0;
+							top: 40px;
+							height: 0;
+							width: 250px;
+							text-align: left;
+							color: #30bf39;
+							padding-left: 65px;
+							background: #fff url('../../assets/images/whats-app-bg.png') no-repeat 15px 15px;
+							background-size: 40px;
+							font-size: 22px;
+							border-radius: 5px;
+							transition: 0.2s;
+							opacity: 0;
+							line-height: 70px;
+						}
+						img {
+							width: auto;
+							height: 30px;
+						}
+						&:hover {
+							p {
+								opacity: 1;
+								height: 70px;
 							}
 						}
 					}
@@ -219,11 +257,15 @@ export default {
         .tel-img{
             display: inline-block;
             width: 65px;
-            margin-top: 45px;
+            margin-top: 10px;
         }
         .tel-number{
             font-size: 30px;
             margin-top: 20px;
+        }
+        .whats-app-img {
+        	margin-top: 20px;
+        	width: 120px;
         }
         .wx-img{
             display: block;
@@ -253,11 +295,10 @@ export default {
             }
             .tel-img{
                 width: 40px;
-                // margin-top: 45px;
             }
             .tel-number{
                 font-size: 20px;
-                margin-top: 15px;
+                margin-top: 5px;
             }
             .wx-img{
                 display: block;
