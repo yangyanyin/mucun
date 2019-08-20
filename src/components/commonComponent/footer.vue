@@ -265,7 +265,7 @@ export default {
         }
         .whats-app-img {
         	margin-top: 20px;
-        	width: 120px;
+        	width: 100px;
         }
         .wx-img{
             display: block;
