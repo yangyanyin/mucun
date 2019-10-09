@@ -80,8 +80,8 @@ export default {
 }
 .logo{
 	display: block;
-	padding-top: 30px;
-	width: 209px;
+	padding-top: 15px;
+	width: 185px;
 	img{
 		display: block;
 		width: 100%;
@@ -139,7 +139,6 @@ export default {
 	position: absolute;
 	right: 15px;
 	top: 20px;
-	// background: #060a11;
 	.icon-bar {
         display: block;
         width: 20px;
@@ -311,8 +310,8 @@ export default {
 		}
 	}
 	.logo{
-		width: 158px;
-		padding-top: 19px;
+		width: 120px;
+		padding-top: 12px;
 	}
 	.navs{
 		display: none;
