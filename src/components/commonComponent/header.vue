@@ -111,7 +111,7 @@ export default {
       width: 0;
       bottom: -15px;
       left: 50%;
-      background: #bd8c67;
+      background: #e7c389;
       height: 2px;
       display: block;
       transition: 0.25s;
@@ -124,7 +124,7 @@ export default {
       margin-left: 0;
     }
     &:hover {
-      color: #bd8c67;
+      color: #e7c389;
       font-weight: bold;
       i {
         width: 95%;
@@ -132,7 +132,7 @@ export default {
       }
     }
     &.on {
-      color: #bd8c67;
+      color: #e7c389;
       font-weight: bold;
       i {
         width: 95%;

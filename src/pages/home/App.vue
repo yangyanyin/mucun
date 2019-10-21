@@ -67,7 +67,7 @@
               <div class="brick-item">
                 <a :href="'/project/details/'+countrys.country_id">
                   <img
-                    v-lazy="{src: countrys.img, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
+                    v-lazy="{src: countrys.img + '1', loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
                   />
                   <div class="more">
                     <span>{{countrys.en_name}}</span>
