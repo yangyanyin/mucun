@@ -19,7 +19,7 @@ glob.sync('./src/pages/**/main.js').forEach(path => {
     }
 })
 module.exports = {
-	publicPath: process.env.NODE_ENV === 'production' ? '//' : '/',
+	publicPath: process.env.NODE_ENV === 'production' ? '//aicassets.com/' : '/',
 	pages,
 	outputDir: 'mucun-build/build/',
 	// configureWebpack: {
@@ -41,12 +41,12 @@ module.exports = {
 	devServer: {
 		historyApiFallback: {
 			rewrites: [
-				{ from: /asset/, to: '/assetAllocation/index.html' },
+				{ from: /asset/, to: '/asset/index.html' },
 				{ from: /bank/, to: '/bank/index.html' },
-				{ from: /city/, to: '/moveCity/index.html' },
+				{ from: /city/, to: '/city/index.html' },
 				{ from: /passport/, to: '/passport/index.html' },
 				{ from: /about/, to: '/about/index.html' },
-				{ from: /project/, to: '/moveProject/index.html' },
+				{ from: /project/, to: '/project/index.html' },
 				{ from: /^\/[\s\S]*/, to: '/home/index.html' }
 			]
 		}
