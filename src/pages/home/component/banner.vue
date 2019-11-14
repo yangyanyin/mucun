@@ -1,22 +1,17 @@
 <template>
   <div class="banner">
-    <swiper :options="swiperOption" v-if="false">
-      <swiper-slide v-for="(banners, index) in bannerImgList" :key="index">
-        <img :src="banners.img" />
-        <p class="t1" v-if="banners.title">{{banners.title}}</p>
-        <p class="t2" v-if="banners.description">{{banners.description}}</p>
+    <swiper :options="swiperOption">
+      <swiper-slide>
+        <img src="../../../assets/images/banner1.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../../assets/images/banner2.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../../assets/images/banner3.jpg" />
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
-      <!-- 	        <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>-->
     </swiper>
-    <video
-      class="video"
-      src="../../../assets/images/video.mp4"
-      autoplay="autoplay"
-      loop="loop"
-      muted="muted"
-    >your browser does not support the video tag</video>
   </div>
 </template>
 <script>
@@ -35,11 +30,18 @@ export default {
   mounted() {}
 };
 </script>
+<style lang="less">
+.banner .swiper-pagination-bullet-active {
+  background: #e7c389;
+}
+</style>
 <style lang="less" scoped>
 .banner {
+  padding-top: 90px;
   img {
     width: 100%;
   }
+
   .t1 {
     position: absolute;
     left: 0;
