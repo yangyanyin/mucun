@@ -14,7 +14,7 @@
                   <i>免签国家</i>
                 </div>
                 <div class="right">
-                  <strong>31</strong>
+                  <strong>{{lists.rank}}</strong>
                   <i>全球排名</i>
                 </div>
               </div>
