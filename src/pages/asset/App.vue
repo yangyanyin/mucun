@@ -48,7 +48,7 @@
         <div class="list text left">
           <div class="t">
             <strong>海外资产配置 > 买房置地</strong>
-            <p>海外部动产投资年化收益不高，整体策略略显单薄。</p>
+            <p>海外不动产投资年化收益不高，整体策略略显单薄。</p>
             <div class="calculation">
               <div class="article1">
                 <span>60%</span>
