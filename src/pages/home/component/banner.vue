@@ -37,7 +37,6 @@ export default {
 </style>
 <style lang="less" scoped>
 .banner {
-  padding-top: 90px;
   img {
     width: 100%;
   }

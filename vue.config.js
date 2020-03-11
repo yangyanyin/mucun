@@ -1,11 +1,12 @@
 'use strict'
 const path = require('path')
 const glob = require('glob')
+const fs = require('fs')
 // const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const now = Date.now()
 const buildType = `build-${now}`
-
+let headExtend = fs.readFileSync(path.resolve(__dirname, 'src/template/FooterTemplate.html'), 'utf-8')
 // 多页配置
 const pages = {}
 glob.sync('./src/pages/**/main.js').forEach(path => {
@@ -15,7 +16,7 @@ glob.sync('./src/pages/**/main.js').forEach(path => {
       template: './src/pages/' + chunk+'/index.html',
       filename: chunk+'/index.html',
       chunks: ['chunk-vendors', 'chunk-common', chunk],
-      // serverData: '<script type="text/javascript" src="https://gytk5.kuaishang.cn/bs/ks.j?cI=665519&fI=108593" charset="utf-8"></script>'
+      serverData: headExtend
     }
 })
 module.exports = {

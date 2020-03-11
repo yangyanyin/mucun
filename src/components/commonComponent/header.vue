@@ -6,17 +6,18 @@
           <img src="../../assets/images/logo.png" />
         </a>
       </div>
-      <div class="navs right">
-        <a
-          v-for="(navs, index) in navList"
-          :class="{on:currentUrl === navs.url || detailsUrl === navs.url}"
-          :href="navs.url"
-					:key="index"
-        >
-          {{navs.name}}
-          <i></i>
-        </a>
-      </div>
+      <div class="contact right"></div>
+    </div>
+    <div class="navs">
+      <a
+        v-for="(navs, index) in navList"
+        :class="{on:currentUrl === navs.url || detailsUrl === navs.url}"
+        :href="navs.url"
+        :key="index"
+      >
+        {{navs.name}}
+        <i></i>
+      </a>
     </div>
     <button class="wap-nav-botton" @click="showNav" :class="{on: showWapNav}">
       <span class="icon-bar"></span>
@@ -77,13 +78,10 @@ export default {
 </script>
 <style lang="less" scoped>
 .header {
-  position: fixed;
-  z-index: 9999;
+  position: relative;
   width: 100%;
-  left: 0;
-  top: 0;
-  height: 90px;
-  background: rgba(0, 0, 0, 0.9);
+  height: 120px;
+  background: #0f1f24;
 }
 .logo {
   display: block;
@@ -95,13 +93,23 @@ export default {
   }
 }
 .navs {
-  padding-top: 34px;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  bottom: -60px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
   a {
     position: relative;
+    display: inline-block;
     font-size: 16px;
     color: #ffffff;
     text-align: center;
-    margin: 0 20px;
+    margin: 0 23px;
+    height: 60px;
+    line-height: 60px;
     transition: 0.3s;
     @media (max-width: 1000px) {
       margin: 0 10px;
@@ -109,10 +117,10 @@ export default {
     i {
       position: absolute;
       width: 0;
-      bottom: -15px;
+      bottom: 0;
       left: 50%;
-      background: #e7c389;
-      height: 2px;
+      background: #fff;
+      height: 4px;
       display: block;
       transition: 0.25s;
       -webkit-transition: 0.25s;
@@ -124,16 +132,12 @@ export default {
       margin-left: 0;
     }
     &:hover {
-      color: #e7c389;
-      font-weight: bold;
       i {
         width: 95%;
         left: 0;
       }
     }
     &.on {
-      color: #e7c389;
-      font-weight: bold;
       i {
         width: 95%;
         left: 0;
