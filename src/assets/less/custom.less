@@ -198,16 +198,53 @@ select:focus,select:active,select:hover{
 
 .public-title{
   text-align: center;
+  width: 500px;
+  margin: auto;
   h3{
     position: relative;
     font-size: 32px;
     color: #2d4b4c;
-    padding-bottom: 28px;
   }
   p{
     color: #2d4b4c;
     font-size: 18px;
     text-transform: Uppercase;
+  }
+  span {
+    position: relative;
+    display: block;
+    padding: 20px 0;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 49%;
+      width: 210px;
+      height: 1px;
+      background: #2d4b4c;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 49%;
+      width: 210px;
+      height: 1px;
+      background: #2d4b4c;
+    }
+    i {
+      position: relative;
+      z-index: 9;
+      display: block;
+      width: 80px;
+      margin: auto;
+      background: #fff;
+      padding: 0 20px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
   }
   @media(max-width: 767px){
     h3{

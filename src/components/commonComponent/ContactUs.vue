@@ -29,35 +29,9 @@
         </a>
       </div>
     </div>
-    <ul class="flag">
-        <li>
-          <img src="../../assets/images/country1.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country2.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country3.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country4.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country5.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country6.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country7.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country8.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country9.png" />
-        </li>
-    </ul>
+
+    <!-- 国旗 -->
+    <Flag />
 
      <!--咨询完成弹窗 -->
     <div class="message-success" :class="{on:messageSuccess}" v-if="messageSuccess">
@@ -77,6 +51,7 @@
   </div>
 </template>
 <script>
+import Flag from '../commonComponent/NationalFlag'
 export default {
   data () {
     return {
@@ -89,6 +64,9 @@ export default {
       messageSuccess: false,
       messageLoading: false
     }
+  },
+  components: {
+    Flag
   },
   methods: {
     submitUserInfo() {
@@ -193,30 +171,22 @@ export default {
             }
         }
         .submit {
+          display: block;
+          height: 50px;
+          margin-top: 20px;
+          line-height: 30px;
+          text-align: center;
+          font-size: 16px;
+          padding: 10px 0;
+          color: #fff;
+          background: #447375;
+          border-radius: 5px;
+          img{
             display: block;
-            height: 50px;
-            margin-top: 20px;
-            line-height: 50px;
-            text-align: center;
-            font-size: 16px;
-            color: #fff;
-            background: #447375;
-            border-radius: 5px;
-        }
-    }
-    .flag {
-        text-align: center;
-        padding: 55px 0;
-        li {
-            display: inline-block;
-            margin: 0 20px;
-            width: 65px;
-            border-radius: 4px;
-            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-            img {
-              display: block;
-              width: 100%;
-            }
+            width: 30px;
+            margin: auto;
+            animation: proRotate .8s infinite both;
+          } 
         }
     }
 }
@@ -264,7 +234,7 @@ export default {
             padding-top: 18px;
         }
         .tel{
-            color: #bd8c67;
+            color: #447375;
             padding-top: 5px;
             font-size: 20px;
         }
@@ -277,7 +247,7 @@ export default {
             width: 240px;
             height: 60px;
             border-radius: 30px;
-            background: #bd8c67;
+            background: #447375;
             line-height: 60px;
             color: #fff;
             margin: 20px auto 0;
