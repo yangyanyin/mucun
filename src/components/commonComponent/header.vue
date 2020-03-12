@@ -40,6 +40,10 @@ export default {
           url: "/"
         },
         {
+          name: "新加波移民",
+          url: "/emigrant  /"
+        },
+        {
           name: "护照精选",
           url: "/passport/"
         },

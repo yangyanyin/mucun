@@ -48,6 +48,7 @@ module.exports = {
 				{ from: /passport/, to: '/passport/index.html' },
 				{ from: /about/, to: '/about/index.html' },
 				{ from: /project/, to: '/project/index.html' },
+				{ from: /emigrant/, to: '/emigrant/index.html' },
 				{ from: /^\/[\s\S]*/, to: '/home/index.html' }
 			]
 		}
