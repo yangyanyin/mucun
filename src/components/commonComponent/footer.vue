@@ -4,19 +4,19 @@
       <div class="left">
         <div class="hotline">
           咨询热线: 
-          <strong>+65 6909 8015</strong>
+          <h3>+65 6909 8015</h3>
           <span><img src="../../assets/images/footer-iphone.png" /></span>
           <span><img src="../../assets/images/footer-email.png" /></span>
           <span><img src="../../assets/images/footer-wx.png" /></span>
         </div>
         <div class="nav clearfix">
-          <div class="menu">
+          <div class="menu left">
             <a href="">关于我们</a>
             <a href="">常见问题</a>
             <a href="">成功案例</a>
             <a href="">本站搜索</a>
           </div>
-          <div class="menu">
+          <div class="menu left">
             <a href="">欧盟护照</a>
             <a href="">英联邦护照</a>
             <a href="">新加坡移民</a>
@@ -29,7 +29,16 @@
           <p>新加坡滨海林荫大道8号滨海金融中心14楼</p>
         </div>
       </div>
-      <div class="right"></div>
+      <div class="right">
+        <div class="left">
+          <img src="../../assets/images/WeChat.png" />
+          <p>扫一扫关注公众号</p>
+        </div>
+        <div class="left">
+          <img src="../../assets/images/WeChat.png" />
+          <p>扫一扫添加微信</p>
+        </div>
+      </div>
     </div>
     <div class="copyright">© 2020 Singapore Global Passport Exchange Centre Pte Ltd. All Rights Reserved.</div>
     <!-- return top -->
@@ -77,7 +86,25 @@ export default {
 </script>
 <style lang="less" scoped>
 .footer {
-  background: #0f1f24;
+  height: 640px;
+  padding-top: 100px;
+  background:#0f1f24 url('../../assets/images/footer-bg.png') no-repeat top center;
+  background-size: 1440px;
+}
+.hotline {
+  color: #efd492;
+  h3 {
+    display: inline-block;
+    font-size: 18px;
+  }
+}
+.copyright {
+  height: 60px;
+  border-top: 1px solid #27363a;
+  line-height: 60px;
+  color: #fff;
+  opacity: .8;
+  text-align: center;
 }
 .return-top {
   position: fixed;
