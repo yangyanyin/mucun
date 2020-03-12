@@ -6,19 +6,19 @@
       </div>
       <div class="input-box right">
         <h3>免费咨询服务</h3>
-        <p><i>电话:</i><strong>123131</strong></p>
-        <p><i>邮箱:</i>这是邮箱</p>
-        <p><i>地址:</i>这是地址</p>
+        <p><i>电话:</i><strong>+65 6909 8015</strong></p>
+        <p><i>邮箱:</i>sgpec@spgec.sg</p>
+        <p><i>地址:</i>新加坡滨海林荫大道8号滨海金融中心14楼</p>
         <ul class="clearfix">
-          <li>
+          <li class="name">
             <input class="name" type="text" placeholder="您的称呼" v-model="userName" />
             <span v-if="nameError">请输入称呼！</span>
           </li>
-          <li>
+          <li class="tel">
             <input class="tel" type="tel" placeholder="您的电话" v-model="userTel" />
             <span v-if="telError">请输入电话！</span>
           </li>
-          <li>
+          <li class="email">
             <input class="email" type="email" placeholder="您的电邮" v-model="userEmail" />
             <span v-if="emailErroe">请输入正确的邮箱！</span>
           </li>
@@ -160,14 +160,25 @@ export default {
         li {
             display: block;
             height: 50px;
-            padding: 15px 10px 15px 40px;
+            padding: 15px 10px 15px 50px;
             margin-bottom: 20px;
-            background: #fafafa;
             input {
                 display: block;
                 height: 20px;
                 font-size: 16px;
                 background: #fafafa;
+            }
+            &.name {
+              background: #fafafa url('../../assets/images/user.png') no-repeat 10px 12px;
+              background-size: 25px;
+            }
+            &.tel {
+              background: #fafafa url('../../assets/images/tel.png') no-repeat 10px 12px;
+              background-size: 25px;
+            }
+            &.email {
+              background: #fafafa url('../../assets/images/email.png') no-repeat 10px 12px;
+              background-size: 25px;
             }
         }
         .submit {

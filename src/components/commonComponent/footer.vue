@@ -47,11 +47,11 @@ export default {
 
 .return-top {
   position: fixed;
-  right: 40px;
+  right: 70px;
+  bottom: 100px;
   width: 35px;
   border: 1px solid #bd8c67;
   padding: 6px;
-  bottom: 100px;
   border-radius: 5px;
   cursor: pointer;
   background: #bd8c67;
