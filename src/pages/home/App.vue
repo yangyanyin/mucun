@@ -259,7 +259,6 @@ export default {
     }).then(res => {
       if (res.data.code === 200) {
         this.bannerImg = res.data.data.banners[device()];
-        // this.isLoadingsTatus = true
         setTimeout(function() {
           animation(scroll);
         }, 10);
