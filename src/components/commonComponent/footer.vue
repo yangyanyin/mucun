@@ -9,7 +9,7 @@
           <span><img src="../../assets/images/footer-email.png" /></span>
           <span><img src="../../assets/images/footer-wx.png" /></span>
         </div>
-        <div class="nav clearfix">
+        <div class="footer-nav clearfix">
           <div class="menu left">
             <a href="">关于我们</a>
             <a href="">常见问题</a>
@@ -29,7 +29,7 @@
           <p>新加坡滨海林荫大道8号滨海金融中心14楼</p>
         </div>
       </div>
-      <div class="right">
+      <div class="right wechat">
         <div class="left">
           <img src="../../assets/images/WeChat.png" />
           <p>扫一扫关注公众号</p>
@@ -86,19 +86,67 @@ export default {
 </script>
 <style lang="less" scoped>
 .footer {
-  height: 640px;
   padding-top: 100px;
   background:#0f1f24 url('../../assets/images/footer-bg.png') no-repeat top center;
-  background-size: 1440px;
+  background-size: 1800px;
 }
 .hotline {
   color: #efd492;
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  border-bottom: 1px solid #3a474c;
+  padding-bottom: 40px;
   h3 {
     display: inline-block;
     font-size: 18px;
+    margin: 0 5px 0 10px;
+  }
+  span {
+    display: inline-block;
+    width: 24px;
+    margin-left: 30px;
+    &:last-child {
+      width: 28px;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
   }
 }
+.footer-nav {
+  padding: 45px 0 40px 0;
+  border-bottom: 1px solid #3a474c;
+  div {
+    margin-right: 90px;
+    line-height: 30px;
+  }
+  a {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+  }
+}
+.address {
+  color: #fff;
+  padding-top: 40px;
+  line-height: 28px;
+}
+.wechat {
+  div {
+    margin-left: 30px;
+  }
+  p {
+    color: #fff;
+    padding: 20px 0 0 25px;
+    background: url('../../assets/images/footer-wx2.png') no-repeat left 23px;
+    background-size: 18px;
+  }
+}
+
 .copyright {
+  margin-top: 50px;
   height: 60px;
   border-top: 1px solid #27363a;
   line-height: 60px;
