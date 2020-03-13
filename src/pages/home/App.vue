@@ -225,21 +225,25 @@ export default {
         {
           title: '小额自雇移民项目',
           text: '条件宽松，无语言要求，精英首选方案。',
+          url: '/emigrant/one',
           image: require('../../assets/images/project1.jpg')
         },
         {
           title: '股权投资移民项目',
           text: '条件宽松，无语言要求，精英首选方案。',
+          url: '/emigrant/tow',
           image: require('../../assets/images/project2.jpg')
         },
         {
           title: '家族办公室移民项目',
           text: '条件宽松，无语言要求，精英首选方案。',
+          url: '/emigrant/three',
           image: require('../../assets/images/project3.jpg')
         },
         {
           title: 'GIP投资移民项目',
           text: '条件宽松，无语言要求，精英首选方案。',
+          url: '/emigrant/four',
           image: require('../../assets/images/project4.jpg')
         }
       ]

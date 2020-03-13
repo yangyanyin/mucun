@@ -3,10 +3,17 @@
     <div class="pc-max-width clearfix">
       <div class="logo left">
         <a href="/">
-          <img src="../../assets/images/logo.png" />
+          <span class="img"><img src="../../assets/images/logo.png" /></span>
+          <span class="text"><img src="../../assets/images/logo-text.png" /></span>
         </a>
       </div>
-      <div class="contact right"></div>
+      <div class="hotline right">
+        咨询热线: 
+        <h3>+65 6909 8015</h3>
+        <span><img src="../../assets/images/footer-iphone.png" /></span>
+        <span><img src="../../assets/images/footer-email.png" /></span>
+        <span><img src="../../assets/images/footer-wx.png" /></span>
+      </div>
     </div>
     <div class="navs">
       <a
@@ -41,7 +48,7 @@ export default {
         },
         {
           name: "新加波移民",
-          url: "/emigrant  /"
+          url: "/emigrant/"
         },
         {
           name: "护照精选",
@@ -89,13 +96,50 @@ export default {
 }
 .logo {
   display: block;
-  padding-top: 15px;
-  width: 185px;
+  padding-top: 25px;
+  a {
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    span {
+      display: inline-block;
+      width: 230px;
+      &.text {
+        margin-left: 35px;
+      }
+    }
+  }
   img {
     display: block;
     width: 100%;
   }
 }
+
+.hotline {
+  color: #efd492;
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding-top: 50px;
+  h3 {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 5px 0 10px;
+  }
+  span {
+    display: inline-block;
+    width: 24px;
+    margin-left: 30px;
+    &:last-child {
+      width: 28px;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
 .navs {
   width: 100%;
   height: 60px;
@@ -103,7 +147,7 @@ export default {
   z-index: 9;
   left: 0;
   bottom: -60px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   text-align: center;
   a {
     position: relative;
@@ -115,9 +159,6 @@ export default {
     height: 60px;
     line-height: 60px;
     transition: 0.3s;
-    @media (max-width: 1000px) {
-      margin: 0 10px;
-    }
     i {
       position: absolute;
       width: 0;

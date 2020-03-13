@@ -2,7 +2,9 @@
   <div class="contact-us pc-max-width margin-t-80">
     <div class="content animation-show clearfix">
       <div class="map left">
-        地图
+        <div class="img">
+          <img src="../../assets/images/map-img.jpg" />
+        </div>
       </div>
       <div class="input-box right">
         <h3>免费咨询服务</h3>
@@ -39,7 +41,7 @@
         <span class="close">
           <img src="../../assets/images/close.png" @click="closeMessage" />
         </span>
-        <img src="../../assets/images/index/message-img.jpg" />
+        <img src="../../assets/images/message-img.jpg" />
         <p class="p1">感谢您使用我们的免费咨询服务</p>
         <p class="p1">我们稍后会联系您</p>
         <p class="p1">您也可以拨打</p>
@@ -127,6 +129,17 @@ export default {
 
 /** 联系我们 **/
 .contact-us{
+  .map {
+    width: 67%;
+    padding-right: 40px;
+    div {
+      overflow: hidden;
+    }
+    img {
+      display: block;
+      height: 520px;
+    }
+  }
     .input-box {
         width: 33%;
         padding: 35px 40px;
@@ -201,7 +214,6 @@ export default {
         }
     }
 }
-
 
 .message-success{
     position: fixed;
