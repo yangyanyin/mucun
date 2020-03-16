@@ -4,7 +4,6 @@
       <div class="logo left">
         <a href="/">
           <span class="img"><img src="../../assets/images/logo.png" /></span>
-          <span class="text"><img src="../../assets/images/logo-text.png" /></span>
         </a>
       </div>
       <div class="hotline right">
@@ -141,6 +140,9 @@ export default {
   flex-flow: row wrap;
   align-items: center;
   padding-top: 50px;
+  @media(max-width: 767px) {
+    display: none;
+  }
   h3 {
     display: inline-block;
     font-size: 18px;
@@ -289,7 +291,7 @@ export default {
     display: block;
     width: 20px;
     height: 3px;
-    background-color: #bd8c67;
+    background-color: #FFE19A;
     margin-bottom: 5px;
     -webkit-transform: scale(1, 0.5);
     transform: scale(1, 0.5);
@@ -387,7 +389,7 @@ export default {
   }
   a {
     display: block;
-    color: #bd8c67;
+    color: #FFE19A;
     text-align: center;
     font-size: 18px;
     padding: 15px 0;

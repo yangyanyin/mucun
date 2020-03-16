@@ -4,7 +4,8 @@ import App from './App.vue'
 
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
-
+import axios from 'axios'
+Vue.prototype.$http = axios
 import DetailsOne from './component/DetailsOne.vue'
 import DetailsTwo from './component/DetailsTwo.vue'
 import DetailsThree from './component/DetailsThree.vue'

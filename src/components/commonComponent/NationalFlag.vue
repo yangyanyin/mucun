@@ -31,18 +31,25 @@
 </template>
 <style scoped lang="less">
 .flag {
-    text-align: center;
-    padding: 55px 0;
-    li {
-        display: inline-block;
-        margin: 0 20px;
-        width: 65px;
-        border-radius: 4px;
-        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-        img {
-          display: block;
-          width: 100%;
-        }
+  text-align: center;
+  padding: 55px 0;
+  li {
+    display: inline-block;
+    margin: 0 20px;
+    width: 65px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    img {
+      display: block;
+      width: 100%;
     }
+  }
+  @media(max-width: 767px) {
+    padding: 30px 0;
+    li {
+      margin: 0 10px 10px;
+      width: 50px;
+    }
+  }
 }
 </style>
