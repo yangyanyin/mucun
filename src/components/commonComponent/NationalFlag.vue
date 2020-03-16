@@ -1,5 +1,5 @@
 <template>
-  <ul class="flag">
+  <ul class="flag animation-show">
     <li>
       <img src="../../assets/images/country1.png" />
     </li>

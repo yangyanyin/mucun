@@ -57,7 +57,7 @@ export default {
         },
         {
           name: "新加波移民",
-          url: "/emigrant/"
+          url: "/emigrant/one"
         },
         {
           name: "护照精选",

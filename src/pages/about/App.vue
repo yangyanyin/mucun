@@ -3,7 +3,7 @@
     <div class="about-banner"></div>
 
     <!-- 我们是谁 -->
-    <div class="we pc-max-width clearfix margin-t-80">
+    <div class="we pc-max-width clearfix margin-t-80 animation-show">
       <img class="left" src="../../assets/images/we-img.png" />
       <div class="right des">
         <h3>我们是谁</h3>
@@ -13,7 +13,7 @@
     </div>
 
     <!-- 专业 -->
-    <div class="profession margin-t-80">
+    <div class="profession margin-t-80 animation-show">
       <div class="pc-max-width content clearfix">
         <div class="left des">
           <h3>我们的专业在哪里？</h3>
@@ -27,7 +27,7 @@
     </div>
 
     <!-- 我们的团队 -->
-    <div class="pc-max-width team  margin-t-80">
+    <div class="pc-max-width team margin-t-80 animation-show">
       <div class="des">
         <h3>我们的团队</h3>
         <h4>给我们一次机会，还您一次满意的服务！</h4>
@@ -44,17 +44,33 @@
         <li><img src="../../assets/images/member8.png" alt=""></li>
       </ul>
     </div>
+
+    <!-- 理念 -->
+    <div class="idea margin-t-80 animation-show">
+      <div class="pc-max-width">
+        <div class="right des">
+          <h3>我们的服务理念</h3>
+          <h4>铸造品质，客户至上。</h4>
+          <p>新加坡全球护照交流中心-SGPEC，立足新加坡，放眼全球，秉承客户隐私至上的服务宗旨，专业铸造品质，服务打造诚信，SGPEC-您可信赖的专业服务。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 国旗 -->
+    <Flag />
   </Layout>
 </template>
 
 <script>
 import Layout from "../../components/layout.vue";
+import Flag from '../../components/commonComponent/NationalFlag'
 import "../../assets/less/custom.less";
 import { animation, windowScroll } from "../../assets/js/config.js";
 export default {
   name: "app",
   components: {
-    Layout
+    Layout,
+    Flag
   },
   mounted() {
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -135,6 +151,22 @@ export default {
         display: block;
         width: 100%;
       }
+    }
+  }
+}
+
+.idea {
+  height: 480px;
+  background: url('../../assets/images/idea-bg.png') no-repeat top center;
+  background-size: 1920px;
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  .right {
+    width: 50%;
+    padding-left: 60px;
+    >* { 
+      color: #fff;
     }
   }
 }
