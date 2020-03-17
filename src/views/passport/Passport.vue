@@ -18,7 +18,6 @@
                 </p>
               </div>
             </span>
-            
           </li>
           <li v-for="(lists, index) in passportList" :key="index">
             <div class="img">
@@ -40,10 +39,17 @@
       </div>
       <div class="visa-country">
         <ul class="clearfix" v-for="(obj, name, key) in allCountry" :key="key" ref="visa_country">
-          <li><img :src="obj.flag"> {{name}}</li>
-          <li v-for="(visa, name2, key2) in obj" :key="key2" v-if="name2 !== 'flag'" :index="filterResult.indexOf(visa)" :class="countryClass(visa)">
-            {{visa}}
+          <li>
+            <img :src="obj.flag" />
+            {{name}}
           </li>
+          <li
+            v-for="(visa, name2, key2) in obj"
+            :key="key2"
+            v-show="name2 !== 'flag'"
+            :index="filterResult.indexOf(visa)"
+            :class="countryClass(visa)"
+          >{{visa}}</li>
         </ul>
       </div>
     </div>
@@ -71,24 +77,26 @@ export default {
       filterCountry: {}
     };
   },
-  watch : {
-    'filterResult' () {
+  watch: {
+    filterResult() {
       setTimeout(() => {
-        let visaCountryList = document.getElementsByClassName('visa-country')[0].getElementsByTagName('ul')
+        let visaCountryList = document
+          .getElementsByClassName("visa-country")[0]
+          .getElementsByTagName("ul");
         for (let i = 0; i < visaCountryList.length; i++) {
-          let lis = visaCountryList[i].getElementsByTagName('li')
+          let lis = visaCountryList[i].getElementsByTagName("li");
           for (let s = 0; s < lis.length; s++) {
-            lis[s].parentNode.style.display = 'block'
+            lis[s].parentNode.style.display = "block";
             if (this.filterResult.length > 0) {
-              if (lis[s].getAttribute('index') >= 0) {
-                lis[s].parentNode.style.display = 'block'
+              if (lis[s].getAttribute("index") >= 0) {
+                lis[s].parentNode.style.display = "block";
               } else {
-                lis[s].parentNode.style.display = 'none'
+                lis[s].parentNode.style.display = "none";
               }
             }
           }
         }
-      }, 100)
+      }, 100);
     }
   },
   methods: {
@@ -113,55 +121,55 @@ export default {
       }
       return className;
     },
-    showAllFilter () {
-      this.filterResult = []
+    showAllFilter() {
+      this.filterResult = [];
     },
-    filterClick (type) {
+    filterClick(type) {
       for (let i = 0; i < this.filterResult.length; i++) {
-        if (this.filterResult[i] ===  type) {
-          this.filterResult.splice(i, 1)
-          return
+        if (this.filterResult[i] === type) {
+          this.filterResult.splice(i, 1);
+          return;
         }
       }
-      this.filterResult.push(type)
+      this.filterResult.push(type);
     },
-    getData () {
+    getData() {
       this.$http({
-      method: "get",
-      url: process.env.VUE_APP_API + "/v1/passportsInfo"
+        method: "get",
+        url: process.env.VUE_APP_API + "/v1/passportsInfo"
       }).then(res => {
         if (res.data.code === 200) {
           this.passportList = res.data.data;
           let all = res.data.data;
           for (let i = 0; i < all.length; i++) {
             for (let s = 0; s < all[i].visa_countries.length; s++) {
-              this.allCountry[all[i].visa_countries[s].name] = {}
-              this.filterType[all[i].visa_countries[s].type] = ''
+              this.allCountry[all[i].visa_countries[s].name] = {};
+              this.filterType[all[i].visa_countries[s].type] = "";
             }
           }
 
           for (let name in this.allCountry) {
             for (let i = 0; i < all.length; i++) {
               for (let s = 0; s < all[i].visa_countries.length; s++) {
-                this.allCountry[name][all[i].name] = ''
+                this.allCountry[name][all[i].name] = "";
               }
             }
           }
 
           for (let name in this.allCountry) {
             for (let a in this.allCountry[name])
-            for (let i = 0; i < all.length; i++) {
-              for (let s = 0; s < all[i].visa_countries.length; s++) {
-                if (name === all[i].visa_countries[s].name ) {
-                  this.allCountry[name].flag = all[i].visa_countries[s].flag
-                  if (all[i].name === a) {
-                    this.allCountry[name][a] = all[i].visa_countries[s].type
+              for (let i = 0; i < all.length; i++) {
+                for (let s = 0; s < all[i].visa_countries.length; s++) {
+                  if (name === all[i].visa_countries[s].name) {
+                    this.allCountry[name].flag = all[i].visa_countries[s].flag;
+                    if (all[i].name === a) {
+                      this.allCountry[name][a] = all[i].visa_countries[s].type;
+                    }
                   }
                 }
               }
-            }
           }
-      
+
           this.loadingSuccess = true;
           setTimeout(function() {
             let scroll =
@@ -174,7 +182,7 @@ export default {
     }
   },
   mounted() {
-    this.getData()
+    this.getData();
   }
 };
 </script>
@@ -255,7 +263,7 @@ export default {
           padding-right: 7px;
           margin-right: 13px;
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             right: 0;
             top: 8px;
@@ -284,7 +292,7 @@ export default {
         }
       }
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 2px;
         left: 2px;
@@ -292,29 +300,29 @@ export default {
         height: 8px;
         border-radius: 100%;
         background: #1b2f35;
-        transition: .3s;
+        transition: 0.3s;
       }
     }
     .on {
       position: relative;
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         left: 60px;
         top: 20px;
         width: 11px;
         height: 13px;
-        background: url('../../assets/images/filter.png') no-repeat;
+        background: url("../../assets/images/filter.png") no-repeat;
         background-size: 100%;
       }
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         right: 60px;
         top: 23px;
         width: 10px;
         height: 5px;
-        background: url('../../assets/images/triangle.png') no-repeat;
+        background: url("../../assets/images/triangle.png") no-repeat;
         background-size: 100%;
       }
     }
@@ -343,7 +351,7 @@ export default {
           border-radius: 2px;
           &.set {
             &::after {
-              content: '';
+              content: "";
               position: absolute;
               left: 3px;
               top: 1px;
@@ -405,5 +413,4 @@ export default {
     }
   }
 }
-
 </style>
