@@ -60,26 +60,12 @@ export default {
     font-size: 44px;
   }
 }
-.video {
-  width: 100%;
-  background: url("../../../assets/images/index/video-img.jpg") no-repeat top
-    center;
-  background-size: 100%;
-}
 @media (max-width: 767px) {
   .banner {
     padding-top: 60px;
     position: relative;
-    height: 332px;
+    // height: 332px;
     overflow: hidden;
-  }
-  .video {
-    position: absolute;
-    width: 700px;
-    top: 60px;
-    left: 50%;
-    background-size: 700px;
-    margin-left: -350px;
   }
 }
 </style>

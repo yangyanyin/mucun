@@ -142,7 +142,7 @@ select:focus,select:active,select:hover{
 // 自定义滚动条样式
 ::-webkit-scrollbar {
   width: 5px;
-  height: 10px;
+  height: 5px;
 } /* 这是针对缺省样式 (必须的) */
 ::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.2);
@@ -156,7 +156,7 @@ select:focus,select:active,select:hover{
 ::-webkit-scrollbar-button {
   background-color: #7c2929;
   height: 0;
-  width: 0px;
+  width: 0;
 } /* 滑轨两头的监听按钮颜色 */
 
 ::-webkit-scrollbar-corner {
@@ -198,32 +198,69 @@ select:focus,select:active,select:hover{
 
 .public-title{
   text-align: center;
+  width: 500px;
+  margin: auto;
   h3{
     position: relative;
     font-size: 32px;
     color: #2d4b4c;
-    padding-bottom: 28px;
   }
   p{
     color: #2d4b4c;
     font-size: 18px;
     text-transform: Uppercase;
   }
-  @media(max-width: 767px){
-    h3{
-      font-size: 22px;
-      padding-bottom: 24px;
-      &:after{
-        bottom: 12px;
-        width: 0;
-        height: 3px;
-        width: 0;
-        // margin-left: -30px;
+  span {
+    position: relative;
+    display: block;
+    padding: 20px 0;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 49%;
+      width: 210px;
+      height: 1px;
+      background: #2d4b4c;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 49%;
+      width: 210px;
+      height: 1px;
+      background: #2d4b4c;
+    }
+    i {
+      position: relative;
+      z-index: 9;
+      display: block;
+      width: 40px;
+      margin: auto;
+      background: #fff;
+      img {
+        display: block;
+        width: 100%;
       }
     }
-    p{
+  }
+  @media(max-width: 767px){
+    width: 100%;
+    h3 {
+      font-size: 22px;
+    }
+    p {
       font-size: 14px;
-      text-transform: Uppercase;
+    }
+    span {
+      padding: 10px 0;
+      i {
+        width: 30px;
+      }
+      &:before, &:after {
+        width: calc(50% - 30px);
+      }
     }
   }
 }

@@ -183,6 +183,7 @@ export default {
   background: #1b2f35;
   padding: 90px 0;
   width: 1915px;
+  margin: auto;
 }
 .passport-list {
   li {

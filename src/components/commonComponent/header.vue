@@ -3,22 +3,37 @@
     <div class="pc-max-width clearfix">
       <div class="logo left">
         <a href="/">
-          <img src="../../assets/images/logo.png" />
+          <span class="img"><img src="../../assets/images/logo.png" /></span>
         </a>
       </div>
-      <div class="contact right"></div>
+      <div class="hotline right">
+        咨询热线: 
+        <h3>+65 6909 8015</h3>
+        <span><img src="../../assets/images/footer-iphone.png" /></span>
+        <span>
+          <img src="../../assets/images/footer-email.png" />
+          <p>sgpec@spgec.sg</p>
+        </span>
+        <span class="wx"><img src="../../assets/images/footer-wx.png" />
+          <p><img src="../../assets/images/WeChat.png" /></p>
+        </span>
+      </div>
     </div>
-    <div class="navs">
-      <a
-        v-for="(navs, index) in navList"
-        :class="{on:currentUrl === navs.url || detailsUrl === navs.url}"
-        :href="navs.url"
-        :key="index"
-      >
-        {{navs.name}}
-        <i></i>
-      </a>
-    </div>
+    <ul class="navs">
+      <li v-for="(navs, index) in navList" :key="index">
+        <a class="m" :class="{on:currentUrl === navs.url || detailsUrl === navs.url}"
+          :href="navs.url">
+          {{navs.name}}
+          <i></i>
+        </a>
+        <div v-if="navs.down" class="project-select">
+          <a href="" v-for="(menu, key) in projectDown" :key="key">
+            <img :src="menu.passport" />
+            <span>{{menu.name}}</span>
+          </a>
+        </div>
+      </li>
+    </ul>
     <button class="wap-nav-botton" @click="showNav" :class="{on: showWapNav}">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -41,7 +56,7 @@ export default {
         },
         {
           name: "新加波移民",
-          url: "/emigrant  /"
+          url: "/emigrant/one"
         },
         {
           name: "护照精选",
@@ -49,7 +64,8 @@ export default {
         },
         {
           name: "护照项目",
-          url: "/project/"
+          url: "/project/",
+          down: true
         },
         {
           name: "移居狮城",
@@ -69,7 +85,8 @@ export default {
         }
       ],
       currentUrl: window.location.pathname,
-      detailsUrl: this.$route ? this.$route.path.substring(0, 9) : ""
+      detailsUrl: this.$route ? this.$route.path.substring(0, 9) : "",
+      projectDown: ''
     };
   },
   methods: {
@@ -77,7 +94,16 @@ export default {
       this.showWapNav = !this.showWapNav;
     }
   },
-  mounted() {}
+  mounted() {
+    this.$http({
+      method: "get",
+      url: process.env.VUE_APP_API + "/v1/countries "
+    }).then(res => {
+      if (res.data.code === 200) {
+        this.projectDown = res.data.data
+      }
+    });
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -89,13 +115,94 @@ export default {
 }
 .logo {
   display: block;
-  padding-top: 15px;
-  width: 185px;
+  padding-top: 25px;
+  a {
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    span {
+      display: inline-block;
+      width: 230px;
+      &.text {
+        margin-left: 35px;
+      }
+    }
+  }
   img {
     display: block;
     width: 100%;
   }
 }
+
+.hotline {
+  color: #efd492;
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding-top: 50px;
+  @media(max-width: 767px) {
+    display: none;
+  }
+  h3 {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 5px 0 10px;
+  }
+  span {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    margin-left: 30px;
+    &:last-child {
+      width: 28px;
+    }
+    
+    img {
+      display: block;
+      width: 100%;
+    }
+    &.wx { 
+      p {
+        right: -5px;
+        img {
+          width: 100px;
+        }
+        &:after {
+          content: '';
+          right: 5px;
+        }
+      }
+    }
+    p {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: -20px;
+      z-index: 999;
+      padding: 10px;
+      border-radius: 5px;
+      background: #fff;
+      color: #111;
+      &:after {
+        content: '';
+        position: absolute;
+        right: 21px;
+        top: -19px;
+        width: 0px;
+        height: 0px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #fff;
+      }
+    }
+    &:hover {
+      p {
+        display: block;
+      }
+    }
+  }
+}
+
 .navs {
   width: 100%;
   height: 60px;
@@ -103,48 +210,74 @@ export default {
   z-index: 9;
   left: 0;
   bottom: -60px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   text-align: center;
-  a {
-    position: relative;
+  li {
     display: inline-block;
-    font-size: 16px;
-    color: #ffffff;
-    text-align: center;
     margin: 0 23px;
-    height: 60px;
-    line-height: 60px;
-    transition: 0.3s;
-    @media (max-width: 1000px) {
-      margin: 0 10px;
-    }
-    i {
-      position: absolute;
-      width: 0;
-      bottom: 0;
-      left: 50%;
-      background: #fff;
-      height: 4px;
+    a.m {
+      position: relative;
       display: block;
-      transition: 0.25s;
-      -webkit-transition: 0.25s;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-    &:first-child {
-      margin-left: 0;
-    }
-    &:hover {
+      font-size: 16px;
+      color: #ffffff;
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      transition: 0.3s;
       i {
-        width: 95%;
-        left: 0;
+        position: absolute;
+        width: 0;
+        bottom: 0;
+        left: 50%;
+        background: #fff;
+        height: 4px;
+        display: block;
+        transition: 0.25s;
+        -webkit-transition: 0.25s;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:hover {
+        i {
+          width: 95%;
+          left: 0;
+        }
+      }
+      &.on {
+        i {
+          width: 95%;
+          left: 0;
+        }
       }
     }
-    &.on {
-      i {
-        width: 95%;
-        left: 0;
+    &:hover {
+      .project-select {
+        display: block;
+      }
+    }
+  }
+  .project-select {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 35px 0 25px;
+    background: rgba(0, 0, 0, 0.7);
+    transition: .4s;
+    a {
+      display: inline-block;
+      width: 120px;
+      text-align: center;
+      color: #FFE19A;
+      margin: 0 30px;
+      img {
+        display: block;
+        margin: 0 auto 20px;
+        width: 100px;
       }
     }
   }
@@ -158,7 +291,7 @@ export default {
     display: block;
     width: 20px;
     height: 3px;
-    background-color: #bd8c67;
+    background-color: #FFE19A;
     margin-bottom: 5px;
     -webkit-transform: scale(1, 0.5);
     transform: scale(1, 0.5);
@@ -252,11 +385,16 @@ export default {
         animation-delay: 1s;
         transform: translateY(30px);
       }
+      &:nth-child(8) {
+        animation: showNav7 0.9s forwards;
+        animation-delay: 1s;
+        transform: translateY(30px);
+      }
     }
   }
   a {
     display: block;
-    color: #bd8c67;
+    color: #FFE19A;
     text-align: center;
     font-size: 18px;
     padding: 15px 0;

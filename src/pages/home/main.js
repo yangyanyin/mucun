@@ -4,6 +4,8 @@ import router from './router.js'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import axios from 'axios'
 import VueLazyload from 'vue-lazyload'
+import { vueAccordion } from 'vue-accordion'
+Vue.component('vue-accordion', vueAccordion)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueLazyload)
 Vue.prototype.$http = axios

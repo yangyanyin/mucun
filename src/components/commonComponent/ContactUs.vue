@@ -2,23 +2,25 @@
   <div class="contact-us pc-max-width margin-t-80">
     <div class="content animation-show clearfix">
       <div class="map left">
-        地图
+        <div class="img">
+          <img src="../../assets/images/map-img.jpg" />
+        </div>
       </div>
       <div class="input-box right">
         <h3>免费咨询服务</h3>
-        <p><i>电话:</i><strong>123131</strong></p>
-        <p><i>邮箱:</i>这是邮箱</p>
-        <p><i>地址:</i>这是地址</p>
+        <p><i>电话:</i><strong>+65 6909 8015</strong></p>
+        <p><i>邮箱:</i>sgpec@spgec.sg</p>
+        <p><i>地址:</i>新加坡滨海林荫大道8号滨海金融中心14楼</p>
         <ul class="clearfix">
-          <li>
+          <li class="name">
             <input class="name" type="text" placeholder="您的称呼" v-model="userName" />
             <span v-if="nameError">请输入称呼！</span>
           </li>
-          <li>
+          <li class="tel">
             <input class="tel" type="tel" placeholder="您的电话" v-model="userTel" />
             <span v-if="telError">请输入电话！</span>
           </li>
-          <li>
+          <li class="email">
             <input class="email" type="email" placeholder="您的电邮" v-model="userEmail" />
             <span v-if="emailErroe">请输入正确的邮箱！</span>
           </li>
@@ -29,35 +31,9 @@
         </a>
       </div>
     </div>
-    <ul class="flag">
-        <li>
-          <img src="../../assets/images/country1.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country2.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country3.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country4.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country5.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country6.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country7.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country8.png" />
-        </li>
-        <li>
-          <img src="../../assets/images/country9.png" />
-        </li>
-    </ul>
+
+    <!-- 国旗 -->
+    <Flag />
 
      <!--咨询完成弹窗 -->
     <div class="message-success" :class="{on:messageSuccess}" v-if="messageSuccess">
@@ -65,7 +41,7 @@
         <span class="close">
           <img src="../../assets/images/close.png" @click="closeMessage" />
         </span>
-        <img src="../../assets/images/index/message-img.jpg" />
+        <img src="../../assets/images/message-img.jpg" />
         <p class="p1">感谢您使用我们的免费咨询服务</p>
         <p class="p1">我们稍后会联系您</p>
         <p class="p1">您也可以拨打</p>
@@ -77,6 +53,7 @@
   </div>
 </template>
 <script>
+import Flag from '../commonComponent/NationalFlag'
 export default {
   data () {
     return {
@@ -89,6 +66,9 @@ export default {
       messageSuccess: false,
       messageLoading: false
     }
+  },
+  components: {
+    Flag
   },
   methods: {
     submitUserInfo() {
@@ -149,6 +129,17 @@ export default {
 
 /** 联系我们 **/
 .contact-us{
+  .map {
+    width: 67%;
+    padding-right: 40px;
+    div {
+      overflow: hidden;
+    }
+    img {
+      display: block;
+      height: 520px;
+    }
+  }
     .input-box {
         width: 33%;
         padding: 35px 40px;
@@ -182,45 +173,81 @@ export default {
         li {
             display: block;
             height: 50px;
-            padding: 15px 10px 15px 40px;
+            padding: 15px 10px 15px 50px;
             margin-bottom: 20px;
-            background: #fafafa;
             input {
                 display: block;
                 height: 20px;
                 font-size: 16px;
                 background: #fafafa;
             }
-        }
-        .submit {
-            display: block;
-            height: 50px;
-            margin-top: 20px;
-            line-height: 50px;
-            text-align: center;
-            font-size: 16px;
-            color: #fff;
-            background: #447375;
-            border-radius: 5px;
-        }
-    }
-    .flag {
-        text-align: center;
-        padding: 55px 0;
-        li {
-            display: inline-block;
-            margin: 0 20px;
-            width: 65px;
-            border-radius: 4px;
-            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-            img {
+            span {
               display: block;
-              width: 100%;
+              padding-top: 16px;
+              font-size: 12px;
+              color: #447375;
+              opacity: .8;
+            }
+            &.name {
+              background: #fafafa url('../../assets/images/user.png') no-repeat 10px 12px;
+              background-size: 25px;
+            }
+            &.tel {
+              background: #fafafa url('../../assets/images/tel.png') no-repeat 10px 12px;
+              background-size: 25px;
+            }
+            &.email {
+              background: #fafafa url('../../assets/images/email.png') no-repeat 10px 12px;
+              background-size: 25px;
             }
         }
+        .submit {
+          display: block;
+          height: 50px;
+          margin-top: 20px;
+          line-height: 30px;
+          text-align: center;
+          font-size: 16px;
+          padding: 10px 0;
+          color: #fff;
+          background: #447375;
+          border-radius: 5px;
+          img{
+            display: block;
+            width: 30px;
+            margin: auto;
+            animation: proRotate .8s infinite both;
+          } 
+        }
+    }
+    @media(max-width: 767px) {
+      .map {
+        float: none;
+        width: 100%;
+        padding: 0;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .input-box {
+        float: none;
+        width: 100%;
+        margin-top: 15px;
+        padding: 15px 20px;
+        h3 {
+          font-size: 22px;
+          padding-bottom: 15px;
+          &::after {
+            height: 20px;
+          }
+        }
+        ul {
+          padding-top: 17px;
+        }
+      }
     }
 }
-
 
 .message-success{
     position: fixed;
@@ -264,7 +291,7 @@ export default {
             padding-top: 18px;
         }
         .tel{
-            color: #bd8c67;
+            color: #447375;
             padding-top: 5px;
             font-size: 20px;
         }
@@ -277,7 +304,7 @@ export default {
             width: 240px;
             height: 60px;
             border-radius: 30px;
-            background: #bd8c67;
+            background: #447375;
             line-height: 60px;
             color: #fff;
             margin: 20px auto 0;
