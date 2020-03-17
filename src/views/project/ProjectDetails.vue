@@ -3,7 +3,7 @@
 		<loadingPage v-if="!loadingSuccess" />
 		<template v-else>
 			<div class="banner">
-				<img v-lazy="{src: bannerImgUrl, loading: require('../../../assets/images/country-loading.png'), error: require('../../../assets/images/country-loading.png')}" />
+				<img v-lazy="{src: bannerImgUrl, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
 				<strong class="t">{{bannerData.title}}</strong>
 				<p class="d">{{bannerData.description}}</p>
 			</div>
@@ -80,9 +80,9 @@
 	</Layout>
 </template>
 <script>
-	import Layout from '../../../components/layout.vue'
-	import { animation, windowScroll, device } from '../../../assets/js/config.js'
-	import loadingPage from '../../../components/commonComponent/loadingPage.vue'
+	import Layout from '../../components/layout.vue'
+	import { animation, windowScroll, device } from '../../assets/js/config.js'
+	import loadingPage from '../../components/commonComponent/loadingPage.vue'
 	export default {
 		components: {
 			Layout,
@@ -114,9 +114,8 @@
 	   			} else if (index === 2) {
 	   				Advantage = document.getElementsByClassName('obtain')[0].offsetTop - 170
 	   			}
-
 	   			document.body.scrollTop = Advantage
-				document.documentElement.scrollTop = Advantage
+					document.documentElement.scrollTop = Advantage
 	   			this.defaultNav = index
 	   		}
 	   	},
@@ -275,7 +274,7 @@
 			padding-left: 55px;
 			margin-top: 20px;
 			font-size: 30px;
-			background: url('../../../assets/images/footer-tel.png') no-repeat left center;
+			background: url('../../assets/images/footer-tel.png') no-repeat left center;
 			background-size: 36px;
 		}
 		@media(max-width: 767px){
@@ -343,7 +342,7 @@
 	.for-people{
 		padding: 45px 0;
 		margin-top: 45px;
-		background: url('../../../assets/images/country/details/details-bg.png') no-repeat top center;
+		background: url('../../assets/images/country/details/details-bg.png') no-repeat top center;
 		background-size: 1920px;
 		.country-title{
 			color: #bd8c67;
@@ -430,16 +429,16 @@
 			margin-bottom: 50px;
 		}
 		.clearfix{
-			background: url('../../../assets/images/country/details/compared-PK.png') no-repeat center center;
+			background: url('../../assets/images/country/details/compared-PK.png') no-repeat center center;
 			background-size: 113px;
 		}
 		ul.right {
 			text-align: right;
 			li{
 				padding-right: 45px;
-				background: url('../../../assets/images/country/details/compared-bad-icon.png') no-repeat right center;
+				background: url('../../assets/images/country/details/compared-bad-icon.png') no-repeat right center;
 				&.t{
-					background: url('../../../assets/images/country/details/compared-bad-title-icon.png') no-repeat right center;
+					background: url('../../assets/images/country/details/compared-bad-title-icon.png') no-repeat right center;
 
 				}
 			}
@@ -447,9 +446,9 @@
 		ul.left{
 			li{
 				padding-left: 45px;
-				background: url('../../../assets/images/country/details/compared-icon.png') no-repeat left center;
+				background: url('../../assets/images/country/details/compared-icon.png') no-repeat left center;
 				&.t{
-					background: url('../../../assets/images/country/details/compared-title-icon.png') no-repeat left center;
+					background: url('../../assets/images/country/details/compared-title-icon.png') no-repeat left center;
 
 				}
 			}
@@ -480,7 +479,7 @@
 					width: 60px;
 					height: 60px;
 					margin-top: -30px;
-					background: url('../../../assets/images/country/details/compared-PK.png') no-repeat center center;
+					background: url('../../assets/images/country/details/compared-PK.png') no-repeat center center;
 					background-size: 60px;
 				}
 			}
@@ -518,7 +517,7 @@
 					display: block;
 					width: 70px;
 					height: 70px;
-					background: url('../../../assets/images/country/details/polygon-icon.png') no-repeat 100%;
+					background: url('../../assets/images/country/details/polygon-icon.png') no-repeat 100%;
 					margin: auto;
 					color: #fff;
 					line-height: 62px;

@@ -3,10 +3,6 @@
     	<loadingPage v-if="!loadingSuccess" />
     	<template v-else>
     		<Banner :bannerImgList="bannerData" />
-    	<!-- 	<div class="banner">
-	    		<img class="web-img" src="../../../assets/images/country/country-banner.png" />
-	    		<img class="wap-img" src="../../../assets/images/country/country-banner-wap.png" />
-	    	</div> -->
 	    	<div class="country-main">
 		        <div class="pc-max-width">
 		        	<div class="country-nav">
@@ -17,41 +13,41 @@
 		        	<div class="country-list">
 		        		<div class="content clearfix brick-item animation-show" v-for="(countrs, index) in countryList" :key="index">
 		        			<div class="left img">
-		        				<a :href="'/project/details/'+ countrs.country_id">
-			        				<img v-lazy="{src: countrs.img, loading: require('../../../assets/images/country-loading.png'), error: require('../../../assets/images/country-loading.png')}" />
+		        				<router-link :to="'/project/details/'+ countrs.country_id">
+			        				<img v-lazy="{src: countrs.img, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
 			        				<div class="more">
                                         <span>{{countrs.en_name}}</span>
                                         <i>{{countrs.visa_free_number}}</i>
                                         <p>visa-free sccre</p>
                                     </div>
-		        				</a>
+		        				</router-link>
 			        		</div>
 			        		<div class="right info">
 			        			<h3 class="name"><img :src="countrs.flag" />{{countrs.name}}护照</h3>
 			        			<ul class="clearfix">
 			        				<li>
-			        					<img src="../../../assets/images/country/country-list-icon1.png" />
+			        					<img src="../../assets/images/country/country-list-icon1.png" />
 			        					<span>居住要求</span>
 			        					<h3>{{countrs.require}}</h3>
 			        				</li>
 			        				<li>
-			        					<img src="../../../assets/images/country/country-list-icon2.png" />
+			        					<img src="../../assets/images/country/country-list-icon2.png" />
 			        					<span>免签国家</span>
 			        					<h3>{{countrs.visa_free_number}}</h3>
 			        				</li>
 			        				<li>
-			        					<img src="../../../assets/images/country/country-list-icon3.png" />
+			        					<img src="../../assets/images/country/country-list-icon3.png" />
 			        					<span>移民周期</span>
 			        					<h3>{{countrs.migrate_cycle}}</h3>
 			        				</li>
 			        				<li>
-			        					<img src="../../../assets/images/country/country-list-icon4.png" />
+			        					<img src="../../assets/images/country/country-list-icon4.png" />
 			        					<span>证件类型</span>
 			        					<h3>{{countrs.ID_type}}</h3>
 			        				</li>
 			        			</ul>
 			        			<ol v-if="countrs.tags.length > 0">
-			        				<li v-for="(tags, index) in countrs.tags">{{tags}}</li>
+			        				<li v-for="(tags, index) in countrs.tags" :key="index">{{tags}}</li>
 			        			</ol>
 			        			<a :href="'/project/details/'+ countrs.country_id">查看详情</a>
 			        		</div>
@@ -64,10 +60,10 @@
 </template>
 
 <script>
-import Layout from '../../../components/layout.vue'
-import { animation, windowScroll } from '../../../assets/js/config.js'
-import loadingPage from '../../../components/commonComponent/loadingPage.vue'
-import Banner from '../../../components/commonComponent/banner.vue'
+import Layout from '../../components/layout.vue'
+import { animation, windowScroll } from '../../assets/js/config.js'
+import loadingPage from '../../components/commonComponent/loadingPage.vue'
+import Banner from '../../components/commonComponent/banner.vue'
 export default {
     name: 'app',
     components: {
@@ -82,12 +78,12 @@ export default {
     		countryList: '',
     		loadingSuccess: false,
     		bannerImg: [
-    			require('../../../assets/images/country/list-banner1.jpg'),
-    			require('../../../assets/images/country/list-banner2.jpg'),
-    			require('../../../assets/images/country/list-banner3.jpg'),
-    			require('../../../assets/images/country/list-banner4.jpg'),
-    			require('../../../assets/images/country/list-banner5.jpg'),
-    			require('../../../assets/images/country/list-banner6.jpg')
+    			require('../../assets/images/country/list-banner1.jpg'),
+    			require('../../assets/images/country/list-banner2.jpg'),
+    			require('../../assets/images/country/list-banner3.jpg'),
+    			require('../../assets/images/country/list-banner4.jpg'),
+    			require('../../assets/images/country/list-banner5.jpg'),
+    			require('../../assets/images/country/list-banner6.jpg')
     		],
     		bannerData: []
     	}
@@ -333,7 +329,7 @@ export default {
 				    	width: 92px;
 				    	height: 28px;
 				    	margin: 0 10px;
-				    	background: url('../../../assets/images/country/claim-bg.png') no-repeat;
+				    	background: url('../../assets/images/country/claim-bg.png') no-repeat;
 				    	background-size: 100%;
 				    	line-height: 28px;
 				    	padding-left: 15px;

@@ -21,16 +21,16 @@
     </div>
     <ul class="navs">
       <li v-for="(navs, index) in navList" :key="index">
-        <a class="m" :class="{on:currentUrl === navs.url || detailsUrl === navs.url}"
-          :href="navs.url">
+        <router-link class="m" :class="{on:currentUrl === navs.url || detailsUrl === navs.url}"
+          :to="navs.url">
           {{navs.name}}
           <i></i>
-        </a>
+        </router-link>
         <div v-if="navs.down" class="project-select">
-          <a href="" v-for="(menu, key) in projectDown" :key="key">
-            <img :src="menu.passport" />
+          <router-link :to="'/project/details/' + menu.country_id" v-for="(menu, key) in projectDown" :key="key">
+            <img :src="menu.passport" /> 
             <span>{{menu.name}}</span>
-          </a>
+          </router-link>
         </div>
       </li>
     </ul>
