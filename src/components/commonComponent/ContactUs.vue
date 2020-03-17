@@ -181,6 +181,13 @@ export default {
                 font-size: 16px;
                 background: #fafafa;
             }
+            span {
+              display: block;
+              padding-top: 16px;
+              font-size: 12px;
+              color: #447375;
+              opacity: .8;
+            }
             &.name {
               background: #fafafa url('../../assets/images/user.png') no-repeat 10px 12px;
               background-size: 25px;

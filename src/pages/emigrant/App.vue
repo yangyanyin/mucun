@@ -167,7 +167,7 @@ export default {
       }
     }
     .icon-box {
-      padding: 25px 0 40px 0;
+      padding: 25px 0 30px 0;
       li {
         padding: 0 5px;
         img {
@@ -176,6 +176,10 @@ export default {
         span {
           font-size: 12px;
           padding: 0;
+          line-height: 22px;
+          i {
+            opacity: 0;
+          }
         }
       }
     }

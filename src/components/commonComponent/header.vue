@@ -385,6 +385,11 @@ export default {
         animation-delay: 1s;
         transform: translateY(30px);
       }
+      &:nth-child(8) {
+        animation: showNav7 0.9s forwards;
+        animation-delay: 1s;
+        transform: translateY(30px);
+      }
     }
   }
   a {

@@ -29,15 +29,15 @@
         </li>
         <li>
           <img src="../../../assets/images/emigrant-icon18.png" />
-          <span>服务集中化</span>
+          <span>服务集中化<br /> <i>T</i></span>
         </li>
         <li>
           <img src="../../../assets/images/emigrant-icon19.png" />
-          <span>后代的规划</span>
+          <span>后代的规划<br /> <i>T</i></span>
         </li>
         <li>
           <img src="../../../assets/images/emigrant-icon20.png" />
-          <span>潜在回报率高 </span>
+          <span>潜在回报率高<br /> <i>T</i></span>
         </li>
         <li>
           <img src="../../../assets/images/emigrant-icon21.png" />
@@ -79,6 +79,13 @@
   }
   &.t3 {
     background: url('../../../assets/images/emigrant-img13.jpg') no-repeat top center;
+    @media (max-width: 767px) {
+      background: none;
+    }
+  }
+  @media (max-width: 767px) {
+    height: 130px;
+    background-size: auto 130px !important;
   }
 }
 .des {
@@ -95,6 +102,17 @@
     color: #447375;
     line-height: 26px;
     font-size: 16px;
+  }
+  @media (max-width: 767px) {
+    width: auto;
+    padding: 30px 0 60px;
+    h3 {
+      padding-bottom: 20px;
+    }
+    p {
+      line-break: 22px;
+      font-size: 14px;
+    }
   }
 }
 .plan {
@@ -141,6 +159,33 @@
         color: #447375;
         margin-top: 20px;
         line-height: 24px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    background: url('../../../assets/images/emigrant-img13.jpg') no-repeat top center;
+    background-size: auto 600px;
+    margin: 0 -10px;
+    padding: 15px;
+    .list {
+      position: static;
+      width: 100%;
+      transform: translate(0);
+      >div {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+    .title {
+      height: auto;
+      padding: 35px 0 25px;
+      h3 {
+        position: static;
+        transform: translate(0);
       }
     }
   }

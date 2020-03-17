@@ -64,7 +64,7 @@ export default {
   .banner {
     padding-top: 60px;
     position: relative;
-    height: 332px;
+    // height: 332px;
     overflow: hidden;
   }
 }
