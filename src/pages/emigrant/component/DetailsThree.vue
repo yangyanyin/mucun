@@ -83,6 +83,10 @@
   &.t2 {
     background: url('../../../assets/images/emigrant-img10.jpg') no-repeat top center;
   }
+  @media (max-width: 767px) {
+    height: 130px;
+    background-size: auto 130px !important;
+  }
 }
 .des {
   padding: 50px 0 110px;
@@ -104,12 +108,30 @@
     font-size: 16px;
     line-height: 28px;
   }
+  @media (max-width: 767px) {
+    padding: 25px 0 50px;
+    width: auto;
+    p {
+      line-height: 18px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
 }
 
 .con {
-  height: 500px;
-  background: url('../../../assets/images/emigrant-img11.jpg') no-repeat left center;
-  padding-left: 50%;
+  @media(min-width: 767px) {
+    height: 500px;
+    background: url('../../../assets/images/emigrant-img11.jpg') no-repeat left center;
+    padding-left: 50%;
+  }
   .d {
     height: 500px;
     padding: 0 50px;
@@ -135,6 +157,29 @@
   }
   &.obtain {
     padding: 0 50% 0 0;
+  }
+  @media (max-width:767px) {
+    border-top: 1px solid #E4E4E4;
+    padding: 0;
+    .d {
+      height: auto;
+      padding: 0;
+      h3 {
+        font-size: 18px;
+        padding: 20px 0 5px 0;
+      }
+      p {
+        padding: 5px 0;
+        font-size: 14px;
+        line-height: 22px;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    &.obtain {
+      padding: 0;
+    }
   }
 }
 </style>

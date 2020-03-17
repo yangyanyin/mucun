@@ -106,5 +106,22 @@
       }
     }
   }
+  @media (max-width: 767px) {
+    .left,.right {
+      float: none;
+      width: 100%;
+    }
+    .des {
+      position: static;
+      padding: 20px 0;
+      transform: translate(0);
+      h3 {
+        text-align: center;
+        font-size: 18px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
 }
 </style>

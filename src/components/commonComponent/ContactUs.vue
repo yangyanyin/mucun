@@ -213,6 +213,33 @@ export default {
           } 
         }
     }
+    @media(max-width: 767px) {
+      .map {
+        float: none;
+        width: 100%;
+        padding: 0;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .input-box {
+        float: none;
+        width: 100%;
+        margin-top: 15px;
+        padding: 15px 20px;
+        h3 {
+          font-size: 22px;
+          padding-bottom: 15px;
+          &::after {
+            height: 20px;
+          }
+        }
+        ul {
+          padding-top: 17px;
+        }
+      }
+    }
 }
 
 .message-success{

@@ -43,14 +43,15 @@ export default {
     background: url('../../assets/images/emigrant-banner.jpg') no-repeat top center;
   }
   .emigrant {
-    background: #f7f7f7;
+    @media (min-width: 767px) {
+      background: #f7f7f7;
+    }
     .menu {
       height: 80px;
       margin: -40px 0 20px 0;
       background: #fff;
       border-radius: 5px;
       box-shadow: 0 3px 3px 0 #ababab;
-      
       a {
         display: inline-block;
         width: 25%;
@@ -74,6 +75,33 @@ export default {
             color: #447375;
             padding: 28px 0;
             border-bottom: 4px  solid #447375;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        white-space: nowrap;
+        height: 70px;
+        overflow-x: auto;
+        padding: 0 10px;
+        &::-webkit-scrollbar {
+          width: 5px;
+          height: 0px;
+        } 
+        a {
+          line-height: inherit;
+          width: auto;
+          padding: 25px 10px;
+          i {
+            padding: 12px 0;
+            font-size: 14px;
+          }
+          &.router-link-active {
+            i {
+              color: #447375;
+              padding: 21px 0;
+              font-weight: bold;
+              border-bottom: 4px  solid #447375;
+            }
           }
         }
       }
@@ -128,6 +156,36 @@ export default {
     color: #B9B9B9;
     line-height: 26px;
     padding-bottom: 70px;
+  }
+  @media (max-width: 767px) {
+    .title {
+      h3 {
+        font-size: 18px;
+      }
+      i {
+        font-size: 14px;
+      }
+    }
+    .icon-box {
+      padding: 25px 0 40px 0;
+      li {
+        padding: 0 5px;
+        img {
+          width: 60px;
+        }
+        span {
+          font-size: 12px;
+          padding: 0;
+        }
+      }
+    }
+    .m-top30 {
+      margin-top: 15px;
+    }
+    .note {
+      font-size: 12px;
+      padding-bottom: 10px;
+    }
   }
 }
 </style>

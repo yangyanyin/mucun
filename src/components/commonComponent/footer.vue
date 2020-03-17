@@ -89,6 +89,9 @@ export default {
   padding-top: 100px;
   background:#0f1f24 url('../../assets/images/footer-bg.png') no-repeat top center;
   background-size: 1800px;
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
 }
 .hotline {
   color: #efd492;
@@ -114,6 +117,15 @@ export default {
       width: 100%;
     }
   }
+  @media (max-width: 767px) {
+    padding-bottom: 20px;
+    h3 {
+      font-size: 16px;
+    }
+    span {
+      margin-left: 20px;
+    }
+  }
 }
 .footer-nav {
   padding: 45px 0 40px 0;
@@ -127,11 +139,34 @@ export default {
     color: #fff;
     font-size: 16px;
   }
+  @media (max-width: 767px) {
+    padding: 0;
+    div {
+      margin: 0;
+      float: none;
+      &:last-child{
+        a:last-child {
+          border: none;
+        }
+      }
+    }
+    a {
+      display: block;
+      font-size: 14px;
+      padding: 6px 0;
+      border-bottom: 1px solid #3a474c;
+    }
+  }
 }
 .address {
   color: #fff;
   padding-top: 40px;
   line-height: 28px;
+  @media (max-width: 767px) {
+    text-align: center;
+    line-height: 24px;
+    padding-top: 20px;
+  }
 }
 .wechat {
   div {
@@ -143,6 +178,17 @@ export default {
     background: url('../../assets/images/footer-wx2.png') no-repeat left 23px;
     background-size: 18px;
   }
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    div {
+      display: inline-block;
+      margin: 0;
+      float: none;
+      padding: 0 10px;
+    }
+  }
 }
 
 .copyright {
@@ -153,6 +199,12 @@ export default {
   color: #fff;
   opacity: .8;
   text-align: center;
+  @media (max-width: 767px) {
+    line-height: 20px;
+    text-align: center;
+    padding-top: 7px;
+    margin-top: 25px;
+  }
 }
 .return-top {
   position: fixed;

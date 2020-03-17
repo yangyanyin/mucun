@@ -88,6 +88,10 @@
   &.t3 {
     background: url('../../../assets/images/emigrant-img8.jpg') no-repeat top center;
   }
+  @media (max-width: 767px) {
+    height: 130px;
+    background-size: auto 130px !important;
+  }
 }
 p {
   font-size: 17px;
@@ -95,5 +99,10 @@ p {
   color: #447375;
   line-height: 30px;
   padding: 60px 250px 100px;
+  @media (max-width: 767px) {
+    padding: 20px 0 50px;
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 </style>
