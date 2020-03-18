@@ -111,8 +111,12 @@ export default {
         this.projectDown = res.data.data
       }
     });
+    
+
     window.addEventListener('scroll', () => {
-      this.scrollPx = document.documentElement.scrollTop || document.body.scrollTop
+      if (this.isFixed) {
+        this.scrollPx = document.documentElement.scrollTop || document.body.scrollTop
+      }
     })
   }
 };
