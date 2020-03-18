@@ -184,7 +184,7 @@
     </div>
 
     <!-- 成功案例 -->
-    <div class="success-case pc-max-width margin-t-80">
+    <div class="success-case margin-t-80">
       <div class="public-title animation-show">
         <h3>成功案例</h3>
         <span>
@@ -194,7 +194,14 @@
         </span>
         <p>Successful Cases</p>
       </div>
-      <div class="content clearfix"></div>
+      <div class=" pc-max-width content clearfix">
+        <router-link class="left" to="1" v-for="(news, index) in 4" :key="index">
+          <img src="../../assets/images/new-img.png" />
+          <h3>这里是标题</h3>
+          <p>这里是描述描述描述描述描述描述描述描述描述描述描述...</p>
+          <span>了解详情</span>
+        </router-link>
+      </div>
     </div>
 
     <!-- 我们的优势 -->
