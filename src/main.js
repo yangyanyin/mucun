@@ -5,10 +5,14 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import axios from 'axios'
 import VueLazyload from 'vue-lazyload'
 import { vueAccordion } from 'vue-accordion'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 Vue.component('vue-accordion', vueAccordion)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueLazyload)
 Vue.prototype.$http = axios
+
+Vue.use(ElementUI);
 
 Vue.use(VueLazyload, {
 	preLoad: 1.3,

@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer" :class="{'is-fixed': isFixed}">
     <div class="pc-max-width clearfix">
       <div class="left">
         <div class="hotline">
@@ -51,7 +51,8 @@
 export default {
   data() {
     return {
-      showReturnTop: false
+      showReturnTop: false,
+      isFixed: false
     };
   },
   methods: {
@@ -70,8 +71,7 @@ export default {
       }, 10);
     },
     scrollTop() {
-      let scroll =
-        document.documentElement.scrollTop || document.body.scrollTop;
+      let scroll = document.documentElement.scrollTop || document.body.scrollTop;
       if (scroll > 500) {
         this.showReturnTop = true;
       } else {
@@ -80,6 +80,11 @@ export default {
     }
   },
   mounted() {
+    if (this.$route.name === 'Passport') {
+      this.isFixed = true
+    } else {
+      this.isFixed = false
+    }
     window.addEventListener("scroll", this.scrollTop);
   }
 };
@@ -91,6 +96,11 @@ export default {
   background-size: 1800px;
   @media (max-width: 767px) {
     padding-top: 30px;
+  }
+  @media (min-width: 767px) {
+    &.is-fixed {
+      display: none;
+    }
   }
 }
 .hotline {

@@ -46,9 +46,12 @@
   }
   @media(max-width: 767px) {
     padding: 30px 0;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     li {
-      margin: 0 10px 10px;
-      width: 50px;
+      margin: 0;
+      width: 9%;
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" :class="{'is-fixed': isFixed}" :style="{'top': '-' + scrollPx + 'px'}">
     <div class="pc-max-width clearfix">
       <div class="logo left">
         <a href="/">
@@ -40,7 +40,7 @@
       <span class="icon-bar"></span>
     </button>
     <div class="wap-nav-list" :class="{on: showWapNav}">
-      <a v-for="(navs, index) in navList" :href="navs.url" :key="index">{{navs.name}}</a>
+      <router-link v-for="(navs, index) in navList" :to="navs.url" :key="index">{{navs.name}}</router-link>
     </div>
   </div>
 </template>
@@ -86,7 +86,9 @@ export default {
       ],
       currentUrl: window.location.pathname,
       detailsUrl: this.$route ? this.$route.path.substring(0, 9) : "",
-      projectDown: ''
+      projectDown: '',
+      isFixed: false,
+      scrollPx: 0
     };
   },
   methods: {
@@ -95,6 +97,12 @@ export default {
     }
   },
   mounted() {
+    if (this.$route.name === 'Passport') {
+      this.isFixed = true
+    } else {
+      this.isFixed = false
+      this.scrollPx = 0
+    }
     this.$http({
       method: "get",
       url: process.env.VUE_APP_API + "/v1/countries "
@@ -103,6 +111,9 @@ export default {
         this.projectDown = res.data.data
       }
     });
+    window.addEventListener('scroll', () => {
+      this.scrollPx = document.documentElement.scrollTop || document.body.scrollTop
+    })
   }
 };
 </script>
@@ -112,6 +123,13 @@ export default {
   width: 100%;
   height: 120px;
   background: #0f1f24;
+  @media(min-width: 767px) {
+    &.is-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  }
 }
 .logo {
   display: block;

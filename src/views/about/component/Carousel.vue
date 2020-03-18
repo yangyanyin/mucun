@@ -1,5 +1,5 @@
 <template>
-  <el-carousel :interval="40000" type="card" height="390px">
+  <el-carousel :interval="4000" type="card" height="390px">
     <el-carousel-item v-for="item in evaluation" :key="item">
       <img class="avatar" src="../../../assets/images/about-avatar.png" />
       <p>{{item.text}}</p>

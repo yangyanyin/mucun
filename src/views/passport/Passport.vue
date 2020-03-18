@@ -2,55 +2,64 @@
   <Layout>
     <loadingPage v-if="!loadingSuccess" />
     <div v-else class="passport">
-      <div class="passport-list">
-        <ul class="clearfix">
-          <li class="filter-li">
-            <span @click="showAllFilter()">
-              显示全部
-              <em :class="{open:filterResult.length > 0}"></em>
-            </span>
-            <span class="on">
-              筛选
-              <div class="filter">
-                <p v-for="(obj, type, key) in filterType" :key="key" @click="filterClick(type)">
-                  <i :class="{set:filterResult.indexOf(type) >= 0}"></i>
-                  {{type}}
-                </p>
+      <div class="scroll">
+        <div class="passport-list">
+          <ul class="clearfix">
+            <li class="filter-li">
+              <span @click="showAllFilter()">
+                显示全部
+                <em :class="{open:filterResult.length > 0}"></em>
+              </span>
+              <span class="on">
+                筛选
+                <div class="filter">
+                  <p v-for="(obj, type, key) in filterType" :key="key" @click="filterClick(type)">
+                    <i :class="{set:filterResult.indexOf(type) >= 0}"></i>
+                    {{type}}
+                  </p>
+                </div>
+              </span>
+            </li>
+            <li v-for="(lists, index) in passportList" :key="index">
+              <div class="img">
+                <img :src="lists.passport_img" />
               </div>
-            </span>
-          </li>
-          <li v-for="(lists, index) in passportList" :key="index">
-            <div class="img">
-              <img :src="lists.passport_img" />
-            </div>
-            <div class="clearfix info">
-              <strong class="name">{{lists.name}}</strong>
-              <div class="left country">
-                <strong>{{lists.visa_free_number}}</strong>
-                <i>免签</i>
+              <div class="clearfix info">
+                <strong class="name">{{lists.name}}</strong>
+                <div class="left country">
+                  <strong>{{lists.visa_free_number}}</strong>
+                  <i>免签</i>
+                </div>
+                <div class="left">
+                  <strong>{{lists.rank}}</strong>
+                  <i>排名</i>
+                </div>
               </div>
-              <div class="left">
-                <strong>{{lists.rank}}</strong>
-                <i>排名</i>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="visa-country">
-        <ul class="clearfix" v-for="(obj, name, key) in allCountry" :key="key" ref="visa_country">
-          <li>
-            <img :src="obj.flag" />
-            {{name}}
-          </li>
-          <li
-            v-for="(visa, name2, key2) in obj"
-            :key="key2"
-            v-show="name2 !== 'flag'"
-            :index="filterResult.indexOf(visa)"
-            :class="countryClass(visa)"
-          >{{visa}}</li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="visa-country clearfix">
+          <div class="country-flag left">
+            <ul class="clearfix" v-for="(obj, name, key) in allCountry" :key="key" ref="visa_country">
+              <li class="fixed">
+                <img :src="obj.flag" />
+                {{name}}
+              </li>
+            </ul>
+          </div>
+          <div class="visa left">
+            <ul class="clearfix" v-for="(obj, name, key) in allCountry" :key="key" ref="visa_country">
+              <li
+                v-for="(visa, name2, key2) in obj"
+                :key="key2"
+                v-show="name2 !== 'flag'"
+                :index="filterResult.indexOf(visa)"
+                :class="countryClass(visa)"
+              >{{visa}}</li>
+            </ul>
+          </div>
+          
+        </div>
       </div>
     </div>
   </Layout>
@@ -157,7 +166,7 @@ export default {
           }
 
           for (let name in this.allCountry) {
-            for (let a in this.allCountry[name])
+            for (let a in this.allCountry[name]) {
               for (let i = 0; i < all.length; i++) {
                 for (let s = 0; s < all[i].visa_countries.length; s++) {
                   if (name === all[i].visa_countries[s].name) {
@@ -168,30 +177,37 @@ export default {
                   }
                 }
               }
+            }
           }
+          
 
           this.loadingSuccess = true;
           setTimeout(function() {
-            let scroll =
-              document.documentElement.scrollTop || document.body.scrollTop;
+            let scroll = document.documentElement.scrollTop || document.body.scrollTop;
             animation(scroll);
             windowScroll();
           }, 10);
+          
         }
       });
     }
   },
   mounted() {
     this.getData();
+    window.addEventListener('scroll', () => {
+      let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+      let countryFlag = document.getElementsByClassName('country-flag')[0]
+      countryFlag.style.top = 285 - scroll  + 'px'
+    })
   }
 };
 </script>
 <style lang="less" scoped>
 .passport {
   background: #1b2f35;
-  padding: 90px 0;
-  width: 1915px;
+  padding: 180px 0 50px;
   margin: auto;
+  width: 1925px;
 }
 .passport-list {
   li {
@@ -230,12 +246,9 @@ export default {
       border: 1px solid #ffe19a;
       padding: 1px;
       margin-right: 15px;
+      border-radius: 2px;;
       img {
         width: 100%;
-        transition: 0.2s;
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
 
@@ -369,21 +382,7 @@ export default {
 }
 
 .visa-country {
-  overflow: auto;
-  ul {
-    cursor: pointer;
-    &:hover {
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 0 0 1px #ffe19a;
-      li {
-        background: #1b2f35;
-      }
-    }
-  }
   li {
-    float: left;
-    width: 15%;
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -391,25 +390,53 @@ export default {
     font-size: 12px;
     border-right: 1px solid #0f1f24;
     border-bottom: 1px solid #0f1f24;
-    &:first-child {
+  }
+  .country-flag {
+    width: 192px;
+    position: fixed;
+    background: #1b2f35;
+    z-index: 10;
+    left: 0;
+    top: 285px;
+    li {
       text-align: left;
       padding-left: 13px;
-      width: 10%;
       img {
         width: 18px;
       }
     }
-    &.type1 {
-      background: #a91c1c;
+  }
+  .visa {
+    width: 100%;
+    padding-left: 192px;
+    ul {
+      cursor: pointer;
+      @media(min-width: 767px) {
+        &:hover {
+          position: relative;
+          z-index: 1;
+          box-shadow: 0 0 0 1px #ffe19a;
+          li {
+            background: #1b2f35;
+          }
+        }
+      }
     }
-    &.type2 {
-      background: #2d3b7e;
-    }
-    &.type3 {
-      background: #256224;
-    }
-    &.type4 {
-      background: #90711f;
+    li {
+      float: left;
+      width: 16.6666%;
+      &.type1 {
+        background: #a91c1c;
+      }
+      &.type2 {
+        background: #2d3b7e;
+      }
+      &.type3 {
+        background: #256224;
+      }
+      &.type4 {
+        background: #90711f;
+      }
     }
   }
 }
