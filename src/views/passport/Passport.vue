@@ -179,7 +179,6 @@ export default {
               }
             }
           }
-          
 
           this.loadingSuccess = true;
           setTimeout(function() {
@@ -195,9 +194,11 @@ export default {
   mounted() {
     this.getData();
     window.addEventListener('scroll', () => {
-      let scroll = document.documentElement.scrollTop || document.body.scrollTop;
       let countryFlag = document.getElementsByClassName('country-flag')[0]
-      countryFlag.style.top = 285 - scroll  + 'px'
+      if (countryFlag) {
+        let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        countryFlag.style.top = 285 - scroll  + 'px'
+      }
     })
   }
 };

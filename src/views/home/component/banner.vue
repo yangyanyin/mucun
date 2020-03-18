@@ -15,7 +15,6 @@
   </div>
 </template>
 <script>
-import "swiper/dist/css/swiper.min.css";
 export default {
   props: ["bannerImgList"],
   data() {
@@ -40,7 +39,6 @@ export default {
   img {
     width: 100%;
   }
-
   .t1 {
     position: absolute;
     left: 0;
@@ -64,7 +62,6 @@ export default {
   .banner {
     padding-top: 60px;
     position: relative;
-    // height: 332px;
     overflow: hidden;
   }
 }

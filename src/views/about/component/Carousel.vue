@@ -1,6 +1,6 @@
 <template>
   <el-carousel :interval="4000" type="card" height="390px">
-    <el-carousel-item v-for="item in evaluation" :key="item">
+    <el-carousel-item v-for="(item, index) in evaluation" :key="index">
       <img class="avatar" src="../../../assets/images/about-avatar.png" />
       <p>{{item.text}}</p>
       <img class="comma" src="../../../assets/images/comma.png" alt="">

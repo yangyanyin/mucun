@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div class="about">
     <div class="about-banner web-img"></div>
 
     <!-- 我们是谁 -->
@@ -68,11 +68,10 @@
 
     <!-- 国旗 -->
     <Flag />
-  </Layout>
+  </div>
 </template>
 
 <script>
-import Layout from "../../components/layout.vue";
 import Flag from '../../components/commonComponent/NationalFlag'
 import Carousel from './component/Carousel'
 import "../../assets/less/custom.less";
@@ -80,7 +79,6 @@ import { animation, windowScroll } from "../../assets/js/config.js";
 export default {
   name: "app",
   components: {
-    Layout,
     Flag,
     Carousel
   },

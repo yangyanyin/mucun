@@ -7,6 +7,7 @@ import VueLazyload from 'vue-lazyload'
 import { vueAccordion } from 'vue-accordion'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import "swiper/dist/css/swiper.min.css";
 Vue.component('vue-accordion', vueAccordion)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueLazyload)
