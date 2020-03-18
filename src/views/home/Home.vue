@@ -189,19 +189,24 @@
         <h3>成功案例</h3>
         <span>
           <i>
-            <img src="../../assets/images/title-img1.png" />
+            <img src="../../assets/images/title-img2.png" />
           </i>
         </span>
         <p>Successful Cases</p>
       </div>
-      <div class=" pc-max-width content clearfix">
-        <router-link class="left" to="1" v-for="(news, index) in 4" :key="index">
-          <img src="../../assets/images/new-img.png" />
-          <h3>这里是标题</h3>
-          <p>这里是描述描述描述描述描述描述描述描述描述描述描述...</p>
-          <span>了解详情</span>
-        </router-link>
-      </div>
+      <ul class="pc-max-width content clearfix">
+        <li v-for="(news, index) in 4" :key="index">
+          <router-link to="1">
+            <img src="../../assets/images/new-img.png" />
+            <div class="d clearfix">
+              <h3>这里是标题</h3>
+              <p>这里是描述描述描述描述描述描述描述描述描述描述描述...</p>
+              <span class="left">2020-11-11</span>
+              <span class="right">了解详情</span>
+            </div>
+          </router-link>
+        </li>
+      </ul>
     </div>
 
     <!-- 我们的优势 -->
@@ -587,8 +592,63 @@ export default {
 
 /** 成功案例 **/
 .success-case {
+  padding-top: 60px;
   background: url('../../assets/images/success-case-bg.png') no-repeat top center;
   background-size: 1920px;
+  .public-title {
+    h3 {
+      color: #fff;
+    }
+    span {
+      &:after,
+      &:before {
+        background: #fff;
+      }
+      i {
+        background: no-repeat;
+      }
+    }
+    p {
+      color: #fff;
+    }
+  }
+  .content {
+    padding-top: 50px;
+    li {
+      float: left;
+      width: 25%;
+      padding: 0 10px;
+      a {
+        position: relative;
+        display: block;
+        box-shadow: 0px 4px 18px -6px #d0d0d0;
+        transition: .3s;
+        &:hover {
+          transform: scale(1.03);
+        }
+        img {
+          display: block;
+          width: 100%;
+        }
+        .d {
+          padding: 25px;
+          h3 {
+            font-weight: bold;
+            font-size: 18px;
+            color: #111;
+          }
+          p {
+            padding: 5px 0 10px;
+            color: #b9b9b9;
+            line-break: 24px;
+          }
+          span {
+            color: #b9b9b9;
+          }
+        }
+      }
+    }
+  }
 }
 
 /** 我们的优势 **/
