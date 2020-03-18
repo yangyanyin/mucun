@@ -82,8 +82,10 @@ const routes = [
         name: 'EmigrantDetailsFour',
         component: EmigrantDetailsFour,
       }
-    ]
-
+    ],
+    scrollBehavior (to, from) {
+      return { x: 0, y: 0 }
+    }
   },
 ]
 
@@ -92,5 +94,8 @@ const router = new VueRouter({
   // base: process.env.BASE_URL,
   routes
 })
+
+
+
 
 export default router
