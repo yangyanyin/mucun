@@ -40,7 +40,7 @@
         </div>
         <div class="visa-country clearfix">
           <div class="country-flag left">
-            <ul class="clearfix" v-for="(obj, name, key) in allCountry" :key="key" ref="visa_country">
+            <ul class="clearfix" v-for="(obj, name, key) in newData || allCountry" :key="key" ref="visa_country">
               <li class="fixed">
                 <img :src="obj.flag" />
                 {{name}}
@@ -48,7 +48,7 @@
             </ul>
           </div>
           <div class="visa left">
-            <ul class="clearfix" v-for="(obj, name, key) in allCountry" :key="key" ref="visa_country">
+            <ul class="clearfix" v-for="(obj, name, key) in newData || allCountry" :key="key" ref="visa_country">
               <li
                 v-for="(visa, name2, key2) in obj"
                 :key="key2"
@@ -83,25 +83,18 @@ export default {
       allCountry: {},
       filterType: {},
       filterResult: [],
-      filterCountry: {}
+      filterCountry: {},
+      newData: ''
     };
   },
   watch: {
     filterResult() {
       setTimeout(() => {
-        let visaCountryList = document
-          .getElementsByClassName("visa-country")[0]
-          .getElementsByTagName("ul");
-        for (let i = 0; i < visaCountryList.length; i++) {
-          let lis = visaCountryList[i].getElementsByTagName("li");
-          for (let s = 0; s < lis.length; s++) {
-            lis[s].parentNode.style.display = "block";
-            if (this.filterResult.length > 0) {
-              if (lis[s].getAttribute("index") >= 0) {
-                lis[s].parentNode.style.display = "block";
-              } else {
-                lis[s].parentNode.style.display = "none";
-              }
+        this.newData = {}
+        for (let name in this.allCountry) {
+          for (let i = 0; i < this.filterResult.length; i++) {
+            if (JSON.stringify(this.allCountry[name]).indexOf(this.filterResult[i]) >= 0) {
+              this.newData[name] = this.allCountry[name]
             }
           }
         }
@@ -131,7 +124,7 @@ export default {
       return className;
     },
     showAllFilter() {
-      this.filterResult = [];
+      this.newData = '';
     },
     filterClick(type) {
       for (let i = 0; i < this.filterResult.length; i++) {
@@ -199,7 +192,15 @@ export default {
         let scroll = document.documentElement.scrollTop || document.body.scrollTop;
         countryFlag.style.top = 285 - scroll  + 'px'
       }
+
+      let filterLi = document.getElementsByClassName('filter-li')[0]
+      if (filterLi) {
+        let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        filterLi.style.top = 180 - scroll  + 'px'
+      }
     })
+
+    
   }
 };
 </script>
@@ -211,10 +212,11 @@ export default {
   width: 1925px;
 }
 .passport-list {
+  padding-left: 192px;
   li {
     float: left;
     padding: 12px 0 0 10px;
-    width: 15%;
+    width: 16.6666%;
     text-align: center;
     color: #fff;
     height: 105px;
@@ -290,6 +292,12 @@ export default {
     }
   }
   .filter-li {
+    position: fixed;
+    width: 192px !important;
+    left: 0;
+    top: 180px;
+    z-index: 99;
+    background: #1b2f35;
     em {
       position: relative;
       top: 1px;
@@ -343,6 +351,7 @@ export default {
     .filter {
       display: none;
       position: absolute;
+      z-index: 999;
       left: 65px;
       top: 45px;
       z-index: 12;
