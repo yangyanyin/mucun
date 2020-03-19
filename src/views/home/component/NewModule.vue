@@ -2,22 +2,24 @@
   <div class="index-news animation-show">
     <div class="title clearfix">
       <h3 class="left">新闻动态</h3>
-      <router-link class="right" to="1">了解更多></router-link>
+      <router-link class="right" :to="'/news-' + type">了解更多></router-link>
     </div>
     <div class="content clearfix">
       <div class="right">
         <el-carousel trigger="click" height="388px">
           <template v-for="(news, index) in data" >
             <el-carousel-item :key="index" v-if="index < 3">
-              <h3>{{news.title}}</h3>
-              <img :src="news.img" />
+              <router-link to="/news-details/1">
+                <h3>{{news.title}}</h3>
+                <img :src="news.img" />
+              </router-link>
             </el-carousel-item>
           </template>
         </el-carousel>
       </div>
       <div class="left">
         <template v-for="(news, index) in data" >
-          <router-link to="1" :key="index" v-if="index < 3">
+          <router-link to="/news-details/1" :key="index" v-if="index < 3">
             <img :src="news.img" />
             <h3>{{news.title}}</h3>
             <p>{{news.des}}</p>
@@ -33,6 +35,9 @@
 <script>
 import data from '../../../assets/js/newsData'
 export default {
+  props: {
+    type: String
+  },
   data () {
     return {
       data: data.data,

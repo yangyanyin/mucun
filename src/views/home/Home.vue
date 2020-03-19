@@ -106,7 +106,7 @@
         </span>
         <p>Singapore MIGRATION EXPERT</p>
       </div>
-      <NewModule />
+      <NewModule type="expert" />
     </div>
 
     <!-- 全球护照精选 -->
@@ -180,7 +180,7 @@
         </span>
         <p>Passport topics</p>
       </div>
-      <NewModule />
+      <NewModule type="thematic" />
     </div>
 
     <!-- 成功案例 -->
@@ -196,7 +196,7 @@
       </div>
       <ul class="pc-max-width content clearfix animation-show">
         <li v-for="(news, index) in 4" :key="index">
-          <router-link to="1">
+          <router-link to="/news-details/1">
             <img src="../../assets/images/new-img.png" />
             <div class="d clearfix">
               <h3>这里是标题</h3>

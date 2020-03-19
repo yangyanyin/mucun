@@ -89,8 +89,18 @@ const routes = [
     ]
   },
   {
-    path: '/news-list',
-    name: 'NewsList',
+    path: '/news-case',
+    name: 'case',
+    component: NewsList
+  },
+  {
+    path: '/news-thematic',
+    name: 'thematic',
+    component: NewsList
+  },
+  {
+    path: '/news-expert',
+    name: 'expert',
     component: NewsList
   },
   {
