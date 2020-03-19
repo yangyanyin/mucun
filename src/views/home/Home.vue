@@ -196,13 +196,13 @@
       </div>
       <ul class="pc-max-width content clearfix animation-show">
         <li v-for="(news, index) in 4" :key="index">
-          <router-link to="/news-details/1">
+          <router-link class="a" to="/news-details/1">
             <img src="../../assets/images/new-img.png" />
             <div class="d clearfix">
               <h3>这里是标题</h3>
               <p>这里是描述描述描述描述描述描述描述描述描述描述描述...</p>
               <span class="left">2020-11-11</span>
-              <span class="right">了解详情</span>
+              <span class="right"><router-link to="/news-details/1">了解详情</router-link></span>
             </div>
           </router-link>
         </li>
@@ -622,7 +622,7 @@ export default {
       float: left;
       width: 25%;
       padding: 0 10px;
-      a {
+      a.a {
         position: relative;
         display: block;
         box-shadow: 0px 4px 18px -6px #d0d0d0;
@@ -649,6 +649,9 @@ export default {
           }
           span {
             color: #b9b9b9;
+            a {
+              color: #b9b9b9;
+            }
           }
         }
       }

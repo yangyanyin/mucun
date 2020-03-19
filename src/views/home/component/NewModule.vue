@@ -19,12 +19,12 @@
       </div>
       <div class="left">
         <template v-for="(news, index) in data" >
-          <router-link to="/news-details/1" :key="index" v-if="index < 3">
+          <router-link to="/news-details/1" class="a" :key="index" v-if="index < 3">
             <img :src="news.img" />
             <h3>{{news.title}}</h3>
             <p>{{news.des}}</p>
             <span class="left">2020.10.23</span>
-            <span class="right">了解详情</span>
+            <span class="right"><router-link to="/news-details/1">了解详情</router-link></span>
           </router-link>
         </template>
       </div>
@@ -79,7 +79,7 @@ export default {
   div.left {
     width: 50%;
     padding-right: 20px;
-    a {
+    a.a {
       display: block;
       height: 132px;
       padding: 15px 0;
@@ -104,6 +104,10 @@ export default {
       span {
         color: #B9B9B9;
         font-size: 12px;
+        a {
+          font-size: 12px;
+          color: #B9B9B9;
+        }
       }
     }
   }
