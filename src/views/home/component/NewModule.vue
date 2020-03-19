@@ -14,19 +14,6 @@
             </el-carousel-item>
           </template>
         </el-carousel>
-        <!-- <swiper :options="swiperOption">
-          <template v-for="(news, index) in data" >
-            <swiper-slide :key="index" v-if="index < 3">
-              <router-link to="1">
-                <h3>{{news.title}}</h3>
-                <img :src="news.img" />
-              </router-link>
-            </swiper-slide>
-          </template>
-          <div class="swiper-pagination" slot="pagination"></div>
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
-        </swiper> -->
       </div>
       <div class="left">
         <template v-for="(news, index) in data" >
