@@ -194,7 +194,7 @@
         </span>
         <p>Successful Cases</p>
       </div>
-      <ul class="pc-max-width content clearfix">
+      <ul class="pc-max-width content clearfix animation-show">
         <li v-for="(news, index) in 4" :key="index">
           <router-link to="1">
             <img src="../../assets/images/new-img.png" />
@@ -595,6 +595,10 @@ export default {
   padding-top: 60px;
   background: url('../../assets/images/success-case-bg.png') no-repeat top center;
   background-size: 1920px;
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    background-size: 1000px;
+  }
   .public-title {
     h3 {
       color: #fff;
@@ -623,6 +627,7 @@ export default {
         display: block;
         box-shadow: 0px 4px 18px -6px #d0d0d0;
         transition: .3s;
+        background: #fff;
         &:hover {
           transform: scale(1.03);
         }
@@ -640,10 +645,41 @@ export default {
           p {
             padding: 5px 0 10px;
             color: #b9b9b9;
-            line-break: 24px;
+            line-height: 24px;
           }
           span {
             color: #b9b9b9;
+          }
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      padding: 30px 5px 20px;
+      white-space: nowrap;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        height: 0px;
+      } 
+      li {
+        display: inline-block;
+        float: none;
+        width: 66%;
+        padding: 0 5px;
+        white-space: normal;
+        a {
+          box-shadow: 0px 2px 4px #d0d0d0;
+          .d {
+            padding: 15px;
+            h3 {
+              font-size: 16px;
+            }
+            p {
+              font-size: 12px;
+              line-height: 18px;
+            }
+            span {
+              font-size: 12px;
+            }
           }
         }
       }
