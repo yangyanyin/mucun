@@ -16,7 +16,7 @@
                 <router-link class="t" to="/news-details/1">标题标题标题</router-link>
                 <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述
                   描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                <div class="left"> 
+                <div class="left clearfix"> 
                   <span>2020-11-22</span>
                   <span>浏览量2333</span>
                 </div>
@@ -29,7 +29,9 @@
           <Side />
         </div>
       </div>
-      <Flag />
+      <div class="pc-max-width">
+        <Flag />
+      </div>
     </div>
   </Layout>
 </template>
@@ -121,9 +123,9 @@ export default {
       display: inline-block;
       font-size: 13px;
       color: #b9b9b9;
-      margin-right: 25px;
       padding-left: 20px;
       &:first-child{
+        margin-right: 25px;
         background: url('../../assets/images/time-icon.png') no-repeat left 1px;
         background-size: 14px;
       }
@@ -156,8 +158,62 @@ export default {
     .img {
       float: left;
       width: 270px;
-      height: 170px;
       margin-right: 25px;
+    }
+  }
+  @media (max-width:767px) {
+    background: #fff;
+    .crumbs {
+      display: none;
+    }
+    .list-banner {
+      width: 100%;
+      padding: 0;
+      .banner {
+        margin: 0 -10px;
+      }
+    }
+    .rec {
+      width: 100%;
+    }
+    .list {
+      padding: 0;
+      li {
+        padding: 15px 0;
+      }
+      .des >div{
+        float: none;
+        padding-top: 3px;
+      }
+      .img {
+        width: 145px;
+        margin-right: 10px;
+      }
+      .t {
+        font-size: 16px;
+      }
+      p {
+        margin: 5px 0;
+        height: 40px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 12px;
+        line-height: 20px;
+      }
+      span {
+        font-size: 12px;
+        &:first-child{
+          float: left;
+          margin-right: 10px;
+        }
+        &:last-child {
+          float: right;
+        }
+      }
+      .more {
+        display: none;
+      }
     }
   }
 }

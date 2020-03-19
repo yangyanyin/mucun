@@ -124,4 +124,39 @@ export default {
 .rec {
   width: 340px;
 }
+@media (max-width: 767px) {
+  .news {
+    background: #fff;
+  }
+  .crumbs {
+    display: none;
+  }
+  .news-details {
+    width: 100%;
+    .title {
+      padding: 20px 0;
+      h3 {
+        font-size: 20px;
+      }
+      span.time {
+        float: left;
+        margin: 0 10px 0 0;
+      }
+      span.label  {
+        display: block;
+        float: none;
+        padding-bottom: 12px;
+      }
+    }
+    .details {
+      padding: 20px 0;
+    }
+    .other {
+      padding: 20px 0 0;
+    }
+  }
+  .rec {
+    width: 100%;
+  }
+}
 </style>
