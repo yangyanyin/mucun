@@ -840,6 +840,11 @@ export default {
       background-position: center center;
       transition: all 500ms ease;
       height: 100%;
+      background-position: top center;
+      background-size: auto 520px;
+      @media (max-width: 1100px) {
+        background-size: auto 450px;
+      }
     }
     ul li a {
       display: block;
