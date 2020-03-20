@@ -669,7 +669,7 @@ export default {
         width: 66%;
         padding: 0 5px;
         white-space: normal;
-        a {
+        a.a {
           box-shadow: 0px 2px 4px #d0d0d0;
           .d {
             padding: 15px;

@@ -4,6 +4,7 @@
       <div class="logo left">
         <a href="/">
           <span class="img"><img src="../../assets/images/logo.png" /></span>
+          <span class="img-text"><img src="../../assets/images/logo-text.png" /></span>
         </a>
       </div>
       <div class="hotline right">
@@ -149,6 +150,10 @@ export default {
         margin-left: 35px;
       }
     }
+  }
+  .img-text {
+   width: 220px;
+   margin-left: 40px; 
   }
   img {
     display: block;

@@ -10,7 +10,7 @@
             <img :src="banner[newsType].img" />
           </div>
           <ul class="list">
-            <li v-for="i in 6" :key="i" class="clearfix">
+            <li v-for="i in 6" :key="i" class="clearfix animation-show">
               <router-link class="img" to="1"><img src="../../assets/images/new-img.png" /></router-link>
               <div class="des">
                 <router-link class="t" to="/news-details/1">标题标题标题</router-link>

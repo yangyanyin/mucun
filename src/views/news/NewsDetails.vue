@@ -24,7 +24,11 @@
           <Side />
         </div>
       </div>
-      <Flag />
+      
+      <!-- 国旗 -->
+      <div class="pc-max-width">
+        <Flag />
+      </div>
     </div>
   </Layout>
 </template>

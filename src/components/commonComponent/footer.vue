@@ -221,12 +221,9 @@ export default {
   right: 70px;
   bottom: 100px;
   width: 35px;
-  border: 1px solid #bd8c67;
-  padding: 6px;
   border-radius: 5px;
   cursor: pointer;
   background: #bd8c67;
-  opacity: 0.8;
   img {
     display: block;
     width: 100%;

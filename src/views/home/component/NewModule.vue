@@ -57,21 +57,48 @@ export default {
           indicator[s].getElementsByClassName('el-carousel__button')[0].innerHTML = s + 1
         }
       }
-
-    }, 50)
+    }, 150)
   }
 }
 </script>
 <style scoped lang="less">
 .title {
   position: relative;
+  padding-bottom: 7px;
   border-bottom: 1px solid #B9B9B9;
+  padding-left: 50px;
   h3 {
-    font-size: 16px;
+    font-size: 20px;
     color: #2D4B4C;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 50px;
+      height: 36px;
+      background: #fff url('../../../assets/images/new-title.png') no-repeat left center;
+      background-size: 35px;
+    }
   }
   a {
     color: #B9B9B9;
+  }
+  @media (max-width: 767px) {
+    margin-top: 20px;
+    padding: 0 0 3px 40px;
+    h3 {
+      font-size: 18px;
+      &:after {
+        width: 40px;
+        content: '';
+        bottom: -5px;
+        background-size: 28px;
+      }
+    }
+    a {
+      margin-top: 2px;
+    }
   }
 }
 .content {
@@ -130,7 +157,7 @@ export default {
   }
   @media (max-width: 767px) {
     div.left {
-      a {
+      a.a{
         height: 121px;
         img {
           height: 90px;

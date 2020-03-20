@@ -1,5 +1,5 @@
 <template>
-  <div class="asset">
+  <Layout>
     <div class="banner">
       <img class="web-img" src="../../assets/images/asset-allocation/asset-banner.jpg" />
       <img class="wap-img" src="../../assets/images/asset-allocation/asset-banner-wap.jpg" />
@@ -94,13 +94,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </Layout>
 </template>
 
 <script>
+import Layout from "../../components/layout.vue";
 import { animation, windowScroll } from "../../assets/js/config.js";
 export default {
   name: "app",
+  components: {
+    Layout
+  },
   mounted() {
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;
     animation(scroll);
