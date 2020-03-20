@@ -11,7 +11,7 @@
             <el-carousel-item :key="index" v-if="index < 3">
               <router-link to="/news-details/1">
                 <h3>{{news.title}}</h3>
-                <img :src="news.img" />
+                <img @load="elDome" :src="news.img" />
               </router-link>
             </el-carousel-item>
           </template>
@@ -43,21 +43,26 @@ export default {
       data: data.data,
     }
   },
-  mounted () {
-    setTimeout(()=>{
-      let elCarousel = document.getElementsByClassName('el-carousel__container')
-      for (let i = 0; i < elCarousel.length; i++) {
-        elCarousel[i].style.height = elCarousel[i].getElementsByClassName('el-carousel__item')[0].getElementsByTagName('img')[0].height + 'px'
-      }
-
-      let elIndicators = document.getElementsByClassName('el-carousel__indicators')
-      for (let i = 0; i < elIndicators.length; i++) {
-        let indicator = elIndicators[i].getElementsByClassName('el-carousel__indicator')
-        for (let s = 0; s < indicator.length; s++) {
-          indicator[s].getElementsByClassName('el-carousel__button')[0].innerHTML = s + 1
+  methods: {
+    elDome () {
+      setTimeout(()=>{
+        let elCarousel = document.getElementsByClassName('el-carousel__container')
+        for (let i = 0; i < elCarousel.length; i++) {
+          elCarousel[i].style.height = elCarousel[i].getElementsByClassName('el-carousel__item')[0].getElementsByTagName('img')[0].height + 'px'
         }
-      }
-    }, 150)
+
+        let elIndicators = document.getElementsByClassName('el-carousel__indicators')
+        for (let i = 0; i < elIndicators.length; i++) {
+          let indicator = elIndicators[i].getElementsByClassName('el-carousel__indicator')
+          for (let s = 0; s < indicator.length; s++) {
+            indicator[s].getElementsByClassName('el-carousel__button')[0].innerHTML = s + 1
+          }
+        }
+      }, 150)
+    }
+  },
+  mounted () {
+    
   }
 }
 </script>

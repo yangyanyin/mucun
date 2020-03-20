@@ -13,10 +13,14 @@
         <span><img class="s" src="../../assets/images/footer-iphone.png" /></span>
         <span>
           <img class="s" src="../../assets/images/footer-email.png" />
-          <p>sgpec@spgec.sg</p>
+          <div>
+            <p>sgpec@spgec.sg</p>
+          </div>
         </span>
         <span class="wx"><img class="s" src="../../assets/images/footer-wx.png" />
-          <p><img src="../../assets/images/WeChat.png" /></p>
+          <div>
+            <p><img src="../../assets/images/WeChat.png" /></p>
+          </div>
         </span>
       </div>
     </div>
@@ -195,7 +199,10 @@ export default {
         }
       }
     }
-    &.wx { 
+    &.wx {
+      div {
+        right: -3px;
+      }
       p {
         right: -5px;
         img {
@@ -203,35 +210,44 @@ export default {
         }
         &:after {
           content: '';
-          right: 5px;
+          right: 3px;
         }
       }
     }
-    p {
-      display: none;
+    div {
       position: absolute;
-      top: 35px;
       right: -20px;
       z-index: 999;
-      padding: 10px;
-      border-radius: 5px;
-      background: #fff;
-      color: #111;
-      &:after {
-        content: '';
-        position: absolute;
-        right: 21px;
-        top: -19px;
-        width: 0px;
-        height: 0px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: transparent transparent #fff;
+      height: 0;
+      overflow: hidden;
+      transition: .3s;
+      p {
+        padding: 10px;
+        border-radius: 5px;
+        background: #fff;
+        color: #111;
+        margin-top: 10px;
+        &:after {
+          content: '';
+          position: absolute;
+          right: 21px;
+          top: -9px;
+          width: 0px;
+          height: 0px;
+          border-width: 10px;
+          border-style: solid;
+          border-color: transparent transparent #fff;
+        }
       }
     }
     &:hover {
-      p {
-        display: block;
+      div {
+        height: 50px;
+      }
+      &.wx{
+        div {
+          height: 140px;
+        }
       }
     }
   }
