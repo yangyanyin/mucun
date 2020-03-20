@@ -217,20 +217,22 @@ select:focus,select:active,select:hover{
     &:before {
       content: '';
       position: absolute;
-      left: 0;
+      left: 210px;
       top: 49%;
-      width: 210px;
+      width: 0;
       height: 1px;
       background: #2d4b4c;
+      transition: 2s;
     }
     &:after {
       content: '';
       position: absolute;
-      right: 0;
+      right: 210px;
       top: 49%;
-      width: 210px;
+      width: 0;
       height: 1px;
       background: #2d4b4c;
+      transition: 2s;
     }
     i {
       position: relative;
@@ -257,13 +259,15 @@ select:focus,select:active,select:hover{
       i {
         width: 30px;
       }
-      &:before, &:after {
-        width: calc(50% - 30px);
+      &:before{
+        left: calc(50% - 30px);
+      }
+      &:after {
+        right: calc(50% - 30px);
       }
     }
   }
 }
-
 
 .animation-show{
   transform: translateY(50px);
@@ -271,14 +275,23 @@ select:focus,select:active,select:hover{
   &.show{
     animation: boxTops 1s forwards;
     &.public-title{
-      h3{
-        &:after{
-          width: 90px;
-          margin-left: -45px;
-          left: 50%;
-          @media(max-width: 767px) {
-            width: 60px;
-            margin-left: -30px;
+      span {
+        &:before {
+          left: 0;
+          width: 210px;
+        }
+        &:after {
+          right: 0;
+          width: 210px;
+        }
+        @media (max-width: 767px) {
+          &:before {
+            left: 0;
+            width: calc(50% - 30px);
+          }
+          &:after {
+            right: 0;
+            width: calc(50% - 30px);
           }
         }
       }

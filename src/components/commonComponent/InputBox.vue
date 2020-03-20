@@ -12,16 +12,16 @@
       <i>地址:</i>新加坡滨海林荫大道8号滨海金融中心14楼
     </p>
     <ul class="clearfix">
-      <li class="name">
-        <input class="name" type="text" placeholder="您的称呼" v-model="userName" />
+      <li class="name" :class="{on: inputType === 'name'}">
+        <input class="name" type="text" placeholder="您的称呼" @focus="inputFocus('name')" @blur="inputBlur" v-model="userName" />
         <span v-if="nameError">请输入称呼！</span>
       </li>
-      <li class="tel">
-        <input class="tel" type="tel" placeholder="您的电话" v-model="userTel" />
+      <li class="tel" :class="{on: inputType === 'tel'}">
+        <input class="tel" type="tel" placeholder="您的电话" @focus="inputFocus('tel')" @blur="inputBlur" v-model="userTel" />
         <span v-if="telError">请输入电话！</span>
       </li>
-      <li class="email">
-        <input class="email" type="email" placeholder="您的电邮" v-model="userEmail" />
+      <li class="email" :class="{on: inputType === 'email'}">
+        <input class="email" type="email" placeholder="您的电邮" @focus="inputFocus('email')" @blur="inputBlur" v-model="userEmail" />
         <span v-if="emailErroe">请输入正确的邮箱！</span>
       </li>
     </ul>
@@ -58,7 +58,8 @@ export default {
       telError: false,
       emailErroe: false,
       messageSuccess: false,
-      messageLoading: false
+      messageLoading: false,
+      inputType: ''
     };
   },
   methods: {
@@ -112,6 +113,12 @@ export default {
     isEmail(email) {
       let regex = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
       return regex.test(email);
+    },
+    inputFocus(type) {
+      this.inputType = type
+    },
+    inputBlur() {
+      this.inputType = ''
     }
   }
 };
@@ -178,6 +185,12 @@ export default {
         12px;
       background-size: 25px;
     }
+    &.on {
+      background-color: #f3f3f3;
+      input {
+        background-color: #f3f3f3;
+      }
+    }
   }
   .submit {
     display: block;
@@ -190,6 +203,11 @@ export default {
     color: #fff;
     background: #447375;
     border-radius: 5px;
+    transition: .3s;
+    cursor: pointer;
+    &:hover {
+      background: #265456;
+    }
     img {
       display: block;
       width: 30px;

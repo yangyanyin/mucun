@@ -58,7 +58,6 @@
               >{{visa}}</li>
             </ul>
           </div>
-          
         </div>
       </div>
     </div>
@@ -179,7 +178,6 @@ export default {
             animation(scroll);
             windowScroll();
           }, 10);
-          
         }
       });
     }

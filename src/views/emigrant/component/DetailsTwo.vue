@@ -2,7 +2,7 @@
   <div class="details details-tow">
     <div class="title t1">
       <h3>
-        项目介绍
+        <span>项目介绍</span>
         <i>Project introduction</i>
       </h3>
     </div>
@@ -10,7 +10,7 @@
     
     <div class="title t2">
       <h3>
-        申请条件
+        <span>申请条件</span>
         <i>Application condition</i>
       </h3>
     </div>
@@ -37,7 +37,7 @@
 
     <div class="title t3">
       <h3>
-        项目优势
+        <span>项目优势</span>
         <i>Project advantage</i>
       </h3>
     </div>

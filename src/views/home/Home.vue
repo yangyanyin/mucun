@@ -200,7 +200,7 @@
             <img src="../../assets/images/new-img.png" />
             <div class="d clearfix">
               <h3>这里是标题</h3>
-              <p>这里是描述描述描述描述描述描述描述描述描述描述描述...</p>
+              <p>这里是描述描述描述描述描述描述描述描述描述描述描述这里是描述描述描述描述描述描述描述描述描述描述描述这里是描述描述描述描述描述描述描述描述描述描述描述这里是描述描述描述描述描述描述描述描述描述描述描述这里是描述描述描述描述描述描述描述描述描述描述描述...</p>
               <span class="left">2020-11-11</span>
               <span class="right"><router-link to="/news-details/1">了解详情</router-link></span>
             </div>
@@ -643,9 +643,14 @@ export default {
             color: #111;
           }
           p {
-            padding: 5px 0 10px;
+            margin: 5px 0 10px;
             color: #b9b9b9;
+            height: 144px;
             line-height: 24px;
+            overflow: hidden;     
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
           }
           span {
             color: #b9b9b9;
@@ -721,9 +726,15 @@ export default {
     padding: 50px 80px;
     .list {
       width: 140px;
+      &:hover {
+        img {
+          transform: scale(1.06);
+        }
+      }
       img {
         display: block;
         width: 100%;
+        transition: .3s;
       }
       p {
         text-align: center;

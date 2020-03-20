@@ -121,8 +121,31 @@ export default {
     text-align: center;
     h3 {
       margin: auto;
-      font-size: 24px;
       color: #fff;
+      span {
+        position: relative;
+        font-size: 24px;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: -95px;
+          width: 80px;
+          height: 8px;
+          background: url('../../assets/images/title-left.png') no-repeat;
+          background-size: 100%;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 10px;
+          right: -95px;
+          width: 80px;
+          height: 8px;
+          background: url('../../assets/images/title-right.png') no-repeat;
+          background-size: 100%;
+        }
+      }
     }
     i {
       display: block; 

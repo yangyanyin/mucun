@@ -10,12 +10,12 @@
       <div class="hotline right">
         咨询热线: 
         <h3>+65 6909 8015</h3>
-        <span><img src="../../assets/images/footer-iphone.png" /></span>
+        <span><img class="s" src="../../assets/images/footer-iphone.png" /></span>
         <span>
-          <img src="../../assets/images/footer-email.png" />
+          <img class="s" src="../../assets/images/footer-email.png" />
           <p>sgpec@spgec.sg</p>
         </span>
-        <span class="wx"><img src="../../assets/images/footer-wx.png" />
+        <span class="wx"><img class="s" src="../../assets/images/footer-wx.png" />
           <p><img src="../../assets/images/WeChat.png" /></p>
         </span>
       </div>
@@ -183,10 +183,17 @@ export default {
     &:last-child {
       width: 28px;
     }
-    
     img {
       display: block;
       width: 100%;
+      transition: .3s;
+    }
+    @media (min-width: 767px) {
+      &:hover {
+        img.s {
+          transform: scale(1.06);
+        }
+      }
     }
     &.wx { 
       p {

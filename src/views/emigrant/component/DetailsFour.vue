@@ -2,7 +2,7 @@
   <div class="details details-four">
     <div class="title t1">
       <h3>
-        家族办公室
+        <span>家族办公室</span>
         <i>Project introduction</i>
       </h3>
     </div>
@@ -13,7 +13,7 @@
 
     <div class="title t2">
       <h3>
-        项目优势
+        <span>项目优势</span>
         <i>Project advantage</i>
       </h3>
     </div>
@@ -51,7 +51,7 @@
     <div class="plan">
       <div class="title t3">
         <h3>
-          家族办公室的设立以及新加坡移民计划
+          <span>家族办公室的设立以及新加坡移民计划</span>
           <i>Establishment of Family Office & Immigration from Singapore</i>
         </h3>
       </div>
