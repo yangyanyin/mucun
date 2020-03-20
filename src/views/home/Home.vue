@@ -754,17 +754,23 @@ export default {
     line-height: 140px;
     background: rgba(0, 0, 0, 0.3);
     ul {
-      @media (min-width: 767px) {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-      }
+      // @media (min-width: 767px) {
+      //   display: flex;
+      //   flex-flow: row wrap;
+      //   justify-content: space-between;
+      // }
+      text-align: center;
       li {
+        display: inline-block;
         padding-left: 26px;
+        margin: 0 25px;
         color: #fff;
         font-size: 20px;
         background: url("../../assets/images/hook.png") no-repeat left center;
         background-size: 18px;
+        @media (max-width: 1100px) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -795,7 +801,7 @@ export default {
       ul {
         li {
           padding: 0 20px;
-          display: inline-block;
+          margin: 0;
           font-size: 14px;
           background-size: 14px;
         }
