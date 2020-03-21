@@ -1,5 +1,6 @@
 <template>
   <div class="header" :class="{'is-fixed': isFixed, 'all-fixed': headerFixed}">
+    <img style="display:none;" src="../../assets/images/country-loading.png">
     <div class="pc-max-width clearfix">
       <div class="logo left">
         <a href="/">

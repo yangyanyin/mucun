@@ -2,7 +2,7 @@
   <div class="details details-one">
     <div class="clearfix">
       <div class="img left">
-        <img src="../../../assets/images/emigrant-img1.jpg" />
+        <img v-lazy="{src: require('../../../assets/images/emigrant-img1.jpg'), loading: require('../../../assets/images/country-loading.png'), error: require('../../../assets/images/country-loading.png')}" />
       </div>
       <div class="des right">
         <h3>项目简介</h3>
@@ -16,7 +16,7 @@
 
     <div class="clearfix">
       <div class="img right">
-        <img src="../../../assets/images/emigrant-img2.jpg" />
+        <img v-lazy="{src: require('../../../assets/images/emigrant-img2.jpg'), loading: require('../../../assets/images/country-loading.png'), error: require('../../../assets/images/country-loading.png')}" />
       </div>
       <div class="des left">
         <h3>注册新加坡公司需要以下条件：</h3>
@@ -31,7 +31,7 @@
 
     <div class="clearfix">
       <div class="img left">
-        <img src="../../../assets/images/emigrant-img3.jpg" />
+        <img v-lazy="{src: require('../../../assets/images/emigrant-img3.jpg'), loading: require('../../../assets/images/country-loading.png'), error: require('../../../assets/images/country-loading.png')}" />
       </div>
       <div class="des right">
         <h3>申请EP要求：</h3>
@@ -43,7 +43,7 @@
 
     <div class="clearfix">
       <div class="img right">
-        <img src="../../../assets/images/emigrant-img4.jpg" />
+        <img v-lazy="{src: require('../../../assets/images/emigrant-img4.jpg'), loading: require('../../../assets/images/country-loading.png'), error: require('../../../assets/images/country-loading.png')}" />
       </div>
       <div class="des left">
         <h3>申请新加坡永久居民(PR)的条件</h3>
@@ -58,7 +58,7 @@
 
     <div class="clearfix">
       <div class="img left">
-        <img src="../../../assets/images/emigrant-img5.jpg" />
+        <img v-lazy="{src: require('../../../assets/images/emigrant-img5.jpg'), loading: require('../../../assets/images/country-loading.png'), error: require('../../../assets/images/country-loading.png')}" />
       </div>
       <div class="des right">
         <h3>申请新加坡公民的条件：</h3>
