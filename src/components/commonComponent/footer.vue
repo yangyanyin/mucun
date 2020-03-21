@@ -2,27 +2,7 @@
   <div class="footer" :class="{'is-fixed': isFixed}">
     <div class="pc-max-width clearfix">
       <div class="left">
-        <div class="hotline">
-          咨询热线: 
-          <h3>+65 6909 8015</h3>
-          <span><img src="../../assets/images/footer-iphone.png" /></span>
-          <span><img src="../../assets/images/footer-email.png" /></span>
-          <span><img src="../../assets/images/footer-wx.png" /></span>
-        </div>
-        <div class="footer-nav clearfix">
-          <div class="menu left">
-            <a href="">关于我们</a>
-            <a href="">常见问题</a>
-            <a href="">成功案例</a>
-            <a href="">本站搜索</a>
-          </div>
-          <div class="menu left">
-            <a href="">欧盟护照</a>
-            <a href="">英联邦护照</a>
-            <a href="">新加坡移民</a>
-            <a href="">热点新闻</a>
-          </div>
-        </div>
+        <Hotline />
         <div class="address">
           <p>公司地址：</p>
           <p>8 Marina Boulevard #14-03A ,Marina Bay Financial Centre Tower 1 S018981</p>
@@ -48,7 +28,11 @@
   </div>
 </template>
 <script>
+import Hotline from './Hotline'
 export default {
+  components: {
+    Hotline
+  },
   data() {
     return {
       showReturnTop: false,
@@ -102,6 +86,13 @@ export default {
       display: none;
     }
   }
+  .hotline {
+    padding: 0 0 40px 0;
+    border-bottom: 1px solid #3a474c;
+    @media (max-width: 767px) {
+      padding: 0 0 20px 0;
+    }
+  }
 }
 .hotline {
   color: #efd492;
@@ -112,7 +103,8 @@ export default {
   padding-bottom: 40px;
   h3 {
     display: inline-block;
-    font-size: 18px;
+    font-size: 30px;
+    font-weight: bold;
     margin: 0 5px 0 10px;
   }
   span {
@@ -148,6 +140,11 @@ export default {
     display: block;
     color: #fff;
     font-size: 16px;
+    @media(min-width: 767px) {
+      &:hover {
+        color: #efd492;
+      }
+    }
   }
   @media (max-width: 767px) {
     padding: 0;
@@ -207,7 +204,8 @@ export default {
   border-top: 1px solid #27363a;
   line-height: 60px;
   color: #fff;
-  opacity: .8;
+  font-size: 12px;
+  opacity: .5;
   text-align: center;
   @media (max-width: 767px) {
     line-height: 20px;

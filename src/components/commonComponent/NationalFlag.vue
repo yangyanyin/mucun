@@ -32,7 +32,7 @@
 <style scoped lang="less">
 .flag {
   text-align: center;
-  padding: 55px 0;
+  padding: 55px 30px;
   display:flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -40,14 +40,13 @@
     display: inline-block;
     width: 65px;
     border-radius: 4px;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     transition: .4s;
     img {
       display: block;
       width: 100%;
     }
     &:hover {
-      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 4px 6px 4px rgba(197, 197, 197, 0.3);
     }
   }
   @media(max-width: 767px) {

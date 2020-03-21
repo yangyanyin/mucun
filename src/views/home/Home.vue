@@ -9,7 +9,7 @@
         <Flag />
       </div>
       <div class="animation-show">
-        <video width="100%" controls>
+        <video width="100%" controls="controls" autoplay="autoplay" muted>
           <source src="../../assets/images/video.mp4" type="video/mp4" />Your browser does not support the video tag.
         </video>
       </div>
@@ -71,7 +71,7 @@
     <!-- 新加波移民 -->
     <div class="singapore pc-max-width margin-t-80">
       <div class="public-title animation-show">
-        <h3>新加波移民</h3>
+        <h3>新加坡移民</h3>
         <span>
           <i>
             <img src="../../assets/images/title-img1.png" />
@@ -840,27 +840,31 @@ export default {
       background-position: center center;
       transition: all 500ms ease;
       height: 100%;
-      background-position: top center;
-      background-size: auto 520px;
-      @media (max-width: 1100px) {
-        background-size: auto 450px;
-      }
+      background-position: center center;
     }
     ul li a {
       display: block;
       width: 100%;
-      height: 120px;
-      text-align: center;
+      height: 100%;
       position: relative;
       overflow: hidden;
       z-index: 3;
+      text-align: left;
       vertical-align: bottom;
-      padding: 30px 10px 0;
+      padding: 30px 30px 0;
       box-sizing: border-box;
       color: #fff;
       text-decoration: none;
       transition: all 200ms ease;
-      background: rgba(0, 0, 0, 0.4);
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 110px;
+        background: rgba(0, 0, 0, 0.4);
+      }
     }
     ul li a * {
       margin: 0;
@@ -870,17 +874,17 @@ export default {
       z-index: 5;
       white-space: nowrap;
       overflow: hidden;
-      -webkit-transform: translateX(-20px);
-      transform: translateX(-20px);
       -webkit-transition: all 400ms ease;
       transition: all 400ms ease;
     }
+    ul li a p {
+      position: absolute;
+      bottom: 25px;
+    }
     ul li a h2 {
-      text-overflow: clip;
       font-size: 24px;
-      text-transform: uppercase;
-      margin-bottom: 2px;
-      padding-bottom: 5;
+      position: absolute;
+      bottom: 50px;
     }
     ul:hover li {
       width: 15%;

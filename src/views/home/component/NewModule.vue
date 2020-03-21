@@ -88,6 +88,9 @@ export default {
   }
   a {
     color: #B9B9B9;
+    &:hover {
+      
+    }
   }
   @media (max-width: 767px) {
     margin-top: 20px;
@@ -131,7 +134,12 @@ export default {
       p {
         font-size: 12px;
         color: #B9B9B9;
-        padding: 10px 0 20px;
+        height: 34px;
+        margin: 10px 0 20px;
+        overflow: hidden;     
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
       }
       span {
         color: #B9B9B9;
