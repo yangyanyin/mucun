@@ -4,25 +4,49 @@
     <div v-else class="passport">
       <div class="scroll">
         <div class="passport-list">
+          <div class="wap-img">
+            <ul>
+              <li></li>
+              <li v-for="(lists, index) in passportList" :key="index" :class="{on: index === countryIndex}">
+                <div class="img" @click="switchCountry(index)">
+                  <span>
+                    <img :src="lists.passport_img" />
+                  </span>
+                  <h3>{{lists.name}}</h3>
+                </div>
+              </li>
+            </ul>
+          </div>
           <ul class="clearfix">
             <li class="filter-li">
               <span @click="showAllFilter()">
                 显示全部
                 <em :class="{open:filterResult.length > 0}"></em>
               </span>
-              <span class="on">
+              <span class="on" @click.stop="showFilter(true)">
                 筛选
-                <div class="filter">
-                  <p v-for="(obj, type, key) in filterType" :key="key" @click="filterClick(type)">
-                    <i :class="{set:filterResult.indexOf(type) >= 0}"></i>
-                    {{type}}
-                  </p>
+                <div class="filter" :class="{show: showFilterType}">
+                  <div class="close" @click.stop="showFilter(false)"><img src="../../assets/images/close-black.png"></div>
+                  <h2>筛选</h2>
+                  <div class="sc">
+                    <h3 @click="showAllFilter()">
+                      显示全部
+                      <em :class="{open:filterResult.length > 0}"></em>
+                    </h3>
+                    <p v-for="(obj, type, key) in filterType" :key="key" @click="filterClick(type)">
+                      <i :class="{set:filterResult.indexOf(type) >= 0}"></i>
+                      {{type}}
+                    </p>
+                  </div>
                 </div>
               </span>
             </li>
-            <li v-for="(lists, index) in passportList" :key="index">
-              <div class="img">
-                <img :src="lists.passport_img" />
+            <li v-for="(lists, index) in passportList" :key="index" :class="{'show': index === countryIndex}">
+              <div class="img web-img" @click="switchCountry(index)">
+                <span>
+                  <img :src="lists.passport_img" />
+                </span>
+                <h3>{{lists.name}}</h3>
               </div>
               <div class="clearfix info">
                 <strong class="name">{{lists.name}}</strong>
@@ -38,10 +62,10 @@
             </li>
           </ul>
         </div>
-        <div class="visa-country clearfix">
+        <div class="visa-country clearfix" v-if="allCountry">
           <div class="country-flag left">
-            <ul class="clearfix" v-for="(obj, name, key) in newData || allCountry" :key="key" ref="visa_country">
-              <li class="fixed">
+            <ul class="clearfix" v-for="(obj, name, key) in newData || allCountry" :key="key" ref="visa_country" :index="key">
+              <li class="fixed" >
                 <img :src="obj.flag" />
                 {{name}}
               </li>
@@ -66,7 +90,7 @@
 
 <script>
 import Layout from "../../components/layout.vue";
-import { animation, windowScroll } from "../../assets/js/config.js";
+import { animation, windowScroll, device } from "../../assets/js/config.js";
 import loadingPage from "../../components/commonComponent/loadingPage.vue";
 
 export default {
@@ -83,17 +107,21 @@ export default {
       filterType: {},
       filterResult: [],
       filterCountry: {},
-      newData: ''
+      newData: '',
+      countryIndex: 0,
+      showFilterType: false
     };
   },
   watch: {
     filterResult() {
       setTimeout(() => {
-        this.newData = {}
-        for (let name in this.allCountry) {
-          for (let i = 0; i < this.filterResult.length; i++) {
-            if (JSON.stringify(this.allCountry[name]).indexOf(this.filterResult[i]) >= 0) {
-              this.newData[name] = this.allCountry[name]
+        if (this.filterResult.length > 0) {
+          this.newData = {}
+          for (let name in this.allCountry) {
+            for (let i = 0; i < this.filterResult.length; i++) {
+              if (JSON.stringify(this.allCountry[name]).indexOf(this.filterResult[i]) >= 0) {
+                this.newData[name] = this.allCountry[name]
+              }
             }
           }
         }
@@ -124,11 +152,15 @@ export default {
     },
     showAllFilter() {
       this.newData = '';
+      this.filterResult = []
     },
     filterClick(type) {
       for (let i = 0; i < this.filterResult.length; i++) {
         if (this.filterResult[i] === type) {
           this.filterResult.splice(i, 1);
+          if (this.filterResult.length === 0) {
+            this.showAllFilter()
+          }
           return;
         }
       }
@@ -140,38 +172,9 @@ export default {
         url: process.env.VUE_APP_API + "/v1/passportsInfo"
       }).then(res => {
         if (res.data.code === 200) {
+          localStorage.setItem('passportAll', JSON.stringify(res.data.data))
           this.passportList = res.data.data;
-          let all = res.data.data;
-          for (let i = 0; i < all.length; i++) {
-            for (let s = 0; s < all[i].visa_countries.length; s++) {
-              this.allCountry[all[i].visa_countries[s].name] = {};
-              this.filterType[all[i].visa_countries[s].type] = "";
-            }
-          }
-
-          for (let name in this.allCountry) {
-            for (let i = 0; i < all.length; i++) {
-              for (let s = 0; s < all[i].visa_countries.length; s++) {
-                this.allCountry[name][all[i].name] = "";
-              }
-            }
-          }
-
-          for (let name in this.allCountry) {
-            for (let a in this.allCountry[name]) {
-              for (let i = 0; i < all.length; i++) {
-                for (let s = 0; s < all[i].visa_countries.length; s++) {
-                  if (name === all[i].visa_countries[s].name) {
-                    this.allCountry[name].flag = all[i].visa_countries[s].flag;
-                    if (all[i].name === a) {
-                      this.allCountry[name][a] = all[i].visa_countries[s].type;
-                    }
-                  }
-                }
-              }
-            }
-          }
-
+          this.switchCountry(device() === 'wap' ? 0 : '-1')
           this.loadingSuccess = true;
           setTimeout(function() {
             let scroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -180,6 +183,47 @@ export default {
           }, 10);
         }
       });
+    },
+    switchCountry (index) {
+      this.allCountry = {}
+      this.filterType = {}
+      let all = JSON.parse(localStorage.getItem('passportAll'))
+      if (index >= 0 && device() === 'wap') {
+        this.countryIndex = index
+        all = JSON.parse(localStorage.getItem('passportAll')).splice(index, 1)
+      }
+      for (let i = 0; i < all.length; i++) {
+        for (let s = 0; s < all[i].visa_countries.length; s++) {
+          this.allCountry[all[i].visa_countries[s].name] = {};
+          this.filterType[all[i].visa_countries[s].type] = "";
+        }
+      }
+      for (let name in this.allCountry) {
+        for (let i = 0; i < all.length; i++) {
+          for (let s = 0; s < all[i].visa_countries.length; s++) {
+            this.allCountry[name][all[i].name] = "";
+          }
+        }
+      }
+      for (let name in this.allCountry) {
+        for (let a in this.allCountry[name]) {
+          for (let i = 0; i < all.length; i++) {
+            for (let s = 0; s < all[i].visa_countries.length; s++) {
+              if (name === all[i].visa_countries[s].name) {
+                this.allCountry[name].flag = all[i].visa_countries[s].flag;
+                if (all[i].name === a) {
+                  this.allCountry[name][a] = all[i].visa_countries[s].type;
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    showFilter (type) {
+      if (device() === 'wap') {
+        this.showFilterType = type
+      }
     }
   },
   mounted() {
@@ -192,13 +236,11 @@ export default {
       }
 
       let filterLi = document.getElementsByClassName('filter-li')[0]
-      if (filterLi) {
+      if (filterLi && device() !== 'wap') {
         let scroll = document.documentElement.scrollTop || document.body.scrollTop;
         filterLi.style.top = 180 - scroll  + 'px'
       }
     })
-
-    
   }
 };
 </script>
@@ -208,6 +250,10 @@ export default {
   padding: 180px 0 50px;
   margin: auto;
   width: 1925px;
+  @media (max-width: 767px) {
+    padding: 60px 0 50px;
+    width: 100%;
+  }
 }
 .passport-list {
   padding-left: 192px;
@@ -220,7 +266,6 @@ export default {
     height: 105px;
     border-bottom: 1px solid #0f1f24;
     border-right: 1px solid #0f1f24;
-    cursor: pointer;
     &:first-child {
       padding: 0;
       width: 10%;
@@ -233,9 +278,11 @@ export default {
           border-bottom: 1px solid #14252b;
         }
         &:last-child {
-          &:hover {
-            .filter {
-              display: block;
+          @media (min-width: 767px) {
+            &:hover {
+              .filter {
+                display: block;
+              }
             }
           }
         }
@@ -244,10 +291,16 @@ export default {
     .img {
       max-width: 57px;
       float: left;
-      border: 1px solid #ffe19a;
       padding: 1px;
       margin-right: 15px;
       border-radius: 2px;;
+      span {
+        display: block;
+         border: 1px solid #ffe19a;
+      }
+      h3 {
+        display: none;
+      }
       img {
         width: 100%;
       }
@@ -360,6 +413,12 @@ export default {
       border-radius: 3px;
       color: #111;
       text-align: left;
+      h3, h2 {
+        display: none;
+      }
+      .close {
+        display: none;
+      }
       p {
         i {
           display: inline-block;
@@ -384,6 +443,166 @@ export default {
             }
           }
         }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 10px 5px 0;
+    position: relative;
+    ul.clearfix {
+      border-bottom: 1px solid #0f1f24;
+    }
+    .wap-img {
+      white-space: nowrap;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        height: 0px;
+      }
+      li {
+        display: inline-block;
+        padding: 0;
+        border: none;
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+    li {
+      display: none;
+      width: 120px;
+      height: auto;
+      float: none;
+      text-align: center;
+      padding: 0 0 60px 0;
+      border-right: none;
+      .img {
+        max-width: 100%;
+        float: none;
+        margin: 0 5px;
+        span {
+          margin: auto;
+          width: 80px;
+          border: none;
+          padding: 2px;
+        }
+        h3 {
+          display: block;
+          padding: 10px 0 15px;
+        }
+      }
+      &.on {
+        span {
+          border: 1px solid #ffe19a;
+        }
+        h3 {
+          color: #ffe19a;
+        }
+      }
+      &.show {
+        width: auto;
+        border: none;
+        display: block;
+      }
+      .info {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 12px 10px 0 10px;
+        border-top: 1px solid #0f1f24;
+        strong {
+          font-size: 26px;
+          &.name {
+            display: none;
+          }
+        }
+        div {
+          i {
+            top: -8px;
+            opacity: .8;
+          }
+          &.country {
+            padding-right: 15px;
+            &:after{
+              height: 19px;
+            }
+          }
+        }
+      }
+    }
+    .filter-li {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      width: 90px !important;
+      left: auto;
+      border: none;
+      z-index: 999;
+      display: block;
+      span {
+        color: #ffe19a;
+        &:last-child {
+          line-height: normal;
+          height: auto;
+          padding-top: 10px;
+          &:before{
+            top: 15px;
+            left: 14px;
+          }
+          &:after{
+            right: 15px;
+            top: 17px;
+          }
+        }
+        &:first-child {
+          display: none;
+        }
+      }
+      .filter {
+        position: fixed;
+        top: auto;
+        left: 0;
+        bottom: -110%;
+        height: 100%;
+        width: 100%;
+        display: block;
+        z-index: 9999;
+        background: #fff;
+        transition: .3s;
+        padding: 15px 50px;
+        border-radius: 0;
+        .close {
+          position: fixed;
+          right: 15px;
+          top: 15px;
+          width: 20px;
+          height: 20px;
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+        &.show {
+          bottom: 0;
+          .close {
+            display: block;
+          }
+        }
+        .sc {
+          position: absolute;
+          left: 50px;
+          top: 65px;
+          right: 0;
+          bottom: 50px;
+          overflow: auto;
+        }
+        h2 {
+          font-size: 18px;
+          padding-bottom: 20px;
+        }
+        h3, h2 {
+          display: block;
+        }
+
       }
     }
   }
@@ -445,6 +664,18 @@ export default {
       &.type4 {
         background: #90711f;
       }
+    }
+  }
+  @media (max-width: 767px) {
+    .visa {
+      width: calc(100% - 192px);
+      padding: 0;
+      li {
+        width: 100%;
+      }
+    }
+    .country-flag {
+      position: static;
     }
   }
 }

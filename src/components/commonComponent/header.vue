@@ -157,9 +157,6 @@ export default {
       .img-text {
         width: 150px;
         margin-left: 20px;
-        @media (max-width: 767px) {
-          display: none;
-        }
       }
     }
   }
@@ -185,9 +182,12 @@ export default {
     }
   }
   .img-text {
-   width: 220px;
-   margin-left: 40px; 
-   transition: .8s;
+    width: 220px;
+    margin-left: 40px; 
+    transition: .8s;
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
   img {
     display: block;

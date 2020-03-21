@@ -3,6 +3,14 @@
     <div class="pc-max-width clearfix">
       <div class="left">
         <Hotline />
+        <div class="footer-nav clearfix">
+          <div class="menu left">
+            <router-link to="/about">关于我们</router-link>
+            <router-link to="/news-case">成功案例</router-link>
+            <router-link to="/news-thematic">护照专题</router-link>
+            <router-link to="/news-expert">新加波移民专家</router-link>
+          </div>
+        </div>
         <div class="address">
           <p>公司地址：</p>
           <p>8 Marina Boulevard #14-03A ,Marina Bay Financial Centre Tower 1 S018981</p>

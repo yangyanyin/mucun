@@ -1,6 +1,6 @@
 <template>
   <div class="contact-us pc-max-width margin-t-80">
-    <div class="content animation-show clearfix">
+    <div class="content clearfix">
       <div class="map left">
         <div class="img">
           <img src="../../assets/images/map-img.jpg" />

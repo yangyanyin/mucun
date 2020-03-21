@@ -221,7 +221,7 @@
           </span>
           <p>Our Advantages</p>
         </div>
-        <div class="content">
+        <div class="content animation-show">
           <div class="list">
             <img src="../../assets/images/advantage-icon1.png" />
             <p>

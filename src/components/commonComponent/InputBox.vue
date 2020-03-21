@@ -3,7 +3,7 @@
     <h3>免费咨询服务</h3>
     <p>
       <i>电话:</i>
-      <strong>+65 6909 8015</strong>
+      <strong>+65 8866 5586</strong>
     </p>
     <p>
       <i>邮箱:</i>sgpec@spgec.sg
@@ -42,7 +42,7 @@
         <p class="p1">您也可以拨打</p>
         <p class="tel">(+65) 8866 5586</p>
         <p class="p2">进行直接咨询</p>
-        <a href="/passport">了解更多</a>
+        <router-link to="/passport">了解更多</router-link>
       </div>
     </div>
   </div>
