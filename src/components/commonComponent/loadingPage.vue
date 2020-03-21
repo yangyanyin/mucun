@@ -1,26 +1,21 @@
 <template>
   <div class="loading">
-    <img src="../../assets/images/loading.png" />
+    <img src="../../assets/images/loading.gif" />
   </div>
 </template>
 <style lang="less" scoped>
 .loading {
   display: block;
   padding: 340px 0 250px;
+  img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+  }
   @media (max-width: 767px) {
     padding: 240px 0 150px;
-    img {
-      width: 32px;
-      height: 32px;
-    }
+    
   }
-}
-img {
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin: auto;
-  animation: proRotate 0.8s infinite both;
-  -webkit-animation: proRotate 0.8s infinite both;
 }
 </style>

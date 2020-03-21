@@ -537,7 +537,7 @@ export default {
       width: 90px !important;
       left: auto;
       border: none;
-      z-index: 999;
+      z-index: 99;
       display: block;
       span {
         color: #ffe19a;

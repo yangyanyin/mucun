@@ -1,5 +1,6 @@
 <template>
-  <Layout>
+  <Loading v-if="!loadingStatus" />
+  <Layout v-else>
     <!-- banner -->
     <Banner :bannerImgList="bannerImg" />
 
@@ -275,6 +276,7 @@ import { animation, windowScroll, device } from "../../assets/js/config.js";
 import ContactUs from "../../components/commonComponent/ContactUs";
 import Flag from "../../components/commonComponent/NationalFlag";
 import NewModule from './component/NewModule'
+import Loading from '../../components/commonComponent/loadingPage'
 
 export default {
   name: "app",
@@ -283,7 +285,8 @@ export default {
     Banner,
     ContactUs,
     Flag,
-    NewModule
+    NewModule,
+    Loading
   },
   data() {
     return {
@@ -314,20 +317,28 @@ export default {
           url: "/emigrant/four",
           image: require("../../assets/images/project4.jpg")
         }
-      ]
-    };
+      ],
+      loadingStatus: false
+    }
   },
   methods: {},
   mounted() {
+    setTimeout(() => {
+      this.loadingStatus = true
+      let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+      windowScroll();
+      setTimeout(function() {
+        animation(scroll);
+      }, 10);
+    }, 2000)
+
     this.$http({
       method: "get",
       url: process.env.VUE_APP_API + "/v1/index"
     }).then(res => {
       if (res.data.code === 200) {
         this.bannerImg = res.data.data.banners[device()];
-        setTimeout(function() {
-          animation(scroll);
-        }, 10);
+        
       }
     });
 
@@ -346,8 +357,6 @@ export default {
         this.countryPassport = countrys;
       }
     });
-    windowScroll();
-    let scroll = document.documentElement.scrollTop || document.body.scrollTop;
   }
 };
 </script>
