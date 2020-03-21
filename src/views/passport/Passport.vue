@@ -469,7 +469,7 @@ export default {
     }
     li {
       display: none;
-      width: 120px;
+      width: 105px;
       height: auto;
       float: none;
       text-align: center;
@@ -488,6 +488,7 @@ export default {
         h3 {
           display: block;
           padding: 10px 0 15px;
+          font-size: 12px;
         }
       }
       &.on {
