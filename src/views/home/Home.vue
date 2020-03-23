@@ -97,7 +97,7 @@
     </div>
 
     <!-- 移民专家 -->
-    <div class="expert pc-max-width margin-t-80">
+    <div class="expert pc-max-width margin-t-80" v-if="newsData.expert.news.length > 0">
       <div class="public-title animation-show">
         <h3>新加波移民专家</h3>
         <span>
@@ -107,7 +107,7 @@
         </span>
         <p>Singapore MIGRATION EXPERT</p>
       </div>
-      <NewModule type="expert" />
+      <NewModule type="expert" :newsList="newsData.expert" />
     </div>
 
     <!-- 全球护照精选 -->
@@ -171,7 +171,7 @@
     </div>
 
     <!-- 护照专题 -->
-    <div class="thematic pc-max-width margin-t-80">
+    <div class="thematic pc-max-width margin-t-80" v-if="newsData.thematic.news.length > 0">
       <div class="public-title animation-show">
         <h3>护照专题</h3>
         <span>
@@ -181,11 +181,11 @@
         </span>
         <p>Passport topics</p>
       </div>
-      <NewModule type="thematic" />
+      <NewModule type="thematic" :newsList="newsData.thematic" />
     </div>
 
     <!-- 成功案例 -->
-    <div class="success-case margin-t-80">
+    <div class="success-case margin-t-80" v-if="newsData.case.news.length > 0">
       <div class="public-title animation-show">
         <h3>成功案例</h3>
         <span>
@@ -211,7 +211,7 @@
     </div>
 
     <!-- 我们的优势 -->
-    <div class="advantage margin-t-80">
+    <div class="advantage">
       <div class="pc-max-width">
         <div class="public-title animation-show">
           <h3>我们的优势</h3>
@@ -318,7 +318,12 @@ export default {
           image: require("../../assets/images/project4.jpg")
         }
       ],
-      loadingStatus: false
+      loadingStatus: false,
+      newsData: {
+        case: '',
+        thematic: '',
+        expert: ''
+      }
     }
   },
   methods: {},
@@ -355,6 +360,29 @@ export default {
           );
         }
         this.countryPassport = countrys;
+      }
+    });
+
+    this.$http({
+      method: "get",
+      url: process.env.VUE_APP_API + "/v1/newsList",
+      params: {
+        size: 12
+      }
+    }).then(res => {
+      if (res.data.code === 200) {
+        let news = res.data.data.news_list
+        for (let i = 0; i < news.length; i++) {
+          if (news[i].name === '护照专题' ) {
+            this.newsData.thematic = news[i]
+          }
+          if (news[i].name === '新加坡移民专家' ) {
+            this.newsData.expert = news[i]
+          }
+          if (news[i].name === '成功案例' ) {
+            this.newsData.case = news[i]
+          }
+        }
       }
     });
   }

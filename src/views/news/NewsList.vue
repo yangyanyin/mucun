@@ -10,17 +10,16 @@
             <img :src="banner[newsType].img" />
           </div>
           <ul class="list">
-            <li v-for="i in 6" :key="i" class="clearfix animation-show">
-              <router-link class="img" to="1"><img src="../../assets/images/new-img.png" /></router-link>
+            <li v-for="(news, key) in newData" :key="key" class="clearfix animation-show">
+              <router-link class="img" :to="'/news-details/' + news.id"><img :src="news.img" /></router-link>
               <div class="des">
-                <router-link class="t" to="/news-details/1">标题标题标题</router-link>
-                <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述
-                  描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
+                <router-link class="t" :to="'/news-details/' + news.id">{{news.title}}</router-link>
+                <p v-html="news.content"></p>
                 <div class="left clearfix"> 
-                  <span>2020-11-22</span>
-                  <span>浏览量2333</span>
+                  <span>{{news.created_at}}</span>
+                  <span>{{news.read_count}}</span>
                 </div>
-                <router-link to="1" class="more right">了解详情</router-link>
+                <router-link :to="'/news-details/' + news.id" class="more right">了解详情</router-link>
               </div>
             </li>
           </ul>
@@ -51,24 +50,41 @@ export default {
       banner: {
         case: {
           img: require('../../assets/images/news-case.jpg'),
-          title: '成功案例'
+          title: '成功案例',
+          id: 3
         },
         thematic: {
           img: require('../../assets/images/news-thematic.jpg'),
-          title: '护照专题'
+          title: '护照专题',
+          id: 1
         },
         expert: {
           img: require('../../assets/images/news-expert.jpg'),
-          title: '新加坡移民专家'
+          title: '新加坡移民专家',
+          id: 2
         }
       },
-      newsType: this.$route.name
+      newsType: this.$route.name,
+      newData: ''
     }
   },
   mounted () {
-    let scroll = document.documentElement.scrollTop || document.body.scrollTop;
-    animation(scroll);
-    windowScroll();
+    this.$http({
+      method: "get",
+      url: process.env.VUE_APP_API + "/v1/newsList",
+      params: {
+        category_id: this.banner[this.newsType].id,
+      }
+    }).then(res => {
+      if (res.data.code === 200) {
+        this.newData = res.data.data.news_list
+        setTimeout(()=> {
+          let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+          animation(scroll);
+          windowScroll();
+        }, 100)
+      }
+    });
   }
 }
 </script>
@@ -109,6 +125,9 @@ export default {
       color: #111;
       font-size: 18px;
       font-weight: bold;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     p {
       height: 72px;

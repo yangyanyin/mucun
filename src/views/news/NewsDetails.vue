@@ -1,23 +1,22 @@
 <template>
   <Layout>
-    <div class="news">
+    <loadingPage v-if="!loadingStatus" />
+    <div class="news" v-else>
       <div class="content pc-max-width clearfix">
         <div class="crumbs">
-          <router-link to="/">首页</router-link> > <router-link to="/">成功案例</router-link> > 详情详情详情
+          <router-link to="/">首页</router-link> > <router-link :to="navCrumbs[newsDetails.news.category_id-1].url">{{navCrumbs[newsDetails.news.category_id-1].title}}</router-link> > {{newsDetails.news.title}}
         </div>
         <div class="left news-details">
           <div class="title clearfix">
-            <h3>标题标题标题标题标题标题</h3>
+            <h3>{{newsDetails.news.title}}</h3>
             <span class="label left">标签：啊实打实在这次</span>
-            <span class="look right">浏览量23421</span>
-            <span class="time right">2020-10-11</span>
+            <span class="look right">{{newsDetails.news.read_count}}</span>
+            <span class="time right">{{newsDetails.news.created_at}}</span>
           </div>
-          <div class="details">
-            详情钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱
-          </div>
-          <div class="other">
-            <p>上一篇：<router-link to="12">上上上上上上上上上上</router-link></p>
-            <p>下一篇：<router-link to="12">下下下下下下下下下下</router-link></p>
+          <div class="details" v-html="newsDetails.news.content"></div>
+          <div class="other" v-if="newsDetails.prev_news || newsDetails.next_news">
+            <p v-if="newsDetails.prev_news">上一篇：<router-link :to="'/news-details/' + newsDetails.prev_news.id">{{newsDetails.prev_news.title}}</router-link></p>
+            <p v-if="newsDetails.next_news">下一篇：<router-link :to="'/news-details/' + newsDetails.next_news.id">{{newsDetails.next_news.title}}</router-link></p>
           </div>
         </div>
         <div class="right rec">
@@ -36,35 +35,61 @@
 import Layout from '../../components/layout'
 import Flag from ".././../components/commonComponent/NationalFlag";
 import Side from './component/SideNews'
+import loadingPage from '../../components/commonComponent/loadingPage'
 import { animation, windowScroll } from "../../assets/js/config.js";
 export default {
   components: {
     Layout,
     Side,
-    Flag
+    Flag,
+    loadingPage
   },
   data () {
     return {
-      banner: {
-        case: {
-          img: require('../../assets/images/news-case.jpg'),
-          title: '成功案例'
+      newsDetails: '',
+      loadingStatus: false,
+      navCrumbs: [
+        {
+          title: '护照专题',
+          url: '/news-thematic'
         },
-        thematic: {
-          img: require('../../assets/images/news-thematic.jpg'),
-          title: '护照专题'
+        {
+          title: '新加坡移民专家',
+          url: '/news-expert'
         },
-        expert: {
-          img: require('../../assets/images/news-expert.jpg'),
-          title: '新加坡移民专家'
+        {
+          title: '成功案例',
+          url: '/news-case'
         }
-      },
+      ]
     }
   },
-  mounted () {
-    let scroll = document.documentElement.scrollTop || document.body.scrollTop;
-    animation(scroll);
-    windowScroll();
+  created () {
+    this.fetchData()
+  },
+  watch: {
+    '$route': 'fetchData'
+  },
+  methods: {
+    fetchData () {
+      this.$http({
+        method: "get",
+        url: process.env.VUE_APP_API + "/v1/news",
+        params: {
+          id: this.$route.params.id
+        }
+      }).then(res => {
+        if (res.data.code === 200) {
+          this.loadingStatus = true
+          this.newsDetails = res.data.data
+          setTimeout(()=> {
+            let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+            animation(scroll);
+            windowScroll();
+          }, 100)
+        }
+      });
+    }
   }
 }
 </script>

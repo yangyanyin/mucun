@@ -7,9 +7,9 @@
     <div class="content clearfix">
       <div class="right">
         <el-carousel trigger="click" height="388px">
-          <template v-for="(news, index) in data" >
+          <template v-for="(news, index) in newsList.news" >
             <el-carousel-item :key="index" v-if="index < 3">
-              <router-link to="/news-details/1">
+              <router-link :to="'/news-details/' + news.id">
                 <h3>{{news.title}}</h3>
                 <img @load="elDome" :src="news.img" />
               </router-link>
@@ -18,13 +18,13 @@
         </el-carousel>
       </div>
       <div class="left">
-        <template v-for="(news, index) in data" >
-          <router-link to="/news-details/1" class="a" :key="index" v-if="index < 3">
+        <template v-for="(news, index) in newsList.news" >
+          <router-link :to="'/news-details/' + news.id" class="a" :key="index" v-if="index < 3">
             <img :src="news.img" />
             <h3>{{news.title}}</h3>
-            <p>{{news.des}}</p>
-            <span class="left">2020.10.23</span>
-            <span class="right"><router-link to="/news-details/1">了解详情</router-link></span>
+            <p v-html="news.content"></p>
+            <span class="left">{{news.created_at}}</span>
+            <span class="right"><router-link :to="'/news-details/' + news.id">了解详情</router-link></span>
           </router-link>
         </template>
       </div>
@@ -36,7 +36,8 @@
 import data from '../../../assets/js/newsData'
 export default {
   props: {
-    type: String
+    type: String,
+    newsList: Object
   },
   data () {
     return {
@@ -125,6 +126,9 @@ export default {
       h3 {
         color: #111;
         font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       img {
         float: left;
@@ -134,8 +138,8 @@ export default {
       p {
         font-size: 12px;
         color: #B9B9B9;
-        height: 34px;
-        margin: 10px 0 20px;
+        height: 36px;
+        margin: 10px 0 18px;
         overflow: hidden;     
         display: -webkit-box;
         -webkit-line-clamp: 2;
