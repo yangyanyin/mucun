@@ -13,7 +13,7 @@
             <span class="look right">{{newsDetails.news.read_count}}</span>
             <span class="time right">{{newsDetails.news.created_at}}</span>
           </div>
-          <div class="details" v-html="newsDetails.news.content"></div>
+          <div class="details" v-html="newsDetailsContent"></div>
           <div class="other" v-if="newsDetails.prev_news || newsDetails.next_news">
             <p v-if="newsDetails.prev_news">上一篇：<router-link :to="'/news-details/' + newsDetails.prev_news.id">{{newsDetails.prev_news.title}}</router-link></p>
             <p v-if="newsDetails.next_news">下一篇：<router-link :to="'/news-details/' + newsDetails.next_news.id">{{newsDetails.next_news.title}}</router-link></p>
@@ -47,6 +47,7 @@ export default {
   data () {
     return {
       newsDetails: '',
+      newsDetailsContent: '',
       loadingStatus: false,
       navCrumbs: [
         {
@@ -82,6 +83,7 @@ export default {
         if (res.data.code === 200) {
           this.loadingStatus = true
           this.newsDetails = res.data.data
+          this.newsDetailsContent = res.data.data.news.content.replace(/\/images\/default/g, 'https://cms.aicassets.com/images/default/')
           setTimeout(()=> {
             let scroll = document.documentElement.scrollTop || document.body.scrollTop;
             animation(scroll);
@@ -138,6 +140,9 @@ export default {
   }
   .details {
     padding: 30px 25px;
+    img {
+      max-width: 100%;
+    }
   }
   .other {
     padding: 25px;
@@ -186,6 +191,14 @@ export default {
   }
   .rec {
     width: 100%;
+  }
+}
+</style>
+<style lang="less">
+.news-details .details {
+  padding: 30px 25px;
+  img {
+    max-width: 100%;
   }
 }
 </style>
