@@ -1,8 +1,15 @@
 <template>
   <div class="hotline">
     咨询热线: 
-    <h3>+65 8866 5586</h3>
-    <span class="tel"><img class="s" src="../../assets/images/footer-iphone.png" />
+    <h3><img src="../../assets/images/hto-tel.png" /></h3>
+    <span class="tel">
+      <img class="s" src="../../assets/images/telegram.png" />
+      <div>
+        <p>+65 8866 5586</p>
+      </div>
+    </span>
+    <span class="tel iphone">
+      <img class="s" src="../../assets/images/footer-iphone.png" />
       <div>
         <p>+65 8866 5586</p>
       </div>
@@ -28,19 +35,21 @@
   align-items: center;
   padding-top: 50px;
   transition: .8s;
-
-  
   h3 {
     display: inline-block;
-    font-size: 20px;
-    font-weight: bold;
     margin: 0 5px 0 10px;
+    img {
+      display: block;
+      width: 200px;
+      transition: .3s;
+    }
   }
   span {
     position: relative;
     display: inline-block;
     width: 24px;
     margin-left: 30px;
+    transition: .3s;
     &:last-child {
       width: 28px;
     }
@@ -57,8 +66,23 @@
       }
     }
     &.tel {
+      
       div {
-        width: 115px;
+        width: 150px;
+        p {
+          padding-left: 40px;
+          background: #fff url('../../assets/images/down-tel1.png') no-repeat 10px 10px;
+          background-size: 20px;
+        }
+      }
+      &.iphone{
+        div {
+          p {
+            padding-left: 40px;
+            background: #fff url('../../assets/images/down-tel2.png') no-repeat 10px 10px;
+            background-size: 20px;
+          }
+        }
       }
     }
     &.wx {

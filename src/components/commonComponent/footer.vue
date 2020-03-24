@@ -8,7 +8,7 @@
             <router-link to="/about">关于我们</router-link>
             <router-link to="/news-case">成功案例</router-link>
             <router-link to="/news-thematic">护照专题</router-link>
-            <router-link to="/news-expert">新加波移民专家</router-link>
+            <router-link to="/news-expert">新加坡移民专家</router-link>
           </div>
         </div>
         <div class="address">

@@ -52,7 +52,7 @@ export default {
           url: "/"
         },
         {
-          name: "新加波移民",
+          name: "新加坡移民",
           url: "/emigrant/one"
         },
         {
@@ -142,28 +142,6 @@ export default {
     }
   }
 }
-.all-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  .logo {
-    padding-top: 10px;
-    a {
-      span {
-        width: 100px;
-      }
-      .img-text {
-        width: 150px;
-        margin-left: 20px;
-      }
-    }
-  }
-  .hotline {
-    padding-top: 10px;
-  }
-}
 .logo {
   display: block;
   padding-top: 25px;
@@ -185,7 +163,7 @@ export default {
     width: 220px;
     margin-left: 40px; 
     transition: .8s;
-    @media (max-width: 767px) {
+    @media (max-width: 1040px) {
       display: none;
     }
   }
@@ -551,6 +529,41 @@ export default {
     display: block;
     z-index: 992;
     background: none;
+  }
+}
+</style>
+<style lang="less">
+.all-fixed.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  .logo {
+    padding-top: 10px;
+    a {
+      span {
+        width: 100px;
+      }
+      .img-text {
+        width: 150px;
+        margin-left: 20px;
+      }
+    }
+  }
+  .hotline {
+    padding-top: 15px;
+    h3 {
+      img {
+        width: 160px;
+      }
+    }
+    span {
+      width: 20px;
+      &:last-child {
+        width: 24px;
+      }
+    }
   }
 }
 </style>

@@ -69,7 +69,7 @@
       </div>
     </div>
 
-    <!-- 新加波移民 -->
+    <!-- 新加坡移民 -->
     <div class="singapore pc-max-width margin-t-80">
       <div class="public-title animation-show">
         <h3>新加坡移民</h3>
@@ -99,7 +99,7 @@
     <!-- 移民专家 -->
     <div class="expert pc-max-width margin-t-80" v-if="newsData.expert.news.length > 0">
       <div class="public-title animation-show">
-        <h3>新加波移民专家</h3>
+        <h3>新加坡移民专家</h3>
         <span>
           <i>
             <img src="../../assets/images/title-img1.png" />
@@ -848,7 +848,7 @@ export default {
 }
 </style>
 <style lang="less">
-/** 新加波移民 **/
+/** 新加坡移民 **/
 .singapore {
   @media (min-width: 767px) {
     .list {
