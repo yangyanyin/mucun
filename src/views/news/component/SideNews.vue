@@ -68,12 +68,29 @@ export default {
       border-top: 1px solid #f7f7f7;
       padding-top: 10px;
       a {
+        position: relative;
         display: block;
         margin: 12px 0;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         color: #444;
+        padding-left: 10px;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 4px;
+          height: 4px;
+          background: #444;
+          border-radius: 100%;
+          transform: translateY(-50%);
+        }
+        &:hover {
+          text-decoration: underline;
+          color: #447375;
+        }
       }
     }
     @media (max-width: 767px) {

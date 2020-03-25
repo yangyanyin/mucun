@@ -6,8 +6,6 @@
         <img
           v-lazy="{src: bannerImgUrl, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
         />
-        <strong class="t">{{bannerData.title}}</strong>
-        <p class="d">{{bannerData.description}}</p>
       </div>
 
       <div class="country-details">
@@ -18,7 +16,7 @@
               :key="index"
               :class="{on: index === defaultNav}"
               @click="tabClick(index)"
-            >{{navs}}</a>
+            ><i>{{navs}}</i></a>
           </div>
           <div class="content-know animation-show">
             <h3 class="country-title">移民{{countryName}}，这些好处，你都知道吗？</h3>
@@ -93,7 +91,7 @@
 </template>
 <script>
 import Layout from "../../components/layout.vue";
-import { animation, windowScroll, device } from "../../assets/js/config.js";
+import { animation, windowScroll } from "../../assets/js/config.js";
 import loadingPage from "../../components/commonComponent/loadingPage.vue";
 export default {
   components: {
@@ -150,11 +148,8 @@ export default {
         this.processList = res.data.data.process;
         this.benefitPK = res.data.data.different;
         this.bannerData = res.data.data.banner;
-        if (device() === "web") {
-          this.bannerImgUrl = res.data.data.banner.img.pc;
-        } else {
-          this.bannerImgUrl = res.data.data.banner.img.h5;
-        }
+        this.bannerImgUrl = res.data.data.banner.img.pc;
+        
         setTimeout(function() {
           let scroll =
             document.documentElement.scrollTop || document.body.scrollTop;
@@ -181,7 +176,8 @@ export default {
     width: 80px;
     height: 4px;
     margin-left: -40px;
-    background: #ebdcd1;
+    background: #447375;
+    opacity: 0.3;
   }
   &:after {
     position: absolute;
@@ -191,7 +187,8 @@ export default {
     width: 80px;
     height: 4px;
     margin-left: -40px;
-    background: #ebdcd1;
+    opacity: 0.3;
+    background: #447375;
   }
   @media (max-width: 767px) {
     font-size: 20px;
@@ -200,35 +197,15 @@ export default {
 .banner {
   position: relative;
   text-align: center;
+  width: 100%;
+  overflow: hidden;
+  height: 512px;
   img {
-    width: 100%;
-  }
-  .t {
     position: absolute;
-    top: 30%;
-    left: 0;
-    font-weight: normal;
-    width: 100%;
-    color: #fff;
-    font-size: 60px;
-  }
-  .d {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    color: #fff;
-    font-size: 44px;
-  }
-  @media (max-width: 767px) {
-    .t {
-      top: 48%;
-      font-size: 26px;
-    }
-    .d {
-      top: 68%;
-      font-size: 18px;
-    }
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 512px;
   }
 }
 .country-details {
@@ -236,28 +213,38 @@ export default {
 }
 .details-nav {
   position: relative;
-  height: 120px;
-  top: -65px;
+  z-index: 999;
+  width: 100%;
+  height: 80px;
+  margin: -40px 0 20px 0;
+  line-height: 80px;
   background: #fff;
+  border-radius: 5px;
   text-align: center;
-  line-height: 110px;
+  box-shadow: 0 3px 3px 0 #ababab;
   a {
-    position: relative;
-    font-size: 26px;
-    height: 38px;
-    margin: 0 50px;
-    color: #828282;
+    display: inline-block;
+    text-align: center;
+    line-height: 80px;
     cursor: pointer;
+    color: #111;
+    margin: 0 50px;
+    i {
+      font-size: 18px;
+    }
     &.on {
-      color: #bd8c67;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: #bd8c67;
-        left: 0;
-        bottom: -15px;
+      i {
+        color: #447375;
+        padding: 28px 0;
+        font-weight: bold;
+        border-bottom: 4px  solid #447375;
+      }
+    }
+    &:hover {
+      i {
+        color: #447375;
+        padding: 28px 0;
+        border-bottom: 4px  solid #447375;
       }
     }
   }

@@ -12,7 +12,7 @@
                 :key="index"
                 :class="{on: index === defaultNav}"
                 @click="tabClick(index)"
-              >{{navs}}</a>
+              ><i>{{navs}}</i></a>
             </div>
           </div>
           <div class="country-list">
@@ -35,7 +35,12 @@
               </div>
               <div class="right info">
                 <h3 class="name">
-                  <img :src="countrs.flag" />
+                  <img v-if="index === 0" src="../../assets/images/country8.png" />
+                  <img v-if="index === 1" src="../../assets/images/country5.png" />
+                  <img v-if="index === 2" src="../../assets/images/country4.png" />
+                  <img v-if="index === 3" src="../../assets/images/country1.png" />
+                  <img v-if="index === 4" src="../../assets/images/country2.png" />
+                  <img v-if="index === 5" src="../../assets/images/country6.png" />
                   {{countrs.name}}护照
                 </h3>
                 <ul class="clearfix">
@@ -92,12 +97,12 @@ export default {
       countryList: "",
       loadingSuccess: false,
       bannerImg: [
-        require("../../assets/images/country/list-banner1.jpg"),
-        require("../../assets/images/country/list-banner2.jpg"),
-        require("../../assets/images/country/list-banner3.jpg"),
-        require("../../assets/images/country/list-banner4.jpg"),
-        require("../../assets/images/country/list-banner5.jpg"),
-        require("../../assets/images/country/list-banner6.jpg")
+        require("../../assets/images/n-list-banner1.jpg"),
+        require("../../assets/images/n-list-banner2.jpg"),
+        require("../../assets/images/n-list-banner3.jpg"),
+        require("../../assets/images/n-list-banner4.jpg"),
+        require("../../assets/images/n-list-banner5.jpg"),
+        require("../../assets/images/n-list-banner6.jpg")
       ],
       bannerData: []
     };
@@ -121,7 +126,7 @@ export default {
         for (let i = 0; i < this.countryList.length; i++) {
           this.navs.push(this.countryList[i].name);
           this.bannerData[i] = {};
-          this.bannerData[i].name = this.countryList[i].name;
+          // this.bannerData[i].name = this.countryList[i].name;
           this.bannerData[i].img = this.bannerImg[i];
         }
         this.loadingSuccess = true;
@@ -151,14 +156,14 @@ export default {
 }
 .country-nav {
   position: relative;
-  top: -66px;
-  z-index: 99;
+  z-index: 999;
   width: 100%;
-  height: 120px;
+  height: 80px;
+  margin: -40px 0 20px 0;
+  line-height: 80px;
   background: #fff;
-  text-align: center;
-  line-height: 110px;
-  padding: 0 10px;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px 0 #ababab;
   @media (min-width: 767px) {
     .list {
       display: flex;
@@ -169,25 +174,27 @@ export default {
   }
 
   a {
-    font-size: 22px;
-    color: #828282;
+    display: inline-block;
+    text-align: center;
+    line-height: 80px;
     cursor: pointer;
-    justify-content: center;
-    transition: 0.2s;
-    &:hover {
-      color: #bd8c67;
+    color: #111;
+    i {
+      font-size: 16px;
     }
     &.on {
-      position: relative;
-      color: #bd8c67;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: #bd8c67;
-        left: 0;
-        bottom: 35px;
+      i {
+        color: #447375;
+        padding: 28px 0;
+        font-weight: bold;
+        border-bottom: 4px  solid #447375;
+      }
+    }
+    &:hover {
+      i {
+        color: #447375;
+        padding: 28px 0;
+        border-bottom: 4px  solid #447375;
       }
     }
   }
@@ -202,6 +209,10 @@ export default {
     -webkit-overflow-scrolling: touch;
     -moz-overflow-scrolling: touch;
     overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 0px;
+    } 
     .list {
       white-space: nowrap;
       a {

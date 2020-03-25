@@ -66,9 +66,8 @@
       }
     }
     &.tel {
-      
       div {
-        width: 150px;
+        width: 160px;
         p {
           padding-left: 40px;
           background: #fff url('../../assets/images/down-tel1.png') no-repeat 10px 10px;

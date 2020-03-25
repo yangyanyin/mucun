@@ -148,10 +148,26 @@ export default {
     padding: 25px;
     border-top: 1px solid #f7f7f7;
     p {
-      padding: 5px 0;
+      position: relative;
+      padding: 5px 0 5px 10px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 4px;
+        height: 4px;
+        background: #444;
+        border-radius: 100%;
+        transform: translateY(-50%);
+      }
     }
     a {
       color: #111;
+      &:hover {
+        text-decoration: underline;
+        color: #447375;
+      }
     }
   }
 }

@@ -144,8 +144,12 @@ export default {
     }
   }
   p {
-    padding-bottom: 5px;
+    position: relative;
+    padding: 0 0 5px 40px;
     i {
+      position: absolute;
+      left: 0;
+      top: 0;
       color: #447375;
       padding-right: 5px;
     }
@@ -158,6 +162,7 @@ export default {
     height: 50px;
     padding: 15px 10px 15px 50px;
     margin-bottom: 20px;
+    border-radius: 5px;
     input {
       display: block;
       height: 20px;

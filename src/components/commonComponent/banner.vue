@@ -3,9 +3,11 @@
     <div class="width">
       <swiper :options="swiperOption">
         <swiper-slide v-for="(banners, index) in bannerImgList" :key="index">
-          <img :src="banners.img" />
-          <p class="t1">{{banners.name}}</p>
-          <p class="t2">投资置业 定居生活 全面规划</p>
+          <div class="img">
+            <img :src="banners.img" />
+          </div>
+          <!-- <p class="t1">{{banners.name}}</p> -->
+          <!-- <p class="t2">投资置业 定居生活 全面规划</p> -->
         </swiper-slide>
       </swiper>
     </div>
@@ -17,7 +19,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        autoplay: 3000,
+        autoplay: 4000,
         loop: true,
         effect: "fade"
         // pagination: '.swiper-pagination'
@@ -30,8 +32,16 @@ export default {
 </script>
 <style lang="less" scoped>
 .banner {
-  img {
-    width: 100%;
+  .img {
+    position: relative;
+    height: 512px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 512px;
+      transform: translateX(-50%);
+    }
   }
   .t1 {
     position: absolute;

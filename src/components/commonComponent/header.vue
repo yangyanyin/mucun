@@ -560,6 +560,7 @@ export default {
     }
     span {
       width: 20px;
+      margin-left: 25px;
       &:last-child {
         width: 24px;
       }

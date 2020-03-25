@@ -46,23 +46,32 @@
             <li>
               <img src="../../assets/images/us-img3-3.png" />
             </li>
-            <li>
+            <li class="web-img">
               <img src="../../assets/images/us-img4-4.png" />
             </li>
             <li>
               <img src="../../assets/images/us-img4.png" />
             </li>
-            <li>
+            <li class="wap-img">
+              <img src="../../assets/images/us-img4-4.png" />
+            </li>
+            <li class="web-img">
               <img src="../../assets/images/us-img5-5.png" />
             </li>
             <li>
               <img src="../../assets/images/us-img5.png" />
             </li>
-            <li>
+            <li class="wap-img">
+              <img src="../../assets/images/us-img5-5.png" />
+            </li>
+            <li class="web-img">
               <img src="../../assets/images/us-img6-6.png" />
             </li>
             <li>
               <img src="../../assets/images/us-img6.png" />
+            </li>
+            <li class="wap-img">
+              <img src="../../assets/images/us-img6-6.png" />
             </li>
           </ul>
         </div>
