@@ -61,33 +61,16 @@ export default {
     color: #fff;
     font-size: 44px;
   }
-}
-@media (max-width: 767px) {
-  .banner {
-    position: relative;
-    height: 272px;
-    overflow: hidden;
-    .width {
-      position: absolute;
-      width: 670px;
-      height: 272px;
-      top: 0;
-      left: 50%;
-      margin-left: -335px;
-    }
-    .t1 {
-      bottom: 40%;
-      font-size: 28px;
-    }
-    .t2 {
-      bottom: 25%;
-      font-size: 22px;
-    }
-    img {
-      display: block;
-      width: auto;
-      height: 272px;
+  @media (max-width: 767px) {
+    .img {
+      padding-top: 60px;
+      height: 316px;
+      img {
+        top: 60px;
+        height: 256px;
+      }
     }
   }
 }
+
 </style>

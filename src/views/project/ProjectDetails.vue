@@ -205,7 +205,15 @@ export default {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 512px;
+    height: 100%;
+  }
+  @media (max-width: 767px) {
+    padding-top: 60px;
+    height: 316px;
+    img {
+      top: 60px;
+      height: 256px;
+    }
   }
 }
 .country-details {
@@ -249,13 +257,27 @@ export default {
     }
   }
   @media (max-width: 767px) {
-    top: 0;
-    height: 60px;
-    line-height: 60px;
-    margin: 0 -10px;
+    white-space: nowrap;
+    height: 70px;
+    line-height: inherit;
+    overflow-x: auto;
+    padding: 0 10px;
     a {
-      font-size: 18px;
-      margin: 0 20px;
+      line-height: inherit;
+      width: auto;
+      padding: 22px 10px;
+      margin: 0;
+      i {
+        padding: 12px 0;
+      }
+      &.on {
+        i {
+          color: #447375;
+          padding: 22px 0;
+          font-weight: bold;
+          border-bottom: 4px  solid #447375;
+        }
+      }
     }
   }
 }

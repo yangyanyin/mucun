@@ -156,7 +156,7 @@ export default {
 }
 .country-nav {
   position: relative;
-  z-index: 999;
+  z-index: 99;
   width: 100%;
   height: 80px;
   margin: -40px 0 20px 0;
@@ -199,29 +199,29 @@ export default {
     }
   }
   @media (max-width: 767px) {
-    width: auto;
+    white-space: nowrap;
     height: 70px;
-    overflow: auto;
-    line-height: 60px;
-    margin: 0 -10px;
-    padding: 0;
-    top: 0;
-    -webkit-overflow-scrolling: touch;
-    -moz-overflow-scrolling: touch;
-    overflow-scrolling: touch;
+    line-height: inherit;
+    overflow-x: auto;
+    padding: 0 10px;
     &::-webkit-scrollbar {
       width: 5px;
       height: 0px;
     } 
-    .list {
-      white-space: nowrap;
-      a {
-        margin: 0 20px;
-        font-size: 18px;
-        &.on {
-          &:after {
-            bottom: -10px;
-          }
+    a {
+      line-height: inherit;
+      width: auto;
+      padding: 25px 10px;
+      i {
+        padding: 12px 0;
+        font-size: 14px;
+      }
+      &.on {
+        i {
+          color: #447375;
+          padding: 23px 0;
+          font-weight: bold;
+          border-bottom: 4px  solid #447375;
         }
       }
     }
