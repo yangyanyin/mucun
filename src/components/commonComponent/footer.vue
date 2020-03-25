@@ -5,10 +5,19 @@
         <Hotline />
         <div class="footer-nav clearfix">
           <div class="menu left">
-            <router-link to="/about">关于我们</router-link>
+            <router-link to="/emigrant/one">新加坡移民</router-link>
+            <router-link to="/project/">护照项目</router-link>
+            <router-link to="/passport/">签证服务</router-link>
+            <router-link to="/city/">移居狮城</router-link>
+            <router-link to="/bank/">银行开户</router-link>
+            
+          </div>
+          <div class="menu left">
+            <router-link to="/asset/">资产配置</router-link>
             <router-link to="/news-case">成功案例</router-link>
             <router-link to="/news-thematic">护照专题</router-link>
             <router-link to="/news-expert">新加坡移民专家</router-link>
+            <router-link to="/about">关于我们</router-link>
           </div>
         </div>
         <div class="address">

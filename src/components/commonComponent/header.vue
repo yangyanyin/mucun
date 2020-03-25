@@ -56,13 +56,13 @@ export default {
           url: "/emigrant/one"
         },
         {
-          name: "护照精选",
-          url: "/passport/"
-        },
-        {
           name: "护照项目",
           url: "/project/",
           down: true
+        },
+        {
+          name: "签证服务",
+          url: "/passport/"
         },
         {
           name: "移居狮城",
@@ -75,6 +75,10 @@ export default {
         {
           name: "资产配置",
           url: "/asset/"
+        },
+        {
+          name: "成功案例",
+          url: "/news-case/"
         },
         {
           name: "关于我们",
@@ -393,7 +397,12 @@ export default {
         transform: translateY(30px);
       }
       &:nth-child(8) {
-        animation: showNav7 0.9s forwards;
+        animation: showNav8 0.9s forwards;
+        animation-delay: 1s;
+        transform: translateY(30px);
+      }
+      &:nth-child(9) {
+        animation: showNav9 1s forwards;
         animation-delay: 1s;
         transform: translateY(30px);
       }
@@ -444,6 +453,18 @@ export default {
   }
 }
 @keyframes showNav7 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes showNav8 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes showNav9 {
   100% {
     transform: translateY(0);
     opacity: 1;

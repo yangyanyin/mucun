@@ -34,12 +34,12 @@ export default {
 .banner {
   .img {
     position: relative;
-    height: 512px;
+    height: 340px;
     img {
       position: absolute;
       top: 0;
       left: 50%;
-      height: 512px;
+      height: 100%;
       transform: translateX(-50%);
     }
   }

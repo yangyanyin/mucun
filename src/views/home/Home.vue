@@ -24,9 +24,7 @@
           <span>CHOOSE US</span>
         </div>
         <div class="content animation-show">
-          <p>新加坡全球护照交流中心是新加坡华人圈最具影响力的移民公司，是政府官方牌照直接办理。</p>
-          <p>对新加坡移民最新的移民政策了解，通相关的政府部门有着密切的关系。优秀的移民文案经验丰富，可以为申请人量身定做全面、成熟的移民规划，至今保持了100%的成功率。</p>
-          <p>新加坡全球护照交流中心立足狮城，放眼亚洲，专业服务于亚洲成功精英。</p>
+          <p>新加坡全球护照交流中心是新加坡华人圈最具影响力的移民公司，是政府官方牌照直接办理。对新加坡移民最新的移民政策了解，通相关的政府部门有着密切的关系。优秀的移民文案经验丰富，可以为申请人量身定做全面、成熟的移民规划，至今保持了100%的成功率。新加坡全球护照交流中心立足狮城，放眼亚洲，专业服务于亚洲成功精英。</p>
           <ul class="clearfix character">
             <li>
               <img src="../../assets/images/us-img1.png" />
@@ -114,7 +112,7 @@
             <img src="../../assets/images/title-img1.png" />
           </i>
         </span>
-        <p>Singapore MIGRATION EXPERT</p>
+        <p>SINGAPORE Residency Solutions</p>
       </div>
       <NewModule type="expert" :newsList="newsData.expert" />
     </div>
@@ -129,7 +127,7 @@
               <img src="../../assets/images/title-img1.png" />
             </i>
           </span>
-          <p>global passport selection</p>
+          <p>Global citizenship programs</p>
         </div>
         <div class="content clearfix">
           <div
@@ -220,7 +218,7 @@
     </div>
 
     <!-- 我们的优势 -->
-    <div class="advantage">
+    <div class="advantage margin-t-80">
       <div class="pc-max-width">
         <div class="public-title animation-show">
           <h3>我们的优势</h3>
@@ -315,16 +313,16 @@ export default {
           image: require("../../assets/images/project2.jpg")
         },
         {
-          title: "家族办公室移民项目",
-          text: "条件宽松，无语言要求，精英首选方案。",
-          url: "/emigrant/three",
-          image: require("../../assets/images/project3.jpg")
-        },
-        {
           title: "GIP投资移民项目",
           text: "条件宽松，无语言要求，精英首选方案。",
           url: "/emigrant/four",
           image: require("../../assets/images/project4.jpg")
+        },
+        {
+          title: "家族办公室移民项目",
+          text: "条件宽松，无语言要求，精英首选方案。",
+          url: "/emigrant/three",
+          image: require("../../assets/images/project3.jpg")
         }
       ],
       loadingStatus: false,
@@ -421,7 +419,7 @@ export default {
     p {
       font-size: 16px;
       line-height: 34px;
-      padding: 0 100px;
+      padding: 0 150px;
     }
     ul {
       padding-top: 120px;

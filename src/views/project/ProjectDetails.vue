@@ -199,7 +199,7 @@ export default {
   text-align: center;
   width: 100%;
   overflow: hidden;
-  height: 512px;
+  height: 340px;
   img {
     position: absolute;
     top: 0;
