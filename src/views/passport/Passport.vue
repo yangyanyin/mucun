@@ -193,26 +193,32 @@ export default {
         all = JSON.parse(localStorage.getItem('passportAll')).splice(index, 1)
       }
       for (let i = 0; i < all.length; i++) {
-        for (let s = 0; s < all[i].visa_countries.length; s++) {
-          this.allCountry[all[i].visa_countries[s].name] = {};
-          this.filterType[all[i].visa_countries[s].type] = "";
+        if (all[i].visa_countries) {
+          for (let s = 0; s < all[i].visa_countries.length; s++) {
+            this.allCountry[all[i].visa_countries[s].name] = {};
+            this.filterType[all[i].visa_countries[s].type] = "";
+          }
         }
       }
       for (let name in this.allCountry) {
         for (let i = 0; i < all.length; i++) {
-          for (let s = 0; s < all[i].visa_countries.length; s++) {
-            this.allCountry[name][all[i].name] = "";
+          if (all[i].visa_countries) {
+            for (let s = 0; s < all[i].visa_countries.length; s++) {
+              this.allCountry[name][all[i].name] = "";
+            }
           }
         }
       }
       for (let name in this.allCountry) {
         for (let a in this.allCountry[name]) {
           for (let i = 0; i < all.length; i++) {
-            for (let s = 0; s < all[i].visa_countries.length; s++) {
-              if (name === all[i].visa_countries[s].name) {
-                this.allCountry[name].flag = all[i].visa_countries[s].flag;
-                if (all[i].name === a) {
-                  this.allCountry[name][a] = all[i].visa_countries[s].type;
+            if (all[i].visa_countries) {
+              for (let s = 0; s < all[i].visa_countries.length; s++) {
+                if (name === all[i].visa_countries[s].name) {
+                  this.allCountry[name].flag = all[i].visa_countries[s].flag;
+                  if (all[i].name === a) {
+                    this.allCountry[name][a] = all[i].visa_countries[s].type;
+                  }
                 }
               }
             }
@@ -249,10 +255,11 @@ export default {
   background: #1b2f35;
   padding: 180px 0 50px;
   margin: auto;
-  width: 1925px;
+  min-width: 1925px;
   @media (max-width: 767px) {
     padding: 60px 0 50px;
     width: 100%;
+    min-width: auto;
   }
 }
 .passport-list {
@@ -260,7 +267,7 @@ export default {
   li {
     float: left;
     padding: 12px 0 0 10px;
-    width: 16.6666%;
+    width: 12.5%;
     text-align: center;
     color: #fff;
     height: 105px;
@@ -292,7 +299,7 @@ export default {
       max-width: 57px;
       float: left;
       padding: 1px;
-      margin-right: 15px;
+      margin-right: 10px;
       border-radius: 2px;;
       span {
         display: block;
@@ -309,7 +316,7 @@ export default {
     .info {
       strong {
         text-align: left;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: normal;
         &.name {
           display: block;
@@ -321,21 +328,21 @@ export default {
       div {
         i {
           position: relative;
-          top: -12px;
+          top: -5px;
           font-size: 12px;
           margin-left: 6px;
         }
         &.country {
           position: relative;
           padding-right: 7px;
-          margin-right: 13px;
+          margin-right: 7px;
           &::after {
             content: "";
             position: absolute;
             right: 0;
-            top: 8px;
+            top: 6px;
             width: 1px;
-            height: 24px;
+            height: 16px;
             background: #415257;
           }
         }
@@ -652,7 +659,7 @@ export default {
     }
     li {
       float: left;
-      width: 16.6666%;
+      width: 12.5%;
       &.type1 {
         background: #a91c1c;
       }

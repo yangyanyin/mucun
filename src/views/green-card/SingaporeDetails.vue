@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="banner">
-        <img src="../../assets/images/Singapore-banner.jpg" />
+        <img src="../../assets/images/singapore-d-bn.jpg" />
     </div>
 
     <div class="investment margin-t-80 pc-max-width animation-show">
@@ -268,9 +268,8 @@ export default {
   }
   @media (max-width: 767px) {
     padding-top: 60px;
-    height: 316px;
+    height: 256px;
     img {
-      top: 60px;
       height: 256px;
     }
   }

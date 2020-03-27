@@ -22,7 +22,9 @@
     </span>
     <span class="wx"><img class="s" src="../../assets/images/footer-wx.png" />
       <div>
-        <p><img src="../../assets/images/WeChat.png" /></p>
+        <p><img src="../../assets/images/WeChat.png" />扫一扫添加微信</p>
+        <p><img src="../../assets/images/WeChat2.png" />扫一扫关注公众号</p>
+          
       </div>
     </span>
   </div>
@@ -87,9 +89,21 @@
     &.wx {
       div {
         right: -3px;
+        width: 240px;
       }
       p {
+        display: inline-block;
         right: -5px;
+        font-size: 12px;
+        text-align: center;
+        &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
         img {
           width: 100px;
         }
@@ -132,7 +146,7 @@
       }
       &.wx{
         div {
-          height: 140px;
+          height: 147px;
         }
       }
     }
@@ -140,9 +154,13 @@
   @media (max-width: 767px) {
     h3 {
       font-size: 16px;
+      img {
+        width: 140px;
+      }
     }
     span {
-      margin-left: 20px;
+      margin-left: 12px;
+      width: 20px;
     }
   }
 }

@@ -1,10 +1,10 @@
 <template>
   <Layout>
     <div class="banner">
-        <img src="../../assets/images/Malaysia-banner.jpg" />
+        <img src="../../assets/images/malaysia-d-bn.jpg" />
     </div>
     <div class="pc-max-width details margin-t-80">
-      <div class="clearfix">
+      <div class="clearfix animation-show">
         <div class="img left">
           <img v-lazy="{src: require('../../assets/images/malaysia-details-img1.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
         </div>
@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <div class="clearfix">
+      <div class="clearfix animation-show">
         <div class="img right">
           <img v-lazy="{src: require('../../assets/images/malaysia-details-img2.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
         </div>
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div class="plan clearfix">
+      <div class="plan clearfix animation-show">
         <img class="left" src="../../assets/images/plan-img2.jpg" />
         <div class="plan-des left">
           <h3>申请人须符合以下条件</h3>
@@ -78,9 +78,8 @@ export default {
   }
   @media (max-width: 767px) {
     padding-top: 60px;
-    height: 316px;
+    height: 256px;
     img {
-      top: 60px;
       height: 256px;
     }
   }
@@ -192,6 +191,12 @@ export default {
         font-size: 14px;
         line-height: 22px;
       }
+    }
+  }
+  @media (max-width: 767px) {
+    .plan-des {
+      width: 100%;
+      padding: 20px;
     }
   }
 }

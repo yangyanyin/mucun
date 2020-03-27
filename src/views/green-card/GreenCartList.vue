@@ -10,7 +10,7 @@
       </div>
       <div class="content">
         <!-- 新加坡 -->
-        <div class="list">
+        <div class="list animation-show">
           <img src="../../assets/images/card-singapore.jpg" class="bg" />
           <div class="info">
             <span>
@@ -23,7 +23,7 @@
         </div>
 
         <!-- 菲律宾 -->
-        <div class="list">
+        <div class="list animation-show">
           <img src="../../assets/images/card-philippines.jpg" class="bg" />
           <div class="info">
             <span>
@@ -36,7 +36,7 @@
         </div>
 
         <!-- 马来西亚 -->
-        <div class="list">
+        <div class="list animation-show">
           <img src="../../assets/images/card-malaysia.jpg" class="bg" />
           <div class="info">
             <span>
@@ -131,6 +131,7 @@ export default {
     }
   }
   @media (max-width: 767px) {
+    display: none;
     white-space: nowrap;
     height: 70px;
     overflow-x: auto;
@@ -214,6 +215,44 @@ export default {
         img {
           transform: translateX(10px);
         }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    height: 290px;
+    margin: 30px 0 0;
+    padding-bottom: 50px;
+    border-radius: 0;
+    img.bg {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: auto;
+      height: 240px;
+    }
+    .info {
+      left: 15px;
+      bottom: 70px;
+      padding-left: 100px;
+      span {
+        width: 80px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        left: -15px;
+        right: 0;
+        width: calc(100% + 15px);
+        bottom: -70px;
+        background: #447375;
+        border-radius: 5px;
+        height: 40px;
+        line-height: 40px;
       }
     }
   }

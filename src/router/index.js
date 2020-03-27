@@ -4,7 +4,6 @@ import VueRouter from 'vue-router'
 /** @page 首页 */ import Home from '../views/home/Home'
 /** @page 关于我们 */ import About from '../views/about/About'
 /** @page 银行开户 */ import Bank from '../views/bank/Bank'
-/** @page 移居狮城 */ import City from '../views/city/City'
 /** @page 资产配置 */ import Asset from '../views/asset/Asset'
 /** @page 护照项目列表 */ import ProjectList from '../views/project/ProjectList'
 /** @page 护照项目详情 */ import ProjectDetails from '../views/project/ProjectDetails'
@@ -39,11 +38,6 @@ const routes = [
     path: '/bank',
     name: 'Bank',
     component: Bank
-  },
-  {
-    path: '/city',
-    name: 'City',
-    component: City
   },
   {
     path: '/asset',

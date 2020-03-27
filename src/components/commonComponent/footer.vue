@@ -30,11 +30,11 @@
       <div class="right wechat">
         <div class="left">
           <img src="../../assets/images/WeChat.png" />
-          <p>扫一扫关注公众号</p>
+          <p>扫一扫添加微信</p>
         </div>
         <div class="left">
-          <img src="../../assets/images/WeChat.png" />
-          <p>扫一扫添加微信</p>
+          <img src="../../assets/images/WeChat2.png" />
+          <p>扫一扫关注公众号</p>
         </div>
       </div>
     </div>
@@ -196,6 +196,9 @@ export default {
 .wechat {
   div {
     margin-left: 30px;
+  }
+  img {
+    width: 155px;
   }
   p {
     color: #fff;

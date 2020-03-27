@@ -1,8 +1,7 @@
 <template>
   <Layout>
     <div class="banner">
-      <img class="web-img" src="../../assets/images/asset-allocation/asset-banner.jpg" />
-      <img class="wap-img" src="../../assets/images/asset-allocation/asset-banner-wap.jpg" />
+      <img src="../../assets/images/asset-banner.jpg" />
     </div>
     <div class="pc-max-width asset-allocation">
       <div class="content clearfix margin-t-80 animation-show">
@@ -114,9 +113,25 @@ export default {
 </script>
 <style lang="less" scoped>
 .banner {
-  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  height: 340px;
   img {
-    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+  }
+  @media (max-width: 767px) {
+    padding-top: 60px;
+    height: 316px;
+    img {
+      top: 60px;
+      height: 256px;
+    }
   }
 }
 .asset-allocation {

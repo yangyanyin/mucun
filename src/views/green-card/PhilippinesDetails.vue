@@ -1,15 +1,15 @@
 <template>
   <Layout>
     <div class="banner">
-        <img src="../../assets/images/Philippines-banner.jpg" />
+        <img src="../../assets/images/philippines-d-bn.jpg" />
     </div>
     <div class="pc-max-width">
-      <div class="details margin-t-80">
+      <div class="details margin-t-80 animation-show">
         <h3>菲律宾绿卡项目</h3>
         <p>菲律宾永久居住的申请门槛相对较低，旨在吸引外国人士在菲律宾退休养老定居，让菲律宾外汇存储量迅速增加。截止到2013年3月，已经为菲律宾带来8千万美元以上的外汇存款。根据菲律宾退休署的最新报告，2011年移民菲律宾的人数增长42%，2012年该幅度高达62%。共接纳外国退休移民2.13万人。</p>
         <p>菲律宾的SRRV身份实际上相当于永居PR(Permanent Residence)，持有SRRV可以享受和当地人一样的医疗、教育、保险等权利，在菲律宾自由出入、受教育、工作和居住，没有任何移民监和其他要求。</p>
       </div>
-      <div class="condition margin-t-80">
+      <div class="condition margin-t-80 animation-show">
         <h3>怎样申请菲律宾绿卡</h3>
         <p>菲律宾的SRRV也叫“退休移民”大体分为两种：微笑计划(SRRV Smile)和传统计划(SRRV Classic)。</p>
         <div class="btn">
@@ -17,7 +17,7 @@
           <a :class="{on:planType === 2}" @click="switchPlan(2)">微笑计划 SRRV Smile</a>
         </div>
       </div>
-      <div class="plan clearfix">
+      <div class="plan clearfix animation-show">
         <img class="left" src="../../assets/images/plan-img.jpg" />
         <div class="des left">
           <h3>对申请人的要求</h3>
@@ -81,9 +81,8 @@ export default {
   }
   @media (max-width: 767px) {
     padding-top: 60px;
-    height: 316px;
+    height: 256px;
     img {
-      top: 60px;
       height: 256px;
     }
   }
@@ -99,6 +98,17 @@ export default {
     font-size: 16px;
     margin: 20px 0 40px;
     line-height: 30px;
+  }
+  @media (max-width: 767px) {
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 10px 0 20px;
+
+    }
   }
 }
 .condition {
@@ -142,6 +152,25 @@ export default {
       &.on {
         color: #fff;
         background: #447375;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      margin: 10px 0 15px;
+      font-size: 14px;
+    }
+    .btn {
+      a {
+        width: 165px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        margin: 0 5px;
+        border-radius: 36px;
       }
     }
   }
@@ -196,6 +225,25 @@ export default {
     .des {
       margin: 70px 0 0 120px;
       width: 450px;
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 0 20px 20px 0;
+    img {
+      display: none;
+    }
+    .des {
+      width: 100%;
+      height: auto;
+      margin: 20px 0 0 20px;
+      padding: 0 20px;
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 15px;
+      }
     }
   }
 }

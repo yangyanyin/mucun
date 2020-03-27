@@ -221,7 +221,7 @@ export default {
 }
 .details-nav {
   position: relative;
-  z-index: 999;
+  z-index: 99;
   width: 100%;
   height: 80px;
   margin: -40px 0 20px 0;

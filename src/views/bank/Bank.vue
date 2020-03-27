@@ -1,8 +1,7 @@
 <template>
   <Layout>
-    <div class="bank-banner">
-      <img class="web-img" src="../../assets/images/bank/bank-banner.jpg" />
-      <img class="wap-img" src="../../assets/images/bank/bank-banner-wap.jpg" />
+    <div class="banner">
+      <img src="../../assets/images/bank-banner.jpg" />
     </div>
     <div class="pc-max-width margin-t-80">
       <div class="public-title animation-show">
@@ -134,10 +133,26 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.bank-banner {
+.banner {
   position: relative;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  height: 340px;
   img {
-    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+  }
+  @media (max-width: 767px) {
+    padding-top: 60px;
+    height: 316px;
+    img {
+      top: 60px;
+      height: 256px;
+    }
   }
 }
 .bank-account {
