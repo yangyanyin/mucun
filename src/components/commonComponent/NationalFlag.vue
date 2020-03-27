@@ -25,6 +25,12 @@
       <img src="../../assets/images/country8.png" />
     </li>
     <li>
+      <img src="../../assets/images/country10.png" />
+    </li>
+    <li>
+      <img src="../../assets/images/country11.png" />
+    </li>
+    <li>
       <img src="../../assets/images/country9.png" />
     </li>
   </ul>
@@ -32,7 +38,7 @@
 <style scoped lang="less">
 .flag {
   text-align: center;
-  padding: 55px 30px;
+  padding: 55px 10px;
   display:flex;
   flex-flow: row wrap;
   justify-content: space-between;

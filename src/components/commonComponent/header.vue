@@ -57,32 +57,32 @@ export default {
         },
         {
           name: "护照项目",
-          url: "/project/",
+          url: "/project",
           down: true
         },
         {
           name: "签证服务",
-          url: "/passport/"
+          url: "/passport"
         },
         {
-          name: "移居狮城",
-          url: "/city/"
+          name: "绿卡项目",
+          url: "/green-cart"
         },
         {
           name: "银行开户",
-          url: "/bank/"
+          url: "/bank"
         },
         {
           name: "资产配置",
-          url: "/asset/"
+          url: "/asset"
         },
         {
           name: "成功案例",
-          url: "/news-case/"
+          url: "/news-case"
         },
         {
           name: "关于我们",
-          url: "/about/"
+          url: "/about"
         }
       ],
       currentUrl: window.location.pathname,

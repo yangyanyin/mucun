@@ -67,7 +67,9 @@
     </div>
 
     <!-- 国旗 -->
-    <Flag />
+    <div class="pc-max-width">
+      <Flag />
+    </div>
   </Layout>
 </template>
 

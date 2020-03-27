@@ -79,7 +79,7 @@
                 v-show="name2 !== 'flag'"
                 :index="filterResult.indexOf(visa)"
                 :class="countryClass(visa)"
-              >{{visa}}</li>
+              >{{visa || 'N/A'}}</li>
             </ul>
           </div>
         </div>

@@ -16,6 +16,10 @@ import VueRouter from 'vue-router'
 /** @page 新加坡移民 Four */ import EmigrantDetailsFour from '../views/emigrant/component/DetailsFour'
 /** @page 新闻列表 */ import NewsList from '../views/news/NewsList'
 /** @page 新闻详情 */ import NewsDetails from '../views/news/NewsDetails'
+/** @page 绿卡项目首页 */ import GreenCartList from '../views/green-card/GreenCartList.vue'
+/** @page 绿卡项目菲律宾详情 */ import PhilippinesDetails from '../views/green-card/PhilippinesDetails.vue'
+/** @page 绿卡项目马来西亚详情 */ import MalaysiaDetails from '../views/green-card/MalaysiaDetails.vue'
+/** @page 绿卡项目新加坡详情 */ import SingaporeDetails from '../views/green-card/SingaporeDetails.vue'
 
 
 Vue.use(VueRouter)
@@ -107,6 +111,26 @@ const routes = [
     path: '/news-details/:id',
     name: 'NewsDetails',
     component: NewsDetails
+  },
+  {
+    path: '/green-cart',
+    name: 'GreenCartList',
+    component: GreenCartList
+  },
+  {
+    path: '/philippines-details',
+    name: 'PhilippinesDetails',
+    component: PhilippinesDetails
+  },
+  {
+    path: '/malaysia-details',
+    name: 'MalaysiaDetails',
+    component: MalaysiaDetails
+  },
+  {
+    path: '/singapore-details',
+    name: 'SingaporeDetails',
+    component: SingaporeDetails
   }
 ]
 
