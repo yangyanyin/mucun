@@ -177,6 +177,23 @@
       </div>
     </div>
 
+    <!-- 绿卡项目 -->
+    <div class="green-card">
+       <div class="public-title animation-show">
+        <h3>绿卡项目</h3>
+        <span>
+          <i>
+            <img src="../../assets/images/title-img2.png" />
+          </i>
+        </span>
+        <p>Green card program</p>
+      </div>
+      <div class="pc-max-width">
+
+        <GreenBox />
+      </div>
+    </div>
+
     <!-- 护照专题 -->
     <div class="thematic pc-max-width margin-t-80" v-if="newsData.thematic.news.length > 0">
       <div class="public-title animation-show">
@@ -203,14 +220,14 @@
         <p>Successful Cases</p>
       </div>
       <ul class="pc-max-width content clearfix animation-show">
-        <li v-for="(news, index) in 4" :key="index">
-          <router-link class="a" to="/news-details/1">
-            <img src="../../assets/images/new-img.png" />
+        <li v-for="(news, index) in newsData.case.news" :key="index">
+          <router-link class="a" :to="'/news-details/' + news.id">
+            <img :src="news.img" />
             <div class="d clearfix">
-              <h3>这里是标题</h3>
-              <p>这里是描述描述描述描述描述描述描述描述描述描述描述这里是描述描述描述描述描述描述描述描述描述描述描述这里是描述描述描述描述描述描述描述描述描述描述描述这里是描述描述描述描述描述描述描述描述描述描述描述这里是描述描述描述描述描述描述描述描述描述描述描述...</p>
-              <span class="left">2020-11-11</span>
-              <span class="right"><router-link to="/news-details/1">了解详情</router-link></span>
+              <h3>{{news.title}}</h3>
+              <p v-html="news.content"></p>
+              <span class="left">{{news.created_at}}</span>
+              <span class="right"><router-link :to="'/news-details/' + news.id">了解详情</router-link></span>
             </div>
           </router-link>
         </li>
@@ -283,6 +300,7 @@ import { animation, windowScroll, device } from "../../assets/js/config.js";
 import ContactUs from "../../components/commonComponent/ContactUs";
 import Flag from "../../components/commonComponent/NationalFlag";
 import NewModule from './component/NewModule'
+import GreenBox from './component/GreenBox'
 import Loading from '../../components/commonComponent/loadingPage'
 
 export default {
@@ -293,7 +311,8 @@ export default {
     ContactUs,
     Flag,
     NewModule,
-    Loading
+    Loading,
+    GreenBox
   },
   data() {
     return {
@@ -685,6 +704,11 @@ export default {
             font-weight: bold;
             font-size: 18px;
             color: #111;
+            overflow: hidden;     
+            height: 50px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
           }
           p {
             margin: 5px 0 10px;
@@ -738,6 +762,35 @@ export default {
     }
   }
 }
+
+/** 绿卡项目 **/
+.green-card {
+  padding-top: 60px;
+  background: url('../../assets/images/green-card-bg.png') no-repeat top center;
+  background-size: 1920px;
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    background-size: 1000px;
+  }
+  .public-title {
+    h3 {
+      color: #fff;
+    }
+    span {
+      &:after,
+      &:before {
+        background: #fff;
+      }
+      i {
+        background: no-repeat;
+      }
+    }
+    p {
+      color: #fff;
+    }
+  }
+}
+
 
 /** 我们的优势 **/
 .advantage {

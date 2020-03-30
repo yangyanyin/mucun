@@ -1,12 +1,3 @@
 <template>
-  <router-view :key="key"></router-view>
+  <router-view :key="$route.fullPath"></router-view>
 </template>
-<script>
-export default {
-  data () {
-    return {
-      key: this.$route.path + Math.random()
-    }
-  }
-}
-</script>

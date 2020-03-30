@@ -4,9 +4,9 @@
 
     <div class="pc-max-width">
       <div class="menu">
-        <a><i><img src="../../assets/images/country9.png" />新加坡绿卡项目</i></a>
-        <a><i><img src="../../assets/images/country10.png" />菲律宾绿卡项目</i></a>
-        <a><i><img src="../../assets/images/country11.png" />马来西亚绿卡项目</i></a>
+        <router-link to="/singapore-details"><i><img src="../../assets/images/country9.png" />新加坡绿卡项目</i></router-link>
+        <router-link to="/philippines-details"><i><img src="../../assets/images/country10.png" />菲律宾绿卡项目</i></router-link>
+        <router-link to="/malaysia-details"><i><img src="../../assets/images/country11.png" />马来西亚绿卡项目</i></router-link>
       </div>
       <div class="content">
         <!-- 新加坡 -->
@@ -27,7 +27,7 @@
           <img src="../../assets/images/card-philippines.jpg" class="bg" />
           <div class="info">
             <span>
-              <img src="../../assets/images/Philippinespassport-passport.png" />
+              <img src="../../assets/images/Philippines-passport.png" />
             </span>
             <h3>菲律宾 / Philippines</h3>
             <p>永久居住的申请门槛低,存入2万美元即可获得</p>

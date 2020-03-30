@@ -27,42 +27,66 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      page: 'home'
+    }
   },
   {
     path: '/about',
     name: 'About',
-    component: About
+    component: About,
+    meta: {
+      page: 'about'
+    }
   },
   {
     path: '/bank',
     name: 'Bank',
-    component: Bank
+    component: Bank,
+    meta: {
+      page: 'bank'
+    }
   },
   {
     path: '/asset',
     name: 'Asset',
-    component: Asset
+    component: Asset,
+    meta: {
+      page: 'asset'
+    }
   },
   {
     path: '/project',
     name: 'ProjectList',
-    component: ProjectList
+    component: ProjectList,
+    meta: {
+      page: 'project'
+    }
   },
   {
     path: '/project/details/:id',
     name: 'ProjectDetails',
-    component: ProjectDetails
+    component: ProjectDetails,
+    meta: {
+      page: 'project'
+    }
   },
   {
     path: '/passport',
     name: 'Passport',
-    component: Passport
+    component: Passport,
+    meta: {
+      page: 'passport'
+    }
   },
   {
     path: '/emigrant',
     name: 'Emigrant',
     component: Emigrant,
+    meta: {
+      page: 'emigrant'
+    },
     children: [
       {
         path: 'one',
@@ -89,48 +113,76 @@ const routes = [
   {
     path: '/news-case',
     name: 'case',
-    component: NewsList
+    component: NewsList,
+    meta: {
+      page: 'news'
+    }
   },
   {
     path: '/news-thematic',
     name: 'thematic',
-    component: NewsList
+    component: NewsList,
+    meta: {
+      page: 'news'
+    }
   },
   {
     path: '/news-expert',
     name: 'expert',
-    component: NewsList
+    component: NewsList,
+    meta: {
+      page: 'news'
+    }
   },
   {
     path: '/news-details/:id',
     name: 'NewsDetails',
-    component: NewsDetails
+    component: NewsDetails,
+    meta: {
+      page: 'news'
+    }
   },
   {
     path: '/green-cart',
     name: 'GreenCartList',
-    component: GreenCartList
+    component: GreenCartList,
+    meta: {
+      page: 'green'
+    }
   },
   {
     path: '/philippines-details',
     name: 'PhilippinesDetails',
-    component: PhilippinesDetails
+    component: PhilippinesDetails,
+    meta: {
+      page: 'green'
+    }
   },
   {
     path: '/malaysia-details',
     name: 'MalaysiaDetails',
-    component: MalaysiaDetails
+    component: MalaysiaDetails,
+    meta: {
+      page: 'green'
+    }
   },
   {
     path: '/singapore-details',
     name: 'SingaporeDetails',
-    component: SingaporeDetails
+    component: SingaporeDetails,
+    meta: {
+      page: 'green'
+    }
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   routes,
+  beforeRouteUpdate (to, from, next) {
+    this.name = to.params.name
+    next()
+  },
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition

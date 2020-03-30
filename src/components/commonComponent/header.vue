@@ -14,7 +14,7 @@
     </div>
     <ul class="navs">
       <li v-for="(navs, index) in navList" :key="index">
-        <router-link class="m" :class="{on:currentUrl === navs.url || detailsUrl === navs.url}"
+        <router-link class="m" :class="{on: detailsUrl === navs.page}"
           :to="navs.url">
           {{navs.name}}
           <i></i>
@@ -49,44 +49,52 @@ export default {
       navList: [
         {
           name: "首 页",
-          url: "/"
+          url: "/",
+          page: 'home'
         },
         {
           name: "新加坡移民",
-          url: "/emigrant/one"
+          url: "/emigrant/one",
+          page: 'emigrant'
         },
         {
           name: "护照项目",
           url: "/project",
-          down: true
+          down: true,
+          page: 'project'
         },
         {
           name: "签证服务",
-          url: "/passport"
+          url: "/passport",
+          page: 'passport'
         },
         {
           name: "绿卡项目",
-          url: "/green-cart"
+          url: "/green-cart",
+          page: 'green'
         },
         {
           name: "银行开户",
-          url: "/bank"
+          url: "/bank",
+          page: 'bank'
         },
         {
           name: "资产配置",
-          url: "/asset"
+          url: "/asset",
+          page: 'asset'
         },
         {
           name: "成功案例",
-          url: "/news-case"
+          url: "/news-case",
+          page: 'news'
         },
         {
           name: "关于我们",
-          url: "/about"
+          url: "/about",
+          page: 'about'
         }
       ],
-      currentUrl: window.location.pathname,
-      detailsUrl: this.$route ? this.$route.path.substring(0, 9) : "",
+      detailsUrl: this.$route.meta.page,
       projectDown: '',
       isFixed: false,
       scrollPx: 0,
@@ -188,6 +196,10 @@ export default {
   li {
     display: inline-block;
     margin: 0 23px;
+
+    @media (max-width: 920px) {
+      margin: 0 14px;
+    }
     a.m {
       position: relative;
       display: block;
@@ -560,6 +572,7 @@ export default {
   left: 0;
   width: 100%;
   height: 50px;
+  min-width: 992px;
   .logo {
     padding-top: 10px;
     a {

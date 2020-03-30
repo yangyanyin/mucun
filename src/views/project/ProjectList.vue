@@ -41,6 +41,8 @@
                   <img v-if="index === 3" src="../../assets/images/country1.png" />
                   <img v-if="index === 4" src="../../assets/images/country2.png" />
                   <img v-if="index === 5" src="../../assets/images/country6.png" />
+                  <img v-if="index === 6" src="../../assets/images/country7.png" />
+                  <img v-if="index === 7" src="../../assets/images/country3.png" />
                   {{countrs.name}}护照
                 </h3>
                 <ul class="clearfix">

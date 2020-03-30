@@ -1,38 +1,38 @@
 <template>
   <ul class="flag animation-show">
-    <li>
+    <router-link tag="li" to="/project/details/65">
       <img src="../../assets/images/country1.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/project/details/90">
       <img src="../../assets/images/country2.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/project/details/10">
       <img src="../../assets/images/country3.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/project/details/61">
       <img src="../../assets/images/country4.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/project/details/190">
       <img src="../../assets/images/country5.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/project/details/191">
       <img src="../../assets/images/country6.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/project/details/232">
       <img src="../../assets/images/country7.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/project/details/243">
       <img src="../../assets/images/country8.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/philippines-details">
       <img src="../../assets/images/country10.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/malaysia-details">
       <img src="../../assets/images/country11.png" />
-    </li>
-    <li>
+    </router-link>
+    <router-link tag="li"  to="/singapore-details">
       <img src="../../assets/images/country9.png" />
-    </li>
+    </router-link>
   </ul>
 </template>
 <style scoped lang="less">
@@ -47,6 +47,7 @@
     width: 65px;
     border-radius: 4px;
     transition: .4s;
+    cursor: pointer;
     img {
       display: block;
       width: 100%;
@@ -59,7 +60,7 @@
     padding: 30px 0;
     li {
       margin: 0;
-      width: 9%;
+      width: 8%;
     }
   }
 }
