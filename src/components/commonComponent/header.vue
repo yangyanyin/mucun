@@ -286,8 +286,12 @@ export default {
       width: 120px;
       text-align: center;
       color: #FFE19A;
-      margin: 35px 20px 0;
+      margin: 35px 10px 0;
       transform: translateY(10px);
+      @media (max-width: 1160px) {
+        width: 110px;
+        margin: 35px 5px;
+      }
       &:hover {
         img {
           transform: scale(1.1);
@@ -307,7 +311,7 @@ export default {
 }
 .wap-nav-botton {
   display: none;
-  position: absolute;
+  position: fixed;
   right: 15px;
   top: 20px;
   .icon-bar {

@@ -22,7 +22,7 @@
           <router-link :to="'/news-details/' + news.id" class="a" :key="index" v-if="index < 3">
             <img :src="news.img" />
             <h3>{{news.title}}</h3>
-            <p v-html="news.content"></p>
+            <p v-html="news.content.replace(/\/images\/default/g, 'https://cms.aicassets.com/images/default/')"></p>
             <span class="left">{{news.created_at}}</span>
             <span class="right"><router-link :to="'/news-details/' + news.id">了解详情</router-link></span>
           </router-link>

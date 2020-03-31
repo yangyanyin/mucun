@@ -66,11 +66,65 @@ export default {
     position: relative;
     text-align: left;
     padding: 25px 30px;
+    height: 135px;
     img.passport {
       position: absolute;
       right: 30px;
       bottom: 25px;
       width: 100px;
+    }
+    div {
+      font-size: 16px;
+      color: #f0c671;
+      font-weight: bold;
+      padding-bottom: 12px;
+      i {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        width: 17px;
+        margin-left: 3px;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    h3 {
+      color: #444;
+      font-size: 20px;
+    }
+    p {
+      color: #444;
+      padding-top: 5px;
+    }
+  }
+  @media (max-width: 767px) {
+    &.is-active {
+      width: 80%;
+      left: -15%;
+    }
+    .info {
+      padding: 12px 15px;
+      height: 100px;
+      div {
+        font-size: 13px;
+        padding-bottom: 7px;
+        i {
+          width: 14px;
+        }
+      }
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 12px;
+      }
+      img.passport {
+        right: 12px;
+        width: 50px;
+        bottom: 60px;
+      }
     }
   }
 }
@@ -82,12 +136,14 @@ export default {
     overflow-x: initial !important;
   }
   .el-carousel__container {
-    height: 600px !important;
+    height: 450px !important;
+    margin-top: 50px;
   }
   .el-carousel__arrow {
     display: block !important;
     background: rgba(255, 255, 255, .6) !important;
     transition: none;
+    top: 45%;
     &:hover {
       background: rgba(255, 255, 255, .6) !important;
     }
@@ -102,6 +158,27 @@ export default {
     button {
       overflow: hidden;
       text-indent: 100px;
+    }
+  }
+  .el-carousel__indicators--outside {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    padding: 0;
+    .el-carousel__container {
+      height: 280px !important;
+    }
+    .el-carousel__arrow {
+      background: rgba(0, 0, 0, .6) !important;
+      &:hover {
+        background: rgba(0, 0, 0, .6) !important;
+      }
+      &.el-carousel__arrow--left {
+        left: 0;
+      }
+      &.el-carousel__arrow--right {
+        right: 0;
+      }
     }
   }
 }

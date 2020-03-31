@@ -750,6 +750,7 @@ export default {
               font-size: 16px;
             }
             p {
+              height: 110px;
               font-size: 12px;
               line-height: 18px;
             }
@@ -765,12 +766,12 @@ export default {
 
 /** 绿卡项目 **/
 .green-card {
-  padding-top: 60px;
+  padding: 60px 0;
   background: url('../../assets/images/green-card-bg.png') no-repeat top center;
   background-size: 1920px;
   @media (max-width: 767px) {
-    padding-top: 30px;
-    background-size: 1000px;
+    padding: 30px 0;
+    background-size: 1100px;
   }
   .public-title {
     h3 {
