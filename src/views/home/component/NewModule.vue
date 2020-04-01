@@ -200,6 +200,11 @@ export default {
 </style>
 <style lang="less">
   .index-news {
+    .content div.left a.a p {
+      img {
+        display: none;
+      }
+    }
     .el-carousel__arrow {
       top: auto;
       bottom: 18px;
