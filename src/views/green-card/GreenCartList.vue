@@ -43,7 +43,7 @@
               <img src="../../assets/images/Malaysia-passport.png" />
             </span>
             <h3>马来西亚 / Malaysia</h3>
-            <p>一人申请，全家都可获得绿卡</p>
+            <p>一人申请，第二家园项目</p>
             <router-link to="/malaysia-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>

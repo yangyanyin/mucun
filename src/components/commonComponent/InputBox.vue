@@ -9,7 +9,7 @@
       <i>邮箱:</i>sgpec@spgec.sg
     </p>
     <p>
-      <i>地址:</i>新加坡滨海林荫大道8号滨海金融中心14楼
+      <i>地址:</i>新加坡滨海林荫大道8号滨海金融中心1号楼14楼
     </p>
     <ul class="clearfix">
       <li class="name" :class="{on: inputType === 'name'}">

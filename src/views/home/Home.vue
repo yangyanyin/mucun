@@ -24,7 +24,7 @@
           <span>CHOOSE US</span>
         </div>
         <div class="content animation-show">
-          <p>新加坡全球护照交流中心是新加坡华人圈最具影响力的移民公司，是政府官方牌照直接办理。对新加坡移民最新的移民政策了解，通相关的政府部门有着密切的关系。优秀的移民文案经验丰富，可以为申请人量身定做全面、成熟的移民规划，至今保持了100%的成功率。新加坡全球护照交流中心立足狮城，放眼亚洲，专业服务于亚洲成功精英。</p>
+          <p>新加坡全球护照交流中心-SGPEC，总部位于国际金融中心新加坡，是多国政府和机构投资移民项目的官方授权持牌机构。SGPEC成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
           <ul class="clearfix character">
             <li>
               <img src="../../assets/images/us-img1.png" />
@@ -257,22 +257,22 @@
           <div class="list">
             <img src="../../assets/images/advantage-icon2.png" />
             <p>
-              官方牌照直营
-              <br />不成功不收费
+              境外办理,隐私至上
+              <br />精英首选
             </p>
           </div>
           <div class="list">
             <img src="../../assets/images/advantage-icon3.png" />
             <p>
-              官方牌照直营
-              <br />不成功不收费
+              护照VIP激活
+              <br />行业领先首选
             </p>
           </div>
           <div class="list">
             <img src="../../assets/images/advantage-icon4.png" />
             <p>
-              官方牌照直营
-              <br />不成功不收费
+              境外后续服务
+              <br />无后顾之忧
             </p>
           </div>
         </div>
@@ -321,25 +321,25 @@ export default {
       items: [
         {
           title: "小额自雇移民项目",
-          text: "条件宽松，无语言要求，精英首选方案。",
+          text: "条件宽松，无语言要求，精英首选方案",
           url: "/emigrant/one",
           image: require("../../assets/images/project1.jpg")
         },
         {
           title: "股权投资移民项目",
-          text: "条件宽松，无语言要求，精英首选方案。",
+          text: "3个月，全家登陆花园城市",
           url: "/emigrant/tow",
           image: require("../../assets/images/project2.jpg")
         },
         {
           title: "GIP投资移民项目",
-          text: "条件宽松，无语言要求，精英首选方案。",
+          text: "获批后再投资安全无风险",
           url: "/emigrant/four",
           image: require("../../assets/images/project4.jpg")
         },
         {
           title: "家族办公室移民项目",
-          text: "条件宽松，无语言要求，精英首选方案。",
+          text: "资产配置| 资产管理 | 财富继承| 全家移民",
           url: "/emigrant/three",
           image: require("../../assets/images/project3.jpg")
         }
@@ -379,12 +379,6 @@ export default {
     }).then(res => {
       if (res.data.code === 200) {
         let countrys = res.data.data;
-        for (let i = 0; i < countrys.length; i++) {
-          countrys[i].introduction = countrys[i].introduction.replace(
-            /[ ]/g,
-            "<br />"
-          );
-        }
         this.countryPassport = countrys;
       }
     });

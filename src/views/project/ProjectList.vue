@@ -53,7 +53,7 @@
                   </li>
                   <li>
                     <img src="../../assets/images/country/country-list-icon2.png" />
-                    <span>免签国家</span>
+                    <span>免签国家/地区</span>
                     <h3>{{countrs.visa_free_number}}</h3>
                   </li>
                   <li>
