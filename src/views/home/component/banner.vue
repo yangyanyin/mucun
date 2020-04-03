@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <swiper :options="swiperOption">
+    <!-- <swiper :options="swiperOption">
       <swiper-slide>
         <img src="../../../assets/images/banner1.jpg" />
       </swiper-slide>
@@ -11,7 +11,10 @@
         <img src="../../../assets/images/banner3.jpg" />
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
-    </swiper>
+    </swiper> -->
+    <router-link to="/news-details/12">
+      <img src="../../../assets/images/home-banner.jpg" alt="">
+    </router-link>
   </div>
 </template>
 <script>
@@ -38,6 +41,17 @@ export default {
 .banner {
   img {
     width: 100%;
+  }
+  @media (max-width: 767px ){
+    height: 300px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: auto;
+      height: 300px;
+      transform: translateX(-50%);
+    }
   }
   .t1 {
     position: absolute;

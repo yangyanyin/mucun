@@ -792,7 +792,7 @@ export default {
   position: relative;
   height: 730px;
   padding: 70px 0;
-  background: url("../../assets//images/advantage-bg.png") no-repeat top center;
+  background: url("../../assets//images/advantage-bg.jpg") no-repeat top center;
   background-size: 100% 730px;
   .public-title {
     h3 {
