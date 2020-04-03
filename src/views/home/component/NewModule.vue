@@ -20,7 +20,9 @@
       <div class="left">
         <template v-for="(news, index) in newsList.news" >
           <router-link :to="'/news-details/' + news.id" class="a" :key="index" v-if="index < 3">
-            <img :src="news.img" />
+            <div class="img">
+              <img :src="news.img" />
+            </div>
             <h3>{{news.title}}</h3>
             <p v-html="news.content.replace(/\/images\/default/g, 'https://cms.aicassets.com/images/default/')"></p>
             <span class="left">{{news.created_at}}</span>
@@ -130,10 +132,16 @@ export default {
         text-overflow: ellipsis;
         white-space: nowrap;
       }
-      img {
+      .img {
         float: left;
+        width: 160px;
         height: 100px;
+        overflow: hidden;
         margin-right: 20px;
+        img {
+          display: block;
+          height: 100%;
+        }
       }
       p {
         font-size: 12px;
@@ -200,6 +208,9 @@ export default {
 </style>
 <style lang="less">
   .index-news {
+    .el-carousel__container {
+      height: 400px !important;
+    }
     .content div.left a.a p {
       img {
         display: none;

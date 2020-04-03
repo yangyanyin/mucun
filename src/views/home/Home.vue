@@ -817,7 +817,7 @@ export default {
     justify-content: space-between;
     padding: 50px 80px;
     .list {
-      width: 140px;
+      width: 144px;
       &:hover {
         img {
           transform: scale(1.06);
