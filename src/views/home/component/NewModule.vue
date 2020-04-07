@@ -24,8 +24,8 @@
               <img :src="news.img" />
             </div>
             <h3>{{news.title}}</h3>
-            <p v-html="news.content.replace(/\/images\/default/g, 'https://cms.aicassets.com/images/default/')"></p>
-            <span class="left">{{news.created_at}}</span>
+            <p>{{news.description}}</p>
+            <span class="left">{{news.created_at.split(' ')[0]}}</span>
             <span class="right"><router-link :to="'/news-details/' + news.id">了解详情</router-link></span>
           </router-link>
         </template>

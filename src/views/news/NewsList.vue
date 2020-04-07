@@ -14,9 +14,9 @@
               <router-link class="img" :to="'/news-details/' + news.id"><img :src="news.img" /></router-link>
               <div class="des">
                 <router-link class="t" :to="'/news-details/' + news.id">{{news.title}}</router-link>
-                <p v-html="news.content"></p>
+                <p>{{news.description}}</p>
                 <div class="left clearfix"> 
-                  <span>{{news.created_at}}</span>
+                  <span>{{news.created_at.split(' ')[0]}}</span>
                   <span>{{news.read_count}}</span>
                 </div>
                 <router-link :to="'/news-details/' + news.id" class="more right">了解详情</router-link>

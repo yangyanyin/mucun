@@ -225,8 +225,8 @@
             <img :src="news.img" />
             <div class="d clearfix">
               <h3>{{news.title}}</h3>
-              <p v-html="news.content"></p>
-              <span class="left">{{news.created_at}}</span>
+              <p>{{news.description}}</p>
+              <span class="left">{{news.created_at.split(' ')[0]}}</span>
               <span class="right"><router-link :to="'/news-details/' + news.id">了解详情</router-link></span>
             </div>
           </router-link>

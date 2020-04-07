@@ -9,9 +9,9 @@
         <div class="left news-details">
           <div class="title clearfix">
             <h3>{{newsDetails.news.title}}</h3>
-            <span class="label left">标签：啊实打实在这次</span>
+            <span class="label left">标签: {{newsDetails.news.tag}}</span>
             <span class="look right">{{newsDetails.news.read_count}}</span>
-            <span class="time right">{{newsDetails.news.created_at}}</span>
+            <span class="time right">{{newsDetails.news.created_at.split(' ')[0]}}</span>
           </div>
           <div class="details" v-html="newsDetailsContent"></div>
           <div class="other" v-if="newsDetails.prev_news || newsDetails.next_news">
