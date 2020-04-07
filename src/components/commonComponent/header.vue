@@ -570,37 +570,39 @@ export default {
 }
 </style>
 <style lang="less">
-.all-fixed.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  min-width: 992px;
-  .logo {
-    padding-top: 10px;
-    a {
+@media (min-width:767px) {
+  .all-fixed.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    min-width: 992px;
+    .logo {
+      padding-top: 10px;
+      a {
+        span {
+          width: 100px;
+        }
+        .img-text {
+          width: 150px;
+          margin-left: 20px;
+        }
+      }
+    }
+    .hotline {
+      padding-top: 15px;
+      h3 {
+        img {
+          width: 160px;
+        }
+      }
       span {
-        width: 100px;
-      }
-      .img-text {
-        width: 150px;
-        margin-left: 20px;
-      }
-    }
-  }
-  .hotline {
-    padding-top: 15px;
-    h3 {
-      img {
-        width: 160px;
-      }
-    }
-    span {
-      width: 20px;
-      margin-left: 25px;
-      &:last-child {
-        width: 24px;
+        width: 20px;
+        margin-left: 25px;
+        &:last-child {
+          width: 24px;
+        }
       }
     }
   }

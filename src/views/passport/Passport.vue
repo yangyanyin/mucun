@@ -576,12 +576,12 @@ export default {
         z-index: 9999;
         background: #fff;
         transition: .3s;
-        padding: 15px 50px;
+        padding: 80px 50px 15px;
         border-radius: 0;
         .close {
           position: fixed;
           right: 15px;
-          top: 15px;
+          top: 85px;
           width: 20px;
           height: 20px;
           img {
@@ -598,7 +598,7 @@ export default {
         .sc {
           position: absolute;
           left: 50px;
-          top: 65px;
+          top: 120px;
           right: 0;
           bottom: 50px;
           overflow: auto;

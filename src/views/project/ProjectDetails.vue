@@ -191,7 +191,7 @@ export default {
     background: #447375;
   }
   @media (max-width: 767px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .banner {
@@ -209,10 +209,10 @@ export default {
   }
   @media (max-width: 767px) {
     padding-top: 60px;
-    height: 316px;
+    height: 240px;
     img {
       top: 60px;
-      height: 256px;
+      height: 180px;
     }
   }
 }
@@ -248,34 +248,45 @@ export default {
         border-bottom: 4px  solid #447375;
       }
     }
-    &:hover {
-      i {
-        color: #447375;
-        padding: 28px 0;
-        border-bottom: 4px  solid #447375;
+    @media (min-width: 767px) {
+      &:hover {
+        i {
+          color: #447375;
+          padding: 28px 0;
+          border-bottom: 4px  solid #447375;
+        }
       }
     }
   }
   @media (max-width: 767px) {
     white-space: nowrap;
-    height: 70px;
+    height: 60px;
     line-height: inherit;
     overflow-x: auto;
     padding: 0 10px;
     a {
-      line-height: inherit;
+      position: relative;
+      line-height: 59px;
       width: auto;
-      padding: 22px 10px;
+      padding: 0 10px;
       margin: 0;
       i {
-        padding: 12px 0;
+        padding: 0;
       }
       &.on {
         i {
-          color: #447375;
-          padding: 22px 0;
+          padding: 0;
           font-weight: bold;
-          border-bottom: 4px  solid #447375;
+          border-bottom:none;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          left: 10px;
+          right: 10px;
+          bottom: 0;
+          height: 4px;
+          background: #447375;
         }
       }
     }
@@ -304,7 +315,9 @@ export default {
     margin-top: 20px;
     padding: 20px;
     p {
-      font-size: 16px;
+      font-size: 14px;
+      padding-top: 20px;
+      line-height: 26px;
     }
     strong {
       font-size: 22px;
@@ -357,6 +370,8 @@ export default {
         p {
           font-size: 14px;
           line-height: 22px;
+          height: 100px;
+          padding: 0 10px 10px;
         }
       }
     }

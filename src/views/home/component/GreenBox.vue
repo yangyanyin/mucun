@@ -165,6 +165,7 @@ export default {
   }
   @media (max-width: 767px) {
     padding: 0;
+    margin: 0 -10px;
     .el-carousel__container {
       height: 280px !important;
     }

@@ -202,7 +202,7 @@ export default {
   }
   @media (max-width: 767px) {
     white-space: nowrap;
-    height: 70px;
+    height: 60px;
     line-height: inherit;
     overflow-x: auto;
     padding: 0 10px;
@@ -213,17 +213,27 @@ export default {
     a {
       line-height: inherit;
       width: auto;
-      padding: 25px 10px;
+      padding: 20px 10px;
       i {
-        padding: 12px 0;
+        padding: 0;
         font-size: 14px;
       }
       &.on {
+        position: relative;
         i {
           color: #447375;
-          padding: 23px 0;
+          padding: 0;
           font-weight: bold;
-          border-bottom: 4px  solid #447375;
+          border-bottom: none;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          left: 10px;
+          right: 10px;
+          bottom: 0;
+          height: 4px;
+          background: #447375;
         }
       }
     }

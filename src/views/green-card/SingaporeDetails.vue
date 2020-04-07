@@ -268,9 +268,10 @@ export default {
   }
   @media (max-width: 767px) {
     padding-top: 60px;
-    height: 256px;
+    height: 240px;
     img {
-      height: 256px;
+      top: 60px;
+      height: 180px;
     }
   }
 }

@@ -5,7 +5,7 @@
       <div class="pc-max-width">
         <div class="menu">
           <router-link to="/emigrant/one"><i>小额自雇移民项目 (EP)</i></router-link>
-          <router-link to="/emigrant/tow"><i>股权投资移民(EP）</i></router-link>
+          <router-link to="/emigrant/tow"><i>股权投资移民(EP)</i></router-link>
           <router-link to="/emigrant/three"><i>全球商业投资计划(GIP)移民</i></router-link>
           <router-link to="/emigrant/four"><i>新加坡家族办公室(Family Office)</i></router-link>
         </div>
@@ -41,6 +41,11 @@ export default {
     width: 100%;
     height: 340px;
     background: url('../../assets/images/emigrant-banner.jpg') no-repeat top center;
+    @media (max-width: 767px) {
+      padding-top: 60px;
+      height: 240px;
+      background-size: auto 240px;
+    }
   }
   .emigrant {
     @media (min-width: 767px) {
@@ -52,6 +57,9 @@ export default {
       background: #fff;
       border-radius: 5px;
       box-shadow: 0 3px 3px 0 #ababab;
+      @media (max-width: 767px) {
+        margin-top: -30px;
+      }
       a {
         display: inline-block;
         width: 25%;
@@ -80,7 +88,7 @@ export default {
       }
       @media (max-width: 767px) {
         white-space: nowrap;
-        height: 70px;
+        height: 60px;
         overflow-x: auto;
         padding: 0 10px;
         &::-webkit-scrollbar {
@@ -88,9 +96,10 @@ export default {
           height: 0px;
         } 
         a {
+          position: relative;
           line-height: inherit;
           width: auto;
-          padding: 25px 10px;
+          padding: 20px 10px;
           i {
             padding: 12px 0;
             font-size: 14px;
@@ -98,9 +107,18 @@ export default {
           &.router-link-active {
             i {
               color: #447375;
-              padding: 21px 0;
+              padding: 0;
               font-weight: bold;
-              border-bottom: 4px  solid #447375;
+              border-bottom: none;
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              left: 10px;
+              right: 10px;
+              bottom: 0;
+              height: 4px;
+              background: #447375;
             }
           }
         }

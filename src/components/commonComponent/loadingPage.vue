@@ -23,7 +23,13 @@
   }
   @media (max-width: 767px) {
     padding: 240px 0 150px;
-    
+    img {
+      width: 70px;
+      height: 70px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 }
 </style>

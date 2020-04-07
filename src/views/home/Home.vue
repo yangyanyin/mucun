@@ -653,8 +653,8 @@ export default {
   background: url('../../assets/images/success-case-bg.png') no-repeat top center;
   background-size: 1920px;
   @media (max-width: 767px) {
-    padding-top: 30px;
     background-size: 1000px;
+    padding: 30px 10px 0;
   }
   .public-title {
     h3 {
@@ -727,6 +727,7 @@ export default {
       padding: 30px 5px 20px;
       white-space: nowrap;
       overflow: auto;
+      margin: 0 -10px;
       &::-webkit-scrollbar {
         height: 0px;
       } 
@@ -764,7 +765,7 @@ export default {
   background: url('../../assets/images/green-card-bg.png') no-repeat top center;
   background-size: 1920px;
   @media (max-width: 767px) {
-    padding: 30px 0;
+    padding: 30px 10px;
     background-size: 1100px;
   }
   .public-title {
@@ -1012,6 +1013,7 @@ export default {
         width: 100%;
         text-align: center;
         padding: 10px;
+        height: 81px;
         background: rgba(0, 0, 0, 0.4);
         h3 {
           font-size: 16px;

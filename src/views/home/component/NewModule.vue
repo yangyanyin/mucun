@@ -208,8 +208,10 @@ export default {
 </style>
 <style lang="less">
   .index-news {
-    .el-carousel__container {
-      height: 400px !important;
+    @media (min-width: 767px) {
+      .el-carousel__container {
+        height: 400px !important;
+      }
     }
     .content div.left a.a p {
       img {
