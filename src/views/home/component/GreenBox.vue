@@ -1,6 +1,6 @@
 <template>
   <div class="home-card">
-    <el-carousel :interval="40000" type="card" height="620px">
+    <el-carousel :interval="4000" type="card" height="620px">
       <el-carousel-item v-for="(item, index) in evaluation" :key="index">
         <router-link :to="item.url">
           <img class="img" :src="item.img" />
@@ -166,6 +166,7 @@ export default {
   @media (max-width: 767px) {
     padding: 0;
     margin: 0 -10px;
+    overflow: hidden;
     .el-carousel__container {
       height: 280px !important;
     }

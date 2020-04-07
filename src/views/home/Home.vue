@@ -685,8 +685,10 @@ export default {
         box-shadow: 0px 4px 18px -6px #d0d0d0;
         transition: .3s;
         background: #fff;
-        &:hover {
-          transform: scale(1.03);
+        @media (min-width: 767px) {
+          &:hover {
+            transform: scale(1.03);
+          }
         }
         img {
           display: block;
@@ -743,14 +745,20 @@ export default {
             padding: 15px;
             h3 {
               font-size: 16px;
+              height: 24px;
+              -webkit-line-clamp: 1;
             }
             p {
-              height: 110px;
+              height: 55px;
               font-size: 12px;
               line-height: 18px;
+              -webkit-line-clamp: 3;
             }
             span {
               font-size: 12px;
+              a {
+                font-size: 12px;
+              }
             }
           }
         }
