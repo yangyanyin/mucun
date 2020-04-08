@@ -43,8 +43,8 @@ export default {
     background: url('../../assets/images/emigrant-banner.jpg') no-repeat top center;
     @media (max-width: 767px) {
       padding-top: 60px;
-      height: 240px;
-      background-size: auto 240px;
+      height: 200px;
+      background-size: auto 200px;
     }
   }
   .emigrant {
@@ -78,11 +78,13 @@ export default {
             border-bottom: 4px  solid #447375;
           }
         }
-        &:hover {
-          i {
-            color: #447375;
-            padding: 28px 0;
-            border-bottom: 4px  solid #447375;
+        @media (min-width: 767px) {
+          &:hover {
+            i {
+              color: #447375;
+              padding: 28px 0;
+              border-bottom: 4px  solid #447375;
+            }
           }
         }
       }

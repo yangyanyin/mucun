@@ -209,9 +209,9 @@ export default {
   }
   @media (max-width: 767px) {
     padding-top: 60px;
-    height: 240px;
+    height: 200px;
     img {
-      top: 60px;
+      top: 40px;
       height: 180px;
     }
   }
@@ -260,18 +260,20 @@ export default {
   }
   @media (max-width: 767px) {
     white-space: nowrap;
-    height: 60px;
+    height: 50px;
     line-height: inherit;
     overflow-x: auto;
     padding: 0 10px;
+    margin: -25px 0 20px 0;
     a {
       position: relative;
-      line-height: 59px;
+      line-height: 49px;
       width: auto;
       padding: 0 10px;
       margin: 0;
       i {
         padding: 0;
+        font-size: 16px;
       }
       &.on {
         i {

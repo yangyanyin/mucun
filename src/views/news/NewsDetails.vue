@@ -185,12 +185,15 @@ export default {
     width: 100%;
     .title {
       padding: 20px 0;
+      position: relative;
       h3 {
         font-size: 20px;
       }
       span.time {
-        float: left;
-        margin: 0 10px 0 0;
+        position: absolute;
+        right: 0;
+        bottom: 48px;
+        margin: 0;
       }
       span.label  {
         display: block;

@@ -192,11 +192,13 @@ export default {
         border-bottom: 4px  solid #447375;
       }
     }
-    &:hover {
-      i {
-        color: #447375;
-        padding: 28px 0;
-        border-bottom: 4px  solid #447375;
+    @media (min-width: 767px) {
+      &:hover {
+        i {
+          color: #447375;
+          padding: 28px 0;
+          border-bottom: 4px  solid #447375;
+        }
       }
     }
   }
@@ -206,6 +208,7 @@ export default {
     line-height: inherit;
     overflow-x: auto;
     padding: 0 10px;
+    margin: -25px 0 20px 0;
     &::-webkit-scrollbar {
       width: 5px;
       height: 0px;

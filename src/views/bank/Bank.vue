@@ -148,9 +148,9 @@ export default {
   }
   @media (max-width: 767px) {
     padding-top: 60px;
-    height: 240px;
+    height: 200px;
     img {
-      top: 60px;
+      top: 30px;
       height: 180px;
     }
   }

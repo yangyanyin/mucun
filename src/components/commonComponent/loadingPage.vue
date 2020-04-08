@@ -28,6 +28,7 @@
       height: 70px;
     }
     p {
+      margin: 0;
       font-size: 12px;
     }
   }

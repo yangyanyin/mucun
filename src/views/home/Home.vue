@@ -104,7 +104,7 @@
     </div>
 
     <!-- 移民专家 -->
-    <div class="expert pc-max-width margin-t-80" v-if="newsData.expert.news.length > 0">
+    <div class="expert pc-max-width margin-t-80" v-if="newsData.expert.length > 0">
       <div class="public-title animation-show">
         <h3>新加坡移民专家</h3>
         <span>
@@ -195,7 +195,7 @@
     </div>
 
     <!-- 护照专题 -->
-    <div class="thematic pc-max-width margin-t-80" v-if="newsData.thematic.news.length > 0">
+    <div class="thematic pc-max-width margin-t-80" v-if="newsData.thematic.length > 0">
       <div class="public-title animation-show">
         <h3>护照专题</h3>
         <span>
@@ -209,7 +209,7 @@
     </div>
 
     <!-- 成功案例 -->
-    <div class="success-case margin-t-80" v-if="newsData.case.news.length > 0">
+    <div class="success-case margin-t-80" v-if="newsData.case.length > 0">
       <div class="public-title animation-show">
         <h3>成功案例</h3>
         <span>
@@ -219,19 +219,23 @@
         </span>
         <p>Successful Cases</p>
       </div>
-      <ul class="pc-max-width content clearfix animation-show">
-        <li v-for="(news, index) in newsData.case.news" :key="index">
-          <router-link class="a" :to="'/news-details/' + news.id">
-            <img :src="news.img" />
-            <div class="d clearfix">
-              <h3>{{news.title}}</h3>
-              <p>{{news.description}}</p>
-              <span class="left">{{news.created_at.split(' ')[0]}}</span>
-              <span class="right"><router-link :to="'/news-details/' + news.id">了解详情</router-link></span>
-            </div>
-          </router-link>
-        </li>
-      </ul>
+      <div class="pc-max-width content clearfix animation-show">
+        <ul>
+          <li v-for="(news, index) in newsData.case" :key="index">
+            <router-link class="a" :to="'/news-details/' + news.id">
+              <img
+                    v-lazy="{src: news.img, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
+                  />
+              <div class="d clearfix">
+                <h3>{{news.title}}</h3>
+                <p v-html="news.description"></p>
+                <span class="left">{{news.created_at.split(' ')[0]}}</span>
+                <span class="right"><router-link :to="'/news-details/' + news.id">了解详情</router-link></span>
+              </div>
+            </router-link>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- 我们的优势 -->
@@ -346,7 +350,7 @@ export default {
       ],
       loadingStatus: false,
       newsData: {
-        case: '',
+        case: [],
         thematic: '',
         expert: ''
       }
@@ -394,13 +398,13 @@ export default {
         let news = res.data.data.news_list
         for (let i = 0; i < news.length; i++) {
           if (news[i].name === '护照专题' ) {
-            this.newsData.thematic = news[i]
+            this.newsData.thematic = news[i].news.slice(0, 3)
           }
           if (news[i].name === '新加坡移民专家' ) {
-            this.newsData.expert = news[i]
+            this.newsData.expert = news[i].news.slice(0, 3)
           }
           if (news[i].name === '成功案例' ) {
-            this.newsData.case = news[i]
+            this.newsData.case = news[i].news.slice(0, 4)
           }
         }
       }
@@ -726,24 +730,32 @@ export default {
       }
     }
     @media (max-width: 767px) {
-      padding: 30px 5px 20px;
       white-space: nowrap;
       overflow: auto;
-      margin: 0 -10px;
+      padding: 30px 0 20px;
       &::-webkit-scrollbar {
         height: 0px;
       } 
+      ul {
+        width: 920px;
+        margin: 0 -10px;
+      }
       li {
-        display: inline-block;
-        float: none;
-        width: 66%;
+        float: left;
+        width: 230px;
         padding: 0 5px;
-        white-space: normal;
+        white-space: initial;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
         a.a {
-          box-shadow: 0px 2px 4px #d0d0d0;
           .d {
             padding: 15px;
             h3 {
+              display: block;
               font-size: 16px;
               height: 24px;
               -webkit-line-clamp: 1;
