@@ -12,7 +12,6 @@ Vue.component('vue-accordion', vueAccordion)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueLazyload)
 Vue.prototype.$http = axios
-
 Vue.use(ElementUI);
 
 Vue.use(VueLazyload, {
