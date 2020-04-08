@@ -1,36 +1,29 @@
 <template>
-  <div class="header">
+  <div class="header" :class="{'is-fixed': isFixed, 'all-fixed': headerFixed}">
+    <img style="display:none;" src="../../assets/images/country-loading.png">
     <div class="pc-max-width clearfix">
       <div class="logo left">
         <a href="/">
           <span class="img"><img src="../../assets/images/logo.png" /></span>
+          <span class="img-text"><img src="../../assets/images/logo-text.png" /></span>
         </a>
       </div>
-      <div class="hotline right">
-        咨询热线: 
-        <h3>+65 6909 8015</h3>
-        <span><img src="../../assets/images/footer-iphone.png" /></span>
-        <span>
-          <img src="../../assets/images/footer-email.png" />
-          <p>sgpec@spgec.sg</p>
-        </span>
-        <span class="wx"><img src="../../assets/images/footer-wx.png" />
-          <p><img src="../../assets/images/WeChat.png" /></p>
-        </span>
+      <div class="right">
+        <Hotline />
       </div>
     </div>
     <ul class="navs">
       <li v-for="(navs, index) in navList" :key="index">
-        <a class="m" :class="{on:currentUrl === navs.url || detailsUrl === navs.url}"
-          :href="navs.url">
+        <router-link class="m" :class="{on: detailsUrl === navs.page}"
+          :to="navs.url">
           {{navs.name}}
           <i></i>
-        </a>
+        </router-link>
         <div v-if="navs.down" class="project-select">
-          <a href="" v-for="(menu, key) in projectDown" :key="key">
-            <img :src="menu.passport" />
+          <router-link :to="'/project/details/' + menu.country_id" v-for="(menu, key) in projectDown" :key="key">
+            <img :src="menu.passport" /> 
             <span>{{menu.name}}</span>
-          </a>
+          </router-link>
         </div>
       </li>
     </ul>
@@ -40,53 +33,72 @@
       <span class="icon-bar"></span>
     </button>
     <div class="wap-nav-list" :class="{on: showWapNav}">
-      <a v-for="(navs, index) in navList" :href="navs.url" :key="index">{{navs.name}}</a>
+      <router-link v-for="(navs, index) in navList" :to="navs.url" :key="index">{{navs.name}}</router-link>
     </div>
   </div>
 </template>
 <script>
+import Hotline from './Hotline'
 export default {
+  components: {
+    Hotline
+  },
   data() {
     return {
       showWapNav: false,
       navList: [
         {
           name: "首 页",
-          url: "/"
+          url: "/",
+          page: 'home'
         },
         {
-          name: "新加波移民",
-          url: "/emigrant/one"
-        },
-        {
-          name: "护照精选",
-          url: "/passport/"
+          name: "新加坡移民",
+          url: "/emigrant/one",
+          page: 'emigrant'
         },
         {
           name: "护照项目",
-          url: "/project/",
-          down: true
+          url: "/project",
+          down: true,
+          page: 'project'
         },
         {
-          name: "移居狮城",
-          url: "/city/"
+          name: "签证服务",
+          url: "/passport",
+          page: 'passport'
+        },
+        {
+          name: "绿卡项目",
+          url: "/green-cart",
+          page: 'green'
         },
         {
           name: "银行开户",
-          url: "/bank/"
+          url: "/bank",
+          page: 'bank'
         },
         {
           name: "资产配置",
-          url: "/asset/"
+          url: "/asset",
+          page: 'asset'
+        },
+        {
+          name: "成功案例",
+          url: "/news-case",
+          page: 'news'
         },
         {
           name: "关于我们",
-          url: "/about/"
+          url: "/about",
+          page: 'about'
         }
       ],
-      currentUrl: window.location.pathname,
-      detailsUrl: this.$route ? this.$route.path.substring(0, 9) : "",
-      projectDown: ''
+      detailsUrl: this.$route.meta.page,
+      projectDown: '',
+      isFixed: false,
+      scrollPx: 0,
+      headerFixed: false
     };
   },
   methods: {
@@ -95,6 +107,11 @@ export default {
     }
   },
   mounted() {
+    if (this.$route.name === 'Passport') {
+      this.isFixed = true
+    } else {
+      this.isFixed = false
+    }
     this.$http({
       method: "get",
       url: process.env.VUE_APP_API + "/v1/countries "
@@ -103,6 +120,16 @@ export default {
         this.projectDown = res.data.data
       }
     });
+    
+
+    window.addEventListener('scroll', () => {
+      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      if (scrollTop >= 1) {
+        this.headerFixed = true
+      } else {
+        this.headerFixed = false
+      }
+    })
   }
 };
 </script>
@@ -112,10 +139,25 @@ export default {
   width: 100%;
   height: 120px;
   background: #0f1f24;
+  z-index: 999;
+  transition: 1s;
+  @media(min-width: 767px) {
+    &.is-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .hotline {
+      display: none;
+    }
+  }
 }
 .logo {
   display: block;
   padding-top: 25px;
+  transition: .8s;
   a {
     display:flex;
     flex-flow: row wrap;
@@ -123,9 +165,18 @@ export default {
     span {
       display: inline-block;
       width: 230px;
+      transition: .8s;
       &.text {
         margin-left: 35px;
       }
+    }
+  }
+  .img-text {
+    width: 220px;
+    margin-left: 40px; 
+    transition: .8s;
+    @media (max-width: 1040px) {
+      display: none;
     }
   }
   img {
@@ -134,95 +185,29 @@ export default {
   }
 }
 
-.hotline {
-  color: #efd492;
-  display:flex;
-  flex-flow: row wrap;
-  align-items: center;
-  padding-top: 50px;
-  @media(max-width: 767px) {
-    display: none;
-  }
-  h3 {
-    display: inline-block;
-    font-size: 18px;
-    margin: 0 5px 0 10px;
-  }
-  span {
-    position: relative;
-    display: inline-block;
-    width: 24px;
-    margin-left: 30px;
-    &:last-child {
-      width: 28px;
-    }
-    
-    img {
-      display: block;
-      width: 100%;
-    }
-    &.wx { 
-      p {
-        right: -5px;
-        img {
-          width: 100px;
-        }
-        &:after {
-          content: '';
-          right: 5px;
-        }
-      }
-    }
-    p {
-      display: none;
-      position: absolute;
-      top: 35px;
-      right: -20px;
-      z-index: 999;
-      padding: 10px;
-      border-radius: 5px;
-      background: #fff;
-      color: #111;
-      &:after {
-        content: '';
-        position: absolute;
-        right: 21px;
-        top: -19px;
-        width: 0px;
-        height: 0px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: transparent transparent #fff;
-      }
-    }
-    &:hover {
-      p {
-        display: block;
-      }
-    }
-  }
-}
-
 .navs {
   width: 100%;
-  height: 60px;
   position: absolute;
   z-index: 9;
   left: 0;
-  bottom: -60px;
+  bottom: -50px;
   background: rgba(0, 0, 0, 0.7);
   text-align: center;
   li {
     display: inline-block;
     margin: 0 23px;
+
+    @media (max-width: 920px) {
+      margin: 0 14px;
+    }
     a.m {
       position: relative;
       display: block;
-      font-size: 16px;
+      font-size: 14px;
       color: #ffffff;
       text-align: center;
-      height: 60px;
-      line-height: 60px;
+      height: 50px;
+      line-height: 50px;
       transition: 0.3s;
       i {
         position: absolute;
@@ -230,9 +215,10 @@ export default {
         bottom: 0;
         left: 50%;
         background: #fff;
-        height: 4px;
+        height: 3px;
         display: block;
         transition: 0.25s;
+        border-radius: 2px;
         -webkit-transition: 0.25s;
       }
       &:last-child {
@@ -249,42 +235,83 @@ export default {
       }
       &.on {
         i {
-          width: 95%;
+          width: 100%;
           left: 0;
         }
       }
     }
     &:hover {
       .project-select {
+        height: 240px;
         display: block;
+        a:nth-child(1){
+          animation: project1 .3s .2s forwards;
+        }
+        a:nth-child(2){
+          animation: project2 .3s .4s forwards;
+        }
+        a:nth-child(3){
+          animation: project3 .3s .6s forwards;
+        }
+        a:nth-child(4){
+          animation: project4 .3s .8s forwards;
+        }
+        a:nth-child(5){
+          animation: project5 .3s 1s forwards;
+        }
+        a:nth-child(6){
+          animation: project6 .3s 1.2s forwards;
+        }
+        a:nth-child(7){
+          animation: project7 .3s 1.4s forwards;
+        }
+        a:nth-child(8){
+          animation: project8 .3s 1.6s forwards;
+        }
       }
+
     }
   }
   .project-select {
-    display: none;
     position: absolute;
     width: 100%;
+    height: 0;
     left: 0;
-    padding: 35px 0 25px;
     background: rgba(0, 0, 0, 0.7);
     transition: .4s;
+    overflow: hidden;
     a {
+      opacity: 0;
       display: inline-block;
       width: 120px;
       text-align: center;
       color: #FFE19A;
-      margin: 0 30px;
+      margin: 35px 10px 0;
+      transform: translateY(10px);
+      @media (max-width: 1160px) {
+        width: 110px;
+        margin: 35px 5px;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      span {
+        font-size: 12px;
+      }
       img {
         display: block;
         margin: 0 auto 20px;
         width: 100px;
+        transition: .3s;
       }
     }
   }
 }
 .wap-nav-botton {
   display: none;
-  position: absolute;
+  position: fixed;
   right: 15px;
   top: 20px;
   .icon-bar {
@@ -339,7 +366,7 @@ export default {
   position: fixed;
   top: -100%;
   left: 0;
-  z-index: 99;
+  z-index: 9999;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
@@ -386,7 +413,12 @@ export default {
         transform: translateY(30px);
       }
       &:nth-child(8) {
-        animation: showNav7 0.9s forwards;
+        animation: showNav8 0.9s forwards;
+        animation-delay: 1s;
+        transform: translateY(30px);
+      }
+      &:nth-child(9) {
+        animation: showNav9 1s forwards;
         animation-delay: 1s;
         transform: translateY(30px);
       }
@@ -442,6 +474,67 @@ export default {
     opacity: 1;
   }
 }
+@keyframes showNav8 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes showNav9 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes project1 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes project2 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes project3 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes project4 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes project5 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes project6 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes project7 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes project8 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 @media (max-width: 767px) {
   .header {
@@ -473,6 +566,45 @@ export default {
     display: block;
     z-index: 992;
     background: none;
+  }
+}
+</style>
+<style lang="less">
+@media (min-width:767px) {
+  .all-fixed.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    min-width: 992px;
+    .logo {
+      padding-top: 10px;
+      a {
+        span {
+          width: 100px;
+        }
+        .img-text {
+          width: 150px;
+          margin-left: 20px;
+        }
+      }
+    }
+    .hotline {
+      padding-top: 15px;
+      h3 {
+        img {
+          width: 160px;
+        }
+      }
+      span {
+        width: 20px;
+        margin-left: 25px;
+        &:last-child {
+          width: 24px;
+        }
+      }
+    }
   }
 }
 </style>

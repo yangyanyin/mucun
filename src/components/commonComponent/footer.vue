@@ -1,26 +1,24 @@
 <template>
-  <div class="footer">
+  <div class="footer" :class="{'is-fixed': isFixed}">
     <div class="pc-max-width clearfix">
       <div class="left">
-        <div class="hotline">
-          咨询热线: 
-          <h3>+65 6909 8015</h3>
-          <span><img src="../../assets/images/footer-iphone.png" /></span>
-          <span><img src="../../assets/images/footer-email.png" /></span>
-          <span><img src="../../assets/images/footer-wx.png" /></span>
-        </div>
+        <Hotline />
         <div class="footer-nav clearfix">
           <div class="menu left">
-            <a href="">关于我们</a>
-            <a href="">常见问题</a>
-            <a href="">成功案例</a>
-            <a href="">本站搜索</a>
+            <router-link to="/emigrant/one">新加坡移民</router-link>
+            <router-link to="/project/">护照项目</router-link>
+            <router-link to="/passport/">签证服务</router-link>
+            <router-link to="/city/">移居狮城</router-link>
           </div>
           <div class="menu left">
-            <a href="">欧盟护照</a>
-            <a href="">英联邦护照</a>
-            <a href="">新加坡移民</a>
-            <a href="">热点新闻</a>
+            <router-link to="/bank/">银行开户</router-link>
+            <router-link to="/asset/">资产配置</router-link>
+            <router-link to="/news-thematic">护照专题</router-link>
+            <router-link to="/news-expert">新加坡移民专家</router-link>
+          </div>
+          <div class="menu left">
+            <router-link to="/news-case">成功案例</router-link>
+            <router-link to="/about">关于我们</router-link>
           </div>
         </div>
         <div class="address">
@@ -32,11 +30,11 @@
       <div class="right wechat">
         <div class="left">
           <img src="../../assets/images/WeChat.png" />
-          <p>扫一扫关注公众号</p>
+          <p>扫一扫添加微信</p>
         </div>
         <div class="left">
-          <img src="../../assets/images/WeChat.png" />
-          <p>扫一扫添加微信</p>
+          <img src="../../assets/images/WeChat2.png" />
+          <p>扫一扫关注公众号</p>
         </div>
       </div>
     </div>
@@ -48,10 +46,15 @@
   </div>
 </template>
 <script>
+import Hotline from './Hotline'
 export default {
+  components: {
+    Hotline
+  },
   data() {
     return {
-      showReturnTop: false
+      showReturnTop: false,
+      isFixed: false
     };
   },
   methods: {
@@ -70,8 +73,7 @@ export default {
       }, 10);
     },
     scrollTop() {
-      let scroll =
-        document.documentElement.scrollTop || document.body.scrollTop;
+      let scroll = document.documentElement.scrollTop || document.body.scrollTop;
       if (scroll > 500) {
         this.showReturnTop = true;
       } else {
@@ -80,6 +82,11 @@ export default {
     }
   },
   mounted() {
+    if (this.$route.name === 'Passport') {
+      this.isFixed = true
+    } else {
+      this.isFixed = false
+    }
     window.addEventListener("scroll", this.scrollTop);
   }
 };
@@ -92,6 +99,18 @@ export default {
   @media (max-width: 767px) {
     padding-top: 30px;
   }
+  @media (min-width: 767px) {
+    &.is-fixed {
+      display: none;
+    }
+  }
+  .hotline {
+    padding: 0 0 40px 0;
+    border-bottom: 1px solid #3a474c;
+    @media (max-width: 767px) {
+      padding: 0 0 20px 0;
+    }
+  }
 }
 .hotline {
   color: #efd492;
@@ -102,7 +121,8 @@ export default {
   padding-bottom: 40px;
   h3 {
     display: inline-block;
-    font-size: 18px;
+    font-size: 30px;
+    font-weight: bold;
     margin: 0 5px 0 10px;
   }
   span {
@@ -138,6 +158,11 @@ export default {
     display: block;
     color: #fff;
     font-size: 16px;
+    @media(min-width: 767px) {
+      &:hover {
+        color: #efd492;
+      }
+    }
   }
   @media (max-width: 767px) {
     padding: 0;
@@ -172,6 +197,9 @@ export default {
   div {
     margin-left: 30px;
   }
+  img {
+    width: 155px;
+  }
   p {
     color: #fff;
     padding: 20px 0 0 25px;
@@ -197,7 +225,8 @@ export default {
   border-top: 1px solid #27363a;
   line-height: 60px;
   color: #fff;
-  opacity: .8;
+  font-size: 12px;
+  opacity: .5;
   text-align: center;
   @media (max-width: 767px) {
     line-height: 20px;
@@ -211,12 +240,9 @@ export default {
   right: 70px;
   bottom: 100px;
   width: 35px;
-  border: 1px solid #bd8c67;
-  padding: 6px;
   border-radius: 5px;
   cursor: pointer;
   background: #bd8c67;
-  opacity: 0.8;
   img {
     display: block;
     width: 100%;

@@ -3,25 +3,23 @@
     <div class="width">
       <swiper :options="swiperOption">
         <swiper-slide v-for="(banners, index) in bannerImgList" :key="index">
-          <img :src="banners.img" />
-          <p class="t1">{{banners.name}}</p>
-          <p class="t2">投资置业 定居生活 全面规划</p>
+          <div class="img">
+            <img :src="banners.img" />
+          </div>
+          <!-- <p class="t1">{{banners.name}}</p> -->
+          <!-- <p class="t2">投资置业 定居生活 全面规划</p> -->
         </swiper-slide>
-        <!-- <div class="swiper-pagination" slot="pagination"></div> -->
-        <!-- 	        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>-->
       </swiper>
     </div>
   </div>
 </template>
 <script>
-import "swiper/dist/css/swiper.min.css";
 export default {
   props: ["bannerImgList"],
   data() {
     return {
       swiperOption: {
-        autoplay: 3000,
+        autoplay: 4000,
         loop: true,
         effect: "fade"
         // pagination: '.swiper-pagination'
@@ -34,8 +32,16 @@ export default {
 </script>
 <style lang="less" scoped>
 .banner {
-  img {
-    width: 100%;
+  .img {
+    position: relative;
+    height: 340px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50%);
+    }
   }
   .t1 {
     position: absolute;
@@ -55,33 +61,16 @@ export default {
     color: #fff;
     font-size: 44px;
   }
-}
-@media (max-width: 767px) {
-  .banner {
-    position: relative;
-    height: 272px;
-    overflow: hidden;
-    .width {
-      position: absolute;
-      width: 670px;
-      height: 272px;
-      top: 0;
-      left: 50%;
-      margin-left: -335px;
-    }
-    .t1 {
-      bottom: 40%;
-      font-size: 28px;
-    }
-    .t2 {
-      bottom: 25%;
-      font-size: 22px;
-    }
-    img {
-      display: block;
-      width: auto;
-      height: 272px;
+  @media (max-width: 767px) {
+    .img {
+      padding-top: 60px;
+      height: 200px;
+      img {
+        top: 40px;
+        height: 180px;
+      }
     }
   }
 }
+
 </style>

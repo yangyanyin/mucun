@@ -142,7 +142,7 @@ select:focus,select:active,select:hover{
 // 自定义滚动条样式
 ::-webkit-scrollbar {
   width: 5px;
-  height: 5px;
+  height: 12px;
 } /* 这是针对缺省样式 (必须的) */
 ::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.2);
@@ -191,7 +191,7 @@ select:focus,select:active,select:hover{
     display: block; 
   }
   .margin-t-80{
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 
@@ -202,7 +202,7 @@ select:focus,select:active,select:hover{
   margin: auto;
   h3{
     position: relative;
-    font-size: 32px;
+    font-size: 30px;
     color: #2d4b4c;
   }
   p{
@@ -217,20 +217,22 @@ select:focus,select:active,select:hover{
     &:before {
       content: '';
       position: absolute;
-      left: 0;
+      left: 210px;
       top: 49%;
-      width: 210px;
+      width: 0;
       height: 1px;
       background: #2d4b4c;
+      transition: 2s;
     }
     &:after {
       content: '';
       position: absolute;
-      right: 0;
+      right: 210px;
       top: 49%;
-      width: 210px;
+      width: 0;
       height: 1px;
       background: #2d4b4c;
+      transition: 2s;
     }
     i {
       position: relative;
@@ -238,7 +240,6 @@ select:focus,select:active,select:hover{
       display: block;
       width: 40px;
       margin: auto;
-      background: #fff;
       img {
         display: block;
         width: 100%;
@@ -248,23 +249,25 @@ select:focus,select:active,select:hover{
   @media(max-width: 767px){
     width: 100%;
     h3 {
-      font-size: 22px;
+      font-size: 20px;
     }
     p {
       font-size: 14px;
     }
     span {
-      padding: 10px 0;
+      padding: 6px 0;
       i {
         width: 30px;
       }
-      &:before, &:after {
-        width: calc(50% - 30px);
+      &:before{
+        left: calc(50% - 30px);
+      }
+      &:after {
+        right: calc(50% - 30px);
       }
     }
   }
 }
-
 
 .animation-show{
   transform: translateY(50px);
@@ -272,14 +275,23 @@ select:focus,select:active,select:hover{
   &.show{
     animation: boxTops 1s forwards;
     &.public-title{
-      h3{
-        &:after{
-          width: 90px;
-          margin-left: -45px;
-          left: 50%;
-          @media(max-width: 767px) {
-            width: 60px;
-            margin-left: -30px;
+      span {
+        &:before {
+          left: 0;
+          width: 210px;
+        }
+        &:after {
+          right: 0;
+          width: 210px;
+        }
+        @media (max-width: 767px) {
+          &:before {
+            left: 0;
+            width: calc(50% - 30px);
+          }
+          &:after {
+            right: 0;
+            width: calc(50% - 30px);
           }
         }
       }

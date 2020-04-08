@@ -1,26 +1,36 @@
 <template>
   <div class="loading">
-    <img src="../../assets/images/loading.png" />
+    <img src="../../assets/images/loading.gif" />
+    <p>正在加载中，请稍候...</p>
   </div>
 </template>
 <style lang="less" scoped>
 .loading {
   display: block;
   padding: 340px 0 250px;
+  text-align: center;
+  img {
+    display: block;
+    width: 110px;
+    height: 110px;
+    margin: auto;
+  }
+  p {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #447375;
+  }
   @media (max-width: 767px) {
     padding: 240px 0 150px;
     img {
-      width: 32px;
-      height: 32px;
+      width: 70px;
+      height: 70px;
+    }
+    p {
+      margin: 0;
+      font-size: 12px;
     }
   }
-}
-img {
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin: auto;
-  animation: proRotate 0.8s infinite both;
-  -webkit-animation: proRotate 0.8s infinite both;
 }
 </style>
