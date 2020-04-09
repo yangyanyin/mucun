@@ -116,6 +116,7 @@ export default {
       }
       h3 {
         font-size: 16px;
+        font-weight: bold;
       }
       p {
         font-size: 12px;

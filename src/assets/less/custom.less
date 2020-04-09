@@ -249,7 +249,8 @@ select:focus,select:active,select:hover{
   @media(max-width: 767px){
     width: 100%;
     h3 {
-      font-size: 20px;
+      font-size: 18px;
+      font-weight: bold;
     }
     p {
       font-size: 14px;
@@ -260,9 +261,11 @@ select:focus,select:active,select:hover{
         width: 30px;
       }
       &:before{
+        opacity: .5;
         left: calc(50% - 30px);
       }
       &:after {
+        opacity: .5;
         right: calc(50% - 30px);
       }
     }

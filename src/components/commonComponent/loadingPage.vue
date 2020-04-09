@@ -22,7 +22,12 @@
     color: #447375;
   }
   @media (max-width: 767px) {
-    padding: 240px 0 150px;
+    position: fixed;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     img {
       width: 70px;
       height: 70px;

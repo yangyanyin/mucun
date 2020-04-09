@@ -2,31 +2,33 @@
   <div class="hotline">
     咨询热线: 
     <h3><img src="../../assets/images/hto-tel.png" /></h3>
-    <span class="tel">
-      <img class="s" src="../../assets/images/telegram.png" />
-      <div>
-        <p>+65 8866 5586</p>
-      </div>
-    </span>
-    <span class="tel iphone">
-      <img class="s" src="../../assets/images/footer-iphone.png" />
-      <div>
-        <p>+65 8866 5586</p>
-      </div>
-    </span>
-    <span>
-      <img class="s" src="../../assets/images/footer-email.png" />
-      <div>
-        <p>sgpec@spgec.sg</p>
-      </div>
-    </span>
-    <span class="wx"><img class="s" src="../../assets/images/footer-wx.png" />
-      <div>
-        <p><img src="../../assets/images/WeChat.png" />扫一扫添加微信</p>
-        <p><img src="../../assets/images/WeChat2.png" />扫一扫关注公众号</p>
-          
-      </div>
-    </span>
+    <div class="icon">
+      <span class="tel">
+        <img class="s" src="../../assets/images/telegram.png" />
+        <div>
+          <p>+65 8866 5586</p>
+        </div>
+      </span>
+      <span class="tel iphone">
+        <img class="s" src="../../assets/images/footer-iphone.png" />
+        <div>
+          <p>+65 8866 5586</p>
+        </div>
+      </span>
+      <span>
+        <img class="s" src="../../assets/images/footer-email.png" />
+        <div>
+          <p>sgpec@spgec.sg</p>
+        </div>
+      </span>
+      <span class="wx"><img class="s" src="../../assets/images/footer-wx.png" />
+        <div>
+          <p><img src="../../assets/images/WeChat.png" />扫一扫添加微信</p>
+          <p><img src="../../assets/images/WeChat2.png" />扫一扫关注公众号</p>
+            
+        </div>
+      </span>
+    </div>
   </div>
 </template>
 <style scoped lang="less">
@@ -37,6 +39,11 @@
   align-items: center;
   padding-top: 50px;
   transition: .8s;
+  .icon {
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
   h3 {
     display: inline-block;
     margin: 0 5px 0 10px;
@@ -152,6 +159,12 @@
     }
   }
   @media (max-width: 767px) {
+    position: relative;
+    .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
     h3 {
       font-size: 16px;
       img {
@@ -161,6 +174,9 @@
     span {
       margin-left: 12px;
       width: 20px;
+      &:last-child {
+        width: 24px;
+      }
     }
   }
 }

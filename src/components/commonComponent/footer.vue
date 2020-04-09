@@ -30,11 +30,11 @@
       <div class="right wechat">
         <div class="left">
           <img src="../../assets/images/WeChat.png" />
-          <p>扫一扫添加微信</p>
+          <p><img src="../../assets/images/footer-wx2.png"> 扫一扫添加微信</p>
         </div>
         <div class="left">
           <img src="../../assets/images/WeChat2.png" />
-          <p>扫一扫关注公众号</p>
+          <p><img src="../../assets/images/footer-wx2.png"> 扫一扫关注公众号</p>
         </div>
       </div>
     </div>
@@ -177,7 +177,7 @@ export default {
     }
     a {
       display: block;
-      font-size: 14px;
+      font-size: 12px;
       padding: 6px 0;
       border-bottom: 1px solid #3a474c;
     }
@@ -202,14 +202,26 @@ export default {
   }
   p {
     color: #fff;
-    padding: 20px 0 0 25px;
-    background: url('../../assets/images/footer-wx2.png') no-repeat left 23px;
-    background-size: 18px;
+    padding: 20px 0 0;
+    text-align: center;
+    img {
+      position: relative;
+      top: -1px;
+      display: inline-block;
+      width: 18px;
+      margin-right: 5px;
+    }
   }
   @media (max-width: 767px) {
     width: 100%;
     margin-top: 20px;
-    text-align: center;
+    img {
+      top: -2px;
+    }
+    p {
+      padding-top: 10px;
+      font-size: 12px;
+    }
     div {
       display: inline-block;
       margin: 0;

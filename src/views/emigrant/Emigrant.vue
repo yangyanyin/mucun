@@ -3,7 +3,7 @@
     <div class="emigrant">
       <div class="banner"></div>
       <div class="pc-max-width">
-        <div class="menu">
+        <div class="menu" id="emigrant-menu">
           <router-link to="/emigrant/one"><i>小额自雇移民项目 (EP)</i></router-link>
           <router-link to="/emigrant/tow"><i>股权投资移民(EP)</i></router-link>
           <router-link to="/emigrant/three"><i>全球商业投资计划(GIP)移民</i></router-link>
@@ -24,7 +24,6 @@ import Layout from "../../components/layout.vue";
 import { animation, windowScroll } from "../../assets/js/config.js";
 import ContactUs from "../../components/commonComponent/ContactUs";
 export default {
-  name: "app",
   components: {
     Layout,
     ContactUs
@@ -33,6 +32,12 @@ export default {
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;
     animation(scroll);
     windowScroll();
+    let linkBox = document.getElementById('emigrant-menu')
+    let linkActive = linkBox.getElementsByClassName('router-link-active')[0].offsetLeft - 100
+    setTimeout(()=> {
+      linkBox.scrollLeft = linkActive
+    }, 10)
+    
   }
 };
 </script>
@@ -188,6 +193,9 @@ export default {
         font-size: 16px;
         line-height: 28px;
         color: #447375;
+        i {
+          opacity: 0;
+        }
       }
     }
   }
@@ -220,9 +228,6 @@ export default {
           font-size: 12px;
           padding: 0;
           line-height: 22px;
-          i {
-            opacity: 0;
-          }
         }
       }
     }

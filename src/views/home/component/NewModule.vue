@@ -41,7 +41,7 @@ import data from '../../../assets/js/newsData'
 export default {
   props: {
     type: String,
-    newsList: Object
+    newsList: Array
   },
   data () {
     return {

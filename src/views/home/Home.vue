@@ -903,6 +903,7 @@ export default {
           font-size: 14px;
           line-height: 24px;
           padding: 0;
+          margin: 0 -15px;
         }
       }
     }
@@ -915,7 +916,7 @@ export default {
         li {
           padding: 0 20px;
           margin: 0;
-          font-size: 14px;
+          font-size: 12px;
           background-size: 14px;
         }
       }
