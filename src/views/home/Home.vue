@@ -10,9 +10,7 @@
         <Flag />
       </div>
       <div class="animation-show">
-        <video width="100%" controls="controls" autoplay="autoplay" muted>
-          <source src="../../assets/images/video.mp4" type="video/mp4" />Your browser does not support the video tag.
-        </video>
+        <iframe height="560" src="https://www.youtube.com/embed/GspvSlg-6GM?&autoplay=1&loop=1&playlist=GspvSlg-6GM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -476,6 +474,14 @@ export default {
         }
       }
     }
+  }
+}
+
+.video {
+  iframe {
+    display: block;
+    width: 100%;
+    margin: auto;
   }
 }
 
