@@ -6,7 +6,7 @@
     <div class="pc-max-width margin-t-80">
       <div class="public-title animation-show">
         <h3>什么人适合办新加坡银行个人开户</h3>
-        <p>Who is suitable for opening an account in Bank Of Singapore</p>
+        <p>Who is suitable for opening a bank account in Singapore?</p>
       </div>
       <div class="bank-account clearfix">
         <div class="list left animation-show1">
@@ -40,22 +40,34 @@
     </div>
     <div class="condition margin-t-80">
       <div class="content">
-        <div class="animation-show">
-          <h3>新加坡银行个人开户申请条件</h3>
-          <p>需要申请人提供相应的开户文件，包括个人身份文件及相关地址文件，同时完成填写银行要求的KYC文件和最低存款资金要求，以华侨银行开户为例，需要提供文件如下：</p>
+        <div class="animation-show title">
+          <h3>新加坡银行开户的好处</h3>
+          <p>新加坡的金融行业近年来发展迅速，现在已经取代了香港成为了世界第三大金融中心，位于亚洲首位。同时，新加坡吸引了大量商界人士想要在新加坡办理银行开户，为方便发拓展业务和外汇交易等。</p>
         </div>
         <ul class="clearfix animation-show">
           <li>
             <i>01</i>
-            申请人提供开立账户的护照，金融事务身份及地址证明
+            新加坡目前拥有200家全球银行机构，涵盖各类金融服务，可以满足各类企业和商务人士的需求；
           </li>
           <li>
             <i>02</i>
-            申请人完成填写银行KYC文件并与银行确认信息无误
+            新加坡银行可以提供是适合、更好的金融服务，并且新加坡银行的工作人士可以提供汉语服务，更方便国内的企业家；
           </li>
           <li>
             <i>03</i>
-            保证银行账户的最低资金要求（20w新币或等值货币）
+            新加坡银行开户相对比较容易，要求客户所准备的资料简单，办理速度很快；
+          </li>
+          <li>
+            <i>04</i>
+            对于外籍人士在新加坡银行开户的首次存入金额相对较低，也无需很多存款结余，对个人开户比较容易满足条件；
+          </li>
+          <li>
+            <i>05</i>
+            新加坡银行会受到金融管理局的严格监管，对于开户的客户利益有很高的保障，此外新加坡政治与金融环境稳定，会大大减低金融风险；
+          </li>
+          <li>
+            <i>06</i>
+            各银行可以提供一步到位网银服务，为各行各业的外籍企业家提供了更加方便的财务管理服务。
           </li>
         </ul>
       </div>
@@ -63,7 +75,7 @@
     <div class="bank-process margin-t-80">
       <div class="public-title animation-show">
         <h3>银行个人开户申请流程</h3>
-        <p>Application process</p>
+        <p>Bank Account Opening Process</p>
       </div>
       <div class="structure animation-show">
         <strong class="title">申请步骤共7步，周期为3-4周</strong>
@@ -196,16 +208,18 @@ export default {
   }
 }
 .condition {
-  background: url("../../assets/images/bank/bank-account-bg.png") no-repeat top
-    center;
-  background-size: 1920px;
-  height: 560px;
+  background: url("../../assets/images/bank/bank-account-bg.png") no-repeat top center;
+  background-size: auto 100%;
   color: #fff;
   text-align: center;
+  padding-bottom: 50px;
   .content {
-    width: 850px;
     margin: auto;
     padding-top: 120px;
+  }
+  .title {
+    width: 850px;
+    margin: auto;
   }
   h3 {
     font-weight: bold;
@@ -218,12 +232,16 @@ export default {
     line-height: 38px;
   }
   ul {
+    max-width: 1200px;
+    margin: auto;
     li {
       float: left;
       width: 33.3%;
-      font-size: 16px;
+      font-size: 14px;
       padding: 0 30px;
-      line-height: 30px;
+      line-height: 26px;
+      margin-bottom: 20px;
+      height: 184px;
       i {
         display: block;
         width: 60px;
@@ -245,6 +263,9 @@ export default {
       width: auto;
       padding: 0 30px;
     }
+    .title {
+      width: auto;
+    }
     h3 {
       font-size: 22px;
     }
@@ -256,6 +277,7 @@ export default {
     ul {
       li {
         width: 100%;
+        height: auto;
         padding: 0 40px;
         margin-bottom: 40px;
       }

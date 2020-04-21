@@ -10,7 +10,7 @@
         <Flag />
       </div>
       <div class="animation-show">
-        <iframe height="560" src="https://www.youtube.com/embed/GspvSlg-6GM?&autoplay=1&loop=1&playlist=GspvSlg-6GM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/GspvSlg-6GM?loop=1&playlist=GspvSlg-6GM&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -481,7 +481,11 @@ export default {
   iframe {
     display: block;
     width: 100%;
+    height: 540px;
     margin: auto;
+    @media (max-width: 767px) {
+      height: 240px;
+    }
   }
 }
 
@@ -528,6 +532,7 @@ export default {
         padding: 10px 0;
         opacity: 0;
         transition: 0.5s;
+        background: rgba(0, 0, 0, 0.5);
         transform: scale(0.7) translateY(-50%);
         span {
           font-size: 14px;

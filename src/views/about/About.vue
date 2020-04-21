@@ -6,7 +6,7 @@
     <div class="we pc-max-width clearfix margin-t-80 animation-show">
       <img class="left" src="../../assets/images/we-img.png" />
       <div class="right des">
-        <h3>我们是谁</h3>
+        <h3>我们是谁？</h3>
         <h4>SGPEC，我们专业服务于精英。</h4>
         <p>新加坡全球护照交流中心-SGPEC，总部位于法治严明的新加坡，是多国政府和机构投资移民项目的官方授权持牌机构。作为新加坡行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
       </div>
