@@ -435,7 +435,7 @@ export default {
       .info {
         position: static;
         width: 100%;
-        padding: 0 15px;
+        padding: 0 5px;
         h3.name {
           height: auto;
           padding: 20px 0 15px 0;

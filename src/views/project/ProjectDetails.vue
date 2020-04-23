@@ -32,7 +32,7 @@
                     <img :src="advantages.img" />
                   </span>
                   <strong>{{advantages.title}}</strong>
-                  <p>{{advantages.description}}</p>
+                  <p><span>{{advantages.description}}</span></p>
                 </div>
               </li>
             </ul>
@@ -191,7 +191,8 @@ export default {
     background: #447375;
   }
   @media (max-width: 767px) {
-    font-size: 18px;
+    font-size: 17px;
+    padding: 15px 10px;
   }
 }
 .banner {
@@ -349,14 +350,24 @@ export default {
       }
       strong {
         display: block;
-        font-size: 18px;
-        padding: 20px 0 10px 0;
+        font-size: 17px;
+        padding: 20px 5px 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       p {
-        padding: 0 20px 20px;
-        line-height: 26px;
-        font-size: 16px;
+        padding: 0 10px 20px;
         height: 110px;
+        span {
+          font-size: 15px;
+          line-height: 24px;
+          overflow: hidden;     
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+
+        }
       }
     }
   }
@@ -367,13 +378,17 @@ export default {
         width: 50%;
         padding: 0 7px;
         strong {
-          font-size: 16px;
+          font-size: 15px;
+          
         }
         p {
-          font-size: 14px;
-          line-height: 22px;
+          font-size: 13px;
           height: 100px;
           padding: 0 10px 10px;
+          span {
+            line-height: 22px;
+            font-size: 13px;
+          }
         }
       }
     }
@@ -588,10 +603,15 @@ export default {
         float: left;
         width: 46%;
         margin: 0 2% 15px;
+        padding-bottom: 15px;
         p {
-          font-size: 16px;
+          font-size: 14px;
           padding: 0 10px;
-          line-height: 26px;
+          line-height: 22px;
+          overflow: hidden;     
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
         }
         h3 {
           width: 50px;
@@ -680,25 +700,28 @@ export default {
       margin-top: 40px;
       li {
         width: auto;
-        margin: 0 20px 30px;
+        margin: 0 10px 20px;
         text-align: left;
         span {
           float: left;
           text-align: center;
+          width: 34px;
+          height: 34px;
+          line-height: 24px;
         }
         p {
-          line-height: 40px;
+          line-height: 34px;
           display: inline-block;
-          font-size: 16px;
-          padding-left: 15px;
+          font-size: 14px;
+          padding-left: 10px;
         }
         &:before {
           content: "";
           position: absolute;
-          left: 20px;
-          bottom: -25px;
+          left: 17px;
+          bottom: -20px;
           width: 2px;
-          height: 20px;
+          height: 26px;
           background: #41a046;
         }
         &:last-child {

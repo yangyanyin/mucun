@@ -691,8 +691,8 @@ export default {
     li {
       left: 50% !important;
       right: auto !important;
-      margin-left: -150px;
-      width: 300px;
+      margin-left: -170px;
+      width: 340px;
       height: 72px;
       padding: 12px 0;
       i {
@@ -704,6 +704,8 @@ export default {
       }
       p {
         line-height: 24px;
+        font-size: 13px;
+        font-weight: normal;
       }
       &:nth-child(1) {
         padding-left: 90px;
@@ -718,7 +720,7 @@ export default {
       }
       &:nth-child(3) {
         top: 220px;
-        padding-left: 90px;
+        padding-left: 70px;
       }
       &:nth-child(4) {
         top: 330px;
@@ -730,7 +732,7 @@ export default {
       }
       &:nth-child(5) {
         top: 440px;
-        padding-left: 120px;
+        padding-left: 100px;
       }
     }
   }

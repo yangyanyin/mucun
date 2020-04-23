@@ -37,16 +37,10 @@
   </div>
 </template>
 <script>
-import data from '../../../assets/js/newsData'
 export default {
   props: {
     type: String,
     newsList: Array
-  },
-  data () {
-    return {
-      data: data.data,
-    }
   },
   methods: {
     elDome () {

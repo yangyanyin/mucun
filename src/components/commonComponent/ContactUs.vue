@@ -3,7 +3,7 @@
     <div class="content clearfix">
       <div class="map left">
         <div class="img">
-          <img src="../../assets/images/map-img.jpg" />
+          <img src="../../assets/images/map-img.gif" />
         </div>
       </div>
       <div class="right">
