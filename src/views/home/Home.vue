@@ -5,13 +5,11 @@
     <Banner :bannerImgList="bannerImg" />
 
     <!-- 视频 -->
-    <div class="video pc-max-width">
+    <div class="home-video pc-max-width">
       <div class="animation-show">
         <Flag />
       </div>
-      <div class="animation-show">
-        <iframe src="https://www.youtube.com/embed/GspvSlg-6GM?loop=1&playlist=GspvSlg-6GM&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      <div class="animation-show" v-html="videoIframe"></div>
     </div>
 
     <!-- 为什么选择我们 -->
@@ -320,6 +318,7 @@ export default {
     return {
       bannerImg: "",
       countryPassport: "",
+      videoIframe: process.env.VUE_APP_VIDEO_URL,
       items: [
         {
           title: "小额自雇移民项目",
@@ -473,18 +472,6 @@ export default {
           width: 33.33%;
         }
       }
-    }
-  }
-}
-
-.video {
-  iframe {
-    display: block;
-    width: 100%;
-    height: 540px;
-    margin: auto;
-    @media (max-width: 767px) {
-      height: 240px;
     }
   }
 }
@@ -1057,6 +1044,19 @@ export default {
           font-size: 12px;
         }
       }
+    }
+  }
+}
+</style>
+<style lang="less">
+.home-video {
+  iframe {
+    display: block;
+    width: 100%;
+    height: 540px;
+    margin: auto;
+    @media (max-width: 767px) {
+      height: 240px;
     }
   }
 }
