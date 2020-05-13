@@ -73,13 +73,14 @@
           </div>
           <div class="visa left">
             <ul class="clearfix" v-for="(obj, name, key) in newData || allCountry" :key="key" ref="visa_country">
-              <li
-                v-for="(visa, name2, key2) in obj"
-                :key="key2"
-                v-show="name2 !== 'flag'"
-                :index="filterResult.indexOf(visa)"
-                :class="countryClass(visa)"
-              >{{visa || 'N/A'}}</li>
+              <template v-for="(visa, name2, key2) in obj">
+                <li
+                  :key="key2"
+                  v-if="name2 !== 'flag'"
+                  :index="filterResult.indexOf(visa)"
+                  :class="countryClass(visa)"
+                >{{visa || 'N/A'}}</li>
+              </template>
             </ul>
           </div>
         </div>
@@ -106,7 +107,6 @@ export default {
       allCountry: {},
       filterType: {},
       filterResult: [],
-      filterCountry: {},
       newData: '',
       countryIndex: 0,
       showFilterType: false
@@ -195,8 +195,10 @@ export default {
       for (let i = 0; i < all.length; i++) {
         if (all[i].visa_countries) {
           for (let s = 0; s < all[i].visa_countries.length; s++) {
-            this.allCountry[all[i].visa_countries[s].name] = {};
-            this.filterType[all[i].visa_countries[s].type] = "";
+            if (all[i].visa_countries[s].type.indexOf('落地签入境') >= 0 || all[i].visa_countries[s].type.indexOf('免签目的国') >= 0) {
+              this.allCountry[all[i].visa_countries[s].name] = {};
+              this.filterType[all[i].visa_countries[s].type] = "";
+            }
           }
         }
       }
@@ -216,7 +218,7 @@ export default {
               for (let s = 0; s < all[i].visa_countries.length; s++) {
                 if (name === all[i].visa_countries[s].name) {
                   this.allCountry[name].flag = all[i].visa_countries[s].flag;
-                  if (all[i].name === a) {
+                  if (all[i].name === a && (all[i].visa_countries[s].type.indexOf('落地签入境') >= 0 || all[i].visa_countries[s].type.indexOf('免签目的国') >= 0)) {
                     this.allCountry[name][a] = all[i].visa_countries[s].type;
                   }
                 }
