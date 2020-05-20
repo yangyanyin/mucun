@@ -14,6 +14,12 @@
             <span class="time right">{{newsDetails.news.created_at.split(' ')[0]}}</span>
           </div>
           <div class="details" v-html="newsDetailsContent"></div>
+          <div class="share">
+            <strong>分享：</strong>
+            <div class="btn fb-share-button" :data-href="'https://sgpec.'+ host +'/news-details/' + newId"></div>
+            <a class="btn wb-share-button" :href="'http://service.weibo.com/share/share.php?appkey=&title=新加坡全球护照交流中心&url=https://sgpec.'+ host +'/news-details/'+ newId +'&pic='+ shareImg +'&style=simple'" target="_blank"></a>
+            <a class="btn whats-share-button" :href="'whatsapp://send?text=新加坡全球护照交流中心 message: https://sgpec.'+ host +'/news-details/' + newId"></a>
+          </div>
           <div class="other" v-if="newsDetails.prev_news || newsDetails.next_news">
             <p v-if="newsDetails.prev_news">上一篇：<router-link :to="'/news-details/' + newsDetails.prev_news.id">{{newsDetails.prev_news.title}}</router-link></p>
             <p v-if="newsDetails.next_news">下一篇：<router-link :to="'/news-details/' + newsDetails.next_news.id">{{newsDetails.next_news.title}}</router-link></p>
@@ -62,36 +68,42 @@ export default {
           title: '成功案例',
           url: '/news-case'
         }
-      ]
+      ],
+      host: window.location.host.split('.').pop(),
+      newId: '',
+      shareImg: ''
     }
   },
   created () {
-    this.fetchData()
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
   },
-  watch: {
-    '$route': 'fetchData'
-  },
-  methods: {
-    fetchData () {
-      this.$http({
-        method: "get",
-        url: process.env.VUE_APP_API + "/v1/news",
-        params: {
-          id: this.$route.params.id
-        }
-      }).then(res => {
-        if (res.data.code === 200) {
-          this.loadingStatus = true
-          this.newsDetails = res.data.data
-          this.newsDetailsContent = res.data.data.news.content.replace(/\/images\/default/g, 'https://cms.aicassets.com/images/default/')
-          setTimeout(()=> {
-            let scroll = document.documentElement.scrollTop || document.body.scrollTop;
-            animation(scroll);
-            windowScroll();
-          }, 100)
-        }
-      });
-    }
+  mounted () {
+    this.newId = this.$route.params.id
+    this.$http({
+      method: "get",
+      url: process.env.VUE_APP_API + "/v1/news",
+      params: {
+        id: this.$route.params.id
+      }
+    }).then(res => {
+      if (res.data.code === 200) {
+        this.loadingStatus = true
+        this.newsDetails = res.data.data
+        this.shareImg = res.data.data.news.img
+        this.newsDetailsContent = res.data.data.news.content.replace(/\/images\/default/g, 'https://cms.aicassets.com/images/default/')
+        setTimeout(()=> {
+          let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+          animation(scroll);
+          windowScroll();
+        }, 100)
+      }
+    })
   }
 }
 </script>
@@ -142,6 +154,43 @@ export default {
     padding: 30px 25px;
     img {
       max-width: 100%;
+    }
+  }
+  .share {
+    padding: 20px 25px 20px 70px;
+    position: relative;
+    height: 66px;
+    strong {
+      position: absolute;
+      left: 0;
+      top: 22px;
+      left: 25px;
+      font-weight: normal;
+    }
+    .btn {
+      float: left;
+      position: relative;
+      width: 26px;
+      height: 26px;
+      box-shadow: 0 0 3px #adadad;
+      border-radius: 100%;
+      transition: .3s;
+      margin-right: 10px;
+      &:hover {
+        box-shadow: 0 0 5px #656565;
+      }
+      &.fb-share-button {
+        background: url('../../assets/images/facebook.png') no-repeat;
+        background-size: 100%;
+      }
+      &.wb-share-button {
+        background: url('../../assets/images/weibo.png') no-repeat;
+        background-size: 100%;
+      }
+      &.whats-share-button {
+        background: url('../../assets/images/whatapp.png') no-repeat;
+        background-size: 100%;
+      }
     }
   }
   .other {
@@ -218,6 +267,11 @@ export default {
   padding: 30px 25px;
   img {
     max-width: 100%;
+  }
+}
+.fb-share-button {
+  > * {
+    opacity: 0;
   }
 }
 </style>
