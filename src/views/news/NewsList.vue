@@ -1,6 +1,7 @@
 <template>
   <Layout>
-    <div class="news">
+    <Loading v-if="!newData"/>
+    <div class="news" v-else>
       <div class="content pc-max-width clearfix">
         <div class="crumbs">
           <router-link to="/">首页</router-link> > {{banner[newsType].title}}
@@ -9,7 +10,7 @@
           <div class="banner">
             <img :src="banner[newsType].img" />
           </div>
-          <ul class="list">
+          <ul class="list" ref="news_list">
             <li v-for="(news, key) in newData" :key="key" class="clearfix animation-show">
               <router-link class="img" :to="'/news-details/' + news.id"><img :src="news.img" /></router-link>
               <div class="des">
@@ -38,12 +39,14 @@
 import Layout from '../../components/layout'
 import Flag from ".././../components/commonComponent/NationalFlag";
 import Side from './component/SideNews'
+import Loading from '../../components/commonComponent/loadingPage'
 import { animation, windowScroll } from "../../assets/js/config.js";
 export default {
   components: {
     Layout,
     Side,
-    Flag
+    Flag,
+    Loading
   },
   data () {
     return {
@@ -65,26 +68,51 @@ export default {
         }
       },
       newsType: this.$route.name,
-      newData: ''
+      newData: '',
+      page: 1,
+      isLoading: false
     }
   },
-  mounted () {
-    this.$http({
+  methods: {
+    newsList() {
+      this.$http({
       method: "get",
       url: process.env.VUE_APP_API + "/v1/newsList",
       params: {
         category_id: this.banner[this.newsType].id,
+        page: this.page,
+        size: 5
       }
-    }).then(res => {
-      if (res.data.code === 200) {
-        this.newData = res.data.data.news_list
-        setTimeout(()=> {
-          let scroll = document.documentElement.scrollTop || document.body.scrollTop;
-          animation(scroll);
-          windowScroll();
-        }, 100)
+      }).then(res => {
+        if (res.data.code === 200) {
+          this.newData = [...this.newData, ...res.data.data.news_list]
+          if (res.data.data.news_list.length > 0) {
+              this.page += 1
+              this.isLoading = true
+            }
+            setTimeout(()=> {
+              let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+              animation(scroll);
+              windowScroll();
+            }, 100)
+          }
+        })
+    }
+  },
+  mounted () {
+    this.newsList()
+    let _this = this
+    window.addEventListener('scroll', function () {
+      if (_this.$refs.news_list) {
+        let scroll = document.documentElement.scrollTop || document.body.scrollTop
+        if (scroll + window.innerHeight >= _this.$refs.news_list.offsetTop + _this.$refs.news_list.offsetHeight - 220) {
+          if (_this.isLoading) {
+            _this.isLoading = false
+            _this.newsList()
+          }
+        }
       }
-    });
+    })
   }
 }
 </script>
