@@ -3,7 +3,7 @@
     <div class="title t1">
       <h3>
         <span>项目介绍</span>
-        <i>Project introduction</i>
+        <i>Program Introduction</i>
       </h3>
     </div>
     <div class="des">
@@ -16,7 +16,7 @@
     <div class="title t2">
       <h3>
         <span>项目优势</span>
-        <i>Project advantage</i>
+        <i>Program Advantage</i>
       </h3>
     </div>
     <div class="icon-box">
@@ -48,7 +48,7 @@
       <div class="d">
         <h3>申请流程</h3>
         <p>1 申请人签约，填写申请评估表格</p>
-        <p>2 全部全部材料，底价申请</p>
+        <p>2 准备完整材料，递交申请</p>
         <p>3 申请人需要来新加坡参加经济发展局面试</p>
         <p>4 面试通过，将收到新加坡移民局颁布全球商业投资计划原则批准函</p>
         <p>5 资金在6个月内落实</p>

@@ -3,7 +3,7 @@
     <div class="title t1">
       <h3>
         <span>项目介绍</span>
-        <i>Project introduction</i>
+        <i>Program Introduction</i>
       </h3>
     </div>
     <p>股权投资移民即投资入股公司担保申请EP， 申请人必须成为实体企业股东至少三年，以投资的模式，获得公司高级管理层工作签证。三个月内登陆新加坡，获得EP批准后，24个月后提交永居申请，最终实现全家移民。</p>
@@ -11,7 +11,7 @@
     <div class="title t2">
       <h3>
         <span>申请条件</span>
-        <i>Application condition</i>
+        <i>Application Conditions</i>
       </h3>
     </div>
     <div class="icon-box">

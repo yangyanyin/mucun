@@ -3,7 +3,7 @@
     <div class="title t1">
       <h3>
         <span>家族办公室</span>
-        <i>Project introduction</i>
+        <i>Family Office Introduction</i>
       </h3>
     </div>
     <div class="des">
@@ -14,7 +14,7 @@
     <div class="title t2">
       <h3>
         <span>项目优势</span>
-        <i>Project advantage</i>
+        <i>Program Advantage</i>
       </h3>
     </div>
     <div class="icon-box">
@@ -52,7 +52,7 @@
       <div class="title t3">
         <h3>
           <span>家族办公室的设立以及新加坡移民计划</span>
-          <i>Establishment of Family Office & Immigration from Singapore</i>
+          <i>Establishment of Family Office & Singapore Migration Planning</i>
         </h3>
       </div>
       <div class="list clearfix">
