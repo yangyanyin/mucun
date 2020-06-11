@@ -19,6 +19,8 @@
             <div class="btn fb-share-button" :data-href="'https://sgpec.'+ host +'/news-details/' + newId"></div>
             <a class="btn wb-share-button" :href="'http://service.weibo.com/share/share.php?appkey=&title=新加坡全球护照交流中心&url=https://sgpec.'+ host +'/news-details/'+ newId +'&pic='+ shareImg +'&style=simple'" target="_blank"></a>
             <a class="btn whats-share-button" :href="'whatsapp://send?text=新加坡全球护照交流中心 message: https://sgpec.'+ host +'/news-details/' + newId"></a>
+            <a class="btn wx-share-button"><div class="qrCodeDiv"></div></a>
+            <a class="btn wx-share-button pyq"><div class="qrCodeDiv"></div></a>
           </div>
           <div class="other" v-if="newsDetails.prev_news || newsDetails.next_news">
             <p v-if="newsDetails.prev_news">上一篇：<router-link :to="'/news-details/' + newsDetails.prev_news.id">{{newsDetails.prev_news.title}}</router-link></p>
@@ -29,7 +31,6 @@
           <Side />
         </div>
       </div>
-      
       <!-- 国旗 -->
       <div class="pc-max-width">
         <Flag />
@@ -42,7 +43,8 @@ import Layout from '../../components/layout'
 import Flag from ".././../components/commonComponent/NationalFlag";
 import Side from './component/SideNews'
 import loadingPage from '../../components/commonComponent/loadingPage'
-import { animation, windowScroll } from "../../assets/js/config.js";
+import { animation, windowScroll } from "../../assets/js/config.js"
+import QRCode from 'qrcodejs2'
 export default {
   components: {
     Layout,
@@ -83,6 +85,21 @@ export default {
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   },
+  methods: {
+    bindQRCode() {
+      let codeDiv = document.getElementsByClassName('qrCodeDiv')
+      for (let i = 0; i < codeDiv.length; i++) {
+        new QRCode(codeDiv[i], {
+          text: window.location.href + this.$route.path, //text必须是字符串
+          width: 100,
+          height: 100,
+          colorDark: "#333333", //二维码颜色
+          colorLight: "#ffffff", //二维码背景色
+          correctLevel: QRCode.CorrectLevel.L//容错率，L/M/H
+        })       
+      }
+    }
+  },
   mounted () {
     this.newId = this.$route.params.id
     this.$http({
@@ -97,6 +114,9 @@ export default {
         this.newsDetails = res.data.data
         this.shareImg = res.data.data.news.img
         this.newsDetailsContent = res.data.data.news.content.replace(/\/images\/default/g, 'https://cms.aicassets.com/images/default/')
+        this.$nextTick(function () {
+          this.bindQRCode()
+        })
         setTimeout(()=> {
           let scroll = document.documentElement.scrollTop || document.body.scrollTop;
           animation(scroll);
@@ -104,6 +124,7 @@ export default {
         }, 100)
       }
     })
+    
   }
 }
 </script>
@@ -176,8 +197,41 @@ export default {
       border-radius: 100%;
       transition: .3s;
       margin-right: 10px;
+      div {
+        position: absolute;
+        z-index: 9;
+        width: 110px;
+        height: 0;
+        left: -10px;
+        top: 32px;
+        background: #fff;
+        border-radius: 3px;
+        box-shadow: 0 0 4px #929191;
+        transition: .3s;
+        overflow: hidden;
+        img {
+          display: block;
+          margin: 10px;
+        }
+      }
       &:hover {
         box-shadow: 0 0 5px #656565;
+        div {
+          height: 110px;
+        }
+        &.wx-share-button {
+          &::after {
+            content: '';
+            position: absolute;
+            right: 7px;
+            top: 22px;
+            width: 0px;
+            height: 0px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #999;
+          }
+        }
       }
       &.fb-share-button {
         background: url('../../assets/images/facebook.png') no-repeat;
@@ -190,6 +244,17 @@ export default {
       &.whats-share-button {
         background: url('../../assets/images/whatapp.png') no-repeat;
         background-size: 100%;
+      }
+      &.wx-share-button {
+        background: url('../../assets/images/wx.png') no-repeat;
+        background-size: 100%;
+        &.pyq {
+          background: url('../../assets/images/pyq.png') no-repeat;
+          background-size: 100%;
+        }
+        @media (max-width: 767px) {
+          display: none;
+        }
       }
     }
   }
@@ -272,6 +337,13 @@ export default {
 .fb-share-button {
   > * {
     opacity: 0;
+  }
+}
+.wx-share-button {
+  div {
+    img {
+      margin: 5px;
+    }
   }
 }
 </style>

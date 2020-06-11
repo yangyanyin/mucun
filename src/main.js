@@ -6,6 +6,7 @@ import axios from 'axios'
 import VueLazyload from 'vue-lazyload'
 import { vueAccordion } from 'vue-accordion'
 import ElementUI from 'element-ui';
+import QRCode from 'qrcodejs2';
 import 'element-ui/lib/theme-chalk/index.css';
 import "swiper/dist/css/swiper.min.css";
 Vue.component('vue-accordion', vueAccordion)
@@ -19,7 +20,7 @@ Vue.use(VueLazyload, {
 	attempt: 1
 })
 Vue.config.productionTip = false
-
+Vue.prototype.qrCode = QRCode
 new Vue({
   router,
   render: h => h(App)
