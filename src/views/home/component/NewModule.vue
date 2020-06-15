@@ -87,9 +87,6 @@ export default {
   }
   a {
     color: #B9B9B9;
-    &:hover {
-      
-    }
   }
   @media (max-width: 767px) {
     margin-top: 20px;
@@ -164,16 +161,21 @@ export default {
     padding-left: 20px;
     h3 {
       position: absolute;
-      left: 40px;
-      top: 30px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 20px;
       color: #fff;
       font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      @media (max-width: 767px) {
+        font-size: 16px;
+        padding: 15px;
+      }
     }
     img {
       display: block; 
-      @media (max-width: 767px) {
-        width: 100%;
-      }
+      width: 100%;
     }
   }
   @media (max-width: 767px) {
