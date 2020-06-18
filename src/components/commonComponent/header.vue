@@ -48,7 +48,7 @@ export default {
       showWapNav: false,
       navList: [
         {
-          name: this.$t('nav.home'),
+          name: '首页',
           url: "/",
           page: 'home'
         },

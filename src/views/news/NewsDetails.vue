@@ -17,8 +17,8 @@
           <div class="share">
             <strong>分享：</strong>
             <div class="btn fb-share-button" :data-href="'https://sgpec.'+ host +'/news-details/' + newId"></div>
-            <a class="btn wb-share-button" :href="'http://service.weibo.com/share/share.php?appkey=&title=新加坡全球护照交流中心&url=https://sgpec.'+ host +'/news-details/'+ newId +'&pic='+ shareImg +'&style=simple'" target="_blank"></a>
-            <a class="btn whats-share-button" :href="'whatsapp://send?text=新加坡全球护照交流中心 message: https://sgpec.'+ host +'/news-details/' + newId"></a>
+            <a class="btn wb-share-button" :href="'http://service.weibo.com/share/share.php?appkey=&title=' + newsDetails.news.title + '&url=https://sgpec.'+ host +'/news-details/'+ newId +'&pic='+ shareImg +'&style=simple'" target="_blank"></a>
+            <a class="btn whats-share-button" :href="'whatsapp://send?text=' + newsDetails.news.title + ' message: https://sgpec.'+ host +'/news-details/' + newId"></a>
             <a class="btn wx-share-button"><div class="qrCodeDiv"></div></a>
             <a class="btn wx-share-button pyq"><div class="qrCodeDiv"></div></a>
           </div>
