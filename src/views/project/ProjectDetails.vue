@@ -397,7 +397,7 @@ export default {
 .for-people {
   padding: 45px 0;
   margin-top: 45px;
-  background: url("../../assets/images/country/details/details-bg.png")
+  background: url("../../assets/images/country/details-bg.png")
     no-repeat top center;
   background-size: 1920px;
   .country-title {
@@ -485,7 +485,7 @@ export default {
     margin-bottom: 50px;
   }
   .clearfix {
-    background: url("../../assets/images/country/details/compared-PK.png")
+    background: url("../../assets/images/country/compared-PK.png")
       no-repeat center center;
     background-size: 113px;
   }
@@ -493,10 +493,10 @@ export default {
     text-align: right;
     li {
       padding-right: 45px;
-      background: url("../../assets/images/country/details/compared-bad-icon.png")
+      background: url("../../assets/images/country/compared-bad-icon.png")
         no-repeat right center;
       &.t {
-        background: url("../../assets/images/country/details/compared-bad-title-icon.png")
+        background: url("../../assets/images/country/compared-bad-title-icon.png")
           no-repeat right center;
       }
     }
@@ -504,10 +504,10 @@ export default {
   ul.left {
     li {
       padding-left: 45px;
-      background: url("../../assets/images/country/details/compared-icon.png")
+      background: url("../../assets/images/country/compared-icon.png")
         no-repeat left center;
       &.t {
-        background: url("../../assets/images/country/details/compared-title-icon.png")
+        background: url("../../assets/images/country/compared-title-icon.png")
           no-repeat left center;
       }
     }
@@ -537,7 +537,7 @@ export default {
         width: 60px;
         height: 60px;
         margin-top: -30px;
-        background: url("../../assets/images/country/details/compared-PK.png")
+        background: url("../../assets/images/country/compared-PK.png")
           no-repeat center center;
         background-size: 60px;
       }
@@ -575,7 +575,7 @@ export default {
         display: block;
         width: 70px;
         height: 70px;
-        background: url("../../assets/images/country/details/polygon-icon.png")
+        background: url("../../assets/images/country/polygon-icon.png")
           no-repeat 100%;
         margin: auto;
         color: #fff;

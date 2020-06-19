@@ -38,7 +38,7 @@
           <span>新加坡护照全球<br />免签170个国家以上</span>
         </li>
         <li>
-          <img src="../../../assets/images/emigrant-icon15.png" />
+          <img src="../../../assets/images/emigrant-icon8.png" />
           <span>低税率国家<br />政府支持创业</span>
         </li>
       </ul>
