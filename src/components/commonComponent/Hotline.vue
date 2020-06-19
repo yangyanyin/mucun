@@ -18,7 +18,7 @@
       <span>
         <img class="s" src="../../assets/images/footer-email.png" />
         <div>
-          <p>sgpec@spgec.sg</p>
+          <p>sgpec@sgpec.sg</p>
         </div>
       </span>
       <span class="wx"><img class="s" src="../../assets/images/footer-wx.png" />

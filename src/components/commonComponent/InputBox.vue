@@ -6,7 +6,7 @@
       <strong>+65 8866 5586</strong>
     </p>
     <p>
-      <i>邮箱:</i>sgpec@spgec.sg
+      <i>邮箱:</i>sgpec@sgpec.sg
     </p>
     <p>
       <i>地址:</i>新加坡滨海林荫大道8号滨海金融中心1号楼14楼
