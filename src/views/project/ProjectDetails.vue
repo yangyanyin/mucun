@@ -423,7 +423,7 @@ export default {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     li {
-      width: 26%;
+      width: 25%;
       color: #fff;
       margin-top: 50px;
       h3 {

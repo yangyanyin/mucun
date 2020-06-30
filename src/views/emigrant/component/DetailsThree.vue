@@ -35,7 +35,7 @@
         </li>
         <li>
           <img src="../../../assets/images/emigrant-icon14.png" />
-          <span>新加坡护照全球<br />免签170个国家以上</span>
+          <span>新加坡护照全球<br />免签190个国家以上</span>
         </li>
         <li>
           <img src="../../../assets/images/emigrant-icon8.png" />
@@ -54,7 +54,7 @@
         <p>5 资金在6个月内落实</p>
         <p>6 获得新加坡移民局颁发最终全球商业投资计划最终批准函</p>
         <p>7 在一年内办理相关手续，正式成为新加坡永久居民(PR)</p>
-        <p>8 申请新加坡公民</p>
+        <p>8 永久居民满两年后，可申请新加坡公民</p>
       </div>
     </div>
 

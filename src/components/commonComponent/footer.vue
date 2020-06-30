@@ -24,7 +24,7 @@
         <div class="address">
           <p>公司地址：</p>
           <p>8 Marina Boulevard #14-03A ,Marina Bay Financial Centre Tower 1 S018981</p>
-          <p>新加坡滨海林荫大道8号滨海金融中心14楼</p>
+          <p>新加坡滨海林荫道8号14楼03A单元滨海湾金融中心1号楼</p>
         </div>
       </div>
       <div class="right wechat">

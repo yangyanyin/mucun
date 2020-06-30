@@ -106,10 +106,10 @@ export default {
   flex-flow: row wrap;
   align-items: center;
   img {
-    width: 50%;
+    width: 49%;
   }
   >div {
-    width: 50%;
+    width: 49%;
     padding-left: 45px;
   }
   @media(max-width: 767px) {

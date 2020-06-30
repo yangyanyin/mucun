@@ -205,7 +205,7 @@
           <div class="info brick-item">
             <img class="img1" src="../../assets/images/city/advantage-icon9.png" />
             <strong>全球通行</strong>
-            <p>护照免签170多个国家，包括美国、日本、中国和欧洲大部分国家，相当于 “国际通行证”</p>
+            <p>护照免签190多个国家，包括美国、日本、中国和欧洲大部分国家，相当于 “国际通行证”</p>
           </div>
         </div>
         <div class="list left animation-show">
