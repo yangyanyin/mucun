@@ -123,7 +123,7 @@
           <div class="info brick-item">
             <img class="img5" src="../../assets/images/city/advantage-icon5.png" />
             <strong>快速登录新加坡</strong>
-            <p>获签块，最快申请人可以3个月内登录新加坡。</p>
+            <p>获签快，最快申请人可以3个月内登录新加坡。</p>
           </div>
         </div>
       </div>
