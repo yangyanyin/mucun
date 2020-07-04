@@ -20,7 +20,7 @@
           <i></i>
         </router-link>
         <div v-if="navs.down" class="project-select">
-          <router-link :to="'/project/details/' + menu.country_id" v-for="(menu, key) in projectDown" :key="key">
+          <router-link :to="menu.url || '/project/details/' + menu.country_id" v-for="(menu, key) in projectDown[navs.page]" :key="key">
             <img :src="menu.passport" /> 
             <span>{{menu.name}}</span>
           </router-link>
@@ -71,6 +71,7 @@ export default {
         {
           name: "绿卡项目",
           url: "/green-cart",
+          down: true,
           page: 'green'
         },
         {
@@ -95,7 +96,31 @@ export default {
         }
       ],
       detailsUrl: this.$route.meta.page,
-      projectDown: '',
+      projectDown: {
+        project: [],
+        green: [
+          {
+            url: 'singapore-details',
+            passport: require('../../assets/images/Singapore-passport.png'),
+            name: '新加波'
+          },
+          {
+            url: 'philippines-details',
+            passport: require('../../assets/images/Philippines-passport.png'),
+            name: '菲律宾'
+          },
+          {
+            url: 'malaysia-details',
+            passport: require('../../assets/images/Malaysia-passport.png'),
+            name: '马来西亚'
+          },
+          {
+            url: 'korea-details',
+            passport: require('../../assets/images/korea-passport.png'),
+            name: '韩国'
+          }
+        ]
+      },
       isFixed: false,
       scrollPx: 0,
       headerFixed: false
@@ -117,7 +142,8 @@ export default {
       url: process.env.VUE_APP_API + "/v1/countries "
     }).then(res => {
       if (res.data.code === 200) {
-        this.projectDown = res.data.data
+
+        this.projectDown.project = res.data.data
       }
     });
     
@@ -277,7 +303,7 @@ export default {
     width: 100%;
     height: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     transition: .4s;
     overflow: hidden;
     a {

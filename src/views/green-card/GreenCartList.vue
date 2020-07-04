@@ -1,12 +1,13 @@
 <template>
   <Layout>
-    <Banner :bannerImgList="bannerData" />
+    <Banner :bannerImgList="bannerData" :autoplay="3000" />
 
     <div class="pc-max-width">
       <div class="menu">
         <router-link to="/singapore-details"><i><img src="../../assets/images/country9.png" />新加坡绿卡项目</i></router-link>
         <router-link to="/philippines-details"><i><img src="../../assets/images/country10.png" />菲律宾绿卡项目</i></router-link>
         <router-link to="/malaysia-details"><i><img src="../../assets/images/country11.png" />马来西亚绿卡项目</i></router-link>
+        <router-link to="/korea-details"><i><img src="../../assets/images/country12.png" />韩国绿卡项目</i></router-link>
       </div>
       <div class="content">
         <!-- 新加坡 -->
@@ -47,6 +48,19 @@
             <router-link to="/malaysia-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>
+
+        <!-- 韩国 -->
+        <div class="list animation-show">
+          <img src="../../assets/images/card-korea.jpg" class="bg" />
+          <div class="info">
+            <span>
+              <img src="../../assets/images/korea-passport.png" />
+            </span>
+            <h3>韩国 / korea</h3>
+            <p>一人申请，第二家园项目</p>
+            <router-link to="/korea-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -73,6 +87,7 @@ export default {
         {img: require("../../assets/images/Singapore-banner.jpg")},
         {img: require("../../assets/images/Philippines-banner.jpg")},
         {img: require("../../assets/images/Malaysia-banner.jpg")},
+        {img: require("../../assets/images/korea-banner.jpg")},
       ]
     }
   },

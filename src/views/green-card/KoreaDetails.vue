@@ -1,55 +1,57 @@
 <template>
   <Layout>
     <div class="banner">
-        <img src="../../assets/images/malaysia-d-bn.jpg" />
+        <img src="../../assets/images/korea-d-bn.jpg" />
     </div>
     <div class="pc-max-width details margin-t-80">
       <div class="clearfix animation-show">
         <div class="img left">
-          <img v-lazy="{src: require('../../assets/images/malaysia-details-img1.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
+          <img v-lazy="{src: require('../../assets/images/korea-details-img1.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
         </div>
         <div class="des right">
-          <h3>马来西亚第二家园计划（MM2H）</h3>
-          <p>是由马来西亚旅游局和马来西亚移民局推出的一个项目，旨在让符合政府特定条件的外籍人士获得多次入境社交签证，以便长期居住在马来西亚。（多次入境社交签证有效期限为10年，可以更新）</p>
+          <h3>韩国F-2签证</h3>
+          <p>大韩民国是亚洲除日本以外唯一能称得上的一个高度文明发达国家。大韩民国简称韩国是目前亚洲移民项目当中最具有吸引力而且信任度极高的移民项目。在韩国政府银行存5亿韩币(约295万人民币)，五年后就能获得韩国绿卡，之后可以取回存款，不影响永居身份。 申请条件宽松，并可携带超龄子女，没有任何居住要求，快到落地就能立刻转身份。 投资灵活，存款期间无管理费用，随时可以取回存款。一人申请，配偶及未婚子女都能享有永居权。</p>
         </div>
       </div>
 
       <div class="clearfix animation-show">
         <div class="img right">
-          <img v-lazy="{src: require('../../assets/images/malaysia-details-img2.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
+          <img v-lazy="{src: require('../../assets/images/korea-details-img2.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
         </div>
         <div class="des left">
-          <h3>申请条件</h3>
-          <p>马来西亚第二家园计划(MM2H)这项计划公开给马来西亚所承认的国家公民申请，无划分种族、宗教、性别或年龄。这项计划允许申请者可以携带配偶、父母及子女。马来西亚公民的外籍配偶和外籍人士在其工作签证期满后，可以申请该项计划在马来西亚退休养老。(申请者可以携带21岁以下未婚子女以及60岁以上的父母)</p>
+          <h3>居住签证F2申请条件</h3>
+          <p>1、满足投资要求</p>
+          <p>2、韩国境内无不良犯罪记录</p>
+          <p>申请人在获得韩国F2签证满5年后可转为永久绿卡，并且申请人5年后可以申请入籍大韩民国,护照免签全球190国。</p>
         </div>
       </div>
 
       <div class="plan clearfix animation-show">
-        <img class="left" src="../../assets/images/plan-img2.jpg" />
+        <img class="left" src="../../assets/images/korea-details-img3.jpg" />
         <div class="plan-des left">
-          <h3>申请人须符合以下条件</h3>
-          <strong>- 50岁以下申请人</strong>
-          <p><i>◆</i>体现稳定的收入，至少马币1万/月，可以包括薪水、分红、顾问费、提成等； </p>
-          <p><i>◆</i>马来西亚本地银行开出的定期存款证明50万马币(约合90万人民币)；</p>
-          <strong>- 50岁以上申请人</strong>
-          <p><i>◆</i>体现稳定收入，至少马币1万/月。退休人士须出示获得政府认可的退休金证明， 数额为马币1万/月； </p>
-          <p><i>◆</i>马来西亚本地银行开出的定期存款证明35万马币（约合57万人民币)。</p>
+          <h3>依照韩国国籍法第5条规定一般入国籍条件如下</h3>
+          <p><i>◆</i>5年以上持续在大韩民国居住者。</p>
+          <p><i>◆</i>持有大韩民国永居卡。</p>
+          <p><i>◆</i>大韩民国民法规定的成年。</p>
+          <p><i>◆</i>遵纪守法等要具备法务部令规定的品行端正条件。</p>
+          <p><i>◆</i>根据自身的财产技能或依赖共同维持生计的亲属，有维持生计能力者。</p>
+          <p><i>◆</i>对韩国语能力及大韩民国风俗有一定理解等拥有作为大韩民国国民的基本素养者。</p>
+          <p><i>◆</i>经法务部长官认可，不会因批准加入韩国国籍而侵害国家的安全保障秩序维持或公共福利。</p>
         </div>
       </div>
     </div>
-
     <div class="application-process clearfix animation-show">
       <div class="public-title animation-show">
         <h3>申请流程</h3>
         <p>application process</p>
       </div>
       <ul class="pc-max-width">
-        <li><span><i>1</i></span>收集申请人<br />资料</li>
-        <li><span><i>2</i></span>向马国人力部<br />提交申请</li>
-        <li><span><i>3</i></span>获批文后交给<br />移民厅审核</li>
-        <li><span><i>4</i></span>审核通过后<br />签发入境许可</li>
-        <li><span><i>5</i></span>登陆马国录<br />指纹</li>
-        <li><span><i>6</i></span>获取红卡后到<br />移民厅盖章</li>
+        <li><span><i>1</i></span>审核签约</li>
+        <li><span><i>2</i></span>视频面试</li>
+        <li><span><i>3</i></span>准备材料</li>
+        <li><span><i>4</i></span>提交申请</li>
+        <li><span><i>5</i></span>登录韩国</li>
+        <li><span><i>6</i></span>转F-2签证</li>
       </ul>
     </div>
 
@@ -214,9 +216,8 @@ export default {
   }
 }
 
-
 .application-process {
-  padding: 100px 0;
+  padding: 90px 0;
   background:rgba(249,249,249,1);
   text-align: center;
   ul {
@@ -257,7 +258,7 @@ export default {
     span {
       position: relative;
       z-index: 20;
-      padding: 0 13px;
+      padding: 0 18px;
       display: block;
       background: #f9f9f9;
     }

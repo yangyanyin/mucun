@@ -55,6 +55,9 @@ const MalaysiaDetails = () => import(/* webpackChunkName: "green-card" */ '../vi
 /** @page 绿卡项目新加坡详情 */ 
 const SingaporeDetails = () => import(/* webpackChunkName: "green-card" */ '../views/green-card/SingaporeDetails.vue')
 
+/** @page 绿卡项目新加坡详情 */ 
+const KoreaDetails = () => import(/* webpackChunkName: "green-card" */ '../views/green-card/KoreaDetails.vue')
+
 
 Vue.use(VueRouter)
 
@@ -205,6 +208,14 @@ const routes = [
     path: '/singapore-details',
     name: 'SingaporeDetails',
     component: SingaporeDetails,
+    meta: {
+      page: 'green'
+    }
+  },
+  {
+    path: '/korea-details',
+    name: 'KoreaDetails',
+    component: KoreaDetails,
     meta: {
       page: 'green'
     }

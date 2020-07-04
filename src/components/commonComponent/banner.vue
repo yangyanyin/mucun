@@ -15,11 +15,14 @@
 </template>
 <script>
 export default {
-  props: ["bannerImgList"],
+  props: {
+    bannerImgList: Array,
+    autoplay: Number
+  },
   data() {
     return {
       swiperOption: {
-        autoplay: 4000,
+        autoplay: this.autoplay || 4000,
         loop: true,
         effect: "fade"
         // pagination: '.swiper-pagination'

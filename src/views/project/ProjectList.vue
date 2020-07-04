@@ -2,7 +2,7 @@
   <Layout>
     <loadingPage v-if="!loadingSuccess" />
     <template v-else>
-      <Banner :bannerImgList="bannerData" />
+      <Banner :bannerImgList="bannerData" :autoplay="4000" />
       <div class="country-main">
         <div class="pc-max-width">
           <div class="country-nav">
