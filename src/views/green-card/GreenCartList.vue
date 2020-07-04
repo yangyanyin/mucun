@@ -57,7 +57,7 @@
               <img src="../../assets/images/korea-passport.png" />
             </span>
             <h3>韩国 / korea</h3>
-            <p>一人申请，第二家园项目</p>
+            <p>飞速定居，5年转永居后，存款全部退还，相等净花费为0</p>
             <router-link to="/korea-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>
