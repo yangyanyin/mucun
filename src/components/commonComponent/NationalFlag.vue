@@ -33,6 +33,9 @@
     <router-link tag="li"  to="/singapore-details">
       <img src="../../assets/images/country9.png" />
     </router-link>
+    <router-link tag="li"  to="/korea-details">
+      <img src="../../assets/images/country12.png" />
+    </router-link>
   </ul>
 </template>
 <style scoped lang="less">

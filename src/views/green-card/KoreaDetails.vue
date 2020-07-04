@@ -95,6 +95,7 @@ export default {
     padding-top: 60px;
     height: 240px;
     img {
+      top: 60px;
       height: 180px;
     }
   }

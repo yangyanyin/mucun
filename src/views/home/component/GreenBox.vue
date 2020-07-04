@@ -45,6 +45,13 @@ export default {
           img: require('../../../assets/images/Malaysia-home.jpg'),
           passport: require('../../../assets/images/Malaysia-passport.png'),
           url: '/Malaysia-details'
+        },
+        {
+          name: '韩国 / Korea',
+          text: '飞速定居，5年转永居后，存款全部退还，相等净花费为0',
+          img: require('../../../assets/images/Korea-home.jpg'),
+          passport: require('../../../assets/images/korea-passport.png'),
+          url: '/korea-details'
         }
       ]
     }
@@ -133,12 +140,15 @@ export default {
 <style lang="less">
 .home-card {
   padding: 0 90px;
-  .el-carousel--horizontal {
-    overflow-x: initial !important;
-  }
   .el-carousel__container {
     height: 450px !important;
     margin-top: 50px;
+    @media(max-width: 1200px) {
+      height: 400px !important;
+    }
+  }
+  .el-carousel__button {
+    height: 4px !important;
   }
   .el-carousel__arrow {
     display: block !important;
@@ -148,12 +158,12 @@ export default {
     &:hover {
       background: rgba(255, 255, 255, .6) !important;
     }
-    &.el-carousel__arrow--left {
-      left: -65px;
-    }
-    &.el-carousel__arrow--right {
-      right: -65px;
-    }
+    // &.el-carousel__arrow--left {
+    //   left: -65px;
+    // }
+    // &.el-carousel__arrow--right {
+    //   right: -65px;
+    // }
   }
   .el-carousel__indicators--outside {
     button {
@@ -162,7 +172,7 @@ export default {
     }
   }
   .el-carousel__indicators--outside {
-    display: none;
+    // display: none;
   }
   @media (max-width: 767px) {
     padding: 0;

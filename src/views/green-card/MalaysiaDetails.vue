@@ -9,8 +9,8 @@
           <img v-lazy="{src: require('../../assets/images/malaysia-details-img1.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
         </div>
         <div class="des right">
-          <h3>马来西亚第二家园计划（MM2H）</h3>
-          <p>是由马来西亚旅游局和马来西亚移民局推出的一个项目，旨在让符合政府特定条件的外籍人士获得多次入境社交签证，以便长期居住在马来西亚。（多次入境社交签证有效期限为10年，可以更新）</p>
+          <h3>马来西亚永居红卡 (PR)</h3>
+          <p>马来西亚被公认为世界上兼具宜居和旅游属性的国家之一，在中国的“一带一路”政策的推动下，已经成为高净值人群心中的投资、置业、居住国家选择之一。因此，在马来西亚“红卡”计划推出后，吸引全球众多投资者的目光。</p>
         </div>
       </div>
 
@@ -19,21 +19,22 @@
           <img v-lazy="{src: require('../../assets/images/malaysia-details-img2.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
         </div>
         <div class="des left">
-          <h3>申请条件</h3>
-          <p>马来西亚第二家园计划(MM2H)这项计划公开给马来西亚所承认的国家公民申请，无划分种族、宗教、性别或年龄。这项计划允许申请者可以携带配偶、父母及子女。马来西亚公民的外籍配偶和外籍人士在其工作签证期满后，可以申请该项计划在马来西亚退休养老。(申请者可以携带21岁以下未婚子女以及60岁以上的父母)</p>
+          <h3>马来西亚红卡简介</h3>
+          <p>马来西亚红卡 （MyPR）是马来西亚根据移民法条例1959/63，任何外国公民被授予马来西亚永久居民身份将获得入境卡和红色身份证，即MyPR。此永居身份证没有年限，终身有效，可以免除所有签证要求入境以及永久居住在马来西亚，红卡则等于马来西亚居民身份证。</p>
         </div>
       </div>
 
       <div class="plan clearfix animation-show">
         <img class="left" src="../../assets/images/plan-img2.jpg" />
         <div class="plan-des left">
-          <h3>申请人须符合以下条件</h3>
-          <strong>- 50岁以下申请人</strong>
-          <p><i>◆</i>体现稳定的收入，至少马币1万/月，可以包括薪水、分红、顾问费、提成等； </p>
-          <p><i>◆</i>马来西亚本地银行开出的定期存款证明50万马币(约合90万人民币)；</p>
-          <strong>- 50岁以上申请人</strong>
-          <p><i>◆</i>体现稳定收入，至少马币1万/月。退休人士须出示获得政府认可的退休金证明， 数额为马币1万/月； </p>
-          <p><i>◆</i>马来西亚本地银行开出的定期存款证明35万马币（约合57万人民币)。</p>
+          <h3>马来西亚红卡优势</h3>
+          <p>1.无需放弃本国身份、终身免签自由定居往返马来西亚</p>
+          <p>2.自由在大马经商、注册公司没有任何附加条件，享受国民待遇</p>
+          <p>3.MyPR持有者可以在大马从事任何工作不需要工作签证</p>
+          <p>4.获得MyPR后新生儿将自动获得大马公民身份</p>
+          <p>5.子女可以享受当地免费的优质教育，马来西亚为英式双语教育体系</p>
+          <p>6.无门槛购买大马当地房地产，无任何贷款限制</p>
+          <p>7.无年龄限制、无资产来源证明、无居住要求</p>
         </div>
       </div>
     </div>
@@ -93,6 +94,7 @@ export default {
     padding-top: 60px;
     height: 240px;
     img {
+      top: 60px;
       height: 180px;
     }
   }
