@@ -4,6 +4,20 @@
     <!-- banner -->
     <Banner :bannerImgList="bannerImg" />
 
+    <!-- 媒体 -->
+    <div class="media-content">
+      <h3>媒体报道</h3>
+      <ul>
+        <li><img src="../../assets/images/media-img1.png"></li>
+        <li><img src="../../assets/images/media-img2.png"></li>
+        <li><img src="../../assets/images/media-img3.png"></li>
+        <li><img src="../../assets/images/media-img4.png"></li>
+        <li><img src="../../assets/images/media-img5.png"></li>
+        <li><img src="../../assets/images/media-img6.png"></li>
+        <li><img src="../../assets/images/media-img7.png"></li>
+        <li><img src="../../assets/images/media-img8.png"></li>
+      </ul>
+    </div>
     <!-- 视频 -->
     <div class="home-video pc-max-width">
       <div class="animation-show">
