@@ -5,18 +5,6 @@
       <router-link class="right" :to="'/news-' + type">了解更多></router-link>
     </div>
     <div class="content clearfix">
-      <div class="right">
-        <el-carousel trigger="click" height="388px">
-          <template v-for="(news, index) in newsList" >
-            <el-carousel-item :key="index" v-if="index < 3">
-              <router-link :to="'/news-details/' + news.id">
-                <h3>{{news.title}}</h3>
-                <img @load="elDome" :src="news.img" />
-              </router-link>
-            </el-carousel-item>
-          </template>
-        </el-carousel>
-      </div>
       <div class="left">
         <template v-for="(news, index) in newsList" >
           <router-link :to="'/news-details/' + news.id" class="a" :key="index" v-if="index < 3">

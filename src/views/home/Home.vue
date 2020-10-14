@@ -5,36 +5,43 @@
     <Banner :bannerImgList="bannerImg" />
 
     <!-- 媒体 -->
-    <div class="media-content">
-      <h3>媒体报道</h3>
-      <ul>
-        <li><img src="../../assets/images/media-img1.png"></li>
-        <li><img src="../../assets/images/media-img2.png"></li>
-        <li><img src="../../assets/images/media-img3.png"></li>
-        <li><img src="../../assets/images/media-img4.png"></li>
-        <li><img src="../../assets/images/media-img5.png"></li>
-        <li><img src="../../assets/images/media-img6.png"></li>
-        <li><img src="../../assets/images/media-img7.png"></li>
-        <li><img src="../../assets/images/media-img8.png"></li>
-      </ul>
-    </div>
-    <!-- 视频 -->
-    <div class="home-video pc-max-width">
-      <div class="animation-show">
-        <Flag />
+    <div class="pc-max-width clearfix">
+      <div class="media-content">
+        <h3 class="left">媒体报道</h3>
+        <ul class="right">
+          <li><img src="../../assets/images/media-img1.png"></li>
+          <li><img src="../../assets/images/media-img2.png"></li>
+          <li><img src="../../assets/images/media-img3.png"></li>
+          <li><img src="../../assets/images/media-img4.png"></li>
+          <li><img src="../../assets/images/media-img5.png"></li>
+          <li><img src="../../assets/images/media-img6.png"></li>
+          <li><img src="../../assets/images/media-img7.png"></li>
+          <li><img src="../../assets/images/media-img8.png"></li>
+        </ul>
       </div>
-      <div class="animation-show" v-html="videoIframe"></div>
+    </div>
+
+    <!-- 视频 -->
+    <div class="pc-max-width">
+      <div class="animation-show clearfix" >
+        <div class="left home-video" v-html="videoIframe"></div>
+        <div class="right home-about">
+          <h3>选择我们</h3>
+          <span>CHOOSE US</span>
+          <p>新加坡全球护照交流中心-SGPEC，总部位于国际金融中心新加坡，是多国政府和机构投资移民项目的官方授权持牌机构。SGPEC成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
+          <a href="">联系我们</a>
+        </div>
+      </div>
     </div>
 
     <!-- 为什么选择我们 -->
-    <div class="choose-us margin-t-80">
+    <!-- <div class="choose-us margin-t-80">
       <div class="pc-max-width">
         <div class="title animation-show">
           <h3>选|择|我|们</h3>
           <span>CHOOSE US</span>
         </div>
         <div class="content animation-show">
-          <p>新加坡全球护照交流中心-SGPEC，总部位于国际金融中心新加坡，是多国政府和机构投资移民项目的官方授权持牌机构。SGPEC成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
           <ul class="clearfix character">
             <li>
               <img src="../../assets/images/us-img1.png" />
@@ -84,6 +91,11 @@
           </ul>
         </div>
       </div>
+    </div> -->
+
+    <!-- 移民专家 -->
+    <div class="expert pc-max-width margin-t-80" v-if="newsData.expert.length > 0">
+      <NewModule type="expert" :newsList="newsData.expert" />
     </div>
 
     <!-- 新加坡移民 -->
@@ -111,20 +123,6 @@
           </li>
         </ul>
       </div>
-    </div>
-
-    <!-- 移民专家 -->
-    <div class="expert pc-max-width margin-t-80" v-if="newsData.expert.length > 0">
-      <div class="public-title animation-show">
-        <h3>新加坡移民专家</h3>
-        <span>
-          <i>
-            <img src="../../assets/images/title-img1.png" />
-          </i>
-        </span>
-        <p>SINGAPORE Residency Solutions</p>
-      </div>
-      <NewModule type="expert" :newsList="newsData.expert" />
     </div>
 
     <!-- 全球护照精选 -->
@@ -312,7 +310,6 @@ import Layout from "../../components/layout.vue";
 import Banner from "./component/banner.vue";
 import { animation, windowScroll, device } from "../../assets/js/config.js";
 import ContactUs from "../../components/commonComponent/ContactUs";
-import Flag from "../../components/commonComponent/NationalFlag";
 import NewModule from './component/NewModule'
 import GreenBox from './component/GreenBox'
 import Loading from '../../components/commonComponent/loadingPage'
@@ -323,7 +320,6 @@ export default {
     Layout,
     Banner,
     ContactUs,
-    Flag,
     NewModule,
     Loading,
     GreenBox
@@ -425,70 +421,146 @@ export default {
 </script>
 
 <style lang="less" scoped>
-/** 选择我们 **/
-.choose-us {
-  text-align: center;
-  padding-top: 60px;
-  background: url("../../assets//images/choose-us-bg.png") no-repeat top center;
-  background-size: 100%;
+// 媒体报道
+.media-content {
+  position: relative;
+  top: -58px;
+  height: 114px;
+  border: 1px solid #E5E5E5;
+  background: #fff;
+
   h3 {
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 16px;
-  }
-  span {
-    display: block;
-    padding-top: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
-  }
-  .content {
-    margin-top: 35px;
-    p {
-      font-size: 16px;
-      line-height: 34px;
-      padding: 0 150px;
-    }
-    ul {
-      padding-top: 120px;
-      li {
-        float: left;
-        width: 16.66%;
-        img {
-          display: block;
-          width: 100%;
-        }
-      }
+    position: relative;
+    padding: 0 35px;
+    line-height: 114px;
+    font-size: 20px;
+    font-weight: bold;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 50px;
+      right: 0;
+      top: 32px;
+      background: #E5E5E5;
     }
   }
-  @media (max-width: 767px) {
-    background: #fff;
-    padding: 0;
-    h3 {
-      font-size: 20px;
-      letter-spacing: 14px;
-    }
-    span {
-      padding-top: 5px;
-    }
-    .content {
-      text-align: left;
-      margin-top: 10px;
-      p {
-        display: inline;
-        padding: 0;
-        font-size: 14px;
-        line-height: 28px;
-      }
-      ul {
-        padding-top: 20px;
-        li {
-          width: 33.33%;
-        }
-      }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100% - 170px);
+    height: 114px;
+    img {
+      display: block;
+      height: 54px;
     }
   }
 }
+
+/* 视频和关于我们 */
+.home-video {
+  width: 58%;
+}
+.home-about {
+  width: 42%;
+  height: 500px;
+  background: #F2F2F2;
+  padding: 40px 50px;
+  h3 {
+    display: block;
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    border-bottom: 2px solid #447375;
+  }
+  span {
+    display: block;
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  p {
+    line-height: 28px;
+  }
+  a {
+    float: right;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+    border: 2px solid #000;
+  }
+}
+/** 选择我们 **/
+// .choose-us {
+//   text-align: center;
+//   padding-top: 60px;
+//   background: url("../../assets//images/choose-us-bg.png") no-repeat top center;
+//   background-size: 100%;
+//   h3 {
+//     font-size: 24px;
+//     font-weight: 600;
+//     letter-spacing: 16px;
+//   }
+//   span {
+//     display: block;
+//     padding-top: 10px;
+//     font-weight: 600;
+//     letter-spacing: 3px;
+//   }
+//   .content {
+//     margin-top: 35px;
+//     p {
+//       font-size: 16px;
+//       line-height: 34px;
+//       padding: 0 150px;
+//     }
+//     ul {
+//       padding-top: 120px;
+//       li {
+//         float: left;
+//         width: 16.66%;
+//         img {
+//           display: block;
+//           width: 100%;
+//         }
+//       }
+//     }
+//   }
+//   @media (max-width: 767px) {
+//     background: #fff;
+//     padding: 0;
+//     h3 {
+//       font-size: 20px;
+//       letter-spacing: 14px;
+//     }
+//     span {
+//       padding-top: 5px;
+//     }
+//     .content {
+//       text-align: left;
+//       margin-top: 10px;
+//       p {
+//         display: inline;
+//         padding: 0;
+//         font-size: 14px;
+//         line-height: 28px;
+//       }
+//       ul {
+//         padding-top: 20px;
+//         li {
+//           width: 33.33%;
+//         }
+//       }
+//     }
+//   }
+// }
 
 /** 全球护照精选 **/
 .passport {
@@ -879,11 +951,6 @@ export default {
     line-height: 140px;
     background: rgba(0, 0, 0, 0.3);
     ul {
-      // @media (min-width: 767px) {
-      //   display: flex;
-      //   flex-flow: row wrap;
-      //   justify-content: space-between;
-      // }
       text-align: center;
       li {
         display: inline-block;
@@ -1067,7 +1134,7 @@ export default {
   iframe {
     display: block;
     width: 100%;
-    height: 540px;
+    height: 500px;
     margin: auto;
     @media (max-width: 767px) {
       height: 240px;
