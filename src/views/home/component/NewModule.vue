@@ -1,11 +1,12 @@
 <template>
   <div class="index-news animation-show">
-    <div class="title clearfix">
-      <h3 class="left">新闻动态</h3>
-      <router-link class="right" :to="'/news-' + type">了解更多></router-link>
-    </div>
+    
     <div class="content clearfix">
       <div class="left">
+        <div class="title clearfix">
+          <h3 class="left">新闻动态</h3>
+          <router-link class="right" :to="'/news-' + type">了解更多></router-link>
+        </div>
         <template v-for="(news, index) in newsList" >
           <router-link :to="'/news-details/' + news.id" class="a" :key="index" v-if="index < 3">
             <div class="img">
@@ -20,7 +21,12 @@
           </router-link>
         </template>
       </div>
-      
+      <div class="right">
+        <div class="title clearfix">
+          <h3 class="left">相关资讯</h3>
+          <router-link class="right" :to="'/news-' + type">查看更多></router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -147,24 +153,6 @@ export default {
   div.right {
     width: 50%;
     padding-left: 20px;
-    h3 {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      padding: 20px;
-      color: #fff;
-      font-size: 20px;
-      background: rgba(0, 0, 0, 0.5);
-      @media (max-width: 767px) {
-        font-size: 16px;
-        padding: 15px;
-      }
-    }
-    img {
-      display: block; 
-      width: 100%;
-    }
   }
   @media (max-width: 767px) {
     div.left {
@@ -191,78 +179,4 @@ export default {
     }
   }
 }
-</style>
-<style lang="less">
-  .index-news {
-    .el-carousel {
-      overflow: hidden;
-    }
-    @media (min-width: 767px) {
-      .el-carousel__container {
-        height: 400px !important;
-      }
-    }
-    .content div.left a.a p {
-      img {
-        display: none;
-      }
-    }
-    .el-carousel__arrow {
-      top: auto;
-      bottom: 18px;
-      display: block !important;
-      width: 24px;
-      height: 24px;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 0;
-      &:hover {
-        background: rgba(0, 0, 0, 0.6);
-        border-radius: 0;
-      }
-      &.el-carousel__arrow--right {
-        right: 25px;
-      }
-      &.el-carousel__arrow--left {
-        left: auto;
-        right: 152px;
-      }
-      @media (max-width: 767px) {
-        bottom: 3px;
-        width: 20px;
-        height: 20px;
-        &.el-carousel__arrow--left {
-          right: 130px;
-        }
-      }
-    }
-    .el-carousel__indicators--horizontal {
-      bottom: 30px;
-      right: 10px;
-      left: auto;
-      @media (max-width: 767px) {
-        bottom: 13px;
-      }
-    }
-    .el-carousel__indicator {
-      padding: 0;
-      margin: 0 3px;
-      &.is-active {
-        button {
-          color: #fff;
-          background: rgba(0, 0, 0, 0.7);
-        }
-      }
-      button {
-        width: 24px;
-        height: 24px;
-        color: #bfbfbf;
-        opacity: 1;
-        background: rgba(0, 0, 0, 0.4);
-        @media (max-width: 767px) {
-          width: 20px;
-          height: 20px;
-        }
-      }
-    }
-  }
 </style>

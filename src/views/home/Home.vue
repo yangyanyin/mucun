@@ -29,71 +29,19 @@
           <h3>选择我们</h3>
           <span>CHOOSE US</span>
           <p>新加坡全球护照交流中心-SGPEC，总部位于国际金融中心新加坡，是多国政府和机构投资移民项目的官方授权持牌机构。SGPEC成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
-          <a href="">联系我们</a>
+          <a class="contact" href="">联系我们</a>
+          <div class="icon">
+            <a><img src="../../assets/images/about-icon1.png" /></a>
+            <a><img src="../../assets/images/about-icon2.png" /></a>
+            <a><img src="../../assets/images/about-icon3.png" /></a>
+            <a><img src="../../assets/images/about-icon4.png" /></a>
+            <a><img src="../../assets/images/about-icon5.png" /></a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- 为什么选择我们 -->
-    <!-- <div class="choose-us margin-t-80">
-      <div class="pc-max-width">
-        <div class="title animation-show">
-          <h3>选|择|我|们</h3>
-          <span>CHOOSE US</span>
-        </div>
-        <div class="content animation-show">
-          <ul class="clearfix character">
-            <li>
-              <img src="../../assets/images/us-img1.png" />
-            </li>
-            <li>
-              <img src="../../assets/images/us-img1-1.png" />
-            </li>
-            <li>
-              <img src="../../assets/images/us-img2.png" />
-            </li>
-            <li>
-              <img src="../../assets/images/us-img2-2.png" />
-            </li>
-            <li>
-              <img src="../../assets/images/us-img3.png" />
-            </li>
-            <li>
-              <img src="../../assets/images/us-img3-3.png" />
-            </li>
-            <li class="web-img">
-              <img src="../../assets/images/us-img4-4.png" />
-            </li>
-            <li>
-              <img src="../../assets/images/us-img4.png" />
-            </li>
-            <li class="wap-img">
-              <img src="../../assets/images/us-img4-4.png" />
-            </li>
-            <li class="web-img">
-              <img src="../../assets/images/us-img5-5.png" />
-            </li>
-            <li>
-              <img src="../../assets/images/us-img5.png" />
-            </li>
-            <li class="wap-img">
-              <img src="../../assets/images/us-img5-5.png" />
-            </li>
-            <li class="web-img">
-              <img src="../../assets/images/us-img6-6.png" />
-            </li>
-            <li>
-              <img src="../../assets/images/us-img6.png" />
-            </li>
-            <li class="wap-img">
-              <img src="../../assets/images/us-img6-6.png" />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- 移民专家 -->
+    <!-- 移民新闻 -->
     <div class="expert pc-max-width margin-t-80" v-if="newsData.expert.length > 0">
       <NewModule type="expert" :newsList="newsData.expert" />
     </div>
@@ -202,22 +150,42 @@
       </div>
     </div>
 
-    <!-- 护照专题 -->
-    <div class="thematic pc-max-width margin-t-80" v-if="newsData.thematic.length > 0">
-      <div class="public-title animation-show">
-        <h3>护照专题</h3>
-        <span>
-          <i>
-            <img src="../../assets/images/title-img1.png" />
-          </i>
-        </span>
-        <p>Passport topics</p>
+    <!-- 办理三部曲 -->
+    <div class="trilogy">
+      <div class="pc-max-width">
+        <div class="public-title animation-show">
+          <h3>办理三部曲</h3>
+          <p>为了确保每一位客户在办理期间万无一失，SGPEC制定具有特色的办理三部曲，即“发现需求”、“确定方案”、“与众不同”。</p>
+          <!-- <p>为了确保每一位客户在办理期间万无一失，SGPEC制定具有特色的办理三部曲，即“发现需求”、“确定方案”、“与众不同”，为您提供最佳的一站式海外投资移民服务，协助您获得公民身份。</p> -->
+        </div>
+        <div class="step clearfix">
+          <div class="left">
+            <img src="../../assets/images/step-img1.png" />
+            <p>
+              <strong>第一步 / 了解需求</strong>
+              深入研究客户的需求，评估客户个人情况，选择最适合且符合申请条件的项目，提供详细深入的建议。
+            </p>
+          </div>
+          <div class="left">
+            <p>
+              <strong>第二步 / 确定方案</strong>
+              针对不同客户的需求制定方案，严格筛选项目以确保您的投资安全，给您带来最佳收益。
+            </p>
+            <img src="../../assets/images/step-img2.png" />
+          </div>
+          <div class="left">
+            <img src="../../assets/images/step-img3.png" />
+            <p>
+              <strong>第三步 / 与众不同</strong>
+              立志做到同行专业水准之上，注重客户隐私、海外资产配置等，尽职监管整个申请流程。
+            </p>
+          </div>
+        </div>
       </div>
-      <NewModule type="thematic" :newsList="newsData.thematic" />
     </div>
 
     <!-- 成功案例 -->
-    <div class="success-case margin-t-80" v-if="newsData.case.length > 0">
+    <div class="success-case" v-if="newsData.case.length > 0">
       <div class="public-title animation-show">
         <h3>成功案例</h3>
         <span>
@@ -300,6 +268,22 @@
       </div>
     </div>
 
+    <!-- 我们得团队 -->
+  <div class="team margin-t-80 pc-max-width">
+    <div class="public-title animation-show">
+      <h3>我们的团队</h3>
+      <span>
+        <i>
+          <img src="../../assets/images/title-img1.png" />
+        </i>
+      </span>
+      <p>Our Team</p>
+    </div>
+    <div class="content list">
+      <OurTeam></OurTeam>
+    </div>
+  </div>
+
     <!-- 联系我们 -->
     <ContactUs />
   </Layout>
@@ -308,6 +292,7 @@
 <script>
 import Layout from "../../components/layout.vue";
 import Banner from "./component/banner.vue";
+import OurTeam from "./component/OurTeam.vue";
 import { animation, windowScroll, device } from "../../assets/js/config.js";
 import ContactUs from "../../components/commonComponent/ContactUs";
 import NewModule from './component/NewModule'
@@ -322,7 +307,8 @@ export default {
     ContactUs,
     NewModule,
     Loading,
-    GreenBox
+    GreenBox,
+    OurTeam
   },
   data() {
     return {
@@ -484,10 +470,11 @@ export default {
   p {
     line-height: 28px;
   }
-  a {
+  .contact {
     float: right;
     width: 100px;
     height: 40px;
+    margin-top: 50px;
     border-radius: 20px;
     line-height: 36px;
     font-size: 16px;
@@ -496,71 +483,22 @@ export default {
     text-align: center;
     border: 2px solid #000;
   }
+  .icon {
+    padding-top: 60px;
+    a {
+      display: inline-block;
+      width: 18px;
+      margin-right: 20px;
+      &:last-child {
+        margin: 0;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
 }
-/** 选择我们 **/
-// .choose-us {
-//   text-align: center;
-//   padding-top: 60px;
-//   background: url("../../assets//images/choose-us-bg.png") no-repeat top center;
-//   background-size: 100%;
-//   h3 {
-//     font-size: 24px;
-//     font-weight: 600;
-//     letter-spacing: 16px;
-//   }
-//   span {
-//     display: block;
-//     padding-top: 10px;
-//     font-weight: 600;
-//     letter-spacing: 3px;
-//   }
-//   .content {
-//     margin-top: 35px;
-//     p {
-//       font-size: 16px;
-//       line-height: 34px;
-//       padding: 0 150px;
-//     }
-//     ul {
-//       padding-top: 120px;
-//       li {
-//         float: left;
-//         width: 16.66%;
-//         img {
-//           display: block;
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
-//   @media (max-width: 767px) {
-//     background: #fff;
-//     padding: 0;
-//     h3 {
-//       font-size: 20px;
-//       letter-spacing: 14px;
-//     }
-//     span {
-//       padding-top: 5px;
-//     }
-//     .content {
-//       text-align: left;
-//       margin-top: 10px;
-//       p {
-//         display: inline;
-//         padding: 0;
-//         font-size: 14px;
-//         line-height: 28px;
-//       }
-//       ul {
-//         padding-top: 20px;
-//         li {
-//           width: 33.33%;
-//         }
-//       }
-//     }
-//   }
-// }
 
 /** 全球护照精选 **/
 .passport {
@@ -734,6 +672,55 @@ export default {
     }
   }
 }
+
+/** 办理三部曲 **/
+.trilogy {
+  background: #f7f7f7;
+  padding: 100px 0 80px;
+  .public-title {
+    h3 {
+      letter-spacing: 15px;
+    }
+    p {
+      position: relative;
+      padding-top: 30px;
+      line-height: 26px;
+      font-size: 16px;
+    }
+  }
+  .step {
+    margin-top: 50px;
+    div {
+      background: #fff;
+      width: 33.33%;
+      img {
+        display: block;
+        width: 100%;
+      }
+      p {
+        height: 200px;
+        padding: 40px;
+        strong {
+          position: relative;
+          display: block;
+          font-size: 24px;
+          font-weight: normal;
+          margin-bottom: 40px;
+          &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 30px;
+            height: 4px;
+            background: #447375;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /** 成功案例 **/
 .success-case {
