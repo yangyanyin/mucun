@@ -5,27 +5,43 @@
     <Banner :bannerImgList="bannerImg" />
 
     <!-- 媒体 -->
-    <div class="pc-max-width clearfix">
-      <div class="media-content">
+    <div class="pc-max-width">
+      <div class="media-content clearfix">
         <h3 class="left">媒体报道</h3>
         <ul class="right">
-          <li><img src="../../assets/images/media-img1.png"></li>
-          <li><img src="../../assets/images/media-img2.png"></li>
-          <li><img src="../../assets/images/media-img3.png"></li>
-          <li><img src="../../assets/images/media-img4.png"></li>
-          <li><img src="../../assets/images/media-img5.png"></li>
-          <li><img src="../../assets/images/media-img6.png"></li>
-          <li><img src="../../assets/images/media-img7.png"></li>
-          <li><img src="../../assets/images/media-img8.png"></li>
+          <li>
+            <a href="http://finance.china.com.cn/jiaoyu/20200910/5367456.shtml"><img src="../../assets/images/media-img1.png"></a>
+          </li>
+          <li>
+            <a href="http://gd.ifeng.com/a/20200819/14436830_0.shtml"><img src="../../assets/images/media-img2.png"></a>
+          </li>
+          <li>
+            <a href=""><img src="../../assets/images/media-img3.png"></a>
+          </li>
+          <li>
+            <a href="https://edu.163.com/20/0831/17/FLCIBC020029985J.html"><img src="../../assets/images/media-img4.png"></a>
+          </li>
+          <li>
+            <a href="https://biznews.sohu.com/a/419853542_120181749"><img src="../../assets/images/media-img5.png"></a>
+          </li>
+          <li>
+            <a href="https://www.marketwatch.com/press-release/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore-2020-09-21"><img src="../../assets/images/media-img6.png"></a>
+          </li>
+          <li>
+            <a href="http://www.wboc.com/story/42658134/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore"><img src="../../assets/images/media-img7.png"></a>
+          </li>
+          <li>
+            <a href="https://www.honolulunewsnow.com/news/story/217323/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore.html"><img src="../../assets/images/media-img8.png"></a>
+          </li>
         </ul>
       </div>
     </div>
 
     <!-- 视频 -->
-    <div class="pc-max-width">
+    <div class="pc-max-width home-about">
       <div class="animation-show clearfix" >
-        <div class="left home-video" v-html="videoIframe"></div>
-        <div class="right home-about">
+        <div class="left video" v-html="videoIframe"></div>
+        <div class="right about">
           <h3>选择我们</h3>
           <span>CHOOSE US</span>
           <p>新加坡全球护照交流中心-SGPEC，总部位于国际金融中心新加坡，是多国政府和机构投资移民项目的官方授权持牌机构。SGPEC成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
@@ -42,9 +58,7 @@
     </div>
 
     <!-- 移民新闻 -->
-    <div class="expert pc-max-width margin-t-80" v-if="newsData.expert.length > 0">
-      <NewModule type="expert" :newsList="newsData.expert" />
-    </div>
+    <NewModule v-if="newDynamic.length > 0" type="expert" :newDynamic="newDynamic" />
 
     <!-- 新加坡移民 -->
     <div class="singapore pc-max-width margin-t-80">
@@ -159,33 +173,54 @@
           <!-- <p>为了确保每一位客户在办理期间万无一失，SGPEC制定具有特色的办理三部曲，即“发现需求”、“确定方案”、“与众不同”，为您提供最佳的一站式海外投资移民服务，协助您获得公民身份。</p> -->
         </div>
         <div class="step clearfix">
-          <div class="left">
+          <div class="left animation-show">
             <img src="../../assets/images/step-img1.png" />
-            <p>
-              <strong>第一步 / 了解需求</strong>
-              深入研究客户的需求，评估客户个人情况，选择最适合且符合申请条件的项目，提供详细深入的建议。
-            </p>
+            <div>
+              <img src="../../assets/images/step-img1.png" />
+              <p>
+                <strong>第一步 / 了解需求</strong>
+                深入研究客户的需求，评估客户个人情况，选择最适合且符合申请条件的项目，提供详细深入的建议。
+              </p>
+            </div>
+            
           </div>
-          <div class="left">
-            <p>
-              <strong>第二步 / 确定方案</strong>
-              针对不同客户的需求制定方案，严格筛选项目以确保您的投资安全，给您带来最佳收益。
-            </p>
+          <div class="left animation-show web-img">
+            <div>
+              <img src="../../assets/images/step-img2.png" />
+              <p>
+                <strong>第二步 / 确定方案</strong>
+                针对不同客户的需求制定方案，严格筛选项目以确保您的投资安全，给您带来最佳收益。
+              </p>
+            </div>
             <img src="../../assets/images/step-img2.png" />
           </div>
-          <div class="left">
+          <div class="left animation-show wap-img">
+            <img src="../../assets/images/step-img2.png" />
+            <div>
+              <img src="../../assets/images/step-img2.png" />
+              <p>
+                <strong>第二步 / 确定方案</strong>
+                针对不同客户的需求制定方案，严格筛选项目以确保您的投资安全，给您带来最佳收益。
+              </p>
+            </div>
+          </div>
+          
+          <div class="left animation-show">
             <img src="../../assets/images/step-img3.png" />
-            <p>
-              <strong>第三步 / 与众不同</strong>
-              立志做到同行专业水准之上，注重客户隐私、海外资产配置等，尽职监管整个申请流程。
-            </p>
+            <div>
+              <img src="../../assets/images/step-img3.png" />
+              <p>
+                <strong>第三步 / 与众不同</strong>
+                立志做到同行专业水准之上，注重客户隐私、海外资产配置等，尽职监管整个申请流程。
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- 成功案例 -->
-    <div class="success-case" v-if="newsData.case.length > 0">
+    <div class="success-case" v-if="newCase.length > 0">
       <div class="public-title animation-show">
         <h3>成功案例</h3>
         <span>
@@ -197,7 +232,7 @@
       </div>
       <div class="pc-max-width content clearfix animation-show">
         <ul>
-          <li v-for="(news, index) in newsData.case" :key="index">
+          <li v-for="(news, index) in newCase" :key="index">
             <router-link class="a" :to="'/news-details/' + news.id">
               <img
                     v-lazy="{src: news.img, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
@@ -300,7 +335,7 @@ import GreenBox from './component/GreenBox'
 import Loading from '../../components/commonComponent/loadingPage'
 
 export default {
-  name: "app",
+  name: "home",
   components: {
     Layout,
     Banner,
@@ -342,11 +377,8 @@ export default {
         }
       ],
       loadingStatus: false,
-      newsData: {
-        case: [],
-        thematic: '',
-        expert: ''
-      }
+      newDynamic: [],
+      newCase: []
     }
   },
   methods: {},
@@ -390,14 +422,11 @@ export default {
       if (res.data.code === 200) {
         let news = res.data.data.news_list
         for (let i = 0; i < news.length; i++) {
-          if (news[i].name === '护照专题' ) {
-            this.newsData.thematic = news[i].news.slice(0, 3)
-          }
-          if (news[i].name === '新加坡移民专家' ) {
-            this.newsData.expert = news[i].news.slice(0, 3)
-          }
           if (news[i].name === '成功案例' ) {
-            this.newsData.case = news[i].news.slice(0, 4)
+            this.newCase = news[i].news.slice(0, 4)
+          } else {
+            // this.newDynamic = []
+            this.newDynamic.push(news[i])
           }
         }
       }
@@ -411,10 +440,8 @@ export default {
 .media-content {
   position: relative;
   top: -58px;
-  height: 114px;
   border: 1px solid #E5E5E5;
   background: #fff;
-
   h3 {
     position: relative;
     padding: 0 35px;
@@ -442,60 +469,101 @@ export default {
       height: 54px;
     }
   }
+  @media(max-width:1120px) {
+    ul img {
+      height: 40px;
+    }
+  }
+  @media(max-width: 767px) {
+    h3 {
+      display: none;
+      padding: 0 10px;
+      font-size: 14px;
+    }
+    ul {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      text-align: left;
+      li {
+        display: inline-block;
+        margin: 0 5px;
+        img {
+          height: 34px;
+        }
+      }
+    }
+  }
 }
 
 /* 视频和关于我们 */
-.home-video {
-  width: 58%;
-}
 .home-about {
-  width: 42%;
-  height: 500px;
-  background: #F2F2F2;
-  padding: 40px 50px;
-  h3 {
-    display: block;
-    font-size: 24px;
-    padding-bottom: 10px;
-    font-weight: bold;
-    letter-spacing: 10px;
-    border-bottom: 2px solid #447375;
+  @media (max-width: 767px) {
+    padding: 0;
   }
-  span {
-    display: block;
-    color: #000;
-    font-weight: bold;
-    margin-top: 10px;
+  .video {
+    width: 58%;
+    @media(max-width: 767px) {
+      float: none;
+      width: 100%;
+    }
   }
-  p {
-    line-height: 28px;
-  }
-  .contact {
-    float: right;
-    width: 100px;
-    height: 40px;
-    margin-top: 50px;
-    border-radius: 20px;
-    line-height: 36px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #444;
-    text-align: center;
-    border: 2px solid #000;
-  }
-  .icon {
-    padding-top: 60px;
-    a {
-      display: inline-block;
-      width: 18px;
-      margin-right: 20px;
-      &:last-child {
-        margin: 0;
+  .about {
+    width: 42%;
+    height: 500px;
+    background: #F2F2F2;
+    padding: 40px 50px;
+    h3 {
+      display: block;
+      font-size: 24px;
+      padding-bottom: 10px;
+      font-weight: bold;
+      letter-spacing: 10px;
+      border-bottom: 2px solid #447375;
+    }
+    span {
+      display: block;
+      color: #000;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    p {
+      line-height: 28px;
+    }
+    .contact {
+      float: right;
+      width: 100px;
+      height: 40px;
+      margin-top: 50px;
+      border-radius: 20px;
+      line-height: 36px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #444;
+      text-align: center;
+      border: 2px solid #000;
+    }
+    .icon {
+      padding-top: 60px;
+      a {
+        display: inline-block;
+        width: 18px;
+        margin-right: 20px;
+        &:last-child {
+          margin: 0;
+        }
+        img {
+          display: block;
+          width: 100%;
+        }
       }
-      img {
-        display: block;
-        width: 100%;
-      }
+    }
+    @media(max-width: 767px) {
+      width: 100%;
+      float: none;
+      height: auto;
+      padding: 30px 20px;
     }
   }
 }
@@ -690,30 +758,79 @@ export default {
   }
   .step {
     margin-top: 50px;
-    div {
+    div.left {
       background: #fff;
       width: 33.33%;
       img {
         display: block;
         width: 100%;
       }
+      > div {
+        position: relative;
+        img {
+          opacity: 0;
+        }
+        p {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 40px;
+          strong {
+            position: relative;
+            display: block;
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 40px;
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50px;
+              width: 30px;
+              height: 4px;
+              background: #447375;
+            }
+          }
+          @media (max-width: 1100px) {
+            padding: 30px;
+            strong {
+              margin-bottom: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 40px 0 0;
+    .public-title {
       p {
-        height: 200px;
-        padding: 40px;
-        strong {
-          position: relative;
-          display: block;
-          font-size: 24px;
-          font-weight: normal;
-          margin-bottom: 40px;
-          &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50px;
-            width: 30px;
-            height: 4px;
-            background: #447375;
+        padding-top: 15px;
+        line-height: 22px;
+      }
+    }
+    .step {
+      margin: 0 -10px;
+      margin-top: 30px;
+      div.left {
+        float: none;
+        width: 100%;
+        padding-bottom: 10px;
+        > div {
+          img {
+            display: none;
+          }
+          p {
+            position: static;
+            padding: 15px;
+            strong {
+              font-size: 18px;
+              margin-bottom: 20px;
+              &:after {
+                top: 33px;
+                height: 2px;
+              }
+            }
           }
         }
       }
@@ -1117,14 +1234,18 @@ export default {
 }
 </style>
 <style lang="less">
-.home-video {
-  iframe {
-    display: block;
-    width: 100%;
-    height: 500px;
-    margin: auto;
+.home-about {
+  .video {
+    iframe {
+      display: block;
+      width: 100%;
+      height: 500px;
+      margin: auto;
+    }
     @media (max-width: 767px) {
-      height: 240px;
+      iframe {
+        height: 300px;
+      }
     }
   }
 }
