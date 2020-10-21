@@ -80,7 +80,7 @@ export default {
     width: 40px;
     height: 40px;
     transform: translateY(-50%);
-    opacity: .3;
+    opacity: .8;
     &.swiper-button-prev {
       background: url('../../../assets/images/button-prev.png') no-repeat;
       background-size: 100%;
@@ -88,6 +88,29 @@ export default {
     &.swiper-button-next {
       background: url('../../../assets/images/button-next.png') no-repeat;
       background-size: 100%;
+    }
+  }
+  @media (max-width: 767px) {
+    .swiper-button {
+      width: 30px;
+      height: 30px;
+      margin-top: 15px;
+    }
+    .swiper-slide {
+      img {
+        height: 340px;
+      }
+      p {
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 22px;
+        &.p1 {
+          top: 130px;
+        }
+        &.p2 {
+          top: 200px;
+        }
+      }
     }
   }
 }
@@ -111,4 +134,27 @@ export default {
     opacity: 1;
   }
 }
+@media (max-width: 767px) {
+@keyframes p1 {
+  50% {
+    top: 110px;
+    opacity: .9;
+  }
+  100% {
+    top: 120px;
+    opacity: 1;
+  }
+}
+@keyframes p2 {
+  50% {
+    top: 170px;
+    opacity: .9;
+  }
+  100% {
+    top: 180px;
+    opacity: 1;
+  }
+}
+    
+  }
 </style>
