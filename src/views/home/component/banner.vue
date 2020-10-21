@@ -1,20 +1,22 @@
 <template>
   <div class="banner">
-    <!-- <swiper :options="swiperOption">
+    <swiper :options="swiperOption">
       <swiper-slide>
-        <img src="../../../assets/images/banner1.jpg" />
+        <p class="p1">Second citizanship is not just a passport <br /> it is about family, where your family feels at home </p>
+        <p class="p2">海外身份规划<br />这不仅仅是第二身份，更是您海外幸福生活的保障</p>
+        <img src="../../../assets/images/banner1.png" />
       </swiper-slide>
       <swiper-slide>
+        <p class="p1">Second citizanship is not just a passport <br /> it is about family, where your family feels at home </p>
+        <p class="p2">海外身份规划<br />这不仅仅是第二身份，更是您海外幸福生活的保障</p>
         <img src="../../../assets/images/banner2.jpg" />
       </swiper-slide>
-      <swiper-slide>
-        <img src="../../../assets/images/banner3.jpg" />
-      </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
-    </swiper> -->
-    <router-link to="/news-details/12">
+    </swiper>
+    <div class="swiper-button-prev swiper-button" slot="button-prev"></div>
+    <div class="swiper-button-next swiper-button" slot="button-next"></div>
+    <!-- <router-link to="/news-details/12">
       <img src="../../../assets/images/home-banner.jpg" alt="">
-    </router-link>
+    </router-link> -->
   </div>
 </template>
 <script>
@@ -23,9 +25,11 @@ export default {
   data() {
     return {
       swiperOption: {
+        effect: 'fade',
         autoplay: 3000,
         loop: true,
-        pagination: ".swiper-pagination"
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
       }
     };
   },
@@ -33,50 +37,78 @@ export default {
 };
 </script>
 <style lang="less">
-.banner .swiper-pagination-bullet-active {
-  background: #e7c389;
-}
-</style>
-<style lang="less" scoped>
 .banner {
-  img {
-    width: 100%;
-  }
-  @media (max-width: 767px ){
-    height: 300px;
+  position: relative;
+  .swiper-slide {
+    overflow: hidden;
     img {
-      position: absolute;
-      top: 0;
+      position: relative;
       left: 50%;
-      width: auto;
-      height: 300px;
       transform: translateX(-50%);
+      display: block;
+      height: 100%;
+    }    
+    &.swiper-slide-active {
+      .p1 {
+        animation: p1 .8s .7s ease-in both
+      }
+      .p2 {
+        animation: p2 .8s ease-in both
+      }
+    }
+    p {
+      position: absolute;
+      z-index: 9;
+      width: 100%;
+      font-size: 20px;
+      color: #fff;
+      line-height: 30px;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 1px;
+      &.p1 {
+        top: 220px;
+        opacity: 0;
+      }
+      &.p2 {
+        top: 310px;
+        opacity: 0;
+      }
     }
   }
-  .t1 {
-    position: absolute;
-    left: 0;
-    bottom: 55%;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    font-size: 60px;
-  }
-  .t2 {
-    position: absolute;
-    left: 0;
-    bottom: 40%;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    font-size: 44px;
+  .swiper-button {
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    opacity: .3;
+    &.swiper-button-prev {
+      background: url('../../../assets/images/button-prev.png') no-repeat;
+      background-size: 100%;
+    }
+    &.swiper-button-next {
+      background: url('../../../assets/images/button-next.png') no-repeat;
+      background-size: 100%;
+    }
   }
 }
-@media (max-width: 767px) {
-  .banner {
-    padding-top: 60px;
-    position: relative;
-    overflow: hidden;
+@keyframes p1 {
+  50% {
+    top: 180px;
+    opacity: .9;
+  }
+  100% {
+    top: 190px;
+    opacity: 1;
+  }
+}
+@keyframes p2 {
+  50% {
+    top: 270px;
+    opacity: .9;
+  }
+  100% {
+    top: 280px;
+    opacity: 1;
   }
 }
 </style>

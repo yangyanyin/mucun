@@ -425,7 +425,6 @@ export default {
           if (news[i].name === '成功案例' ) {
             this.newCase = news[i].news.slice(0, 4)
           } else {
-            // this.newDynamic = []
             this.newDynamic.push(news[i])
           }
         }
@@ -440,6 +439,7 @@ export default {
 .media-content {
   position: relative;
   top: -58px;
+  z-index: 99;
   border: 1px solid #E5E5E5;
   background: #fff;
   h3 {

@@ -80,14 +80,13 @@ export default {
     }
   }
   .swiper-container {
-    margin: 0 100px;
+    margin: 0 80px;
     overflow: hidden;
   }
   .swiper-slide {
     padding: 100px 30px 5px 5px;
     .d {
       position: relative;
-      height: 200px;
       box-shadow: 0 0 4px #c5c5c5;
       padding: 20px 30px 20px 200px;
       strong {
@@ -116,20 +115,10 @@ export default {
     }
     
   }
-  @media (max-width: 767px) {
-    .swiper-button {
-      top: 50%;
-      width: 30px;
-      height: 30px;
-    }
-    .swiper-container {
-      margin: 20px 0 0;
-    }
+  @media (max-width: 1250px) {
     .swiper-slide {
-      padding: 5px;
       .d {
-        height: auto;
-        padding: 20px 15px 10px 150px;
+         padding: 20px 15px 10px 150px;
         strong {
           font-size: 16px;
         }
@@ -141,6 +130,19 @@ export default {
           bottom: 10px;
         }
       }
+    }
+  }
+  @media (max-width: 767px) {
+    .swiper-button {
+      top: 50%;
+      width: 30px;
+      height: 30px;
+    }
+    .swiper-container {
+      margin: 20px 0 0;
+    }
+    .swiper-slide {
+      padding: 5px;
     }
   }
 }
