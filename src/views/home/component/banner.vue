@@ -9,14 +9,11 @@
       <swiper-slide>
         <p class="p1">Second citizanship is not just a passport <br /> it is about family, where your family feels at home </p>
         <p class="p2">海外身份规划<br />这不仅仅是第二身份，更是您海外幸福生活的保障</p>
-        <img src="../../../assets/images/banner2.jpg" />
+        <img src="../../../assets/images/banner2.png" />
       </swiper-slide>
     </swiper>
-    <div class="swiper-button-prev swiper-button" slot="button-prev"></div>
-    <div class="swiper-button-next swiper-button" slot="button-next"></div>
-    <!-- <router-link to="/news-details/12">
-      <img src="../../../assets/images/home-banner.jpg" alt="">
-    </router-link> -->
+    <!-- <div class="swiper-button-prev swiper-button" slot="button-prev"></div>
+    <div class="swiper-button-next swiper-button" slot="button-next"></div> -->
   </div>
 </template>
 <script>
@@ -27,9 +24,9 @@ export default {
       swiperOption: {
         effect: 'fade',
         autoplay: 3000,
-        loop: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev'
+        loop: true
+        // nextButton: '.swiper-button-next',
+        // prevButton: '.swiper-button-prev'
       }
     };
   },
@@ -76,26 +73,26 @@ export default {
       }
     }
   }
-  .swiper-button {
-    width: 40px;
-    height: 40px;
-    transform: translateY(-50%);
-    opacity: .8;
-    &.swiper-button-prev {
-      background: url('../../../assets/images/button-prev.png') no-repeat;
-      background-size: 100%;
-    }
-    &.swiper-button-next {
-      background: url('../../../assets/images/button-next.png') no-repeat;
-      background-size: 100%;
-    }
-  }
+  // .swiper-button {
+  //   width: 40px;
+  //   height: 40px;
+  //   transform: translateY(-50%);
+  //   opacity: .8;
+  //   &.swiper-button-prev {
+  //     background: url('../../../assets/images/button-prev.png') no-repeat;
+  //     background-size: 100%;
+  //   }
+  //   &.swiper-button-next {
+  //     background: url('../../../assets/images/button-next.png') no-repeat;
+  //     background-size: 100%;
+  //   }
+  // }
   @media (max-width: 767px) {
-    .swiper-button {
-      width: 30px;
-      height: 30px;
-      margin-top: 15px;
-    }
+    // .swiper-button {
+    //   width: 30px;
+    //   height: 30px;
+    //   margin-top: 15px;
+    // }
     .swiper-slide {
       img {
         height: 340px;

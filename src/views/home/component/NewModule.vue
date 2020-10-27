@@ -171,13 +171,13 @@ export default {
           white-space: nowrap;
         }
         p {
-          margin: 12px 0 19px;
+          margin: 15px 0 20px;
           line-height: 20px;
           font-size: 12px;
           opacity: .7;
           display: -webkit-box;
           overflow: hidden;     
-         -webkit-line-clamp: 3;
+         -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
         }
         span {

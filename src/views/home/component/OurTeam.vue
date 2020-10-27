@@ -3,7 +3,7 @@
     <swiper ref="mySwiper" :options="swiperOptions">
       <swiper-slide>
         <div class="d">
-          <img src="../../../assets/images/team-img1.png" />
+          <img src="../../../assets/images/ou-yang.png" />
           <div class="detailed">
             <strong>总裁  OuYang</strong>
             <p>从事海外资产投资领域数年，对海外房地产投资以及财富管理有丰富的实践经验，丰富的从业经验和独特见解，了解各国海外置业、移民、投资的环节和流程，做好客户的参谋，成功帮助客户完成移民梦想，解决高难度的移民申请，最大化客户的合法利益。</p>
@@ -12,7 +12,7 @@
       </swiper-slide>
       <swiper-slide>
         <div class="d">
-          <img src="../../../assets/images/team-img2.png" />
+          <img src="../../../assets/images/vicky.png" />
           <div class="detailed">
             <strong>资深移民顾问  Vicky Chen</strong>
             <p>拥有丰富的行业分析和预判能力，专业和细致材料处理能力，深度关注海外资产配置、移民、留学政策，为客户做好长远移民规划，细心严谨的态度让客户后顾无忧，制定更精准的私人化培训方案，做好移民安置和身份规划。</p>
@@ -21,7 +21,7 @@
       </swiper-slide>
       <swiper-slide>
         <div class="d">
-          <img src="../../../assets/images/team-img1.png" />
+          <img src="../../../assets/images/jessie.png" />
           <div class="detailed">
             <strong>首席移民顾问  Jessie Yin</strong>
             <p>深耕移民行业数年，累积了大量的社会资源和人脉渠道，对各国移民政策和移民项目了如指掌，对海外房地产领域深入研究，服务细致且专业严谨，可以根据不同客户要求，提供高效率、高保障以及高通过率的服务，梳理最便捷的移民、置业和投资流程，是全能复合型移民顾问。</p>
@@ -30,7 +30,7 @@
       </swiper-slide>
       <swiper-slide>
         <div class="d">
-          <img src="../../../assets/images/team-img2.png" />
+          <img src="../../../assets/images/james.png" />
           <div class="detailed">
             <strong>资深移民专家  James Bian</strong>
             <p>在资产管理和投资移民有着丰富的经验，多国留学和生活经历，对多国各类移民问题有精准解决方案，对留学、海外置业有着深入见解，  保持高水准为客户带来海外资产配置和教育规划等相关建议，帮助客户解决深层次问题，成功帮助众多学生和家庭实现移民梦想。</p>
@@ -93,18 +93,22 @@ export default {
         position: relative;
         display: block;
         font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-bottom: 20px;
         &:after {
           content: '';
           position: absolute;
           left: 0;
-          bottom: -10px;
+          bottom: 10px;
           width: 35px;
           height: 2px;
           background: #417173;
         }
       }
       p {
-        margin-top: 20px;
+        height: 120px;
       }
       img {
         position: absolute;
@@ -118,16 +122,16 @@ export default {
   @media (max-width: 1250px) {
     .swiper-slide {
       .d {
-         padding: 20px 15px 10px 150px;
+         padding: 20px 15px 10px 200px;
         strong {
           font-size: 16px;
         }
         p {
           font-size: 13px;
-        }
-        img {
-          width: 150px;
-          bottom: 10px;
+           overflow: hidden;
+           height: 110px;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
         }
       }
     }
@@ -143,6 +147,15 @@ export default {
     }
     .swiper-slide {
       padding: 5px;
+      p {
+        height: auto;
+      }
+      .d {
+        padding-left: 140px;
+        img {
+          width: 130px;
+        }
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
   <div class="swiper">
     <swiper ref="mySwiper" :options="swiperOptions[index]" :key="index">
       <template v-for="(item, key) in newsList">
-        <swiper-slide :key="key" v-if="index < 5">
+        <swiper-slide :key="key" v-if="key < 5">
           <router-link :to="'/news-details/' + item.id" class="a clearfix">
             <div class="img">
               <img :src="item.img" />
@@ -12,7 +12,7 @@
             <span class="left">{{item.created_at.split(' ')[0]}}</span>
             <span class="right"><router-link :to="'/news-details/' + item.id">了解详情</router-link></span>
           </router-link>
-          <div class="num"><span>{{index + 1}}</span>/5</div>
+          <div class="num"><span>{{key + 1}}</span>/5</div>
         </swiper-slide>
       </template>
     </swiper>
@@ -47,19 +47,31 @@ export default {
 <style scoped lang="less">
 .swiper {
   position: relative;
-  padding: 0 40px;
   margin-top: 30px;
+  overflow: hidden;
+  &:hover {
+    .swiper-button {
+      opacity: .6;
+      &.swiper-button-prev {
+        left: 10px;
+      }
+      &.swiper-button-next {
+        right: 10px;
+      }
+    }
+  }
   .swiper-button {
     width: 30px;
     height: 30px;
     opacity: .3;
+    transition: .3s;
     &.swiper-button-prev {
-      left: 0;
+      left: -30px;
       background: url('../../../assets/images/button-prev.png') no-repeat;
       background-size: 100%;
     }
     &.swiper-button-next {
-      right: 0;
+      right: -30px;
       background: url('../../../assets/images/button-next.png') no-repeat;
       background-size: 100%;
     }
@@ -128,6 +140,7 @@ export default {
     }
   }
   @media (max-width: 767px) {
+    padding: 0 10px;
     .swiper-button {
       width: 20px;
       height: 20px;

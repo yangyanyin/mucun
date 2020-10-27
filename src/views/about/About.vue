@@ -34,14 +34,14 @@
         <p>我们与时俱进，与时偕行，坚持简单的事情重复做，重复的事情专业做，专业的事情极致做。<br />交流，交心，交易；诚信，专业，隐私。<br />给我们一次机会，还你一次满意的专业服务。</p>
       </div>
       <ul class="clearfix">
-        <li><img src="../../assets/images/member1.png" alt=""></li>
-        <li><img src="../../assets/images/member2.png" alt=""></li>
-        <li><img src="../../assets/images/member3.png" alt=""></li>
-        <li><img src="../../assets/images/member4.png" alt=""></li>
-        <li><img src="../../assets/images/member5.png" alt=""></li>
-        <li><img src="../../assets/images/member6.png" alt=""></li>
-        <li><img src="../../assets/images/member7.png" alt=""></li>
-        <li><img src="../../assets/images/member8.png" alt=""></li>
+        <li><img src="../../assets/images/member1.png"></li>
+        <li><img src="../../assets/images/member2.png"></li>
+        <li><img src="../../assets/images/member3.png"></li>
+        <li><img src="../../assets/images/member4.png"></li>
+        <li><img src="../../assets/images/member5.png"></li>
+        <li><img src="../../assets/images/member6.png"></li>
+        <li><img src="../../assets/images/member7.png"></li>
+        <li><img src="../../assets/images/member8.png"></li>
       </ul>
     </div>
 

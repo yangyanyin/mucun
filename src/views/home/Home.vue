@@ -10,28 +10,28 @@
         <h3 class="left">媒体报道</h3>
         <ul class="right">
           <li>
-            <a href="http://finance.china.com.cn/jiaoyu/20200910/5367456.shtml"><img src="../../assets/images/media-img1.png"></a>
+            <a target="_blank" href="http://finance.china.com.cn/jiaoyu/20200910/5367456.shtml"><img src="../../assets/images/media-img1.png"></a>
           </li>
           <li>
-            <a href="http://gd.ifeng.com/a/20200819/14436830_0.shtml"><img src="../../assets/images/media-img2.png"></a>
+            <a target="_blank" href="http://gd.ifeng.com/a/20200819/14436830_0.shtml"><img src="../../assets/images/media-img2.png"></a>
           </li>
           <li>
-            <a href=""><img src="../../assets/images/media-img3.png"></a>
+            <a target="_blank" href=""><img src="../../assets/images/media-img3.png"></a>
           </li>
           <li>
-            <a href="https://edu.163.com/20/0831/17/FLCIBC020029985J.html"><img src="../../assets/images/media-img4.png"></a>
+            <a target="_blank" href="https://edu.163.com/20/0831/17/FLCIBC020029985J.html"><img src="../../assets/images/media-img4.png"></a>
           </li>
           <li>
-            <a href="https://biznews.sohu.com/a/419853542_120181749"><img src="../../assets/images/media-img5.png"></a>
+            <a target="_blank" href="https://biznews.sohu.com/a/419853542_120181749"><img src="../../assets/images/media-img5.png"></a>
           </li>
           <li>
-            <a href="https://www.marketwatch.com/press-release/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore-2020-09-21"><img src="../../assets/images/media-img6.png"></a>
+            <a target="_blank" href="https://www.marketwatch.com/press-release/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore-2020-09-21"><img src="../../assets/images/media-img6.png"></a>
           </li>
           <li>
-            <a href="http://www.wboc.com/story/42658134/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore"><img src="../../assets/images/media-img7.png"></a>
+            <a target="_blank" href="http://www.wboc.com/story/42658134/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore"><img src="../../assets/images/media-img7.png"></a>
           </li>
           <li>
-            <a href="https://www.honolulunewsnow.com/news/story/217323/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore.html"><img src="../../assets/images/media-img8.png"></a>
+            <a target="_blank" href="https://www.honolulunewsnow.com/news/story/217323/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore.html"><img src="../../assets/images/media-img8.png"></a>
           </li>
         </ul>
       </div>
@@ -45,13 +45,14 @@
           <h3>选择我们</h3>
           <span>CHOOSE US</span>
           <p>新加坡全球护照交流中心-SGPEC，总部位于国际金融中心新加坡，是多国政府和机构投资移民项目的官方授权持牌机构。SGPEC成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
-          <a class="contact" href="">联系我们</a>
-          <div class="icon">
-            <a><img src="../../assets/images/about-icon1.png" /></a>
-            <a><img src="../../assets/images/about-icon2.png" /></a>
-            <a><img src="../../assets/images/about-icon3.png" /></a>
-            <a><img src="../../assets/images/about-icon4.png" /></a>
-            <a><img src="../../assets/images/about-icon5.png" /></a>
+          <!-- <a class="contact" href="">联系我们</a> -->
+          <div class="icon big">
+            <a target="_blank" href="https://www.facebook.com/sgpecsingapore">
+              <img src="../../assets/images/Facebook-icon.png" /></a>
+            <a target="_blank" href="https://www.linkedin.com/company/singapore-global-passport-exchange-centre">
+              <img src="../../assets/images/LinkedIn-icon.png" /></a>
+            <a target="_blank" href="https://twitter.com/SgpecP">
+              <img src="../../assets/images/Twitter-iocn.png" /></a>
           </div>
         </div>
       </div>
@@ -526,7 +527,7 @@ export default {
       display: block;
       color: #000;
       font-weight: bold;
-      margin-top: 10px;
+      margin: 20px 0 50px;
     }
     p {
       line-height: 28px;
@@ -545,10 +546,10 @@ export default {
       border: 2px solid #000;
     }
     .icon {
-      padding-top: 60px;
+      padding-top: 40px;
       a {
         display: inline-block;
-        width: 18px;
+        width: 24px;
         margin-right: 20px;
         &:last-child {
           margin: 0;
@@ -556,6 +557,12 @@ export default {
         img {
           display: block;
           width: 100%;
+          transition: .2s;
+        }
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
         }
       }
     }
@@ -564,6 +571,12 @@ export default {
       float: none;
       height: auto;
       padding: 30px 20px;
+      span {
+        margin: 10px 0;
+      }
+      .icon {
+        padding-top: 20px;
+      }
     }
   }
 }
