@@ -6,7 +6,18 @@
           <img src="../../assets/images/map-img.gif" />
         </div>
       </div>
-      <div class="right">
+      <div class="right contact-input">
+        <h3>免费咨询服务</h3>
+        <p>
+          <i>电话:</i>
+          <strong>+65 8866 5586</strong>
+        </p>
+        <p>
+          <i>邮箱:</i>sgpec@sgpec.sg
+        </p>
+        <p>
+          <i>地址:</i>新加坡滨海林荫道8号14楼03A单元滨海湾金融中心1号楼
+        </p>
         <InputBox />
       </div>
     </div>
@@ -39,10 +50,46 @@ export default {
       height: 520px;
     }
   }
-  .right {
+  .contact-input {
     width: 33%;
+    padding: 30px 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    h3 {
+      position: relative;
+      font-size: 26px;
+      padding-left: 18px;
+      padding-bottom: 22px;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 4px;
+        height: 26px;
+        background: #447375;
+      }
+    }
+    p {
+      position: relative;
+      padding: 0 0 5px 40px;
+      i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #447375;
+        padding-right: 5px;
+      }
+    }
     @media (max-width: 767px) {
       width: 100%;
+      h3 {
+        font-size: 22px;
+        padding-bottom: 15px;
+        &::after {
+          height: 20px;
+        }
+      }
     }
   }
   @media (max-width: 767px) {

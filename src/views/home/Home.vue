@@ -37,26 +37,8 @@
       </div>
     </div>
 
-    <!-- 视频 -->
-    <div class="pc-max-width home-about">
-      <div class="animation-show clearfix" >
-        <div class="left video" v-html="videoIframe"></div>
-        <div class="right about">
-          <h3>选择我们</h3>
-          <span>CHOOSE US</span>
-          <p>新加坡全球护照交流中心-SGPEC，总部位于国际金融中心新加坡，是多国政府和机构投资移民项目的官方授权持牌机构。SGPEC成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
-          <!-- <a class="contact" href="">联系我们</a> -->
-          <div class="icon big">
-            <a target="_blank" href="https://www.facebook.com/sgpecsingapore">
-              <img src="../../assets/images/Facebook-icon.png" /></a>
-            <a target="_blank" href="https://www.linkedin.com/company/singapore-global-passport-exchange-centre">
-              <img src="../../assets/images/LinkedIn-icon.png" /></a>
-            <a target="_blank" href="https://twitter.com/SgpecP">
-              <img src="../../assets/images/Twitter-iocn.png" /></a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- 视频和关于我们 -->
+    <VideoAbout></VideoAbout>
 
     <!-- 移民新闻 -->
     <NewModule v-if="newDynamic.length > 0" type="expert" :newDynamic="newDynamic" />
@@ -160,7 +142,6 @@
         <p>Green card program</p>
       </div>
       <div class="pc-max-width">
-
         <GreenBox />
       </div>
     </div>
@@ -251,74 +232,23 @@
     </div>
 
     <!-- 我们的优势 -->
-    <div class="advantage margin-t-80">
-      <div class="pc-max-width">
-        <div class="public-title animation-show">
-          <h3>我们的优势</h3>
-          <span>
-            <i>
-              <img src="../../assets/images/title-img2.png" />
-            </i>
-          </span>
-          <p>Our Advantages</p>
-        </div>
-        <div class="content animation-show">
-          <div class="list">
-            <img src="../../assets/images/advantage-icon1.png" />
-            <p>
-              官方牌照直营
-              <br />不成功不收费
-            </p>
-          </div>
-          <div class="list">
-            <img src="../../assets/images/advantage-icon2.png" />
-            <p>
-              境外办理,隐私至上
-              <br />精英首选
-            </p>
-          </div>
-          <div class="list">
-            <img src="../../assets/images/advantage-icon3.png" />
-            <p>
-              护照VIP激活
-              <br />行业领先首选
-            </p>
-          </div>
-          <div class="list">
-            <img src="../../assets/images/advantage-icon4.png" />
-            <p>
-              境外后续服务
-              <br />无后顾之忧
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="label">
-        <ul class="pc-max-width">
-          <li>护照项目100%成功率</li>
-          <li>费用100%透明</li>
-          <li>隐私安全</li>
-          <li>资料全程加密</li>
-          <li>绝对安全管控</li>
-        </ul>
-      </div>
-    </div>
+    <Advantage></Advantage>
 
     <!-- 我们得团队 -->
-  <div class="team margin-t-80 pc-max-width">
-    <div class="public-title animation-show">
-      <h3>我们的团队</h3>
-      <span>
-        <i>
-          <img src="../../assets/images/title-img1.png" />
-        </i>
-      </span>
-      <p>Our Team</p>
+    <div class="team margin-t-80 pc-max-width">
+      <div class="public-title animation-show">
+        <h3>我们的团队</h3>
+        <span>
+          <i>
+            <img src="../../assets/images/title-img1.png" />
+          </i>
+        </span>
+        <p>Our Team</p>
+      </div>
+      <div class="content list">
+        <OurTeam></OurTeam>
+      </div>
     </div>
-    <div class="content list">
-      <OurTeam></OurTeam>
-    </div>
-  </div>
 
     <!-- 联系我们 -->
     <ContactUs />
@@ -326,17 +256,19 @@
 </template>
 
 <script>
-import Layout from "../../components/layout.vue";
-import Banner from "./component/banner.vue";
-import OurTeam from "./component/OurTeam.vue";
-import { animation, windowScroll, device } from "../../assets/js/config.js";
-import ContactUs from "../../components/commonComponent/ContactUs";
+import Layout from '../../components/layout.vue'
+import Banner from './component/banner.vue'
+import OurTeam from './component/OurTeam.vue'
+import VideoAbout from './component/VideoAbout'
+import Advantage from './component/Advantage'
+import { animation, windowScroll, device } from '../../assets/js/config.js'
+import ContactUs from '../../components/commonComponent/ContactUs'
 import NewModule from './component/NewModule'
 import GreenBox from './component/GreenBox'
 import Loading from '../../components/commonComponent/loadingPage'
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
     Layout,
     Banner,
@@ -344,13 +276,14 @@ export default {
     NewModule,
     Loading,
     GreenBox,
-    OurTeam
+    OurTeam,
+    VideoAbout,
+    Advantage
   },
   data() {
     return {
       bannerImg: "",
       countryPassport: "",
-      videoIframe: process.env.VUE_APP_VIDEO_URL,
       items: [
         {
           title: "小额自雇移民项目",
@@ -493,89 +426,6 @@ export default {
         img {
           height: 34px;
         }
-      }
-    }
-  }
-}
-
-/* 视频和关于我们 */
-.home-about {
-  @media (max-width: 767px) {
-    padding: 0;
-  }
-  .video {
-    width: 58%;
-    @media(max-width: 767px) {
-      float: none;
-      width: 100%;
-    }
-  }
-  .about {
-    width: 42%;
-    height: 500px;
-    background: #F2F2F2;
-    padding: 40px 50px;
-    h3 {
-      display: block;
-      font-size: 24px;
-      padding-bottom: 10px;
-      font-weight: bold;
-      letter-spacing: 10px;
-      border-bottom: 2px solid #447375;
-    }
-    span {
-      display: block;
-      color: #000;
-      font-weight: bold;
-      margin: 20px 0 50px;
-    }
-    p {
-      line-height: 28px;
-    }
-    .contact {
-      float: right;
-      width: 100px;
-      height: 40px;
-      margin-top: 50px;
-      border-radius: 20px;
-      line-height: 36px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #444;
-      text-align: center;
-      border: 2px solid #000;
-    }
-    .icon {
-      padding-top: 40px;
-      a {
-        display: inline-block;
-        width: 24px;
-        margin-right: 20px;
-        &:last-child {
-          margin: 0;
-        }
-        img {
-          display: block;
-          width: 100%;
-          transition: .2s;
-        }
-        &:hover {
-          img {
-            transform: scale(1.2);
-          }
-        }
-      }
-    }
-    @media(max-width: 767px) {
-      width: 100%;
-      float: none;
-      height: auto;
-      padding: 30px 20px;
-      span {
-        margin: 10px 0;
-      }
-      .icon {
-        padding-top: 20px;
       }
     }
   }
@@ -1007,118 +857,6 @@ export default {
     }
   }
 }
-
-
-/** 我们的优势 **/
-.advantage {
-  position: relative;
-  height: 730px;
-  padding: 70px 0;
-  background: url("../../assets//images/advantage-bg.jpg") no-repeat top center;
-  background-size: 100% 730px;
-  .public-title {
-    h3 {
-      color: #fff;
-    }
-    span {
-      &:after,
-      &:before {
-        background: #fff;
-      }
-      i {
-        background: no-repeat;
-      }
-    }
-    p {
-      color: #fff;
-    }
-  }
-  .content {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 50px 80px;
-    .list {
-      width: 144px;
-      &:hover {
-        img {
-          transform: scale(1.06);
-        }
-      }
-      img {
-        display: block;
-        width: 100%;
-        transition: .3s;
-      }
-      p {
-        text-align: center;
-        padding-top: 10px;
-        color: #fff;
-        font-size: 17px;
-        line-height: 30px;
-      }
-    }
-  }
-  .label {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 140px;
-    line-height: 140px;
-    background: rgba(0, 0, 0, 0.3);
-    ul {
-      text-align: center;
-      li {
-        display: inline-block;
-        padding-left: 26px;
-        margin: 0 25px;
-        color: #fff;
-        font-size: 20px;
-        background: url("../../assets/images/hook.png") no-repeat left center;
-        background-size: 18px;
-        @media (max-width: 1100px) {
-          font-size: 18px;
-        }
-      }
-    }
-  }
-  @media (max-width: 767px) {
-    height: 550px;
-    padding: 40px 0;
-    background-size: auto 550px;
-    .content {
-      padding: 0;
-      justify-content: center;
-
-      .list {
-        width: 150px;
-        padding: 0 25px;
-        margin: 10px 10px 0;
-        p {
-          font-size: 14px;
-          line-height: 24px;
-          padding: 0;
-          margin: 0 -15px;
-        }
-      }
-    }
-    .label {
-      height: 70px;
-      padding-top: 10px;
-      line-height: 24px;
-      text-align: center;
-      ul {
-        li {
-          padding: 0 20px;
-          margin: 0;
-          font-size: 12px;
-          background-size: 14px;
-        }
-      }
-    }
-  }
-}
 </style>
 <style lang="less">
 /** 新加坡移民 **/
@@ -1241,23 +979,6 @@ export default {
           color: #fff;
           font-size: 12px;
         }
-      }
-    }
-  }
-}
-</style>
-<style lang="less">
-.home-about {
-  .video {
-    iframe {
-      display: block;
-      width: 100%;
-      height: 500px;
-      margin: auto;
-    }
-    @media (max-width: 767px) {
-      iframe {
-        height: 300px;
       }
     }
   }
