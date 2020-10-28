@@ -16,8 +16,18 @@
         <div class="content">
           <router-link :to="'/news-details/' + item.id" v-for="(item, key) in recommendNews" :key="key">
             <strong>{{item.title}}</strong>
-            <p>简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</p>
-            <span>2020-10-22</span>
+            <template v-if="key === 0">
+              <p>加拿大位于美国以北，在北美洲最顶端，其领土面积达998万平方公里，居世界第二位。亦是发达国家之中的领土面积最大者。作为一个移民国家，据数据统计亚洲是加拿大迄今为止最大的移民来源地区</p>
+              <span>2020-09-07</span>
+            </template>
+            <template v-else-if="key === 1">
+              <p>由于新冠疫情肆虐，很多国家也颁布了国家或地区的旅游禁令。圣基茨实施了“云申请”的快速护照移民通道。新加坡全球护照交流中心通过线上办理不到2个月就快速拿到圣基茨的护照，为客户提供了安全可靠的服务。</p>
+              <span>2020-06-15</span>
+            </template>
+            <template v-else-if="key === 2">
+              <p>我们这两位客户T先生与Z先生是两个生意的合作伙伴。这两位客户的主要诉求就是快速满足他们的自由通行和考虑到海外税务的筹划。</p>
+              <span>2020-04-03</span>
+            </template>
             <span class="right">了解详情></span>
           </router-link>
         </div>

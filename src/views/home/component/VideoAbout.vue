@@ -19,33 +19,33 @@
       </div>
     </div>
     <!-- About 联系我们弹窗 -->
-    <div class="about-contact" v-if="!contactStatus">
+    <div class="about-contact" v-if="contactStatus">
       <div class="content">
         <span class="close">
           <img src="../../../assets/images/close.png" @click="changeContact" />
         </span>
         <h3>请留下您的联系方式</h3>
         <p>也可以拨打（+65）8866 5586 <br /> 直接与我们取得联系</p>
-        <InputBox v-if="successType" @success="success"></InputBox>
-        <template v-else>
-          <h4>咨询成功......</h4>
-          <router-link to="passport">了解更多</router-link>
-        </template>
+        <InputBox  @success="success"></InputBox>
       </div>
     </div>
+    <!--咨询完成弹窗 -->
+    <MessagePopup v-if="messageType" :status="messageType" @messageType="messageType = false"></MessagePopup>
   </div>
 </template>
 <script>
 import InputBox from '../../../components/commonComponent/InputBox'
+import MessagePopup from '../../../components/commonComponent/MessagePopup'
 export default {
   components: {
-    InputBox
+    InputBox,
+    MessagePopup
   },
   data () {
     return {
       videoIframe: process.env.VUE_APP_VIDEO_URL,
       contactStatus: false,
-      successType: false
+      messageType: false
     }
   },
   methods: {
@@ -53,7 +53,8 @@ export default {
       this.contactStatus = !this.contactStatus
     },
     success () {
-      this.successType = !this.successType
+      this.contactStatus = false
+      this.messageType = true
     }
   }
 }
@@ -97,7 +98,7 @@ export default {
       float: right;
       width: 100px;
       height: 40px;
-      margin-top: 50px;
+      margin-top: 40px;
       border-radius: 20px;
       line-height: 36px;
       font-size: 16px;
@@ -135,6 +136,15 @@ export default {
       padding: 30px 20px;
       span {
         margin: 10px 0;
+      }
+      .contact {
+        margin-top: 20px;
+        width: 90px;
+        height: 36px;
+        font-size: 14px;
+        line-height: 34px;
+        border-radius: 18px;
+        border-width: 1px;
       }
       .icon {
         padding-top: 20px;
@@ -190,27 +200,11 @@ export default {
       font-size: 20px;
       line-height: 34px;
     }
-    h4 {
-      font-size: 30px;
-      padding: 50px 0;
-      color: #447375;
-    }
-    a {
-      display: block;
-      width: 240px;
-      height: 60px;
-      border-radius: 30px;
-      background: #447375;
-      line-height: 60px;
-      color: #fff;
-      margin: 20px auto 0;
-      font-size: 18px;
-    }
     @media (max-width: 767px) {
       width: 90%;
       left: 5%;
-      height: 520px;
-      margin: -260px 0 0;
+      height: 470px;
+      margin: -235px 0 0;
       padding: 0 10px;
       h3 {
         font-size: 20px;

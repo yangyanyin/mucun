@@ -83,6 +83,9 @@ export default {
     }
     @media (max-width: 767px) {
       width: 100%;
+      float: none;
+      margin-top: 15px;
+      padding: 15px 20px;
       h3 {
         font-size: 22px;
         padding-bottom: 15px;

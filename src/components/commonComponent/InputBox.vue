@@ -171,13 +171,16 @@ export default {
     }
   }
   @media (max-width: 767px) {
-    float: none;
-    width: 100%;
-    margin-top: 15px;
-    padding: 15px 20px;
-    ul {
-      padding-top: 17px;
+    li {
+      height: 40px;
+      padding: 10px 10px 10px 40px;
+      margin-bottom: 15px;
+      background-size: 20px !important;
+      background-position-y: 10px !important;
+      input {
+        font-size: 14px;
+      }
     }
-  } 
+  }
 }
 </style>
