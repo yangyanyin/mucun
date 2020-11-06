@@ -57,10 +57,12 @@ export default {
       background: #f7f7f7;
     }
     .menu {
+      position: relative;
       height: 80px;
       margin: -40px 0 20px 0;
       background: #fff;
       border-radius: 5px;
+      z-index: 99;
       box-shadow: 0 3px 3px 0 #ababab;
       @media (max-width: 767px) {
         margin-top: -30px;
