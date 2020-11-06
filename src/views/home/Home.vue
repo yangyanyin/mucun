@@ -1027,7 +1027,7 @@ export default {
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    background: url('../../assets/images/contact-window-bg.png') no-repeat top center;
+    background: #245051 url('../../assets/images/contact-window-bg.png') no-repeat top center;
     background-size: 100%;
     .close {
       position: absolute;
