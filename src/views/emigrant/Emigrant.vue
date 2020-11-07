@@ -87,16 +87,20 @@ export default {
         display: inline-block;
         width: 25%;
         text-align: center;
-        line-height: 80px;
+        height: 80px;
         cursor: pointer;
         color: #111;
         i {
+          display: inline-block;
           font-size: 16px;
+          padding: 17px 0;
+          em {
+            display: block;
+          }
         }
         &.router-link-active {
           i {
             color: #447375;
-            padding: 28px 0;
             font-weight: bold;
             border-bottom: 4px  solid #447375;
           }
@@ -105,7 +109,6 @@ export default {
           &:hover {
             i {
               color: #447375;
-              padding: 28px 0;
               border-bottom: 4px  solid #447375;
             }
           }
@@ -122,17 +125,16 @@ export default {
         } 
         a {
           position: relative;
-          line-height: inherit;
           width: auto;
-          padding: 20px 10px;
+          height: auto;
+          padding: 0 10px;
           i {
-            padding: 12px 0;
+            padding: 10px 0;
             font-size: 14px;
           }
           &.router-link-active {
             i {
               color: #447375;
-              padding: 0;
               font-weight: bold;
               border-bottom: none;
             }
