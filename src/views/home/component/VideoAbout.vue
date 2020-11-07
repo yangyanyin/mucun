@@ -6,7 +6,7 @@
       <div class="right about">
         <h3>选择我们</h3>
         <span>CHOOSE US</span>
-        <p>新加坡全球护照交流中心-SGPEC，总部位于国际金融中心新加坡，是多国政府和机构投资移民项目的官方授权持牌机构。SGPEC成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
+        <p>新加坡全球护照交流中心——SGPEC，总部位于新加坡。自成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
         <a class="contact" @click="changeContact">联系我们</a>
         <div class="icon big">
           <a target="_blank" href="https://www.facebook.com/sgpecsingapore">
@@ -31,9 +31,22 @@
     </div>
     <!--咨询完成弹窗 -->
     <MessagePopup v-if="messageType" :status="messageType" @messageType="messageType = false"></MessagePopup>
+
+    <!--  -->
+    <div class="contact-window" :class="{'show': contactWindow}" v-if="contactWindow">
+      <div class="content">
+        <span class="close" @click="hideContactWindow">
+          <img src="../../../assets/images/close.png" />
+        </span>
+        <h3>新加坡全球护照交流中心</h3>
+        <p>直营新加坡移民/银行开户/新加坡留学，家族办公室，欧盟&英联邦快速护照，不成功不收费。</p>
+        <a @click="changeContact">点击客服了解更多详情</a>
+      </div>
+    </div>
   </div>
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex'
 import InputBox from '../../../components/commonComponent/InputBox'
 import MessagePopup from '../../../components/commonComponent/MessagePopup'
 export default {
@@ -48,15 +61,32 @@ export default {
       messageType: false
     }
   },
+  computed: {
+    ...mapState({
+      contactWindowStatus: 'contactWindowStatus'
+    }),
+    contactWindow () {
+      return this.contactWindowStatus
+    }
+  },
   methods: {
+    ...mapMutations({
+      changContactWindowStatus: 'changContactWindowStatus'
+    }),
     changeContact () {
       this.contactStatus = !this.contactStatus
+      this.hideContactWindow
+      
     },
     success () {
       this.contactStatus = false
       this.messageType = true
+    },
+    hideContactWindow () {
+      this.changContactWindowStatus(false)
     }
-  }
+  },
+  mounted () {}
 }
 </script>
 <style scoped lang="less">
@@ -215,6 +245,129 @@ export default {
         margin-bottom: 30px;
       }
     }
+  }
+}
+
+.contact-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  &.show {
+    display: block;
+    .content {
+      animation: contactWindow 2s both;
+    }
+  }
+  .content {
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    margin: -300px 0 0 -240px;
+    width: 480px;
+    height: 600px;
+    padding: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background: #245051 url('../../../assets/images/contact-window-bg.png') no-repeat top center;
+    background-size: 100%;
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 15px;
+      height: 15px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    h3 {
+      position: relative;
+      padding-bottom: 20px;
+      font-size: 20px;
+      color: #fff;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 40px;
+        height: 3px;
+        margin-left: -20px;
+        background: #fff;
+      }
+    }
+    p {
+      margin-top: 30px;
+      font-size: 26px;
+      line-height: 50px;
+      color: #fff;
+    }
+    a {
+      display: inline-block;
+      width: 244px;
+      height: 50px;
+      margin-top: 50px;
+      line-height: 50px;
+      background: #FFE19A;
+      border-radius: 30px;
+      color: #1D4647;
+      font-size: 17px;
+      cursor: pointer;
+    }
+    @media (max-width: 767px) {
+      left: 10px;
+      right: 10px;
+      width: auto;
+      height: auto;
+      transform: translateY(-50%);
+      margin: auto;
+      padding: 50px 30px;
+      h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        &:after {
+          bottom: 0px;
+        }
+      }
+      p {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 26px;
+      }
+      a {
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@keyframes contactWindow {
+  20% {
+    top: 42%;
+  }
+  40% {
+    top: 58%;
+  }
+  60% {
+    top: 47%;
+  }
+  80% {
+    top: 53%;
+  }
+  100% {
+    top: 50%;
   }
 }
 </style>

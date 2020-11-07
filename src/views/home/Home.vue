@@ -139,7 +139,7 @@
             <img src="../../assets/images/title-img2.png" />
           </i>
         </span>
-        <p>Green card program</p>
+        <p>GREEN CARD PROGRAMS</p>
       </div>
       <div class="pc-max-width">
         <GreenBox />
@@ -252,18 +252,6 @@
 
     <!-- 联系我们 -->
     <ContactUs />
-
-    <!--  -->
-    <div class="contact-window" :class="{'show': contactWindow}" v-if="contactWindow">
-      <div class="content">
-        <span class="close" @click="hideContactWindow">
-          <img src="../../assets/images/close.png" />
-        </span>
-        <h3>新加坡全球护照交流中心</h3>
-        <p>直营新加坡移民/银行开户/新加坡留学，家族办公室，欧盟&英联邦快速护照，不成功不收费。</p>
-        <a>点击客服了解更多详情</a>
-      </div>
-    </div>
   </Layout>
 </template>
 
@@ -324,13 +312,7 @@ export default {
       ],
       loadingStatus: false,
       newDynamic: [],
-      newCase: [],
-      contactWindow: false
-    }
-  },
-  methods: {
-    hideContactWindow () {
-      this.contactWindow = false
+      newCase: []
     }
   },
   mounted() {
@@ -339,7 +321,6 @@ export default {
       let scroll = document.documentElement.scrollTop || document.body.scrollTop;
       windowScroll();
       setTimeout(() => {
-        this.contactWindow = true
         animation(scroll);
       }, 10);
     }, 2000)
@@ -999,128 +980,6 @@ export default {
         }
       }
     }
-  }
-}
-
-.contact-window {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  &.show {
-    display: block;
-    .content {
-      animation: contactWindow 2s both;
-    }
-  }
-  .content {
-    position: absolute;
-    top: 200%;
-    left: 50%;
-    margin: -300px 0 0 -240px;
-    width: 480px;
-    height: 600px;
-    padding: 70px;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    background: #245051 url('../../assets/images/contact-window-bg.png') no-repeat top center;
-    background-size: 100%;
-    .close {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 15px;
-      height: 15px;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-      img {
-        display: block;
-        width: 100%;
-      }
-    }
-    h3 {
-      position: relative;
-      padding-bottom: 20px;
-      font-size: 20px;
-      color: #fff;
-      &:after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: 40px;
-        height: 3px;
-        margin-left: -20px;
-        background: #fff;
-      }
-    }
-    p {
-      margin-top: 30px;
-      font-size: 26px;
-      line-height: 50px;
-      color: #fff;
-    }
-    a {
-      display: inline-block;
-      width: 244px;
-      height: 50px;
-      margin-top: 50px;
-      line-height: 50px;
-      background: #FFE19A;
-      border-radius: 30px;
-      color: #1D4647;
-      font-size: 17px;
-    }
-    @media (max-width: 767px) {
-      left: 10px;
-      right: 10px;
-      width: auto;
-      height: auto;
-      transform: translateY(-50%);
-      margin: auto;
-      padding: 50px 30px;
-      h3 {
-        font-size: 16px;
-        margin-bottom: 15px;
-        &:after {
-          bottom: 0px;
-        }
-      }
-      p {
-        margin-top: 20px;
-        font-size: 16px;
-        line-height: 26px;
-      }
-      a {
-        width: 200px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 14px;
-        margin-top: 30px;
-      }
-    }
-  }
-}
-@keyframes contactWindow {
-  20% {
-    top: 42%;
-  }
-  40% {
-    top: 58%;
-  }
-  60% {
-    top: 47%;
-  }
-  80% {
-    top: 53%;
-  }
-  100% {
-    top: 50%;
   }
 }
 </style>

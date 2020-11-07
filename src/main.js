@@ -8,6 +8,7 @@ import { vueAccordion } from 'vue-accordion'
 import ElementUI from 'element-ui';
 import QRCode from 'qrcodejs2';
 import { loadLanguageAsync, i18n } from './lang/setup-lang'
+import store from './store'
 import 'element-ui/lib/theme-chalk/index.css';
 import "swiper/dist/css/swiper.min.css";
 Vue.component('vue-accordion', vueAccordion)
@@ -30,5 +31,6 @@ Vue.prototype.qrCode = QRCode
 new Vue({
   i18n,
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

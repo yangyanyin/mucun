@@ -4,10 +4,26 @@
       <div class="banner"></div>
       <div class="pc-max-width">
         <div class="menu" id="emigrant-menu">
-          <router-link to="/emigrant/one"><i>小额自雇移民项目 (EP)</i></router-link>
-          <router-link to="/emigrant/tow"><i>股权投资移民(EP)</i></router-link>
-          <router-link to="/emigrant/three"><i>全球商业投资计划(GIP)移民</i></router-link>
-          <router-link to="/emigrant/four"><i>新加坡家族办公室(Family Office)</i></router-link>
+          <router-link to="/emigrant/one">
+            <i>自雇移民项目 
+              <em>Employment Pass</em>
+            </i>
+          </router-link>
+          <router-link to="/emigrant/tow">
+            <i>投资移民项目 
+              <em>EntrePass</em>
+            </i>
+          </router-link>
+          <router-link to="/emigrant/three">
+            <i>全球商业投资 
+              <em>GIP</em>
+            </i>
+          </router-link>
+          <router-link to="/emigrant/four">
+            <i>新加坡家族办公室 
+              <em>Singapore Family Office</em>
+            </i>
+          </router-link>
         </div>
         <div class="content">
           <router-view></router-view>

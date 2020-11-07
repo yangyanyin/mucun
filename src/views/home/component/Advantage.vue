@@ -41,22 +41,13 @@
         </div>
       </div>
     </div>
-    <div class="label">
-      <ul class="pc-max-width">
-        <li>护照项目100%成功率</li>
-        <li>费用100%透明</li>
-        <li>隐私安全</li>
-        <li>资料全程加密</li>
-        <li>绝对安全管控</li>
-      </ul>
-    </div>
   </div>
 </template>
 <style scoped lang="less">
 /** 我们的优势 **/
 .advantage {
   position: relative;
-  height: 730px;
+  height: 650px;
   padding: 70px 0;
   background: url("../../../assets//images/advantage-bg.png") no-repeat top center;
   background-size: 100% 730px;
@@ -103,32 +94,8 @@
       }
     }
   }
-  .label {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 140px;
-    line-height: 140px;
-    background: rgba(0, 0, 0, 0.3);
-    ul {
-      text-align: center;
-      li {
-        display: inline-block;
-        padding-left: 26px;
-        margin: 0 25px;
-        color: #fff;
-        font-size: 20px;
-        background: url("../../../assets/images/hook.png") no-repeat left center;
-        background-size: 18px;
-        @media (max-width: 1100px) {
-          font-size: 18px;
-        }
-      }
-    }
-  }
   @media (max-width: 767px) {
-    height: 550px;
+    height: 500px;
     padding: 40px 0;
     background-size: auto 550px;
     .content {
