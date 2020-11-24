@@ -18,7 +18,7 @@ Vue.prototype.$http = axios
 Vue.use(ElementUI);
 
 router.beforeEach((to, from, next) => {
-  const lang = process.env.VUE_APP_LANG
+  const lang = 'en' || process.env.VUE_APP_LANG
   loadLanguageAsync(lang).then(() => next())
 
 })

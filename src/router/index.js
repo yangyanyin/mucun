@@ -58,6 +58,15 @@ const SingaporeDetails = () => import(/* webpackChunkName: "green-card" */ '../v
 /** @page 绿卡项目新加坡详情 */ 
 const KoreaDetails = () => import(/* webpackChunkName: "green-card" */ '../views/green-card/KoreaDetails.vue')
 
+/** @page 留学 */ 
+const OverseasStudy = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/OverseasStudy.vue')
+const Study1 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study1.vue')
+const Study2 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study2.vue')
+const Study3 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study3.vue')
+const Study4 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study4.vue')
+const Study5 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study5.vue')
+
+
 
 Vue.use(VueRouter)
 
@@ -219,6 +228,38 @@ const routes = [
     meta: {
       page: 'green'
     }
+  },
+  {
+    path: '/overseas-study',
+    name: 'OverseasStudy',
+    component: OverseasStudy,
+    children: [
+      {
+        path: 'one',
+        name: 'Study1',
+        component: Study1,
+      },
+      {
+        path: 'tow',
+        name: 'Study2',
+        component: Study2,
+      },
+      {
+        path: 'three',
+        name: 'Study3',
+        component: Study3,
+      },
+      {
+        path: 'four',
+        name: 'Study4',
+        component: Study4,
+      },
+      {
+        path: 'five',
+        name: 'Study5',
+        component: Study5,
+      }
+    ]
   }
 ]
 
