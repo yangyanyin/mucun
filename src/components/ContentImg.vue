@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pc-max-width">
     <div class="contact">
       <p>新加坡全球护照交流中心： <br />直营新加坡移民/银行开户/新加坡留学，家族办公室，欧盟&英联邦快速护照，不成功不收。</p>
       <a @click="changeContact">点击客服了解更多详情</a>

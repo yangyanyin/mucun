@@ -58,6 +58,11 @@ export default {
           page: 'emigrant'
         },
         {
+          name: "狮城留学",
+          url: "/overseas-study/one",
+          page: 'overseaSstudy'
+        },
+        {
           name: "护照项目",
           url: "/project",
           down: true,

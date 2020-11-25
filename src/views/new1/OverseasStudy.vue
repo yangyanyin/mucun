@@ -64,7 +64,7 @@ export default {
 <style lang="less" scoped>
 .banner {
     width: 100%;
-    height: 340px;
+    height: 500px;
     overflow: hidden;
     @media (max-width: 767px) {
       padding-top: 60px;
