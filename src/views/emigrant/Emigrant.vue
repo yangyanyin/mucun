@@ -1,28 +1,24 @@
 <template>
-  <Layout>
-    <div class="emigrant">
-      <div class="banner"></div>
-      <div class="pc-max-width">
-        <!-- 菜单 -->
-        <MenuItem :menuList="menuList"></MenuItem>
-        
-        <div class="content">
-          <router-view></router-view>
-        </div>
+  <div class="emigrant">
+    <div class="banner"></div>
+    <div class="pc-max-width">
+      <!-- 菜单 -->
+      <MenuItem :menuList="menuList"></MenuItem>
+      
+      <div class="content">
+        <router-view></router-view>
       </div>
-      <!-- 联系我们 -->
-      <ContactUs />
     </div>
-  </Layout>
+    <!-- 联系我们 -->
+    <ContactUs />
+  </div>
 </template>
 
 <script>
-import Layout from "../../components/layout.vue";
 import ContactUs from "../../components/commonComponent/ContactUs";
 import MenuItem from "../../components/MenuItem";
 export default {
   components: {
-    Layout,
     ContactUs,
     MenuItem
   },

@@ -1,26 +1,28 @@
 <!-- 留学 -->
 <template>
-    <Layout>
+    <div class="study">
         <div class="banner">
             <img :src="bannerList[pageKey]" />
         </div>
-        
         <!-- 菜单 -->
         <MenuItem :menuList="menuList"></MenuItem>
-        
         <div class="content">
-          <router-view></router-view>
+            <router-view></router-view>
         </div>
-    </Layout>
+        <ContentImg></ContentImg>
+        <ContactUs></ContactUs>
+    </div>
 </template>
 
 <script>
-import Layout from "../../components/layout.vue";
 import MenuItem from "../../components/MenuItem";
+import ContactUs from "../../components/commonComponent/ContactUs";
+import ContentImg from "../../components/ContentImg";
 export default {
     components: {
-        Layout,
-        MenuItem
+        MenuItem,
+        ContactUs,
+        ContentImg
     },
     data () {
         return {

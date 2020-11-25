@@ -1,49 +1,45 @@
 <template>
-  <Layout>
-    <Loading v-if="!newData"/>
-    <div class="news" v-else>
-      <div class="content pc-max-width clearfix">
-        <div class="crumbs">
-          <router-link to="/">首页</router-link> > {{banner[newsType].title}}
-        </div>
-        <div class="left list-banner">
-          <div class="banner">
-            <img :src="banner[newsType].img" />
-          </div>
-          <ul class="list" ref="news_list">
-            <li v-for="(news, key) in newData" :key="key" class="clearfix animation-show">
-              <router-link class="img" :to="'/news-details/' + news.id"><img :src="news.img" /></router-link>
-              <div class="des">
-                <router-link class="t" :to="'/news-details/' + news.id">{{news.title}}</router-link>
-                <p>{{news.description}}</p>
-                <div class="left clearfix"> 
-                  <span>{{news.created_at.split(' ')[0]}}</span>
-                  <span>{{news.read_count}}</span>
-                </div>
-                <router-link :to="'/news-details/' + news.id" class="more right">了解详情</router-link>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="right rec">
-          <Side />
-        </div>
+  <Loading v-if="!newData"/>
+  <div class="news" v-else>
+    <div class="content pc-max-width clearfix">
+      <div class="crumbs">
+        <router-link to="/">首页</router-link> > {{banner[newsType].title}}
       </div>
-      <div class="pc-max-width">
-        <Flag />
+      <div class="left list-banner">
+        <div class="banner">
+          <img :src="banner[newsType].img" />
+        </div>
+        <ul class="list" ref="news_list">
+          <li v-for="(news, key) in newData" :key="key" class="clearfix animation-show">
+            <router-link class="img" :to="'/news-details/' + news.id"><img :src="news.img" /></router-link>
+            <div class="des">
+              <router-link class="t" :to="'/news-details/' + news.id">{{news.title}}</router-link>
+              <p>{{news.description}}</p>
+              <div class="left clearfix"> 
+                <span>{{news.created_at.split(' ')[0]}}</span>
+                <span>{{news.read_count}}</span>
+              </div>
+              <router-link :to="'/news-details/' + news.id" class="more right">了解详情</router-link>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="right rec">
+        <Side />
       </div>
     </div>
-  </Layout>
+    <div class="pc-max-width">
+      <Flag />
+    </div>
+  </div>
 </template>
 <script>
-import Layout from '../../components/layout'
 import Flag from ".././../components/commonComponent/NationalFlag";
 import Side from './component/SideNews'
 import Loading from '../../components/commonComponent/loadingPage'
 import { animation, windowScroll } from "../../assets/js/config.js";
 export default {
   components: {
-    Layout,
     Side,
     Flag,
     Loading

@@ -1,8 +1,8 @@
 <template>
-    <div class="menu" id="emigrant-menu">
+    <div class="menu pc-max-width" id="emigrant-menu">
         <router-link v-for="(item, key) in menuList" :key="key" 
             :to="item.url" 
-            :style="{'width':width}">
+            >
             <i>
                 {{item.zh_text}}
                 <em>{{item.en_text}}</em>
@@ -37,21 +37,24 @@ export default {
 .menu {
       position: relative;
       height: 80px;
-      margin: -40px 0 20px 0;
+      margin: -40px auto 20px;
       background: #fff;
       border-radius: 5px;
       z-index: 99;
+      display: flex;
+      justify-content: space-around;
       box-shadow: 0 3px 3px 0 #ababab;
       @media (max-width: 767px) {
         margin-top: -30px;
       }
       a {
-        display: inline-block;
-        width: 25%;
+        display: inline-flex;
+        align-items: center;
         text-align: center;
         height: 80px;
         cursor: pointer;
         color: #111;
+        border-bottom: 4px solid #FFF;
         i {
           display: inline-block;
           font-size: 16px;
@@ -61,18 +64,14 @@ export default {
           }
         }
         &.router-link-active {
-          i {
             color: #447375;
             font-weight: bold;
             border-bottom: 4px  solid #447375;
-          }
         }
         @media (min-width: 767px) {
           &:hover {
-            i {
-              color: #447375;
-              border-bottom: 4px  solid #447375;
-            }
+            color: #447375;
+            border-bottom: 4px  solid #447375;
           }
         }
       }

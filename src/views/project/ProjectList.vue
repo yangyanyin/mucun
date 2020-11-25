@@ -1,94 +1,90 @@
 <template>
-  <Layout>
-    <loadingPage v-if="!loadingSuccess" />
-    <template v-else>
-      <Banner :bannerImgList="bannerData" :autoplay="4000" />
-      <div class="country-main">
-        <div class="pc-max-width">
-          <div class="country-nav">
-            <div class="list">
-              <a
-                v-for="(navs, index) in navs"
-                :key="index"
-                :class="{on: index === defaultNav}"
-                @click="tabClick(index)"
-              ><i>{{navs}}</i></a>
-            </div>
-          </div>
-          <div class="country-list">
-            <div
-              class="content clearfix brick-item animation-show"
-              v-for="(countrs, index) in countryList"
+  <loadingPage v-if="!loadingSuccess" />
+  <div v-else>
+    <Banner :bannerImgList="bannerData" :autoplay="4000" />
+    <div class="country-main">
+      <div class="pc-max-width">
+        <div class="country-nav">
+          <div class="list">
+            <a
+              v-for="(navs, index) in navs"
               :key="index"
-            >
-              <div class="left img">
-                <router-link :to="'/project/details/'+ countrs.country_id">
-                  <img
-                    v-lazy="{src: countrs.img, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
-                  />
-                  <div class="more">
-                    <span>{{countrs.en_name}}</span>
-                    <i>{{countrs.visa_free_number}}</i>
-                    <p>visa-free sccre</p>
-                  </div>
-                </router-link>
-              </div>
-              <div class="right info">
-                <h3 class="name">
-                  <img v-if="index === 0" src="../../assets/images/country8.png" />
-                  <img v-if="index === 1" src="../../assets/images/country5.png" />
-                  <img v-if="index === 2" src="../../assets/images/country4.png" />
-                  <img v-if="index === 3" src="../../assets/images/country1.png" />
-                  <img v-if="index === 4" src="../../assets/images/country2.png" />
-                  <img v-if="index === 5" src="../../assets/images/country6.png" />
-                  <img v-if="index === 6" src="../../assets/images/country7.png" />
-                  <img v-if="index === 7" src="../../assets/images/country3.png" />
-                  {{countrs.name}}护照
-                </h3>
-                <ul class="clearfix">
-                  <li>
-                    <img src="../../assets/images/country/country-list-icon1.png" />
-                    <span>居住要求</span>
-                    <h3>{{countrs.require}}</h3>
-                  </li>
-                  <li>
-                    <img src="../../assets/images/country/country-list-icon2.png" />
-                    <span>免签国家/地区</span>
-                    <h3>{{countrs.visa_free_number}}</h3>
-                  </li>
-                  <li>
-                    <img src="../../assets/images/country/country-list-icon3.png" />
-                    <span>移民周期</span>
-                    <h3>{{countrs.migrate_cycle}}</h3>
-                  </li>
-                  <li>
-                    <img src="../../assets/images/country/country-list-icon4.png" />
-                    <span>证件类型</span>
-                    <h3>{{countrs.ID_type}}</h3>
-                  </li>
-                </ul>
-                <ol v-if="countrs.tags.length > 0">
-                  <li v-for="(tags, index) in countrs.tags" :key="index">{{tags}}</li>
-                </ol>
-                <a :href="'/project/details/'+ countrs.country_id">查看详情</a>
-              </div>
+              :class="{on: index === defaultNav}"
+              @click="tabClick(index)"
+            ><i>{{navs}}</i></a>
+          </div>
+        </div>
+        <div class="country-list">
+          <div
+            class="content clearfix brick-item animation-show"
+            v-for="(countrs, index) in countryList"
+            :key="index"
+          >
+            <div class="left img">
+              <router-link :to="'/project/details/'+ countrs.country_id">
+                <img
+                  v-lazy="{src: countrs.img, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
+                />
+                <div class="more">
+                  <span>{{countrs.en_name}}</span>
+                  <i>{{countrs.visa_free_number}}</i>
+                  <p>visa-free sccre</p>
+                </div>
+              </router-link>
+            </div>
+            <div class="right info">
+              <h3 class="name">
+                <img v-if="index === 0" src="../../assets/images/country8.png" />
+                <img v-if="index === 1" src="../../assets/images/country5.png" />
+                <img v-if="index === 2" src="../../assets/images/country4.png" />
+                <img v-if="index === 3" src="../../assets/images/country1.png" />
+                <img v-if="index === 4" src="../../assets/images/country2.png" />
+                <img v-if="index === 5" src="../../assets/images/country6.png" />
+                <img v-if="index === 6" src="../../assets/images/country7.png" />
+                <img v-if="index === 7" src="../../assets/images/country3.png" />
+                {{countrs.name}}护照
+              </h3>
+              <ul class="clearfix">
+                <li>
+                  <img src="../../assets/images/country/country-list-icon1.png" />
+                  <span>居住要求</span>
+                  <h3>{{countrs.require}}</h3>
+                </li>
+                <li>
+                  <img src="../../assets/images/country/country-list-icon2.png" />
+                  <span>免签国家/地区</span>
+                  <h3>{{countrs.visa_free_number}}</h3>
+                </li>
+                <li>
+                  <img src="../../assets/images/country/country-list-icon3.png" />
+                  <span>移民周期</span>
+                  <h3>{{countrs.migrate_cycle}}</h3>
+                </li>
+                <li>
+                  <img src="../../assets/images/country/country-list-icon4.png" />
+                  <span>证件类型</span>
+                  <h3>{{countrs.ID_type}}</h3>
+                </li>
+              </ul>
+              <ol v-if="countrs.tags.length > 0">
+                <li v-for="(tags, index) in countrs.tags" :key="index">{{tags}}</li>
+              </ol>
+              <a :href="'/project/details/'+ countrs.country_id">查看详情</a>
             </div>
           </div>
         </div>
       </div>
-    </template>
-  </Layout>
+    </div>
+  </div>
 </template>
 
 <script>
-import Layout from "../../components/layout.vue";
 import { animation, windowScroll } from "../../assets/js/config.js";
 import loadingPage from "../../components/commonComponent/loadingPage.vue";
 import Banner from "../../components/commonComponent/banner.vue";
 export default {
   name: "app",
   components: {
-    Layout,
     loadingPage,
     Banner
   },

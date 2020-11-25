@@ -1,103 +1,98 @@
 <template>
-  <Layout>
-    <loadingPage v-if="!loadingSuccess" />
-    <div v-else class="passport">
-      <div class="scroll">
-        <div class="passport-list">
-          <div class="wap-img">
-            <ul>
-              <li></li>
-              <li v-for="(lists, index) in passportList" :key="index" :class="{on: index === countryIndex}">
-                <div class="img" @click="switchCountry(index)">
-                  <span>
-                    <img :src="lists.passport_img" />
-                  </span>
-                  <h3>{{lists.name}}</h3>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <ul class="clearfix">
-            <li class="filter-li">
-              <span @click="showAllFilter()">
-                显示全部
-                <em :class="{open:filterResult.length > 0}"></em>
-              </span>
-              <span class="on" @click.stop="showFilter(true)">
-                筛选
-                <div class="filter" :class="{show: showFilterType}">
-                  <div class="close" @click.stop="showFilter(false)"><img src="../../assets/images/close-black.png"></div>
-                  <h2>筛选</h2>
-                  <div class="sc">
-                    <h3 @click="showAllFilter()">
-                      显示全部
-                      <em :class="{open:filterResult.length > 0}"></em>
-                    </h3>
-                    <p v-for="(obj, type, key) in filterType" :key="key" @click="filterClick(type)">
-                      <i :class="{set:filterResult.indexOf(type) >= 0}"></i>
-                      {{type}}
-                    </p>
-                  </div>
-                </div>
-              </span>
-            </li>
-            <li v-for="(lists, index) in passportList" :key="index" :class="{'show': index === countryIndex}">
-              <div class="img web-img" @click="switchCountry(index)">
+  <loadingPage v-if="!loadingSuccess" />
+  <div v-else class="passport">
+    <div class="scroll">
+      <div class="passport-list">
+        <div class="wap-img">
+          <ul>
+            <li></li>
+            <li v-for="(lists, index) in passportList" :key="index" :class="{on: index === countryIndex}">
+              <div class="img" @click="switchCountry(index)">
                 <span>
                   <img :src="lists.passport_img" />
                 </span>
                 <h3>{{lists.name}}</h3>
               </div>
-              <div class="clearfix info">
-                <strong class="name">{{lists.name}}</strong>
-                <div class="left country">
-                  <strong>{{lists.visa_free_number}}</strong>
-                  <i>免签</i>
-                </div>
-                <div class="left">
-                  <strong>{{lists.rank}}</strong>
-                  <i>排名</i>
-                </div>
-              </div>
             </li>
           </ul>
         </div>
-        <div class="visa-country clearfix" v-if="allCountry">
-          <div class="country-flag left">
-            <ul class="clearfix" v-for="(obj, name, key) in newData || allCountry" :key="key" ref="visa_country" :index="key">
-              <li class="fixed" >
-                <img :src="obj.flag" />
-                {{name}}
-              </li>
-            </ul>
-          </div>
-          <div class="visa left">
-            <ul class="clearfix" v-for="(obj, name, key) in newData || allCountry" :key="key" ref="visa_country">
-              <template v-for="(visa, name2, key2) in obj">
-                <li
-                  :key="key2"
-                  v-if="name2 !== 'flag'"
-                  :index="filterResult.indexOf(visa)"
-                  :class="countryClass(visa)"
-                >{{visa || 'N/A'}}</li>
-              </template>
-            </ul>
-          </div>
+        <ul class="clearfix">
+          <li class="filter-li">
+            <span @click="showAllFilter()">
+              显示全部
+              <em :class="{open:filterResult.length > 0}"></em>
+            </span>
+            <span class="on" @click.stop="showFilter(true)">
+              筛选
+              <div class="filter" :class="{show: showFilterType}">
+                <div class="close" @click.stop="showFilter(false)"><img src="../../assets/images/close-black.png"></div>
+                <h2>筛选</h2>
+                <div class="sc">
+                  <h3 @click="showAllFilter()">
+                    显示全部
+                    <em :class="{open:filterResult.length > 0}"></em>
+                  </h3>
+                  <p v-for="(obj, type, key) in filterType" :key="key" @click="filterClick(type)">
+                    <i :class="{set:filterResult.indexOf(type) >= 0}"></i>
+                    {{type}}
+                  </p>
+                </div>
+              </div>
+            </span>
+          </li>
+          <li v-for="(lists, index) in passportList" :key="index" :class="{'show': index === countryIndex}">
+            <div class="img web-img" @click="switchCountry(index)">
+              <span>
+                <img :src="lists.passport_img" />
+              </span>
+              <h3>{{lists.name}}</h3>
+            </div>
+            <div class="clearfix info">
+              <strong class="name">{{lists.name}}</strong>
+              <div class="left country">
+                <strong>{{lists.visa_free_number}}</strong>
+                <i>免签</i>
+              </div>
+              <div class="left">
+                <strong>{{lists.rank}}</strong>
+                <i>排名</i>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="visa-country clearfix" v-if="allCountry">
+        <div class="country-flag left">
+          <ul class="clearfix" v-for="(obj, name, key) in newData || allCountry" :key="key" ref="visa_country" :index="key">
+            <li class="fixed" >
+              <img :src="obj.flag" />
+              {{name}}
+            </li>
+          </ul>
+        </div>
+        <div class="visa left">
+          <ul class="clearfix" v-for="(obj, name, key) in newData || allCountry" :key="key" ref="visa_country">
+            <template v-for="(visa, name2, key2) in obj">
+              <li
+                :key="key2"
+                v-if="name2 !== 'flag'"
+                :index="filterResult.indexOf(visa)"
+                :class="countryClass(visa)"
+              >{{visa || 'N/A'}}</li>
+            </template>
+          </ul>
         </div>
       </div>
     </div>
-  </Layout>
+  </div>
 </template>
 
 <script>
-import Layout from "../../components/layout.vue";
 import { animation, windowScroll, device } from "../../assets/js/config.js";
 import loadingPage from "../../components/commonComponent/loadingPage.vue";
 
 export default {
-  name: "app",
   components: {
-    Layout,
     loadingPage
   },
   data() {

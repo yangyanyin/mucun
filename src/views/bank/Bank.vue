@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
     <div class="banner">
       <img src="../../assets/images/bank-banner.jpg" />
     </div>
@@ -125,18 +125,13 @@
         </div>
       </div>
     </div>
-  </Layout>
+  </div>
 </template>
 
 <script>
-import Layout from "../../components/layout.vue";
 import { animation, windowScroll } from "../../assets/js/config.js";
 
 export default {
-  name: "app",
-  components: {
-    Layout
-  },
   mounted() {
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;
     animation(scroll);

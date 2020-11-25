@@ -1,7 +1,6 @@
 <template>
-  <Layout>
     <loadingPage v-if="!loadingSuccess" />
-    <template v-else>
+    <div v-else>
       <div class="banner">
         <img
           v-lazy="{src: bannerImgUrl, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
@@ -86,16 +85,13 @@
         </div>
         <div class="padding-top-80"></div>
       </div>
-    </template>
-  </Layout>
+    </div>
 </template>
 <script>
-import Layout from "../../components/layout.vue";
 import { animation, windowScroll } from "../../assets/js/config.js";
 import loadingPage from "../../components/commonComponent/loadingPage.vue";
 export default {
   components: {
-    Layout,
     loadingPage
   },
   data() {

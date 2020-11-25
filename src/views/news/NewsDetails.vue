@@ -1,45 +1,42 @@
 <template>
-  <Layout>
-    <loadingPage v-if="!loadingStatus" />
-    <div class="news" v-else>
-      <div class="content pc-max-width clearfix">
-        <div class="crumbs">
-          <router-link to="/">首页</router-link> > <router-link :to="navCrumbs[newsDetails.news.category_id-1].url">{{navCrumbs[newsDetails.news.category_id-1].title}}</router-link> > {{newsDetails.news.title}}
+  <loadingPage v-if="!loadingStatus" />
+  <div class="news" v-else>
+    <div class="content pc-max-width clearfix">
+      <div class="crumbs">
+        <router-link to="/">首页</router-link> > <router-link :to="navCrumbs[newsDetails.news.category_id-1].url">{{navCrumbs[newsDetails.news.category_id-1].title}}</router-link> > {{newsDetails.news.title}}
+      </div>
+      <div class="left news-details">
+        <div class="title clearfix">
+          <h3>{{newsDetails.news.title}}</h3>
+          <span class="label left">标签: {{newsDetails.news.tag}}</span>
+          <span class="look right">{{newsDetails.news.read_count}}</span>
+          <span class="time right">{{newsDetails.news.created_at.split(' ')[0]}}</span>
         </div>
-        <div class="left news-details">
-          <div class="title clearfix">
-            <h3>{{newsDetails.news.title}}</h3>
-            <span class="label left">标签: {{newsDetails.news.tag}}</span>
-            <span class="look right">{{newsDetails.news.read_count}}</span>
-            <span class="time right">{{newsDetails.news.created_at.split(' ')[0]}}</span>
-          </div>
-          <div class="details" v-html="newsDetailsContent"></div>
-          <div class="share">
-            <strong>分享：</strong>
-            <div class="btn fb-share-button" :data-href="'https://sgpec.'+ host +'/news-details/' + newId"></div>
-            <a class="btn wb-share-button" :href="'http://service.weibo.com/share/share.php?appkey=&title=' + newsDetails.news.title + '&url=https://sgpec.'+ host +'/news-details/'+ newId +'&pic='+ shareImg +'&style=simple'" target="_blank"></a>
-            <a class="btn whats-share-button" :href="'whatsapp://send?text=' + newsDetails.news.title + ' message: https://sgpec.'+ host +'/news-details/' + newId"></a>
-            <a class="btn wx-share-button"><div class="qrCodeDiv"></div></a>
-            <a class="btn wx-share-button pyq"><div class="qrCodeDiv"></div></a>
-          </div>
-          <div class="other" v-if="newsDetails.prev_news || newsDetails.next_news">
-            <p v-if="newsDetails.prev_news">上一篇：<router-link :to="'/news-details/' + newsDetails.prev_news.id">{{newsDetails.prev_news.title}}</router-link></p>
-            <p v-if="newsDetails.next_news">下一篇：<router-link :to="'/news-details/' + newsDetails.next_news.id">{{newsDetails.next_news.title}}</router-link></p>
-          </div>
+        <div class="details" v-html="newsDetailsContent"></div>
+        <div class="share">
+          <strong>分享：</strong>
+          <div class="btn fb-share-button" :data-href="'https://sgpec.'+ host +'/news-details/' + newId"></div>
+          <a class="btn wb-share-button" :href="'http://service.weibo.com/share/share.php?appkey=&title=' + newsDetails.news.title + '&url=https://sgpec.'+ host +'/news-details/'+ newId +'&pic='+ shareImg +'&style=simple'" target="_blank"></a>
+          <a class="btn whats-share-button" :href="'whatsapp://send?text=' + newsDetails.news.title + ' message: https://sgpec.'+ host +'/news-details/' + newId"></a>
+          <a class="btn wx-share-button"><div class="qrCodeDiv"></div></a>
+          <a class="btn wx-share-button pyq"><div class="qrCodeDiv"></div></a>
         </div>
-        <div class="right rec">
-          <Side />
+        <div class="other" v-if="newsDetails.prev_news || newsDetails.next_news">
+          <p v-if="newsDetails.prev_news">上一篇：<router-link :to="'/news-details/' + newsDetails.prev_news.id">{{newsDetails.prev_news.title}}</router-link></p>
+          <p v-if="newsDetails.next_news">下一篇：<router-link :to="'/news-details/' + newsDetails.next_news.id">{{newsDetails.next_news.title}}</router-link></p>
         </div>
       </div>
-      <!-- 国旗 -->
-      <div class="pc-max-width">
-        <Flag />
+      <div class="right rec">
+        <Side />
       </div>
     </div>
-  </Layout>
+    <!-- 国旗 -->
+    <div class="pc-max-width">
+      <Flag />
+    </div>
+  </div>
 </template>
 <script>
-import Layout from '../../components/layout'
 import Flag from ".././../components/commonComponent/NationalFlag";
 import Side from './component/SideNews'
 import loadingPage from '../../components/commonComponent/loadingPage'
@@ -47,7 +44,6 @@ import { animation, windowScroll } from "../../assets/js/config.js"
 import QRCode from 'qrcodejs2'
 export default {
   components: {
-    Layout,
     Side,
     Flag,
     loadingPage

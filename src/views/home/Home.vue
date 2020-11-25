@@ -1,6 +1,6 @@
 <template>
   <Loading v-if="!loadingStatus" />
-  <Layout v-else>
+  <div v-else>
     <!-- banner -->
     <Banner :bannerImgList="bannerImg" />
 
@@ -252,11 +252,10 @@
 
     <!-- 联系我们 -->
     <ContactUs />
-  </Layout>
+  </div>
 </template>
 
 <script>
-import Layout from '../../components/layout.vue'
 import Banner from './component/banner.vue'
 import OurTeam from './component/OurTeam.vue'
 import VideoAbout from './component/VideoAbout'
@@ -270,7 +269,6 @@ import Loading from '../../components/commonComponent/loadingPage'
 export default {
   name: 'home',
   components: {
-    Layout,
     Banner,
     ContactUs,
     NewModule,
