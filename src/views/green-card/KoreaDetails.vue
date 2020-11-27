@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
     <div class="banner">
         <img src="../../assets/images/korea-d-bn.jpg" />
     </div>
@@ -57,17 +57,15 @@
 
     <!-- 联系我们 -->
     <ContactUs />
-  </Layout>
+  </div>
 </template>
 
 <script>
-import Layout from "../../components/layout.vue";
 import { animation, windowScroll } from "../../assets/js/config.js";
 import ContactUs from "../../components/commonComponent/ContactUs";
 
 export default {
   components: {
-    Layout,
     ContactUs
   },
   mounted() {

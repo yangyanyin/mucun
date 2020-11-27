@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
     <div class="banner">
         <img src="../../assets/images/singapore-d-bn.jpg" />
     </div>
@@ -224,17 +224,13 @@
         </div>
       </div>
     </div>
-  </Layout>
+  </div>
 </template>
 
 <script>
-import Layout from "../../components/layout.vue";
 import { animation, windowScroll } from "../../assets/js/config.js";
 export default {
   name: "app",
-  components: {
-    Layout
-  },
   data() {
     return {
       showTabBtn: 1

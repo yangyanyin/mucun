@@ -6,9 +6,9 @@
         </div>
         <!-- 菜单 -->
         <MenuItem :menuList="menuList"></MenuItem>
-        <div class="content">
-            <router-view></router-view>
-        </div>
+
+        <router-view></router-view>
+
         <ContentImg></ContentImg>
         <ContactUs></ContactUs>
     </div>
@@ -64,11 +64,9 @@ export default {
 <style lang="less" scoped>
 .banner {
     width: 100%;
-    height: 500px;
     overflow: hidden;
     @media (max-width: 767px) {
       padding-top: 60px;
-      height: 200px;
     }
     img {
         position: relative;
@@ -80,4 +78,25 @@ export default {
     }
   }
 
+</style>
+<style lang="less">
+.study .study-title {
+    position: relative;
+    font-size: 28px;
+    padding-bottom: 20px;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 42px;
+        height: 5px;
+        margin-left: -21px;
+        background: #447375FF;
+    }
+    @media (max-width: 1200px) {
+        font-size: 26px;
+        padding-bottom: 18px;
+    }
+}
 </style>
