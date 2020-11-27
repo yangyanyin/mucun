@@ -59,12 +59,12 @@ const SingaporeDetails = () => import(/* webpackChunkName: "green-card" */ '../v
 const KoreaDetails = () => import(/* webpackChunkName: "green-card" */ '../views/green-card/KoreaDetails.vue')
 
 /** @page 留学 */ 
-const OverseasStudy = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/OverseasStudy.vue')
-const Study1 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study1.vue')
-const Study2 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study2.vue')
-const Study3 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study3.vue')
-const Study4 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study4.vue')
-const Study5 = () => import(/* webpackChunkName: "overseas-study" */ '../views/new1/base/Study5.vue')
+const OverseasStudy = () => import(/* webpackChunkName: "overseas-study" */ '../views/study/OverseasStudy.vue')
+const Study1 = () => import(/* webpackChunkName: "overseas-study" */ '../views/study/base/Study1.vue')
+const Study2 = () => import(/* webpackChunkName: "overseas-study" */ '../views/study/base/Study2.vue')
+const Study3 = () => import(/* webpackChunkName: "overseas-study" */ '../views/study/base/Study3.vue')
+const Study4 = () => import(/* webpackChunkName: "overseas-study" */ '../views/study/base/Study4.vue')
+const Study5 = () => import(/* webpackChunkName: "overseas-study" */ '../views/study/base/Study5.vue')
 
 
 
