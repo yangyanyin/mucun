@@ -221,8 +221,8 @@ export default {
         margin: 20px 0 10px 0;
       }
       p {
-        line-height: 28px;
-        font-size: 16px;
+        line-height: 24px;
+        font-size: 14px;
       }
       &.text {
         position: static;
@@ -260,6 +260,24 @@ export default {
                 height: 118px;
                 padding: 20px 10px;
                 line-height: 24px;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        padding: 25px 0;
+        .box-content {
+            margin-top: 30px;
+            .item {
+                width: 48%;
+                margin: 0 4% 5px 0;
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+                p {
+                    height: 60px;
+                    padding: 10px 5px;
+                    line-height: 20px;
+                }
             }
         }
     }
@@ -304,6 +322,29 @@ export default {
         }
         p {
             line-height: 32px;
+        }
+    }
+    @media (max-width: 767px) {
+        .left {
+            width: 100%;
+            padding: 20px 10px;
+        }
+        .right {
+            width: auto;
+            margin: 0 -10px;
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        strong {
+            margin: 20px 0 5px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        p {
+            font-size: 14px;
+            line-height: 26px;
         }
     }
 }

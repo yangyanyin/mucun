@@ -1,14 +1,13 @@
 <template>
     <div>
-        <div class="about pc-max-width clearfix">
+        <div class="about pc-max-width margin-t-80 clearfix">
             <img class="img left" src="../../../assets/images/overseas-study/study-int1.jpg">
             <div class="text right">
                 <h3 class="study-title">新加坡留学简介</h3>
                 <p>新加坡-举世闻名的“花园城市”，既现代又充满活力，其教育体制享誉亚洲乃至全世界，不但有优质的公立教育资源，还有众多知名的国际学校，无缝衔接世界各国教育体制，是新加坡教育的一大特色。新加坡政府自2017年起放宽移民政策，开放了留学生申请永居的资格，欢迎在新加坡受过教育的人，不需要邀请函可以直接申请永久居民(PR)！真正实现留学+移民两不误，一人留学，全家移民。借着丰富多元的教学选择和利好的留学移民政策，吸引着千千万万的国际学生到此就读，是国际学生寻求顶尖的高等教育的完美目的地。</p>
             </div>
-
         </div>
-        <div class="advantage">
+        <div class="advantage margin-t-80">
             <h3 class="study-title">新加坡留学优势</h3>
             <div class="pc-max-width box-content clearfix">
                 <div v-for="(item, key) in listData" :key="key" class="item left">
@@ -17,16 +16,18 @@
                 </div>
             </div>
         </div>
-        <div class="study-pk pc-max-width clearfix">
-            <div class="left">
-                <img src="../../../assets/images/overseas-study/study-country1.jpg" />
-                <h3>新加坡留学</h3>
-                <p>新加坡临近中国，治安稳定、交通便利。英语为官方，华人占70%多的人口，浓厚的华人文化氛围，为中国学生提供了一个独特且非常容易融入的语言环境，留学签证批复率高。相比欧美国家，新加坡的留学费用更实惠且文化同源，而且毕业后新加坡政府鼓励就业及移民的措施，使留学新加坡越来越受到人们青睐。</p>
-            </div>
-            <div class="right">
-                <img src="../../../assets/images/overseas-study/study-country2.jpg" />
-                <h3>欧美留学</h3>
-                <p>欧美的各大院校有良好的声誉，所颁发文凭含金量高受国际公认，而且毕业后的薪酬也高。但是 ，英国院校申请难度大，对雅思分数要求要比新加坡高，而且英国学费和生活成本也是主要留学国家中最贵的，其次是大批留学生申请人拒签率占申请总数的一半以上，另外英国还取消了PSW签证(毕业后的工作签)，这让许多留学生望而却步，就业无保障。</p>
+        <div class="study-pk pc-max-width">
+            <div class="sc clearfix">
+                <div class="left">
+                    <img src="../../../assets/images/overseas-study/study-country1.jpg" />
+                    <h3>新加坡留学</h3>
+                    <p>新加坡临近中国，治安稳定、交通便利。英语为官方，华人占70%多的人口，浓厚的华人文化氛围，为中国学生提供了一个独特且非常容易融入的语言环境，留学签证批复率高。相比欧美国家，新加坡的留学费用更实惠且文化同源，而且毕业后新加坡政府鼓励就业及移民的措施，使留学新加坡越来越受到人们青睐。</p>
+                </div>
+                <div class="right">
+                    <img src="../../../assets/images/overseas-study/study-country2.jpg" />
+                    <h3>欧美留学</h3>
+                    <p>欧美的各大院校有良好的声誉，所颁发文凭含金量高受国际公认，而且毕业后的薪酬也高。但是 ，英国院校申请难度大，对雅思分数要求要比新加坡高，而且英国学费和生活成本也是主要留学国家中最贵的，其次是大批留学生申请人拒签率占申请总数的一半以上，另外英国还取消了PSW签证(毕业后的工作签)，这让许多留学生望而却步，就业无保障。</p>
+                </div>
             </div>
         </div>
     </div>
@@ -83,12 +84,12 @@ export default {
 </script>
 <style lang="less" scoped>
 .about {
-    margin-top: 60px;
     .img {
         width: 54%;
     }
     .text {
         h3 {
+            text-align: left;
             &:after {
                 left: 0;
                 margin: 0;
@@ -112,13 +113,25 @@ export default {
             }
         }
     }
+    @media (max-width: 767px) {
+        .img {
+            width: 100%;
+        }
+        .text {
+            width: 100%;
+            padding-top: 20px;
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                padding-top: 13px;
+            }
+        }
+    }
 }
 .advantage {
-    margin-top: 60px;
     padding: 40px 0;
     background: #F7F7F7;
     h3 {
-        font-size: 30px;
         text-align: center;
     }
     .box-content {
@@ -127,8 +140,10 @@ export default {
             width: 16%;
             margin: 0 5% 10px 0;
             text-align: center;
-            &:nth-child(5n+0) {
-                margin: 0;
+            @media(min-width: 767px) {
+                &:nth-child(5n+0) {
+                    margin-right: 0;
+                }
             }
             img {
                 display: block;
@@ -141,25 +156,67 @@ export default {
             }
         }
     }
+    @media (max-width: 767px) {
+        padding: 25px 0;
+        .box-content {
+            margin-top: 30px;
+            .item {
+                width: 48%;
+                margin: 0 4% 5px 0;
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+                p {
+                    height: 80px;
+                    padding: 10px 5px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
 }
 
 .study-pk {
-    padding: 60px 10px;
-    background: url('../../../assets/images/overseas-study/study-vs.jpg') no-repeat center center;
-    .left {
-        width: 40%;
+    .sc {
+        padding: 60px 10px;
+        background: url('../../../assets/images/overseas-study/study-vs.jpg') no-repeat center center;
+        .left {
+            width: 40%;
+        }
+        .right {
+            width: 40%;
+        }
+        text-align: center;
+        h3 {
+            font-size: 28px;
+            padding: 30px 0;
+        }
+        p {
+            font-size: 16px;
+            line-height: 30px;
+        }
     }
-    .right {
-        width: 40%;
-    }
-    text-align: center;
-    h3 {
-        font-size: 28px;
-        padding: 30px 0;
-    }
-    p {
-        font-size: 16px;
-        line-height: 30px;
+    
+    @media(max-width: 767px) {
+        overflow: auto;
+        .sc {
+            padding: 30px 10px;
+            width: 600px;
+            background-size: 60px;
+            img {
+                display: inline-block;
+                width: 60px;
+            }
+            h3 {
+                font-size: 18px;
+                padding: 15px 0;
+            }
+            p {
+                font-size: 13px;
+                line-height: 24px;
+            }
+        }
+        
     }
 }
 </style>

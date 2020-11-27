@@ -180,14 +180,13 @@ export default {
         margin: 20px 0 10px 0;
       }
       p {
-        line-height: 28px;
-        font-size: 16px;
+        line-height: 24px;
+        font-size: 14px;
       }
       &.text {
         position: static;
-        padding: 0;
+        padding: 15px;
         &.left {
-          padding: 0;
           text-align: center;
         }
       }
@@ -196,10 +195,6 @@ export default {
 }
 
 .advantage {
-    h3 {
-        font-size: 30px;
-        text-align: center;
-    }
     .box-content {
         margin-top: 50px;
         .item {
@@ -212,6 +207,18 @@ export default {
             img {
                 display: block;
                 width: 100%;
+            }
+        }
+    }
+    @media(max-width: 767px) {
+        .box-content {
+            margin-top: 30px;
+            .item {
+                width: 48%;
+                margin-right: 4%;
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
             }
         }
     }

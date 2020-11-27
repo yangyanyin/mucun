@@ -66,6 +66,14 @@ const Study3 = () => import(/* webpackChunkName: "overseas-study" */ '../views/s
 const Study4 = () => import(/* webpackChunkName: "overseas-study" */ '../views/study/base/Study4.vue')
 const Study5 = () => import(/* webpackChunkName: "overseas-study" */ '../views/study/base/Study5.vue')
 
+/** @page 绿卡项目新加坡详情 */ 
+const Canada = () => import(/* webpackChunkName: "green-card" */ '../views/canada/Canada.vue')
+const CanadaIndex = () => import(/* webpackChunkName: "green-card" */ '../views/canada/CanadaIndex.vue')
+const CanadaProject1 = () => import(/* webpackChunkName: "green-card" */ '../views/canada/CanadaProject1.vue')
+const CanadaProject2 = () => import(/* webpackChunkName: "green-card" */ '../views/canada/CanadaProject2.vue')
+const CanadaProject3 = () => import(/* webpackChunkName: "green-card" */ '../views/canada/CanadaProject3.vue')
+const CanadaProject4 = () => import(/* webpackChunkName: "green-card" */ '../views/canada/CanadaProject4.vue')
+
 
 
 Vue.use(VueRouter)
@@ -258,6 +266,38 @@ const routes = [
         path: 'five',
         name: 'Study5',
         component: Study5,
+      }
+    ]
+  },
+  {
+    path: '/canada',
+    name: 'canada',
+    component: Canada,
+    children: [
+      {
+        path: '/',
+        name: 'index',
+        component: CanadaIndex
+      },
+      {
+        path: 'one',
+        name: 'one',
+        component: CanadaProject1
+      },
+      {
+        path: 'two',
+        name: 'two',
+        component: CanadaProject2
+      },
+      {
+        path: 'three',
+        name: 'three',
+        component: CanadaProject3
+      },
+      {
+        path: 'four',
+        name: 'four',
+        component: CanadaProject4
       }
     ]
   }

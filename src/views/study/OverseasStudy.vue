@@ -67,10 +67,11 @@ export default {
     overflow: hidden;
     @media (max-width: 767px) {
       padding-top: 60px;
+      height: 240px;
     }
     img {
         position: relative;
-        width: auto;
+        width: 100%;
         height: 100%;
         top: 0;
         left: 50%;
@@ -83,6 +84,7 @@ export default {
 .study .study-title {
     position: relative;
     font-size: 28px;
+    text-align: center;
     padding-bottom: 20px;
     &:after {
         content: '';
@@ -97,6 +99,9 @@ export default {
     @media (max-width: 1200px) {
         font-size: 26px;
         padding-bottom: 18px;
+    }
+    @media (max-width: 767px) {
+        font-size: 20px;
     }
 }
 </style>

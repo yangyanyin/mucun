@@ -12,7 +12,6 @@
     </div>
 </template>
 <style scoped lang="less">
-// #fafff5
 .lecture {
     .img {
         display: block;
@@ -53,6 +52,36 @@
             img {
                 display: block;
                 width: 150px;
+            }
+        }
+    }
+    @media(max-width: 767px) {
+        .adviser {
+            padding: 30px;
+            &:after {
+                top: 35px;
+                left: 15px;
+                width: 3px;
+                height: 95px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                margin-top: 5px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+            span {
+                padding: 5px;
+                right: 10px;
+                top: 20px;
+                font-size: 12px;
+                line-height: 18px;
+                img {
+                    width: 80px;
+                    margin: auto;
+                }
             }
         }
     }

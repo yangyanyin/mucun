@@ -19,27 +19,38 @@ export default {
 <style scoped lang="less">
 
 .recommend-school {
-    text-align: center;
-    ul {
-        margin-top: 50px;
-        border-right: 1px solid #EBEBEB;
-        border-bottom: 1px solid #EBEBEB;
-        li {
-            width: 25%;
-            border-top: 1px solid #EBEBEB;
-            border-left: 1px solid #EBEBEB;
-            text-align: center;
-            padding: 40px 0;
-            span {
-                display: block;
-                padding-bottom: 20px;
-                font-size: 16px;
-            }
-            img {
-                display: block;
-                width: 100%;
-            }
-        }
+  text-align: center;
+  ul {
+    margin-top: 50px;
+    border-right: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
+    li {
+      width: 25%;
+      border-top: 1px solid #EBEBEB;
+      border-left: 1px solid #EBEBEB;
+      text-align: center;
+      padding: 40px 0;
+      span {
+          display: block;
+          padding-bottom: 20px;
+          font-size: 16px;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
     }
+    @media (max-width: 767px) {
+      margin-top: 30px;
+      li {
+        width: 50%;
+        padding: 20px 0;
+        span {
+          padding-bottom: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 </style>

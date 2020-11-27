@@ -1,10 +1,9 @@
 <template>
   <div class="emigrant">
     <div class="banner"></div>
+    <MenuItem :menuList="menuList"></MenuItem>
     <div class="pc-max-width">
       <!-- 菜单 -->
-      <MenuItem :menuList="menuList"></MenuItem>
-      
       <div class="content">
         <router-view></router-view>
       </div>

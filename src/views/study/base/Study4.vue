@@ -213,10 +213,6 @@ export default {
 .advantage {
     padding: 40px 0;
     background: #F7F7F7;
-    h3 {
-        font-size: 30px;
-        text-align: center;
-    }
     h4 {
         font-size: 16px;
         color: #447375;
@@ -229,7 +225,7 @@ export default {
             margin: 0 4.4% 10px 0;
             text-align: center;
             &:nth-child(6n+0) {
-                margin: 0;
+                margin-right: 0;
             }
             img {
                 display: block;
@@ -240,6 +236,27 @@ export default {
                 padding: 20px 10px;
                 line-height: 24px;
             }
+        }
+    }
+    @media (max-width: 767px) {
+        padding: 20px 0;
+        .box-content {
+            margin-top: 30px;
+            .item {
+                width: 48%;
+                margin-right: 4%;
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+                p {
+                    height: 70px;
+                    padding: 10px 5px;
+                    line-height: 22px;
+                }
+            }
+        }
+        h4 {
+            font-size: 14px;
         }
     }
 }
