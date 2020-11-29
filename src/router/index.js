@@ -8,7 +8,7 @@ const Home = () => import(/* webpackChunkName: "home" */ '../views/home/Home.vue
 const About = () => import(/* webpackChunkName: "about" */ '../views/about/About')
 
 /** @page 银行开户 */ 
-const Bank = () => import(/* webpackChunkName: "bank" */ '../views/bank/Bank')
+const Bank = () => import(/* webpackChunkName: "bank" */ '../views/bank/NewBank')
 
 /** @page 资产配置 */ 
 const Asset = () => import(/* webpackChunkName: "asset" */ '../views/asset/Asset')
@@ -57,6 +57,8 @@ const SingaporeDetails = () => import(/* webpackChunkName: "green-card" */ '../v
 
 /** @page 绿卡项目新加坡详情 */ 
 const KoreaDetails = () => import(/* webpackChunkName: "green-card" */ '../views/green-card/KoreaDetails.vue')
+const JapanDetails = () => import(/* webpackChunkName: "green-card" */ '../views/green-card/JapanDetails')
+const PortugalDetails = () => import(/* webpackChunkName: "green-card" */ '../views/green-card/PortugalDetails.vue')
 
 /** @page 留学 */ 
 const OverseasStudy = () => import(/* webpackChunkName: "overseas-study" */ '../views/study/OverseasStudy.vue')
@@ -233,6 +235,22 @@ const routes = [
     path: '/korea-details',
     name: 'KoreaDetails',
     component: KoreaDetails,
+    meta: {
+      page: 'green'
+    }
+  },
+  {
+    path: '/japan-details',
+    name: 'JapanDetails',
+    component: JapanDetails,
+    meta: {
+      page: 'green'
+    }
+  },
+  {
+    path: '/portugal-details',
+    name: 'PortugalDetails',
+    component: PortugalDetails,
     meta: {
       page: 'green'
     }

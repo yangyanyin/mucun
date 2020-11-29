@@ -2,6 +2,8 @@
   <div class="detail">
     <Introduction :introduction="introduction"></Introduction>
 
+    <Advantage :advantage="advantage"></Advantage>
+
     <Description :description="description"></Description>
 
     <ProjectProcess :projectProcess="projectProcess"></ProjectProcess>
@@ -12,9 +14,11 @@
 import Introduction from './base/Introduction'
 import Description from './base/Description'
 import ProjectProcess from './base/ProjectProcess'
+import Advantage from './base/Advantage'
 export default {
   components: {
     Introduction,
+    Advantage,
     Description,
     ProjectProcess
   },
@@ -31,9 +35,31 @@ export default {
           '目、友好的社团环境、快捷的申请速度和手续，逐渐成为最受欢迎和最快捷的加拿大商业移民途径之一。NBPNP被誉为“加拿大省提名项目的样板工程”。'
         ]
       },
+      advantage: {
+        title: '项目优势',
+        line_number: 4,
+        list: [
+          {
+            icon: require('../../assets/images/canada/advantage-icon13.jpg'),   
+            text: '无案例积压 审批速度快'
+          },
+          {
+            icon: require('../../assets/images/canada/advantage-icon14.jpg'),
+            text: '一步到位拿永居，移民成功登陆后即可获得枫叶卡，无转换身份的后顾之忧'
+          },
+          {
+            icon: require('../../assets/images/canada/advantage-icon15.jpg'),
+            text: '配偶可加分：在NB省工作、学习经历、语言达到要求均可以加分'
+          },
+          {
+            icon: require('../../assets/images/canada/advantage-icon16.jpg'),
+            text: '风险低，符合申请要求后才通知打投资押金10万加币（登陆NB按要求经营生意一年后可申请退回）'
+          }
+        ]
+      },
       description: [
         {
-          icon: require('../../assets/images/canada/description-icon3.jpg'),
+          icon: require('../../assets/images/canada/description-icon7.jpg'),
           title: '对申请人的要求',
           detail: [
             '1. 年龄要求：22-55岁之间',

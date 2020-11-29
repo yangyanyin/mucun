@@ -11,12 +11,12 @@
       <h3 class="canada-title">移民项目</h3>
       <div class="list pc-max-width clearfix">
         <div class="item left">
-          <img src="../../assets/images/canada/canada-index-img1.jpg" />
+          <img src="../../assets/images/canada/canada-index-img2.jpg" />
           <p>加拿大魁北克省投资移民项目 (Quebec Immigrant Investor Program, QIIP)</p>
           <router-link to="/canada/one">了解详情</router-link>
         </div>
         <div class="item left">
-          <img src="../../assets/images/canada/canada-index-img2.jpg" />
+          <img src="../../assets/images/canada/canada-index-img4.jpg" />
           <p>加拿大联邦天使投资人计划 (Canada Federal Angel Investor Program)</p>
           <router-link to="/canada/two">了解详情</router-link>
         </div>
@@ -26,7 +26,7 @@
           <router-link to="/canada/three">了解详情</router-link>
         </div>
         <div class="item left">
-          <img src="../../assets/images/canada/canada-index-img4.jpg" />
+          <img src="../../assets/images/canada/canada-index-img1.jpg" />
           <p>NB省企业家移民介绍 (New Brunswick Provincial Nominee Program)</p>
           <router-link to="/canada/four">了解详情</router-link>
         </div>
@@ -97,8 +97,9 @@
         }
         p {
           height: 95px;
-          padding: 15px 10px;
-          line-height: 22px;
+          padding: 15px 5px;
+          line-height: 20px;
+          font-size: 13px;
         }
         a {
           height: 30px;

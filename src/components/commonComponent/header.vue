@@ -226,7 +226,7 @@ export default {
   text-align: center;
   li {
     display: inline-block;
-    margin: 0 23px;
+    margin: 0 22px;
 
     @media (max-width: 920px) {
       margin: 0 14px;

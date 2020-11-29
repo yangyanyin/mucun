@@ -8,6 +8,8 @@
         <router-link to="/philippines-details"><i><img src="../../assets/images/country10.png" />菲律宾绿卡项目</i></router-link>
         <router-link to="/malaysia-details"><i><img src="../../assets/images/country11.png" />马来西亚绿卡项目</i></router-link>
         <router-link to="/korea-details"><i><img src="../../assets/images/country12.png" />韩国绿卡项目</i></router-link>
+        <router-link to="/japan-details"><i>日本绿卡项目</i></router-link>
+        <router-link to="/portugal-details"><i>葡萄牙绿卡项目</i></router-link>
       </div>
       <div class="content">
         <!-- 新加坡 -->
@@ -115,17 +117,17 @@ export default {
   text-align: center;
   a {
     display: inline-block;
-    width: 25%;
+    width: 16.666%;
     line-height: 80px;
     cursor: pointer;
     color: #111;
     img {
       display: inline-block;
-      width: 40px;
-      margin-right: 15px;
+      width: 30px;
+      margin-right: 10px;
     }
     i {
-      font-size: 16px;
+      font-size: 14px;
     }
     &.router-link-active {
       i {

@@ -122,35 +122,35 @@ export default {
                 title: '公立院校推荐',
                 list: [
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school1.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school6.png'),
                         name: '新加坡理工学院'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school2.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school7.png'),
                         name: '新加坡南洋理工学院'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school3.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school8.png'),
                         name: '新加坡义安理工学院'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school4.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school2.png'),
                         name: '新加坡淡马锡理工学院'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school5.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school3.png'),
                         name: '新加坡共和理工学院'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school6.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school5.png'),
                         name: '新加坡国立大学'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school7.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school1.png'),
                         name: '南洋理工大学'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school8.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school4.png'),
                         name: '新加坡管理大学'
                     }
                 ]

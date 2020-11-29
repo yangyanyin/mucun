@@ -94,35 +94,35 @@ export default {
                 title: '推荐学前机构',
                 list: [
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school9.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school10.png'),
                         name: 'Pat’s 校舍'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school10.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school11.png'),
                         name: '第一校园'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school11.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school9.png'),
                         name: 'Maple Bear幼儿园'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school12.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school16.png'),
                         name: '伊顿教育集团'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school13.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school12.png'),
                         name: '迈杰思学前教育'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school14.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school13.png'),
                         name: '斯坦福美国国际学校'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school15.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school14.png'),
                         name: '新加坡澳大利亚国际学校'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school16.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school15.png'),
                         name: '新加坡加拿大国际学校'
                     }
                 ]

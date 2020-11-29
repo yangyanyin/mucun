@@ -1,10 +1,10 @@
 <template>
   <div class="description pc-max-width margin-t-80">
     <div v-for="(item, key) in description" :key="key" class="clearfix description-item">
-      <div class="img" :class="key === 1 ? 'left' : 'right'">
+      <div class="img list" :class="key === 1 ? 'left' : 'right'">
         <img :src="item.icon">
       </div>
-      <div class="text" :class="key === 1 ? 'right' : 'left'">
+      <div class="text list" :class="key === 1 ? 'right' : 'left'">
         <h4>{{item.title}}</h4>
         <p v-for="(p, i) in item.detail" :key="i">{{p}}</p>
       </div>
@@ -40,6 +40,7 @@ export default {
     }
     p {
       line-height: 26px;
+      min-height: 10px;
     }
     &.text {
       position: absolute;
@@ -54,25 +55,28 @@ export default {
     }
   }
   @media (max-width: 767px) {
-    padding: 0 5px;
+    margin-bottom: 20px;
+    
     .list {
       width: 100%;
-      text-align: center;
-      strong {
-        font-size: 20px;
-        margin: 20px 0 10px 0;
+      img {
+        height: auto;
+        width: 100%;
+        left: 0;
+        transform: translateX(0);
+      }
+      h4 {
+        margin-bottom: 5px;
+        font-size: 18px;
       }
       p {
-        line-height: 24px;
+        margin-bottom: 5px;
+        line-height: 20px;
         font-size: 14px;
       }
       &.text {
         position: static;
-        padding: 0;
-        &.left {
-          padding: 0;
-          text-align: center;
-        }
+        padding: 15px 20px;
       }
     }
   }

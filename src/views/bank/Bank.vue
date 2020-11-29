@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner">
-      <img src="../../assets/images/bank-banner.jpg" />
+      <img src="../../assets/images/bank/bank-banner.jpg" />
     </div>
     <div class="pc-max-width margin-t-80">
       <div class="public-title animation-show">
@@ -125,13 +125,22 @@
         </div>
       </div>
     </div>
+
+    <ContentImg></ContentImg>
+    <ContactUs></ContactUs>
   </div>
 </template>
 
 <script>
+import ContentImg from '../../components/ContentImg'
+import ContactUs from '../../components/commonComponent/ContactUs'
 import { animation, windowScroll } from "../../assets/js/config.js";
 
 export default {
+  components: {
+    ContentImg,
+    ContactUs
+  },
   mounted() {
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;
     animation(scroll);

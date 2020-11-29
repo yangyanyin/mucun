@@ -75,4 +75,10 @@ export default {
   color: #447375;
   padding-bottom: 30px;
 }
+@media(max-width: 767px) {
+  .cycle {
+    padding: 0 15px;
+    line-height: 24px;;
+  }
+}
 </style>

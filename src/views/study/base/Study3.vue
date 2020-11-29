@@ -80,35 +80,35 @@ export default {
                 title: '公立院校推荐',
                 list: [
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school1.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school17.png'),
                         name: '华中国际学校'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school2.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school18.png'),
                         name: '新加坡英华国际学校'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school3.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school19.png'),
                         name: '辅仁国际学校'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school4.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school20.png'),
                         name: '圣若瑟书院国际学校'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school5.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school21.png'),
                         name: '新加坡楷博高等教育学院'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school6.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school22.png'),
                         name: '新加坡管理学院'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school7.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school23.png'),
                         name: '新加坡psb学院'
                     },
                     {
-                        icon: require('../../../assets/images/overseas-study/school/recommend-school8.png'),
+                        icon: require('../../../assets/images/overseas-study/school/recommend-school24.png'),
                         name: '澳洲詹姆斯库克大学新加坡校区'
                     }
                 ]
