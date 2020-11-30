@@ -1,11 +1,11 @@
 <template>
   <div class="singapore-office">
-    <div class="introduction pc-max-width">
+    <div class="introduction">
       <h3 class="singapore-title">项目介绍</h3>
       <p>新加坡政治稳固，金融法规完善，拥有丰富的投资资源和财富管理人才，以及强有力的全球商业运作竞争力，是亚洲领先的私人银行和财富管理中心之一。新加坡政府针对家族办公室管理的指定基金项目推出了很多优惠计划，例如几乎免征收所有的投资收益所得税等等，是全世界的税务天堂。鉴于这些优势，新加坡已经逐步成为超高净值人群和家庭设立资产管理和投资基地的首选国家，尤其是在本地设立家族办公室。</p>
     </div>
 
-    <div class="advantage pc-max-width margin-t-80">
+    <div class="advantage margin-t-80">
       <h3 class="singapore-title">项目优势</h3>
       <ul class="clearfix">
         <li>
@@ -157,6 +157,7 @@ export default {
 .introduction {
   height: 393px;
   padding-top: 60px;
+  margin: 0 -10px;
   text-align: center;
   background: url('../../../assets/images/singapore/singapore-office-icon1.jpg') no-repeat top center;
   .singapore-title {
@@ -170,6 +171,14 @@ export default {
     line-height: 28px;
     color: #fff;
     font-size: 16px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    p {
+      padding: 10px;
+      line-height: 26px;
+      font-size: 14px;
+    }
   }
 }
 
@@ -193,6 +202,23 @@ export default {
         display: inline-block;
         width: 100%;
         max-width: 160px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    ul {
+      padding: 0;
+      li {
+        width: 49%;
+        margin: 15px 2% 15px 0;
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+        p {
+          height: 60px;
+          font-size: 13px;
+          padding: 0 10px;
+        }
       }
     }
   }
@@ -266,6 +292,42 @@ export default {
       line-height: 24px;
     }
   }
+  @media (max-width: 767px) {
+    margin: 0 -10px;
+    .bn {
+      padding: 0 20px;
+      height: 250px;
+      h3 {
+        font-size: 22px;
+        padding: 30px 10px 10px;
+      }
+      span {
+        line-height: 22px;
+        padding-bottom: 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .table {
+      h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      ul li {
+        height: 130px;
+        padding: 0 13px;
+        font-size: 12px;
+      }
+      p {
+        margin-top: 30px;
+        line-height: 20px;
+      }
+    }
+  }
 }
 
 .process {
@@ -308,6 +370,9 @@ export default {
     padding-top: 10px;
     text-align: center;
     font-size: 12px;
+  }
+  @media (max-width: 767px) {
+    margin: 0 -10px;
   }
 }
 </style>
