@@ -313,12 +313,13 @@ export default {
   }
   @media (max-width: 767px) {
     .table {
+      padding: 30px 15px;
       h3 {
         font-size: 20px;
         margin-bottom: 20px;
       }
       ul li {
-        height: 130px;
+        height: 110px;
         padding: 0 13px;
         font-size: 12px;
       }
@@ -332,7 +333,7 @@ export default {
 
 .process {
   background: #e5e2d9;
-  padding: 80px 20px;
+  padding: 86px 20px;
   ul {
     padding: 50px 0;
     li {
@@ -373,6 +374,7 @@ export default {
   }
   @media (max-width: 767px) {
     margin: 0 -10px;
+    padding: 20px 15px;
   }
 }
 </style>
