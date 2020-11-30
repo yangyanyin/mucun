@@ -1,193 +1,145 @@
 <template>
-  <div class="details details-four">
-    <div class="title t1">
-      <h3>
-        <span>家族办公室</span>
-        <i>Family Office Introduction</i>
-      </h3>
-    </div>
-    <div class="des">
-      <h3>什么是家族办公室</h3>
-      <p>家族办公室是一个机构性平台，能够为富裕的家族提供综合的财富和家族服务管理。通过专人管理的保值方案能够满足家族的要求，这便是家族办公室的主要作用。此外，该平台还能够确保财富将会作为继承规划的一部分，传承至家族的下一代。 家族办公室是专业的私人组织，帮助家族管理财富。每个家族需要家族办公室的目的都是独一无二的，可能包括金融投资、地产规划、税收筹划和慈善事业等。</p>
+  <div class="singapore-office">
+    <div class="introduction pc-max-width">
+      <h3>项目介绍</h3>
+      <p>新加坡政治稳固，金融法规完善，拥有丰富的投资资源和财富管理人才，以及强有力的全球商业运作竞争力，是亚洲领先的私人银行和财富管理中心之一。新加坡政府针对家族办公室管理的指定基金项目推出了很多优惠计划，例如几乎免征收所有的投资收益所得税等等，是全世界的税务天堂。鉴于这些优势，新加坡已经逐步成为超高净值人群和家庭设立资产管理和投资基地的首选国家，尤其是在本地设立家族办公室。</p>
     </div>
 
-    <div class="title t2">
-      <h3>
-        <span>项目优势</span>
-        <i>Program Advantage</i>
-      </h3>
-    </div>
-    <div class="icon-box">
+    <div class="advantage pc-max-width">
+      <h3>项目优势</h3>
       <ul>
         <li>
-          <img src="../../../assets/images/emigrant-icon16.png" />
-          <span>为家族建立<br />传承文化</span>
+          <img src="../../../assets/images/singapore/singapore-office-icon2.png" />
+          <p>通过家族办公室可以过得EP身份，可避免金融信息交换</p>
         </li>
         <li>
-          <img src="../../../assets/images/emigrant-icon17.png" />
-          <span>风险整合<br />集中管理</span>
+          <img src="../../../assets/images/singapore/singapore-office-icon3.png" />
+          <p>利用EP身份让全家获得新加坡绿卡</p>
         </li>
         <li>
-          <img src="../../../assets/images/emigrant-icon18.png" />
-          <span>服务集中化<br /> <i>T</i></span>
+          <img src="../../../assets/images/singapore/singapore-office-icon4.png" />
+          <p>新加坡基金享有税收豁免政策（13R/13X）</p>
         </li>
         <li>
-          <img src="../../../assets/images/emigrant-icon19.png" />
-          <span>后代的规划<br /> <i>T</i></span>
+          <img src="../../../assets/images/singapore/singapore-office-icon5.png" />
+          <p>极佳的经商环境是海外财富最佳“安置地”</p>
         </li>
         <li>
-          <img src="../../../assets/images/emigrant-icon20.png" />
-          <span>潜在回报率高<br /> <i>T</i></span>
+          <img src="../../../assets/images/singapore/singapore-office-icon6.png" />
+          <p>实现家族传承，让财富不断增值</p>
         </li>
         <li>
-          <img src="../../../assets/images/emigrant-icon21.png" />
-          <span>治理与管理<br />框架的构建</span>
+          <img src="../../../assets/images/singapore/singapore-office-icon7.png" />
+          <p>集中化管理投资，多方专业机构配合协调管理</p>
+        </li>
+        <li>
+          <img src="../../../assets/images/singapore/singapore-office-icon8.png" />
+          <p>家族办公室维护费用可由基金公司收益支出</p>
+        </li>
+        <li>
+          <img src="../../../assets/images/singapore/singapore-office-icon9.png" />
+          <p>先获得EP身份，再进行投资，最小化风险承担</p>
         </li>
       </ul>
     </div>
-    <div class="note">
-      注：新加坡是家族办公室的理想创建地，这里低税负，新加坡基金享有税负减免等优惠政策
-    </div>
+
     <div class="plan">
-      <div class="title t3">
-        <h3>
-          <span>家族办公室的设立以及新加坡移民计划</span>
-          <i>Establishment of Family Office & Singapore Migration Planning</i>
-        </h3>
+      <div class="">
+        <h3>新加坡政府指定的税收优惠计划</h3>
+        <p>根据《新加坡所得税法》的第134章，新加坡以下几项税收优惠计划适用于在新加坡设立家族办公室管理的对应基金：</p>
+        <p>1.在岸基金税收激励计划 13R </p>
+        <p>2.增强型基金税收激励计划 13X</p>
       </div>
-      <div class="list clearfix">
-        <div class="left">
-          <h3>计划一</h3>
-          <p>投资金额 (基金+股票+债券) 5000万新元以上，可获得三个Ep名额，通过EP来申请新加坡永久居民(PR), 最终得到新加坡公民（护照）。</p>
+      <div class="table">
+        <h3>重点的新加坡基金税务豁免政策</h3>
+        <ul>
+          <li>税务优惠计划</li>
+          <li>13R</li>
+          <li>13X</li>
+        </ul>
+        <ul>
+          <li>投资基金公司所属地</li>
+          <li>新加坡的税务居民</li>
+          <li>没有要求</li>
+        </ul>
+        <ul>
+          <li>投资公司年度支出</li>
+          <li>支出不少于20万新元</li>
+          <li>支出不少于20万新元</li>
+        </ul>
+        <ul>
+          <li>基金管理规模</li>
+          <li>500万新币</li>
+          <li>5000万新元或以上</li>
+        </ul>
+
+        <ul>
+          <li>基金管理</li>
+          <li>基金管理者需要常驻新加坡</li>
+          <li>基金管理者需要常驻新加坡</li>
+        </ul>
+
+        <ul>
+          <li>审批要求</li>
+          <li>新加坡要新加坡金管局比准才可享受13R下的税务豁免计划</li>
+          <li>新加坡要新加坡金管局比准才可享受13X下的税务豁免计划</li>
+        </ul>
+
+        <ul>
+          <li>所得税申报</li>
+          <li>必须每年向税务局申报</li>
+          <li>必须每年向税务局申报</li>
+        </ul>
+
+        <ul>
+          <li>向新加坡金管局提交年度声明</li>
+          <li>需要</li>
+          <li>需要</li>
+        </ul>
+        <p>注： 13R计划的单一家族办公室可以获得1个EP配额 
+          <br />13X计划的单一家族办公室可以获得3个EP配额
+          <br />在新加坡设立家族办公室可以享受超过100个避免双重征税的扩国协定
+        </p>
+
+        <div class="process">
+          <h3>新加坡家族办公室申请流程</h3>
+          <ul>
+            <li>评估/签约</li>
+            <li>收集资料，预约新加坡金管局面试</li>
+            <li>注册2家新加坡公司 <br />家族办公室和基金公司</li>
+            <li>开立个人和公司的银行账户 <br />（包括零售和私人银行账户）</li>
+            <li>撰写商业计划书，准备EP申请资料和基金豁免文件</li>
+          </ul>
+          <ul>
+            <li>获得工作准证EP卡</li>
+            <li>登录新加坡打指模</li>
+            <li>EP原则性批复</li>
+            <li>新加坡金管局面试</li>
+            <li>递交新加坡人力部EP申请</li>
+          </ul>
         </div>
-        <div class="right">
-          <h3>计划二</h3>
-          <p>资金额2亿新元以上，申请人以及配偶，未满21周岁的子女可获得新加坡永久居民(PR)，和3个EP名额。</p>
-        </div>
+
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+
+}
+</script>
+
 <style lang="less" scoped>
-.title {
-  height: 258px;
-  &.t1 {
-    background: url('../../../assets/images/emigrant-img12.jpg') no-repeat top center;
-  }
-  &.t2 {
-    background: url('../../../assets/images/emigrant-img14.jpg') no-repeat top center;
-  }
-  &.t3 {
-    background: url('../../../assets/images/emigrant-img13.jpg') no-repeat top center;
-    @media (max-width: 767px) {
-      background: none;
-    }
-  }
-  @media (max-width: 767px) {
-    height: 130px;
-    background-size: auto 130px !important;
-  }
-}
-.des {
-  margin: auto;
-  width: 720px;
+.introduction {
   text-align: center;
-  padding: 60px 0 110px;
-  h3 {
-    color: #447375;
-    padding-bottom: 30px;
-    font-size: 18px;
-  }
+  background: url('../../../assets/images/singapore/singapore-office-icon1.jpg') no-repeat top center;
+  height: 393px;
   p {
-    color: #447375;
-    line-height: 26px;
+    padding: 0 160px;
+    line-height: 28px;
+    color: #fff;
     font-size: 16px;
-  }
-  @media (max-width: 767px) {
-    width: auto;
-    padding: 30px 0 60px;
-    h3 {
-      padding-bottom: 20px;
-    }
-    p {
-      line-break: 22px;
-      font-size: 14px;
-    }
-  }
-}
-.plan {
-  position: relative;
-  .title {
-    height: 480px;
-    h3 {
-      position: absolute;
-      top: 100px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-  .list {
-    position: absolute;
-    top: 190px;
-    left: 50%;
-    width: 820px;
-    transform: translateX(-50%);
-    text-align: center;
-    > div {
-      width: 400px;
-      height: 200px;
-      background: #fff;
-      border-radius: 10px;
-      padding: 40px;
-      h3 {
-        display: inline-block;
-        position: relative;
-        font-size: 22px;
-        color: #447375;
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -10px;
-          left: 18px;
-          width: 30px;
-          height: 3px;
-          background: #d4dfdf;
-          border-radius: 1px;
-        }
-      }
-      p {
-        color: #447375;
-        margin-top: 20px;
-        line-height: 24px;
-      }
-    }
-  }
-  @media (max-width: 767px) {
-    background: url('../../../assets/images/emigrant-img13.jpg') no-repeat top center;
-    background-size: auto 600px;
-    margin: 0 -10px;
-    padding: 15px;
-    .list {
-      position: static;
-      width: 100%;
-      transform: translate(0);
-      >div {
-        width: 100%;
-        padding: 20px;
-        margin-bottom: 10px;
-        h3 {
-          font-size: 20px;
-        }
-      }
-    }
-    .title {
-      height: auto;
-      padding: 35px 0 25px;
-      h3 {
-        position: static;
-        transform: translate(0);
-      }
-    }
   }
 }
 </style>
