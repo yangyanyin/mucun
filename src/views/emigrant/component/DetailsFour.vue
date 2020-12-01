@@ -105,20 +105,22 @@
 
     <div class="process">
       <h3 class="singapore-title">新加坡家族办公室申请流程</h3>
-      <ul class="clearfix">
-        <li><i>第1步</i> 评估/签约</li>
-        <li><i>第2步</i>收集资料，预约新加坡金管局面试</li>
-        <li><i>第3步</i>注册2家新加坡公司 <br />家族办公室和基金公司</li>
-        <li><i>第4步</i>开立个人和公司的银行账户 <br />（包括零售和私人银行账户）</li>
-        <li><i>第5步</i>撰写商业计划书，准备EP申请资料和基金豁免文件</li>
-      </ul>
-      <ul class="clearfix">
-        <li><i>第10步</i>获得工作准证EP卡</li>
-        <li><i>第9步</i>登录新加坡打指模</li>
-        <li><i>第8步</i>EP原则性批复</li>
-        <li><i>第7步</i>新加坡金管局面试</li>
-        <li><i>第6步</i>递交新加坡人力部EP申请</li>
-      </ul>
+      <div class="sc">
+        <ul class="clearfix icon">
+          <li><i>第1步</i> 评估/签约</li>
+          <li><i>第2步</i>收集资料，预约新加坡金管局面试</li>
+          <li><i>第3步</i>注册2家新加坡公司 <br />家族办公室和基金公司</li>
+          <li><i>第4步</i>开立个人和公司的银行账户 <br />（包括零售和私人银行账户）</li>
+          <li><i>第5步</i>撰写商业计划书，准备EP申请资料和基金豁免文件</li>
+        </ul>
+        <ul class="clearfix">
+          <li><i>第10步</i>获得工作准证EP卡</li>
+          <li><i>第9步</i>登录新加坡打指模</li>
+          <li><i>第8步</i>EP原则性批复</li>
+          <li><i>第7步</i>新加坡金管局面试</li>
+          <li><i>第6步</i>递交新加坡人力部EP申请</li>
+        </ul>
+      </div>
       <p>温馨提示：以上流程时间为按过往经验评估，以相关机构实际审理时间为准。</p>
     </div>
   </div>
@@ -334,6 +336,23 @@ export default {}
   padding: 86px 20px;
   ul {
     padding: 50px 0;
+    &.icon {
+      position: relative;
+      li:last-child {
+        &:before {
+          content: '';
+          position: absolute;
+          right: 40%;
+          bottom: -55px;
+          width: 24px;
+          height: 24px;
+          margin-left: -12px;
+          background: url('../../../assets/images/singapore/right-arrow.png') no-repeat;
+          background-size: 100%;
+          transform: rotate(90deg);
+        }
+      }
+    }
     li {
       position: relative;
       float: left;
@@ -350,18 +369,33 @@ export default {}
       text-align: center;
       border-radius: 10px;
       box-shadow: 0 0 5px 0 #b1b1b1;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -17%;
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+        background: url('../../../assets/images/singapore/right-arrow.png') no-repeat;
+        background-size: 100%;
+      }
       &:last-child {
         margin-right: 0;
+        &:after {
+          display: none;
+        }
       }
       i {
         position: absolute;
         left: 15px;
         top: -10px;
-        width: 60px;
+        width: 62px;
         height: 46px;
-        line-height: 46px;
-        background: #447375;
+        line-height: 40px;
         color: #fff;
+        background: url('../../../assets/images/singapore-tit-bg.png') no-repeat;
+        background-size: 100%;
       }
     }
   }
@@ -373,6 +407,13 @@ export default {}
   @media (max-width: 767px) {
     margin: 0 -10px;
     padding: 20px 15px;
+    .sc {
+      overflow: auto;
+      ul {
+        width: 980px;
+        padding: 25px 0;
+      }
+    }
   }
 }
 </style>

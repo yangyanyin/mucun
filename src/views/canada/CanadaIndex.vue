@@ -13,22 +13,22 @@
         <div class="item left">
           <img src="../../assets/images/canada/canada-index-img2.jpg" />
           <p>加拿大魁北克省投资移民项目 (Quebec Immigrant Investor Program, QIIP)</p>
-          <router-link to="/canada/one">了解详情</router-link>
+          <router-link to="/canada-details/one">了解详情</router-link>
         </div>
         <div class="item left">
           <img src="../../assets/images/canada/canada-index-img4.jpg" />
           <p>加拿大联邦天使投资人计划 (Canada Federal Angel Investor Program)</p>
-          <router-link to="/canada/two">了解详情</router-link>
+          <router-link to="/canada-details/two">了解详情</router-link>
         </div>
         <div class="item left">
           <img src="../../assets/images/canada/canada-index-img3.jpg" />
           <p>安省雇主担保项⽬ (Ontario employer Guarantee Project)</p>
-          <router-link to="/canada/three">了解详情</router-link>
+          <router-link to="/canada-details/three">了解详情</router-link>
         </div>
         <div class="item left">
           <img src="../../assets/images/canada/canada-index-img1.jpg" />
           <p>NB省企业家移民介绍 (New Brunswick Provincial Nominee Program)</p>
-          <router-link to="/canada/four">了解详情</router-link>
+          <router-link to="/canada-details/four">了解详情</router-link>
         </div>
       </div>
     </div>

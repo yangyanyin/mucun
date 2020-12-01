@@ -288,7 +288,7 @@ const routes = [
     ]
   },
   {
-    path: '/canada',
+    path: '/canada-details',
     name: 'canada',
     component: Canada,
     children: [

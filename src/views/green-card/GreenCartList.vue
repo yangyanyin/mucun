@@ -8,8 +8,9 @@
         <router-link to="/philippines-details"><i><img src="../../assets/images/country10.png" />菲律宾绿卡项目</i></router-link>
         <router-link to="/malaysia-details"><i><img src="../../assets/images/country11.png" />马来西亚绿卡项目</i></router-link>
         <router-link to="/korea-details"><i><img src="../../assets/images/country12.png" />韩国绿卡项目</i></router-link>
-        <router-link to="/japan-details"><i>日本绿卡项目</i></router-link>
-        <router-link to="/portugal-details"><i>葡萄牙绿卡项目</i></router-link>
+        <router-link to="/canada-details"><i><img src="../../assets/images/country13.png" />加拿大绿卡项目</i></router-link>
+        <router-link to="/japan-details"><i><img src="../../assets/images/country14.png" />日本绿卡项目</i></router-link>
+        <router-link to="/portugal-details"><i><img src="../../assets/images/country15.png" />葡萄牙绿卡项目</i></router-link>
       </div>
       <div class="content">
         <!-- 新加坡 -->
@@ -63,6 +64,45 @@
             <router-link to="/korea-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>
+
+        <!-- 加拿大 -->
+        <div class="list animation-show">
+          <img src="../../assets/images/card-canada.jpg" class="bg" />
+          <div class="info">
+            <span>
+              <img src="../../assets/images/canada-passpor.png" />
+            </span>
+            <h3>加拿大 / Canada</h3>
+            <p>一人申请，全家都可获得绿卡</p>
+            <router-link to="/korea-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
+          </div>
+        </div>
+
+        <!-- 日本 -->
+        <div class="list animation-show">
+          <img src="../../assets/images/card-japan.jpg" class="bg" />
+          <div class="info">
+            <span>
+              <img src="../../assets/images/japan-passport.png" />
+            </span>
+            <h3>日本 / Japan</h3>
+            <p>一人申请，全家都可获得绿卡</p>
+            <router-link to="/japan-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
+          </div>
+        </div>
+
+         <!-- 日本 -->
+        <div class="list animation-show">
+          <img src="../../assets/images/card-portugal.jpg" class="bg" />
+          <div class="info">
+            <span>
+              <img src="../../assets/images/portugal-passport.png" />
+            </span>
+            <h3>葡萄牙 / Portugal</h3>
+            <p>一人申请，全家都可获得绿卡</p>
+            <router-link to="/portugal-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -113,36 +153,37 @@ export default {
   margin: -40px 0 20px 0;
   background: #fff;
   border-radius: 5px;
+  padding: 0 50px;
   box-shadow: 0 3px 3px 0 #ababab;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  
   a {
-    display: inline-block;
-    width: 16.666%;
-    line-height: 80px;
+    display: inline-flex;
     cursor: pointer;
     color: #111;
+    align-items: center;
+    height: 80px;
+    border-bottom: 4px  solid #fff;
     img {
-      display: inline-block;
+      display: block;
+      margin: 0 auto 5px;
       width: 30px;
-      margin-right: 10px;
     }
     i {
+      display: block;
       font-size: 14px;
+      
     }
     &.router-link-active {
-      i {
-        color: #447375;
-        padding: 28px 0;
-        font-weight: bold;
-        border-bottom: 4px  solid #447375;
-      }
+      color: #447375;
+      font-weight: bold;
+      border-bottom: 4px  solid #447375;
     }
     &:hover {
-      i {
-        color: #447375;
-        padding: 28px 0;
-        border-bottom: 4px  solid #447375;
-      }
+      color: #447375;
+      border-bottom: 4px  solid #447375;
     }
   }
   @media (max-width: 767px) {

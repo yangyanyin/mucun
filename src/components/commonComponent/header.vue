@@ -123,6 +123,21 @@ export default {
             url: 'korea-details',
             passport: require('../../assets/images/korea-passport.png'),
             name: '韩国'
+          },
+          {
+            url: 'canada-details',
+            passport: require('../../assets/images/canada-passpor.png'),
+            name: '加拿大'
+          },
+          {
+            url: 'japan-details',
+            passport: require('../../assets/images/japan-passport.png'),
+            name: '日本'
+          },
+          {
+            url: 'portugal-details',
+            passport: require('../../assets/images/portugal-passport.png'),
+            name: '葡萄牙'
           }
         ]
       },
