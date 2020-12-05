@@ -1,7 +1,7 @@
 <template>
   <div class="canada">
     <div class="banner">
-      <img src="../../assets/images/canada/canada-banner.jpg" />
+      <img :src="bannerData[pageName]" />
     </div>
     <router-view></router-view>
 
@@ -17,6 +17,18 @@ export default {
   components: {
     ContentImg,
     ContactUs
+  },
+  data () {
+    return {
+      pageName: this.$route.name,
+      bannerData: {
+        index: require('../../assets/images/canada/canada-banner.jpg'),
+        one: require('../../assets/images/canada/canada-banner1.jpg'),
+        two: require('../../assets/images/canada/canada-banner2.jpg'),
+        three: require('../../assets/images/canada/canada-banner3.jpg'),
+        four: require('../../assets/images/canada/canada-banner4.jpg')
+      }
+    }
   }
 }
 </script>

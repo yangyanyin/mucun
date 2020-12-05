@@ -235,10 +235,15 @@ export default {
     .right {
         width: 50%;
         margin-right: -10px;
+        img {
+            display: block;
+            width: 100%;
+        }
     }
     h3 {
+        text-align: left;
         color: #fff;
-        margin-bottom: 100px;
+        margin: 60px 0 45px 0;
         &:after {
             left: 0;
             margin: 0;
@@ -255,6 +260,25 @@ export default {
         }
         p {
             line-height: 32px;
+        }
+    }
+    @media (max-width:767px) {
+        .left {
+            float: none;
+            width: 100%;
+            padding: 20px 10px;
+        }
+        .right {
+            float: none;
+            width: auto;
+            margin: 0 -10px;
+        }
+        h3 {
+            margin: 20px 0 20px 0;
+        }
+        p {
+            font-size: 14px;
+            line-height: 28px;
         }
     }
 }

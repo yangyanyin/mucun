@@ -8,6 +8,8 @@
         <router-view></router-view>
       </div>
     </div>
+
+    <ContentImg></ContentImg>
     <!-- 联系我们 -->
     <ContactUs />
   </div>
@@ -16,10 +18,13 @@
 <script>
 import ContactUs from "../../components/commonComponent/ContactUs";
 import MenuItem from "../../components/MenuItem";
+import ContentImg from '../../components/ContentImg'
+
 export default {
   components: {
     ContactUs,
-    MenuItem
+    MenuItem,
+    ContentImg
   },
   data () {
     return {
@@ -31,17 +36,17 @@ export default {
         },
         {
           url: '/emigrant/tow',
-          zh_text: '投资移民项目',
+          zh_text: '股权投资移民项目',
           en_text: 'EntrePass'
         },
         {
           url: '/emigrant/three',
-          zh_text: '全球商业投资',
+          zh_text: '全球商业投资移民项目',
           en_text: 'GIP'
         },
         {
           url: '/emigrant/four',
-          zh_text: '新加坡家族办公室',
+          zh_text: '新加坡家族办公室移民项目',
           en_text: 'Singapore Family Office'
         }
       ]

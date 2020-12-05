@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="detail four">
     <Introduction :introduction="introduction"></Introduction>
 
     <Advantage :advantage="advantage"></Advantage>
@@ -100,5 +100,14 @@ export default {
   text-align: center;
   color: #447375;
   padding-bottom: 30px;
+}
+</style>
+<style lang="less">
+.canada .four{
+  .description-item {
+    > div img {
+      height: 371px;
+    }
+  }
 }
 </style>

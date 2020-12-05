@@ -74,7 +74,7 @@
             </span>
             <h3>加拿大 / Canada</h3>
             <p>一人申请，全家都可获得绿卡</p>
-            <router-link to="/korea-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
+            <router-link to="/canada-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>
 

@@ -4,6 +4,15 @@
       <img src="../../assets/images/bank/bank-banner.jpg" />
     </div>
 
+    <div class="bank-service">
+      <h3 class="title">银行开户服务介绍</h3>
+      <div class="pc-max-width">
+        <p>新加坡-全球金融中心，亚洲发达国家之一。拥有最完善的金融体系和健全的法律，稳定的政治经济环境。世界各大银行均在新加坡设有分行，是高净值人群和企业开设银行账户的最佳目的地。投资者可以根据不同需求，选择适合的银行机构。</p>
+        <p>新加坡全球护照交流中心多年来与新加坡各界银行有良好合作，提供本地三大银行异地视频开户服务，包括大华银行（UOB）、华侨银行（OCBC）、星展银行（DBS），让您足不出户就可以在新加坡开设本地银行账户。</p>
+      </div>
+    </div>
+
+
     <div class="bank-advantage pc-max-width margin-t-80">
       <h3 class="title">新加坡银行开户的优势</h3>
       <h5>新加坡的金融行业近年来发展迅速，现在已经取代了香港成为了世界第三大金融中心，位于亚洲首位。同时，新加坡吸引了大量商界人士想要在新加坡办理银行开户，为方便发拓展业务、外汇交易与金融理财等。</h5>
@@ -16,7 +25,7 @@
     </div>
 
     <div class="bank-recommend">
-      <h3 class="title">新加坡银行开户的优势</h3>
+      <h3 class="title">开户银行推荐</h3>
       <ul class="clearfix pc-max-width">
         <li class="left">
           <img src="../../assets/images/bank/bank-logo1.png">
@@ -42,18 +51,76 @@
         <li class="left">
           <img src="../../assets/images/bank/bank-logo8.png">
         </li>
+        <li class="left">
+          <img src="../../assets/images/bank/bank-logo9.png">
+        </li>
+        <li class="left">
+          <img src="../../assets/images/bank/bank-logo10.png">
+        </li>
       </ul>
       <p class="pc-max-width">新加坡本地银行: DBS 星展银行 成立于1968年，新加坡最大的银行 / OCBC 华侨银行 成立于1932年 东南亚第二大金融服务集团 / UOB 大华银行 成立于1935年 业务遍布整个亚洲 主要外资银行: Citibank 花旗银行 / HSBC 汇丰银行 / Standard Charter 渣打银行 / Maybank 马来西亚银行 / BNP Paribas 法国巴黎银行</p>
     </div>
 
-    <div class="bank-process">
-      <h3>银行个人开户申请流程</h3>
+    <div class="bank-process pc-max-width margin-t-80">
+      <h3  class="title">银行个人开户申请流程</h3>
       <p>申请步骤共7步，周期为3-4周</p>
+      <div class="sc">
+        <ul>
+          <li v-for="(item, key) in process" :key="key">
+            <span>NO.{{key + 1}}</span>
+            {{item}}
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <div class="bank-account margin-t-80">
+      <div class="pc-max-width clearfix">
+        <ul>
+          <li></li>
+          <li>准备材料</li>
+          <li>身份要求</li>
+          <li>是否到场</li>
+          <li>办理周期</li>
+          <li>账户用途</li>
+        </ul>
+        <ul>
+           <li>
+            个人银行账户 <br />I ndividual Bank Account
+          </li>
+          <li>身份证 护照 <br /> 联系电话号 <br /> 收件地址</li>
+          <li>无国籍限制</li>
+          <li>无需到场</li>
+          <li>7-10个工作日</li>
+          <li>海外留学 移民生活 <br /> 旅行消费 海外投资 <br /> 贷款 境外转账等</li>
+        </ul>
+
+        <ul>
+          <li>
+            企业银行账户 <br /> Corporate Bank Account
+          </li>
+          <li>公司注册资料, 公司业务合同 <br /> 关联公司资料 <br /> 董事、股东证件</li>
+          <li>无国籍限制</li>
+          <li>无需到场</li>
+          <li>20-30个工作日</li>
+          <li>业务收支 税务配置 <br /> 海外投资 支付外汇 <br /> 海外银行降低资金成本， 合理减税，提高资金效率 等</li>
+        </ul>
+      </div>
+    </div>
+
+    <ContentImg></ContentImg>
+
+    <ContactUs></ContactUs>
   </div>
 </template>
 <script>
+import ContentImg from '../../components/ContentImg'
+import ContactUs from '../../components/commonComponent/ContactUs'
 export default {
+  components: {
+    ContentImg,
+    ContactUs
+  },
   data () {
     return {
       bankAdvantage: [
@@ -81,7 +148,16 @@ export default {
           icon: require('../../assets/images/bank/bank-icon6.jpg'),
           text: '新加坡与中国签订了CRS协议，但没有交换落地，不会进行两国之间的信息收集与交换，保障了客户境外个人信息'
         }
-      ] 
+      ],
+      process: [
+        '与我们签约',
+        '采集相关资料',
+        '材料递交银行',
+        '银行身份确认',
+        '银行开户',
+        '激活账号',
+        '后续服务'
+      ]
     }
   }
 }
@@ -96,7 +172,6 @@ export default {
   }
   img {
     position: relative;
-    width: 100%;
     height: 100%;
     top: 0;
     left: 50%;
@@ -127,6 +202,28 @@ export default {
   }
 }
 
+.bank-service {
+  padding: 80px 0;
+  background: #F7F7F7;
+  text-align: center;
+  p {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @media(max-width: 787px) {
+    padding: 40px 0;
+    p {
+      padding: 0 10px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}
+
 .bank-advantage {
   text-align: center;
   h5 {
@@ -152,6 +249,24 @@ export default {
       line-height: 26px;
     }
   }
+  @media (max-width: 767px) {
+    h5 {
+      padding: 20px 10px 40px;
+      font-size: 14px;
+    }
+    .item {
+      width: 49%;
+      margin-right: 2% !important;
+      &:nth-child(even) {
+        margin-right: 0 !important;
+      }
+      p {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 22px;;
+      }
+    }
+  }
 }
 
 .bank-recommend {
@@ -159,11 +274,11 @@ export default {
   text-align: center;
   padding: 50px;
   ul {
-    padding: 30px 0 70px;
+    padding: 30px 0 50px;
     li {
-      width: 23%;
-      margin-right: 2.6666%;
-      &:nth-child(4n+0) {
+      width: 19%;
+      margin: 0 1.25% 30px 0;
+      &:nth-child(5n+0) {
         margin-right: 0;
       }
       img {
@@ -176,5 +291,152 @@ export default {
     padding: 0 30px;
     line-height: 28px;
   }
+  @media (max-width: 767px) {
+    padding: 20px 10px;
+    ul {
+      padding: 20px 0 30px;
+      li {
+        width: 49%;
+        margin: 0 0 1px 0 !important;
+        &:nth-child(even) {
+          float: right;
+        }
+      }
+    }
+    p {
+      padding: 0 5px;
+      line-height: 24px;
+    }
+  }
 }
+
+.bank-process {
+  p {
+    width: 220px;
+    margin: 20px auto 0;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    background: #447375;
+    opacity: 1;
+    border-radius: 90px;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 35px;
+    li {
+      position: relative;
+      color: #447375;
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        top: 23px;
+        right: -60px;
+        height: 18px;
+        background: url('../../assets/images/bank/bank-arrow-right.png') no-repeat;
+        background-size: 100%;
+      }
+      span {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 20px;
+        text-align: center;
+        line-height: 58px;
+        border: 2px solid #D9E5E6;
+        font-size: 18px;
+        background: #EDF4F3;
+        border-radius: 100%;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .sc {
+      overflow: auto;
+      padding-bottom: 20px;
+      ul {
+        width: 700px;
+        padding-top: 20px;
+        li {
+          &:after {
+            content: '';
+            top: 16px;
+            right: -38px;
+          }
+          span {
+            width: 50px;
+            height: 50px;
+            line-height: 48px;
+            margin-bottom: 10px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bank-account {
+  padding: 50px 0;
+  background: #447375;
+  ul {
+    float: left;
+    width: 32.6%;
+    margin-left: 1%;
+    &:first-child {
+      margin-left: 0;
+      li {
+        font-size: 18px; 
+      }
+    }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 60px;
+      padding: 0 10px;
+      background: #fff;
+      margin-bottom: 10px;
+      &:first-child {
+        height: 80px;
+        font-size: 18px;
+      }
+      &:nth-child(even) {
+        background: #F7F5EF;
+      }
+      &:nth-child(2) {
+        height: 114px;
+      }
+      &:last-child {
+        height: 114px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 30px 0;
+    ul {
+      li {
+        padding: 0 5px;
+        font-size: 12px;
+        &:first-child {
+          font-size: 14px;
+        }
+      }
+      &:first-child {
+        li {
+          font-size: 14px; 
+        }
+      }
+    }
+  }
+}
+
 </style>

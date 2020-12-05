@@ -72,6 +72,7 @@ export default {
       text-transform: uppercase;
       text-align: center;
       letter-spacing: 1px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       &.p1 {
         top: 220px;
         opacity: 0;

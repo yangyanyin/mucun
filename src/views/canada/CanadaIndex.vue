@@ -55,9 +55,19 @@
   .list {
     padding-top: 50px;
     .item {
+      position: relative;
       width: calc(25% - 12px);
       margin-right: 15px;
+      transition: .3s;
       background: #fff;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px #d8d8d8;
+        a {
+          background: #447375;
+          color: #fff;
+        }
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -80,6 +90,7 @@
         line-height: 38px;
         color: #447375;
         background: #FFFFFF;
+        transition: .3s;
         border: 1px solid #447375;
         border-radius: 90px;
       }

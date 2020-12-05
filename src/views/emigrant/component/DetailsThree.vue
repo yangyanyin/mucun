@@ -3,7 +3,6 @@
     <div class="title t1">
       <h3>
         <span>项目介绍</span>
-        <i>Program Introduction</i>
       </h3>
     </div>
     <div class="des">
@@ -16,7 +15,6 @@
     <div class="title t2">
       <h3>
         <span>项目优势</span>
-        <i>Program Advantage</i>
       </h3>
     </div>
     <div class="icon-box">

@@ -72,15 +72,19 @@
                 <img src="../../../assets/images/overseas-study/public-school-icon13.jpg" />
             </div>
         </div>
+
+         <Process></Process>
         
         <RecommendSchool :schoolData="schoolData"></RecommendSchool>
     </div>
 </template>
 <script>
 import RecommendSchool from './RecommendSchool'
+import Process from './Process'
 export default {
     components: {
-        RecommendSchool
+        RecommendSchool,
+        Process
     },
     data () {
         return {

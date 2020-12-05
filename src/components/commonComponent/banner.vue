@@ -67,13 +67,12 @@ export default {
   @media (max-width: 767px) {
     .img {
       padding-top: 60px;
-      height: 200px;
+      height: 240px;
       img {
-        top: 40px;
+        top: 60px;
         height: 180px;
       }
     }
   }
 }
-
 </style>

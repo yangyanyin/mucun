@@ -1,9 +1,9 @@
 <template>
   <div class="project-process margin-t-80">
     <h3 class="canada-title">项目流程</h3>
-    <div class="pc-max-width">
+    <div class="pc-max-width" >
       <ul v-for="(list, index) in stepArr" :key="index">
-        <li v-for="(item, key) in list" :key="key" :style="{width: 100 / list.length - 3 + '%'}">
+        <li v-for="(item, key) in list" :key="key" :style="{width: 100 / list.length - 3 + '%'}" :class="`step${projectProcess.length}`">
           <h3>第{{key + (index === 0? 1 : 8)}}步</h3>
           <i :class="{on: item.length > 20}">{{item}}</i>
         </li>
@@ -47,6 +47,12 @@ export default {
       text-align: center;
       border-radius: 5px;
       box-shadow: 0 0 5px 0 #bdbdbd;
+      background: #fff;
+      &.step5 {
+        &:after {
+          right: -15%;
+        }
+      }
       &:after {
         content: '';
         position: absolute;

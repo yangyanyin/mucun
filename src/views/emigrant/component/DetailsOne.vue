@@ -112,15 +112,10 @@
       </div>
     </div>
     
-    <ContentImg></ContentImg>
   </div>
 </template>
 <script>
-import ContentImg from '../../../components/ContentImg'
 export default {
-  components: {
-    ContentImg
-  }
 }
 </script>
 <style lang="less" scoped>

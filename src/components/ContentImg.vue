@@ -1,7 +1,7 @@
 <template>
   <div class="pc-max-width">
     <div class="contact">
-      <p>新加坡全球护照交流中心： <br />直营新加坡移民/银行开户/新加坡留学，家族办公室，欧盟&英联邦快速护照，不成功不收。</p>
+      <p>新加坡全球护照交流中心： <br />直营新加坡移民/银行开户/新加坡留学，家族办公室，欧盟&英联邦快速护照，不成功不收费。</p>
       <a @click="changeContact">点击客服了解更多详情</a>
     </div>
 
@@ -53,7 +53,9 @@ export default {
   margin-top: 50px;
   padding: 25px 35px;
   background: url('../assets/images/singapore-contact-bg.png') no-repeat top right;
+  background-size: 100%;
   p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     color: #fff;
     line-height: 30px;

@@ -13,16 +13,16 @@
             <a target="_blank" href="http://finance.china.com.cn/jiaoyu/20200910/5367456.shtml"><img src="../../assets/images/media-img1.png"></a>
           </li>
           <li>
-            <a target="_blank" href="http://gd.ifeng.com/a/20200819/14436830_0.shtml"><img src="../../assets/images/media-img2.png"></a>
+            <a target="_blank" href="https://gd.ifeng.com/c/v002zk7Qk--jElpeoYodb-_OqSikQ9gZgWUv9GfR7T-_oHjzeI__"><img src="../../assets/images/media-img2.png"></a>
           </li>
           <li>
             <a target="_blank" href=""><img src="../../assets/images/media-img3.png"></a>
           </li>
           <li>
-            <a target="_blank" href="https://edu.163.com/20/0831/17/FLCIBC020029985J.html"><img src="../../assets/images/media-img4.png"></a>
+            <a target="_blank" href="https://edu.163.com/20/1125/17/FS9VIVUK0029985J.html"><img src="../../assets/images/media-img4.png"></a>
           </li>
           <li>
-            <a target="_blank" href="https://biznews.sohu.com/a/419853542_120181749"><img src="../../assets/images/media-img5.png"></a>
+            <a target="_blank" href="https://biznews.sohu.com/a/436022953_120181749"><img src="../../assets/images/media-img5.png"></a>
           </li>
           <li>
             <a target="_blank" href="https://www.marketwatch.com/press-release/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore-2020-09-21"><img src="../../assets/images/media-img6.png"></a>

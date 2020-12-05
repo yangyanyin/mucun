@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="korea">
     <div class="banner">
         <img src="../../assets/images/korea-d-bn.jpg" />
     </div>
-    <div class="pc-max-width details margin-t-80">
-      <div class="clearfix animation-show">
+    <div class="details margin-t-80">
+      <div class="pc-max-width clearfix animation-show">
         <div class="img left">
           <img v-lazy="{src: require('../../assets/images/korea-details-img1.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
         </div>
@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <div class="clearfix animation-show">
+      <div class="pc-max-width clearfix animation-show">
         <div class="img right">
           <img v-lazy="{src: require('../../assets/images/korea-details-img2.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
         </div>
@@ -26,7 +26,9 @@
         </div>
       </div>
 
-      <div class="plan clearfix animation-show">
+      <Advantage :advantage="advantage"></Advantage>
+
+      <div class="plan pc-max-width clearfix animation-show">
         <img class="left" src="../../assets/images/korea-details-img3.jpg" />
         <div class="plan-des left">
           <h3>依照韩国国籍法第5条规定一般入国籍条件如下</h3>
@@ -63,10 +65,52 @@
 <script>
 import { animation, windowScroll } from "../../assets/js/config.js";
 import ContactUs from "../../components/commonComponent/ContactUs";
+import Advantage from '../canada/base/Advantage'
 
 export default {
   components: {
-    ContactUs
+    ContactUs,
+    Advantage
+  },
+  data () {
+    return {
+      advantage: {
+        title: '项目优势',
+        line_number: 6,
+        list: [
+          {
+            icon: require('../../assets/images/korea/korea-img6.jpg'),
+            title: '轻松获得发达国家绿卡',
+            text: '没有年龄、语言、学历、居住要求，也无需提供高级管理经验'
+          },
+          {
+            icon: require('../../assets/images/korea/korea-img1.jpg'),
+            title: '存款安全性高',
+            text: '该项目存款是存入韩国政府指定银行下，存入后政府会颁发投资确认书，5年后获得绿卡可以撤资。'
+          },
+          {
+            icon: require('../../assets/images/korea/korea-img3.jpg'),
+            title: '无移民监，每年只需登录一次',
+            text: 'F-2签证没有居住要求，无需长期居住在此也可以维持签证有效性，更不妨碍5年后获取绿卡'
+          },
+          {
+            icon: require('../../assets/images/korea/korea-img5.jpg'),
+            title: '可以购买永久地契 无移民监',
+            text: '世代相传的永久产权和绿卡身份证，在个人资产保障方面让投资者获得巨大安全感'
+          },
+          {
+            icon: require('../../assets/images/korea/korea-img2.jpg'),
+            title: '享受优越的医疗与教育',
+            text: '可以申请韩国的医疗保险享受高端的医疗服务。济州岛正在打造东亚英语教育城，届时会有12所世界著名国际学校入驻'
+          },
+          {
+            icon: require('../../assets/images/korea/korea-img4.jpg'),
+            title: '韩国开户、韩国税号',
+            text: '拥有身份后，就可以在韩国任意商业银行开户，办理手续简单快速；同时韩国绿卡也等同于拥有税号，可以随时使用。'
+          }
+        ]
+      },
+    }
   },
   mounted() {
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -156,6 +200,7 @@ export default {
 .plan {
   margin-top: 40px;
   background: #447375;
+  padding: 0;
   img {
     width: 600px;
   }
@@ -296,3 +341,53 @@ export default {
 }
 </style>
 
+<style lang="less">
+.korea .canada-title {
+  position: relative;
+  font-size: 28px;
+  text-align: center;
+  padding-bottom: 20px;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 42px;
+    height: 5px;
+    margin-left: -21px;
+    background: #447375FF;
+  }
+  i {
+    display: block;
+  }
+  @media (max-width: 1200px) {
+    font-size: 26px;
+    padding-bottom: 18px;
+  }
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+.korea {
+  .description .description-item {
+    background: #f7fffd;
+    > div {
+      @media (min-width: 767px) {
+        p {
+          line-height: 24px;
+        }
+        &.text {
+          width: 65%;
+        }
+        &.img {
+          width: 35%;
+        }
+        img {
+          height: 560px;
+        }
+      }
+    }
+  }
+}
+</style>

@@ -14,7 +14,8 @@
     </div>
     <ul class="navs">
       <li v-for="(navs, index) in navList" :key="index">
-        <router-link class="m" :class="{on: detailsUrl === navs.page}"
+        <!-- <router-link class="m" :class="{on: detailsUrl === navs.page}" -->
+        <router-link class="m"
           :to="navs.url">
           {{navs.name}}
           <i></i>
@@ -105,37 +106,37 @@ export default {
         project: [],
         green: [
           {
-            url: 'singapore-details',
+            url: '/singapore-details',
             passport: require('../../assets/images/Singapore-passport.png'),
-            name: '新加波'
+            name: '新加坡'
           },
           {
-            url: 'philippines-details',
+            url: '/philippines-details',
             passport: require('../../assets/images/Philippines-passport.png'),
             name: '菲律宾'
           },
           {
-            url: 'malaysia-details',
+            url: '/malaysia-details',
             passport: require('../../assets/images/Malaysia-passport.png'),
             name: '马来西亚'
           },
           {
-            url: 'korea-details',
+            url: '/korea-details',
             passport: require('../../assets/images/korea-passport.png'),
             name: '韩国'
           },
           {
-            url: 'canada-details',
+            url: '/canada-details',
             passport: require('../../assets/images/canada-passpor.png'),
             name: '加拿大'
           },
           {
-            url: 'japan-details',
+            url: '/japan-details',
             passport: require('../../assets/images/japan-passport.png'),
             name: '日本'
           },
           {
-            url: 'portugal-details',
+            url: '/portugal-details',
             passport: require('../../assets/images/portugal-passport.png'),
             name: '葡萄牙'
           }

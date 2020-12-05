@@ -54,6 +54,7 @@ export default {
     width: 33%;
     padding: 30px 40px;
     border-radius: 5px;
+    background: #fff;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
     h3 {
       position: relative;

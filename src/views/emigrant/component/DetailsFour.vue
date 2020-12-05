@@ -336,6 +336,13 @@ export default {}
   padding: 86px 20px;
   ul {
     padding: 50px 0;
+    &:last-child {
+      li {
+        &:after {
+          transform: rotate(-180deg);
+        }
+      }
+    }
     &.icon {
       position: relative;
       li:last-child {
