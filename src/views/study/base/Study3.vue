@@ -77,7 +77,7 @@ export default {
                  require('../../../assets/images/overseas-study/international-school-icon8.jpg')
             ],
             schoolData: {
-                title: '公立院校推荐',
+                title: '国际学校推荐',
                 list: [
                     {
                         icon: require('../../../assets/images/overseas-study/school/recommend-school17.png'),

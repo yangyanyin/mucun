@@ -46,7 +46,7 @@
         </li>
         <li>
           <img src="../../../assets/images/emigrant-icon6.png" />
-          <span>办理周期段<br />60天即可登录新加坡</span>
+          <span>办理周期短<br />60天即可登录新加坡</span>
         </li>
         <li>
           <img src="../../../assets/images/emigrant-icon7.png" />
@@ -69,7 +69,7 @@
         </li>
       </ul>
     </div>
-    <div class="note">注：该Ep可以作为投资公司的股东，但不参与公司管理运作<br />股权投资移民项目3至5年完成，新加坡永久居民审批周期为6至12个月。</div>
+    <div class="note">注：该EP可以作为投资公司的股东，但不参与公司管理运作<br />股权投资移民项目3至5年完成，新加坡永久居民审批周期为6至12个月。</div>
 
     <div class="process pc-max-width">
       <h5>申请流程</h5>
