@@ -9,7 +9,7 @@
           <img v-lazy="{src: require('../../assets/images/malaysia-details-img1.jpg'), loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}" />
         </div>
         <div class="des right">
-          <h3>马来西亚永居红卡 (PR)</h3>
+          <h3>马来西亚永居红卡 (MyPR)</h3>
           <p>马来西亚被公认为世界上兼具宜居和旅游属性的国家之一，在中国的“一带一路”政策的推动下，已经成为高净值人群心中的投资、置业、居住国家选择之一。因此，在马来西亚“红卡”计划推出后，吸引全球众多投资者的目光。</p>
         </div>
       </div>
@@ -159,7 +159,7 @@ export default {
     width: 600px;
   }
   .plan-des {
-    padding: 20px 50px 0;
+    padding: 50px 50px 0;
     width: calc(100% - 600px);
     h3 {
       font-size: 26px;
@@ -175,7 +175,7 @@ export default {
     p {
       position: relative;
       color: #fff;
-      padding-left: 17px;
+      // padding-left: 17px;
       font-size: 15px;
       line-height: 26px;
       margin-top: 5px;
@@ -193,6 +193,7 @@ export default {
       width: 500px;
     }
     .plan-des {
+      padding-top: 30px;
       width: calc(100% - 500px);
       h3 {
         font-size: 22px;

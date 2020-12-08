@@ -30,6 +30,11 @@ export default {
     return {
       menuList: [
         {
+          url: '/emigrant/singapore',
+          zh_text: '新加坡移民',
+          en_text: 'Singapore immigration'
+        },
+        {
           url: '/emigrant/one',
           zh_text: '自雇移民项目',
           en_text: 'Employment Pass'

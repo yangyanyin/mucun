@@ -80,6 +80,8 @@ export default {
     h4 {
       padding: 20px 0 10px;
       font-size: 16px;
+      color: #000;
+      color: #447375FF;
     }
     p {
       font-size: 13px;

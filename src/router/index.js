@@ -26,6 +26,9 @@ const Passport = () => import(/* webpackChunkName: "passport" */ '../views/passp
 const Emigrant = () => import(/* webpackChunkName: "emigrant" */ '../views/emigrant/Emigrant')
 
 /** @page 新加坡移民 One */ 
+const EmigrantSingapore = () => import(/* webpackChunkName: "emigrant" */ '../views/emigrant/component/Singapore.vue')
+
+/** @page 新加坡移民 One */ 
 const EmigrantDetailsOne = () => import(/* webpackChunkName: "emigrant" */ '../views/emigrant/component/DetailsOne')
 
 /** @page 新加坡移民 Tow */ 
@@ -145,6 +148,11 @@ const routes = [
       page: 'emigrant'
     },
     children: [
+      {
+        path: 'singapore',
+        name: 'EmigrantSingapore',
+        component: EmigrantSingapore,
+      },
       {
         path: 'one',
         name: 'EmigrantDetailsOne',

@@ -14,7 +14,6 @@
     <div class="margin-t-80 crowd">
       <div class="public-title animation-show">
         <h3>适用人群</h3>
-        <p>Suitable crowd</p>
       </div>
       <div class="content pc-max-width clearfix animation-show">
         <div class="list left">
@@ -94,7 +93,7 @@
         <div class="list left">
           <div class="info brick-item">
             <img class="img1" src="../../assets/images/city/advantage-icon1.png" />
-            <strong>门槛底</strong>
+            <strong>门槛低</strong>
             <p>条件宽松，无语言要求，精英首选方案。</p>
           </div>
         </div>
@@ -122,7 +121,7 @@
         <div class="list left">
           <div class="info brick-item">
             <img class="img5" src="../../assets/images/city/advantage-icon5.png" />
-            <strong>快速登录新加坡</strong>
+            <strong>快速登陆新加坡</strong>
             <p>获签快，最快申请人可以3个月内登录新加坡。</p>
           </div>
         </div>

@@ -24,7 +24,54 @@
       </div>
     </div>
 
-    <div class="bank-recommend">
+    <div class="bank-account margin-t-80">
+      <div class="pc-max-width clearfix">
+        <ul>
+          <li></li>
+          <li>准备材料</li>
+          <li>身份要求</li>
+          <li>是否到场</li>
+          <li>办理周期</li>
+          <li>账户用途</li>
+        </ul>
+        <ul>
+           <li>
+            个人银行账户 <br />I ndividual Bank Account
+          </li>
+          <li>身份证 护照 <br /> 联系电话号 <br /> 收件地址</li>
+          <li>无国籍限制</li>
+          <li>无需到场</li>
+          <li>7-10个工作日</li>
+          <li>海外留学 移民生活 <br /> 旅行消费 海外投资 <br /> 贷款 境外转账等</li>
+        </ul>
+
+        <ul>
+          <li>
+            企业银行账户 <br /> Corporate Bank Account
+          </li>
+          <li>公司注册资料, 公司业务合同 <br /> 关联公司资料 <br /> 董事、股东证件</li>
+          <li>无国籍限制</li>
+          <li>无需到场</li>
+          <li>20-30个工作日</li>
+          <li>业务收支 税务配置 <br /> 海外投资 支付外汇 <br /> 海外银行降低资金成本， 合理减税，提高资金效率 等</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bank-process pc-max-width margin-t-80">
+      <h3  class="title">银行个人开户申请流程</h3>
+      <p>申请步骤共7步，周期为3-4周</p>
+      <div class="sc">
+        <ul>
+          <li v-for="(item, key) in process" :key="key">
+            <span>NO.{{key + 1}}</span>
+            {{item}}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bank-recommend margin-t-80">
       <h3 class="title">开户银行推荐</h3>
       <ul class="clearfix pc-max-width">
         <li class="left">
@@ -58,54 +105,8 @@
           <img src="../../assets/images/bank/bank-logo10.png">
         </li>
       </ul>
-      <p class="pc-max-width">新加坡本地银行: DBS 星展银行 成立于1968年，新加坡最大的银行 / OCBC 华侨银行 成立于1932年 东南亚第二大金融服务集团 / UOB 大华银行 成立于1935年 业务遍布整个亚洲 主要外资银行: Citibank 花旗银行 / HSBC 汇丰银行 / Standard Charter 渣打银行 / Maybank 马来西亚银行 / BNP Paribas 法国巴黎银行</p>
-    </div>
-
-    <div class="bank-process pc-max-width margin-t-80">
-      <h3  class="title">银行个人开户申请流程</h3>
-      <p>申请步骤共7步，周期为3-4周</p>
-      <div class="sc">
-        <ul>
-          <li v-for="(item, key) in process" :key="key">
-            <span>NO.{{key + 1}}</span>
-            {{item}}
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="bank-account margin-t-80">
-      <div class="pc-max-width clearfix">
-        <ul>
-          <li></li>
-          <li>准备材料</li>
-          <li>身份要求</li>
-          <li>是否到场</li>
-          <li>办理周期</li>
-          <li>账户用途</li>
-        </ul>
-        <ul>
-           <li>
-            个人银行账户 <br />I ndividual Bank Account
-          </li>
-          <li>身份证 护照 <br /> 联系电话号 <br /> 收件地址</li>
-          <li>无国籍限制</li>
-          <li>无需到场</li>
-          <li>7-10个工作日</li>
-          <li>海外留学 移民生活 <br /> 旅行消费 海外投资 <br /> 贷款 境外转账等</li>
-        </ul>
-
-        <ul>
-          <li>
-            企业银行账户 <br /> Corporate Bank Account
-          </li>
-          <li>公司注册资料, 公司业务合同 <br /> 关联公司资料 <br /> 董事、股东证件</li>
-          <li>无国籍限制</li>
-          <li>无需到场</li>
-          <li>20-30个工作日</li>
-          <li>业务收支 税务配置 <br /> 海外投资 支付外汇 <br /> 海外银行降低资金成本， 合理减税，提高资金效率 等</li>
-        </ul>
-      </div>
+      <p class="pc-max-width">新加坡本地银行: DBS 星展银行 成立于1968年，新加坡最大的银行 / OCBC 华侨银行 成立于1932年 东南亚第二大金融服务集团 / UOB 大华银行 成立于1935年 业务遍布整个亚洲 
+        <br />主要外资银行: Citibank 花旗银行 / HSBC 汇丰银行 / Standard Chartered 渣打银行 / Maybank 马来西亚银行 / BNP Paribas 法国巴黎银行</p>
     </div>
 
     <ContentImg></ContentImg>
