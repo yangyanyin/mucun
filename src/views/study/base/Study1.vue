@@ -30,10 +30,16 @@
                 </div>
             </div>
         </div>
+
+        <EnrollmentPlan v-if="1 === 2"></EnrollmentPlan>
     </div>
 </template>
 <script>
+import EnrollmentPlan from '../../../components/EnrollmentPlan'
 export default {
+    components: {
+        EnrollmentPlan
+    },
     data () {
         return {
             listData: [
