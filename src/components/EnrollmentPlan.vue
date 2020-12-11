@@ -170,6 +170,10 @@ export default {
       border-radius: 5px;
       overflow: hidden;
     }
+    select {
+      background: url('../assets/images/select-tag.png') no-repeat 95% 47%;
+      background-size: 12px;
+    }
     p {
       position: absolute;
       color: #437375;
