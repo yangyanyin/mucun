@@ -30,8 +30,7 @@
                 </div>
             </div>
         </div>
-
-        <EnrollmentPlan v-if="1 === 2"></EnrollmentPlan>
+        <EnrollmentPlan></EnrollmentPlan>
     </div>
 </template>
 <script>

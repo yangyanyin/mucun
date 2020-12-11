@@ -82,6 +82,7 @@ export default {
   @media (max-width: 767px) {
     margin-top: 20px;
     padding: 20px 15px;
+    background: url('../assets/images/singapore-contact-bg.png') no-repeat center center;
     p {
       font-size: 14px;
       line-height: 22px;
