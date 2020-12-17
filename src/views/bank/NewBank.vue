@@ -36,7 +36,7 @@
         </ul>
         <ul>
            <li>
-            个人银行账户 <br />I ndividual Bank Account
+            个人银行账户 <br />Individual Bank Account
           </li>
           <li>身份证 护照 <br /> 联系电话号 <br /> 收件地址</li>
           <li>无国籍限制</li>

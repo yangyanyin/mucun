@@ -11,6 +11,57 @@
       <span>全球精英最可靠移民方案</span>
     </div>
 
+    <div class="immigration advantage margin-t-80">
+      <div class="public-title animation-show">
+        <h3>新加坡移民优势</h3>
+        <p>移民新加坡 尽享六大福利</p>
+      </div>
+      <div class="content pc-max-width clearfix">
+        <div class="list left animation-show">
+          <div class="info brick-item">
+            <img class="img1" src="../../assets/images/city/advantage-icon6.png" />
+            <strong>精英教育</strong>
+            <p>全球知名高校、教育中西兼容并蓄，双语教育发达，剑桥体系的教育系统，成绩受世界认可</p>
+          </div>
+        </div>
+        <div class="list left animation-show">
+          <div class="info brick-item">
+            <img class="img1" src="../../assets/images/city/advantage-icon7.png" />
+            <strong>金融中心</strong>
+            <p>全球第四大外汇交易中心，在国际金融、贸易融资、海事金融、保险、财务运作、资产及财富管理方面拥有领先地位</p>
+          </div>
+        </div>
+        <div class="list left animation-show">
+          <div class="info brick-item">
+            <img class="img1" src="../../assets/images/city/advantage-icon8.png" />
+            <strong>税务天堂</strong>
+            <p>新加坡税收体系简单低廉，无资本税，区域征税，资金可在主要金融中心自由流动</p>
+          </div>
+        </div>
+        <div class="list left animation-show">
+          <div class="info brick-item">
+            <img class="img1" src="../../assets/images/city/advantage-icon9.png" />
+            <strong>全球通行</strong>
+            <p>护照免签190多个国家，包括美国、日本、中国和欧洲大部分国家，相当于 “国际通行证”</p>
+          </div>
+        </div>
+        <div class="list left animation-show">
+          <div class="info brick-item">
+            <img class="img1" src="../../assets/images/city/advantage-icon10.png" />
+            <strong>医疗福利</strong>
+            <p>新加坡拥有发达的医疗设施和极高的医疗水平，可以让全家人高枕无忧</p>
+          </div>
+        </div>
+        <div class="list left animation-show">
+          <div class="info brick-item">
+            <img class="img1" src="../../assets/images/city/advantage-icon11.png" />
+            <strong>花园城市</strong>
+            <p>全球知名“花园城市”，街道干净整洁，空气清新，气候宜人，极其适合居住与生活</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="margin-t-80 crowd">
       <div class="public-title animation-show">
         <h3>适用人群</h3>
@@ -170,57 +221,6 @@
           </p>
         </li>
       </ul>
-    </div>
-
-    <div class="immigration advantage margin-t-80">
-      <div class="public-title animation-show">
-        <h3>新加坡移民优势</h3>
-        <p>移民新加坡 尽享六大福利</p>
-      </div>
-      <div class="content pc-max-width clearfix">
-        <div class="list left animation-show">
-          <div class="info brick-item">
-            <img class="img1" src="../../assets/images/city/advantage-icon6.png" />
-            <strong>精英教育</strong>
-            <p>全球知名高校、教育中西兼容并蓄，双语教育发达，剑桥体系的教育系统，成绩受世界认可</p>
-          </div>
-        </div>
-        <div class="list left animation-show">
-          <div class="info brick-item">
-            <img class="img1" src="../../assets/images/city/advantage-icon7.png" />
-            <strong>金融中心</strong>
-            <p>全球第四大外汇交易中心，在国际金融、贸易融资、海事金融、保险、财务运作、资产及财富管理方面拥有领先地位</p>
-          </div>
-        </div>
-        <div class="list left animation-show">
-          <div class="info brick-item">
-            <img class="img1" src="../../assets/images/city/advantage-icon8.png" />
-            <strong>税务天堂</strong>
-            <p>新加坡税收体系简单低廉，无资本税，区域征税，资金可在主要金融中心自由流动</p>
-          </div>
-        </div>
-        <div class="list left animation-show">
-          <div class="info brick-item">
-            <img class="img1" src="../../assets/images/city/advantage-icon9.png" />
-            <strong>全球通行</strong>
-            <p>护照免签190多个国家，包括美国、日本、中国和欧洲大部分国家，相当于 “国际通行证”</p>
-          </div>
-        </div>
-        <div class="list left animation-show">
-          <div class="info brick-item">
-            <img class="img1" src="../../assets/images/city/advantage-icon10.png" />
-            <strong>医疗福利</strong>
-            <p>新加坡拥有发达的医疗设施和极高的医疗水平，可以让全家人高枕无忧</p>
-          </div>
-        </div>
-        <div class="list left animation-show">
-          <div class="info brick-item">
-            <img class="img1" src="../../assets/images/city/advantage-icon11.png" />
-            <strong>花园城市</strong>
-            <p>全球知名“花园城市”，街道干净整洁，空气清新，气候宜人，极其适合居住与生活</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -593,7 +593,7 @@ export default {
 }
 .process {
   width: 750px;
-  padding-top: 80px;
+  padding: 80px 0;
   margin: auto;
   ul {
     position: relative;
