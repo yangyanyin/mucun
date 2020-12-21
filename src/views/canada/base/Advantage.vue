@@ -63,6 +63,25 @@ export default {
         }
       }
     }
+    .line-6 {
+      display: block;
+      .item {
+        width: 15.5%;
+        margin-right: 1.32%;
+        h4 {
+          font-size: 14px;
+        }
+        p {
+          font-size: 12px;
+        }
+        &:nth-child(3n+0) {
+          margin-right: 1.32%;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
   .item {
     width: 26%;

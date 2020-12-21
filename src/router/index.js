@@ -16,6 +16,9 @@ const Asset = () => import(/* webpackChunkName: "asset" */ '../views/asset/Asset
 /** @page 护照项目列表 */ 
 const ProjectList = () => import(/* webpackChunkName: "project" */ '../views/project/ProjectList')
 
+/** @page 护照项目瓦努阿图详情 */ 
+const VanuatuDetail = () => import(/* webpackChunkName: "project" */ '../views/project/VanuatuDetail.vue')
+
 /** @page 护照项目详情 */ 
 const ProjectDetails = () => import(/* webpackChunkName: "project" */ '../views/project/ProjectDetails')
 
@@ -123,6 +126,11 @@ const routes = [
     meta: {
       page: 'project'
     }
+  },
+  {
+    path: '/project/vanuatu',
+    name: 'vanuatu-detail',
+    component: VanuatuDetail
   },
   {
     path: '/project/details/:id',
