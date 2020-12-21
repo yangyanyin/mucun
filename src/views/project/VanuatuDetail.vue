@@ -1,23 +1,39 @@
 <template>
   <div class="detail">
     <ProjectBanner name="vanuatu" />
-    <div class="pc-max-width clearfix">
-      <div class="left">
-        <!-- 项目简介 -->
-        <Introduction :introduction="introduction" />
+    <div class="pc-max-width">
+      <div class="content clearfix">
+        <div class="left">
+          <!-- 项目简介 -->
+          <Introduction :introduction="introduction" />
 
-        <!-- 项目优势 -->
-        <Advantage :advantage="advantage" />
+          <!-- 项目优势 -->
+          <Advantage :advantage="advantage" />
 
-        <!-- 项目入籍方案 -->
-        <Program :program="program" tips="捐赠入籍计划" />
+          <!-- 项目入籍方案 -->
+          <Program :program="program" tips="捐赠入籍计划" />
 
-        <!-- 如何获得瓦努阿图护照 -->
-        <Obtain :obtain="obtain" />
-        
+          <!-- 如何获得瓦努阿图护照 -->
+          <Obtain :obtain="obtain" />
+
+          <!-- 申请流程 -->
+          <Application :application="application" />
+          
+        </div>
+        <div class="right">
+          <!-- 评分 -->
+          <Score :score="score" />
+
+          <!-- 地图信息 -->
+          <MapInfo :mapInfo="mapInfo" />
+
+          <!-- 下载手册 -->
+          <DownloadManual />
+        </div>  
       </div>
-      <div class="right"></div>
     </div>
+    <ContentImg />
+    <ContactUs />
   </div>
 </template>
 <script>
@@ -26,13 +42,25 @@ import Introduction from './base/Introduction.vue'
 import Advantage from './base/Advantage.vue'
 import Program from './base/Program.vue'
 import Obtain from './base/Obtain.vue'
+import Application from './base/Application.vue'
+import Score from './base/Score.vue'
+import MapInfo from './base/MapInfo.vue'
+import DownloadManual from './base/DownloadManual.vue'
+import ContactUs from '../../components/commonComponent/ContactUs'
+import ContentImg from '../../components/ContentImg'
 export default {
   components: {
     ProjectBanner,
     Introduction,
     Advantage,
     Program,
-    Obtain
+    Obtain,
+    Application,
+    ContactUs,
+    ContentImg,
+    Score,
+    MapInfo,
+    DownloadManual
   },
   data () {
     return {
@@ -99,6 +127,37 @@ export default {
           '3）18至25周岁全日子在读、经济依赖父母的子女',
           '4）50周岁及以上双方父母'
         ]
+      },
+      application: [
+        '签约 <br /> 确定项目',
+        '由移民律师楼递交申请材料',
+        '移民局背景调查',
+        '获得议会公民权 <br /> 原则性批复函',
+        '完成投资',
+        '领取护照 <br /> 与公民证书'
+      ],
+      score: {
+        icon: 'https://cms.aicassets.com/images/default/5e7acd99c5e39.png',
+        ranking: 40,
+        free: 130,
+        stars: 7
+      },
+      mapInfo: {
+        icon: require('../../assets/images/passport/vanuatu-map.png'),
+        title: '瓦努阿图地理位置与基本信息',
+        info: {
+          首都: '维拉港 Port Vila',
+          官方语言: '法语、英语 、比斯拉马语',
+          货币: '瓦图',
+          兑换率: '16.16 VUV = 1 CNY',
+          时区: 'GMT+11',
+          人口: '29.27 万',
+          人均GDP: '3,123.89 美元',
+          国土面积: '12186平方公里',
+          居住要求: '低',
+          移民周期: '1个月',
+          证件类型: '护照'
+        }
       }
     }
   }
@@ -106,12 +165,17 @@ export default {
 </script>
 <style scoped lang="less">
 .detail {
+  .content {
+    background: #fafafa;
+  }
   .left {
-    width: 65%;
-    padding: 50px 0;
+    width: 67%;
+    padding: 50px 5% 50px 0;
+    background: #fff;
   }
   .right {
-    width: 32%;
+    width: 33%;
+    padding: 40px;
   }
 }
 </style>
