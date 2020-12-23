@@ -12,13 +12,15 @@ export default {
           name: '圣基茨和尼维斯',
           hot: true,
           flag: require('../../assets/images/country5.png'),
-          url: '/project/saint-kitts'
+          url: '/project/saint-kitts',
+          img: require('../../assets/images/passport/SaintLucia-img.jpg')
         },
         {
           name: '土耳其',
           hot: true,
           flag: require('../../assets/images/country7.png'),
-          url: '/project/turkey'
+          url: '/project/turkey',
+          img: require('../../assets/images/passport/Turkey-img.jpg')
         },
         {
           name: '圣卢西亚',
