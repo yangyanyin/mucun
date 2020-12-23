@@ -11,10 +11,10 @@
           <Advantage :advantage="advantage" />
 
           <!-- 项目入籍方案 -->
-          <Program :program="program" tips="捐赠入籍计划" />
+          <Program :program="program" title="项目入籍方案：捐献入籍计划" />
 
           <!-- 如何获得瓦努阿图护照 -->
-          <Obtain :obtain="obtain" />
+          <Obtain :obtain="obtain" titleName="如何获得瓦努阿图护照" />
 
           <!-- 申请流程 -->
           <Application :application="application" />
@@ -28,7 +28,7 @@
           <MapInfo :mapInfo="mapInfo" />
 
           <!-- 下载手册 -->
-          <DownloadManual />
+          <DownloadManual countryName="瓦努阿图 <br /> Vanuatu" />
         </div>  
       </div>
     </div>
@@ -110,12 +110,17 @@ export default {
           icon: require('../../assets/images/passport/vanuatu-icon8.jpg')
         }
       ],
-      program: [{
-        '单人申请': ['国家捐款$80,000'],
-        '夫妻申请': ['国家捐款$100,000'],
-        '一家三口申请': ['国家捐款$115,000'],
-        '一家四口申请': ['国家捐款$130,000'],
-      }],
+      program: [
+        {
+          title: '捐赠入籍计划',
+          item : {
+            '单人申请': ['国家捐款$80,000'],
+            '夫妻申请': ['国家捐款$100,000'],
+            '一家三口申请': ['国家捐款$115,000'],
+            '一家四口申请': ['国家捐款$130,000'],
+          }
+        }
+      ],
       obtain: {
         '1.主申请人年满18周岁': '',
         '2.无犯罪证明 ': '',

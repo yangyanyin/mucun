@@ -1,16 +1,19 @@
-<!-- 护照项目-项目入籍方案：捐献入籍计划 -->
+<!-- 护照项目-项目入籍方案 -->
 <template>
 	<div class="program">
-		<Title name="项目入籍方案：捐献入籍计划" />
-		<p>{{tips}}</p>
-		<ul v-for="(list, l) in program" :key="l" class="clearfix">
-			<li v-for="(item, name, k) in list" :key="k" class="left">
-				<h3>{{name}}</h3>
-				<span v-for="(t, i) in item" :key="i">
-					{{t}}
-				</span>
-			</li>
-		</ul>
+		<Title :name="title" />
+		<template v-for="(dome, s) in program">
+			<p :key="dome.title + s">{{dome.title}}</p>
+			<ul :key="s" class="clearfix">
+				<li v-for="(list, name, l) in dome.item" :key="l" class="left">
+					<h3>{{name}}</h3>
+					<span v-for="(t, i) in list" :key="i" :class="{odd: i%2}">
+						{{t}}
+					</span>
+				</li>
+			</ul>
+		</template>
+		
 		<em>*以上费用根据国家政策而改变</em>
 	</div>
 </template>
@@ -20,7 +23,7 @@ import Title from '../base/Title'
 export default {
 	props: {
 		program: Array,
-		tips: String
+		title: String
 	},
 	components: {
 		Title
@@ -58,6 +61,9 @@ export default {
 				line-height: 40px;
 				color: #447375;
 				background: #E9EFED;
+				&.odd {
+					background: #FAFAFA;
+				}
 			}
 		}
 	}

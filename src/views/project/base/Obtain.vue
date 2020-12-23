@@ -1,7 +1,7 @@
 <!-- 护照项目-如何获得护照 -->
 <template>
 	<div class="obtain">
-		<Title name="如何获得瓦努阿图护照" />
+		<Title :name="titleName" />
 		<ul>
 			<li v-for="(item, name, key) in obtain" :key="key">
 				{{name}}
@@ -15,7 +15,8 @@
 import Title from '../base/Title'
 export default {
 	props: {
-		obtain: Object
+		obtain: Object,
+		titleName: String
 	},
 	components: {
 		Title

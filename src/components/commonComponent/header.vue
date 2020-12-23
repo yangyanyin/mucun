@@ -21,7 +21,7 @@
           <i></i>
         </router-link>
         <div v-if="navs.down" class="project-select">
-          <router-link :to="menu.url || '/project/details/' + menu.country_id" v-for="(menu, key) in projectDown[navs.page]" :key="key">
+          <router-link :to="menu.url" v-for="(menu, key) in projectDown[navs.page]" :key="key">
             <img :src="menu.passport" /> 
             <span>{{menu.name}}</span>
           </router-link>
@@ -103,7 +103,54 @@ export default {
       ],
       detailsUrl: this.$route.meta.page,
       projectDown: {
-        project: [],
+        project: [
+          {
+            url: '/project/vanuatu',
+            passport: 'https://cms.aicassets.com/images/default/5e7acd99c5e39.png',
+            name: '瓦努阿图'
+          },
+          {
+            url: '/project/saint-kitts',
+            passport: 'https://cms.aicassets.com/images/default/5e8ed460ea158.png',
+            name: '圣基茨和尼维斯'
+          },
+          {
+            url: '/project/cyprus',
+            passport: 'https://cms.aicassets.com/images/default/5cde1f501a3b8.png',
+            name: '塞浦路斯'
+          },
+          {
+            url: '/project/dominica',
+            passport: 'https://cms.aicassets.com/images/default/5cde1f5ccd217.png',
+            name: '多米尼克'
+          },
+          {
+            url: '/project/grenada',
+            passport: 'https://cms.aicassets.com/images/default/5cde1f6790489.png',
+            name: '格林纳达'
+          },
+          {
+            url: '/project/saint-lucia',
+            passport: 'https://cms.aicassets.com/images/default/5cde1f4771698.png',
+            name: '圣卢西亚'
+          },
+          {
+            url: '/project/turkey',
+            passport: 'https://cms.aicassets.com/images/default/5e8ed46f3c25e.png',
+            name: '土耳其'
+          },
+          {
+            url: '/project/antigua',
+            passport: 'https://cms.aicassets.com/images/default/5e7d8efad383b.png',
+            name: '安提瓜和巴布达'
+          },
+          {
+            url: '/project/montenegro',
+            passport: require('../../assets/images/passport/montenegro-passport.jpg'),
+            name: '黑山'
+          },
+          
+        ],
         green: [
           {
             url: '/singapore-details',
@@ -144,7 +191,8 @@ export default {
       },
       isFixed: false,
       scrollPx: 0,
-      headerFixed: false
+      headerFixed: false,
+      
     };
   },
   methods: {
@@ -158,16 +206,7 @@ export default {
     } else {
       this.isFixed = false
     }
-    this.$http({
-      method: "get",
-      url: process.env.VUE_APP_API + "/v1/countries "
-    }).then(res => {
-      if (res.data.code === 200) {
 
-        this.projectDown.project = res.data.data
-      }
-    });
-    
 
     window.addEventListener('scroll', () => {
       let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
@@ -315,6 +354,9 @@ export default {
         a:nth-child(8){
           animation: project8 .3s 1.6s forwards;
         }
+        a:nth-child(9){
+          animation: project9 .3s 1.8s forwards;
+        }
       }
 
     }
@@ -330,13 +372,13 @@ export default {
     a {
       opacity: 0;
       display: inline-block;
-      width: 120px;
+      width: 110px;
       text-align: center;
       color: #FFE19A;
       margin: 35px 10px 0;
       transform: translateY(10px);
       @media (max-width: 1160px) {
-        width: 110px;
+        width: 100px;
         margin: 35px 5px;
       }
       &:hover {
@@ -350,7 +392,7 @@ export default {
       img {
         display: block;
         margin: 0 auto 20px;
-        width: 100px;
+        width: 90px;
         transition: .3s;
       }
     }
@@ -577,6 +619,12 @@ export default {
   }
 }
 @keyframes project8 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes project9 {
   100% {
     transform: translateY(0);
     opacity: 1;

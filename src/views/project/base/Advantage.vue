@@ -48,6 +48,7 @@ ul {
 			color: #447375;
 		}
 		p {
+			min-height: 60px;
 			font-size: 12px;
 			line-height: 20px;
 		}

@@ -2,7 +2,7 @@
   <div class="download">
     <h3>下载手册（PDF）</h3>
     <div class="pdf">
-      <i>瓦努阿图 <br /> Vanuatu</i>
+      <i v-html="countryName"></i>
     </div>
     <p>*填写资料即可获取项目资料</p>
 
@@ -14,12 +14,16 @@
 
 <script>
 export default {
+  props: {
+    countryName: String
+  }
 
 }
 </script>
 
 <style scoped lang="less">
 .download {
+  display: none;
   padding-top: 50px;
   h3 {
     font-size: 16px;

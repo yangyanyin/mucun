@@ -8,12 +8,16 @@
     <img class="flag" :src="score.icon"  />
     <div>
       <span>全球排名</span>
-      <em></em>
+      <em>
+        <s :style="{width: score.ranking/200 * 100 + '% '}"></s>
+      </em>
       <i>{{score.ranking}}</i>
     </div>
     <div>
       <span>免签国家</span>
-      <em></em>
+      <em>
+        <s :style="{width: score.free/200 * 100 + '%'}"></s>
+      </em>
       <i>{{score.free}}</i>
     </div>
 
@@ -72,6 +76,13 @@ export default {
       height: 8px;
       background: #D9D9D9;
       border-radius: 90px;
+      s {
+        display: block;
+        height: 8px;
+        background: #447375;
+        border-top-left-radius: 90px;
+        border-bottom-left-radius: 90px;
+      }
     }
     i {
       position: absolute;
@@ -92,9 +103,12 @@ export default {
         width: 14px;
         height: 14px;
         background: #D9D9D9;
+        background: url('../../../assets//images/passport/star-not.png') no-repeat;
+        background-size: 100%;
         border-radius: 100%;
         &.on {
-          background: #FFC640;
+          background: url('../../../assets//images/passport/star.png') no-repeat;
+          background-size: 100%;
         }
       }
     }

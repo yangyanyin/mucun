@@ -16,8 +16,16 @@ const Asset = () => import(/* webpackChunkName: "asset" */ '../views/asset/Asset
 /** @page 护照项目列表 */ 
 const ProjectList = () => import(/* webpackChunkName: "project" */ '../views/project/ProjectList')
 
-/** @page 护照项目瓦努阿图详情 */ 
+/** @page 护照项目详情 */ 
 const VanuatuDetail = () => import(/* webpackChunkName: "project" */ '../views/project/VanuatuDetail.vue')
+const CyprusDetail = () => import(/* webpackChunkName: "project" */ '../views/project/CyprusDetail.vue')
+const SaintKittsDetail = () => import(/* webpackChunkName: "project" */ '../views/project/SaintKittsDetail.vue')
+const DominicaDetail = () => import(/* webpackChunkName: "project" */ '../views/project/DominicaDetail.vue')
+const GrenadaDetail = () => import(/* webpackChunkName: "project" */ '../views/project/GrenadaDetail.vue')
+const SaintLuciaDetail = () => import(/* webpackChunkName: "project" */ '../views/project/SaintLuciaDetail.vue')
+const AntiguaDetai = () => import(/* webpackChunkName: "project" */ '../views/project/AntiguaDetai.vue')
+const TurkeyDetai = () => import(/* webpackChunkName: "project" */ '../views/project/TurkeyDetai.vue')
+const MontenegroDetail = () => import(/* webpackChunkName: "project" */ '../views/project/MontenegroDetail.vue')
 
 /** @page 护照项目详情 */ 
 const ProjectDetails = () => import(/* webpackChunkName: "project" */ '../views/project/ProjectDetails')
@@ -131,6 +139,46 @@ const routes = [
     path: '/project/vanuatu',
     name: 'vanuatu-detail',
     component: VanuatuDetail
+  },
+  {
+    path: '/project/cyprus',
+    name: 'cyprus-detail',
+    component: CyprusDetail
+  },
+  {
+    path: '/project/saint-kitts',
+    name: 'saint-kitts-detail',
+    component: SaintKittsDetail
+  },
+  {
+    path: '/project/dominica',
+    name: 'dominica-detail',
+    component: DominicaDetail
+  },
+  {
+    path: '/project/grenada',
+    name: 'grenada-detail',
+    component: GrenadaDetail
+  },
+  {
+    path: '/project/saint-lucia',
+    name: 'saint-lucia-detail',
+    component: SaintLuciaDetail
+  },
+  {
+    path: '/project/antigua',
+    name: 'antigua-detail',
+    component: AntiguaDetai
+  },
+  {
+    path: '/project/turkey',
+    name: 'turkey-detail',
+    component: TurkeyDetai
+  },
+  {
+    path: '/project/montenegro',
+    name: 'montenegro-detail',
+    component: MontenegroDetail
   },
   {
     path: '/project/details/:id',

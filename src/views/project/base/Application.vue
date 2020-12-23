@@ -26,13 +26,14 @@ export default {
 .application {
 	margin-top: 40px;
 	ul {
-		padding-top: 50px;
+		padding-top: 30px;
 		text-align: center;
 		li {
 			position: relative;
 			width: 16.6666%;
 			padding: 0 10px;
-			&:first-child {
+			margin-top: 20px;
+			&:first-child, &:nth-child(7) {
 				&:after {
 					display: none;
 				}
@@ -61,6 +62,7 @@ export default {
 				border: 4px solid #bad8c4;
 			}
 			p {
+				min-height: 66px;
 				padding-top: 15px;
 				font-size: 12px;
 				color: #447375;
