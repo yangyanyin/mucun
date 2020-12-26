@@ -40,6 +40,13 @@ export default {
 		@media(max-width: 1200px) {
 			height: 260px;
 		}
+		@media (max-width: 767px) {
+			height: 180px;
+			left: 95%;
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: 30px;
 	}
 }
 </style>

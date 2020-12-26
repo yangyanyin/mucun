@@ -187,5 +187,20 @@ export default {
     width: 33%;
     padding: 40px;
   }
+  @media(max-width: 767px) {
+    .content {
+      background: #fff;
+    }
+    .left {
+      width: auto;
+      margin: 0 -10px;
+      border-top: 1px solid #D9D9D9;
+      padding: 20px 0 0 0;
+    }
+    .right {
+      width: 100%;
+      padding: 20px 10px;
+    }
+  }
 }
 </style>

@@ -73,6 +73,21 @@ export default {
 		color: #C9C9C9;
 		font-size: 12px;
 	}
-	
+	@media (max-width: 767px) {
+		margin-top: 20px;
+		padding: 0 10px 20px;
+		p {
+			text-align: center;
+			padding: 20px 0 0;
+		}
+		ul {
+			margin: 10px 0;
+			li {
+				width: 50%;
+				margin: 20px 0 0;
+				padding: 0 10px;
+			}
+		}
+	}
 }
 </style>

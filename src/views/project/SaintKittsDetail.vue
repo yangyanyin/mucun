@@ -3,6 +3,16 @@
     <ProjectBanner name="saintKitts" />
     <div class="pc-max-width">
       <div class="content clearfix">
+        <div class="right">
+          <!-- 评分 -->
+          <Score :score="score" />
+
+          <!-- 地图信息 -->
+          <MapInfo :mapInfo="mapInfo" />
+
+          <!-- 下载手册 -->
+          <DownloadManual countryName="塞浦路斯 <br /> Cyprus" />
+        </div>  
         <div class="left">
           <!-- 项目简介 -->
           <Introduction :introduction="introduction" />
@@ -20,16 +30,6 @@
           <Application :application="application" />
           
         </div>
-        <div class="right">
-          <!-- 评分 -->
-          <Score :score="score" />
-
-          <!-- 地图信息 -->
-          <MapInfo :mapInfo="mapInfo" />
-
-          <!-- 下载手册 -->
-          <DownloadManual countryName="塞浦路斯 <br /> Cyprus" />
-        </div>  
       </div>
     </div>
     <ContentImg />
@@ -191,6 +191,21 @@ export default {
   .right {
     width: 33%;
     padding: 40px;
+  }
+  @media(max-width: 767px) {
+    .content {
+      background: #fff;
+    }
+    .left {
+      width: auto;
+      margin: 0 -10px;
+      border-top: 1px solid #D9D9D9;
+      padding: 20px 0 0 0;
+    }
+    .right {
+      width: 100%;
+      padding: 20px 10px;
+    }
   }
 }
 </style>

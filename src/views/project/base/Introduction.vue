@@ -26,5 +26,8 @@ export default {
 		font-size: 12px;
 		line-height: 26px;
 	}
+	@media (max-width: 767px) {
+		padding: 0 20px 20px;
+	}
 }
 </style>

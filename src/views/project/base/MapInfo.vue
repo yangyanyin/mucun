@@ -38,5 +38,11 @@ export default {
       }
     }
   }
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    p {
+      line-height: 26px;
+    }
+  }
 }
 </style>

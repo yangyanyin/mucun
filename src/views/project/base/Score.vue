@@ -141,6 +141,18 @@ export default {
       border: 1px solid #4F7274;
     }
   }
+  @media (max-width: 767px) {
+    .flag {
+      width: 80px;
+      top: -80px;
+    }
+    >div {
+      margin-top: 10px;
+    }
+    .seg {
+      margin-top: 30px;
+    }
+  }
 }
 
 </style>

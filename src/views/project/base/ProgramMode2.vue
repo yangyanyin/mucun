@@ -73,6 +73,12 @@ export default {
 		color: #C9C9C9;
 		font-size: 12px;
 	}
-	
+	@media (max-width: 767px) {
+		margin-top: 20px;
+		padding: 0 20px 20px;
+		em {
+			margin-top: 20px;
+		}
+	}
 }
 </style>

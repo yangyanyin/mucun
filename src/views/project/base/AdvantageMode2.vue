@@ -5,7 +5,7 @@
 		<Title name="项目优势" />
 		<ul class="clearfix">
 			<li class="clearfix" v-for="(item, key) in advantage" :key="key">
-				<template v-if="key%2">
+				<template v-if="key%2 && isSevice === 'web'">
 					<p v-html="item.des"></p>
 					<img :src="item.icon" />
 			
@@ -21,12 +21,18 @@
 
 <script>
 import Title from '../base/Title'
+import { device } from '../../../assets/js/config'
 export default {
 	props: {
 		advantage: Array
 	},
 	components: {
 		Title
+	},
+	data () {
+		return {
+			isSevice: device()
+		}
 	}
 }
 </script>
@@ -51,6 +57,21 @@ export default {
 		padding: 20px;
 		font-size: 12px;
 		line-height: 20px;
+	}
+	@media (max-width: 767px) {
+		margin-top: 20px;
+		padding: 0 20px 20px;
+		li {
+			display: block;
+			margin-top: 20px;
+		}
+		img {
+			width: 100%;
+		}
+		p {
+			width: 100%;
+			padding: 10px;
+		}
 	}
 }
 </style>

@@ -14,7 +14,8 @@ const Bank = () => import(/* webpackChunkName: "bank" */ '../views/bank/NewBank'
 const Asset = () => import(/* webpackChunkName: "asset" */ '../views/asset/Asset')
 
 /** @page 护照项目列表 */ 
-const ProjectList = () => import(/* webpackChunkName: "project" */ '../views/project/ProjectList')
+// const ProjectList = () => import(/* webpackChunkName: "project" */ '../views/project/ProjectList')
+const CountryList = () => import(/* webpackChunkName: "project" */ '../views/project/CountryList')
 
 /** @page 护照项目详情 */ 
 const VanuatuDetail = () => import(/* webpackChunkName: "project" */ '../views/project/VanuatuDetail.vue')
@@ -129,8 +130,8 @@ const routes = [
   },
   {
     path: '/project',
-    name: 'ProjectList',
-    component: ProjectList,
+    name: 'country-list',
+    component: CountryList,
     meta: {
       page: 'project'
     }

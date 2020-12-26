@@ -62,5 +62,19 @@ export default {
 			padding-left: 10px;
 		}
 	}
+	@media (max-width: 767px) {
+		margin-top: 20px;
+		padding: 0 20px 20px;
+		ul {
+			padding-top: 20px;
+			li {
+				padding-left: 20px;
+				line-height: 24px;
+				i {
+					padding: 0;
+				}
+			}
+		}
+	}
 }
 </style>

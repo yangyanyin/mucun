@@ -29,6 +29,10 @@ export default {
 	margin-top: 40px;
 	padding-bottom: 40px;
 	border-bottom: 1px solid #E3E3E3;
+	@media (max-width: 767px) {
+		margin-top: 20px;
+		padding: 0 10px 20px;
+	}
 }
 ul {
 	li {
@@ -52,6 +56,23 @@ ul {
 			font-size: 12px;
 			line-height: 20px;
 		}
+		@media (max-width: 767px) {
+			width: 50%;
+			margin: 0;
+			padding: 10px;
+			h3 {
+				padding: 8px 0 6px;
+			}
+			p {
+				line-height: 18px;
+				height: 72px;
+				overflow: hidden;     
+				display: -webkit-box;
+				-webkit-line-clamp: 4; 
+				text-align: center;
+			}
+		}
+
 	}
 }
 </style>

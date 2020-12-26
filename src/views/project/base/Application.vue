@@ -5,13 +5,14 @@
 		<ul class="clearfix">
 				<li class="left" v-for="(item, key) in application" :key="key">
 					<i>{{key + 1}}</i>
-					<p v-html="item"></p>
+					<p v-html="isDevice === 'wap' ? item.replace('<br />', '') : item"></p>
 				</li>
 		</ul>
 	</div>
 </template>
 
 <script>
+import { device } from '../../../assets/js/config'
 import Title from '../base/Title'
 export default {
 	props: {
@@ -19,6 +20,11 @@ export default {
 	},
 	components: {
 		Title
+	},
+	data () {
+		return {
+			isDevice: device()
+		}
 	}
 }
 </script>
@@ -66,6 +72,39 @@ export default {
 				padding-top: 15px;
 				font-size: 12px;
 				color: #447375;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		margin-top: 20px;
+		ul {
+			padding: 0 0 20px;
+			text-align: left;
+			li {
+				display: block;
+				width: 100%;
+				margin-top: 40px;
+				padding: 0 20px;
+				i {
+					float: left;
+				}
+				p {
+					display: inline-block;
+					min-height: auto;
+					width: calc(100% - 40px);
+					padding: 0;
+					height: 32px;
+					padding-left: 20px;
+					display: flex;
+					align-items: center;
+				}
+				&:after {
+					content: '';
+					left: 35px;
+					top: -30px;
+					width: 4px;
+					height: 20px;
+				}
 			}
 		}
 	}
