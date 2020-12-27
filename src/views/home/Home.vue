@@ -71,67 +71,10 @@
     </div>
 
     <!-- 全球护照精选 -->
-    <div class="passport margin-t-80">
-      <div class="pc-max-width">
-        <div class="public-title animation-show">
-          <h3>护照项目</h3>
-          <span>
-            <i>
-              <img src="../../assets/images/title-img1.png" />
-            </i>
-          </span>
-          <p>Global citizenship programs</p>
-        </div>
-        <div class="content clearfix">
-          <div
-            class="left list animation-show"
-            v-for="(countrys, index) in countryPassport"
-            :key="index"
-          >
-            <div class="brick-item">
-              <a :href="'/project/details/'+countrys.country_id">
-                <img
-                  v-lazy="{src: countrys.img, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
-                />
-                <div class="more">
-                  <span>{{countrys.en_name}}</span>
-                  <i>{{countrys.visa_free_number}}</i>
-                  <p>visa-free sccre</p>
-                </div>
-              </a>
-              <div class="name" :class="{on: index < 2}">
-                <div class="rec" v-if="index < 2">
-                  推荐指数
-                  <i>
-                    <img src="../../assets/images/star.png" />
-                  </i>
-                  <i>
-                    <img src="../../assets/images/star.png" />
-                  </i>
-                  <i>
-                    <img src="../../assets/images/star.png" />
-                  </i>
-                  <i>
-                    <img src="../../assets/images/star.png" />
-                  </i>
-                  <i>
-                    <img src="../../assets/images/star.png" />
-                  </i>
-                </div>
-                <a :href="'/project/details/'+countrys.country_id">
-                  <strong>{{countrys.name}}</strong>
-                </a>
-                <p v-html="countrys.introduction"></p>
-                <img class="card" :src="countrys.passport" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Passport></Passport>
 
     <!-- 绿卡项目 -->
-    <div class="green-card">
+    <div class="green-card margin-t-80">
        <div class="public-title animation-show">
         <h3>绿卡项目</h3>
         <span>
@@ -260,10 +203,11 @@ import Banner from './component/banner.vue'
 import OurTeam from './component/OurTeam.vue'
 import VideoAbout from './component/VideoAbout'
 import Advantage from './component/Advantage'
-import { animation, windowScroll, device } from '../../assets/js/config.js'
+import { animation, windowScroll } from '../../assets/js/config.js'
 import ContactUs from '../../components/commonComponent/ContactUs'
 import NewModule from './component/NewModule'
 import GreenBox from './component/GreenBox'
+import Passport from './component/Passport'
 import Loading from '../../components/commonComponent/loadingPage'
 
 export default {
@@ -276,12 +220,12 @@ export default {
     GreenBox,
     OurTeam,
     VideoAbout,
-    Advantage
+    Advantage,
+    Passport
   },
   data() {
     return {
       bannerImg: "",
-      countryPassport: "",
       items: [
         {
           title: "小额自雇移民项目",
@@ -323,25 +267,15 @@ export default {
       }, 10);
     }, 2000)
 
-    this.$http({
-      method: "get",
-      url: process.env.VUE_APP_API + "/v1/index"
-    }).then(res => {
-      if (res.data.code === 200) {
-        this.bannerImg = res.data.data.banners[device()];
+    // this.$http({
+    //   method: "get",
+    //   url: process.env.VUE_APP_API + "/v1/index"
+    // }).then(res => {
+    //   if (res.data.code === 200) {
+    //     this.bannerImg = res.data.data.banners[device()];
         
-      }
-    });
-
-    this.$http({
-      method: "get",
-      url: process.env.VUE_APP_API + "/v1/countries "
-    }).then(res => {
-      if (res.data.code === 200) {
-        let countrys = res.data.data;
-        this.countryPassport = countrys;
-      }
-    });
+    //   }
+    // });
 
     this.$http({
       method: "get",
@@ -428,178 +362,6 @@ export default {
   }
 }
 
-/** 全球护照精选 **/
-.passport {
-  background: #f7f7f7;
-  padding: 80px 0;
-  .public-title span i {
-    background: none;
-  }
-  .content {
-    margin: 30px -10px 0;
-  }
-  .list {
-    width: 50%;
-    padding: 20px 10px 0;
-    text-align: center;
-    .brick-item {
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
-    }
-    a {
-      display: block;
-      overflow: hidden;
-      position: relative;
-      img {
-        transition: 0.5s;
-        width: 100%;
-      }
-      .more {
-        position: absolute;
-        z-index: 9;
-        top: 50%;
-        left: 50%;
-        width: 110px;
-        text-align: center;
-        color: #fff;
-        margin-left: -55px;
-        border: 1px solid #fff;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        text-transform: uppercase;
-        padding: 10px 0;
-        opacity: 0;
-        transition: 0.5s;
-        background: rgba(0, 0, 0, 0.5);
-        transform: scale(0.7) translateY(-50%);
-        span {
-          font-size: 14px;
-        }
-        i {
-          position: relative;
-          display: block;
-          margin: 22px auto;
-          width: 36px;
-          height: 36px;
-          line-height: 34px;
-          font-size: 16px;
-          &:after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 36px;
-            height: 36px;
-            border: 1px solid #fff;
-            transform: rotate(45deg);
-          }
-        }
-        p {
-          font-size: 12px;
-        }
-      }
-      &:hover {
-        img {
-          transform: scale(1.1);
-        }
-        .more {
-          opacity: 1;
-          transform: scale(1) translateY(-50%);
-        }
-      }
-    }
-    .name {
-      position: relative;
-      background: #fff;
-      height: 130px;
-      text-align: left;
-      padding-left: 30px;
-      padding-top: 15px;
-      &.on {
-        height: 150px;
-      }
-      .rec {
-        font-size: 16px;
-        color: #f0c671;
-        font-weight: bold;
-        i {
-          position: relative;
-          top: 1px;
-          display: inline-block;
-          width: 17px;
-          margin-left: 3px;
-          &:first-child {
-            margin-left: 7px;
-          }
-          img {
-            display: block;
-            width: 100%;
-          }
-        }
-      }
-      strong {
-        display: block;
-        padding: 12px 0 5px 0;
-        font-size: 20px;
-        color: #111;
-      }
-      p {
-        line-height: 24px;
-      }
-      img.card {
-        position: absolute;
-        right: 35px;
-        bottom: 35px;
-        width: 17%;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-      }
-    }
-  }
-  @media (max-width: 767px) {
-    margin: 0;
-    padding: 20px 0;
-    .content {
-      margin: 0;
-      padding-top: 20px;
-      .list {
-        width: 100%;
-        padding: 0;
-        margin-top: 10px;
-        .name {
-          height: 105px;
-          padding-left: 20px;
-          &.on {
-            height: 125px;
-            img.card {
-              right: 20px;
-              bottom: 55px;
-            }
-          }
-          strong {
-            font-size: 18px;
-            padding: 5px 0 3px;
-          }
-          p {
-            line-height: 18px;
-            font-size: 13px;
-          }
-          .rec {
-            font-size: 14px;
-            i {
-              width: 14px;
-              margin-left: 2px;
-            }
-          }
-          img.card {
-            right: 20px;
-          }
-        }
-      }
-    }
-  }
-}
 
 /** 办理三部曲 **/
 .trilogy {
