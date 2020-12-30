@@ -11,7 +11,7 @@
     </div>
     <div class="list clearfix">
       <router-link :to="item.url" class="item left" v-for="(item, k) in passportList" :key="k">
-        <i v-if="item.hot"></i>
+        <i class="hot" v-if="item.hot"></i>
         <img class="img" :src="item.img" :alt="item.name" />
         <div class="f">
           <h3>
@@ -131,6 +131,15 @@ export default {
     transition: .3s;
     &:hover {
       box-shadow: 0 0 5px 0 #717171;
+    }
+    .hot {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 65px;
+      height: 65px;
+      background: url('../../../assets/images/passport/hot-img.png') no-repeat;
+      background-size: 100%;
     }
     .img {
       display: block;

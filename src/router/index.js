@@ -92,6 +92,16 @@ const CanadaProject3 = () => import(/* webpackChunkName: "green-card" */ '../vie
 const CanadaProject4 = () => import(/* webpackChunkName: "green-card" */ '../views/canada/CanadaProject4.vue')
 
 
+/**  @page 学校 */
+const SchoolMain = () => import(/* webpackChunkName: "school" */ '../views/school/SchoolMain.vue')
+const MindChamps = () => import(/* webpackChunkName: "school" */ '../views/school/MindChamps.vue')
+const Etonhouse = () => import(/* webpackChunkName: "school" */ '../views/school/Etonhouse.vue')
+const Ebridge = () => import(/* webpackChunkName: "school" */ '../views/school/Ebridge.vue')
+const MapleBear = () => import(/* webpackChunkName: "school" */ '../views/school/MapleBear.vue')
+const MyFirstSkool = () => import(/* webpackChunkName: "school" */ '../views/school/MyFirstSkool.vue')
+const Odyssey = () => import(/* webpackChunkName: "school" */ '../views/school/Odyssey.vue')
+const Pats = () => import(/* webpackChunkName: "school" */ '../views/school/Pats.vue')
+const WhiteLodge = () => import(/* webpackChunkName: "school" */ '../views/school/WhiteLodge.vue')
 
 Vue.use(VueRouter)
 
@@ -383,8 +393,56 @@ const routes = [
         component: CanadaProject4
       }
     ]
+  },
+  {
+    path: '/',
+    name: 'school',
+    component: SchoolMain,
+    children: [
+      {
+        path: 'mindc-champs',
+        name: '迈杰思学前教育',
+        component: MindChamps
+      },
+      {
+        path: 'etonhouse',
+        name: '伊顿国际学校',
+        component: Etonhouse
+      },
+      {
+        path: 'e-bridge',
+        name: 'E-bridge伊桥幼儿园',
+        component: Ebridge
+      },
+      {
+        path: 'maple-bear',
+        name: '加拿大枫叶小熊',
+        component: MapleBear
+      },
+      {
+        path: 'my-first-skool',
+        name: 'My First Skool',
+        component: MyFirstSkool
+      },
+      {
+        path: 'odyssey',
+        name: 'Odyssey',
+        component: Odyssey
+      },
+      {
+        path: 'pat-s',
+        name: 'Pat’s 培思幼儿园',
+        component: Pats
+      },
+      {
+        path: 'white-lodge',
+        name: 'White lodge International preschool',
+        component: WhiteLodge
+      }
+    ]
   }
 ]
+
 
 const router = new VueRouter({
   mode: 'history',
