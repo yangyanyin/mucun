@@ -65,7 +65,7 @@ export default {
             url: "/mindc-champs",
           },
           {
-            icon: require("../../assets/images/overseas-study/school/maplebear-logo.png"),
+            icon: require("../../assets/images/overseas-study/school/myfirstskool-logo.png"),
             name: "Myfirstskool",
             url: "/my-first-skool",
           },
