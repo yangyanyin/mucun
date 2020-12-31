@@ -62,7 +62,7 @@
     </div>
 
     <Process></Process>
-1
+
     <RecommendSchool :schoolData="schoolData"></RecommendSchool>
   </div>
 </template>

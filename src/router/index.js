@@ -102,6 +102,14 @@ const MyFirstSkool = () => import(/* webpackChunkName: "school" */ '../views/sch
 const Odyssey = () => import(/* webpackChunkName: "school" */ '../views/school/Odyssey.vue')
 const Pats = () => import(/* webpackChunkName: "school" */ '../views/school/Pats.vue')
 const WhiteLodge = () => import(/* webpackChunkName: "school" */ '../views/school/WhiteLodge.vue')
+const TanglingTrust = () => import(/* webpackChunkName: "school" */ '../views/school/TanglingTrust.vue')
+const UnitedWorldCollegeSouthEastAsia = () => import(/* webpackChunkName: "school" */ '../views/school/UnitedWorldCollegeSouthEastAsia.vue')
+const HwaChong = () => import(/* webpackChunkName: "school" */ '../views/school/HwaChong.vue')
+const SJIInternational = () => import(/* webpackChunkName: "school" */ '../views/school/SJIInternational.vue')
+const SingaporeAustralianInternational = () => import(/* webpackChunkName: "school" */ '../views/school/SingaporeAustralianInternational.vue')
+const CanadianInternational = () => import(/* webpackChunkName: "school" */ '../views/school/CanadianInternational.vue')
+const SingaporeAmerican = () => import(/* webpackChunkName: "school" */ '../views/school/SingaporeAmerican.vue')
+const ACSInternational = () => import(/* webpackChunkName: "school" */ '../views/school/ACSInternational.vue')
 
 Vue.use(VueRouter)
 
@@ -402,42 +410,130 @@ const routes = [
       {
         path: 'mindc-champs',
         name: '迈杰思学前教育',
-        component: MindChamps
+        component: MindChamps,
+        meta: {
+          type: '学前教育'
+        }
       },
       {
         path: 'etonhouse',
         name: '伊顿国际学校',
-        component: Etonhouse
+        component: Etonhouse,
+        meta: {
+          type: '学前教育'
+        }
       },
       {
         path: 'e-bridge',
         name: 'E-bridge伊桥幼儿园',
-        component: Ebridge
+        component: Ebridge,
+        meta: {
+          type: '学前教育'
+        }
       },
       {
         path: 'maple-bear',
         name: '加拿大枫叶小熊',
-        component: MapleBear
+        component: MapleBear,
+        meta: {
+          type: '学前教育'
+        }
       },
       {
         path: 'my-first-skool',
         name: 'My First Skool',
-        component: MyFirstSkool
+        component: MyFirstSkool,
+        meta: {
+          type: '学前教育'
+        }
       },
       {
         path: 'odyssey',
         name: 'Odyssey',
-        component: Odyssey
+        component: Odyssey,
+        meta: {
+          type: '学前教育'
+        }
       },
       {
         path: 'pat-s',
         name: 'Pat’s 培思幼儿园',
-        component: Pats
+        component: Pats,
+        meta: {
+          type: '学前教育'
+        }
       },
       {
         path: 'white-lodge',
         name: 'White lodge International preschool',
-        component: WhiteLodge
+        component: WhiteLodge,
+        meta: {
+          type: '学前教育'
+        }
+      },
+      {
+        path: 'tangling-trust',
+        name: '东陵信托学校',
+        component: TanglingTrust,
+        meta: {
+          type: '新加波国际学校'
+        }
+      },
+      {
+        path: 'united-world-college-south-east-asia',
+        name: '东南亚世界联合书院',
+        component: UnitedWorldCollegeSouthEastAsia,
+        meta: {
+          type: '新加波国际学校'
+        }
+      },
+      {
+        path: 'hwa-chong',
+        name: '华中国际学校',
+        component: HwaChong,
+        meta: {
+          type: '新加波国际学校'
+        }
+      },
+      {
+        path: 'sji-international',
+        name: '圣若瑟书院国际学校',
+        component: SJIInternational,
+        meta: {
+          type: '新加波国际学校'
+        }
+      },
+      {
+        path: 'singapore-australian-international',
+        name: '新加坡澳大利亚国际学院',
+        component: SingaporeAustralianInternational,
+        meta: {
+          type: '新加波国际学校'
+        }
+      },
+      {
+        path: 'canadian-international',
+        name: '新加坡加拿大国际学校',
+        component: CanadianInternational,
+        meta: {
+          type: '新加波国际学校'
+        }
+      },
+      {
+        path: 'singapore-american',
+        name: '新加坡美国学校',
+        component: SingaporeAmerican,
+        meta: {
+          type: '新加波国际学校'
+        }
+      },
+      {
+        path: 'acs-international',
+        name: '英华国际学校',
+        component: ACSInternational,
+        meta: {
+          type: '新加波国际学校'
+        }
       }
     ]
   }
