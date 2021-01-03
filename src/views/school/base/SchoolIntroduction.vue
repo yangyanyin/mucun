@@ -1,5 +1,5 @@
 <template>
-  <div class="int right">
+  <div class="int right" id="int-content">
     <img :src="introduction.img" />
     <h3>学校简介</h3>
     <p v-for="(des, k) in introduction.des" :key="k">{{ des }}</p>

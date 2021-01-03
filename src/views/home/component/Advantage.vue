@@ -47,7 +47,7 @@
 /** 我们的优势 **/
 .advantage {
   position: relative;
-  height: 650px;
+  // height: 650px;
   padding: 70px 0;
   background: url("../../../assets//images/advantage-bg.png") no-repeat top center;
   background-size: 100% 730px;
@@ -72,7 +72,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 50px 80px;
+    padding: 50px 80px 0;
     .list {
       width: 144px;
       &:hover {

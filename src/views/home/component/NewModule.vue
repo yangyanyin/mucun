@@ -6,7 +6,8 @@
           <h3 class="left">新闻动态</h3>
           <router-link class="right" :to="'/news-' + type">NEWS</router-link>
         </div>
-        <NewSwiper v-for="(list, key) in newDynamic" :newsList="list.news" :key="key" :index="key"></NewSwiper>
+        <!-- <NewSwiper v-for="(list, key) in newDynamic" :newsList="list.news" :key="key" :index="key"></NewSwiper> -->
+        <NewSwiper :newsList="newDynamic[0].news" :index="0"></NewSwiper>
       </div>
       <div class="right">
         <div class="title clearfix">
@@ -23,10 +24,6 @@
             <template v-else-if="key === 1">
               <p>由于新冠疫情肆虐，很多国家也颁布了国家或地区的旅游禁令。圣基茨实施了“云申请”的快速护照移民通道。新加坡全球护照交流中心通过线上办理不到2个月就快速拿到圣基茨的护照，为客户提供了安全可靠的服务。</p>
               <span>2020-06-15</span>
-            </template>
-            <template v-else-if="key === 2">
-              <p>我们这两位客户T先生与Z先生是两个生意的合作伙伴。这两位客户的主要诉求就是快速满足他们的自由通行和考虑到海外税务的筹划。</p>
-              <span>2020-04-03</span>
             </template>
             <span class="right">了解详情></span>
           </router-link>
@@ -56,7 +53,7 @@ export default {
       url: process.env.VUE_APP_API + "/v1/recommend_news_list",
     }).then(res => {
       if (res.data.code === 200) {
-        this.recommendNews = res.data.data.recommend_news_list.slice(0, 3)
+        this.recommendNews = res.data.data.recommend_news_list.slice(0, 2)
       }
     });
   }
@@ -162,15 +159,16 @@ export default {
       }
     }
     .content {
-      padding: 12px 20px;
+      padding: 5px 20px;
       a {
         display: block;
-        padding-bottom: 15px;
-        margin: 15px 0;
+        padding-bottom: 10px;
+        margin: 10px 0;
         color: #fff;
         border-bottom: 1px solid #7f9d9e;
         &:last-child {
           border: none;
+          padding-bottom: 0;
         }
         strong {
           display: block;
@@ -181,7 +179,7 @@ export default {
           white-space: nowrap;
         }
         p {
-          margin: 15px 0 20px;
+          margin: 5px 0 10px;
           line-height: 20px;
           font-size: 12px;
           opacity: .7;

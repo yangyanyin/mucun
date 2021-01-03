@@ -1,5 +1,5 @@
 <template>
-  <div class="name left">
+  <div class="name left" id="name-fixel">
     <div class="name-img">
       <img :src="nameInfo.img" :alt="nameInfo.zh_name" />
       <img class="int_img" v-if="nameInfo.int_img" :src="nameInfo.int_img">
@@ -22,6 +22,32 @@
 export default {
   props: {
     nameInfo: Object
+  },
+  methods: {
+    nameFixel () {
+      let contentHeight = document.getElementById('int-content').clientHeight // 对照物高度
+      let picBox = document.getElementById('name-fixel') //  吸顶自身
+      let top = document.documentElement.scrollTop || document.body.scrollTop
+      if (top > 170) {
+        if (top > contentHeight - 462) {
+          picBox.style.position = 'relative'
+          picBox.style.overflow = 'visible'
+          picBox.style.top = contentHeight - 500 + 'px'
+          return
+        }
+        picBox.style.position = 'relative'
+        picBox.style.overflow = 'visible'
+        picBox.style.top = top - 90 + 'px'
+      } else {
+        picBox.style.position = 'relative'
+        picBox.style.overflow = 'visible'
+        picBox.style.top = '0px'
+        // mouseCanvas.style.marginTop = '0px'
+      }
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.nameFixel)
   }
 }
 </script>
@@ -29,6 +55,14 @@ export default {
 .name {
   width: 42%;
   padding: 30px;
+  position: relative;
+  .name-img {
+    // &.fixel {
+    //   position: absolute;
+    //   left: 30px;
+    //   right: 30px;
+    // }
+  }
   img {
     display: block;
     width: 100%;

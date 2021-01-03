@@ -1,5 +1,5 @@
 <template>
-  <ul class="flag animation-show">
+  <ul class="flag">
     <router-link tag="li" to="/project/details/65">
       <img src="../../assets/images/country1.png" />
     </router-link>

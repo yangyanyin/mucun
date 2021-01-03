@@ -4,12 +4,12 @@
       <swiper-slide>
         <p class="p1">Second citizanship is not just a passport <br /> it is about family, where your family feels at home </p>
         <p class="p2">海外身份规划<br />这不仅仅是第二身份，更是您海外幸福生活的保障</p>
-        <img @load="imgLoad" src="../../../assets/images/banner1.png" />
+        <img @load="imgLoad" src="../../../assets/images/banner1.jpg" />
       </swiper-slide>
       <swiper-slide>
         <p class="p1">Second citizanship is not just a passport <br /> it is about family, where your family feels at home </p>
         <p class="p2">海外身份规划<br />这不仅仅是第二身份，更是您海外幸福生活的保障</p>
-        <img src="../../../assets/images/banner2.png" />
+        <img src="../../../assets/images/banner2.jpg" />
       </swiper-slide>
     </swiper>
     <!-- <div class="swiper-button-prev swiper-button" slot="button-prev"></div>

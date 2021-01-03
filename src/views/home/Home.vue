@@ -90,12 +90,11 @@
     </div>
 
     <!-- 办理三部曲 -->
-    <div class="trilogy">
+    <!-- <div class="trilogy">
       <div class="pc-max-width">
         <div class="public-title animation-show">
           <h3>办理三部曲</h3>
           <p>为了确保每一位客户在办理期间万无一失，SGPEC制定具有特色的办理三部曲，即“发现需求”、“确定方案”、“与众不同”。</p>
-          <!-- <p>为了确保每一位客户在办理期间万无一失，SGPEC制定具有特色的办理三部曲，即“发现需求”、“确定方案”、“与众不同”，为您提供最佳的一站式海外投资移民服务，协助您获得公民身份。</p> -->
         </div>
         <div class="step clearfix">
           <div class="left animation-show">
@@ -142,10 +141,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+    <!-- 我们的优势 -->
+    <Advantage></Advantage>
 
     <!-- 成功案例 -->
-    <div class="success-case" v-if="newCase.length > 0">
+    <div class="success-case margin-t-80" v-if="newCase.length > 0">
       <div class="public-title animation-show">
         <h3>成功案例</h3>
         <span>
@@ -174,8 +175,7 @@
       </div>
     </div>
 
-    <!-- 我们的优势 -->
-    <Advantage></Advantage>
+  
 
     <!-- 我们得团队 -->
     <div class="team margin-t-80 pc-max-width">
@@ -364,101 +364,101 @@ export default {
 
 
 /** 办理三部曲 **/
-.trilogy {
-  background: #f7f7f7;
-  padding: 100px 0 80px;
-  .public-title {
-    h3 {
-      letter-spacing: 15px;
-    }
-    p {
-      position: relative;
-      padding-top: 30px;
-      line-height: 26px;
-      font-size: 16px;
-    }
-  }
-  .step {
-    margin-top: 50px;
-    div.left {
-      background: #fff;
-      width: 33.33%;
-      img {
-        display: block;
-        width: 100%;
-      }
-      > div {
-        position: relative;
-        img {
-          opacity: 0;
-        }
-        p {
-          position: absolute;
-          top: 0;
-          left: 0;
-          padding: 40px;
-          strong {
-            position: relative;
-            display: block;
-            font-size: 24px;
-            font-weight: normal;
-            margin-bottom: 40px;
-            &:after {
-              content: '';
-              position: absolute;
-              left: 0;
-              top: 50px;
-              width: 30px;
-              height: 4px;
-              background: #447375;
-            }
-          }
-          @media (max-width: 1100px) {
-            padding: 30px;
-            strong {
-              margin-bottom: 35px;
-            }
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 767px) {
-    padding: 40px 0 0;
-    .public-title {
-      p {
-        padding-top: 15px;
-        line-height: 22px;
-      }
-    }
-    .step {
-      margin: 0 -10px;
-      margin-top: 30px;
-      div.left {
-        float: none;
-        width: 100%;
-        padding-bottom: 10px;
-        > div {
-          img {
-            display: none;
-          }
-          p {
-            position: static;
-            padding: 15px;
-            strong {
-              font-size: 18px;
-              margin-bottom: 20px;
-              &:after {
-                top: 33px;
-                height: 2px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+// .trilogy {
+//   background: #f7f7f7;
+//   padding: 100px 0 80px;
+//   .public-title {
+//     h3 {
+//       letter-spacing: 15px;
+//     }
+//     p {
+//       position: relative;
+//       padding-top: 30px;
+//       line-height: 26px;
+//       font-size: 16px;
+//     }
+//   }
+//   .step {
+//     margin-top: 50px;
+//     div.left {
+//       background: #fff;
+//       width: 33.33%;
+//       img {
+//         display: block;
+//         width: 100%;
+//       }
+//       > div {
+//         position: relative;
+//         img {
+//           opacity: 0;
+//         }
+//         p {
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           padding: 40px;
+//           strong {
+//             position: relative;
+//             display: block;
+//             font-size: 24px;
+//             font-weight: normal;
+//             margin-bottom: 40px;
+//             &:after {
+//               content: '';
+//               position: absolute;
+//               left: 0;
+//               top: 50px;
+//               width: 30px;
+//               height: 4px;
+//               background: #447375;
+//             }
+//           }
+//           @media (max-width: 1100px) {
+//             padding: 30px;
+//             strong {
+//               margin-bottom: 35px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   @media (max-width: 767px) {
+//     padding: 40px 0 0;
+//     .public-title {
+//       p {
+//         padding-top: 15px;
+//         line-height: 22px;
+//       }
+//     }
+//     .step {
+//       margin: 0 -10px;
+//       margin-top: 30px;
+//       div.left {
+//         float: none;
+//         width: 100%;
+//         padding-bottom: 10px;
+//         > div {
+//           img {
+//             display: none;
+//           }
+//           p {
+//             position: static;
+//             padding: 15px;
+//             strong {
+//               font-size: 18px;
+//               margin-bottom: 20px;
+//               &:after {
+//                 top: 33px;
+//                 height: 2px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 
 /** 成功案例 **/

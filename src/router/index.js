@@ -11,7 +11,8 @@ const About = () => import(/* webpackChunkName: "about" */ '../views/about/About
 const Bank = () => import(/* webpackChunkName: "bank" */ '../views/bank/NewBank')
 
 /** @page 资产配置 */ 
-const Asset = () => import(/* webpackChunkName: "asset" */ '../views/asset/Asset')
+// const Asset = () => import(/* webpackChunkName: "asset" */ '../views/asset/Asset')
+const Asset = () => import(/* webpackChunkName: "asset" */ '../views/asset/NewAsset')
 
 /** @page 护照项目列表 */ 
 // const ProjectList = () => import(/* webpackChunkName: "project" */ '../views/project/ProjectList')

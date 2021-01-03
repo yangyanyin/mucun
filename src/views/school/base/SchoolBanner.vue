@@ -258,12 +258,13 @@ export default {
     display: none !important;
   }
   .el-carousel__arrow {
-    top: 40% !important;
+    // top: 40% !important;
     background: #447375 !important;
   }
   .el-carousel__item  {
     border-radius: 10px;
     overflow: hidden;
+    width: 70% !important;
     i {
       font-size: 20px;
     }
@@ -271,7 +272,7 @@ export default {
       width: 70%;
       left: -10%;
       @media(max-width: 767px) {
-        width: 90%;
+        width: 90% !important;
         left: -20%;
         overflow: initial !important;
       }

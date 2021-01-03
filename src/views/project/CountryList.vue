@@ -323,9 +323,7 @@ export default {
   }
 }
 .country-list {
-  @media (max-width: 767px ) {
-    margin-bottom: 50px;
-  }
+  margin-bottom: 50px;
   .content {
     margin-top: 40px;
     border-radius: 10px;
