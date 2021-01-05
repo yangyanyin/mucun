@@ -123,7 +123,7 @@ export default {
           require('../../../assets/images/school/sji-international4.jpg'),
           require('../../../assets/images/school/sji-international5.jpg')
         ],
-        '新加坡澳大利亚国际学院': [
+        '新加坡澳大利亚国际学校': [
           require('../../../assets/images/school/singapore-australian1.jpg'),
           require('../../../assets/images/school/singapore-australian2.jpg'),
           require('../../../assets/images/school/singapore-australian3.jpg'),

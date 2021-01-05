@@ -6,7 +6,7 @@
       <div class="right about">
         <h3>选择我们</h3>
         <span>CHOOSE US</span>
-        <p>新加坡全球护照交流中心——SGPEC，总部位于新加坡。自成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
+        <p>新加坡侨水资本——Singapore Waterland Capital，总部位于新加坡。自成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
         <a class="contact" @click="changeContact">联系我们</a>
         <div class="icon big">
           <a target="_blank" href="https://www.facebook.com/sgpecsingapore">
@@ -38,7 +38,7 @@
         <span class="close" @click="hideContactWindow">
           <img src="../../../assets/images/close.png" />
         </span>
-        <h3>新加坡全球护照交流中心</h3>
+        <h3>新加坡侨水资本</h3>
         <p>直营新加坡移民/银行开户/新加坡留学，家族办公室，欧盟&英联邦快速护照，不成功不收费。</p>
         <a @click="changeContact">点击客服了解更多详情</a>
       </div>

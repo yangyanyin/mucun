@@ -64,11 +64,11 @@ export default {
           {
             icon: require('../../assets/images/philippines/philippines-img4.jpg'),
             title: '东南亚新兴市场',
-            text: '作为东盟（ASEAN）与亚太经合组织（APEC）成员国之一，菲律宾是东南亚第四大规模的新兴工业国家，并且是世界的新兴市场之一。其经济发展迅猛，市场发展潜力较大。'
+            text: '作为东盟（ASEAN）与亚太经合组织（APEC）成员国之一，菲律宾是东南亚第四大规模的新兴工业国家，并且是世界的新兴市场之一。其经济发展迅猛，市场发展潜力较大'
           },
           {
             icon: require('../../assets/images/philippines/philippines-img1.jpg'),
-            title: '投资门槛低，方便快捷',
+            title: '投资门槛低方便快捷',
             text: '最低投资额仅需存款2万美金，无学历要求、无经商管理要求、无居住要求'
           },
           {

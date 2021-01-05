@@ -3,7 +3,7 @@
         <img class="img" src="../../../assets/images/overseas-study/lecture-img.jpg">
         <div class="adviser">
             <h3>留学顾问</h3>
-            <p>新加坡衣食住行、人文环境、亲情陪<br />读、精英教育等一系列问题，资深专家<br />一对一为您解答</p>
+            <p>新加坡衣食住行、人文环境、家属陪<br />读、精英教育等一系列问题，资深专家<br />一对一为您解答</p>
             <span>
                 <img src="../../../assets/images/overseas-study/consultant-ewm.jpg" />
                 扫码添加好友<br />获取留学最新资讯

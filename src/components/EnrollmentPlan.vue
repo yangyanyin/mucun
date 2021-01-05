@@ -29,6 +29,8 @@
         <option value="PETS－3">PETS－3</option>
         <option value="PETS－4">PETS－4</option>
         <option value="PETS－5">PETS－5</option>
+        <option value="PETS－5">无英语级别</option>
+        <option value="PETS－5">其他语种</option>
       </select>
       <p v-if="englishLevelError">请选择英语等级</p>
     </div>

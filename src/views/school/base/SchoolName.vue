@@ -32,7 +32,7 @@ export default {
         if (top > contentHeight - 462) {
           picBox.style.position = 'relative'
           picBox.style.overflow = 'visible'
-          picBox.style.top = contentHeight - 500 + 'px'
+          picBox.style.top = contentHeight - 620 + 'px'
           return
         }
         picBox.style.position = 'relative'
@@ -42,7 +42,6 @@ export default {
         picBox.style.position = 'relative'
         picBox.style.overflow = 'visible'
         picBox.style.top = '0px'
-        // mouseCanvas.style.marginTop = '0px'
       }
     }
   },

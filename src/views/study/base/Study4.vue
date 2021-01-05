@@ -99,7 +99,7 @@ export default {
           },
           {
             icon: require("../../../assets/images/overseas-study/school/etonhouse-logo.png"),
-            name: "etonhouse伊顿",
+            name: "EtonHouse 伊顿幼儿园",
             url: "/etonhouse",
           },
           {

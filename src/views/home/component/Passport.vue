@@ -4,7 +4,7 @@
       <h3>护照项目</h3>
       <span>
         <i>
-          <img src="../../../assets/images/title-img1.png" />
+          <img src="../../../assets/images/title.gif" />
         </i>
       </span>
       <p>GLOBAL CITIZENSHIP PROGRAMS</p>
@@ -24,7 +24,7 @@
             </li>
           </ul>
           <ol>
-            <li v-for="(n, t, i) in item.cond" :key="i">
+            <li v-for="(n, t, i) in item.cond" :key="i" :class="t">
               {{n}}
             </li>
           </ol>
@@ -49,15 +49,15 @@ export default {
           visa_free: require('../../../assets/images/passport/SaintKitts-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '154',
+            '免签国家/地区': '约150',
             移民周期: '3个月',
             证据类型: '护照'
           },
           cond: {
             one: '15万美元',
-            tow: '15万美元',
-            three: '15万美元',
-            four: '15万美元'
+            tow: '17.5万美元',
+            three: '18.5万美元',
+            four: '19.5万美元'
           }
         },
         {
@@ -69,7 +69,7 @@ export default {
           visa_free: require('../../../assets/images/passport/Turkey-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '111',
+            '免签国家/地区': '约110',
             移民周期: '3个月',
             证据类型: '护照'
           },
@@ -85,14 +85,14 @@ export default {
           visa_free: require('../../../assets/images/passport/SaintLucia-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '146',
+            '免签国家/地区': '约140',
             移民周期: '3个月',
             证据类型: '护照'
           },
           cond: {
             one: '10万美元',
-            tow: '16.5万美元',
-            three: '19万美元'
+            tow: '14万美元',
+            four: '15万美元'
           }
         },
         {
@@ -103,7 +103,7 @@ export default {
           visa_free: require('../../../assets/images/passport/Vanuatu-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '130',
+            '免签国家/地区': '约130',
             移民周期: '1个月',
             证据类型: '护照'
           },
@@ -130,10 +130,11 @@ export default {
     overflow: hidden;
     transition: .3s;
     &:hover {
-      box-shadow: 0 0 5px 0 #717171;
+      box-shadow: 0 0 10px 0 #423c3c;
     }
     .hot {
       position: absolute;
+      z-index: 1;
       top: 0;
       left: 0;
       width: 65px;
@@ -144,6 +145,10 @@ export default {
     .img {
       display: block;
       width: 100%;
+      transition: .3s;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
     .f {
       position: absolute;
@@ -174,10 +179,43 @@ export default {
       }
       ol {
         li {
+          position: relative;
           margin-right: 10px;
-          padding: 2px 10px;
+          padding: 5px 10px 5px 30px;
           background: rgba(255, 255, 255, .3);
           border-radius: 10px;
+          &:after {
+            content: ''; 
+            position: absolute;
+            left: 8px;
+            top: 0;
+            width: 16px;
+            height: 28px;
+          }
+          &.no_icon {
+            padding: 5px 10px;
+          }
+          &.one {
+            padding-left: 25px;
+            &:after {
+              left: 10px;
+              width: 7px;
+              background: url('../../../assets/images/one-person-icon.png') no-repeat center center;
+              background-size: 100%;
+            }
+          }
+          &.tow:after {
+            background: url('../../../assets/images/tow-person-icon.png') no-repeat center center;
+            background-size: 100%;
+          }
+          &.three:after {
+            background: url('../../../assets/images/three-person-icon.png') no-repeat center center;
+            background-size: 100%;
+          }
+          &.four:after {
+            background: url('../../../assets/images/four-person-icon.png') no-repeat center center;
+            background-size: 100%;
+          }
         }
       }
       a {
@@ -193,6 +231,11 @@ export default {
         color: #fff;
         border: 1px solid #FFFFFF;
         border-radius: 18px;
+        transition: .3s;
+        &:hover {
+          border-color: #447375;
+          background: #447375;
+        }
       }
     }
   }

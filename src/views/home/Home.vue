@@ -89,59 +89,6 @@
       </div>
     </div>
 
-    <!-- 办理三部曲 -->
-    <!-- <div class="trilogy">
-      <div class="pc-max-width">
-        <div class="public-title animation-show">
-          <h3>办理三部曲</h3>
-          <p>为了确保每一位客户在办理期间万无一失，SGPEC制定具有特色的办理三部曲，即“发现需求”、“确定方案”、“与众不同”。</p>
-        </div>
-        <div class="step clearfix">
-          <div class="left animation-show">
-            <img src="../../assets/images/step-img1.png" />
-            <div>
-              <img src="../../assets/images/step-img1.png" />
-              <p>
-                <strong>第一步 / 了解需求</strong>
-                深入研究客户的需求，评估客户个人情况，选择最适合且符合申请条件的项目，提供详细深入的建议。
-              </p>
-            </div>
-            
-          </div>
-          <div class="left animation-show web-img">
-            <div>
-              <img src="../../assets/images/step-img2.png" />
-              <p>
-                <strong>第二步 / 确定方案</strong>
-                针对不同客户的需求制定方案，严格筛选项目以确保您的投资安全，给您带来最佳收益。
-              </p>
-            </div>
-            <img src="../../assets/images/step-img2.png" />
-          </div>
-          <div class="left animation-show wap-img">
-            <img src="../../assets/images/step-img2.png" />
-            <div>
-              <img src="../../assets/images/step-img2.png" />
-              <p>
-                <strong>第二步 / 确定方案</strong>
-                针对不同客户的需求制定方案，严格筛选项目以确保您的投资安全，给您带来最佳收益。
-              </p>
-            </div>
-          </div>
-          
-          <div class="left animation-show">
-            <img src="../../assets/images/step-img3.png" />
-            <div>
-              <img src="../../assets/images/step-img3.png" />
-              <p>
-                <strong>第三步 / 与众不同</strong>
-                立志做到同行专业水准之上，注重客户隐私、海外资产配置等，尽职监管整个申请流程。
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <!-- 我们的优势 -->
     <Advantage></Advantage>
 
@@ -267,16 +214,6 @@ export default {
       }, 10);
     }, 2000)
 
-    // this.$http({
-    //   method: "get",
-    //   url: process.env.VUE_APP_API + "/v1/index"
-    // }).then(res => {
-    //   if (res.data.code === 200) {
-    //     this.bannerImg = res.data.data.banners[device()];
-        
-    //   }
-    // });
-
     this.$http({
       method: "get",
       url: process.env.VUE_APP_API + "/v1/newsList",
@@ -361,105 +298,6 @@ export default {
     }
   }
 }
-
-
-/** 办理三部曲 **/
-// .trilogy {
-//   background: #f7f7f7;
-//   padding: 100px 0 80px;
-//   .public-title {
-//     h3 {
-//       letter-spacing: 15px;
-//     }
-//     p {
-//       position: relative;
-//       padding-top: 30px;
-//       line-height: 26px;
-//       font-size: 16px;
-//     }
-//   }
-//   .step {
-//     margin-top: 50px;
-//     div.left {
-//       background: #fff;
-//       width: 33.33%;
-//       img {
-//         display: block;
-//         width: 100%;
-//       }
-//       > div {
-//         position: relative;
-//         img {
-//           opacity: 0;
-//         }
-//         p {
-//           position: absolute;
-//           top: 0;
-//           left: 0;
-//           padding: 40px;
-//           strong {
-//             position: relative;
-//             display: block;
-//             font-size: 24px;
-//             font-weight: normal;
-//             margin-bottom: 40px;
-//             &:after {
-//               content: '';
-//               position: absolute;
-//               left: 0;
-//               top: 50px;
-//               width: 30px;
-//               height: 4px;
-//               background: #447375;
-//             }
-//           }
-//           @media (max-width: 1100px) {
-//             padding: 30px;
-//             strong {
-//               margin-bottom: 35px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   @media (max-width: 767px) {
-//     padding: 40px 0 0;
-//     .public-title {
-//       p {
-//         padding-top: 15px;
-//         line-height: 22px;
-//       }
-//     }
-//     .step {
-//       margin: 0 -10px;
-//       margin-top: 30px;
-//       div.left {
-//         float: none;
-//         width: 100%;
-//         padding-bottom: 10px;
-//         > div {
-//           img {
-//             display: none;
-//           }
-//           p {
-//             position: static;
-//             padding: 15px;
-//             strong {
-//               font-size: 18px;
-//               margin-bottom: 20px;
-//               &:after {
-//                 top: 33px;
-//                 height: 2px;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 
 /** 成功案例 **/
 .success-case {

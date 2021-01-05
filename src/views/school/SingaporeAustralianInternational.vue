@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       nameInfo: {
-        zh_name: '新加坡澳大利亚国际学院',
+        zh_name: '新加坡澳大利亚国际学校',
         en_name: 'Singapore Australian International School',
         img: require('../../assets/images/overseas-study/school/school-logo5.png'),
         int_img: require('../../assets/images/school/school-int5.jpg'),

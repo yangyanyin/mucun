@@ -92,7 +92,7 @@ export default {
         require("../../../assets/images/overseas-study/international-school-icon8.jpg"),
       ],
       schoolData: {
-        title: "新加坡国际学校",
+        title: "新加坡国际学校推荐",
                 list: [
           {
             icon: require("../../../assets/images/overseas-study/school/school-logo1.png"),
@@ -116,7 +116,7 @@ export default {
           },
           {
             icon: require("../../../assets/images/overseas-study/school/school-logo5.png"),
-            name: "新加坡澳大利亚国际学院",
+            name: "新加坡澳大利亚国际学校",
             url: "/singapore-australian-international",
           },
           {

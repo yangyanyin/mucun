@@ -52,7 +52,7 @@
         <li><span><i>2</i></span>视频面试</li>
         <li><span><i>3</i></span>准备材料</li>
         <li><span><i>4</i></span>提交申请</li>
-        <li><span><i>5</i></span>登录韩国</li>
+        <li><span><i>5</i></span>登陆韩国</li>
         <li><span><i>6</i></span>转F-2签证</li>
       </ul>
     </div>
@@ -86,11 +86,11 @@ export default {
           {
             icon: require('../../assets/images/korea/korea-img1.jpg'),
             title: '存款安全性高',
-            text: '该项目存款是存入韩国政府指定银行下，存入后政府会颁发投资确认书，5年后获得绿卡可以撤资。'
+            text: '该项目存款是存入韩国政府指定银行下，存入后政府会颁发投资确认书，5年后获得绿卡可以撤资'
           },
           {
             icon: require('../../assets/images/korea/korea-img3.jpg'),
-            title: '无移民监，每年只需登录一次',
+            title: '无移民监，每年只需登陆一次',
             text: 'F-2签证没有居住要求，无需长期居住在此也可以维持签证有效性，更不妨碍5年后获取绿卡'
           },
           {
@@ -106,7 +106,7 @@ export default {
           {
             icon: require('../../assets/images/korea/korea-img4.jpg'),
             title: '韩国开户、韩国税号',
-            text: '拥有身份后，就可以在韩国任意商业银行开户，办理手续简单快速；同时韩国绿卡也等同于拥有税号，可以随时使用。'
+            text: '拥有身份后，就可以在韩国任意商业银行开户，办理手续简单快速；同时韩国绿卡也等同于拥有税号，可以随时使用'
           }
         ]
       },

@@ -55,7 +55,7 @@ export default {
             },
             {
               icon: require("../../assets/images/overseas-study/school/etonhouse-logo.png"),
-              name: "etonhouse伊顿",
+              name: "EtonHouse 伊顿幼儿园",
               url: "/etonhouse",
             },
             {
@@ -115,7 +115,7 @@ export default {
             },
             {
               icon: require("../../assets/images/overseas-study/school/school-logo5.png"),
-              name: "新加坡澳大利亚国际学院",
+              name: "新加坡澳大利亚国际学校",
               url: "/singapore-australian-international",
             },
             {

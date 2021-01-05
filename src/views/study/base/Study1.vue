@@ -56,7 +56,7 @@ export default {
                 },
                 {
                     icon: require('../../../assets/images/overseas-study/study-img4.jpg'),
-                    text: '低龄留学首选国家，独特的母亲陪读政策'
+                    text: '低龄留学首选国家，独特的母系陪读政策'
                 },
                 {
                     icon: require('../../../assets/images/overseas-study/study-img5.jpg'),

@@ -32,7 +32,7 @@ export default {
         {
           url: '/emigrant/singapore',
           zh_text: '新加坡移民',
-          en_text: 'Singapore immigration'
+          en_text: 'Singapore Immigration'
         },
         {
           url: '/emigrant/one',

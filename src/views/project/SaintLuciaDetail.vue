@@ -83,7 +83,7 @@ export default {
         },
         {
           title: '没有移民监，无需登陆',
-          des: '从申请到拿护照，申请人无需登录，无居住条件',
+          des: '从申请到拿护照，申请人无需登陆，无居住条件',
           icon: require('../../assets/images/passport/saint-lucia-icon3.jpg')
         },
         {

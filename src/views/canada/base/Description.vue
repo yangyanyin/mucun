@@ -6,7 +6,7 @@
       </div>
       <div class="text list" :class="key === 1 ? 'right' : 'left'">
         <h4>{{item.title}}</h4>
-        <p v-for="(p, i) in item.detail" :key="i">{{p}}</p>
+        <p v-for="(p, i) in item.detail" :key="i" :class="{t: p.indexOf('title:') >= 0}">{{p.replace('title:', '')}}</p>
       </div>
     </div>
   </div>
@@ -41,6 +41,9 @@ export default {
     p {
       line-height: 26px;
       min-height: 10px;
+      &.t {
+        font-weight: bold;
+      }
     }
     &.text {
       position: absolute;

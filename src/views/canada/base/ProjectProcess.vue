@@ -5,7 +5,8 @@
       <ul v-for="(list, index) in stepArr" :key="index">
         <li v-for="(item, key) in list" :key="key" :style="{width: 100 / list.length - 3 + '%'}" :class="`step${projectProcess.length}`">
           <h3>第{{key + (index === 0? 1 : 8)}}步</h3>
-          <i :class="{on: item.length > 20}">{{item}}</i>
+          <i>{{item}}</i>
+          <!-- <i :class="{on: item.length > 20}">{{item}}</i> -->
         </li>
       </ul>
     </div>
@@ -88,7 +89,7 @@ export default {
         top: 60%;
         left: 10px;
         right: 10px;
-        font-size: 16px;
+        font-size: 14px;
         transform: translateY(-50%);
         &.on {
           font-size: 12px;

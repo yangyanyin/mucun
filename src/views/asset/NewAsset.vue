@@ -4,8 +4,8 @@
       <img src="../../assets/images/asset-banner.jpg" />
     </div>
     <div class="des margin-t-80 pc-max-width">
-      <h3>新加坡全球护照交流中心—全球精英客户的共同选择</h3>
-      <p>新加坡全球护照交流中心专业团队深耕新加坡，整合优质商业资源，精选全球潜力投资项目，为客户提供全方位海外规划服务，轻松实现全球资产配置！</p>
+      <h3>新加坡侨水资本——Singapore Capital—全球精英客户的共同选择</h3>
+      <p>新加坡侨水资本——Singapore Capital专业团队深耕新加坡，整合优质商业资源，精选全球潜力投资项目，为客户提供全方位海外规划服务，轻松实现全球资产配置！</p>
     </div>
     <div class="allocation margin-t-80 pc-max-width">
       <div class="title">
@@ -34,15 +34,15 @@
         </li>
         <li>
           <img src="../../assets/images/asset-icon1.png">
-          <span>全球房产</span>
-          <i>在全球范围内悉心甄选优质房源，为高净值客户持续提供包括美国、新加坡、葡萄牙、土耳其、马来西亚、英国等地区的中高端房产。</i>
+          <span>新加坡房产</span>
+          <i>甄选优质房源，为高净值客户提供新加坡的中高端房产。</i>
         </li>
       </ul>
     </div>
 
     <div class="market margin-t-80 pc-max-width">
       <h3>立足新加坡，开拓海外市场的不二选择
-        <i>SGPEC新加坡项目</i>
+        <i>新加坡项目</i>
       </h3>
       <p>注册新加坡公司</p>
       <p>作为世界上经商最便利的国家之一，以及600多家本地和国外金融机构的总部所在地，新加坡为企业家投资创业提供了各种便利条件。注册新加坡公司就能获得就业准证，让您能在新加坡永久居留。</p>
@@ -120,7 +120,7 @@
           <p>精准高净值客户资源对接</p>
         </div>
       </div>
-      <span>新加坡全球护照交流中心-SGPEC以“安全，隐私，保值，靠谱”为核心，为客户带来真正的价值！</span>
+      <span>新加坡侨水资本以“安全，隐私，保值，靠谱”为核心，为客户带来真正的价值！</span>
     </div>
 
     <div class="component margin-t-80">

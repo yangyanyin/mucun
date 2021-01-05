@@ -3,16 +3,16 @@
     <Introduction :introduction="introduction"></Introduction>
 
     <div class="occupation pc-max-width margin-t-80">
-      <h3 class="canada-title">加拿⼤大移⺠民职业类别NOC解读</h3>
-      <p>全称National Occupational Classification(国家职业分类)加拿大移⺠职业类别分为五类，即O、A、B、C和D</p>
+      <h3 class="canada-title">加拿大移民职业类别NOC解读</h3>
+      <p>全称National Occupational Classification(国家职业分类)加拿大移⺠职业类别分为五类，即0、A、B、C和D</p>
       <div class="clearfix">
         <div class="occupation-item left">
           <img src="../../assets/images/canada/occupation-icon1.jpg" />
-          <span>O:管理类 <br /> 以主管、经理、部⻔负责人等从事管理类事务为主的职位</span>
+          <span>0:管理类 <br /> 以主管、经理、部⻔负责人等从事管理类事务为主的职位</span>
         </div>
         <div class="occupation-item left">
           <img src="../../assets/images/canada/occupation-icon2.jpg" />
-          <span>OA:专业类 <br /> 以律师、医⽣、工程师等从事需要专业知识为主的职位，要求学士学位、硕士或博士学</span>
+          <span>A:专业类 <br /> 以律师、医⽣、工程师等从事需要专业知识为主的职位，要求学士学位、硕士或博士学</span>
         </div>
         <div class="occupation-item left">
           <img src="../../assets/images/canada/occupation-icon3.jpg" />
@@ -86,7 +86,7 @@ export default {
           {
             icon: require('../../assets/images/canada/advantage-icon11.jpg'),
             title: '多种福利',
-            text: '申请人和配偶都可以获得工签子女免费入读当地学校，享受社会福利'
+            text: '申请人和配偶都可以获得工签，子女免费入读当地学校，享受社会福利'
           },
           {
             icon: require('../../assets/images/canada/advantage-icon12.jpg'),

@@ -98,15 +98,15 @@ export default {
           visa_free: require('../../assets/images/passport/SaintKitts-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '154',
+            '免签国家/地区': '约150',
             移民周期: '3个月',
             证据类型: '护照'
           },
           cond: {
             one: '15万美元',
-            tow: '15万美元',
-            three: '15万美元',
-            four: '15万美元'
+            tow: '17.5万美元',
+            three: '18.5万美元',
+            four: '19.5万美元'
           }
         },
         {
@@ -118,7 +118,7 @@ export default {
           visa_free: require('../../assets/images/passport/Turkey-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '111',
+            '免签国家/地区': '约110',
             移民周期: '3个月',
             证据类型: '护照'
           },
@@ -134,14 +134,14 @@ export default {
           visa_free: require('../../assets/images/passport/SaintLucia-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '146',
+            '免签国家/地区': '约140',
             移民周期: '3个月',
             证据类型: '护照'
           },
           cond: {
             one: '10万美元',
-            tow: '16.5万美元',
-            three: '19万美元'
+            tow: '14万美元',
+            four: '15万美元'
           }
         },
         {
@@ -152,7 +152,7 @@ export default {
           visa_free: require('../../assets/images/passport/Vanuatu-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '130',
+            '免签国家/地区': '约130',
             移民周期: '1个月',
             证据类型: '护照'
           },
@@ -171,15 +171,12 @@ export default {
           visa_free: require('../../assets/images/passport/Cyprus-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '174',
+            '免签国家/地区': '约170',
             移民周期: '6个月',
             证据类型: '护照'
           },
           cond: {
-            one: '15万美元',
-            tow: '15万美元',
-            three: '15万美元',
-            four: '15万美元'
+            no_icon: '房产投资200万欧元 + 国家捐款20万欧元'
           }
         },
         {
@@ -190,14 +187,14 @@ export default {
           visa_free: require('../../assets/images/passport/Dominica-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '139',
+            '免签国家/地区': '约140',
             移民周期: '2个月',
             证据类型: '护照'
           },
           cond: {
             one: '10万美元',
             tow: '15万美元',
-            three: '20万美元'
+            four: '20万美元'
           }
         },
         {
@@ -208,14 +205,14 @@ export default {
           visa_free: require('../../assets/images/passport/Grenada-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '142',
+            '免签国家/地区': '约140',
             移民周期: '2个月',
             证据类型: '护照'
           },
           cond: {
             one: '15万美元',
             tow: '20万美元',
-            three: '20万美元'
+            four: '20万美元'
           }
         },
         {
@@ -226,14 +223,12 @@ export default {
           visa_free: require('../../assets/images/passport/Montenegro-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '124',
+            '免签国家/地区': '约120',
             移民周期: '4-6个月',
             证据类型: '护照'
           },
           cond: {
-            one: '10万欧元',
-            tow: '10万欧元',
-            three: '10万欧元'
+            no_icon: '房产投资25万欧元或45万欧元 + 政府捐款10万欧元'
           }
         },
         {
@@ -244,14 +239,14 @@ export default {
           visa_free: require('../../assets/images/passport/Antigua-free.png'),
           type: {
             居住要求: '无',
-            '免签国家/地区': '150',
+            '免签国家/地区': '约150',
             移民周期: '4-6个月',
             证据类型: '护照'
           },
           cond: {
             one: '10万美元',
             tow: '10万美元',
-            three: '10万美元'
+            four: '10万美元'
           }
         }
       ]

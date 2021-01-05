@@ -96,15 +96,12 @@
 
     <Process></Process>
 
-    <RecommendSchool :schoolData="schoolData"></RecommendSchool>
   </div>
 </template>
 <script>
-import RecommendSchool from "./RecommendSchool";
 import Process from "./Process";
 export default {
   components: {
-    RecommendSchool,
     Process,
   },
   data() {
@@ -142,55 +139,10 @@ export default {
           icon: require("../../../assets/images/overseas-study/public-school-icon12.png"),
           text: "PR获批率极高",
         },
-      ],
-      schoolData: {
-        title: "新加坡国际学校",
-        list: [
-          {
-            icon: require("../../../assets/images/overseas-study/school/school-logo1.png"),
-            name: "东陵信托学校",
-            url: "/tangling-trust",
-          },
-          {
-            icon: require("../../../assets/images/overseas-study/school/school-logo2.png"),
-            name: "东南亚世界联合书院",
-            url: "/united-world-college-south-east-asia",
-          },
-          {
-            icon: require("../../../assets/images/overseas-study/school/school-logo3.png"),
-            name: "华中国际",
-            url: "/hwa-chong",
-          },
-          {
-            icon: require("../../../assets/images/overseas-study/school/school-logo4.png"),
-            name: "圣若瑟书院",
-            url: "/sji-international",
-          },
-          {
-            icon: require("../../../assets/images/overseas-study/school/school-logo5.png"),
-            name: "新加坡澳大利亚国际学院",
-            url: "/singapore-australian-international",
-          },
-          {
-            icon: require("../../../assets/images/overseas-study/school/school-logo6.png"),
-            name: "新加坡加拿大国际学校",
-            url: "/canadian-international",
-          },
-          {
-            icon: require("../../../assets/images/overseas-study/school/school-logo7.png"),
-            name: "新加坡美国学校",
-            url: "/singapore-american",
-          },
-          {
-            icon: require("../../../assets/images/overseas-study/school/school-logo8.png"),
-            name: "英华国际学校",
-            url: "/acs-international",
-          }
-        ]
-      }
+      ]
     }
   }
-};
+}
 </script>
 <style scoped lang="less">
 .content {

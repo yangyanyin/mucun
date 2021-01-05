@@ -506,7 +506,7 @@ const routes = [
       },
       {
         path: 'singapore-australian-international',
-        name: '新加坡澳大利亚国际学院',
+        name: '新加坡澳大利亚国际学校',
         component: SingaporeAustralianInternational,
         meta: {
           type: '新加波国际学校'

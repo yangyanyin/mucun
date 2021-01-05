@@ -13,7 +13,7 @@
           <strong>+65 8866 5586</strong>
         </p>
         <p>
-          <i>邮箱:</i>sgpec@sgpec.sg
+          <i>邮箱:</i>inquiry@waterlandcap.com
         </p>
         <p>
           <i>地址:</i>新加坡滨海林荫道8号滨海湾金融中心1号大楼（渣打银行）14楼03A单元

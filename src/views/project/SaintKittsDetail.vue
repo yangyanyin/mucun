@@ -21,7 +21,7 @@
           <Advantage :advantage="advantage" />
 
           <!-- 项目入籍方案 -->
-          <Program :program="program" title="项目入籍方案" />
+          <Program :program="program" title="项目入籍方案 （二选一）" />
 
           <!-- 如何获得护照 -->
           <Obtain :obtain="obtain" titleName="如何获得圣基茨和尼维斯护照" />
