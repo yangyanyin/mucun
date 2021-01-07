@@ -100,7 +100,6 @@ export default {
   }
   .video {
     width: 58%;
-    padding: 20px;
     background: #F2F2F2;;
     img {
       display: block;
