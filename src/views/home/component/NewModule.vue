@@ -6,8 +6,17 @@
           <h3 class="left">新闻动态</h3>
           <router-link class="right" :to="'/news-' + type">NEWS</router-link>
         </div>
-        <!-- <NewSwiper v-for="(list, key) in newDynamic" :newsList="list.news" :key="key" :index="key"></NewSwiper> -->
-        <NewSwiper :newsList="newDynamic[0].news" :index="0"></NewSwiper>
+        <div class="new-item">
+          <router-link :to="'/news-details/' + newDynamic[0].news[0].id" class="clearfix">
+            <div class="img">
+              <img :src="newDynamic[0].news[0].img" />
+            </div>
+            <h3>{{newDynamic[0].news[0].title}}</h3>
+            <p>{{newDynamic[0].news[0].description}}</p>
+            <span class="left">{{newDynamic[0].news[0].created_at.split(' ')[0]}}</span>
+            <span class="right"><router-link :to="'/news-details/' + newDynamic[0].news[0].id">了解详情</router-link></span>
+          </router-link>
+        </div>
       </div>
       <div class="right">
         <div class="title clearfix">
@@ -15,16 +24,10 @@
           <router-link class="right" :to="'/news-' + type">查看更多></router-link>
         </div>
         <div class="content">
-          <router-link :to="'/news-details/' + item.id" v-for="(item, key) in recommendNews" :key="key">
+          <router-link :to="'/news-details/' + item.id" v-for="(item, key) in recommend" :key="key">
             <strong>{{item.title}}</strong>
-            <template v-if="key === 0">
-              <p>加拿大位于美国以北，在北美洲最顶端，其领土面积达998万平方公里，居世界第二位。亦是发达国家之中的领土面积最大者。作为一个移民国家，据数据统计亚洲是加拿大迄今为止最大的移民来源地区</p>
-              <span>2020-09-07</span>
-            </template>
-            <template v-else-if="key === 1">
-              <p>由于新冠疫情肆虐，很多国家也颁布了国家或地区的旅游禁令。圣基茨实施了“云申请”的快速护照移民通道。新加坡侨水资本通过线上办理不到2个月就快速拿到圣基茨的护照，为客户提供了安全可靠的服务。</p>
-              <span>2020-06-15</span>
-            </template>
+            <p>{{item.description}}</p>
+            <span>{{item.created_at.split(' ')[0]}}</span>
             <span class="right">了解详情></span>
           </router-link>
         </div>
@@ -33,30 +36,17 @@
   </div>
 </template>
 <script>
-import NewSwiper from './NewSwiper'
 export default {
-  components: {
-    NewSwiper
-  },
   props: {
     type: String,
     newDynamic: Array
   },
-  data () {
-    return {
-      recommendNews: []
+  computed: {
+    recommend () {
+      return JSON.parse(JSON.stringify(this.newDynamic))[0].news.slice(1, 3)
     }
   },
-  mounted () {
-    this.$http({
-      method: "get",
-      url: process.env.VUE_APP_API + "/v1/recommend_news_list",
-    }).then(res => {
-      if (res.data.code === 200) {
-        this.recommendNews = res.data.data.recommend_news_list.slice(0, 2)
-      }
-    });
-  }
+  mounted () {}
 }
 </script>
 <style scoped lang="less">
@@ -216,6 +206,96 @@ export default {
       float: none;
       width: 100%;
       padding: 0;
+    }
+  }
+}
+
+.new-item {
+  position: relative;
+  margin-top: 30px;
+  overflow: hidden;
+  a {
+    display: block;
+    height: 132px;
+    h3 {
+      color: #111;
+      font-weight: bold;
+      overflow: hidden;
+      padding-top: 33px;
+      font-size: 16px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .img {
+      float: left;
+      width: 300px;
+      height: 210px;
+      overflow: hidden;
+      margin-right: 20px;
+      border: 1px solid #e6e6e6;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    p {
+      font-size: 13px;
+      margin: 10px 0 18px;
+      line-height: 22px;
+      color: #444;
+      display: -webkit-box;
+      overflow: hidden;     
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+    span {
+      color: #B9B9B9;
+      font-size: 14px;
+      a {
+        display: block;
+        width: 96px;
+        height: 38px;
+        border: 2px solid #417173;
+        font-size: 14px;
+        text-align: center;
+        line-height: 34px;
+        border-radius: 19px;
+        color: #0e4a4c;
+        transition: .3s;
+        &:hover {
+          background: #0e4a4c;
+          color: #fff;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 0 10px;
+    a {
+      height: auto;
+      position: relative;
+      padding-left: 110px;
+      .img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+      }
+      h3 {
+        padding: 0;
+        font-size: 14px;
+      }
+      p {
+        -webkit-line-clamp: 2;
+        margin: 5px 0 10px;
+        line-height: 20px;
+      }
+      span.right {
+        display: none;
+      }
     }
   }
 }

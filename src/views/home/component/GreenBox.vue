@@ -52,6 +52,27 @@ export default {
           img: require('../../../assets/images/Korea-home.jpg'),
           passport: require('../../../assets/images/korea-passport.png'),
           url: '/korea-details'
+        },
+        {
+          name: '加拿大 / Canada',
+          text: '一人申请，全家都可获得绿卡',
+          img: require('../../../assets/images/Canada-home.png'),
+          passport: require('../../../assets/images/canada-passpor.png'),
+          url: '/canada-details'
+        },
+        {
+          name: '葡萄牙 / Portugal',
+          text: '一人申请，全家都可获得绿卡',
+          img: require('../../../assets/images/portugal-home.png'),
+          passport: require('../../../assets/images/portugal-passport.png'),
+          url: '/portugal-details'
+        },
+        {
+          name: '日本 / Japan',
+          text: '一人申请，全家都可获得绿卡',
+          img: require('../../../assets/images/japan-home.png'),
+          passport: require('../../../assets/images/japan-passport.png'),
+          url: '/japan-details'
         }
       ]
     }

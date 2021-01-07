@@ -91,7 +91,7 @@
           </div>
         </div>
 
-         <!-- 日本 -->
+         <!-- 葡萄牙 -->
         <div class="list animation-show">
           <img src="../../assets/images/card-portugal.jpg" class="bg" />
           <div class="info">

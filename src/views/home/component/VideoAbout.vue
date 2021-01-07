@@ -1,8 +1,11 @@
 <template>
   <!-- 视频和关于我们 -->
   <div class="pc-max-width home-about">
-    <div class="animation-show clearfix" >
-      <div class="left video" v-html="videoIframe"></div>
+    <div class="animation-show clearfix" style="background: #F2F2F2;">
+      <!-- <div class="left video" v-html="videoIframe"></div> -->
+      <div class="left video">
+        <img src="../../../assets/images/about-img.jpg" />
+      </div>
       <div class="right about">
         <h3>选择我们</h3>
         <span>CHOOSE US</span>
@@ -97,6 +100,12 @@ export default {
   }
   .video {
     width: 58%;
+    padding: 20px;
+    background: #F2F2F2;;
+    img {
+      display: block;
+      width: 100%;
+    }
     @media(max-width: 767px) {
       float: none;
       width: 100%;
