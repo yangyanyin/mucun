@@ -62,22 +62,22 @@ export default {
         line_number: 4,
         list: [
           {
-            icon: require('../../assets/images/philippines/philippines-img4.jpg'),
+            icon: require('../../assets/images/philippines/philippines-img1.png'),
             title: '东南亚新兴市场',
             text: '作为东盟（ASEAN）与亚太经合组织（APEC）成员国之一，菲律宾是东南亚第四大规模的新兴工业国家，并且是世界的新兴市场之一。其经济发展迅猛，市场发展潜力较大'
           },
           {
-            icon: require('../../assets/images/philippines/philippines-img1.jpg'),
+            icon: require('../../assets/images/philippines/philippines-img2.png'),
             title: '投资门槛低方便快捷',
             text: '最低投资额仅需存款2万美金，无学历要求、无经商管理要求、无居住要求'
           },
           {
-            icon: require('../../assets/images/philippines/philippines-img3.jpg'),
+            icon: require('../../assets/images/philippines/philippines-img3.png'),
             title: '快速拿身份',
             text: '从准备材料、递交申请到拿到身份只需6-8周。无需排期、抽查、补充材料，一步到位拿身份'
           },
           {
-            icon: require('../../assets/images/philippines/philippines-img2.jpg'),
+            icon: require('../../assets/images/philippines/philippines-img4.png'),
             title: '性价比高 无移民监',
             text: '自由出入菲律宾，可在当地工作、经商、生活、学习等活动，英语环境，美式教育体系，无需办理学生签证'
           }
