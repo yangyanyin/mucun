@@ -16,9 +16,6 @@
             <a target="_blank" href="https://gd.ifeng.com/c/v002zk7Qk--jElpeoYodb-_OqSikQ9gZgWUv9GfR7T-_oHjzeI__"><img src="../../assets/images/media-img2.png"></a>
           </li>
           <li>
-            <a target="_blank" href=""><img src="../../assets/images/media-img3.png"></a>
-          </li>
-          <li>
             <a target="_blank" href="https://edu.163.com/20/1125/17/FS9VIVUK0029985J.html"><img src="../../assets/images/media-img4.png"></a>
           </li>
           <li>

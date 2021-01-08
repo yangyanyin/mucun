@@ -13,7 +13,7 @@
           <!-- 下载手册 -->
           <DownloadManual countryName="格林纳达 <br /> Grenada" />
         </div>  
-        <div class="left">
+        <div class="left" id="project-left-content">
           <!-- 项目简介 -->
           <Introduction :introduction="introduction" />
 

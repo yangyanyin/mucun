@@ -13,7 +13,7 @@
           <!-- 下载手册 -->
           <DownloadManual countryName="圣卢西亚 <br /> Saint Lucia" />
         </div> 
-        <div class="left">
+        <div class="left" id="project-left-content">
           <!-- 项目简介 -->
           <Introduction :introduction="introduction" />
 

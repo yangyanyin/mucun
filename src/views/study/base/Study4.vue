@@ -109,12 +109,12 @@ export default {
           },
           {
             icon: require("../../../assets/images/overseas-study/school/mindchaps-logo.png"),
-            name: "Mindchaps",
+            name: "迈杰思幼儿园",
             url: "/mindc-champs",
           },
           {
             icon: require("../../../assets/images/overseas-study/school/myfirstskool-logo.png"),
-            name: "Myfirstskool",
+            name: "My First Skool 幼儿园",
             url: "/my-first-skool",
           },
           {

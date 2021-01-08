@@ -14,7 +14,7 @@
         <div class="d">
           <img src="../../../assets/images/vicky.png" />
           <div class="detailed">
-            <strong>资深移民顾问  Vicky Chen</strong>
+            <strong>资深移民顾问  Taylor Smith</strong>
             <p>拥有丰富的行业分析和预判能力，专业和细致材料处理能力，深度关注海外资产配置、移民、留学政策，为客户做好长远移民规划，细心严谨的态度让客户后顾无忧，制定更精准的私人化培训方案，做好移民安置和身份规划。</p>
           </div>
         </div>

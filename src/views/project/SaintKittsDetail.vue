@@ -13,7 +13,7 @@
           <!-- 下载手册 -->
           <DownloadManual countryName="塞浦路斯 <br /> Cyprus" />
         </div>  
-        <div class="left">
+        <div class="left" id="project-left-content">
           <!-- 项目简介 -->
           <Introduction :introduction="introduction" />
 

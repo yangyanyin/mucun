@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div class="copyright">© 2020 Singapore Global Passport Exchange Centre Pte Ltd. All Rights Reserved.</div>
+    <div class="copyright">© 2020 Waterland Capital Pte Ltd. All Rights Reserved.</div>
     <!-- return top -->
     <div class="return-top" v-if="showReturnTop" @click="returnTop">
       <img src="../../assets/images/return-top.png" />

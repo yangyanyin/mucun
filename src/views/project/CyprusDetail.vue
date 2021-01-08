@@ -3,7 +3,19 @@
     <ProjectBanner name="cyprus" />
     <div class="pc-max-width">
       <div class="content clearfix">
-        <div class="left">
+
+        <div class="right">
+          <!-- 评分 -->
+          <Score :score="score" />
+
+          <!-- 地图信息 -->
+          <MapInfo :mapInfo="mapInfo" />
+
+          <!-- 下载手册 -->
+          <DownloadManual countryName="塞浦路斯 <br /> Cyprus" />
+        </div>  
+
+        <div class="left" id="project-left-content">
           <!-- 项目简介 -->
           <Introduction :introduction="introduction" />
 
@@ -20,16 +32,6 @@
           <Application :application="application" />
           
         </div>
-        <div class="right">
-          <!-- 评分 -->
-          <Score :score="score" />
-
-          <!-- 地图信息 -->
-          <MapInfo :mapInfo="mapInfo" />
-
-          <!-- 下载手册 -->
-          <DownloadManual countryName="塞浦路斯 <br /> Cyprus" />
-        </div>  
       </div>
     </div>
     <ContentImg />

@@ -1,11 +1,12 @@
 <template>
   <div class="asset">
     <div class="banner">
-      <img src="../../assets/images/asset-banner.jpg" />
+      <img class="web-img" src="../../assets/images/asset-banner.jpg" />
+      <img class="wap-img" src="../../assets/images/asset-banner-wap.jpg" />
     </div>
     <div class="des margin-t-80 pc-max-width">
-      <h3>新加坡侨水资本——Singapore Capital—全球精英客户的共同选择</h3>
-      <p>新加坡侨水资本——Singapore Capital专业团队深耕新加坡，整合优质商业资源，精选全球潜力投资项目，为客户提供全方位海外规划服务，轻松实现全球资产配置！</p>
+      <h3>新加坡侨水资本——Waterland Capital—全球精英客户的共同选择</h3>
+      <p>新加坡侨水资本——Waterland Capital专业团队深耕新加坡，整合优质商业资源，精选全球潜力投资项目，为客户提供全方位海外规划服务，轻松实现全球资产配置！</p>
     </div>
     <div class="allocation margin-t-80 pc-max-width">
       <div class="title">
@@ -110,7 +111,7 @@
           <img src="../../assets/images/asset-core-img.jpg" />
         </div>
         <div class="right">
-          <strong>SGPEC 核心优势</strong>
+          <strong>新加坡侨水资本 核心优势</strong>
           <p>优质海外资产甄选供应</p>
           <p>分散投资，最大化利润分成体系实现财富的保值增值</p>
           <p>私人定制客户落地服务</p>
@@ -168,16 +169,7 @@ export default {
 .banner {
   overflow: hidden;
   img {
-    display: block;
     width: 100%;
-  }
-  @media (max-width: 767px) {
-    img {
-      position: relative;
-      width: auto;
-      left: -80%;
-      height: 300px;
-    }
   }
 }
 

@@ -13,6 +13,31 @@
 export default {
   props: {
     mapInfo: Object
+  },
+  methods: {
+    nameFixel () {
+      let contentHeight = document.getElementById('project-left-content').clientHeight // 对照物高度
+      let picBox = document.getElementsByClassName('map')[0] //  吸顶自身
+      let top = document.documentElement.scrollTop || document.body.scrollTop
+      if (top > 400) {
+        if (top > contentHeight - 462) {
+          picBox.style.position = 'relative'
+          picBox.style.overflow = 'visible'
+          picBox.style.top = contentHeight - 900 + 'px'
+          return
+        }
+        picBox.style.position = 'relative'
+        picBox.style.overflow = 'visible'
+        picBox.style.top = top - 400 + 'px'
+      } else {
+        picBox.style.position = 'relative'
+        picBox.style.overflow = 'visible'
+        picBox.style.top = '0px'
+      }
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.nameFixel)
   }
 }
 </script>

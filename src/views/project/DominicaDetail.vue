@@ -13,7 +13,7 @@
           <!-- 下载手册 -->
           <DownloadManual countryName="多米尼克 <br /> Dominica" />
         </div>  
-        <div class="left">
+        <div class="left" id="project-left-content">
           <!-- 项目简介 -->
           <Introduction :introduction="introduction" />
 
