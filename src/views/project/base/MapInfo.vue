@@ -16,6 +16,7 @@ export default {
   },
   methods: {
     nameFixel () {
+      if (!document.getElementById('project-left-content')) return
       let contentHeight = document.getElementById('project-left-content').clientHeight // 对照物高度
       let picBox = document.getElementsByClassName('map')[0] //  吸顶自身
       let top = document.documentElement.scrollTop || document.body.scrollTop

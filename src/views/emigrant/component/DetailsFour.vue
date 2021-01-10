@@ -10,7 +10,7 @@
       <ul class="clearfix">
         <li>
           <img src="../../../assets/images/singapore/singapore-office-icon2.png" />
-          <p>通过家族办公室可以过得EP身份，可避免金融信息交换</p>
+          <p>通过家族办公室可以获得EP身份，可避免金融信息交换</p>
         </li>
         <li>
           <img src="../../../assets/images/singapore/singapore-office-icon3.png" />

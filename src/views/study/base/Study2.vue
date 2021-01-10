@@ -68,7 +68,7 @@
     </div>
 
     <div class="advantage margin-t-80">
-      <h3 class="study-title">新加坡留学优势</h3>
+      <h3 class="study-title">选择新加坡公立学校的优势</h3>
       <div class="pc-max-width box-content clearfix">
         <div v-for="(item, key) in listData" :key="key" class="item left">
           <img :src="item.icon" :alt="item.text" />

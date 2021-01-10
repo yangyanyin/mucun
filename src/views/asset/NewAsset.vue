@@ -5,8 +5,8 @@
       <img class="wap-img" src="../../assets/images/asset-banner-wap.jpg" />
     </div>
     <div class="des margin-t-80 pc-max-width">
-      <h3>新加坡侨水资本——Waterland Capital—全球精英客户的共同选择</h3>
-      <p>新加坡侨水资本——Waterland Capital专业团队深耕新加坡，整合优质商业资源，精选全球潜力投资项目，为客户提供全方位海外规划服务，轻松实现全球资产配置！</p>
+      <h3>新加坡侨水资本——Waterland Capital <br /> 全球精英客户的共同选择</h3>
+      <p>专业团队深耕新加坡，整合优质商业资源，精选全球潜力投资项目，为客户提供全方位海外规划 服务，轻松实现全球资产配置!</p>
     </div>
     <div class="allocation margin-t-80 pc-max-width">
       <div class="title">
@@ -21,12 +21,12 @@
         <li>
           <img src="../../assets/images/asset-icon4.png">
           <span>全球移民以及子女教育</span>
-          <i>私人订制身份规划，甄选、对接全球一流高校留学服务项目，满足中高净值客户子女教育深造的升级需求。</i>
+          <i>私人订制身份规划，甄选、对接全球一流高校留学服务项目，满足中高净值客户子女教育深造的升级需求</i>
         </li>
         <li>
           <img src="../../assets/images/asset-icon3.png">
           <span>高端医疗</span>
-          <i>为高净值客户提供高品质的海外医疗及健康管理一站式服务。</i>
+          <i>为高净值客户提供高品质的海外医疗及健康管理一站式服务</i>
         </li>
         <li>
           <img src="../../assets/images/asset-icon2.png">
@@ -36,7 +36,7 @@
         <li>
           <img src="../../assets/images/asset-icon1.png">
           <span>新加坡房产</span>
-          <i>甄选优质房源，为高净值客户提供新加坡的中高端房产。</i>
+          <i>甄选优质房源，为高净值客户提供新加坡的中高端房产</i>
         </li>
       </ul>
     </div>

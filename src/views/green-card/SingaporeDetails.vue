@@ -278,6 +278,7 @@ export default {
     margin-bottom: 20px;
   }
   p {
+    margin-bottom: 20px;
     font-size: 17px;
     line-height: 34px;
   }

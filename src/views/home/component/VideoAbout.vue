@@ -9,7 +9,7 @@
       <div class="right about">
         <h3>选择我们</h3>
         <span>CHOOSE US</span>
-        <p>新加坡侨水资本——Singapore Waterland Capital，总部位于新加坡。自成立以来，在不断打造专业、诚信、高素质精英团队的基础上，经过精挑细选, 通过与多国顶尖合作方的强强联手，建立长久和稳固的合作关系，源源不断地向市场推出安全和稳妥的项目，一直坚守“恪守诚信，隐私至上”的企业精神，在市场上树立了良好的口碑，作为新加坡市场行业领先的专业移民机构，以高效快速，隐私保密著称业内。</p>
+        <p>新加坡Waterland Capital-侨水资本，立足新加坡深耕大中华地区，致力于为大中华地区高净值个人与家庭，提供全方位海外生活与投资的高端定制服务，从海外资产配置，身份规划，子女教育，管家服务，家族办公室等方面提供系统的一站式专业服务。作为新加坡业内领先的全方位海外生活规划机构，依托我们丰富的行业资源，高效、负责任地协助高净值人群稳健实现目标，是您值得信赖的选择。</p>
         <a class="contact" @click="changeContact">联系我们</a>
         <div class="icon big">
           <a target="_blank" href="https://www.facebook.com/sgpecsingapore">
@@ -41,7 +41,7 @@
         <span class="close" @click="hideContactWindow">
           <img src="../../../assets/images/close.png" />
         </span>
-        <h3>新加坡侨水资本</h3>
+        <h3>新加坡侨水资本 Waterland Capital</h3>
         <p>直营新加坡移民/银行开户/新加坡留学，家族办公室，欧盟&英联邦快速护照，不成功不收费。</p>
         <a @click="changeContact">点击客服了解更多详情</a>
       </div>

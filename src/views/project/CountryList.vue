@@ -217,7 +217,7 @@ export default {
         },
         {
           name: '黑山',
-          flag: require('../../assets/images/country2.png'),
+          flag: require('../../assets/images/country16.png'),
           url: '/project/montenegro',
           img: require('../../assets/images/passport/Montenegro-img.jpg'),
           visa_free: require('../../assets/images/passport/Montenegro-free.png'),

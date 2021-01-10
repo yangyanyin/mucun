@@ -55,8 +55,6 @@
       </div>
     </div>
 
-    <Process></Process>
-
     <div class="pc-max-width clearfix margin-t-80 suitable-for">
       <div class="left">
         <h3 class="study-title">适合人群</h3>
@@ -70,6 +68,8 @@
         />
       </div>
     </div>
+
+    <Process></Process>
 
     <RecommendSchool :schoolData="schoolData"></RecommendSchool>
   </div>
