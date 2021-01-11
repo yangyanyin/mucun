@@ -200,14 +200,14 @@ export default {
         }
         &:nth-child(1) {
           p {
-            background: #fff url("../../assets/images/down-tel1.png") no-repeat
+            background: #fff url("../../assets/images/down-tel2.png") no-repeat
               9px 10px;
             background-size: 20px;
           }
         }
         &:nth-child(2) {
           p {
-            background: #fff url("../../assets/images/down-tel2.png") no-repeat
+            background: #fff url("../../assets/images/down-tel1.png") no-repeat
               9px 10px;
             background-size: 20px;
           }
