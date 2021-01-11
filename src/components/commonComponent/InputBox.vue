@@ -1,6 +1,5 @@
 <template>
   <div class="input-box">
-    
     <ul class="clearfix">
       <li class="name" :class="{on: inputType === 'name'}">
         <input class="name" type="text" placeholder="您的称呼" @focus="inputFocus('name')" @blur="inputBlur" v-model="userName" />

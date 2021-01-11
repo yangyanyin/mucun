@@ -39,7 +39,7 @@
       </swiper-slide>
       <swiper-slide>
         <div class="d">
-          <img src="../../../assets/images/member1.png" />
+          <img src="../../../assets/images/christina-sanchez.png" />
           <div class="detailed">
             <strong>资深顾问 Christina Sanchez</strong>
             <p>10多年从事移民行业的经验，多国旅居经历，精通欧美各国移民法律和政策，负责欧美 留学、置业以及签证办理，市场嗅觉敏锐，擅长客户资格评估和案例分析，以客户利益为 准则，提供专业服务，快速制定精准的移民方案，成功帮助众多家庭实现移民， 认真负 责移民家庭的后续服务。</p>

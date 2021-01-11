@@ -112,9 +112,8 @@ export default {
   }
   .about {
     width: 42%;
-    height: 500px;
     background: #F2F2F2;
-    padding: 40px 50px;
+    padding: 35px 50px;
     h3 {
       display: block;
       font-size: 24px;
@@ -127,7 +126,7 @@ export default {
       display: block;
       color: #000;
       font-weight: bold;
-      margin: 20px 0 50px;
+      margin: 15px 0 20px;
     }
     p {
       line-height: 28px;
@@ -136,7 +135,7 @@ export default {
       float: right;
       width: 100px;
       height: 40px;
-      margin-top: 40px;
+      margin-top: 20px;
       border-radius: 20px;
       line-height: 36px;
       font-size: 16px;
@@ -147,7 +146,7 @@ export default {
       border: 2px solid #000;
     }
     .icon {
-      padding-top: 40px;
+      padding-top: 20px;
       a {
         display: inline-block;
         width: 24px;

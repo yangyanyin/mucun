@@ -14,6 +14,23 @@
         </span>
         <h3>请留下您的联系方式</h3>
         <p>也可以拨打（+65）8866 5586 <br /> 直接与我们取得联系</p>
+        <ul>
+          <li>
+            <img src="../assets/images/telegram@2x.png" />
+            <i>+65 8866 5586</i>
+          </li>
+          <li>
+            <img src="../assets/images/whasapp@2x.png" />
+            <i>+65 8866 5586</i>
+          </li>
+          <li>
+            <img src="../assets/images/WeChat@2x.png">
+            <i>
+              <em><img src="../assets/images/WeChat.png" />扫一扫添加微信</em>
+              <em><img src="../assets/images/WeChat2.png" />扫一扫关注公众号</em>
+            </i>
+          </li>
+        </ul>
         <InputBox  @success="success"></InputBox>
       </div>
     </div>
@@ -129,13 +146,93 @@ export default {
       display: block;
       font-size: 24px;
       color: #fff;
-      margin: 50px 0 25px;
+      margin: 40px 0 15px;
     }
     p {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       color: #fff;
-      font-size: 20px;
-      line-height: 34px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    ul {
+      li {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 0 15px;
+        img {
+          display: block;
+          width: 100%;
+        }
+        i {
+          position: absolute;
+          right: -20px;
+          z-index: 999;
+          width: 160px;
+          height: 0;
+          margin-top: 10px;
+          color: #444;
+          line-height: 40px;
+          border-radius: 5px;
+          overflow: hidden;
+          padding-left: 20px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+        }
+        &:nth-child(1) {
+          i {
+            background: #fff url('../assets/images/down-tel1.png') no-repeat 10px 10px;
+            background-size: 20px;
+          }
+        }
+        &:nth-child(2) {
+          i {
+            background: #fff url('../assets/images/down-tel2.png') no-repeat 10px 10px;
+            background-size: 20px;
+          }
+        }
+        &:nth-child(3) {
+          i {
+            width: 240px;
+            padding: 0;
+            background: #fff;
+            em {
+              display: inline-block;
+              font-size: 12px;
+              img {
+                width: 100px;
+              }
+            }
+          }
+        }
+        &:hover {
+          &:after {
+            content: '';
+            position: absolute;
+            z-index: 999;
+            left: 5px;
+            bottom: -11px;
+            width: 0px;
+            height: 0px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #fff;
+          }
+          i {
+            height: 40px;
+            box-shadow: 0 0 2px #000;
+          }
+          &:last-child {
+            i {
+              height: 147px;
+              em {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
     }
     @media (max-width: 767px) {
       width: 90%;
@@ -145,11 +242,12 @@ export default {
       padding: 0 10px;
       h3 {
         font-size: 20px;
-        margin: 30px 0 15px;
+        margin: 15px 0 10px;
       }
       p {
-        font-size: 16px;
-        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 15px;
       }
     }
   }

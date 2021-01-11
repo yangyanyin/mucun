@@ -10,6 +10,7 @@
   </div>
 </template>
 <script>
+import { device } from '../../../assets/js/config'
 export default {
   props: {
     mapInfo: Object
@@ -38,7 +39,9 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('scroll', this.nameFixel)
+    if (device() === 'web') {
+      window.addEventListener('scroll', this.nameFixel)
+    }
   }
 }
 </script>
