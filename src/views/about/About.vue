@@ -60,7 +60,7 @@
         <div class="right des">
           <h3>我们的服务理念</h3>
           <h4>铸造品质，客户至上。</h4>
-          <p>新加坡侨水资本——Singapore Waterland Capital，立足新加坡，放眼全球，秉承客户隐私至上的服务宗旨，专业铸造品质，服务打造诚信，新加坡侨水资本-您可信赖的专业服务。</p>
+          <p>新加坡侨水资本——Waterland Capital，立足新加坡，放眼全球，秉承客户隐私至上的服务宗旨，专业铸造品质，服务打造诚信，新加坡侨水资本-您可信赖的专业服务。</p>
         </div>
         <img src="../../assets/images/idea-bg.png" class="wap-img" />
       </div>

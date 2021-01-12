@@ -64,15 +64,20 @@
       </div>
     </div>
 
+    <!--咨询完成弹窗 -->
+    <MessagePopup v-if="messageType" :status="messageType" @messageType="messageType = false"></MessagePopup>
+
     <!-- 国旗 -->
     <Flag />
   </div>
 </template>
 <script>
 import Flag from "../commonComponent/NationalFlag"
+import MessagePopup from './MessagePopup'
 export default {
   components: {
-    Flag
+    Flag,
+    MessagePopup
   },
   data () {
     return {
@@ -83,7 +88,8 @@ export default {
       nameError: false,
       telError: false,
       weChatError: false,
-      messageLoading: false
+      messageLoading: false,
+      messageType: false
     }
   },
   methods: {
@@ -125,6 +131,7 @@ export default {
             this.weChat = ''
             this.content = ''
             this.messageLoading = false
+            this.messageType = true
           }
         })
       }, 1000)
