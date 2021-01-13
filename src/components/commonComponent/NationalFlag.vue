@@ -1,27 +1,27 @@
 <template>
   <ul class="flag">
-    <router-link tag="li" to="/project/details/65">
+    <router-link tag="li" to="/project/dominica">
       <img src="../../assets/images/country1.png" />
     </router-link>
-    <router-link tag="li"  to="/project/details/90">
+    <router-link tag="li" to="/project/grenada">
       <img src="../../assets/images/country2.png" />
     </router-link>
-    <router-link tag="li"  to="/project/details/10">
+    <router-link tag="li" to="/project/antigua">
       <img src="../../assets/images/country3.png" />
     </router-link>
-    <router-link tag="li"  to="/project/details/61">
+    <router-link tag="li" to="/project/cyprus">
       <img src="../../assets/images/country4.png" />
     </router-link>
-    <router-link tag="li"  to="/project/details/190">
+    <router-link tag="li" to="/project/saint-kitts">
       <img src="../../assets/images/country5.png" />
     </router-link>
-    <router-link tag="li"  to="/project/details/191">
+    <router-link tag="li" to="/project/saint-lucia">
       <img src="../../assets/images/country6.png" />
     </router-link>
-    <router-link tag="li"  to="/project/details/232">
+    <router-link tag="li" to="/project/turkey">
       <img src="../../assets/images/country7.png" />
     </router-link>
-    <router-link tag="li"  to="/project/details/243">
+    <router-link tag="li" to="/project/vanuatu">
       <img src="../../assets/images/country8.png" />
     </router-link>
     <router-link tag="li"  to="/philippines-details">

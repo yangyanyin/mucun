@@ -93,7 +93,7 @@ export default {
         },
         {
           title: '入籍时间短',
-          des: '60个工作日即可获批，先审批，后投资，无全球征税',
+          des: '60个工作日即可获批，先审批，后投资',
           icon: require('../../assets/images/passport/Grenada-icon5.jpg')
         },
         {
@@ -144,7 +144,7 @@ export default {
       },
       application: [
         '评估与签约，准备初期申请材料',
-        '收到政府签收函进行背景调查',
+        '取得政府签收函后进行背景调查',
         '获得原则性批复函',
         '完成投资',
         '递交宣誓材料到移民局',

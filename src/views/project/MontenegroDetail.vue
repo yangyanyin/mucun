@@ -93,7 +93,7 @@ export default {
         },
         {
           title: '全球通行',
-          des: '护照全球免签117个国家，包括香港，澳门，新加坡，申根等欧洲国家',
+          des: '护照全球免签120多个国家，包括香港，澳门，新加坡，申根等欧洲国家',
           icon: require('../../assets/images/passport/Montenegro-icon5.jpg')
         },
         {
