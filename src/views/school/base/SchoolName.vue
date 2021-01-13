@@ -55,13 +55,6 @@ export default {
   width: 42%;
   padding: 30px;
   position: relative;
-  .name-img {
-    // &.fixel {
-    //   position: absolute;
-    //   left: 30px;
-    //   right: 30px;
-    // }
-  }
   img {
     display: block;
     width: 100%;
@@ -88,12 +81,14 @@ export default {
   }
   p {
     display: block;
+    position: relative;
     margin-bottom: 15px;
+    padding-left: 25px;
     font-size: 16px;
     img {
-      display: inline-block;
-      position: relative;
-      top: -3px;
+      position: absolute;
+      left: 0;
+      top: 2px;
       width: 18px;
       margin-right: 5px;
     }

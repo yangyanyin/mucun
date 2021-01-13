@@ -42,7 +42,26 @@
           <img src="../../../assets/images/christina-sanchez.png" />
           <div class="detailed">
             <strong>资深顾问 Christina Sanchez</strong>
-            <p>10多年从事移民行业的经验，多国旅居经历，精通欧美各国移民法律和政策，负责欧美 留学、置业以及签证办理，市场嗅觉敏锐，擅长客户资格评估和案例分析，以客户利益为 准则，提供专业服务，快速制定精准的移民方案，成功帮助众多家庭实现移民， 认真负 责移民家庭的后续服务。</p>
+            <p>10多年从事移民行业的经验，多国旅居经历，精通欧美各国移民法律和政策，负责欧美留学、置业以及签证办理，市场嗅觉敏锐，擅长客户资格评估和案例分析，以客户利益为准则，提供专业服务，快速制定精准的移民方案，成功帮助众多家庭实现移民，认真负责移民家庭的后续服务。</p>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="d">
+          <img src="../../../assets/images/evelyn-yep.jpg" />
+          <div class="detailed">
+            <strong>资深留学专家 Evelyn Yep</strong>
+            <p>从业多年，并拥有丰富的市场开发经验，准确把握移民留学趋势，与新加坡各大高校和中小学保持紧密合作，凭借自己的专业知识，更能站在客户的角度，帮助国内的留学生实现留学和移民的梦想！开启海外生活的新旅程。</p>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="d">
+          <img src="../../../assets/images/michael-chan.png" />
+          <div class="detailed">
+            <strong>资深移民专家 Michael Chan</strong>
+            <p>强大且专业的从业经验，主要协助中国企业家成功赴新加坡投资商业项目、开设公司、银行开户、审核相关签证事宜，对各类移民，留学需求有精准的解决方案，他凭借自身的认真踏实，帮助许多客户快速获得签证，客户们都对他的办事效率十分肯定!</p>
           </div>
         </div>
       </swiper-slide>

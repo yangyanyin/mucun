@@ -36,6 +36,19 @@
     <router-link tag="li"  to="/korea-details">
       <img src="../../assets/images/country12.png" />
     </router-link>
+
+    <router-link tag="li" to="/japan-details">
+      <img src="../../assets/images/country14.png" />
+    </router-link>
+    <router-link tag="li" to="/canada-details">
+      <img src="../../assets/images/country13.png" />
+    </router-link>
+    <router-link tag="li" to="/portugal-details">
+      <img src="../../assets/images/country15.png" />
+    </router-link>
+    
+
+    
   </ul>
 </template>
 <style scoped lang="less">

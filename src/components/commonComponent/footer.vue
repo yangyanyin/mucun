@@ -19,6 +19,7 @@
           <div class="menu left">
             <router-link to="/news-case">成功案例</router-link>
             <router-link to="/about">关于我们</router-link>
+            <a @click="showTerms">隐私条款</a>
           </div>
         </div>
         <div class="address">
@@ -43,21 +44,30 @@
     <div class="return-top" v-if="showReturnTop" @click="returnTop">
       <img src="../../assets/images/return-top.png" />
     </div>
+
+    <Terms v-if="termsType" @closeTerms="showTerms" />
+
   </div>
 </template>
 <script>
 import Hotline from './Hotline'
+import Terms from '../../views/terms/Terms'
 export default {
   components: {
-    Hotline
+    Hotline,
+    Terms
   },
   data() {
     return {
       showReturnTop: false,
-      isFixed: false
+      isFixed: false,
+      termsType: false
     };
   },
   methods: {
+    showTerms () {
+      this.termsType = !this.termsType
+    },
     returnTop() {
       let scrTop = 0;
       let iSpeed = 0;
@@ -158,6 +168,7 @@ export default {
     display: block;
     color: #fff;
     font-size: 16px;
+    cursor: pointer;
     @media(min-width: 767px) {
       &:hover {
         color: #efd492;

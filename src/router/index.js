@@ -112,6 +112,9 @@ const CanadianInternational = () => import(/* webpackChunkName: "school" */ '../
 const SingaporeAmerican = () => import(/* webpackChunkName: "school" */ '../views/school/SingaporeAmerican.vue')
 const ACSInternational = () => import(/* webpackChunkName: "school" */ '../views/school/ACSInternational.vue')
 
+/**  @page 隐私政策 */
+const Terms = () => import(/* webpackChunkName: "privacy" */ '../views/terms/Terms.vue')
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -537,6 +540,11 @@ const routes = [
         }
       }
     ]
+  },
+  {
+    path: '/terms',
+    name: '隐私条款',
+    component: Terms
   }
 ]
 
