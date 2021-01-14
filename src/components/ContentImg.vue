@@ -21,7 +21,10 @@
           </li>
           <li>
             <img src="../assets/images/whasapp@2x.png" />
-            <i>+65 8866 5586</i>
+            <i>+65 8866 5586
+              <a target="_blank" href="https://api.whatsapp.com/send/?phone=6588665586&text&app_absent=0">点我，WhatsApp及时对话</a>
+
+            </i>
           </li>
           <li>
             <img src="../assets/images/WeChat@2x.png">
@@ -179,6 +182,14 @@ export default {
           padding-left: 20px;
           -webkit-transition: 0.3s;
           transition: 0.3s;
+          a {
+            display: block;
+            color: #444;
+            line-height: 18px;
+            margin-left: -15px;
+            font-size: 13px;
+            text-decoration: underline;
+          }
         }
         &:nth-child(1) {
           i {
@@ -222,6 +233,12 @@ export default {
           i {
             height: 40px;
             box-shadow: 0 0 2px #000;
+          }
+          &:nth-child(2) {
+            i {
+              width: 170px;
+              height: 70px;
+            }
           }
           &:last-child {
             i {

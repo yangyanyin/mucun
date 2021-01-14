@@ -12,7 +12,10 @@
       <span class="tel iphone">
         <img class="s" src="../../assets/images/footer-iphone.png" />
         <div>
-          <p>+65 8866 5586</p>
+          <p>
+            +65 8866 5586
+            <a target="_blank" href="https://api.whatsapp.com/send/?phone=6588665586&text&app_absent=0">点我，WhatsApp及时对话</a>
+          </p>
         </div>
       </span>
       <span>
@@ -85,10 +88,19 @@
       }
       &.iphone{
         div {
+          width: 180px;
           p {
             padding-left: 40px;
             background: #fff url('../../assets/images/down-tel2.png') no-repeat 10px 10px;
             background-size: 20px;
+            a {
+              display: block;
+              color: #000;
+              font-size: 13px;
+              font-weight: normal;
+              text-decoration: underline;
+              margin: 5px 0 0 -28px;
+            }
           }
         }
       }
@@ -150,6 +162,11 @@
     &:hover {
       div {
         height: 50px;
+      }
+      &.iphone {
+        div {
+          height: 80px;
+        }
       }
       &.wx{
         div {
