@@ -128,6 +128,9 @@ export default {
         {img: require("../../assets/images/Philippines-banner.jpg")},
         {img: require("../../assets/images/Malaysia-banner.jpg")},
         {img: require("../../assets/images/korea-banner.jpg")},
+        {img: require("../../assets/images/canada-banner.jpg")},
+        {img: require("../../assets/images/Portugal-banner.jpg")},
+        {img: require("../../assets/images/Japan-banner.jpg")}
       ]
     }
   },

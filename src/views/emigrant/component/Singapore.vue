@@ -25,7 +25,7 @@
           <p>东西方文化交汇的枢纽</p>
         </li>
       </ul>
-      <ul>
+      <ul class="clearfix">
         <li>
           <img src="https://cms.aicassets.com/images/default/5ce2326bdebb3.jpeg" />
           <p>全球最具竞争力的经济体</p>

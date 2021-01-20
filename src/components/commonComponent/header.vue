@@ -55,7 +55,7 @@ export default {
         },
         {
           name: "新加坡移民",
-          url: "/emigrant/one",
+          url: "/emigrant/singapore",
           page: 'emigrant'
         },
         {

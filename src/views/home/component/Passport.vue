@@ -246,7 +246,11 @@ export default {
       margin: 20px 0 0 0;
       .f {
         padding: 10px 10px 20px;
+        ul {
+          display: none;
+        }
         ol {
+          padding-top: 10px;
           li {
             padding: 3px 7px 3px 20px;
             margin: 0 5px 5px 0;
