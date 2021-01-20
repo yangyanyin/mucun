@@ -103,6 +103,9 @@
          p {
            font-size: 12px;
            line-height: 20px;
+           br {
+             display: none;
+           }
          }
        }
      }

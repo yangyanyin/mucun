@@ -34,7 +34,7 @@
       <span class="icon-bar"></span>
     </button>
     <div class="wap-nav-list" :class="{on: showWapNav}">
-      <router-link v-for="(navs, index) in navList" :to="navs.url" :key="index">{{navs.name}}</router-link>
+      <router-link v-for="(navs, index) in navList" :to="navs.url" :key="index" @click.native="showNav">{{navs.name}}</router-link>
     </div>
   </div>
 </template>
@@ -261,9 +261,9 @@ export default {
     width: 220px;
     margin-left: 40px; 
     transition: .8s;
-    @media (max-width: 1040px) {
-      display: none;
-    }
+    // @media (max-width: 1040px) {
+    //   display: none;
+    // }
   }
   img {
     display: block;
@@ -651,8 +651,14 @@ export default {
     }
   }
   .logo {
-    width: 120px;
+    .img {
+      width: 110px;
+    }
     padding-top: 12px;
+    .img-text {
+      width: 140px;
+      margin-left: 10px;
+    }
   }
   .navs {
     display: none;

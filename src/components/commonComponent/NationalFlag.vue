@@ -73,10 +73,12 @@
     }
   }
   @media(max-width: 767px) {
+    display: block;
     padding: 30px 0;
+    text-align: left;
     li {
-      margin: 0;
-      width: 8%;
+      padding: 5px 5px;
+      width: 12.5%;
     }
   }
 }

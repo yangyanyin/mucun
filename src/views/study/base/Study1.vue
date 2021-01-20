@@ -217,8 +217,15 @@ export default {
     overflow: auto;
     .sc {
       padding: 30px 10px;
-      width: 600px;
+      // width: 600px;
       background-size: 60px;
+      .left {
+        width: 100%;
+        padding-bottom: 120px;
+      }
+      .right {
+        width: 100%;
+      }
       img {
         display: inline-block;
         width: 60px;

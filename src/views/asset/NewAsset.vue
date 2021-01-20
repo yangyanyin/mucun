@@ -171,6 +171,9 @@ export default {
   img {
     width: 100%;
   }
+  @media (max-width: 767px) {
+    padding-top: 60px;
+  }
 }
 
 .des {

@@ -244,6 +244,30 @@ export default {
     .item {
       width: 100%;
       margin: 20px 0 0 0;
+      .f {
+        padding: 10px 10px 20px;
+        ol {
+          li {
+            padding: 3px 7px 3px 20px;
+            margin: 0 5px 5px 0;
+            &:after {
+              left: 5px;
+              top: -2px;
+              width: 14px;
+            }
+            &.one {
+              padding-left: 18px;
+              &:after {
+                left: 8px;
+                width: 5px;
+              }
+            }
+          }
+        }
+        a {
+          display: none;
+        }
+      }
     }
   }
 }

@@ -532,3 +532,14 @@ export default {
   }
 }
 </style>
+<style lang="less">
+@media (max-width: 767px) {
+  .country {
+    .banner .img img {
+      left: -140px;
+      transform: translateX(0);
+    }
+  }
+}
+
+</style>
