@@ -6,7 +6,7 @@
     </div>
     <div class="des margin-t-80 pc-max-width">
       <h3>新加坡侨水资本——Waterland Capital <br /> 全球精英客户的共同选择</h3>
-      <p>专业团队深耕新加坡，整合优质商业资源，精选全球潜力投资项目，为客户提供全方位海外规划 服务，轻松实现全球资产配置!</p>
+      <p>专业团队深耕新加坡，整合优质商业资源，精选全球潜力投资项目，为客户提供全方位海外规划服务，轻松实现全球资产配置!</p>
     </div>
     <div class="allocation margin-t-80 pc-max-width">
       <div class="title">
@@ -81,7 +81,7 @@
           </li>
           <li>
             <img src="../../assets/images/asset-advantage7.jpg" />
-            <p>五个小时的飞行距离，更方便的兼顾打理新加坡与中国两地的生意</p>
+            <p>五个小时的飞行距离，更方便地兼顾打理新加坡与中国两地的生意</p>
           </li>
           <li>
             <img src="../../assets/images/asset-advantage8.jpg" />
@@ -111,7 +111,7 @@
           <img src="../../assets/images/asset-core-img.jpg" />
         </div>
         <div class="right">
-          <strong>新加坡侨水资本 核心优势</strong>
+          <strong>新加坡侨水资本核心优势</strong>
           <p>优质海外资产甄选供应</p>
           <p>分散投资，最大化利润分成体系实现财富的保值增值</p>
           <p>私人定制客户落地服务</p>

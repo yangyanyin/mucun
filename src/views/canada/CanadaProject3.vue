@@ -12,7 +12,7 @@
         </div>
         <div class="occupation-item left">
           <img src="../../assets/images/canada/occupation-icon2.jpg" />
-          <span>A:专业类 <br /> 以律师、医⽣、工程师等从事需要专业知识为主的职位，要求学士学位、硕士或博士学</span>
+          <span>A:专业类 <br /> 以律师、医⽣、工程师等从事需要专业知识为主的职位，要求学士学位、硕士或博士学位</span>
         </div>
         <div class="occupation-item left">
           <img src="../../assets/images/canada/occupation-icon3.jpg" />

@@ -36,8 +36,8 @@ export default {
 }
 ul {
 	li {
-		width: 22%;
-		margin-right: 4%;
+		width: 23%;
+		margin-right: 2.6666%;
 		padding: 15px 0;
 		text-align: center;
 		&:nth-child(4n+0) {

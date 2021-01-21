@@ -38,6 +38,10 @@
         </div>
       </div>
     </div>
+    
+    <div class="pc-max-width">
+      <Obtain :obtain="obtain" titleName="申请条件" />
+    </div>
 
     <div class="application-process clearfix animation-show">
       <div class="public-title animation-show">
@@ -46,7 +50,7 @@
       </div>
       <ul class="pc-max-width">
         <li><span><i>1</i></span>收集申请人<br />资料</li>
-        <li><span><i>2</i></span>向马国人力部<br />提交申请</li>
+        <li><span><i>2</i></span>向马国人才部门(Talent Corp)<br />提交申请</li>
         <li><span><i>3</i></span>获批文后交给<br />移民厅审核</li>
         <li><span><i>4</i></span>审核通过后<br />签发入境许可</li>
         <li><span><i>5</i></span>登陆马国录<br />指纹</li>
@@ -62,10 +66,22 @@
 <script>
 import { animation, windowScroll } from "../../assets/js/config.js";
 import ContactUs from "../../components/commonComponent/ContactUs";
+import Obtain from '../project/base/Obtain'
 
 export default {
   components: {
-    ContactUs
+    ContactUs,
+    Obtain
+  },
+  data () {
+    return {
+      obtain: {
+        '1.无犯罪记录证明': '',
+        '2.无重大残疾': '',
+        '3.不在马来西亚政府黑名单上': '',
+        '4.不是国家限定的五类不准出入境人员': ''
+      }
+    }
   },
   mounted() {
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;

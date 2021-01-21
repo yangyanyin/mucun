@@ -47,7 +47,7 @@
               <img src="../../assets/images/Malaysia-passport.png" />
             </span>
             <h3>马来西亚 / Malaysia</h3>
-            <p>一人申请，第二家园项目</p>
+            <p>申请条件低，直接拿永居卡，享有马来西亚当地福利</p>
             <router-link to="/malaysia-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>
@@ -73,7 +73,7 @@
               <img src="../../assets/images/canada-passpor.png" />
             </span>
             <h3>加拿大 / Canada</h3>
-            <p>一人申请，全家都可获得绿卡</p>
+            <p>多种快速移民渠道，精准匹配，让你圆梦加拿大</p>
             <router-link to="/canada-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>
@@ -86,7 +86,7 @@
               <img src="../../assets/images/japan-passport.png" />
             </span>
             <h3>日本 / Japan</h3>
-            <p>一人申请，全家都可获得绿卡</p>
+            <p>投资少，门槛低，含金量高，全家享受国民福利</p>
             <router-link to="/japan-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>

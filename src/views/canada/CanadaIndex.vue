@@ -22,7 +22,7 @@
         </div>
         <div class="item left">
           <img src="../../assets/images/canada/canada-index-img3.jpg" />
-          <p>安省雇主担保项⽬ (Ontario employer Guarantee Project)</p>
+          <p>安省雇主担保项⽬ (Ontario Employer Guarantee Project)</p>
           <router-link to="/canada-details/three">了解详情</router-link>
         </div>
         <div class="item left">

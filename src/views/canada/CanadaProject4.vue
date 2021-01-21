@@ -30,8 +30,8 @@ export default {
           en: '(New Brunswick Provincial Nominee Program)'
         },
         detail: [
-          'NB省提名项目 New Brunswick Provincial Nominee Program ，简称 NBPNP，也就是我们常说的NB省的省提名。',
-          'NBPNP是NB省与加拿大联邦政府合作的省移民项目。 NBPNP企业家适用于经验丰富的企业家，该企业家需建立、运营 并积极管理企业，同时在NB省生活并定居。在加拿大各个省政府提名计划中，NB省以其偏低的资产要求、优惠的投资 额、极富吸引力的投资项目、友好的社团环境、快捷的申请速度和手续，逐渐成为最受欢迎和最快捷的加拿大商业移民 途径之一。NBPNP被誉为“加拿大省提名项目的样板工程。'
+          'NB省提名项目 New Brunswick Provincial Nominee Program，简称 NBPNP，也就是我们常说的NB省的省提名。',
+          'NBPNP是NB省与加拿大联邦政府合作的省移民项目。NBPNP企业家适用于经验丰富的企业家，该企业家需建立、运营并积极管理企业，同时在NB省生活并定居。在加拿大各个省政府提名计划中，NB省以其偏低的资产要求、优惠的投资额、极富吸引力的投资项目、友好的社团环境、快捷的申请速度和手续，逐渐成为最受欢迎加拿大商业移民途径之一。NBPNP被誉为“加拿大省提名项目的样板工程“。'
         ]
       },
       advantage: {

@@ -98,7 +98,7 @@ export default {
         },
         {
           title: '宜居环境',
-          des: ' 富豪度假首选，四季宜人，房产拥有永久产权， 欧盟身份世代相传',
+          des: '富豪度假首选，四季宜人，房产拥有永久产权，欧盟身份世代相传',
           icon: require('../../assets/images/passport/Grenada-icon6.jpg')
         },
         {

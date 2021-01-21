@@ -7,7 +7,7 @@
       <div class="des right">
         <h3>项目简介</h3>
         <p>自雇移民是新加坡最常见的移民途径之一，旨在申请人通过注册一家公司，申请 Employment Pass 即EP，从而完成新加坡移民全过程。</p>
-        <p>EP是新加坡人力资源部门 （Ministry of Manpower）批准的最高级别的工作签证，申请人获得EP后，可以进一步申请新加坡永久居民 (Permanent Residence 即PR )，最终获得新加坡公民。</p>
+        <p>EP是新加坡人力部（Ministry of Manpower）批准的最高级别的工作签证，申请人获得EP后，可以进一步申请新加坡永久居民 (Permanent Residence 即PR )，最终获得新加坡公民。</p>
         <p>• 注册公司</p>
         <p>• 申请EP （最高级别的工作签证）</p>
         <p>• 申请PR （新加坡绿卡）</p>

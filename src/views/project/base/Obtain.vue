@@ -5,7 +5,7 @@
 		<ul>
 			<li v-for="(item, name, key) in obtain" :key="key">
 				{{name}}
-				<i v-for="(d, i) in item" :key="i">{{d}}</i>
+				<i v-for="(d, i) in item" :key="i" v-html="d"></i>
 			</li>
 		</ul>
 	</div>

@@ -46,6 +46,10 @@
     <router-link tag="li" to="/portugal-details">
       <img src="../../assets/images/country15.png" />
     </router-link>
+
+    <router-link tag="li" to="/portugal-montenegro">
+      <img src="../../assets/images/country16.png" />
+    </router-link>
     
 
     

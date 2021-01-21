@@ -51,7 +51,7 @@
         <p>2.增强型基金税收激励计划 13X</p>
       </div>
       <div class="table">
-        <h3>重点的新加坡基金税务豁免政策</h3>
+        <h3>新加坡基金税务豁免政策</h3>
         <ul class="first clearfix">
           <li>税务优惠计划</li>
           <li>13R</li>
@@ -59,8 +59,8 @@
         </ul>
         <ul class="clearfix">
           <li>投资基金公司所属地</li>
-          <li>新加坡的税务居民</li>
-          <li>没有要求</li>
+          <li>新加坡</li>
+          <li>无特定要求</li>
         </ul>
         <ul class="clearfix">
           <li>投资公司年度支出</li>
@@ -81,8 +81,8 @@
 
         <ul class="clearfix">
           <li>审批要求</li>
-          <li>新加坡要新加坡金管局比准才可享受13R下的税务豁免计划</li>
-          <li>新加坡要新加坡金管局比准才可享受13X下的税务豁免计划</li>
+          <li>需要新加坡金管局比准才可享受13R下的税务豁免计划</li>
+          <li>需要新加坡金管局比准才可享受13X下的税务豁免计划</li>
         </ul>
 
         <ul class="clearfix">
