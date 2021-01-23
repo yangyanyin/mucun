@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="detail antigua">
     <ProjectBanner name="antigua" />
     <div class="pc-max-width">
       <div class="content clearfix">

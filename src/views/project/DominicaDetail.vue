@@ -82,7 +82,7 @@ export default {
         },
         {
           title: '性价比高',
-          des: '仅需投资10万美金起，即可拿公民身份',
+          des: '仅需投资10万美金起，<br /> 即可拿公民身份',
           icon: require('../../assets/images/passport/Dominica-icon3.jpg')
         },
         {
@@ -92,7 +92,7 @@ export default {
         },
         {
           title: '申请门槛低',
-          des: '无移民监、无语言要求、无资金来源等要求',
+          des: '无移民监、无语言要求、<br /> 无资金来源等要求',
           icon: require('../../assets/images/passport/Dominica-icon5.jpg')
         },
         {

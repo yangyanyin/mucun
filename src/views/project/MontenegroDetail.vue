@@ -83,7 +83,7 @@ export default {
         },
         {
           title: '要求低',
-          des: '无语言、学历、居住，管理经验等要求',
+          des: '无语言、学历、居住，<br /> 管理经验等要求',
           icon: require('../../assets/images/passport/Montenegro-icon3.jpg')
         },
         {
@@ -93,7 +93,7 @@ export default {
         },
         {
           title: '全球通行',
-          des: '护照全球免签120多个国家，包括香港，澳门，新加坡，申根等欧洲国家',
+          des: '免签全球超过120个国家与地区，包括俄罗斯、土耳其、香港、新加坡、澳门、申根国等',
           icon: require('../../assets/images/passport/Montenegro-icon5.jpg')
         },
         {

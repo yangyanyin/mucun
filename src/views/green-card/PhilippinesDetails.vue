@@ -13,7 +13,7 @@
 
       <div class="pc-max-width condition margin-t-80 animation-show">
         <h3>怎样申请菲律宾绿卡</h3>
-        <p>菲律宾的SRRV也叫“退休移民”大体分为两种：微笑计划(SRRV Smile)和传统计划(SRRV Classic)。</p>
+        <p>菲律宾的SRRV也叫“退休移民”大体分为两种：传统计划(SRRV Classic)和微笑计划(SRRV Smile)。</p>
         <div class="btn">
           <a :class="{on:planType === 1}" @click="switchPlan(1)">传统计划 SRRV Classic</a>
           <a :class="{on:planType === 2}" @click="switchPlan(2)">微笑计划 SRRV Smile</a>

@@ -1,7 +1,7 @@
 
 <!-- 护照项目-项目优势 -->
 <template>
-	<div class="advantage">
+	<div class="advantage details-advantage">
 		<Title name="项目优势" />
 		<ul class="clearfix">
 			<li class="left" v-for="(item, key) in advantage" :key="key">
@@ -66,13 +66,17 @@ ul {
 			p {
 				line-height: 18px;
 				height: 72px;
-				overflow: hidden;     
-				display: -webkit-box;
-				-webkit-line-clamp: 4; 
+				overflow: hidden;
 				text-align: center;
 			}
 		}
-
+	}
+}
+</style>
+<style lang="less">
+.antigua {
+	ul li p {
+		padding: 0 7px;
 	}
 }
 </style>

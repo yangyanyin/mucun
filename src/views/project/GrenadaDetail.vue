@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="detail grenada">
     <ProjectBanner name="grenada" />
     <div class="pc-max-width">
       <div class="content clearfix">
@@ -93,7 +93,7 @@ export default {
         },
         {
           title: '入籍时间短',
-          des: '60个工作日即可获批，先审批，后投资',
+          des: '60个工作日即可获批，<br /> 先审批，后投资',
           icon: require('../../assets/images/passport/Grenada-icon5.jpg')
         },
         {

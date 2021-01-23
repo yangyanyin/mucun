@@ -167,7 +167,7 @@ export default {}
     }
   }
   p {
-    padding: 40px 160px 0;
+    padding: 40px 140px 0;
     line-height: 28px;
     color: #fff;
     font-size: 16px;

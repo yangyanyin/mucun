@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="detail vanuatu">
     <ProjectBanner name="vanuatu" />
     <div class="pc-max-width">
       <div class="content clearfix">
@@ -102,7 +102,7 @@ export default {
         },
         {
           title: '子女教育',
-          des: '入籍后，孩子可以在国内上国际学校',
+          des: '入籍后，子女可就读国内的国际学校',
           icon: require('../../assets/images/passport/vanuatu-icon7.jpg')
         },
         {
@@ -197,6 +197,13 @@ export default {
       width: 100%;
       padding: 20px 10px;
     }
+  }
+}
+</style>
+<style lang="less">
+.vanuatu {
+  ul li p {
+    padding: 0 5px;
   }
 }
 </style>

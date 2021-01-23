@@ -5,10 +5,10 @@
         <Hotline />
         <div class="footer-nav clearfix">
           <div class="menu left">
-            <router-link to="/emigrant/one">新加坡移民</router-link>
+            <router-link to="/emigrant/singapore">新加坡移民</router-link>
             <router-link to="/project/">护照项目</router-link>
             <router-link to="/passport/">签证服务</router-link>
-            <router-link to="/city/">移居狮城</router-link>
+            <router-link to="/overseas-study/one">狮城留学</router-link>
           </div>
           <div class="menu left">
             <router-link to="/bank/">银行开户</router-link>

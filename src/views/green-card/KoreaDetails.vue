@@ -222,7 +222,6 @@ export default {
       position: relative;
       color: #fff;
       padding-left: 17px;
-      font-size: 15px;
       line-height: 26px;
       margin-top: 5px;
       i {

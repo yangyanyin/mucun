@@ -69,7 +69,7 @@ export default {
 			}
 			p {
 				min-height: 66px;
-				padding-top: 15px;
+				padding: 15px 10px 0;
 				font-size: 12px;
 				color: #447375;
 			}
@@ -94,7 +94,7 @@ export default {
 					width: calc(100% - 40px);
 					padding: 0;
 					height: 32px;
-					padding-left: 20px;
+					padding-left: 20px !important;
 					display: flex;
 					align-items: center;
 				}
@@ -107,6 +107,18 @@ export default {
 				}
 			}
 		}
+	}
+}
+</style>
+<style lang="less">
+.cyprus {
+	.application ul li p {
+		padding: 15px 6px 0;
+	}
+}
+.grenada {
+	.application ul li p {
+		padding: 15px 15px 0;
 	}
 }
 </style>

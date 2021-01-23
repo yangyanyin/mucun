@@ -186,13 +186,13 @@ export default {
         {
           title: "GIP投资移民项目",
           text: "获批后再投资安全无风险",
-          url: "/emigrant/four",
+          url: "/emigrant/three",
           image: require("../../assets/images/project4.jpg")
         },
         {
           title: "家族办公室移民项目",
           text: "资产配置| 资产管理 | 财富继承| 全家移民",
-          url: "/emigrant/three",
+          url: "/emigrant/four",
           image: require("../../assets/images/project3.jpg")
         }
       ],

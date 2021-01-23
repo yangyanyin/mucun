@@ -76,7 +76,7 @@ export default {
         },
         {
           title: '入籍项目成熟',
-          des: '历史最悠久的护照项目，政策成熟稳定',
+          des: '历史最悠久的护照项目 <br /> 政策成熟稳定',
           icon: require('../../assets/images/passport/SaintKitts-icon2.jpg')
         },
         {

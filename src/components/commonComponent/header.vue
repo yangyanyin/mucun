@@ -259,11 +259,8 @@ export default {
   }
   .img-text {
     width: 220px;
-    margin-left: 40px; 
+    margin-left: 20px; 
     transition: .8s;
-    // @media (max-width: 1040px) {
-    //   display: none;
-    // }
   }
   img {
     display: block;

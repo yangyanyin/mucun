@@ -18,6 +18,7 @@
         </router-link>
       </el-carousel-item>
     </el-carousel>
+    <router-link to="/green-cart" class="more">查看更多国家 ></router-link>
   </div>
 </template>
 <script>
@@ -80,6 +81,25 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.more {
+  display: block;
+  margin: 20px auto 0;
+  width: 180px;
+  height: 50px;
+  line-height: 48px;
+  font-size: 16px;
+  color: #447375;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid #4F7274;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  &:hover {
+    color: #fff;
+    background: #447375;
+  }
+}
 .el-carousel__item{
   text-align: center;
   background: #fff;

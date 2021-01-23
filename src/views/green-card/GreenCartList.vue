@@ -34,7 +34,7 @@
               <img src="../../assets/images/Philippines-passport.png" />
             </span>
             <h3>菲律宾 / Philippines</h3>
-            <p>永久居住的申请门槛低,存入2万美元即可获得</p>
+            <p>永居申请条件宽松，存入2万美金即可获得</p>
             <router-link to="/philippines-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>
@@ -47,7 +47,7 @@
               <img src="../../assets/images/Malaysia-passport.png" />
             </span>
             <h3>马来西亚 / Malaysia</h3>
-            <p>申请条件低，直接拿永居卡，享有马来西亚当地福利</p>
+            <p>申请周期短，直接拿永居，享受大马公民待遇</p>
             <router-link to="/malaysia-details">查看详情 <img src="../../assets/images/cadr-router.png" /></router-link>
           </div>
         </div>

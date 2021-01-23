@@ -22,7 +22,7 @@
       <div class="pc-max-width box-content clearfix">
         <div v-for="(item, key) in listData" :key="key" class="item left">
           <img :src="item.icon" :alt="item.text" />
-          <p>{{ item.text }}</p>
+          <p v-html="item.text"></p>
         </div>
       </div>
       <h4>适合人群：3岁至6岁适龄儿童可直接入学，无英文要求</h4>
@@ -33,7 +33,7 @@
       <ul class="clearfix">
         <li>
           <img src="../../../assets/images/select-we1.jpg" />
-          <i>超过十年的行业经验沉淀，专注服务高净值人群</i>
+          <i>超过十年的行业经验沉淀 <br /> 专注服务高净值人群</i>
         </li>
         <li>
           <img src="../../../assets/images/select-we2.jpg" />
@@ -66,7 +66,7 @@ export default {
       listData: [
         {
           icon: require("../../../assets/images/overseas-study/preschool-education-icon4.png"),
-          text: "入学门槛低，学生证批复率高",
+          text: "入学门槛低，<br />学生证批复率高",
         },
         {
           icon: require("../../../assets/images/overseas-study/preschool-education-icon5.png"),
@@ -78,7 +78,7 @@ export default {
         },
         {
           icon: require("../../../assets/images/overseas-study/preschool-education-icon7.png"),
-          text: "师资考核严格、教学质量高",
+          text: "师资考核严格 <br /> 教学质量高",
         },
         {
           icon: require("../../../assets/images/overseas-study/preschool-education-icon8.png"),

@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="detail saintLucia">
     <ProjectBanner name="saintLucia" />
     <div class="pc-max-width">
       <div class="content clearfix">
@@ -207,6 +207,13 @@ export default {
       width: 100%;
       padding: 20px 10px;
     }
+  }
+}
+</style>
+<style lang="less">
+.saintLucia {
+  ul li p {
+    padding: 0 10px;
   }
 }
 </style>

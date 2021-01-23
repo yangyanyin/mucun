@@ -36,7 +36,9 @@ export default {
       changContactWindowStatus: 'changContactWindowStatus'
     }),
     imgLoad () {
-      this.changContactWindowStatus(true)
+      setTimeout(() => {
+        this.changContactWindowStatus(true)
+      }, 20000);
     }
   },
   mounted() {}

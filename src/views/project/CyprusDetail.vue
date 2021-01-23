@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="detail cyprus">
     <ProjectBanner name="cyprus" />
     <div class="pc-max-width">
       <div class="content clearfix">
@@ -104,7 +104,7 @@ export default {
         },
         {
           title: '优质医疗',
-          des: '享有欧盟国家学生教育权利和医疗系统',
+          des: '享有欧盟国家优质医疗系统',
           icon: require('../../assets/images/passport/cyprus-icon7.jpg')
         },
         {
