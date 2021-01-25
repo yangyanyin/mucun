@@ -104,7 +104,7 @@ export default {
         },
         {
           title: '优质医疗',
-          des: '享有欧盟国家优质医疗系统',
+          des: '享受欧盟国家优质医疗条件',
           icon: require('../../assets/images/passport/cyprus-icon7.jpg')
         },
         {
