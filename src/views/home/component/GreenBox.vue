@@ -35,14 +35,14 @@ export default {
         },
         {
           name: '菲律宾 / Philippines',
-          text: '永久居住的申请门槛低,存入2万美元即可获得',
+          text: '永居申请条件宽松，存入2万美金即可获得',
           img: require('../../../assets/images/Philippines-home.jpg'),
           passport: require('../../../assets/images/Philippines-passport.png'),
           url: '/Philippines-details'
         },
         {
           name: '马来西亚 / Malaysia',
-          text: '一人申请，全家都可获得绿卡',
+          text: '申请周期短，直接拿永居，享受大马公民待遇',
           img: require('../../../assets/images/Malaysia-home.jpg'),
           passport: require('../../../assets/images/Malaysia-passport.png'),
           url: '/Malaysia-details'
@@ -56,7 +56,7 @@ export default {
         },
         {
           name: '加拿大 / Canada',
-          text: '一人申请，全家都可获得绿卡',
+          text: '多种快速移民渠道，精准匹配，让你圆梦加拿大',
           img: require('../../../assets/images/Canada-home.png'),
           passport: require('../../../assets/images/canada-passpor.png'),
           url: '/canada-details'
@@ -70,7 +70,7 @@ export default {
         },
         {
           name: '日本 / Japan',
-          text: '一人申请，全家都可获得绿卡',
+          text: '投资少，门槛低，含金量高，全家享受国民福利',
           img: require('../../../assets/images/japan-home.png'),
           passport: require('../../../assets/images/japan-passport.png'),
           url: '/japan-details'
