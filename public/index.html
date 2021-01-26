@@ -15,20 +15,18 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
-  <% if (process.env.NODE_ENV !== 'dev') { %>
-    <script type='text/javascript'>
-      (function(a, b, c, d, e, j, s) {
-          a[d] = a[d] || function() {
-              (a[d].a = a[d].a || []).push(arguments)
-          };
-          j = b.createElement(c),
-              s = b.getElementsByTagName(c)[0];
-          j.async = true;
-          j.charset = 'UTF-8';
-          j.src = 'https://static.meiqia.com/widget/loader.js';
-          s.parentNode.insertBefore(j, s);
-      })(window, document, 'script', '_MEIQIA');
-      _MEIQIA('entId', '021c0eea887909ebe52b6afef2303862');
+  <script type='text/javascript'>
+    (function(a, b, c, d, e, j, s) {
+        a[d] = a[d] || function() {
+            (a[d].a = a[d].a || []).push(arguments)
+        };
+        j = b.createElement(c),
+            s = b.getElementsByTagName(c)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/widget/loader.js';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', '021c0eea887909ebe52b6afef2303862');
   </script>
-  <% } %>
 </html>
