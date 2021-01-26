@@ -62,7 +62,7 @@
           <img src="../../../assets/images/close.png" />
         </span>
         <h3>新加坡侨水资本 Waterland Capital</h3>
-        <p>直营新加坡移民/银行开户/新加坡留学，家族办公室，欧盟&英联邦快速护照，不成功不收费。</p>
+        <p>直营新加坡移民/银行开户/新加坡留学，家族办公室，欧盟&英联邦快速护照，十年经验团队免费为您评估。</p>
         <a @click="changeContact">点击客服了解更多详情</a>
       </div>
     </div>
