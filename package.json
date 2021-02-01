@@ -8,6 +8,7 @@
     "build:test": "vue-cli-service build --mode product.test",
     "build:prod-sg": "vue-cli-service build --mode product.sg",
     "build:prod-cn": "vue-cli-service build --mode product.cn",
+    "build:prod": "vue-cli-service build --mode product",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

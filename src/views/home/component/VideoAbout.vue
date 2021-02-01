@@ -12,7 +12,7 @@
         <p>新加坡侨水资本——Waterland Capital，立足新加坡深耕大中华地区，致力于为大中华地区高净值个人与家庭，提供全方位海外生活与投资的高端定制服务，从海外资产配置，身份规划，子女教育，管家服务，家族办公室等方面提供系统的一站式专业服务。作为新加坡业内领先的全方位海外生活规划机构，依托我们丰富的行业资源，高效、负责任地协助高净值人群稳健实现目标，是您值得信赖的选择。</p>
         <a class="contact" @click="changeContact">联系我们</a>
         <div class="icon big">
-          <a target="_blank" href="https://www.facebook.com/sgpecsingapore">
+          <a target="_blank" href="https://www.facebook.com/waterlandcapital/?view_public_for=109977563966497">
             <img src="../../../assets/images/Facebook-icon.png" /></a>
           <a target="_blank" href="https://www.linkedin.com/company/singapore-global-passport-exchange-centre">
             <img src="../../../assets/images/LinkedIn-icon.png" /></a>
