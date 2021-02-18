@@ -93,7 +93,7 @@ export default {
       ],
       schoolData: {
         title: "新加坡国际学校推荐",
-                list: [
+        list: [
           {
             icon: require("../../../assets/images/overseas-study/school/school-logo1.png"),
             name: "东陵信托学校",

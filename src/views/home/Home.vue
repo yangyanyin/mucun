@@ -67,8 +67,44 @@
       </div>
     </div>
 
+    <!-- 家族办公室 -->
+    <div class="office margin-t-80">
+      <div class="t">
+        <h3>家族办公室</h3>
+        <p>一步实现全家移民，三代受益</p>
+      </div>
+      
+      <div class="content pc-max-width">
+        <h4>全球资产配置 I 最佳税务结构 I 海外身份规划 I 家族财富传承</h4>
+        <p>被超高净值富豪家族所青睐的家族办公室分布在全球的各大金融中心，以前主要分布于欧洲(尤其是在瑞士的日内瓦、苏黎世和英国的伦敦)及美国，而随着亚太地区经济在全球占到的比重越来越高后，家族办公室在中国香港及新加坡迅速崛起。新加坡为了吸引全球富豪，积极发展家族办公室行业，并针对家族办公室给予了牌照相应的豁免和相关的税务优惠政策，加强人才招募，近年来吸引了许多亿万富豪来新加坡建立家族办公室，凸显了新加坡政府招揽富豪的野心，其世界金融的地位，料将持续向上提升。</p>
+        <strong>在新加坡设立家族办公室的超级富豪</strong>
+        <ul>
+          <li>
+            <img src="../../assets/images/character1.jpg" alt="桥水基金创始人瑞·达利欧" />
+            桥水基金创始人瑞·达利欧
+          </li>
+          <li>
+            <img src="../../assets/images/character2.jpg" alt="桥水基金创始人瑞·达利欧" />
+            海底捞创始人张勇之妻舒萍
+          </li>
+          <li>
+            <img src="../../assets/images/character3.jpg" alt="桥水基金创始人瑞·达利欧" />
+            谷歌联合创始人谢尔盖·布林
+          </li>
+          <li>
+            <img src="../../assets/images/character4.jpg" alt="桥水基金创始人瑞·达利欧" />
+            戴森创始人詹姆斯·戴森
+          </li>
+        </ul>
+        <router-link to="/emigrant/four">查看更多 ></router-link>
+      </div>
+    </div>
+
+    <!-- 狮城留学 -->
+    <StudyAbroad />
+
     <!-- 全球护照精选 -->
-    <Passport></Passport>
+    <!-- <Passport></Passport> -->
 
     <!-- 绿卡项目 -->
     <div class="green-card margin-t-80">
@@ -151,7 +187,8 @@ import { animation, windowScroll } from '../../assets/js/config.js'
 import ContactUs from '../../components/commonComponent/ContactUs'
 import NewModule from './component/NewModule'
 import GreenBox from './component/GreenBox'
-import Passport from './component/Passport'
+// import Passport from './component/Passport'
+import StudyAbroad from './component/StudyAbroad'
 import Loading from '../../components/commonComponent/loadingPage'
 
 export default {
@@ -165,7 +202,8 @@ export default {
     OurTeam,
     VideoAbout,
     Advantage,
-    Passport
+    // Passport,
+    StudyAbroad
   },
   data() {
     return {
@@ -188,12 +226,6 @@ export default {
           text: "获批后再投资安全无风险",
           url: "/emigrant/three",
           image: require("../../assets/images/project4.jpg")
-        },
-        {
-          title: "家族办公室移民项目",
-          text: "资产配置| 资产管理 | 财富继承| 全家移民",
-          url: "/emigrant/four",
-          image: require("../../assets/images/project3.jpg")
         }
       ],
       loadingStatus: false,
@@ -578,6 +610,93 @@ export default {
           font-size: 12px;
         }
       }
+    }
+  }
+}
+
+.office {
+  padding: 50px 0;
+  background: #447375;
+  .t {
+    position: relative;
+    text-align: center;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 22px;
+      width: 500px;
+      height: 1px;
+      margin-left: -250px;
+      background: #fff;
+    }
+    h3 {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      padding: 0 30px;
+      color: #fff;
+      font-size: 30px;
+      background: #447375;
+    }
+    p {
+      padding-top: 2px;
+      color: #fff;
+      opacity: .8;
+    }
+  }
+  .content {
+    h4 {
+      padding: 25px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+    }
+    p {
+      color: #fff;
+      line-height: 28px;
+    }
+    strong {
+      display: block;
+      padding: 30px 0;
+      text-align: center;
+      color: #fff;
+    }
+    ul {
+      li {
+        display: inline-block;
+        width: 21%;
+        margin-right: 5.333%;
+        text-align: center;
+        color: #fff;
+        &:last-child {
+          margin-right: 0;
+        }
+        img {
+          display: block;
+          width: 100%;
+          margin-bottom: 15px;
+          border-radius: 6px;
+        }
+      }
+    }
+    a {
+      display: block;
+      width: 180px;
+      height: 50px;
+      margin: 30px auto 0;
+      color: #4F7274;
+      font-size: 16px;
+      text-align: center;
+      line-height: 50px;
+      background: #FFFFFF;
+      opacity: 0.6;
+      border-radius: 25px;
+      transition: .3s;
+      &:hover {
+        opacity: .8;
+      }
+
     }
   }
 }

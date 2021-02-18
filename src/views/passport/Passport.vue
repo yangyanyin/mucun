@@ -252,7 +252,7 @@ export default {
   background: #1b2f35;
   padding: 180px 0 50px;
   margin: auto;
-  min-width: 1925px;
+  min-width: 2150px;
   @media (max-width: 767px) {
     padding: 60px 0 50px;
     width: 100%;
@@ -264,7 +264,7 @@ export default {
   li {
     float: left;
     padding: 12px 0 0 10px;
-    width: 12.5%;
+    width: 11.1111%;
     text-align: center;
     color: #fff;
     height: 105px;
@@ -656,7 +656,7 @@ export default {
     }
     li {
       float: left;
-      width: 12.5%;
+      width: 11.111%;
       &.type1 {
         background: #a91c1c;
       }

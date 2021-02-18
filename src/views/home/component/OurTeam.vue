@@ -50,8 +50,8 @@
         <div class="d">
           <img src="../../../assets/images/evelyn-yep.jpg" />
           <div class="detailed">
-            <strong>资深留学专家 Evelyn Yep</strong>
-            <p>从业多年，并拥有丰富的市场开发经验，准确把握移民留学趋势，与新加坡各大高校和中小学保持紧密合作，凭借自己的专业知识，更能站在客户的角度，帮助国内的留学生实现留学和移民的梦想！开启海外生活的新旅程。</p>
+            <strong>资资深投资专家Evelyn Yep</strong>
+            <p>从业多年，并拥有丰富的市场投资经验，擅长为客户甄选优质移民项目及投资机会。帮助客户顺利完成海外房产投资、税务规划和财富管理等服务。从多角度把控风险，凭借自己的专业知识，更能站在客户的角度，为客户的移民及海外投资保驾护航。</p>
           </div>
         </div>
       </swiper-slide>
@@ -60,8 +60,8 @@
         <div class="d">
           <img src="../../../assets/images/michael-chan.png" />
           <div class="detailed">
-            <strong>资深移民专家 Michael Chan</strong>
-            <p>强大且专业的从业经验，主要协助中国企业家成功赴新加坡投资商业项目、开设公司、银行开户、审核相关签证事宜，对各类移民，留学需求有精准的解决方案，他凭借自身的认真踏实，帮助许多客户快速获得签证，客户们都对他的办事效率十分肯定!</p>
+            <strong>资深投资专家 Michael Chan</strong>
+            <p>强大且专业的财富管理从业经验，以及独到的全球化视野，协助中国企业成功赴新加坡投资商业项目，开设公司、银行开户、审核相关签证事宜，对各类移民需求有精准的解决方案，凭借自身的认真踏实，客户们对他办事效率十分肯定。</p>
           </div>
         </div>
       </swiper-slide>
@@ -77,6 +77,8 @@ export default {
       swiperOptions: {
         slidesPerView: 2,
         loop: true,
+        autoplay: 3000,
+        observer:true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev'
       }

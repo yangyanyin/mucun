@@ -13,8 +13,7 @@
       </div>
     </div>
     <ul class="navs">
-      <li v-for="(navs, index) in navList" :key="index">
-        <!-- <router-link class="m" :class="{on: detailsUrl === navs.page}" -->
+      <li v-for="(navs, index) in navList" :key="index" :class="{'service-btn': navs.downText}">
         <router-link class="m"
           :to="navs.url">
           {{navs.name}}
@@ -22,6 +21,12 @@
         </router-link>
         <div v-if="navs.down" class="project-select">
           <router-link :to="menu.url" v-for="(menu, key) in projectDown[navs.page]" :key="key">
+            <img :src="menu.passport" /> 
+            <span>{{menu.name}}</span>
+          </router-link>
+        </div>
+        <div v-if="navs.downText" class="service-select">
+          <router-link :to="menu.url" v-for="(menu, key) in service" :key="key">
             <img :src="menu.passport" /> 
             <span>{{menu.name}}</span>
           </router-link>
@@ -55,7 +60,7 @@ export default {
         },
         {
           name: "新加坡移民",
-          url: "/emigrant/singapore",
+          url: "/emigrant/four",
           page: 'emigrant'
         },
         {
@@ -63,16 +68,27 @@ export default {
           url: "/overseas-study/one",
           page: 'overseaSstudy'
         },
+        // {
+        //   name: "护照项目",
+        //   url: "/project",
+        //   down: true,
+        //   page: 'project'
+        // },
+        // {
+        //   name: "签证服务",
+        //   url: "/passport",
+        //   page: 'passport'
+        // },
+        
+        // {
+        //   name: "银行开户",
+        //   url: "/bank",
+        //   page: 'bank'
+        // },
         {
-          name: "护照项目",
-          url: "/project",
-          down: true,
-          page: 'project'
-        },
-        {
-          name: "签证服务",
-          url: "/passport",
-          page: 'passport'
+          name: "资产配置",
+          url: "/asset",
+          page: 'asset'
         },
         {
           name: "绿卡项目",
@@ -81,14 +97,10 @@ export default {
           page: 'green'
         },
         {
-          name: "银行开户",
-          url: "/bank",
-          page: 'bank'
-        },
-        {
-          name: "资产配置",
-          url: "/asset",
-          page: 'asset'
+          name: "增值服务",
+          url: "/project",
+          downText: true,
+          page: 'service'
         },
         {
           name: "成功案例",
@@ -189,6 +201,32 @@ export default {
           }
         ]
       },
+      service: [
+        {
+          url: '/project',
+          name: '海外护照项目'
+        },
+        {
+          url: '/passport',
+          name: '签证服务'
+        },
+        {
+          url: '/bank',
+          name: '新加坡银行开户'
+        },
+        {
+          url: '/stock',
+          name: '海外股票账户'
+        },
+        {
+          url: '/estate',
+          name: '新加坡房产'
+        },
+        {
+          url: '/company',
+          name: '新加坡注册公司'
+        }
+      ],
       isFixed: false,
       scrollPx: 0,
       headerFixed: false,
@@ -279,7 +317,20 @@ export default {
   li {
     display: inline-block;
     margin: 0 22px;
-
+    &.service-btn {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: -10px;
+        width: 5px;
+        height: 5px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: rotate(-45deg);
+      }
+    }
     @media (max-width: 920px) {
       margin: 0 14px;
     }
@@ -324,6 +375,9 @@ export default {
       }
     }
     &:hover {
+      .service-select {
+        height: 200px;
+      }
       .project-select {
         height: 240px;
         display: block;
@@ -391,6 +445,29 @@ export default {
         margin: 0 auto 20px;
         width: 90px;
         transition: .3s;
+      }
+    }
+  }
+  .service-select {
+    position: absolute;
+    top: 45px;
+    left: -40px;
+    width: 140px;
+    height: 0;
+    text-align: left;
+    background: #fff;
+    border-radius: 5px;
+    transition: .3s;
+    overflow: hidden;
+    box-shadow: 0 0 2px #6d6b6b;
+    a {
+      display: block;
+      padding: 0 15px;
+      line-height: 32px;
+      color: #444;
+      font-size: 12px;
+      &:hover {
+        color: #447375;
       }
     }
   }

@@ -115,6 +115,15 @@ const ACSInternational = () => import(/* webpackChunkName: "school" */ '../views
 /**  @page 隐私政策 */
 const Terms = () => import(/* webpackChunkName: "privacy" */ '../views/terms/Terms.vue')
 
+/**  @page 股票账户 */
+const StockIndex = () => import(/* webpackChunkName: "stock" */ '../views/stock/Index')
+
+/**  @page 房产 */
+const EstateIndex = () => import(/* webpackChunkName: "estate" */ '../views/estate/Index')
+
+/**  @page 注册公司 */
+const CompanyIndex = () => import(/* webpackChunkName: "company" */ '../views/company/Index')
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -545,6 +554,21 @@ const routes = [
     path: '/terms',
     name: '隐私条款',
     component: Terms
+  },
+  {
+    path: '/stock',
+    name: '股票账户',
+    component: StockIndex
+  },
+  {
+    path: '/estate',
+    name: '新加坡房产',
+    component: EstateIndex
+  },
+  {
+    path: '/company',
+    name: '新加坡注册公司',
+    component: CompanyIndex
   }
 ]
 

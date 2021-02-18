@@ -5,35 +5,34 @@
         <h3>我们的优势</h3>
         <span>
           <i>
-            <img src="../../../assets/images/title-img2.png" />
+            <img src="../../../assets/images/title.gif" />
           </i>
         </span>
         <p>Our Advantages</p>
       </div>
       <div class="content animation-show">
-        <!-- <div class="list">
-          <img src="../../../assets/images/advantage-icon1.png" />
-          <p>
-            官方牌照直营
-            <br />不成功不收费
-          </p>
-        </div> -->
         <div class="list">
-          <img src="../../../assets/images/advantage-icon2.png" />
+          <img src="../../../assets/images/new-advantage-icon1.png" />
           <p>
-            超过十年的行业经验沉淀，<br /> 专注服务高净值人群
+            超过十年的行业经验沉淀<br />专注服务高净值人群
           </p>
         </div>
         <div class="list">
-          <img src="../../../assets/images/advantage-icon3.png" />
+          <img src="../../../assets/images/new-advantage-icon2.png" />
           <p>
             高效整合顶级行业资源，<br /> 精准落实，助您稳健快速实现目标
           </p>
         </div>
         <div class="list">
-          <img src="../../../assets/images/advantage-icon4.png" />
+          <img src="../../../assets/images/new-advantage-icon3.png" />
           <p>
             我们最核心的服务价值: <br /> 隐私至上-您的隐私，我们的服务
+          </p>
+        </div>
+        <div class="list">
+          <img src="../../../assets/images/new-advantage-icon4.png" />
+          <p>
+            立足新加坡深耕大中华地区 <br /> 强大的本土行业背景
           </p>
         </div>
       </div>
@@ -45,32 +44,15 @@
 .advantage {
   position: relative;
   padding: 70px 0;
-  background: url("../../../assets//images/advantage-bg.png") no-repeat top center;
-  background-size: 100% 730px;
-  .public-title {
-    h3 {
-      color: #fff;
-    }
-    span {
-      &:after,
-      &:before {
-        background: #fff;
-      }
-      i {
-        background: no-repeat;
-      }
-    }
-    p {
-      color: #fff;
-    }
-  }
   .content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 50px 80px 0;
+    padding-top: 50px;
     .list {
-      width: 242px;
+      width: 22%;
+      border: 1px solid #EFEFEF;
+      border-radius: 5px;
       &:hover {
         img {
           transform: scale(1.06);
@@ -84,10 +66,10 @@
       }
       p {
         text-align: center;
-        padding-top: 10px;
-        color: #fff;
-        font-size: 16px;
-        line-height: 30px;
+        padding: 10px 0 40px;
+        color: #3E3E3E;
+        font-size: 14px;
+        line-height: 26px;
       }
     }
   }
