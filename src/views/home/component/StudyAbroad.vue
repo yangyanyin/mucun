@@ -34,7 +34,7 @@ export default {
       swiperOptions: {
         slidesPerView: 5,
         loop: true,
-        autoplay: 3000,
+        autoplay: 30000,
         spaceBetween: 30
       },
       schoolData: {
@@ -128,7 +128,7 @@ export default {
   mounted () {
     let windowWidth = document.body.clientWidth
     if (windowWidth < 767) {
-      this.swiperOptions.slidesPerView = 1
+      this.swiperOptions.slidesPerView = 3
     }
   }
 }
@@ -159,6 +159,10 @@ export default {
   .swiper-slide {
     border: 1px solid #EFEFEF;
     border-radius: 5px;
+    &.swiper-slide-next + div {
+      // width: 260px !important;
+      // transform: scale(1.1);
+    }
   }
   a {
     display: inline-block;
