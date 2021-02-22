@@ -5,34 +5,7 @@
     <Banner :bannerImgList="bannerImg" />
 
     <!-- 媒体 -->
-    <div class="pc-max-width">
-      <div class="media-content clearfix">
-        <h3 class="left">媒体报道</h3>
-        <ul class="right">
-          <li>
-            <a target="_blank" href="http://finance.china.com.cn/jiaoyu/20200910/5367456.shtml"><img src="../../assets/images/media-img1.png"></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://gd.ifeng.com/c/v002zk7Qk--jElpeoYodb-_OqSikQ9gZgWUv9GfR7T-_oHjzeI__"><img src="../../assets/images/media-img2.png"></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://edu.163.com/20/1125/17/FS9VIVUK0029985J.html"><img src="../../assets/images/media-img4.png"></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://biznews.sohu.com/a/436022953_120181749"><img src="../../assets/images/media-img5.png"></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.marketwatch.com/press-release/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore-2020-09-21"><img src="../../assets/images/media-img6.png"></a>
-          </li>
-          <li>
-            <a target="_blank" href="http://www.wboc.com/story/42658134/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore"><img src="../../assets/images/media-img7.png"></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.honolulunewsnow.com/news/story/217323/what-is-the-benefits-of-global-citizenship-programs-and-where-to-find-the-service-in-singapore.html"><img src="../../assets/images/media-img8.png"></a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <Media />
 
     <!-- 视频和关于我们 -->
     <VideoAbout></VideoAbout>
@@ -187,6 +160,7 @@ import { animation, windowScroll } from '../../assets/js/config.js'
 import ContactUs from '../../components/commonComponent/ContactUs'
 import NewModule from './component/NewModule'
 import GreenBox from './component/GreenBox'
+import Media from './component/Media'
 // import Passport from './component/Passport'
 import StudyAbroad from './component/StudyAbroad'
 import Loading from '../../components/commonComponent/loadingPage'
@@ -203,7 +177,8 @@ export default {
     VideoAbout,
     Advantage,
     // Passport,
-    StudyAbroad
+    StudyAbroad,
+    Media
   },
   data() {
     return {
@@ -266,72 +241,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-// 媒体报道
-.media-content {
-  position: relative;
-  top: -58px;
-  z-index: 99;
-  border: 1px solid #E5E5E5;
-  background: #fff;
-  h3 {
-    position: relative;
-    padding: 0 35px;
-    line-height: 114px;
-    font-size: 20px;
-    font-weight: bold;
-    &:after {
-      content: '';
-      position: absolute;
-      width: 1px;
-      height: 50px;
-      right: 0;
-      top: 32px;
-      background: #E5E5E5;
-    }
-  }
-  ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: calc(100% - 170px);
-    height: 114px;
-    img {
-      display: block;
-      height: 54px;
-    }
-  }
-  @media(max-width:1120px) {
-    ul img {
-      height: 40px;
-    }
-  }
-  @media(max-width: 767px) {
-    top: -30px;
-    border-radius: 5px;
-    h3 {
-      display: none;
-      padding: 0 10px;
-      font-size: 14px;
-    }
-    ul {
-      display: block;
-      width: 100%;
-      height: auto;
-      padding: 10px;
-      white-space: nowrap;
-      text-align: left;
-      overflow: auto;
-      li {
-        display: inline-block;
-        margin: 0 5px;
-        img {
-          height: 34px;
-        }
-      }
-    }
-  }
-}
-
 /** 成功案例 **/
 .success-case {
   padding-top: 60px;

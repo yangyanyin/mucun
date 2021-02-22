@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <NewContactUs />
+    <NewContactUs text="想在新加坡注册公司？马上联系我们，了解新加坡注册公司的一手资料！" />
   </div>
 </template>
 <script>

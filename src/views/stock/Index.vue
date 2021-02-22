@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <NewContactUs />
+    <NewContactUs text="想在新加坡开立股票账户并操作购买股票的您，如果想了解更多股票开户细节，请联系我们。 " />
   </div>
 </template>
 <script>

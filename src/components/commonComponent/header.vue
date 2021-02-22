@@ -1,11 +1,16 @@
 <template>
-  <div class="header" :class="{'is-fixed': isFixed, 'all-fixed': headerFixed}">
-    <img style="display:none;" src="../../assets/images/country-loading.png">
+  <div
+    class="header"
+    :class="{ 'is-fixed': isFixed, 'all-fixed': headerFixed }"
+  >
+    <img style="display: none" src="../../assets/images/country-loading.png" />
     <div class="pc-max-width clearfix">
       <div class="logo left">
         <a href="/">
           <span class="img"><img src="../../assets/images/logo.png" /></span>
-          <span class="img-text"><img src="../../assets/images/logo-text.png" /></span>
+          <span class="img-text"
+            ><img src="../../assets/images/logo-text.png"
+          /></span>
         </a>
       </div>
       <div class="right">
@@ -13,248 +18,465 @@
       </div>
     </div>
     <ul class="navs">
-      <li v-for="(navs, index) in navList" :key="index" :class="{'service-btn': navs.downText}">
-        <router-link class="m"
-          :to="navs.url">
-          {{navs.name}}
+      <li
+        v-for="(navs, index) in navList"
+        :key="index"
+        :class="{ 'service-btn': navs.downText }"
+      >
+        <router-link class="m" :to="navs.url">
+          {{ navs.name }}
           <i></i>
         </router-link>
         <div v-if="navs.down" class="project-select">
-          <router-link :to="menu.url" v-for="(menu, key) in projectDown[navs.page]" :key="key">
-            <img :src="menu.passport" /> 
-            <span>{{menu.name}}</span>
+          <router-link
+            :to="menu.url"
+            v-for="(menu, key) in projectDown[navs.page]"
+            :key="key"
+          >
+            <img :src="menu.passport" />
+            <span>{{ menu.name }}</span>
           </router-link>
         </div>
         <div v-if="navs.downText" class="service-select">
           <router-link :to="menu.url" v-for="(menu, key) in service" :key="key">
-            <img :src="menu.passport" /> 
-            <span>{{menu.name}}</span>
+            <img :src="menu.passport" />
+            <span>{{ menu.name }}</span>
           </router-link>
         </div>
       </li>
     </ul>
-    <button class="wap-nav-botton" @click="showNav" :class="{on: showWapNav}">
+    <button class="wap-nav-botton" @click="showNav" :class="{ on: showWapNav }">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <div class="wap-nav-list" :class="{on: showWapNav}">
-      <router-link v-for="(navs, index) in navList" :to="navs.url" :key="index" @click.native="showNav">{{navs.name}}</router-link>
+    <div class="wap-nav-list" :class="{ on: showWapNav }">
+      <ul>
+        <li v-for="(navs, index) in wapNavList" :key="index">
+          <router-link class="main-link" v-if="navs.url" :to="navs.url" @click.native="showNav">{{
+            navs.name
+          }}</router-link>
+          <span class="main-link" v-else @click="showChildDome(index)">
+            {{ navs.name }} 
+          </span>
+          <transition name="fade">
+            <div class="child" v-if="downIndex.indexOf(index) >= 0">
+              <router-link
+                v-for="(child, key) in navs.childNav"
+                :key="key"
+                :to="child.url"
+                @click.native="showNav"
+                :class="{flag: child.flag}"
+                >
+                  <em v-if="child.recommend"><i>推荐</i></em>
+                  <img v-if="child.flag" :src="child.flag" :alt="child.name" />
+                  {{ child.name }}
+                </router-link
+              >
+            </div>
+          </transition>
+          <i class="down" v-if="!navs.url"></i>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 <script>
-import Hotline from './Hotline'
+import Hotline from "./Hotline";
 export default {
   components: {
-    Hotline
+    Hotline,
   },
   data() {
     return {
       showWapNav: false,
       navList: [
         {
-          name: '首页',
+          name: "首页",
           url: "/",
-          page: 'home'
+          page: "home",
         },
         {
           name: "新加坡移民",
           url: "/emigrant/four",
-          page: 'emigrant'
+          page: "emigrant",
         },
         {
           name: "狮城留学",
           url: "/overseas-study/one",
-          page: 'overseaSstudy'
+          page: "overseaSstudy",
         },
-        // {
-        //   name: "护照项目",
-        //   url: "/project",
-        //   down: true,
-        //   page: 'project'
-        // },
-        // {
-        //   name: "签证服务",
-        //   url: "/passport",
-        //   page: 'passport'
-        // },
-        
-        // {
-        //   name: "银行开户",
-        //   url: "/bank",
-        //   page: 'bank'
-        // },
         {
           name: "资产配置",
           url: "/asset",
-          page: 'asset'
+          page: "asset",
         },
         {
           name: "绿卡项目",
           url: "/green-cart",
           down: true,
-          page: 'green'
+          page: "green",
         },
         {
           name: "增值服务",
           url: "/project",
           downText: true,
-          page: 'service'
+          page: "service",
         },
         {
           name: "成功案例",
           url: "/news-case",
-          page: 'news'
+          page: "news",
         },
         {
           name: "关于我们",
           url: "/about",
-          page: 'about'
-        }
+          page: "about",
+        },
       ],
       detailsUrl: this.$route.meta.page,
       projectDown: {
         project: [
           {
-            url: '/project/vanuatu',
-            passport: 'https://cms.aicassets.com/images/default/5e7acd99c5e39.png',
-            name: '瓦努阿图'
+            url: "/project/vanuatu",
+            passport:
+              "https://cms.aicassets.com/images/default/5e7acd99c5e39.png",
+            name: "瓦努阿图",
           },
           {
-            url: '/project/saint-kitts',
-            passport: 'https://cms.aicassets.com/images/default/5e8ed460ea158.png',
-            name: '圣基茨和尼维斯'
+            url: "/project/saint-kitts",
+            passport:
+              "https://cms.aicassets.com/images/default/5e8ed460ea158.png",
+            name: "圣基茨和尼维斯",
           },
           {
-            url: '/project/cyprus',
-            passport: 'https://cms.aicassets.com/images/default/5cde1f501a3b8.png',
-            name: '塞浦路斯'
+            url: "/project/cyprus",
+            passport:
+              "https://cms.aicassets.com/images/default/5cde1f501a3b8.png",
+            name: "塞浦路斯",
           },
           {
-            url: '/project/dominica',
-            passport: 'https://cms.aicassets.com/images/default/5cde1f5ccd217.png',
-            name: '多米尼克'
+            url: "/project/dominica",
+            passport:
+              "https://cms.aicassets.com/images/default/5cde1f5ccd217.png",
+            name: "多米尼克",
           },
           {
-            url: '/project/grenada',
-            passport: 'https://cms.aicassets.com/images/default/5cde1f6790489.png',
-            name: '格林纳达'
+            url: "/project/grenada",
+            passport:
+              "https://cms.aicassets.com/images/default/5cde1f6790489.png",
+            name: "格林纳达",
           },
           {
-            url: '/project/saint-lucia',
-            passport: 'https://cms.aicassets.com/images/default/5cde1f4771698.png',
-            name: '圣卢西亚'
+            url: "/project/saint-lucia",
+            passport:
+              "https://cms.aicassets.com/images/default/5cde1f4771698.png",
+            name: "圣卢西亚",
           },
           {
-            url: '/project/turkey',
-            passport: 'https://cms.aicassets.com/images/default/5e8ed46f3c25e.png',
-            name: '土耳其'
+            url: "/project/turkey",
+            passport:
+              "https://cms.aicassets.com/images/default/5e8ed46f3c25e.png",
+            name: "土耳其",
           },
           {
-            url: '/project/antigua',
-            passport: 'https://cms.aicassets.com/images/default/5e7d8efad383b.png',
-            name: '安提瓜和巴布达'
+            url: "/project/antigua",
+            passport:
+              "https://cms.aicassets.com/images/default/5e7d8efad383b.png",
+            name: "安提瓜和巴布达",
           },
           {
-            url: '/project/montenegro',
-            passport: require('../../assets/images/passport/montenegro-passport.jpg'),
-            name: '黑山'
+            url: "/project/montenegro",
+            passport: require("../../assets/images/passport/montenegro-passport.jpg"),
+            name: "黑山",
           },
-          
         ],
         green: [
           {
-            url: '/singapore-details',
-            passport: require('../../assets/images/Singapore-passport.png'),
-            name: '新加坡'
+            url: "/singapore-details",
+            passport: require("../../assets/images/Singapore-passport.png"),
+            name: "新加坡",
           },
           {
-            url: '/philippines-details',
-            passport: require('../../assets/images/Philippines-passport.png'),
-            name: '菲律宾'
+            url: "/philippines-details",
+            passport: require("../../assets/images/Philippines-passport.png"),
+            name: "菲律宾",
           },
           {
-            url: '/malaysia-details',
-            passport: require('../../assets/images/Malaysia-passport.png'),
-            name: '马来西亚'
+            url: "/malaysia-details",
+            passport: require("../../assets/images/Malaysia-passport.png"),
+            name: "马来西亚",
           },
           {
-            url: '/korea-details',
-            passport: require('../../assets/images/korea-passport.png'),
-            name: '韩国'
+            url: "/korea-details",
+            passport: require("../../assets/images/korea-passport.png"),
+            name: "韩国",
           },
           {
-            url: '/canada-details',
-            passport: require('../../assets/images/canada-passpor.png'),
-            name: '加拿大'
+            url: "/canada-details",
+            passport: require("../../assets/images/canada-passpor.png"),
+            name: "加拿大",
           },
           {
-            url: '/japan-details',
-            passport: require('../../assets/images/japan-passport.png'),
-            name: '日本'
+            url: "/japan-details",
+            passport: require("../../assets/images/japan-passport.png"),
+            name: "日本",
           },
           {
-            url: '/portugal-details',
-            passport: require('../../assets/images/portugal-passport.png'),
-            name: '葡萄牙'
-          }
-        ]
+            url: "/portugal-details",
+            passport: require("../../assets/images/portugal-passport.png"),
+            name: "葡萄牙",
+          },
+        ],
       },
       service: [
         {
-          url: '/project',
-          name: '海外护照项目'
+          url: "/project",
+          name: "海外护照项目",
         },
         {
-          url: '/passport',
-          name: '签证服务'
+          url: "/passport",
+          name: "签证服务",
         },
         {
-          url: '/bank',
-          name: '新加坡银行开户'
+          url: "/bank",
+          name: "新加坡银行开户",
         },
         {
-          url: '/stock',
-          name: '海外股票账户'
+          url: "/stock",
+          name: "海外股票账户",
         },
         {
-          url: '/estate',
-          name: '新加坡房产'
+          url: "/estate",
+          name: "新加坡房产",
         },
         {
-          url: '/company',
-          name: '新加坡注册公司'
-        }
+          url: "/company",
+          name: "新加坡注册公司",
+        },
       ],
       isFixed: false,
       scrollPx: 0,
       headerFixed: false,
-      
+      wapNavList: [
+        {
+          name: "首页",
+          url: "/",
+          page: "home",
+        },
+        {
+          name: "新加坡移民",
+          childNav: [
+            {
+              name: "家族办公室移民项目",
+              url: "/emigrant/four",
+              recommend: true,
+            },
+            {
+              name: "股权投资移民项目",
+              url: "/emigrant/tow",
+            },
+            {
+              name: "GIP投资移民项目",
+              url: "/emigrant/three",
+            },
+            {
+              name: "小额自雇移民项目",
+              url: "/emigrant/one",
+            },
+          ],
+        },
+        {
+          name: "狮城留学",
+          childNav: [
+            {
+              name: "新加坡学前教育",
+              url: "/overseas-study/four",
+              recommend: true,
+            },
+            {
+              name: "新加坡公立学校",
+              url: "/overseas-study/tow",
+            },
+            {
+              name: "新加坡国际学校",
+              url: "/overseas-study/three",
+            },
+            {
+              name: "留学讲座",
+              url: "/overseas-study/five",
+            },
+          ],
+        },
+        {
+          name: "绿卡项目",
+          childNav: [
+            {
+              name: "新加坡绿卡项目",
+              url: "/singapore-details",
+              flag: require("../../assets/images/country9.png"),
+            },
+            {
+              name: "菲律宾绿卡项目",
+              url: "/philippines-details",
+              flag: require("../../assets/images/country10.png"),
+            },
+            {
+              name: "马来西亚绿卡项目",
+              url: "/malaysia-details",
+              flag: require("../../assets/images/country11.png"),
+            },
+            {
+              name: "韩国绿卡项目",
+              url: "/korea-details",
+              flag: require("../../assets/images/country12.png"),
+            },
+            {
+              name: "加拿大绿卡项目",
+              url: "/canada-details",
+              flag: require("../../assets/images/country13.png"),
+            },
+            {
+              name: "日本绿卡项目",
+              url: "/japan-details",
+              flag: require("../../assets/images/country14.png"),
+            },
+            {
+              name: "葡萄牙绿卡项目",
+              url: "/portugal-details",
+              flag: require("../../assets/images/country15.png"),
+            },
+          ],
+        },
+        {
+          name: "护照项目",
+          childNav: [
+            {
+              name: "圣基茨和尼维斯",
+              url: "/project/saint-kitts",
+              flag: require("../../assets/images/country5.png"),
+            },
+            {
+              name: "土耳其",
+              url: "/project/turkey",
+              flag: require("../../assets/images/country7.png"),
+            },
+            {
+              name: "圣卢西亚",
+              url: "/project/saint-lucia",
+              flag: require("../../assets/images/country6.png"),
+            },
+            {
+              name: "瓦努阿图",
+              url: "/project/vanuatu",
+              flag: require("../../assets/images/country8.png"),
+            },
+            {
+              name: "塞浦路斯",
+              url: "/project/cyprus",
+              flag: require("../../assets/images/country4.png"),
+            },
+            {
+              name: "多米尼克",
+              url: "/project/dominica",
+              flag: require("../../assets/images/country1.png"),
+            },
+            {
+              name: "格林纳达",
+              url: "/project/grenada",
+              flag: require("../../assets/images/country2.png"),
+            },
+            {
+              name: "黑山",
+              url: "/project/montenegro",
+              flag: require("../../assets/images/country16.png"),
+            },
+            {
+              name: "安提瓜和巴布达",
+              url: "/project/antigua",
+              flag: require("../../assets/images/country3.png"),
+            },
+          ],
+        },
+        {
+          name: "增值服务",
+          childNav: [
+            // {
+            //   url: "/project",
+            //   name: "海外护照项目",
+            // },
+            // {
+            //   url: "/passport",
+            //   name: "签证服务",
+            // },
+            {
+              url: "/bank",
+              name: "新加坡银行开户",
+            },
+            {
+              url: "/stock",
+              name: "海外股票账户",
+            },
+            {
+              url: "/estate",
+              name: "新加坡房产",
+            },
+            {
+              url: "/company",
+              name: "新加坡注册公司",
+            },
+          ],
+        },
+        {
+          name: "资产配置",
+          url: "/asset",
+          page: "asset",
+        },
+        {
+          name: "成功案例",
+          url: "/news-case",
+          page: "news",
+        },
+        {
+          name: "关于我们",
+          url: "/about",
+          page: "about",
+        },
+      ],
+      downIndex: []
     };
   },
   methods: {
     showNav() {
       this.showWapNav = !this.showWapNav;
+    },
+    showChildDome (type) {
+      for (let i = 0; i < this.downIndex.length; i++) {
+        if (type === this.downIndex[i]) {
+          this.downIndex.splice(i, 1)
+          return false
+        }
+      }
+      this.downIndex.push(type)
     }
   },
   mounted() {
-    if (this.$route.name === 'Passport') {
-      this.isFixed = true
+    if (this.$route.name === "Passport") {
+      this.isFixed = true;
     } else {
-      this.isFixed = false
+      this.isFixed = false;
     }
 
-
-    window.addEventListener('scroll', () => {
-      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+    window.addEventListener("scroll", () => {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
       if (scrollTop >= 1) {
-        this.headerFixed = true
+        this.headerFixed = true;
       } else {
-        this.headerFixed = false
+        this.headerFixed = false;
       }
-    })
-  }
+    });
+  },
 };
 </script>
 <style lang="less" scoped>
@@ -265,7 +487,7 @@ export default {
   background: #0f1f24;
   z-index: 999;
   transition: 1s;
-  @media(min-width: 767px) {
+  @media (min-width: 767px) {
     &.is-fixed {
       position: fixed;
       top: 0;
@@ -281,15 +503,15 @@ export default {
 .logo {
   display: block;
   padding-top: 25px;
-  transition: .8s;
+  transition: 0.8s;
   a {
-    display:flex;
+    display: flex;
     flex-flow: row wrap;
     align-items: center;
     span {
       display: inline-block;
       width: 230px;
-      transition: .8s;
+      transition: 0.8s;
       &.text {
         margin-left: 35px;
       }
@@ -297,8 +519,8 @@ export default {
   }
   .img-text {
     width: 220px;
-    margin-left: 20px; 
-    transition: .8s;
+    margin-left: 20px;
+    transition: 0.8s;
   }
   img {
     display: block;
@@ -320,7 +542,7 @@ export default {
     &.service-btn {
       position: relative;
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 20px;
         right: -10px;
@@ -381,35 +603,34 @@ export default {
       .project-select {
         height: 240px;
         display: block;
-        a:nth-child(1){
-          animation: project1 .3s .2s forwards;
+        a:nth-child(1) {
+          animation: project1 0.3s 0.2s forwards;
         }
-        a:nth-child(2){
-          animation: project2 .3s .4s forwards;
+        a:nth-child(2) {
+          animation: project2 0.3s 0.4s forwards;
         }
-        a:nth-child(3){
-          animation: project3 .3s .6s forwards;
+        a:nth-child(3) {
+          animation: project3 0.3s 0.6s forwards;
         }
-        a:nth-child(4){
-          animation: project4 .3s .8s forwards;
+        a:nth-child(4) {
+          animation: project4 0.3s 0.8s forwards;
         }
-        a:nth-child(5){
-          animation: project5 .3s 1s forwards;
+        a:nth-child(5) {
+          animation: project5 0.3s 1s forwards;
         }
-        a:nth-child(6){
-          animation: project6 .3s 1.2s forwards;
+        a:nth-child(6) {
+          animation: project6 0.3s 1.2s forwards;
         }
-        a:nth-child(7){
-          animation: project7 .3s 1.4s forwards;
+        a:nth-child(7) {
+          animation: project7 0.3s 1.4s forwards;
         }
-        a:nth-child(8){
-          animation: project8 .3s 1.6s forwards;
+        a:nth-child(8) {
+          animation: project8 0.3s 1.6s forwards;
         }
-        a:nth-child(9){
-          animation: project9 .3s 1.8s forwards;
+        a:nth-child(9) {
+          animation: project9 0.3s 1.8s forwards;
         }
       }
-
     }
   }
   .project-select {
@@ -418,14 +639,14 @@ export default {
     height: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.8);
-    transition: .4s;
+    transition: 0.4s;
     overflow: hidden;
     a {
       opacity: 0;
       display: inline-block;
       width: 110px;
       text-align: center;
-      color: #FFE19A;
+      color: #ffe19a;
       margin: 35px 10px 0;
       transform: translateY(10px);
       @media (max-width: 1160px) {
@@ -444,7 +665,7 @@ export default {
         display: block;
         margin: 0 auto 20px;
         width: 90px;
-        transition: .3s;
+        transition: 0.3s;
       }
     }
   }
@@ -457,7 +678,7 @@ export default {
     text-align: left;
     background: #fff;
     border-radius: 5px;
-    transition: .3s;
+    transition: 0.3s;
     overflow: hidden;
     box-shadow: 0 0 2px #6d6b6b;
     a {
@@ -481,7 +702,7 @@ export default {
     display: block;
     width: 20px;
     height: 3px;
-    background-color: #FFE19A;
+    background-color: #ffe19a;
     margin-bottom: 5px;
     -webkit-transform: scale(1, 0.5);
     transform: scale(1, 0.5);
@@ -531,69 +752,102 @@ export default {
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  height: calc(100% - 60px);
+  padding: 30px;
+  background: #0D1619;
   transition: 0.4s;
   opacity: 0;
+  overflow: auto;
   &.on {
     display: block;
     top: 60px;
     opacity: 1;
-    a {
-      opacity: 0;
-      &:nth-child(1) {
-        animation: showNav1 0.2s forwards;
-        animation-delay: 0.3s;
+  }
+  li {
+    padding: 10px 0;
+    position: relative;
+    .main-link {
+      display: block;
+      color: #FFE39C;
+      font-size: 12px;
+      
+    }
+    i.down {
+      position: absolute;
+      right: 0;
+      top: 12px;
+      width: 12px;
+      height: 12px;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        background: #FFE39C;
+        transform: translateY(-50%);
       }
-      &:nth-child(2) {
-        animation: showNav2 0.3s forwards;
-        animation-delay: 0.5s;
-        transform: translateY(30px);
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: #FFE39C;
+        transform: translateX(-50%);
       }
-      &:nth-child(3) {
-        animation: showNav3 0.4s forwards;
-        animation-delay: 0.6s;
-        transform: translateY(30px);
+    }
+    .child {
+     & ~ i {
+        &:before {
+          display: none;
+        }
       }
-      &:nth-child(4) {
-        animation: showNav4 0.5s forwards;
-        animation-delay: 0.7s;
-        transform: translateY(30px);
-      }
-      &:nth-child(5) {
-        animation: showNav5 0.6s forwards;
-        animation-delay: 0.8s;
-        transform: translateY(30px);
-      }
-      &:nth-child(6) {
-        animation: showNav6 0.7s forwards;
-        animation-delay: 0.9s;
-        transform: translateY(30px);
-      }
-      &:nth-child(7) {
-        animation: showNav7 0.8s forwards;
-        animation-delay: 1s;
-        transform: translateY(30px);
-      }
-      &:nth-child(8) {
-        animation: showNav8 0.9s forwards;
-        animation-delay: 1s;
-        transform: translateY(30px);
-      }
-      &:nth-child(9) {
-        animation: showNav9 1s forwards;
-        animation-delay: 1s;
-        transform: translateY(30px);
+      padding-top: 10px;
+      a {
+        display: inline-block;
+        width: calc(50% - 5px);
+        line-height: 30px;
+        margin: 5px 5px 0 0;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        &.flag {
+          text-align: left;
+          padding-left: 12px;
+        }
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+        img {
+          display: inline-block;
+          position: relative;
+          top: -2px;
+          width: 17px;
+          margin-right: 5px;
+        }
+        em {
+          display: inline-block;
+          width: 23px;
+          height: 11px;
+          line-height: 11px;
+          background: #FFE19A;
+          border-radius: 90px;
+          color: #233135;
+          i {
+            display: inline-block;
+            width: 46px;
+            margin: 0 -11px;
+            transform: scale(.5);
+          }
+        }
       }
     }
   }
-  a {
-    display: block;
-    color: #FFE19A;
-    text-align: center;
-    font-size: 18px;
-    padding: 15px 0;
-  }
+  
 }
 @keyframes showNav1 {
   100% {
@@ -712,7 +966,7 @@ export default {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 99999999;
     .pc-max-width {
       position: absolute;
       top: 0;
@@ -745,7 +999,7 @@ export default {
 }
 </style>
 <style lang="less">
-@media (min-width:767px) {
+@media (min-width: 767px) {
   .all-fixed.header {
     position: fixed;
     top: 0;
@@ -781,5 +1035,12 @@ export default {
       }
     }
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

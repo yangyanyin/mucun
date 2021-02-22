@@ -34,7 +34,7 @@ export default {
       swiperOptions: {
         slidesPerView: 5,
         loop: true,
-        autoplay: 30000,
+        autoplay: 3000,
         spaceBetween: 30
       },
       schoolData: {

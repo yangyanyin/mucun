@@ -1,7 +1,7 @@
 <template>
   <div class="new-contact-us margin-t-80">
     <div class="contact pc-max-width">
-      <h3>想在新加坡开立股票账户并操作购买股票的您，如果想了解更多股票开户细节，请联系我们。</h3>
+      <h3>{{text}}</h3>
       <p>立即点击，资深专家全程一对一指导，简单高效快捷！</p>
       <button @click="changeContact">联系我们</button>
     </div>
@@ -54,6 +54,9 @@ export default {
     ContactUs,
     InputBox,
     MessagePopup,
+  },
+  props: {
+    text: String
   },
   data () {
     return {

@@ -75,7 +75,7 @@
       </div>
       
     </div>
-    <NewContactUs />
+    <NewContactUs text="想在新加坡置业？马上联系我们，了解新加坡置业的一手资料！" />
   </div>
 </template>
 <script>
