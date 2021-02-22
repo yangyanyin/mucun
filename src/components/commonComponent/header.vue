@@ -260,11 +260,6 @@ export default {
       headerFixed: false,
       wapNavList: [
         {
-          name: "首页",
-          url: "/",
-          page: "home",
-        },
-        {
           name: "新加坡移民",
           childNav: [
             {
@@ -443,7 +438,7 @@ export default {
           page: "about",
         },
       ],
-      downIndex: []
+      downIndex: [0, 1, 2]
     };
   },
   methods: {
