@@ -90,29 +90,30 @@ export default {
     }
   }
   @media(max-width: 767px) {
-    top: -30px;
-    border-radius: 5px;
-    h3 {
-      display: none;
-      padding: 0 10px;
-      font-size: 14px;
-    }
-    ul {
-      display: block;
-      width: 100%;
-      height: auto;
-      padding: 10px;
-      white-space: nowrap;
-      text-align: left;
-      overflow: auto;
-      li {
-        display: inline-block;
-        margin: 0 5px;
-        img {
-          height: 34px;
-        }
-      }
-    }
+    display: none;
+    // top: -30px;
+    // border-radius: 5px;
+    // h3 {
+    //   display: none;
+    //   padding: 0 10px;
+    //   font-size: 14px;
+    // }
+    // ul {
+    //   display: block;
+    //   width: 100%;
+    //   height: auto;
+    //   padding: 10px;
+    //   white-space: nowrap;
+    //   text-align: left;
+    //   overflow: auto;
+    //   li {
+    //     display: inline-block;
+    //     margin: 0 5px;
+    //     img {
+    //       height: 34px;
+    //     }
+    //   }
+    // }
   }
 }
 </style>

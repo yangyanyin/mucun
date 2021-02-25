@@ -50,7 +50,7 @@
         <div class="d">
           <img src="../../../assets/images/evelyn-yep.jpg" />
           <div class="detailed">
-            <strong>资资深投资专家Evelyn Yep</strong>
+            <strong>资深投资专家Evelyn Yep</strong>
             <p>从业多年，并拥有丰富的市场投资经验，擅长为客户甄选优质移民项目及投资机会。帮助客户顺利完成海外房产投资、税务规划和财富管理等服务。从多角度把控风险，凭借自己的专业知识，更能站在客户的角度，为客户的移民及海外投资保驾护航。</p>
           </div>
         </div>
@@ -167,26 +167,27 @@ export default {
     }
   }
   @media (max-width: 767px) {
-    .swiper-button {
-      top: 50%;
-      width: 30px;
-      height: 30px;
-    }
-    .swiper-container {
-      margin: 20px 0 0;
-    }
-    .swiper-slide {
-      padding: 5px;
-      p {
-        height: auto;
-      }
-      .d {
-        padding-left: 140px;
-        img {
-          width: 130px;
-        }
-      }
-    }
+    display: none;
+  //   .swiper-button {
+  //     top: 50%;
+  //     width: 30px;
+  //     height: 30px;
+  //   }
+  //   .swiper-container {
+  //     margin: 20px 0 0;
+  //   }
+  //   .swiper-slide {
+  //     padding: 5px;
+  //     p {
+  //       height: auto;
+  //     }
+  //     .d {
+  //       padding-left: 140px;
+  //       img {
+  //         width: 130px;
+  //       }
+  //     }
+  //   }
   }
 }
 </style>

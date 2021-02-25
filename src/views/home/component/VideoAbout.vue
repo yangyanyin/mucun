@@ -116,6 +116,7 @@ export default {
 /* 视频和关于我们 */
 .home-about {
   @media (max-width: 767px) {
+    display: none;
     padding: 0;
   }
   .video {

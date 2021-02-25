@@ -66,7 +66,7 @@ export default {
 <style lang="less" scoped>
 .terms {
   position: fixed;
-  z-index: 99999;
+  z-index: 999999999999;
   top: 0;
   left: 0;
   width: 100%;

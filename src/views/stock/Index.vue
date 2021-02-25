@@ -58,11 +58,11 @@ export default {
 .banner {
   width: 100%;
   height: 340px;
-  background: url('../../assets/images/stock-image1.jpg') no-repeat top center;
+  background: url('../../assets/images/stock-image1.jpg') no-repeat bottom center;
   background-size: auto 340px;
   @media (max-width: 767px) {
     padding-top: 60px;
-    height: 200px;
+    height: 260px;
     background-size: auto 200px;
   }
 }
@@ -85,6 +85,20 @@ export default {
     background: url('../../assets/images/stock-image2.jpg') no-repeat top center;
     background-size: auto 110px;
   }
+  @media (max-width: 767px) {
+    padding: 30px;
+    p {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    span {
+      height: 60px;
+      line-height: 60px;
+      margin: 20px -20px 0;
+      font-size: 16px;
+    }
+  }
 }
 .account {
   width: 48%;
@@ -103,6 +117,16 @@ export default {
   p {
     line-height: 32px;
     font-size: 12px;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    padding: 30px;
+
+    p {
+      line-height: 28px;
+    }
   }
 }
 .content {
@@ -159,17 +183,20 @@ export default {
     }
   }
   @media (max-width: 767px) {
-    padding: 0 5px;
+    margin-top: 0;
     .list {
       width: 100%;
-      text-align: center;
+      text-align: left;
+      .t {
+        padding: 25px;
+      }
       strong {
-        font-size: 20px;
-        margin: 20px 0 10px 0;
+        font-size: 16px;
+        margin: 10px 0 5px 0;
       }
       p {
         line-height: 24px;
-        font-size: 14px;
+        font-size: 13px;
       }
       &.text {
         position: static;

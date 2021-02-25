@@ -111,6 +111,29 @@ export default {
       color: #000;
     }
   }
+  @media (max-width: 767px) {
+    margin: 0 10px;
+    h3 {
+      padding: 30px 15px 0;
+      font-size: 16px;
+      line-height: 30px;
+      color: #FFE19A;
+    }
+    p {
+      font-size: 14px;
+      padding-top: 6px;
+      line-height: 30px;
+      letter-spacing: 5px;
+      color: #fff;
+    }
+    button {
+      width: 140px;
+      height: 40px;
+      line-height: 40px;
+      margin: 15px auto 0;
+      font-size: 14px;
+    }
+  }
 }
 .stock-f {
   padding-top: 10px;

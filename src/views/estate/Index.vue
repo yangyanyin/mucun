@@ -90,11 +90,11 @@ export default {
 .banner {
   width: 100%;
   height: 340px;
-  background: url('../../assets/images/estate-banner.jpg') no-repeat top center;
+  background: url('../../assets/images/estate-banner.jpg') no-repeat bottom center;
   background-size: auto 340px;
   @media (max-width: 767px) {
     padding-top: 60px;
-    height: 200px;
+    height: 260px;
     background-size: auto 200px;
   }
 }
@@ -105,6 +105,14 @@ export default {
     font-size: 16px;
     line-height: 32px;
     color: #315455;
+  }
+  @media (max-width: 767px) {
+    padding: 30px;
+    p {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -178,17 +186,17 @@ export default {
     }
   }
   @media (max-width: 767px) {
-    padding: 0 5px;
+    background: #fff;
     .list {
-      width: 100%;
+      width: 100% !important;
       text-align: center;
       strong {
-        font-size: 20px;
-        margin: 20px 0 10px 0;
+        font-size: 18px;
+        margin: 15px 0 10px 0;
       }
       p {
         line-height: 24px;
-        font-size: 14px;
+        font-size: 12px;
       }
       &.text {
         position: static;
@@ -196,6 +204,12 @@ export default {
         &.left {
           padding: 0;
           text-align: center;
+        }
+        .t {
+          padding-left: 0;
+          &:after {
+            display: none;
+          }
         }
       }
     }

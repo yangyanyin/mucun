@@ -30,14 +30,14 @@ export default {
     return {
       menuList: [
         {
-          url: '/emigrant/four',
-          zh_text: '新加坡家族办公室移民项目',
-          en_text: 'Singapore Family Office'
-        },
-        {
           url: '/emigrant/singapore',
           zh_text: '新加坡移民',
           en_text: 'Singapore Immigration'
+        },
+        {
+          url: '/emigrant/four',
+          zh_text: '新加坡家族办公室移民项目',
+          en_text: 'Singapore Family Office'
         },
         {
           url: '/emigrant/one',

@@ -52,6 +52,7 @@ export default {
 <style scoped lang="less">
 .index-news {
   @media (max-width: 767px) {
+    display: none;
     padding: 0;
   }
 }

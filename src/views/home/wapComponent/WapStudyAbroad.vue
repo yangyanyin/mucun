@@ -1,26 +1,13 @@
 <template>
-  <div class="study-abroad pc-max-width margin-t-80">
-    <div class="public-title animation-show">
-      <h3>狮城留学</h3>
-      <span>
-        <i>
-          <img src="../../../assets/images/title-img3.png" />
-        </i>
-      </span>
-      <p>Study abroad education in Singapore</p>
-    </div>
-    
-    <div class="introduction">
-      <p>新加坡——举世闻名的“花园城市”，既现代又充满活力，其教育体制享誉亚洲乃至全球。这里不但有优质的公立教育资源，还有众多知名的国际学校，无缝衔接世界各国教育体制。新加坡政府自2017年起放宽移民政策，开放了留学生直接申请永居政策，欢迎在新加坡受教育的年轻人，不需要邀请函即可直接申请永久居民（PR），真正实现留学+移民两不误，一人留学，全家移民！新加坡凭借多元的教育选择和利好的移民政策，吸引着千千万万的国际学生到此就读，是国际学生寻求顶尖教育的完美目的地。</p>
-    </div>
-
+  <div class="wap-study-abroad">
+    <h3>留学与教育</h3>
     <div class="recommend" v-for="(item, name, key) in schoolData" :key="key" :class="`recommend${key+1}`">
-      <h3>{{name}}</h3>
+      <strong>{{name}}</strong>
       <swiper ref="mySwiper" :options="swiperOptions">
         <swiper-slide v-for="(item, key) in schoolData[name]" :key="key">
           <router-link :to="item.url">
             <img :src="item.icon" :alt="item.name" />
-            {{item.name}}
+            <p>{{item.name}}</p> 
           </router-link>
         </swiper-slide>
       </swiper>
@@ -32,13 +19,13 @@ export default {
   data () {
     return {
       swiperOptions: {
-        slidesPerView: 5,
+        slidesPerView: 3,
         loop: true,
         autoplay: 3000,
-        spaceBetween: 30
+        spaceBetween: 20
       },
       schoolData: {
-        新加坡学前教育推荐: [
+        新加坡学顶尖前教育推荐: [
           {
             icon: require('../../../assets/images/overseas-study/school/e-bridge-logo.png'),
             name: "E-bridge伊桥幼儿园",
@@ -80,7 +67,7 @@ export default {
             url: "/white-lodge",
           }
         ],
-        新加坡国际学校推荐: [
+        新加坡优质国际学校推荐: [
           {
             icon: require("../../../assets/images/overseas-study/school/school-logo1.png"),
             name: "东陵信托学校",
@@ -125,40 +112,34 @@ export default {
       }
     }
   },
-  mounted () {
-    let windowWidth = document.body.clientWidth
-    if (windowWidth < 767) {
-      this.swiperOptions.slidesPerView = 3
-    }
-  }
+  mounted () {}
 }
 </script>
 <style scoped lang="less">
-.study-abroad {
+.wap-study-abroad {
+  display: none;
+  padding: 25px 0;
+  border-top: 10px solid #f7f7f7;
   @media (max-width: 767px) {
-    display: none;
+    display: block;
   }
-}
-.introduction {
-  height: 280px;
-  margin-top: 35px;
-  padding: 75px 0 0 75px;
-  background: url('../../../assets/images/study-abroad-bg.png') no-repeat;
-  background-size: auto 280px;
-  p {
-    width: 700px;
-    line-height: 28px;
-    color: #fff;
+  h3 {
+    // padding-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
   }
 }
 .recommend2 {
   direction: rtl;
 }
 .recommend {
-  h3 {
-    padding: 50px 0;
+  margin-top: 20px;
+  strong {
+    display: block;
+    font-weight: normal;
+    padding-bottom: 15px;
     text-align: center;
-    font-size: 20px;
+    font-size: 14px;
     color: #315455;
   }
   .swiper-slide {
@@ -172,9 +153,13 @@ export default {
   a {
     display: inline-block;
     padding: 18px 20px;
-    font-size: 12px;
-    text-align: center;
-    color: #444;
+    
+    p {
+      height: 34px;
+      font-size: 12px;
+      text-align: center;
+      color: #444;
+    }
     img {
       display: block;
       width: 100%;

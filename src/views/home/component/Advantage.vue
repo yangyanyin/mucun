@@ -74,23 +74,7 @@
     }
   }
   @media (max-width: 767px) {
-    padding: 40px 0;
-     .content {
-       padding: 30px 0;
-       .list {
-         width: 30%;
-         img {
-           width: 100px;
-         }
-         p {
-           font-size: 12px;
-           line-height: 20px;
-           br {
-             display: none;
-           }
-         }
-       }
-     }
+    display: none;
   }
 }
 </style>

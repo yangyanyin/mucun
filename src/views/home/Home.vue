@@ -7,6 +7,18 @@
     <!-- 媒体 -->
     <Media />
 
+    <!-- 新 -->
+    <HomeNav />
+    <SingaporeStudyAbroad />
+    <PopularItems />
+    <WapStudyAbroad />
+    <Other />
+    <Services />
+    <AssetManagement />
+    <PopularInformation v-if="newDynamic.length > 0" :newDynamic="newDynamic" />
+    <WapAdvantage />
+    <SuccessCase v-if="newCase.length > 0" :newCase="newCase"/>
+
     <!-- 视频和关于我们 -->
     <VideoAbout></VideoAbout>
 
@@ -147,7 +159,7 @@
     </div>
 
     <!-- 联系我们 -->
-    <ContactUs />
+    <ContactUs class="home-contact-us" />
   </div>
 </template>
 
@@ -164,6 +176,17 @@ import Media from './component/Media'
 // import Passport from './component/Passport'
 import StudyAbroad from './component/StudyAbroad'
 import Loading from '../../components/commonComponent/loadingPage'
+import HomeNav from './wapComponent/HomeNav'
+import SingaporeStudyAbroad from './wapComponent/SingaporeStudyAbroad'
+import PopularItems from './wapComponent/PopularItems'
+import WapStudyAbroad from './wapComponent/WapStudyAbroad'
+import Services from './wapComponent/Services'
+import WapAdvantage from './wapComponent/WapAdvantage'
+import SuccessCase from './wapComponent/SuccessCase'
+import PopularInformation from './wapComponent/PopularInformation'
+import AssetManagement from './wapComponent/AssetManagement'
+import Other from './wapComponent/Other'
+
 
 export default {
   name: 'home',
@@ -178,7 +201,17 @@ export default {
     Advantage,
     // Passport,
     StudyAbroad,
-    Media
+    Media,
+    HomeNav,
+    SingaporeStudyAbroad,
+    PopularItems,
+    WapStudyAbroad,
+    Services,
+    WapAdvantage,
+    SuccessCase,
+    PopularInformation,
+    AssetManagement,
+    Other
   },
   data() {
     return {
@@ -249,6 +282,7 @@ export default {
   @media (max-width: 767px) {
     background-size: 1000px;
     padding: 30px 10px 0;
+    display: none;
   }
   .public-title {
     h3 {
@@ -319,53 +353,53 @@ export default {
         }
       }
     }
-    @media (max-width: 767px) {
-      white-space: nowrap;
-      overflow: auto;
-      padding: 30px 0 20px;
-      &::-webkit-scrollbar {
-        height: 0px;
-      } 
-      ul {
-        width: 920px;
-        margin: 0 -10px;
-      }
-      li {
-        float: left;
-        width: 230px;
-        padding: 0 5px;
-        white-space: initial;
-        &:first-child {
-          padding-left: 0;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
-        a.a {
-          .d {
-            padding: 15px;
-            h3 {
-              display: block;
-              font-size: 16px;
-              height: 24px;
-              -webkit-line-clamp: 1;
-            }
-            p {
-              height: 55px;
-              font-size: 12px;
-              line-height: 18px;
-              -webkit-line-clamp: 3;
-            }
-            span {
-              font-size: 12px;
-              a {
-                font-size: 12px;
-              }
-            }
-          }
-        }
-      }
-    }
+    // @media (max-width: 767px) {
+    //   white-space: nowrap;
+    //   overflow: auto;
+    //   padding: 30px 0 20px;
+    //   &::-webkit-scrollbar {
+    //     height: 0px;
+    //   } 
+    //   ul {
+    //     width: 920px;
+    //     margin: 0 -10px;
+    //   }
+    //   li {
+    //     float: left;
+    //     width: 230px;
+    //     padding: 0 5px;
+    //     white-space: initial;
+    //     &:first-child {
+    //       padding-left: 0;
+    //     }
+    //     &:last-child {
+    //       padding-right: 0;
+    //     }
+    //     a.a {
+    //       .d {
+    //         padding: 15px;
+    //         h3 {
+    //           display: block;
+    //           font-size: 16px;
+    //           height: 24px;
+    //           -webkit-line-clamp: 1;
+    //         }
+    //         p {
+    //           height: 55px;
+    //           font-size: 12px;
+    //           line-height: 18px;
+    //           -webkit-line-clamp: 3;
+    //         }
+    //         span {
+    //           font-size: 12px;
+    //           a {
+    //             font-size: 12px;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -377,6 +411,7 @@ export default {
   @media (max-width: 767px) {
     padding: 30px 10px;
     background-size: 1100px;
+    display: none;
   }
   .public-title {
     h3 {
@@ -486,6 +521,7 @@ export default {
     }
   }
   @media (max-width: 767px) {
+    display: none;
     ul {
       margin: 0 -5px;
       padding-top: 10px;
@@ -526,6 +562,9 @@ export default {
 .office {
   padding: 50px 0;
   background: #447375;
+  @media (max-width: 767px) {
+    display: none;
+  }
   .t {
     position: relative;
     text-align: center;
@@ -607,6 +646,12 @@ export default {
       }
 
     }
+  }
+}
+
+.team, .home-contact-us {
+  @media (max-width: 767px) {
+    display: none;
   }
 }
 </style>
