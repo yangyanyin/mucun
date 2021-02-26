@@ -32,7 +32,7 @@ export default {
 .new-success-case {
   display: none;
   margin-top: 20px;
-  padding-top: 25px;
+  padding: 25px 0;
   @media (max-width: 767px) {
     display: block;
   }

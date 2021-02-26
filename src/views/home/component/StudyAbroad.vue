@@ -7,7 +7,7 @@
           <img src="../../../assets/images/title-img3.png" />
         </i>
       </span>
-      <p>Study abroad education in Singapore</p>
+      <p>education in Singapore</p>
     </div>
     
     <div class="introduction">

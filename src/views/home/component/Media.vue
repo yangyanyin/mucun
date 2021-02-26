@@ -37,10 +37,6 @@ export default {
           url: 'http://www.zguonew.com/56618.html '
         },
         {
-          img: require('../../../assets/images/media/zhongguozixunwang@2x.png'),
-          url: 'http://www.idlewww.com/gjsj/82675.html'
-        },
-        {
           img: require('../../../assets/images/media/exact-release@2x.png'),
           url: 'https://exactrelease.org/global-citizenship-programs-waterland-capital/'
         }

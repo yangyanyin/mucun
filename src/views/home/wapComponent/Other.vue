@@ -1,22 +1,29 @@
 <template>
   <div class="home-other">
-    <router-link v-for="(item, key) in otherData" :key="key" :to="item.url">
+    <span v-for="(item, key) in otherData" :key="key" @click="clickMessage(item.name)">
       <img :src="item.img" :alt="item.name" />
       <h3>{{ item.name }}</h3>
       <p>{{ item.text }}</p>
-    </router-link>
+    </span>
+
+    <NewMessageType v-if="messageType" :messageType="messageType" @clickMessage="clickMessage"  />
   </div>
 </template>
 <script>
+import NewMessageType from '../../../components/commonComponent/NewMessageType'
 export default {
+  components: {
+    NewMessageType
+  },
   data() {
     return {
+      messageType: '',
       otherData: [
         {
           img: require("../../../assets/images/home/immigration-expert.png"),
           name: "移民专家",
           text: "制定移民方案",
-          url: ""
+          url: "/emigrant/singapore"
         },
         {
           img: require("../../../assets/images/home/study-abroad-expert.png"),
@@ -32,6 +39,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    clickMessage (type) {
+      this.messageType = type
+    }
   }
 }
 </script>
@@ -41,7 +53,11 @@ export default {
   background: #F7F7F7;
   overflow: auto;
   white-space: nowrap;
-  a {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+  span {
     position: relative;
     display: inline-block;
     height: 100px;

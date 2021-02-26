@@ -39,7 +39,7 @@
     </ul>
 
     <div class="link">
-      <router-link to="/about">关于我们</router-link> | <a>联系我们</a> | <a @click="showTerms">隐私条款</a>
+      <router-link to="/about">关于我们</router-link> | <a @click="clickMessage('联系我们')">联系我们</a> | <a @click="showTerms">隐私条款</a>
     </div>
     <p class="add">
       公司地址：
@@ -57,23 +57,32 @@
     </div>
 
     <Terms v-if="termsType" @closeTerms="showTerms" />
+
+    <NewMessageType v-if="messageType" :messageType="messageType" @clickMessage="clickMessage"  />
+
   </div>
 </template>
 <script>
 import Terms from '../../views/terms/Terms'
+import NewMessageType from '../../components/commonComponent/NewMessageType'
 export default {
   components: {
-    Terms
+    Terms,
+    NewMessageType
   },
   data () {
     return {
       showReturnTop: false,
-      termsType: false
+      termsType: false,
+      messageType: ''
     }
   },
   methods: {
     showTerms () {
       this.termsType = !this.termsType
+    },
+    clickMessage (type) {
+      this.messageType = type
     },
     returnTop() {
       let scrTop = 0;
@@ -105,6 +114,10 @@ export default {
 </script>
 <style scoped lang="less">
 .wap-footer {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
   padding: 35px 0 100px;
   background: #f7f7f7;
   text-align: center;

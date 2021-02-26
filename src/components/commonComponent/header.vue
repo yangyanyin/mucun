@@ -56,7 +56,7 @@
           <router-link class="main-link" v-if="navs.url" :to="navs.url" @click.native="showNav">{{
             navs.name
           }}</router-link>
-          <span class="main-link" v-else @click="showChildDome(index)">
+          <span class="main-link" v-else @click="showChildDome(index, navs.name)">
             {{ navs.name }} 
           </span>
           <transition name="fade">
@@ -75,21 +75,26 @@
               >
             </div>
           </transition>
-          <i class="down" v-if="!navs.url"></i>
+          <i class="down" v-if="!navs.url && navs.name !== '联系我们'"></i>
         </li>
       </ul>
     </div>
+    <NewMessageType v-if="messageType" :messageType="messageType" @clickMessage="messageType = ''"  />
   </div>
 </template>
 <script>
 import Hotline from "./Hotline";
+import NewMessageType from '../../components/commonComponent/NewMessageType'
+
 export default {
   components: {
     Hotline,
+    NewMessageType
   },
   data() {
     return {
       showWapNav: false,
+      messageType: '',
       navList: [
         {
           name: "首页",
@@ -437,6 +442,9 @@ export default {
           url: "/about",
           page: "about",
         },
+        {
+          name: "联系我们"
+        },
       ],
       downIndex: [0, 1, 2]
     };
@@ -445,7 +453,11 @@ export default {
     showNav() {
       this.showWapNav = !this.showWapNav;
     },
-    showChildDome (type) {
+    showChildDome (type, name) {
+      if (name === '联系我们') {
+        this.messageType = name
+        return
+      }
       for (let i = 0; i < this.downIndex.length; i++) {
         if (type === this.downIndex[i]) {
           this.downIndex.splice(i, 1)

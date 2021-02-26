@@ -29,7 +29,7 @@ export default {
         {
           name: '海外银行账户',
           icon: require('../../../assets/images/home/overseas-bank.png'),
-          url: '/'
+          url: '/bank'
         },
         {
           name: '海外公司注册',
@@ -38,7 +38,7 @@ export default {
         },{
           name: '增值服务',
           icon: require('../../../assets/images/home/value-added-services.png'),
-          url: '/bank'
+          url: '/stock'
         },
         {
           name: '热门资讯',

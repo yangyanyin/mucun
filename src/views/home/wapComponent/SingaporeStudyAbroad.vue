@@ -25,21 +25,21 @@ export default {
       imgArr: [
         {
           title: "新加坡留学",
-          text: "精英教育 轻松获得永居 专属母系陪读",
+          text: "精英教育  轻松获得永居  专属母系陪读",
           url: "/overseas-study/one",
           img: require("../../../assets/images/home/singapore-study-abroad-img.jpg"),
         },
         {
           title: "新加坡家族办公室",
-          text: "精英教育 轻松获得永居 专属母系陪读",
+          text: "财富传承&全家移民一步到位 身份规划 资产配置 税务计划",
           url: "/emigrant/four",
-          img: require("../../../assets/images/home/singapore-study-abroad-img.jpg"),
+          img: require("../../../assets/images/home/emigrant-four.jpg"),
         },
         {
-          title: "新加坡房产项目",
-          text: "精英教育 轻松获得永居 专属母系陪读",
-          url: "/estate",
-          img: require("../../../assets/images/home/singapore-study-abroad-img.jpg"),
+          title: "投资移民",
+          text: "投资移民永居 护照项目 高净值人士必备",
+          url: "/emigrant/tow",
+          img: require("../../../assets/images/home/emigrant-tow.jpg"),
         },
       ],
     };
@@ -85,14 +85,15 @@ export default {
     position: absolute;
     top: 110px;
     left: 50%;
-    width: 120px;
-    height: 34px;
-    line-height: 32px;
+    width: 110px;
+    height: 30px;
+    line-height: 28px;
     margin-left: -60px;
     font-size: 12px;
     color: #fff;
     border: 1px solid #FFFFFF;
     border-radius: 90px;
+    opacity: .8;
   }
   
 }
