@@ -7,8 +7,8 @@
         <img @load="imgLoad" src="../../../assets/images/banner1.jpg" />
       </swiper-slide>
       <swiper-slide>
-        <p class="p1">Second CITIZENSHIP is not just a passport <br /> it is about family, where your family feels at home </p>
-        <p class="p2">海外身份规划<br />这不仅仅是第二身份，更是您海外幸福生活的保障</p>
+        <p class="p1"><img src="../../../assets/images/home/banner-logo.gif" /></p>
+        <p class="p2">专注新加坡移民留学/家族办公室/资产管理<br />高净值人群一站式私人管家服务机构</p>
         <img src="../../../assets/images/banner2.jpg" />
       </swiper-slide>
     </swiper>
@@ -78,6 +78,9 @@ export default {
       &.p1 {
         top: 220px;
         opacity: 0;
+        img {
+          width: 180px;
+        }
       }
       &.p2 {
         top: 310px;
@@ -115,9 +118,13 @@ export default {
         line-height: 22px;
         &.p1 {
           top: 130px;
+          img {
+            width: 150px;
+            height: auto;
+          }
         }
         &.p2 {
-          top: 200px;
+          top: 200px !important;
         }
       }
     }
