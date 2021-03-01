@@ -1,6 +1,7 @@
 <template>
   <div class="stock">
     <div class="banner"></div>
+    <IncrementServiceTab />
     <div class="introduction pc-max-width">
       <p>新加坡作为世界金融中心，政治环境稳定、商业网络广泛，是最具活力前景的经济体之一，近年来在新加坡开立股票账户的企业和个人都逐年增多。新加坡股票账户可以交易全球超过20多个国家和地区，包括：新加坡、美国、中国A股，香港、日本德国等常见的交易市场，真正做到一户在手，将您的投资触角拓展至全球股市！</p>
       <p>侨水资本密切关注全球股票市场，与本地知名托管银行和证券公司合作，为您提供更加便捷高效的服务。从客户的角度出发，根据客户投资需求调整及管控风险，提供一种连贯的战略和投资方法。协助您分析、筛选并交易数千种股票。</p>       
@@ -48,9 +49,12 @@
 </template>
 <script>
 import NewContactUs from '../../components/NewContactUs'
+import IncrementServiceTab from '../../components/commonComponent/IncrementServiceTab'
+
 export default {
   components: {
-    NewContactUs
+    NewContactUs,
+    IncrementServiceTab
   }
 }
 </script>
@@ -88,7 +92,7 @@ export default {
   @media (max-width: 767px) {
     padding: 30px;
     p {
-      margin-top: 20px;
+      margin: 0 0 20px 0;
       font-size: 14px;
       line-height: 24px;
     }

@@ -42,6 +42,7 @@
     text-align: center;
     font-size: 18px;
     line-height: 54px;
+    font-weight: bold;
     color: #fff;
     background: #447375;
   }

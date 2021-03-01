@@ -1,6 +1,7 @@
 <template>
   <div class="stock">
     <div class="banner"></div>
+    <IncrementServiceTab />
     <div class="introduction pc-max-width">
       <p>新加坡一直被公认为全球商业中心，拥有开放的商业政策，发达的金融体系，高技能人才，绝佳的地理位置，以及新加坡对外商投资的税收政策优惠。吸引全球众多企业家来此拓展海外业务，这里不但是美国和欧洲企业设立亚洲总部的首选地点，同时还是亚洲公司进军国际市场的理想平台</p>
     </div>
@@ -46,9 +47,12 @@
 </template>
 <script>
 import NewContactUs from '../../components/NewContactUs'
+import IncrementServiceTab from '../../components/commonComponent/IncrementServiceTab'
+
 export default {
   components: {
-    NewContactUs
+    NewContactUs,
+    IncrementServiceTab
   }
 }
 </script>
@@ -75,7 +79,7 @@ export default {
   @media (max-width: 767px) {
     padding: 30px;
     p {
-      margin-top: 20px;
+      margin-top: 0;
       font-size: 14px;
       line-height: 24px;
     }

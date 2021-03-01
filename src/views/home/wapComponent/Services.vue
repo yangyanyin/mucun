@@ -51,6 +51,7 @@ export default {
     display: block;
     text-align: center;
     font-size: 18px;
+    font-weight: bold;
   }
   .list {
     padding: 0 5px;

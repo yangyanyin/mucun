@@ -112,8 +112,10 @@ export default {
       font-weight: bold;
       margin-top: 20px;
       padding: 5px 0;
+      text-align: left;
     }
     ul {
+      text-align: left;
       li {
         position: relative;
         padding: 5px 0 5px 20px;

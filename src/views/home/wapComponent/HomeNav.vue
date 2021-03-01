@@ -43,7 +43,7 @@ export default {
         {
           name: '热门资讯',
           icon: require('../../../assets/images/home/popular-information.png'),
-          url: '/'
+          url: '/news-expert'
         },
         {
           name: '关于我们',

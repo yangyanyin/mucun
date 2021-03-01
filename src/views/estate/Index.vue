@@ -1,6 +1,7 @@
 <template>
   <div class="stock">
     <div class="banner"></div>
+    <IncrementServiceTab />
     <div class="introduction pc-max-width">
       <p>新加坡是世界上最廉洁的国家、全球少数享有AAA信贷评级的国家、最适合经商的国家、个人所得税率全球最低的国家、最具人才竞争力的国家、是亚洲最宜居的国家、全球最安全的国家、全球最适合孩子成长的国家、教育素质全球排第一的国家，新加坡还有许多其它的荣耀，如国立大学亚洲排名第一、公共交通全球名列前茅、护照免签国家排行榜第一、樟宜机场全球排名第一等。</p>
       <p>新加坡的优势也反映在其房地产上，这是一个低风险的成熟房地产市场。在新加坡购买私宅没有公摊面积，送停车位，为精装房，属“可拎包入住”型。新加坡新私宅地契至少99年，保值期长，无需缴纳遗产税和资本增值税，租金回报率明显高于中国大陆，而银行贷款利率低年限长。新加坡房产的泡沫指数是相当低的，为0.45，在参与调查的20个城市中排第18，处于公允水平。与新加坡房价相比，香港、伦敦和纽约黄金地段的房价分别高出115%、65%和43%，是投资的好选择。新加坡30%的豪宅都被中国人买走，中国购房者已超过印尼和马来西亚，成为新加坡豪宅的第一外籍买家。正因为如此，越来越多的中国人，开始进军新加坡市场购买心仪的房产。</p>       
@@ -80,9 +81,12 @@
 </template>
 <script>
 import NewContactUs from '../../components/NewContactUs'
+import IncrementServiceTab from '../../components/commonComponent/IncrementServiceTab'
+
 export default {
   components: {
-    NewContactUs
+    NewContactUs,
+    IncrementServiceTab
   }
 }
 </script>
@@ -109,7 +113,7 @@ export default {
   @media (max-width: 767px) {
     padding: 30px;
     p {
-      margin-top: 20px;
+      margin: 0 0 20px 0;
       font-size: 14px;
       line-height: 24px;
     }

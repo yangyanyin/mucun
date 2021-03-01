@@ -24,7 +24,7 @@ export default {
     return {
       swiperOption: {
         effect: 'fade',
-        autoplay: 3000,
+        autoplay: 5000,
         loop: true
         // nextButton: '.swiper-button-next',
         // prevButton: '.swiper-button-prev'

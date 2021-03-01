@@ -126,6 +126,7 @@ export default {
     font-size: 12px;
     span {
       font-size: 18px;
+      font-weight: bold;
     }
     p {
       margin-top: 5px;
@@ -269,6 +270,7 @@ export default {
   p {
     margin-top: 20px;
     font-size: 12px;
+    padding: 0 20px;
     color: #747474;
     line-height: 24px;
   }

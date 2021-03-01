@@ -34,14 +34,14 @@ export default {
           text: "条件宽松，无语言要求，精英首选方案",
           url: "/emigrant/one",
           img: require('../../../assets/images/home/popular-item-img3.jpg')
-        },
-        {
-          name: "GIP投资移民项目",
-          text: "获批后再投资安全无风险",
-          url: "/emigrant/three",
-          img: require('../../../assets/images/home/popular-item-img2.jpg')
-
         }
+        // {
+        //   name: "GIP投资移民项目",
+        //   text: "获批后再投资安全无风险",
+        //   url: "/emigrant/three",
+        //   img: require('../../../assets/images/home/popular-item-img2.jpg')
+
+        // }
       ]
     }
   }
@@ -59,6 +59,7 @@ export default {
     display: block;
     text-align: center;
     font-size: 18px;
+    font-weight: bold;
   }
   ul {
     overflow: auto;

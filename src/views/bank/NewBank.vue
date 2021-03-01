@@ -3,6 +3,7 @@
     <div class="banner">
       <img src="../../assets/images/bank/bank-banner.jpg" />
     </div>
+    <IncrementServiceTab />
 
     <div class="bank-service">
       <h3 class="title">银行开户服务介绍</h3>
@@ -180,12 +181,14 @@ import ContentImg from '../../components/ContentImg'
 import ContactUs from '../../components/commonComponent/ContactUs'
 import MessagePopup from '../../components/commonComponent/MessagePopup'
 import InputBox from '../../components/commonComponent/InputBox'
+import IncrementServiceTab from '../../components/commonComponent/IncrementServiceTab'
 export default {
   components: {
     ContentImg,
     ContactUs,
     MessagePopup,
-    InputBox
+    InputBox,
+    IncrementServiceTab
   },
   data () {
     return {

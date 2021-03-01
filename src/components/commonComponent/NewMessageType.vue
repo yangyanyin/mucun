@@ -63,6 +63,18 @@
         <!-- <img v-else src="../../../assets/images/message-loading.png" /> -->
       </button>
     </div>
+    <div class="message-success" v-if="successMessageStatus">
+      <div>
+        <a @click="closeSuccess" class="success-close"><img src="../../assets/images/close-black.png" alt="close" /></a>
+        <h3>
+          <i></i>
+          提交成功</h3>
+        <p>感谢您的资讯！我们将尽快与您取得联系！</p>
+        <p>请您耐心等待。</p>
+        <p class="tel">咨询热线：<strong>+65 8866 5586</strong></p>
+        <span>7x24小时服务热线</span>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -109,11 +121,16 @@ export default {
         englishLevel: false,
         education: false,
         content: false
-      }
+      },
+      successMessageStatus: false
     }
   },
   methods: {
     clickMessage () {
+      this.$emit('clickMessage', '')
+    },
+    closeSuccess () {
+      this.successMessageStatus = false
       this.$emit('clickMessage', '')
     },
     submitForm () {
@@ -151,6 +168,7 @@ export default {
         params
       }).then(res => {
         if (res.data.code === 200) {
+          this.successMessageStatus = true
           for (const i in this.fomrData) {
             this.fomrData[i] = ''
           }
@@ -161,15 +179,23 @@ export default {
 }
 </script>
 <style scoped lang="less">
+@keyframes messageShow {
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
 .popup {
   position: fixed;
   z-index: 99999999;
-  top: 0;
   left: 0;
+  bottom: -110%;
   width: 100%;
   height: 100%;
   background: #fff;
   padding: 10px;
+  animation: messageShow .25s ease-in both;
+  opacity: .7;
   .close {
     position: absolute;
     right: 15px;
@@ -181,60 +207,130 @@ export default {
       width: 100%;
     }
   }
-  h3 {
-    font-size: 16px;
-    color: #4F7274;
-    text-align: center;
-    padding-top: 30px;
-  }
-  em {
-    display: block;
-    padding: 5px 0 10px;
-    text-align: center;
-    color: #747474;
-  }
-  
-  input, select {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 15px;
-    padding: 0 20px;
-    border: 1px solid #EFEFEF;
-    border-radius: 5px;
-    &::placeholder {
-      color: #CACACA;
+  .content {
+    h3 {
+      font-size: 16px;
+      color: #4F7274;
+      text-align: center;
+      padding-top: 30px;
+    }
+    em {
+      display: block;
+      padding: 5px 0 10px;
+      text-align: center;
+      color: #747474;
+    }
+    
+    input, select {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      margin-top: 15px;
+      padding: 0 20px;
+      border: 1px solid #EFEFEF;
+      border-radius: 5px;
+      &::placeholder {
+        color: #CACACA;
+      }
+    }
+    p {
+      padding: 5px 0 0 20px;
+      font-size: 12px;
+      color: #437375;
+    }
+    textarea {
+      display: block;
+      width: 100%;
+      height: 100px;
+      margin-top: 15px;
+      padding: 14px 20px;
+      border: 1px solid #EFEFEF;
+      border-radius: 5px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      height: 50px;
+      margin-top: 15px;
+      color: #fff;
+      background: #447375;
+      border-radius: 5px;
+      img {
+        display: block;
+        width: 30px;
+        margin: auto;
+        animation: proRotate 0.8s infinite both;
+      }
     }
   }
-  p {
-    padding: 5px 0 0 20px;
-    font-size: 12px;
-    color: #437375;
-  }
-  textarea {
-    display: block;
+  .message-success {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 100px;
-    margin-top: 15px;
-    padding: 14px 20px;
-    border: 1px solid #EFEFEF;
-    border-radius: 5px;
-  }
-  button {
-    display: block;
-    width: 100%;
-    height: 50px;
-    margin-top: 15px;
-    color: #fff;
-    background: #447375;
-    border-radius: 5px;
-    img {
-      display: block;
-      width: 30px;
-      margin: auto;
-      animation: proRotate 0.8s infinite both;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    > div {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 50%;
+      padding: 50px 0;
+      border-radius: 5px;
+      background: #fff;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+    .success-close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 20px;
+      height: 20px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    h3 {
+      padding-bottom: 15px;
+      font-size: 18px;
+      i {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 15px;
+        background: #447375;
+        border-radius: 100%;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 11px;
+          top: 13px;
+          width: 15px;
+          height: 8px;
+          border-left: 2px solid #fff;
+          border-bottom: 2px solid #fff;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    p {
+      line-height: 32px;
+      &.tel {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #447375;
+      }
+      strong {
+        font-size: 18px;
+      }
+    }
+    span {
+      font-size: 12px;
     }
   }
 }

@@ -2,12 +2,13 @@
   <Loading v-if="!loadingStatus" class="home" />
   <div v-else>
     <!-- banner -->
-    <Banner :bannerImgList="bannerImg" />
+    <Banner :bannerImgList="bannerImg" class="home-banner" />
 
     <!-- 媒体 -->
     <Media />
 
     <!-- 新 -->
+    <WapBanner />
     <HomeNav />
     <SingaporeStudyAbroad />
     <PopularItems />
@@ -185,6 +186,7 @@ import WapAdvantage from './wapComponent/WapAdvantage'
 import SuccessCase from './wapComponent/SuccessCase'
 import PopularInformation from './wapComponent/PopularInformation'
 import AssetManagement from './wapComponent/AssetManagement'
+import WapBanner from './wapComponent/WapBanner'
 import Other from './wapComponent/Other'
 
 
@@ -211,7 +213,8 @@ export default {
     SuccessCase,
     PopularInformation,
     AssetManagement,
-    Other
+    Other,
+    WapBanner
   },
   data() {
     return {
@@ -274,6 +277,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.home-banner {
+  @media(max-width: 767px) {
+    display: none;
+  }
+}
 /** 成功案例 **/
 .success-case {
   padding-top: 60px;

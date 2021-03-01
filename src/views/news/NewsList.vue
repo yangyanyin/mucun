@@ -6,6 +6,11 @@
         <router-link to="/">首页</router-link> > {{banner[newsType].title}}
       </div>
       <div class="left list-banner">
+        <div class="new-tab">
+          <span><router-link to="/news-expert">新加坡移民专家</router-link></span>
+          <span><router-link to="/news-thematic">护照专题</router-link></span>
+          <span> <router-link to="/news-case">成功案例</router-link></span>
+        </div>
         <div class="banner">
           <img :src="banner[newsType].img" />
         </div>
@@ -121,6 +126,28 @@ export default {
     color: #bdbdbd;
     a {
       color: #bdbdbd;
+    }
+  }
+  .new-tab {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+    }
+    span {
+      display: inline-block;
+      width: 33.33%;
+      padding: 20px 0;
+      text-align: center;
+      a {
+        display: inline-block;
+        color: #444;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #fff;
+        &.router-link-active {
+          color: #447375;
+          border-bottom: 2px solid #447375;
+        }
+      }
     }
   }
   .list-banner {

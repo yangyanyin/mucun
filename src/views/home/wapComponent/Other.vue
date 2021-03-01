@@ -28,13 +28,13 @@ export default {
         {
           img: require("../../../assets/images/home/study-abroad-expert.png"),
           name: "留学专家",
-          text: "制定移民方案",
+          text: "制定留学方案",
           url: "/overseas-study/one"
         },
         {
           img: require("../../../assets/images/home/asset-management-expert.png"),
           name: "资产管理专家",
-          text: "制定移民方案",
+          text: "制定投资方案",
           url: "/asset"
         }
       ]
@@ -60,9 +60,8 @@ export default {
   span {
     position: relative;
     display: inline-block;
-    height: 100px;
     margin-right: 10px;
-    padding: 20px 20px 20px 80px;
+    padding: 15px 15px 15px 60px;
     background: #fff;
     border-radius: 5px;
     &:last-child {
@@ -71,18 +70,18 @@ export default {
     img {
       position: absolute;
       left: 10px;
-      top: 20px;
-      width: 60px;
+      top: 18px;
+      width: 40px;
     }
     h3 {
-      margin-top: 5px;
+      margin-top: 2px;
       color: #3E3E3E;
-      font-size: 16px;
+      font-size: 14px;
     }
     p {
       margin-top: 5px;
       color: #747474;
-      font-size: 16px;
+      font-size: 12px;
     }
   }
 }
