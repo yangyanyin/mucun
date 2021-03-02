@@ -59,8 +59,8 @@
       </template>
 
       <button @click="submitForm">
-        <template>提交</template>
-        <!-- <img v-else src="../../../assets/images/message-loading.png" /> -->
+        <template v-if="!messageLoading">提交</template>
+        <img v-else src="../../assets/images/message-loading.png" />
       </button>
     </div>
     <div class="message-success" v-if="successMessageStatus">
@@ -69,7 +69,7 @@
         <h3>
           <i></i>
           提交成功</h3>
-        <p>感谢您的资讯！我们将尽快与您取得联系！</p>
+        <p>感谢您咨询！我们将尽快与您取得联系！</p>
         <p>请您耐心等待。</p>
         <p class="tel">咨询热线：<strong>+65 8866 5586</strong></p>
         <span>7x24小时服务热线</span>
@@ -122,7 +122,8 @@ export default {
         education: false,
         content: false
       },
-      successMessageStatus: false
+      successMessageStatus: false,
+      messageLoading: false
     }
   },
   methods: {
@@ -162,12 +163,14 @@ export default {
         params.english_level = this.fomrData.englishLevel,
         params.education = this.fomrData.education
       }
+      this.messageLoading = true
       this.$http({
         method: "post",
         url: process.env.VUE_APP_API + "/v1/contact",
         params
       }).then(res => {
         if (res.data.code === 200) {
+          this.messageLoading = false
           this.successMessageStatus = true
           for (const i in this.fomrData) {
             this.fomrData[i] = ''
