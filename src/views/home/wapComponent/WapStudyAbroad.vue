@@ -127,6 +127,7 @@ export default {
     // padding-bottom: 10px;
     text-align: center;
     font-size: 18px;
+    font-weight: bold;
   }
 }
 .recommend2 {

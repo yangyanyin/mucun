@@ -90,6 +90,25 @@ export default {
       ],
       countryData: [
         {
+          name: '圣卢西亚',
+          hot: true,
+          flag: require('../../assets/images/country6.png'),
+          url: '/project/saint-lucia',
+          img: require('../../assets/images/passport/SaintLucia-img.jpg'),
+          visa_free: require('../../assets/images/passport/SaintLucia-free.png'),
+          type: {
+            居住要求: '无',
+            '免签国家/地区': '约140',
+            移民周期: '3个月',
+            证据类型: '护照'
+          },
+          cond: {
+            one: '10万美元',
+            tow: '14万美元',
+            four: '15万美元'
+          }
+        },
+        {
           name: '圣基茨和尼维斯',
           hot: true,
           flag: require('../../assets/images/country5.png'),
@@ -124,24 +143,6 @@ export default {
           },
           cond: {
             no_icon: '房地产投资：25万美金'
-          }
-        },
-        {
-          name: '圣卢西亚',
-          flag: require('../../assets/images/country6.png'),
-          url: '/project/saint-lucia',
-          img: require('../../assets/images/passport/SaintLucia-img.jpg'),
-          visa_free: require('../../assets/images/passport/SaintLucia-free.png'),
-          type: {
-            居住要求: '无',
-            '免签国家/地区': '约140',
-            移民周期: '3个月',
-            证据类型: '护照'
-          },
-          cond: {
-            one: '10万美元',
-            tow: '14万美元',
-            four: '15万美元'
           }
         },
         {

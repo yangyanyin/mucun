@@ -124,7 +124,6 @@ export default {
         for (let i = 0; i < this.countryList.length; i++) {
           this.navs.push(this.countryList[i].name);
           this.bannerData[i] = {};
-          // this.bannerData[i].name = this.countryList[i].name;
           this.bannerData[i].img = this.bannerImg[i];
         }
         this.loadingSuccess = true;
