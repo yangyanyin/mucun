@@ -71,7 +71,7 @@
           提交成功</h3>
         <p>感谢您咨询！我们将尽快与您取得联系！</p>
         <p>请您耐心等待。</p>
-        <p class="tel">咨询热线：<strong>+65 8866 5586</strong></p>
+        <p class="tel">咨询热线：<strong><a href="tel:6588665586">+65 8866 5586</a></strong></p>
         <span>7x24小时服务热线</span>
       </div>
     </div>

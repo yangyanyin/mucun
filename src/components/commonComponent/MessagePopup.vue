@@ -8,7 +8,7 @@
       <p class="p1">感谢您使用我们的免费咨询服务</p>
       <p class="p1">我们稍后会联系您</p>
       <p class="p1">您也可以拨打</p>
-      <p class="tel">(+65) 8866 5586</p>
+      <p class="tel"><a href="tel:6588665586">(+65) 8866 5586</a></p>
       <p class="p2">进行直接咨询</p>
       <router-link to="/passport">了解更多</router-link>
     </div>

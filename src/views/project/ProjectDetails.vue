@@ -20,7 +20,7 @@
           <div class="content-know animation-show">
             <h3 class="country-title">移民{{countryName}}，这些好处，你都知道吗？</h3>
             <p>{{description}}</p>
-            <strong>(+65) 8866 5586</strong>
+            <strong><a href="tel:6588665586">(+65) 8866 5586</a></strong>
           </div>
           <div class="content-block">
             <h3 class="country-title animation-show">为什么{{countryName}}护照项目这么好？</h3>

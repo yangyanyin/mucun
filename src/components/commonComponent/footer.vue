@@ -30,11 +30,13 @@
       </div>
       <div class="right wechat">
         <div class="left">
-          <img src="../../assets/images/WeChat.png" />
+          <img @click="showWeChat(1)" v-if="WeChatAll.indexOf(1) < 0" src="../../assets/images/WeChat-bg.png" />
+          <img v-else src="../../assets/images/WeChat.png" />
           <p><img src="../../assets/images/footer-wx2.png"> 扫一扫添加微信</p>
         </div>
         <div class="left">
-          <img src="../../assets/images/WeChat2.png" />
+          <img @click="showWeChat(2)" v-if="WeChatAll.indexOf(2) < 0" src="../../assets/images/WeChat2-bg.png" />
+          <img v-else src="../../assets/images/WeChat2.png" />
           <p><img src="../../assets/images/footer-wx2.png"> 扫一扫关注公众号</p>
         </div>
       </div>
@@ -61,12 +63,16 @@ export default {
     return {
       showReturnTop: false,
       isFixed: false,
-      termsType: false
+      termsType: false,
+      WeChatAll: []
     };
   },
   methods: {
     showTerms () {
       this.termsType = !this.termsType
+    },
+    showWeChat (type) {
+      this.WeChatAll.push(type)
     },
     returnTop() {
       let scrTop = 0;

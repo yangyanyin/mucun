@@ -1,12 +1,12 @@
 <template>
   <div class="hotline">
     咨询热线: 
-    <h3><img src="../../assets/images/hto-tel.png" /></h3>
+    <h3><a href="tel:6588665586"><img src="../../assets/images/hto-tel.png" /></a> </h3>
     <div class="icon">
       <span class="tel">
         <img class="s" src="../../assets/images/telegram.png" />
         <div>
-          <p>+65 8866 5586</p>
+          <p><a href="tel:6588665586">+65 8866 5586</a></p>
         </div>
       </span>
       <span class="tel iphone">
@@ -21,19 +21,39 @@
       <span>
         <img class="s" src="../../assets/images/footer-email.png" />
         <div>
-          <p>inquiry@waterlandcap.com</p>
+          <p> <a class="a-email" href="mailto:inquiry@waterlandcap.com">inquiry@waterlandcap.com</a> </p>
         </div>
       </span>
       <span class="wx"><img class="s" src="../../assets/images/footer-wx.png" />
         <div>
-          <p><img src="../../assets/images/WeChat.png" />扫一扫添加微信</p>
-          <p><img src="../../assets/images/WeChat2.png" />扫一扫关注公众号</p>
+          <p>
+            <img @click="showWeChat(1)" v-if="WeChatAll.indexOf(1) < 0" src="../../assets/images/WeChat-bg.png" />
+            <img v-else src="../../assets/images/WeChat.png" />扫一扫添加微信
+          </p>
+          <p>
+            <img @click="showWeChat(2)" v-if="WeChatAll.indexOf(2) < 0" src="../../assets/images/WeChat2-bg.png" />
+            <img v-else src="../../assets/images/WeChat2.png" />扫一扫关注公众号
+          </p>
             
         </div>
       </span>
     </div>
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      WeChatAll: []
+    }
+  },
+  methods: {
+    showWeChat (type) {
+      this.WeChatAll.push(type)
+    }
+  }
+}
+</script>
 <style scoped lang="less">
 .hotline {
   color: #efd492;
@@ -64,6 +84,9 @@
     transition: .3s;
     &:last-child {
       width: 28px;
+    }
+    a {
+      color: #444;
     }
     img {
       display: block;

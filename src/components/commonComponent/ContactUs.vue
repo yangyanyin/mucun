@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="right contact-input">
-        <h3>免费咨询服务 <i>+65 8866 5586</i></h3>
+        <h3>免费咨询服务 <i><a href="tel:6588665586">+65 8866 5586</a></i></h3>
         <ul>
           <li>
             <img src="../../assets/images/advisory-icon1.png" />
@@ -18,24 +18,24 @@
           </li>
           <li>
             <img src="../../assets/images/advisory-icon2.png" />
-            <p>+65 8866 5586</p>
+            <p><a href="tel:6588665586">+65 8866 5586</a></p>
           </li>
           <li>
             <img src="../../assets/images/advisory-icon3.png" />
             <p>
-              <em
-                ><img src="../../assets/images/WeChat.png" />扫一扫添加微信</em
-              >
-              <em
-                ><img
-                  src="../../assets/images/WeChat2.png"
-                />扫一扫关注公众号</em
-              >
+              <em>
+                <img @click="showWeChat(1)" v-if="WeChatAll.indexOf(1) < 0" src="../../assets/images/WeChat-bg.png" />
+                <img v-else src="../../assets/images/WeChat.png" />扫一扫添加微信
+              </em>
+              <em>
+                <img @click="showWeChat(2)" v-if="WeChatAll.indexOf(2) < 0" src="../../assets/images/WeChat2-bg.png" />
+                <img v-else src="../../assets/images/WeChat2.png" />扫一扫关注公众号
+              </em>
             </p>
           </li>
           <li>
             <img src="../../assets/images/advisory-icon4.png" />
-            <p>inquiry@waterlandcap.com</p>
+            <p><a class="a-email" href="mailto:inquiry@waterlandcap.com">inquiry@waterlandcap.com</a> </p>
           </li>
           <li>
             <img src="../../assets/images/advisory-icon5.png" />
@@ -92,7 +92,8 @@ export default {
       telError: false,
       weChatError: false,
       messageLoading: false,
-      messageType: false
+      messageType: false,
+      WeChatAll: []
     }
   },
   methods: {
@@ -100,6 +101,9 @@ export default {
       this.nameError = false
       this.telError = false
       this.weChatError = false
+    },
+    showWeChat (type) {
+      this.WeChatAll.push(type)
     },
     submitForm () {
       if (this.name === '') {

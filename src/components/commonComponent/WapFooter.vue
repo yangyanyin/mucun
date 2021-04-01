@@ -1,7 +1,7 @@
 <template>
   <div class="wap-footer">
     <div class="hotline">
-      咨询热线：<span>+65 8866 5586</span> 
+      咨询热线：<a href="tel:6588665586"> +65 8866 5586</a> 
       <p>7X24小时服务热线</p>
     </div>
 
@@ -19,18 +19,24 @@
       </li>
       <li>
         <img src="../../assets/images/advisory-icon2.png" />
-        <p>+65 8866 5586</p>
+        <p><a href="tel:6588665586"> +65 8866 5586</a></p>
       </li>
       <li>
         <img src="../../assets/images/advisory-icon3.png" />
         <p>
-          <em><img src="../../assets/images/WeChat.png" />扫一扫添加微信</em>
-          <em><img src="../../assets/images/WeChat2.png" />扫一扫关注公众号</em>
+          <em>
+            <img @click="showWeChat(1)" v-if="WeChatAll.indexOf(1) < 0" src="../../assets/images/WeChat-bg.png" />
+            <img v-else src="../../assets/images/WeChat.png" />扫一扫添加微信
+          </em>
+          <em>
+            <img @click="showWeChat(2)" v-if="WeChatAll.indexOf(2) < 0" src="../../assets/images/WeChat2-bg.png" />
+            <img v-else src="../../assets/images/WeChat2.png" />扫一扫关注公众号
+          </em>
         </p>
       </li>
       <li>
         <img src="../../assets/images/advisory-icon4.png" />
-        <p>inquiry@waterlandcap.com</p>
+        <p><a class="a-email" href="mailto:inquiry@waterlandcap.com">inquiry@waterlandcap.com</a> </p>
       </li>
       <li>
         <img src="../../assets/images/advisory-icon5.png" />
@@ -74,7 +80,8 @@ export default {
     return {
       showReturnTop: false,
       termsType: false,
-      messageType: ''
+      messageType: '',
+      WeChatAll: []
     }
   },
   methods: {
@@ -83,6 +90,9 @@ export default {
     },
     clickMessage (type) {
       this.messageType = type
+    },
+    showWeChat (type) {
+      this.WeChatAll.push(type)
     },
     returnTop() {
       let scrTop = 0;
@@ -124,7 +134,8 @@ export default {
   .hotline {
     color: #447375;
     font-size: 12px;
-    span {
+    a {
+      color: #447375;
       font-size: 18px;
       font-weight: bold;
     }
@@ -140,6 +151,7 @@ export default {
     padding-top: 30px;
     li {
       position: relative;
+      z-index: 1;
       display: inline-block;
       width: 30px;
       height: 30px;
@@ -178,6 +190,7 @@ export default {
           padding: 0;
           background: #fff;
           em {
+            position: relative;
             display: inline-block;
             font-size: 12px;
             img {
@@ -217,6 +230,10 @@ export default {
         background: #fff;
         -webkit-transition: 0.3s;
         transition: 0.3s;
+        a {
+          color: #444;
+          font-size: 12px;
+        }
       }
       &:hover {
         &:after {

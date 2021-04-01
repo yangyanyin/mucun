@@ -149,11 +149,11 @@
           <img src="../../assets/images/close.png" @click="changeContact" />
         </span>
         <h3>请留下您的联系方式</h3>
-        <p>也可以拨打（+65）8866 5586 <br /> 直接与我们取得联系</p>
+        <p>也可以拨打<a href="tel:6588665586">（+65）8866 5586</a> <br /> 直接与我们取得联系</p>
         <ul>
           <li>
             <img src="../../assets/images/telegram@2x.png" />
-            <i>+65 8866 5586</i>
+            <i><a href="tel:6588665586">+65 8866 5586</a></i>
           </li>
           <li>
             <img src="../../assets/images/whasapp@2x.png" />
@@ -164,8 +164,14 @@
           <li>
             <img src="../../assets/images/WeChat@2x.png">
             <i>
-              <em><img src="../../assets/images/WeChat.png" />扫一扫添加微信</em>
-              <em><img src="../../assets/images/WeChat2.png" />扫一扫关注公众号</em>
+              <em>
+                <img @click="showWeChat(1)" v-if="WeChatAll.indexOf(1) < 0" src="../../assets/images/WeChat-bg.png" />
+                <img v-else src="../../assets/images/WeChat.png" />扫一扫添加微信
+              </em>
+              <em>
+                <img @click="showWeChat(2)" v-if="WeChatAll.indexOf(2) < 0" src="../../assets/images/WeChat2-bg.png" />
+                <img v-else src="../../assets/images/WeChat2.png" />扫一扫关注公众号
+              </em>
             </i>
           </li>
         </ul>
@@ -192,6 +198,7 @@ export default {
   },
   data () {
     return {
+      WeChatAll: [],
       contactStatus: false,
       messageType: false,
       bankAdvantage: [
@@ -238,6 +245,9 @@ export default {
     success () {
       this.contactStatus = false
       this.messageType = true
+    },
+    showWeChat (type) {
+      this.WeChatAll.push(type)
     }
   }
 }
