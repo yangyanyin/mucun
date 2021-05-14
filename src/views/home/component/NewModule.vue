@@ -21,7 +21,7 @@
       <div class="right">
         <div class="title clearfix">
           <h3 class="left">相关资讯</h3>
-          <router-link class="right" :to="'/news-' + type">查看更多></router-link>
+          <router-link class="right" to="/news-thematic">查看更多></router-link>
         </div>
         <div class="content">
           <router-link :to="'/news-details/' + item.id" v-for="(item, key) in recommend" :key="key">
