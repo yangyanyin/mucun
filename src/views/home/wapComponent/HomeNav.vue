@@ -22,9 +22,9 @@ export default {
           url: '/overseas-study/one'
         },
         {
-          name: '资产管理',
-          icon: require('../../../assets/images/home/asset-management.png'),
-          url: '/asset'
+          name: '护照移民',
+          icon: require('../../../assets/images/home/passport-icon.png'),
+          url: '/project'
         },
         {
           name: '海外银行账户',
@@ -36,9 +36,9 @@ export default {
           icon: require('../../../assets/images/home/overseas-company.png'),
           url: '/company'
         },{
-          name: '增值服务',
-          icon: require('../../../assets/images/home/value-added-services.png'),
-          url: '/stock'
+          name: '资产管理',
+          icon: require('../../../assets/images/home/asset-management.png'),
+          url: '/asset'
         },
         {
           name: '热门资讯',
