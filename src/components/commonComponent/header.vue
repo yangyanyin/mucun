@@ -112,9 +112,10 @@ export default {
           page: "overseaSstudy",
         },
         {
-          name: "资产配置",
-          url: "/asset",
-          page: "asset",
+          name: "海外护照项目",
+          url: "/project",
+          page: "project",
+          down: true,
         },
         {
           name: "绿卡项目",
@@ -124,7 +125,7 @@ export default {
         },
         {
           name: "增值服务",
-          url: "/project",
+          url: "/asset",
           downText: true,
           page: "service",
         },
@@ -236,8 +237,8 @@ export default {
       },
       service: [
         {
-          url: "/project",
-          name: "海外护照项目",
+          url: "/asset",
+          name: "资产配置"
         },
         {
           url: "/passport",
@@ -401,14 +402,6 @@ export default {
         {
           name: "增值服务",
           childNav: [
-            // {
-            //   url: "/project",
-            //   name: "海外护照项目",
-            // },
-            // {
-            //   url: "/passport",
-            //   name: "签证服务",
-            // },
             {
               url: "/bank",
               name: "新加坡银行开户",
