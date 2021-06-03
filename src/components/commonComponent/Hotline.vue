@@ -60,7 +60,7 @@ export default {
   display:flex;
   flex-flow: row wrap;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 35px;
   transition: .8s;
   .icon {
     display:flex;

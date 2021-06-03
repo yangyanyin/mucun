@@ -15,6 +15,7 @@
       </div>
       <div class="right">
         <Hotline />
+        <p class="tips">如果您人不在新加坡，欢迎通过聊天软件联系我们。</p>  
       </div>
     </div>
     <ul class="navs">
@@ -487,6 +488,11 @@ export default {
   background: #0f1f24;
   z-index: 999;
   transition: 1s;
+  .tips {
+    padding-top: 8px;
+    font-size: 13px;
+    color: #efd492;
+  }
   @media (min-width: 767px) {
     &.is-fixed {
       position: fixed;
@@ -1019,11 +1025,15 @@ export default {
         }
       }
     }
+    .tips {
+      font-size: 12px;
+      padding-top: 3px;
+    }
     .hotline {
-      padding-top: 15px;
+      padding-top: 5px;
       h3 {
         img {
-          width: 160px;
+          width: 140px;
         }
       }
       span {
