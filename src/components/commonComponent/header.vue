@@ -440,7 +440,7 @@ export default {
           name: "联系我们"
         },
       ],
-      downIndex: [0, 1, 2]
+      downIndex: [0, 1, 2, 3]
     };
   },
   methods: {
@@ -492,6 +492,9 @@ export default {
     padding-top: 8px;
     font-size: 13px;
     color: #efd492;
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
   @media (min-width: 767px) {
     &.is-fixed {

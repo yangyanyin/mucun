@@ -32,7 +32,7 @@
         <div class="list">
           <img src="../../../assets/images/new-advantage-icon4.png" />
           <p>
-            立足新加坡深耕大中华地区 <br /> 强大的本土行业背景
+            立足新加坡深耕大中华地区 <br /> 一流的本土行业背景
           </p>
         </div>
       </div>

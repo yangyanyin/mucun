@@ -82,7 +82,7 @@
             戴森创始人詹姆斯·戴森
           </li>
         </ul>
-        <router-link to="/emigrant/four">查看更多 ></router-link>
+        <router-link to="/emigrant/singapore">查看更多 ></router-link>
       </div>
     </div>
 
@@ -126,9 +126,12 @@
         <ul>
           <li v-for="(news, index) in newCase" :key="index">
             <router-link class="a" :to="'/news-details/' + news.id">
-              <img
+              <i>
+                <img
                     v-lazy="{src: news.img, loading: require('../../assets/images/country-loading.png'), error: require('../../assets/images/country-loading.png')}"
                   />
+              </i>
+              
               <div class="d clearfix">
                 <h3>{{news.title}}</h3>
                 <p v-html="news.description"></p>
@@ -326,10 +329,19 @@ export default {
             transform: scale(1.03);
           }
         }
-        img {
+        i {
           display: block;
-          width: 100%;
+          height: 160px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
+        // img {
+        //   display: block;
+        //   width: 100%;
+        // }
         .d {
           padding: 25px;
           h3 {
@@ -345,11 +357,11 @@ export default {
           p {
             margin: 5px 0 10px;
             color: #b9b9b9;
-            height: 144px;
+            height: 120px;
             line-height: 24px;
             overflow: hidden;     
             display: -webkit-box;
-            -webkit-line-clamp: 6;
+            -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
           }
           span {

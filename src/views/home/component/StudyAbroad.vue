@@ -25,6 +25,7 @@
         </swiper-slide>
       </swiper>
     </div>
+    <router-link class="view-more" to="/overseas-study/one">查看更多 ></router-link>
   </div>
 </template>
 <script>
@@ -182,6 +183,23 @@ export default {
     &:hover {
       box-shadow: 0 0 5px 0 #adadad;
     }
+  }
+}
+.view-more {
+  display: block;
+  width: 180px;
+  height: 50px;
+  margin: 30px auto 0;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+  background: #315455;
+  opacity: 0.8;
+  border-radius: 25px;
+  transition: .3s;
+  &:hover {
+    opacity: 1;
   }
 }
 </style>

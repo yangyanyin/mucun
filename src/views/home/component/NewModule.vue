@@ -230,7 +230,7 @@ export default {
     .img {
       float: left;
       width: 300px;
-      height: 210px;
+      height: 173px;
       overflow: hidden;
       margin-right: 20px;
       border: 1px solid #e6e6e6;

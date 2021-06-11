@@ -101,6 +101,9 @@ export default {
     padding-top: 11px;
     letter-spacing: 5px;
     color: #fff;
+    a {
+      color: #fff;
+    }
   }
   button {
     display: block;
@@ -195,6 +198,10 @@ export default {
       color: #fff;
       font-size: 18px;
       line-height: 30px;
+      a {
+        color: #fff;
+        font-size: 18px;
+      }
     }
     ul {
       li {

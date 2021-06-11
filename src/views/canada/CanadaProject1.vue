@@ -50,7 +50,7 @@ export default {
           {
             icon: require('../../assets/images/canada/advantage-icon3.jpg'),
             title: '世界一级经济体，政府支持计划',
-            text: '享有具竞争力的税务优惠、进入北美自由贸易区域的特权 、全球最低廉的能源费率、低廉的企业营运成本。'
+            text: '享有具竞争力的税务优惠、进入北美自由贸易区域的特权、全球最低廉的能源费率、低廉的企业营运成本。'
           },
           {
             icon: require('../../assets/images/canada/advantage-icon4.jpg'),

@@ -55,7 +55,7 @@ export default {
       loadingStatus: false,
       navCrumbs: [
         {
-          title: '护照专题',
+          title: '新闻资讯',
           url: '/news-thematic'
         },
         {

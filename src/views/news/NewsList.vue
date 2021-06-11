@@ -8,7 +8,7 @@
       <div class="left list-banner">
         <div class="new-tab">
           <span><router-link to="/news-expert">新加坡移民专家</router-link></span>
-          <span><router-link to="/news-thematic">护照专题</router-link></span>
+          <span><router-link to="/news-thematic">新闻资讯</router-link></span>
           <span> <router-link to="/news-case">成功案例</router-link></span>
         </div>
         <div class="banner">
@@ -59,7 +59,7 @@ export default {
         },
         thematic: {
           img: require('../../assets/images/news-thematic.jpg'),
-          title: '护照专题',
+          title: '新闻资讯',
           id: 1
         },
         expert: {
@@ -161,6 +161,7 @@ export default {
     display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
   .list {
     background: #fff;
@@ -182,7 +183,7 @@ export default {
     }
     p {
       height: 72px;
-      margin: 10px 0 43px 0;
+      margin: 10px 0 40px 0;
       line-height: 24px;
       overflow: hidden;
       display: -webkit-box;
@@ -228,6 +229,7 @@ export default {
     .img {
       float: left;
       width: 270px;
+      height: 160px;
       margin-right: 25px;
     }
   }

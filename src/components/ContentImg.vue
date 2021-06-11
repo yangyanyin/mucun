@@ -165,6 +165,10 @@ export default {
       color: #fff;
       font-size: 18px;
       line-height: 30px;
+      a {
+        color: #fff;
+        font-size: 18px;
+      }
     }
     ul {
       li {
