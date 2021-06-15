@@ -18,7 +18,7 @@
       <ul class="clearfix">
         <li>
           <img src="../../assets/images/select-we4.jpg" />
-          <i>我们就在新加坡，专业成就 价值，承诺不成功不收费</i>
+          <i>我们就在新加坡，专业成就价值，承诺不成功不收费</i>
         </li>
         <li>
           <img src="../../assets/images/select-we1.jpg" />

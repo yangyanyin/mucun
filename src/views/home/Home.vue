@@ -82,7 +82,7 @@
             戴森创始人詹姆斯·戴森
           </li>
         </ul>
-        <router-link to="/emigrant/singapore">查看更多 ></router-link>
+        <router-link to="/emigrant/four">查看更多 ></router-link>
       </div>
     </div>
 

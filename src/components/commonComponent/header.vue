@@ -104,7 +104,7 @@ export default {
         },
         {
           name: "新加坡移民",
-          url: "/emigrant/four",
+          url: "/emigrant/singapore",
           page: "emigrant",
         },
         {

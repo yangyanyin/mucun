@@ -14,7 +14,7 @@
             <router-link to="/bank/">银行开户</router-link>
             <router-link to="/asset/">资产配置</router-link>
             <router-link to="/news-thematic">新闻资讯</router-link>
-            <router-link to="/news-expert">新加坡移民专家</router-link>
+            <!-- <router-link to="/news-expert">新加坡移民专家</router-link> -->
           </div>
           <div class="menu left">
             <router-link to="/news-case">成功案例</router-link>
